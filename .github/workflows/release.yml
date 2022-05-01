@@ -26,7 +26,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           REPO: ${{github.repository}}
           COMMIT: ${{github.sha}}
-        run: ./tools/release.sh
+        run: ./packages/node/tools/release.sh
       - name: build
         run: npm run build
       - name: release
