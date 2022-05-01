@@ -1,6 +1,6 @@
 {
   "name": "c2ve",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "description": "Convert css (scss/sass) to vanilla-extract for node.",
   "main": "index.js",
   "bin": {
@@ -41,6 +41,7 @@
   "devDependencies": {
     "@types/node": "^17.0.27",
     "@vanilla-extract/esbuild-plugin": "^2.0.3",
+    "c2ve": "^0.0.2-alpha",
     "cargo-cp-artifact": "^0.1.6",
     "esbuild": "^0.14.38",
     "esbuild-register": "^3.3.2"
