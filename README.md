@@ -2,7 +2,7 @@
 
 Convert css (scss/sass) to [vanilla-extract](https://vanilla-extract.style/).
 
-[playground](https://626d3d20459f1a7ddd993136--grand-tapioca-e54f4f.netlify.app/)
+[playground](https://grand-tapioca-e54f4f.netlify.app/)
 
 ## Install
 
