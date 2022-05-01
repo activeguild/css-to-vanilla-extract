@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # check this version is enable to release or not
-npx can-npm-publish
-if [ $? -eq 1 ] ; then
-  exit 255
-fi
+# npx can-npm-publish
+# if [ $? -eq 1 ] ; then
+#   exit 255
+# fi
 
 # get current version from package.json
 TAG=$(cat ./packages/node/package.json | grep version | cut -d " " -f 4 | tr -d "," | tr -d '"')
