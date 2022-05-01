@@ -16,7 +16,7 @@ Once installed, you can run it to convert css (scss/sass) files to vanilla-extra
 For example:
 
 ```
-npx ctve sample/test.css
+npx c2ve sample/test.css
 ```
 
 <strong>Output:</strong>sample/test.css.ts
