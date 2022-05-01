@@ -1,5 +1,5 @@
 [package]
-name = "node-css-to-vanilla-extract"
+name = "c2ve"
 version = "0.0.1-alpha"
 license = "MIT"
 edition = "2021"
