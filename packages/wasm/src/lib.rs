@@ -1,3 +1,6 @@
+extern crate console_error_panic_hook;
+use std::panic;
+
 use wasm_bindgen::prelude::*;
 extern crate css_to_vanilla_extract;
 
@@ -13,9 +16,12 @@ pub fn from_code(code: JsValue) -> Result<JsValue, JsValue> {
         Ok(value) => Ok(JsValue::from_str(&value)),
         Err(_) => Err(JsValue::undefined()),
     }
+}
 
-    // Ok(JsValue::from_str(css_to_vanilla_extract::from_code(
-    //     &code.as_string(),
-    // )));
-    // return css_to_vanilla_extract::from_code(&code.as_string());
+#[wasm_bindgen]
+pub fn from_path(code: JsValue) -> Result<JsValue, JsValue> {
+    panic::set_hook(Box::new(console_error_panic_hook::hook));
+
+    css_to_vanilla_extract::from_path(&code.as_string().unwrap());
+    Ok(JsValue::undefined())
 }
