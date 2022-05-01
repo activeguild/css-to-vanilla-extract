@@ -1,5 +1,5 @@
 {
-  "name": "node-css-to-vanilla-extract",
+  "name": "c2ve",
   "version": "0.0.1-alpha",
   "description": "Convert css (scss/sass) to vanilla-extract for node.",
   "main": "index.js",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/activeguild/wasm-css-to-vanilla-extract.git"
+    "url": "git+https://github.com/activeguild/css-to-vanilla-extract.git"
   },
   "keywords": [
     "css",
@@ -30,9 +30,9 @@
   "author": "j1ngzoue",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/activeguild/wasm-css-to-vanilla-extract/issues"
+    "url": "https://github.com/activeguild/css-to-vanilla-extract/issues"
   },
-  "homepage": "https://github.com/activeguild/wasm-css-to-vanilla-extract#readme",
+  "homepage": "https://github.com/activeguild/css-to-vanilla-extract#readme",
   "dependencies": {
     "@vanilla-extract/css": "^1.7.0",
     "commander": "^9.2.0",
