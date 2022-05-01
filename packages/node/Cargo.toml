@@ -14,7 +14,7 @@ crate-type = ["cdylib"]
 css_to_vanilla_extract = { version = "0.0.5-alpha", path = "../lib" }
 
 [dependencies.neon]
-version = "0.9"
+version = "0.10.0"
 default-features = false
 features = ["napi-6"]
 
