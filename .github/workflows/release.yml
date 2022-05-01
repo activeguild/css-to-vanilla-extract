@@ -28,7 +28,7 @@ jobs:
           COMMIT: ${{github.sha}}
         run: ./packages/node/tools/release.sh
       - name: build
-        run: npm run build
+        run: npm run build:node
       - name: release
         run: npm publish --workspace=packages/node
         env:
