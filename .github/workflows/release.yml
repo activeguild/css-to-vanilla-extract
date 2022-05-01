@@ -24,7 +24,7 @@ jobs:
       - name: check target list
         run: rustup target list
       - name: add target list
-        run: rustup target add x86_64-apple-darwin
+        run: rustup target add wasm32-wasi
       - name: check version and add tag
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
