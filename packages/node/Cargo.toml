@@ -1,0 +1,25 @@
+[package]
+name = "node-css-to-vanilla-extract"
+version = "0.0.1-alpha"
+license = "MIT"
+edition = "2021"
+exclude = ["index.node"]
+
+[lib]
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+css_to_vanilla_extract = { version = "0.0.1-alpha", path = "../lib" }
+
+[dependencies.neon]
+version = "0.9"
+default-features = false
+features = ["napi-6"]
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+lto = true
+codegen-units = 1
+opt-level = "z"

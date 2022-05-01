@@ -1,0 +1,42 @@
+{
+  "name": "playground",
+  "version": "0.0.1-alpha",
+  "description": "Convert css (scss/sass) to vanilla-extract for playground.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext '.js,.jsx,.ts,.tsx' --ignore-path .gitignore",
+    "lint:fix": "eslint . --fix --ext '.js,.jsx,.ts,.tsx' --ignore-path .gitignore",
+    "prettier": "prettier . --write  --ignore-path .gitignore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/activeguild/css-to-vanilla-extract.git"
+  },
+  "author": "j1ngzoue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/activeguild/css-to-vanilla-extract/issues"
+  },
+  "homepage": "https://github.com/activeguild/css-to-vanilla-extract#readme",
+  "dependencies": {
+    "@monaco-editor/react": "^4.4.4",
+    "modern-css-reset": "^1.4.0",
+    "prettier": "^2.6.2",
+    "prismjs": "^1.28.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "@types/prettier": "^2.6.0",
+    "@types/prismjs": "^1.26.0",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.3",
+    "@vitejs/plugin-react": "^1.3.1",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.6",
+    "vite-plugin-sass-dts": "^1.1.31"
+  }
+}

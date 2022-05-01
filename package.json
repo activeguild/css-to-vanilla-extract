@@ -1,0 +1,34 @@
+{
+  "name": "css-to-vanilla-extract-workspace",
+  "version": "0.0.1-alpha",
+  "description": "Convert css (scss/sass) to vanilla-extract.",
+  "scripts": {
+    "build:wasm": "npm run build --workspace=packages/wasm",
+    "build:node": "npm run build-release --workspace=packages/node",
+    "dev:playground": "npm run dev --workspace=packages/playground",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "eslint . --ext '.js,.jsx,.ts,.tsx' --ignore-path .gitignore",
+    "lint:fix": "eslint . --fix --ext '.js,.jsx,.ts,.tsx' --ignore-path .gitignore",
+    "prettier": "prettier . --write  --ignore-path .gitignore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/activeguild/css-to-vanilla-extract.git"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "j1ngzoue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/activeguild/css-to-vanilla-extract/issues"
+  },
+  "homepage": "https://github.com/activeguild/css-to-vanilla-extract#readme",
+  "private": true,
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.6.2"
+  }
+}

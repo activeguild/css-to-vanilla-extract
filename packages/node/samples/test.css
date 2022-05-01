@@ -1,0 +1,78 @@
+.foo,
+.bar {
+  position: absolute;
+}
+*,
+*::before,
+*::after,
+.bar:hover {
+  box-sizing: border-box;
+}
+[type^="button" s] {
+  cursor: pointer;
+}
+@media (min-width: 1200px) {
+  input {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .display-1 {
+    font-size: 5rem;
+    color: red;
+  }
+}
+.display-2 {
+  background-color: blue;
+}
+@media (min-width: 1200px) {
+  input {
+    font-size: 5rem;
+  }
+  .display-2 {
+    font-size: 5rem;
+    color: red;
+  }
+}
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .display-3 {
+    font-size: 5rem;
+  }
+}
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  input {
+    font-size: 5rem;
+  }
+}
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  input {
+    font-size: 5rem;
+  }
+  .display-4 {
+    font-size: 5rem;
+    color: red;
+  }
+}
+
+:hover {
+  color: red;
+}
+
+.toast:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.display-5 {
+  background-color: blue;
+}
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .display-5 {
+    font-size: 5rem;
+    color: red;
+  }
+}
+/* @font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+} */

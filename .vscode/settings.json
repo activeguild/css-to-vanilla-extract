@@ -1,0 +1,26 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.codeActionsOnSave": [
+    "source.organizeImports",
+    "source.fixAll.eslint"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[rust]": {
+    "editor.formatOnSave": true
+  },
+  "rust-analyzer.cargo.allFeatures": true,
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.checkOnSave.extraArgs": [
+    "--",
+    "-A",
+    "clippy::needless_return"
+  ],
+  "rust-analyzer.linkedProjects": [
+    "./packages/lib/Cargo.toml",
+    "./packages/wasm/Cargo.toml",
+    "./packages/node/Cargo.toml"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "css-to-vanilla-extract-wasm",
+  "version": "0.0.1-alpha",
+  "description": "Convert css (scss/sass) to vanilla-extract for wasm.",
+  "scripts": {
+    "build": "wasm-pack build --target web --out-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/activeguild/css-to-vanilla-extract.git"
+  },
+  "author": "j1ngzoue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/activeguild/css-to-vanilla-extract/issues"
+  },
+  "homepage": "https://github.com/activeguild/css-to-vanilla-extract#readme"
+}
