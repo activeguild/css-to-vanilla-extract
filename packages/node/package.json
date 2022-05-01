@@ -7,7 +7,7 @@
     "c2ve": "dist/index.js"
   },
   "scripts": {
-    "build": "cargo-cp-artifact -nc ./dist/index.node -- cargo build --target wasm32-wasi --message-format=json-render-diagnostics",
+    "build": "cargo-cp-artifact -nc ./dist/index.node -- cargo build --target x86_64-apple-darwin --message-format=json-render-diagnostics",
     "build-debug": "npm run build -- --release && cp -r ./debug/* ./dist",
     "build-release": "npm run build -- --release && cp -r ./release/* ./dist",
     "test-dir": "node ./dist/index.js ./samples",
