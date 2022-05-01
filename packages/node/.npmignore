@@ -1,8 +1,0 @@
-samples
-.github
-src
-release.sh
-tools
-target
-Cargo.lock
-Cargo.toml
