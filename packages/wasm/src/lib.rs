@@ -8,6 +8,14 @@ extern crate css_to_vanilla_extract;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-pub fn from_code(code: &str) -> Result<String, String> {
-    return css_to_vanilla_extract::from_code(code);
+pub fn from_code(code: JsValue) -> Result<JsValue, JsValue> {
+    match css_to_vanilla_extract::from_code(&code.as_string().unwrap()) {
+        Ok(value) => Ok(JsValue::from_str(&value)),
+        Err(_) => Err(JsValue::undefined()),
+    }
+
+    // Ok(JsValue::from_str(css_to_vanilla_extract::from_code(
+    //     &code.as_string(),
+    // )));
+    // return css_to_vanilla_extract::from_code(&code.as_string());
 }
