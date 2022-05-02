@@ -1,4 +1,4 @@
-import { globalStyle, globalKeyframes, style } from "@vanilla-extract/css";
+import { globalStyle, style } from "@vanilla-extract/css";
 
 globalStyle("*", {
   boxSizing: "border-box",
@@ -20,8 +20,6 @@ globalStyle("input", {
     "(min-width: 1200px)": {
       fontSize: "5rem",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       fontSize: "5rem",
     },
@@ -30,8 +28,6 @@ globalStyle("input", {
     "(position:-webkit-sticky) or (position:sticky)": {
       fontSize: "5rem",
     },
-  },
-  "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
       fontSize: "5rem",
     },
