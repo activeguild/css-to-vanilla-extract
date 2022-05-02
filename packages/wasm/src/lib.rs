@@ -17,11 +17,3 @@ pub fn from_code(code: JsValue) -> Result<JsValue, JsValue> {
         Err(_) => Err(JsValue::undefined()),
     }
 }
-
-#[wasm_bindgen]
-pub fn from_path(code: JsValue) -> Result<JsValue, JsValue> {
-    panic::set_hook(Box::new(console_error_panic_hook::hook));
-
-    css_to_vanilla_extract::from_path(&code.as_string().unwrap());
-    Ok(JsValue::undefined())
-}
