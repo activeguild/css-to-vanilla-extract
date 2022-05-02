@@ -31,6 +31,8 @@ jobs:
           REPO: ${{github.repository}}
           COMMIT: ${{github.sha}}
         run: ./packages/node/tools/release.sh
+      - name: run tests
+        run: npm run test
       - name: build
         run: npm run build:node
       - name: release
