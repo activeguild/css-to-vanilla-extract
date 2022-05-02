@@ -14,6 +14,6 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 pub fn from_code(code: JsValue) -> Result<JsValue, JsValue> {
     match css_to_vanilla_extract::from_code(&code.as_string().unwrap()) {
         Ok(value) => Ok(JsValue::from_str(&value)),
-        Err(_) => Err(JsValue::undefined()),
+        Err(error) => Err(JsValue::from_str(&error)),
     }
 }
