@@ -1,5 +1,4 @@
 extern crate console_error_panic_hook;
-use std::panic;
 
 use wasm_bindgen::prelude::*;
 extern crate css_to_vanilla_extract;
