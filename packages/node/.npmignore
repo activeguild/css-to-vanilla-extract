@@ -6,4 +6,3 @@ tools
 target
 Cargo.lock
 Cargo.toml
-release
