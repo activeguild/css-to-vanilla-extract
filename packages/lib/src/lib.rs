@@ -29,45 +29,65 @@ pub fn from_code(code: &str) -> Result<String, String> {
 pub fn from_path(path: &str) {
     let resolved_paths = match resolve_paths(path.to_string()) {
         Ok(value) => value,
-        Err(_) => return,
+        Err(error) => {
+            eprintln!("{:?}", error);
+            return;
+        }
     };
 
     for resolved_path in resolved_paths {
         let handle = thread::spawn(|| {
             let output_path_as_str = match resolved_path.0 {
                 Ok(value) => value,
-                Err(_) => return,
+                Err(error) => {
+                    eprintln!("{:?}", error);
+                    return;
+                }
             };
             let path_as_str = match resolved_path.1 {
                 Ok(value) => value,
-                Err(_) => return,
+                Err(error) => {
+                    eprintln!("{:?}", error);
+                    return;
+                }
             };
             if !is_css_request(&path_as_str) {
+                eprintln!("It is not a css file.({:?})", path_as_str);
                 return;
             }
 
             let options = grass::Options::default();
             let code = match grass::from_path(&path_as_str, &options) {
                 Ok(value) => value,
-                Err(_) => return,
+                Err(error) => {
+                    eprintln!("{:?}", error);
+                    return;
+                }
             };
 
             let parsed_css = match parse_css(&code) {
                 Ok(value) => value,
-                Err(_) => return,
+                Err(error) => {
+                    eprintln!("{:?}", error);
+                    return;
+                }
             };
 
             let ve: String = ast_to_vanilla_extract(parsed_css);
 
             let file = match File::create(output_path_as_str) {
                 Ok(value) => value,
-                Err(_) => return,
+                Err(error) => {
+                    eprintln!("{:?}", error);
+                    return;
+                }
             };
 
             let mut writer = BufWriter::new(file);
             let result = writer.write(ve.as_bytes());
 
-            if result.is_err() {
+            if let Err(error) = result {
+                eprintln!("{:?}", error);
                 return;
             }
         });
