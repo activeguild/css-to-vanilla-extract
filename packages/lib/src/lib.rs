@@ -88,7 +88,6 @@ pub fn from_path(path: &str) {
 
             if let Err(error) = result {
                 eprintln!("{:?}", error);
-                return;
             }
         });
         handle.join().unwrap();
