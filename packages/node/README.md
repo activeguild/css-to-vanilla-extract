@@ -1,6 +1,6 @@
 <h1 align="center">CSS-to-vanilla-extract ⚡ Welcome 😀</h1>
 
-Convert css (scss/sass) to [vanilla-extract](https://vanilla-extract.style/).
+Convert CSS (SCSS/SASS) to [vanilla-extract](https://vanilla-extract.style/).
 
 [playground](https://grand-tapioca-e54f4f.netlify.app/)
 

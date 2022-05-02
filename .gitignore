@@ -10,4 +10,7 @@ Cargo.lock
 **/*.rs.bk
 
 dist
+dist-node
 node_modules
+
+.wireit

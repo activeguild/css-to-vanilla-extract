@@ -14,6 +14,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup Node.js environment
         uses: actions/setup-node@v2
+      - mame: caching
+        uses: google/wireit@setup-github-actions-caching/v1
         with:
           node-version: 16.x
           registry-url: "https://registry.npmjs.org"
@@ -31,9 +33,7 @@ jobs:
           REPO: ${{github.repository}}
           COMMIT: ${{github.sha}}
         run: ./packages/node/tools/release.sh
-      - name: build
-        run: npm run build:node
       - name: release
-        run: npm publish --workspace=packages/node
+        run: npm run publish:node
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
