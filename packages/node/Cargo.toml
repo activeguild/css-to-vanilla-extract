@@ -1,6 +1,6 @@
 [package]
 name = "c2ve"
-version = "0.0.9-alpha"
+version = "0.0.10-alpha"
 license = "MIT"
 edition = "2021"
 exclude = ["index.node"]
@@ -11,7 +11,7 @@ crate-type = ["cdylib"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-css_to_vanilla_extract = { version = "0.0.9-alpha", path = "../lib" }
+css_to_vanilla_extract = { version = "0.0.10-alpha", path = "../lib" }
 
 [dependencies.neon]
 version = "0.10.0"
