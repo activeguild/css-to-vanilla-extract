@@ -1,24 +1,42 @@
 import { globalStyle, globalKeyframes, style } from "@vanilla-extract/css"
 
-globalKeyframes('progress-bar-stripes', {'from': {  backgroundPosition:"1rem 0",
+globalKeyframes("progress-bar-stripes", {
+'from': {  backgroundPosition:"1rem 0",
 },'to': {  backgroundPosition:"0 0",
-},});globalKeyframes('progress-bar-stripes', {'from': {  backgroundPosition:"1rem 0",
+},},
+);
+globalKeyframes("progress-bar-stripes", {
+'from': {  backgroundPosition:"1rem 0",
 },'to': {  backgroundPosition:"0 0",
-},});globalKeyframes('spinner-border', {'to': {  WebkitTransform:"rotate(360deg)",
+},},
+);
+globalKeyframes("spinner-border", {
+'to': {  WebkitTransform:"rotate(360deg)",
   transform:"rotate(360deg)",
-},});globalKeyframes('spinner-border', {'to': {  WebkitTransform:"rotate(360deg)",
+},},
+);
+globalKeyframes("spinner-border", {
+'to': {  WebkitTransform:"rotate(360deg)",
   transform:"rotate(360deg)",
-},});globalKeyframes('spinner-grow', {'0%': {  WebkitTransform:"scale(0)",
+},},
+);
+globalKeyframes("spinner-grow", {
+'0%': {  WebkitTransform:"scale(0)",
   transform:"scale(0)",
 },'50%': {  opacity:"1",
   WebkitTransform:"none",
   transform:"none",
-},});globalKeyframes('spinner-grow', {'0%': {  WebkitTransform:"scale(0)",
+},},
+);
+globalKeyframes("spinner-grow", {
+'0%': {  WebkitTransform:"scale(0)",
   transform:"scale(0)",
 },'50%': {  opacity:"1",
   WebkitTransform:"none",
   transform:"none",
-},});globalStyle("*", {
+},},
+);
+globalStyle("*", {
   boxSizing:"border-box",
 "@media": {
 "print": {
@@ -618,8 +636,6 @@ globalStyle("h2", {
   orphans:"3",
   widows:"3",
 },
-},
-"@media": {
 "print": {
   pageBreakAfter:"avoid",
 },
@@ -638,8 +654,6 @@ globalStyle("h3", {
   orphans:"3",
   widows:"3",
 },
-},
-"@media": {
 "print": {
   pageBreakAfter:"avoid",
 },
@@ -893,8 +907,6 @@ globalStyle("pre", {
 "print": {
   whiteSpace:"pre-wrap",
 },
-},
-"@media": {
 "print": {
   border:"1px solid adb5bd",
   pageBreakInside:"avoid",
@@ -1600,8 +1612,6 @@ globalStyle("tableth", {
 "print": {
   backgroundColor:"fff",
 },
-},
-"@media": {
 "print": {
   color:"inherit",
   borderColor:"dee2e6",
@@ -2420,15 +2430,13 @@ export const badge = style({
   verticalAlign:"baseline",
   borderRadius:"0.25rem",
   transition:"color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-"@media": {
-"(prefers-reduced-motion: reduce)": {
-  transition:"none",
-},
-},
 ":empty": {
   display:"none",
 },
 "@media": {
+"(prefers-reduced-motion: reduce)": {
+  transition:"none",
+},
 "print": {
   border:"1px solid 000",
 },
@@ -2916,11 +2924,6 @@ export const btn = style({
   lineHeight:"1.5",
   borderRadius:"0.25rem",
   transition:"color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-"@media": {
-"(prefers-reduced-motion: reduce)": {
-  transition:"none",
-},
-},
 ":hover": {
   color:"212529",
   textDecoration:"none",
@@ -2942,6 +2945,11 @@ export const btn = style({
 },
   position:"relative",
   top:"-1px",
+"@media": {
+"(prefers-reduced-motion: reduce)": {
+  transition:"none",
+},
+},
 });
 export const btnBlock = style({
   display:"block",
@@ -3932,8 +3940,6 @@ export const cardColumns = style({
   orphans:"1",
   widows:"1",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   display:"inline-block",
   width:"100%",
@@ -3951,8 +3957,6 @@ export const cardDeck = style({
   marginRight:"-15px",
   marginLeft:"-15px",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   MsFlex:"1 0 0%",
   flex:"1 0 0%",
@@ -3979,21 +3983,15 @@ export const cardGroup = style({
   MsFlexFlow:"row wrap",
   flexFlow:"row wrap",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   MsFlex:"1 0 0%",
   flex:"1 0 0%",
   marginBottom:"0",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"0",
   borderLeft:"0",
 },
-},
-"@media": {
 "(min-width: 576px)": {
 "selectors": {
 "&:not(:last-child)": {
@@ -4002,8 +4000,6 @@ export const cardGroup = style({
 },
 },
 },
-},
-"@media": {
 "(min-width: 576px)": {
 "selectors": {
 "&:not(:last-child)": {
@@ -4011,8 +4007,6 @@ export const cardGroup = style({
 },
 },
 },
-},
-"@media": {
 "(min-width: 576px)": {
 "selectors": {
 "&:not(:last-child)": {
@@ -4020,8 +4014,6 @@ export const cardGroup = style({
 },
 },
 },
-},
-"@media": {
 "(min-width: 576px)": {
 "selectors": {
 "&:not(:last-child)": {
@@ -4029,8 +4021,6 @@ export const cardGroup = style({
 },
 },
 },
-},
-"@media": {
 "(min-width: 576px)": {
 "selectors": {
 "&:not(:last-child)": {
@@ -4038,8 +4028,6 @@ export const cardGroup = style({
 },
 },
 },
-},
-"@media": {
 "(min-width: 576px)": {
 "selectors": {
 "&:not(:first-child)": {
@@ -4048,8 +4036,6 @@ export const cardGroup = style({
 },
 },
 },
-},
-"@media": {
 "(min-width: 576px)": {
 "selectors": {
 "&:not(:first-child)": {
@@ -4057,8 +4043,6 @@ export const cardGroup = style({
 },
 },
 },
-},
-"@media": {
 "(min-width: 576px)": {
 "selectors": {
 "&:not(:first-child)": {
@@ -4066,8 +4050,6 @@ export const cardGroup = style({
 },
 },
 },
-},
-"@media": {
 "(min-width: 576px)": {
 "selectors": {
 "&:not(:first-child)": {
@@ -4075,8 +4057,6 @@ export const cardGroup = style({
 },
 },
 },
-},
-"@media": {
 "(min-width: 576px)": {
 "selectors": {
 "&:not(:first-child)": {
@@ -4190,11 +4170,6 @@ export const carouselControlNext = style({
   border:"0",
   opacity:"0.5",
   transition:"opacity 0.15s ease",
-"@media": {
-"(prefers-reduced-motion: reduce)": {
-  transition:"none",
-},
-},
 ":hover": {
   color:"fff",
   textDecoration:"none",
@@ -4208,6 +4183,11 @@ export const carouselControlNext = style({
   opacity:"0.9",
 },
   right:"0",
+"@media": {
+"(prefers-reduced-motion: reduce)": {
+  transition:"none",
+},
+},
 });
 export const carouselControlNextIcon = style({
   display:"inline-block",
@@ -4235,11 +4215,6 @@ export const carouselControlPrev = style({
   border:"0",
   opacity:"0.5",
   transition:"opacity 0.15s ease",
-"@media": {
-"(prefers-reduced-motion: reduce)": {
-  transition:"none",
-},
-},
 ":hover": {
   color:"fff",
   textDecoration:"none",
@@ -4253,6 +4228,11 @@ export const carouselControlPrev = style({
   opacity:"0.9",
 },
   left:"0",
+"@media": {
+"(prefers-reduced-motion: reduce)": {
+  transition:"none",
+},
+},
 });
 export const carouselControlPrevIcon = style({
   display:"inline-block",
@@ -4282,8 +4262,6 @@ export const carouselFade = style({
 "(prefers-reduced-motion: reduce)": {
   transition:"none",
 },
-},
-"@media": {
 "(prefers-reduced-motion: reduce)": {
   transition:"none",
 },
@@ -4326,12 +4304,12 @@ export const carouselItem = style({
   transition:"-webkit-transform 0.6s ease-in-out",
   transition:"transform 0.6s ease-in-out",
   transition:"transform 0.6s ease-in-out , -webkit-transform 0.6s ease-in-out",
+  display:"block",
 "@media": {
 "(prefers-reduced-motion: reduce)": {
   transition:"none",
 },
 },
-  display:"block",
 });
 export const carouselItemNext = style({
   display:"block",
@@ -5297,23 +5275,15 @@ export const container = style({
 "(min-width: 576px)": {
   maxWidth:"540px",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   maxWidth:"720px",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   maxWidth:"960px",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   maxWidth:"1140px",
 },
-},
-"@media": {
 "print": {
   minWidth:"992px",
 },
@@ -5336,8 +5306,6 @@ export const containerLg = style({
 "(min-width: 992px)": {
   maxWidth:"960px",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   maxWidth:"1140px",
 },
@@ -5353,13 +5321,9 @@ export const containerMd = style({
 "(min-width: 768px)": {
   maxWidth:"720px",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   maxWidth:"960px",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   maxWidth:"1140px",
 },
@@ -5375,18 +5339,12 @@ export const containerSm = style({
 "(min-width: 576px)": {
   maxWidth:"540px",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   maxWidth:"720px",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   maxWidth:"960px",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   maxWidth:"1140px",
 },
@@ -5680,14 +5638,6 @@ export const customRange = style({
   WebkitAppearance:"none",
   appearance:"none",
 },
-"@media": {
-"(prefers-reduced-motion: reduce)": {
-"::-webkit-slider-thumb": {
-  WebkitTransition:"none",
-  transition:"none",
-},
-},
-},
 "::-webkit-slider-thumb:active": {
   backgroundColor:"b3d7ff",
 },
@@ -5710,14 +5660,6 @@ export const customRange = style({
   transition:"background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
   MozAppearance:"none",
   appearance:"none",
-},
-"@media": {
-"(prefers-reduced-motion: reduce)": {
-"::-moz-range-thumb": {
-  MozTransition:"none",
-  transition:"none",
-},
-},
 },
 "::-moz-range-thumb:active": {
   backgroundColor:"b3d7ff",
@@ -5743,14 +5685,6 @@ export const customRange = style({
   MsTransition:"background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
   transition:"background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
   appearance:"none",
-},
-"@media": {
-"(prefers-reduced-motion: reduce)": {
-"::-ms-thumb": {
-  MsTransition:"none",
-  transition:"none",
-},
-},
 },
 "::-ms-thumb:active": {
   backgroundColor:"b3d7ff",
@@ -5787,6 +5721,26 @@ export const customRange = style({
 },
 ":disabled::-ms-thumb": {
   backgroundColor:"adb5bd",
+},
+"@media": {
+"(prefers-reduced-motion: reduce)": {
+"::-webkit-slider-thumb": {
+  WebkitTransition:"none",
+  transition:"none",
+},
+},
+"(prefers-reduced-motion: reduce)": {
+"::-moz-range-thumb": {
+  MozTransition:"none",
+  transition:"none",
+},
+},
+"(prefers-reduced-motion: reduce)": {
+"::-ms-thumb": {
+  MsTransition:"none",
+  transition:"none",
+},
+},
 },
 });
 export const customSelect = style({
@@ -5897,13 +5851,6 @@ export const customSwitch = style({
   transition:"transform 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
   transition:"transform 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out , -webkit-transform 0.15s ease-in-out",
 },
-"@media": {
-"(prefers-reduced-motion: reduce)": {
-"::after": {
-  transition:"none",
-},
-},
-},
 ":checked::after": {
   backgroundColor:"fff",
   WebkitTransform:"translateX(0.75rem)",
@@ -5911,6 +5858,13 @@ export const customSwitch = style({
 },
 ":disabled:checked::before": {
   backgroundColor:"rgba(0,123,255,0.5)",
+},
+"@media": {
+"(prefers-reduced-motion: reduce)": {
+"::after": {
+  transition:"none",
+},
+},
 },
 });
 export const dBlock = style({
@@ -6611,14 +6565,14 @@ export const embedResponsive4By3 = style({
 });
 export const fade = style({
   transition:"opacity 0.15s linear",
-"@media": {
-"(prefers-reduced-motion: reduce)": {
-  transition:"none",
-},
-},
 "selectors": {
 "&:not": {
   opacity:"0",
+},
+},
+"@media": {
+"(prefers-reduced-motion: reduce)": {
+  transition:"none",
 },
 },
 });
@@ -7243,11 +7197,6 @@ export const formControl = style({
   border:"1px solid ced4da",
   borderRadius:"0.25rem",
   transition:"border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-"@media": {
-"(prefers-reduced-motion: reduce)": {
-  transition:"none",
-},
-},
 "selectors": {
 "&::-ms-expand": {
   backgroundColor:"transparent",
@@ -7313,6 +7262,11 @@ export const formControl = style({
   borderColor:"dc3545",
   boxShadow:"0 0 0 0.2rem rgba(220,53,69,0.25)",
 },
+"@media": {
+"(prefers-reduced-motion: reduce)": {
+  transition:"none",
+},
+},
 });
 export const formControlFile = style({
   display:"block",
@@ -7375,30 +7329,20 @@ export const formInline = style({
   alignItems:"center",
   marginBottom:"0",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   display:"inline-block",
   width:"auto",
   verticalAlign:"middle",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   display:"inline-block",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   width:"auto",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   width:"auto",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   display:"-ms-flexbox",
   display:"flex",
@@ -7409,8 +7353,6 @@ export const formInline = style({
   width:"auto",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   position:"relative",
   MsFlexNegative:"0",
@@ -7419,16 +7361,12 @@ export const formInline = style({
   marginRight:"0.25rem",
   marginLeft:"0",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   MsFlexAlign:"center",
   alignItems:"center",
   MsFlexPack:"center",
   justifyContent:"center",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"0",
 },
@@ -8116,35 +8054,25 @@ export const listGroupHorizontalLg = style({
   MsFlexDirection:"row",
   flexDirection:"row",
 },
-},
-"@media": {
 "(min-width: 992px)": {
 ":first-child": {
   borderBottomLeftRadius:"0.25rem",
   borderTopRightRadius:"0",
 },
 },
-},
-"@media": {
 "(min-width: 992px)": {
 ":last-child": {
   borderTopRightRadius:"0.25rem",
   borderBottomLeftRadius:"0",
 },
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginTop:"0",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   borderTopWidth:"1px",
   borderLeftWidth:"0",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"-1px",
   borderLeftWidth:"1px",
@@ -8157,35 +8085,25 @@ export const listGroupHorizontalMd = style({
   MsFlexDirection:"row",
   flexDirection:"row",
 },
-},
-"@media": {
 "(min-width: 768px)": {
 ":first-child": {
   borderBottomLeftRadius:"0.25rem",
   borderTopRightRadius:"0",
 },
 },
-},
-"@media": {
 "(min-width: 768px)": {
 ":last-child": {
   borderTopRightRadius:"0.25rem",
   borderBottomLeftRadius:"0",
 },
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginTop:"0",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   borderTopWidth:"1px",
   borderLeftWidth:"0",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"-1px",
   borderLeftWidth:"1px",
@@ -8198,35 +8116,25 @@ export const listGroupHorizontalSm = style({
   MsFlexDirection:"row",
   flexDirection:"row",
 },
-},
-"@media": {
 "(min-width: 576px)": {
 ":first-child": {
   borderBottomLeftRadius:"0.25rem",
   borderTopRightRadius:"0",
 },
 },
-},
-"@media": {
 "(min-width: 576px)": {
 ":last-child": {
   borderTopRightRadius:"0.25rem",
   borderBottomLeftRadius:"0",
 },
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginTop:"0",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   borderTopWidth:"1px",
   borderLeftWidth:"0",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"-1px",
   borderLeftWidth:"1px",
@@ -8239,35 +8147,25 @@ export const listGroupHorizontalXl = style({
   MsFlexDirection:"row",
   flexDirection:"row",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
 ":first-child": {
   borderBottomLeftRadius:"0.25rem",
   borderTopRightRadius:"0",
 },
 },
-},
-"@media": {
 "(min-width: 1200px)": {
 ":last-child": {
   borderTopRightRadius:"0.25rem",
   borderBottomLeftRadius:"0",
 },
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginTop:"0",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   borderTopWidth:"1px",
   borderLeftWidth:"0",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"-1px",
   borderLeftWidth:"1px",
@@ -9615,15 +9513,15 @@ export const modal = style({
   transition:"transform 0.3s ease-out , -webkit-transform 0.3s ease-out",
   WebkitTransform:"translate(0,-50px)",
   transform:"translate(0,-50px)",
+  WebkitTransform:"none",
+  transform:"none",
+  WebkitTransform:"scale(1.02)",
+  transform:"scale(1.02)",
 "@media": {
 "(prefers-reduced-motion: reduce)": {
   transition:"none",
 },
 },
-  WebkitTransform:"none",
-  transform:"none",
-  WebkitTransform:"scale(1.02)",
-  transform:"scale(1.02)",
 });
 export const modalBackdrop = style({
   position:"fixed",
@@ -9695,8 +9593,6 @@ export const modalDialogCentered = style({
 "(min-width: 576px)": {
   minHeight:"calc(100%-3.5rem)",
 },
-},
-"@media": {
 "(min-width: 576px)": {
 "::before": {
   height:"calc(100vh-3.5rem)",
@@ -9722,8 +9618,6 @@ export const modalDialogScrollable = style({
 "(min-width: 576px)": {
   maxHeight:"calc(100%-3.5rem)",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   maxHeight:"calc(100vh-3.5rem)",
 },
@@ -9792,8 +9686,6 @@ export const modalXl = style({
 "(min-width: 992px)": {
   maxWidth:"800px",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   maxWidth:"1140px",
 },
@@ -10579,8 +10471,6 @@ export const mxLg0 = style({
 "(min-width: 992px)": {
   marginRight:"0",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"0",
 },
@@ -10591,8 +10481,6 @@ export const mxLg1 = style({
 "(min-width: 992px)": {
   marginRight:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"0.25rem",
 },
@@ -10603,8 +10491,6 @@ export const mxLg2 = style({
 "(min-width: 992px)": {
   marginRight:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"0.5rem",
 },
@@ -10615,8 +10501,6 @@ export const mxLg3 = style({
 "(min-width: 992px)": {
   marginRight:"1rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"1rem",
 },
@@ -10627,8 +10511,6 @@ export const mxLg4 = style({
 "(min-width: 992px)": {
   marginRight:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"1.5rem",
 },
@@ -10639,8 +10521,6 @@ export const mxLg5 = style({
 "(min-width: 992px)": {
   marginRight:"3rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"3rem",
 },
@@ -10651,8 +10531,6 @@ export const mxLgAuto = style({
 "(min-width: 992px)": {
   marginRight:"auto",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"auto",
 },
@@ -10663,8 +10541,6 @@ export const mxLgN1 = style({
 "(min-width: 992px)": {
   marginRight:"-0.25rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"-0.25rem",
 },
@@ -10675,8 +10551,6 @@ export const mxLgN2 = style({
 "(min-width: 992px)": {
   marginRight:"-0.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"-0.5rem",
 },
@@ -10687,8 +10561,6 @@ export const mxLgN3 = style({
 "(min-width: 992px)": {
   marginRight:"-1rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"-1rem",
 },
@@ -10699,8 +10571,6 @@ export const mxLgN4 = style({
 "(min-width: 992px)": {
   marginRight:"-1.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"-1.5rem",
 },
@@ -10711,8 +10581,6 @@ export const mxLgN5 = style({
 "(min-width: 992px)": {
   marginRight:"-3rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginLeft:"-3rem",
 },
@@ -10723,8 +10591,6 @@ export const mxMd0 = style({
 "(min-width: 768px)": {
   marginRight:"0",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"0",
 },
@@ -10735,8 +10601,6 @@ export const mxMd1 = style({
 "(min-width: 768px)": {
   marginRight:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"0.25rem",
 },
@@ -10747,8 +10611,6 @@ export const mxMd2 = style({
 "(min-width: 768px)": {
   marginRight:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"0.5rem",
 },
@@ -10759,8 +10621,6 @@ export const mxMd3 = style({
 "(min-width: 768px)": {
   marginRight:"1rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"1rem",
 },
@@ -10771,8 +10631,6 @@ export const mxMd4 = style({
 "(min-width: 768px)": {
   marginRight:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"1.5rem",
 },
@@ -10783,8 +10641,6 @@ export const mxMd5 = style({
 "(min-width: 768px)": {
   marginRight:"3rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"3rem",
 },
@@ -10795,8 +10651,6 @@ export const mxMdAuto = style({
 "(min-width: 768px)": {
   marginRight:"auto",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"auto",
 },
@@ -10807,8 +10661,6 @@ export const mxMdN1 = style({
 "(min-width: 768px)": {
   marginRight:"-0.25rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"-0.25rem",
 },
@@ -10819,8 +10671,6 @@ export const mxMdN2 = style({
 "(min-width: 768px)": {
   marginRight:"-0.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"-0.5rem",
 },
@@ -10831,8 +10681,6 @@ export const mxMdN3 = style({
 "(min-width: 768px)": {
   marginRight:"-1rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"-1rem",
 },
@@ -10843,8 +10691,6 @@ export const mxMdN4 = style({
 "(min-width: 768px)": {
   marginRight:"-1.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"-1.5rem",
 },
@@ -10855,8 +10701,6 @@ export const mxMdN5 = style({
 "(min-width: 768px)": {
   marginRight:"-3rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginLeft:"-3rem",
 },
@@ -10887,8 +10731,6 @@ export const mxSm0 = style({
 "(min-width: 576px)": {
   marginRight:"0",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"0",
 },
@@ -10899,8 +10741,6 @@ export const mxSm1 = style({
 "(min-width: 576px)": {
   marginRight:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"0.25rem",
 },
@@ -10911,8 +10751,6 @@ export const mxSm2 = style({
 "(min-width: 576px)": {
   marginRight:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"0.5rem",
 },
@@ -10923,8 +10761,6 @@ export const mxSm3 = style({
 "(min-width: 576px)": {
   marginRight:"1rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"1rem",
 },
@@ -10935,8 +10771,6 @@ export const mxSm4 = style({
 "(min-width: 576px)": {
   marginRight:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"1.5rem",
 },
@@ -10947,8 +10781,6 @@ export const mxSm5 = style({
 "(min-width: 576px)": {
   marginRight:"3rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"3rem",
 },
@@ -10959,8 +10791,6 @@ export const mxSmAuto = style({
 "(min-width: 576px)": {
   marginRight:"auto",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"auto",
 },
@@ -10971,8 +10801,6 @@ export const mxSmN1 = style({
 "(min-width: 576px)": {
   marginRight:"-0.25rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"-0.25rem",
 },
@@ -10983,8 +10811,6 @@ export const mxSmN2 = style({
 "(min-width: 576px)": {
   marginRight:"-0.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"-0.5rem",
 },
@@ -10995,8 +10821,6 @@ export const mxSmN3 = style({
 "(min-width: 576px)": {
   marginRight:"-1rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"-1rem",
 },
@@ -11007,8 +10831,6 @@ export const mxSmN4 = style({
 "(min-width: 576px)": {
   marginRight:"-1.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"-1.5rem",
 },
@@ -11019,8 +10841,6 @@ export const mxSmN5 = style({
 "(min-width: 576px)": {
   marginRight:"-3rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginLeft:"-3rem",
 },
@@ -11031,8 +10851,6 @@ export const mxXl0 = style({
 "(min-width: 1200px)": {
   marginRight:"0",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"0",
 },
@@ -11043,8 +10861,6 @@ export const mxXl1 = style({
 "(min-width: 1200px)": {
   marginRight:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"0.25rem",
 },
@@ -11055,8 +10871,6 @@ export const mxXl2 = style({
 "(min-width: 1200px)": {
   marginRight:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"0.5rem",
 },
@@ -11067,8 +10881,6 @@ export const mxXl3 = style({
 "(min-width: 1200px)": {
   marginRight:"1rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"1rem",
 },
@@ -11079,8 +10891,6 @@ export const mxXl4 = style({
 "(min-width: 1200px)": {
   marginRight:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"1.5rem",
 },
@@ -11091,8 +10901,6 @@ export const mxXl5 = style({
 "(min-width: 1200px)": {
   marginRight:"3rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"3rem",
 },
@@ -11103,8 +10911,6 @@ export const mxXlAuto = style({
 "(min-width: 1200px)": {
   marginRight:"auto",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"auto",
 },
@@ -11115,8 +10921,6 @@ export const mxXlN1 = style({
 "(min-width: 1200px)": {
   marginRight:"-0.25rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"-0.25rem",
 },
@@ -11127,8 +10931,6 @@ export const mxXlN2 = style({
 "(min-width: 1200px)": {
   marginRight:"-0.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"-0.5rem",
 },
@@ -11139,8 +10941,6 @@ export const mxXlN3 = style({
 "(min-width: 1200px)": {
   marginRight:"-1rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"-1rem",
 },
@@ -11151,8 +10951,6 @@ export const mxXlN4 = style({
 "(min-width: 1200px)": {
   marginRight:"-1.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"-1.5rem",
 },
@@ -11163,8 +10961,6 @@ export const mxXlN5 = style({
 "(min-width: 1200px)": {
   marginRight:"-3rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginLeft:"-3rem",
 },
@@ -11203,8 +10999,6 @@ export const myLg0 = style({
 "(min-width: 992px)": {
   marginTop:"0",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginBottom:"0",
 },
@@ -11215,8 +11009,6 @@ export const myLg1 = style({
 "(min-width: 992px)": {
   marginTop:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginBottom:"0.25rem",
 },
@@ -11227,8 +11019,6 @@ export const myLg2 = style({
 "(min-width: 992px)": {
   marginTop:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginBottom:"0.5rem",
 },
@@ -11239,8 +11029,6 @@ export const myLg3 = style({
 "(min-width: 992px)": {
   marginTop:"1rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginBottom:"1rem",
 },
@@ -11251,8 +11039,6 @@ export const myLg4 = style({
 "(min-width: 992px)": {
   marginTop:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginBottom:"1.5rem",
 },
@@ -11263,8 +11049,6 @@ export const myLg5 = style({
 "(min-width: 992px)": {
   marginTop:"3rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginBottom:"3rem",
 },
@@ -11275,8 +11059,6 @@ export const myLgAuto = style({
 "(min-width: 992px)": {
   marginTop:"auto",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginBottom:"auto",
 },
@@ -11287,8 +11069,6 @@ export const myLgN1 = style({
 "(min-width: 992px)": {
   marginTop:"-0.25rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginBottom:"-0.25rem",
 },
@@ -11299,8 +11079,6 @@ export const myLgN2 = style({
 "(min-width: 992px)": {
   marginTop:"-0.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginBottom:"-0.5rem",
 },
@@ -11311,8 +11089,6 @@ export const myLgN3 = style({
 "(min-width: 992px)": {
   marginTop:"-1rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginBottom:"-1rem",
 },
@@ -11323,8 +11099,6 @@ export const myLgN4 = style({
 "(min-width: 992px)": {
   marginTop:"-1.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginBottom:"-1.5rem",
 },
@@ -11335,8 +11109,6 @@ export const myLgN5 = style({
 "(min-width: 992px)": {
   marginTop:"-3rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   marginBottom:"-3rem",
 },
@@ -11347,8 +11119,6 @@ export const myMd0 = style({
 "(min-width: 768px)": {
   marginTop:"0",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginBottom:"0",
 },
@@ -11359,8 +11129,6 @@ export const myMd1 = style({
 "(min-width: 768px)": {
   marginTop:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginBottom:"0.25rem",
 },
@@ -11371,8 +11139,6 @@ export const myMd2 = style({
 "(min-width: 768px)": {
   marginTop:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginBottom:"0.5rem",
 },
@@ -11383,8 +11149,6 @@ export const myMd3 = style({
 "(min-width: 768px)": {
   marginTop:"1rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginBottom:"1rem",
 },
@@ -11395,8 +11159,6 @@ export const myMd4 = style({
 "(min-width: 768px)": {
   marginTop:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginBottom:"1.5rem",
 },
@@ -11407,8 +11169,6 @@ export const myMd5 = style({
 "(min-width: 768px)": {
   marginTop:"3rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginBottom:"3rem",
 },
@@ -11419,8 +11179,6 @@ export const myMdAuto = style({
 "(min-width: 768px)": {
   marginTop:"auto",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginBottom:"auto",
 },
@@ -11431,8 +11189,6 @@ export const myMdN1 = style({
 "(min-width: 768px)": {
   marginTop:"-0.25rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginBottom:"-0.25rem",
 },
@@ -11443,8 +11199,6 @@ export const myMdN2 = style({
 "(min-width: 768px)": {
   marginTop:"-0.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginBottom:"-0.5rem",
 },
@@ -11455,8 +11209,6 @@ export const myMdN3 = style({
 "(min-width: 768px)": {
   marginTop:"-1rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginBottom:"-1rem",
 },
@@ -11467,8 +11219,6 @@ export const myMdN4 = style({
 "(min-width: 768px)": {
   marginTop:"-1.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginBottom:"-1.5rem",
 },
@@ -11479,8 +11229,6 @@ export const myMdN5 = style({
 "(min-width: 768px)": {
   marginTop:"-3rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   marginBottom:"-3rem",
 },
@@ -11511,8 +11259,6 @@ export const mySm0 = style({
 "(min-width: 576px)": {
   marginTop:"0",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"0",
 },
@@ -11523,8 +11269,6 @@ export const mySm1 = style({
 "(min-width: 576px)": {
   marginTop:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"0.25rem",
 },
@@ -11535,8 +11279,6 @@ export const mySm2 = style({
 "(min-width: 576px)": {
   marginTop:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"0.5rem",
 },
@@ -11547,8 +11289,6 @@ export const mySm3 = style({
 "(min-width: 576px)": {
   marginTop:"1rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"1rem",
 },
@@ -11559,8 +11299,6 @@ export const mySm4 = style({
 "(min-width: 576px)": {
   marginTop:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"1.5rem",
 },
@@ -11571,8 +11309,6 @@ export const mySm5 = style({
 "(min-width: 576px)": {
   marginTop:"3rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"3rem",
 },
@@ -11583,8 +11319,6 @@ export const mySmAuto = style({
 "(min-width: 576px)": {
   marginTop:"auto",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"auto",
 },
@@ -11595,8 +11329,6 @@ export const mySmN1 = style({
 "(min-width: 576px)": {
   marginTop:"-0.25rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"-0.25rem",
 },
@@ -11607,8 +11339,6 @@ export const mySmN2 = style({
 "(min-width: 576px)": {
   marginTop:"-0.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"-0.5rem",
 },
@@ -11619,8 +11349,6 @@ export const mySmN3 = style({
 "(min-width: 576px)": {
   marginTop:"-1rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"-1rem",
 },
@@ -11631,8 +11359,6 @@ export const mySmN4 = style({
 "(min-width: 576px)": {
   marginTop:"-1.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"-1.5rem",
 },
@@ -11643,8 +11369,6 @@ export const mySmN5 = style({
 "(min-width: 576px)": {
   marginTop:"-3rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   marginBottom:"-3rem",
 },
@@ -11655,8 +11379,6 @@ export const myXl0 = style({
 "(min-width: 1200px)": {
   marginTop:"0",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginBottom:"0",
 },
@@ -11667,8 +11389,6 @@ export const myXl1 = style({
 "(min-width: 1200px)": {
   marginTop:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginBottom:"0.25rem",
 },
@@ -11679,8 +11399,6 @@ export const myXl2 = style({
 "(min-width: 1200px)": {
   marginTop:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginBottom:"0.5rem",
 },
@@ -11691,8 +11409,6 @@ export const myXl3 = style({
 "(min-width: 1200px)": {
   marginTop:"1rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginBottom:"1rem",
 },
@@ -11703,8 +11419,6 @@ export const myXl4 = style({
 "(min-width: 1200px)": {
   marginTop:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginBottom:"1.5rem",
 },
@@ -11715,8 +11429,6 @@ export const myXl5 = style({
 "(min-width: 1200px)": {
   marginTop:"3rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginBottom:"3rem",
 },
@@ -11727,8 +11439,6 @@ export const myXlAuto = style({
 "(min-width: 1200px)": {
   marginTop:"auto",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginBottom:"auto",
 },
@@ -11739,8 +11449,6 @@ export const myXlN1 = style({
 "(min-width: 1200px)": {
   marginTop:"-0.25rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginBottom:"-0.25rem",
 },
@@ -11751,8 +11459,6 @@ export const myXlN2 = style({
 "(min-width: 1200px)": {
   marginTop:"-0.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginBottom:"-0.5rem",
 },
@@ -11763,8 +11469,6 @@ export const myXlN3 = style({
 "(min-width: 1200px)": {
   marginTop:"-1rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginBottom:"-1rem",
 },
@@ -11775,8 +11479,6 @@ export const myXlN4 = style({
 "(min-width: 1200px)": {
   marginTop:"-1.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginBottom:"-1.5rem",
 },
@@ -11787,8 +11489,6 @@ export const myXlN5 = style({
 "(min-width: 1200px)": {
   marginTop:"-3rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   marginBottom:"-3rem",
 },
@@ -12028,112 +11728,76 @@ export const navbarExpandLg = style({
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 991.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 991.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 991.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 991.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 991.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   MsFlexFlow:"row nowrap",
   flexFlow:"row nowrap",
   MsFlexPack:"start",
   justifyContent:"flex-start",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   MsFlexDirection:"row",
   flexDirection:"row",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   position:"absolute",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingRight:"0.5rem",
   paddingLeft:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   overflow:"visible",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   display:"-ms-flexbox",
   display:"flex",
   MsFlexPreferredSize:"auto",
   flexBasis:"auto",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   display:"none",
 },
@@ -12145,112 +11809,76 @@ export const navbarExpandMd = style({
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 767.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 767.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 767.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 767.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 767.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   MsFlexFlow:"row nowrap",
   flexFlow:"row nowrap",
   MsFlexPack:"start",
   justifyContent:"flex-start",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   MsFlexDirection:"row",
   flexDirection:"row",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   position:"absolute",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingRight:"0.5rem",
   paddingLeft:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   overflow:"visible",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   display:"-ms-flexbox",
   display:"flex",
   MsFlexPreferredSize:"auto",
   flexBasis:"auto",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   display:"none",
 },
@@ -12262,112 +11890,76 @@ export const navbarExpandSm = style({
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 575.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 575.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 575.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 575.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 575.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   MsFlexFlow:"row nowrap",
   flexFlow:"row nowrap",
   MsFlexPack:"start",
   justifyContent:"flex-start",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   MsFlexDirection:"row",
   flexDirection:"row",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   position:"absolute",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingRight:"0.5rem",
   paddingLeft:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   overflow:"visible",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   display:"-ms-flexbox",
   display:"flex",
   MsFlexPreferredSize:"auto",
   flexBasis:"auto",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   display:"none",
 },
@@ -12379,112 +11971,76 @@ export const navbarExpandXl = style({
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 1199.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 1199.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 1199.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 1199.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(max-width: 1199.98px)": {
   paddingRight:"0",
   paddingLeft:"0",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   MsFlexFlow:"row nowrap",
   flexFlow:"row nowrap",
   MsFlexPack:"start",
   justifyContent:"flex-start",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   MsFlexDirection:"row",
   flexDirection:"row",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   position:"absolute",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingRight:"0.5rem",
   paddingLeft:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   MsFlexWrap:"nowrap",
   flexWrap:"nowrap",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   overflow:"visible",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   display:"-ms-flexbox",
   display:"flex",
   MsFlexPreferredSize:"auto",
   flexBasis:"auto",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   display:"none",
 },
@@ -14646,8 +14202,6 @@ export const pxLg0 = style({
 "(min-width: 992px)": {
   paddingRight:"0",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingLeft:"0",
 },
@@ -14658,8 +14212,6 @@ export const pxLg1 = style({
 "(min-width: 992px)": {
   paddingRight:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingLeft:"0.25rem",
 },
@@ -14670,8 +14222,6 @@ export const pxLg2 = style({
 "(min-width: 992px)": {
   paddingRight:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingLeft:"0.5rem",
 },
@@ -14682,8 +14232,6 @@ export const pxLg3 = style({
 "(min-width: 992px)": {
   paddingRight:"1rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingLeft:"1rem",
 },
@@ -14694,8 +14242,6 @@ export const pxLg4 = style({
 "(min-width: 992px)": {
   paddingRight:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingLeft:"1.5rem",
 },
@@ -14706,8 +14252,6 @@ export const pxLg5 = style({
 "(min-width: 992px)": {
   paddingRight:"3rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingLeft:"3rem",
 },
@@ -14718,8 +14262,6 @@ export const pxMd0 = style({
 "(min-width: 768px)": {
   paddingRight:"0",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingLeft:"0",
 },
@@ -14730,8 +14272,6 @@ export const pxMd1 = style({
 "(min-width: 768px)": {
   paddingRight:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingLeft:"0.25rem",
 },
@@ -14742,8 +14282,6 @@ export const pxMd2 = style({
 "(min-width: 768px)": {
   paddingRight:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingLeft:"0.5rem",
 },
@@ -14754,8 +14292,6 @@ export const pxMd3 = style({
 "(min-width: 768px)": {
   paddingRight:"1rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingLeft:"1rem",
 },
@@ -14766,8 +14302,6 @@ export const pxMd4 = style({
 "(min-width: 768px)": {
   paddingRight:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingLeft:"1.5rem",
 },
@@ -14778,8 +14312,6 @@ export const pxMd5 = style({
 "(min-width: 768px)": {
   paddingRight:"3rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingLeft:"3rem",
 },
@@ -14790,8 +14322,6 @@ export const pxSm0 = style({
 "(min-width: 576px)": {
   paddingRight:"0",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingLeft:"0",
 },
@@ -14802,8 +14332,6 @@ export const pxSm1 = style({
 "(min-width: 576px)": {
   paddingRight:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingLeft:"0.25rem",
 },
@@ -14814,8 +14342,6 @@ export const pxSm2 = style({
 "(min-width: 576px)": {
   paddingRight:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingLeft:"0.5rem",
 },
@@ -14826,8 +14352,6 @@ export const pxSm3 = style({
 "(min-width: 576px)": {
   paddingRight:"1rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingLeft:"1rem",
 },
@@ -14838,8 +14362,6 @@ export const pxSm4 = style({
 "(min-width: 576px)": {
   paddingRight:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingLeft:"1.5rem",
 },
@@ -14850,8 +14372,6 @@ export const pxSm5 = style({
 "(min-width: 576px)": {
   paddingRight:"3rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingLeft:"3rem",
 },
@@ -14862,8 +14382,6 @@ export const pxXl0 = style({
 "(min-width: 1200px)": {
   paddingRight:"0",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingLeft:"0",
 },
@@ -14874,8 +14392,6 @@ export const pxXl1 = style({
 "(min-width: 1200px)": {
   paddingRight:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingLeft:"0.25rem",
 },
@@ -14886,8 +14402,6 @@ export const pxXl2 = style({
 "(min-width: 1200px)": {
   paddingRight:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingLeft:"0.5rem",
 },
@@ -14898,8 +14412,6 @@ export const pxXl3 = style({
 "(min-width: 1200px)": {
   paddingRight:"1rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingLeft:"1rem",
 },
@@ -14910,8 +14422,6 @@ export const pxXl4 = style({
 "(min-width: 1200px)": {
   paddingRight:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingLeft:"1.5rem",
 },
@@ -14922,8 +14432,6 @@ export const pxXl5 = style({
 "(min-width: 1200px)": {
   paddingRight:"3rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingLeft:"3rem",
 },
@@ -14958,8 +14466,6 @@ export const pyLg0 = style({
 "(min-width: 992px)": {
   paddingTop:"0",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingBottom:"0",
 },
@@ -14970,8 +14476,6 @@ export const pyLg1 = style({
 "(min-width: 992px)": {
   paddingTop:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingBottom:"0.25rem",
 },
@@ -14982,8 +14486,6 @@ export const pyLg2 = style({
 "(min-width: 992px)": {
   paddingTop:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingBottom:"0.5rem",
 },
@@ -14994,8 +14496,6 @@ export const pyLg3 = style({
 "(min-width: 992px)": {
   paddingTop:"1rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingBottom:"1rem",
 },
@@ -15006,8 +14506,6 @@ export const pyLg4 = style({
 "(min-width: 992px)": {
   paddingTop:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingBottom:"1.5rem",
 },
@@ -15018,8 +14516,6 @@ export const pyLg5 = style({
 "(min-width: 992px)": {
   paddingTop:"3rem",
 },
-},
-"@media": {
 "(min-width: 992px)": {
   paddingBottom:"3rem",
 },
@@ -15030,8 +14526,6 @@ export const pyMd0 = style({
 "(min-width: 768px)": {
   paddingTop:"0",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingBottom:"0",
 },
@@ -15042,8 +14536,6 @@ export const pyMd1 = style({
 "(min-width: 768px)": {
   paddingTop:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingBottom:"0.25rem",
 },
@@ -15054,8 +14546,6 @@ export const pyMd2 = style({
 "(min-width: 768px)": {
   paddingTop:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingBottom:"0.5rem",
 },
@@ -15066,8 +14556,6 @@ export const pyMd3 = style({
 "(min-width: 768px)": {
   paddingTop:"1rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingBottom:"1rem",
 },
@@ -15078,8 +14566,6 @@ export const pyMd4 = style({
 "(min-width: 768px)": {
   paddingTop:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingBottom:"1.5rem",
 },
@@ -15090,8 +14576,6 @@ export const pyMd5 = style({
 "(min-width: 768px)": {
   paddingTop:"3rem",
 },
-},
-"@media": {
 "(min-width: 768px)": {
   paddingBottom:"3rem",
 },
@@ -15102,8 +14586,6 @@ export const pySm0 = style({
 "(min-width: 576px)": {
   paddingTop:"0",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingBottom:"0",
 },
@@ -15114,8 +14596,6 @@ export const pySm1 = style({
 "(min-width: 576px)": {
   paddingTop:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingBottom:"0.25rem",
 },
@@ -15126,8 +14606,6 @@ export const pySm2 = style({
 "(min-width: 576px)": {
   paddingTop:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingBottom:"0.5rem",
 },
@@ -15138,8 +14616,6 @@ export const pySm3 = style({
 "(min-width: 576px)": {
   paddingTop:"1rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingBottom:"1rem",
 },
@@ -15150,8 +14626,6 @@ export const pySm4 = style({
 "(min-width: 576px)": {
   paddingTop:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingBottom:"1.5rem",
 },
@@ -15162,8 +14636,6 @@ export const pySm5 = style({
 "(min-width: 576px)": {
   paddingTop:"3rem",
 },
-},
-"@media": {
 "(min-width: 576px)": {
   paddingBottom:"3rem",
 },
@@ -15174,8 +14646,6 @@ export const pyXl0 = style({
 "(min-width: 1200px)": {
   paddingTop:"0",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingBottom:"0",
 },
@@ -15186,8 +14656,6 @@ export const pyXl1 = style({
 "(min-width: 1200px)": {
   paddingTop:"0.25rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingBottom:"0.25rem",
 },
@@ -15198,8 +14666,6 @@ export const pyXl2 = style({
 "(min-width: 1200px)": {
   paddingTop:"0.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingBottom:"0.5rem",
 },
@@ -15210,8 +14676,6 @@ export const pyXl3 = style({
 "(min-width: 1200px)": {
   paddingTop:"1rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingBottom:"1rem",
 },
@@ -15222,8 +14686,6 @@ export const pyXl4 = style({
 "(min-width: 1200px)": {
   paddingTop:"1.5rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingBottom:"1.5rem",
 },
@@ -15234,8 +14696,6 @@ export const pyXl5 = style({
 "(min-width: 1200px)": {
   paddingTop:"3rem",
 },
-},
-"@media": {
 "(min-width: 1200px)": {
   paddingBottom:"3rem",
 },
@@ -15579,8 +15039,6 @@ export const tableResponsiveLg = style({
   overflowX:"auto",
   WebkitOverflowScrolling:"touch",
 },
-},
-"@media": {
 "(max-width: 991.98px)": {
   border:"0",
 },
@@ -15594,8 +15052,6 @@ export const tableResponsiveMd = style({
   overflowX:"auto",
   WebkitOverflowScrolling:"touch",
 },
-},
-"@media": {
 "(max-width: 767.98px)": {
   border:"0",
 },
@@ -15609,8 +15065,6 @@ export const tableResponsiveSm = style({
   overflowX:"auto",
   WebkitOverflowScrolling:"touch",
 },
-},
-"@media": {
 "(max-width: 575.98px)": {
   border:"0",
 },
@@ -15624,8 +15078,6 @@ export const tableResponsiveXl = style({
   overflowX:"auto",
   WebkitOverflowScrolling:"touch",
 },
-},
-"@media": {
 "(max-width: 1199.98px)": {
   border:"0",
 },

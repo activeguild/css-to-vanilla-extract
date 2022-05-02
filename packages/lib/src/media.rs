@@ -124,7 +124,7 @@ fn get_media_feature_value(media_feature_value: &swc_css_ast::MediaFeatureValue)
                     flex.unit.value.as_ref()
                 )
             }
-            swc_css_ast::Dimension::UnknownDimension(_) => return String::new(),
+            swc_css_ast::Dimension::UnknownDimension(_) => String::new(),
         },
         swc_css_ast::MediaFeatureValue::Ident(ident) => ident.value.to_string(),
         swc_css_ast::MediaFeatureValue::Ratio(ratio) => {

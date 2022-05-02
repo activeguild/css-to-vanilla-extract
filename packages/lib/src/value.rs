@@ -34,10 +34,18 @@ pub struct Component {
     pub is_global_style: bool,
 }
 
+#[derive(Default, Clone)]
+
+pub struct RuleMapValue {
+    pub ve: String,
+    pub media: String,
+    pub supports: String,
+}
+
 pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
     let mut ve: String = String::new();
-    let mut rule_map: BTreeMap<String, String> = BTreeMap::new();
-    let mut global_rule_map: BTreeMap<String, String> = BTreeMap::new();
+    let mut rule_map: BTreeMap<String, RuleMapValue> = BTreeMap::new();
+    let mut global_rule_map: BTreeMap<String, RuleMapValue> = BTreeMap::new();
 
     for rule in &parsed_css.rules {
         match rule {
@@ -47,12 +55,14 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                     if rule.is_global_style {
                         global_rule_map
                             .entry(rule.key)
-                            .or_insert_with(String::new)
+                            .or_insert_with(RuleMapValue::default)
+                            .ve
                             .push_str(&rule.ve);
                     } else {
                         rule_map
                             .entry(rule.key)
-                            .or_insert_with(String::new)
+                            .or_insert_with(RuleMapValue::default)
+                            .ve
                             .push_str(&rule.ve);
                     }
                 }
@@ -117,20 +127,20 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         let components = get_component_value(component_value);
 
                         for component in components {
-                            let wrapped_rule = wrap_property_with_colon(
-                                String::from("@media"),
-                                wrap_property_with_colon(media_condition.clone(), component.ve),
-                            );
+                            let wrapped_rule =
+                                wrap_property_with_colon(media_condition.clone(), component.ve);
                             if component.is_global_style {
                                 global_rule_map
                                     .entry(component.key)
-                                    .or_insert_with(String::new)
+                                    .or_insert_with(RuleMapValue::default)
+                                    .media
                                     .push_str(&wrapped_rule);
                             } else {
                                 rule_map
                                     .entry(component.key)
-                                    .or_insert_with(String::new)
-                                    .push_str(&wrapped_rule)
+                                    .or_insert_with(RuleMapValue::default)
+                                    .media
+                                    .push_str(&wrapped_rule);
                             }
                         }
                     }
@@ -138,19 +148,19 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 swc_css_ast::AtRule::Supports(supports) => {
                     let supports_rule = get_supports_rule(supports);
                     for component in supports_rule.1 {
-                        let wrapped_rule = wrap_property_with_colon(
-                            String::from("@supports"),
-                            wrap_property_with_colon(supports_rule.0.clone(), component.ve),
-                        );
+                        let wrapped_rule =
+                            wrap_property_with_colon(supports_rule.0.clone(), component.ve);
                         if component.is_global_style {
                             global_rule_map
                                 .entry(component.key)
-                                .or_insert_with(String::new)
+                                .or_insert_with(RuleMapValue::default)
+                                .supports
                                 .push_str(&wrapped_rule);
                         } else {
                             rule_map
                                 .entry(component.key)
-                                .or_insert_with(String::new)
+                                .or_insert_with(RuleMapValue::default)
+                                .supports
                                 .push_str(&wrapped_rule);
                         }
                     }
@@ -190,13 +200,46 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
     }
 
     for (key, value) in global_rule_map.into_iter() {
+        let mut properties = String::new();
+        if !value.ve.is_empty() {
+            properties.push_str(&value.ve);
+        }
+        if !value.media.is_empty() {
+            properties.push_str(&wrap_property_with_colon(
+                String::from("@media"),
+                value.media,
+            ));
+        }
+        if !value.supports.is_empty() {
+            properties.push_str(&wrap_property_with_colon(
+                String::from("@supports"),
+                value.supports,
+            ));
+        }
         ve.push_str(&wrap_global_style_func(wrap_property_with_comma(
-            key, value,
+            key, properties,
         )));
     }
 
     for (key, value) in rule_map.into_iter() {
-        ve.push_str(&wrap_export_const(key, wrap_style_func(value)));
+        let mut properties = String::new();
+        if !value.ve.is_empty() {
+            properties.push_str(&value.ve);
+        }
+        if !value.media.is_empty() {
+            properties.push_str(&wrap_property_with_colon(
+                String::from("@media"),
+                value.media,
+            ));
+        }
+        if !value.supports.is_empty() {
+            properties.push_str(&wrap_property_with_colon(
+                String::from("@supports"),
+                value.supports,
+            ));
+        }
+
+        ve.push_str(&wrap_export_const(key, wrap_style_func(properties)));
     }
 
     ve.insert_str(

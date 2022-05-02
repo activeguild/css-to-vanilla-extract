@@ -1,4 +1,4 @@
-import { globalStyle, globalKeyframes, style } from "@vanilla-extract/css";
+import { globalKeyframes, globalStyle, style } from "@vanilla-extract/css";
 
 globalKeyframes("progress-bar-stripes", {
   "0%": { backgroundPositionX: "1rem" },
@@ -6,18 +6,26 @@ globalKeyframes("progress-bar-stripes", {
 globalKeyframes("progress-bar-stripes", {
   "0%": { backgroundPositionX: "1rem" },
 });
-globalKeyframes("spinner-border", { to: { transform: "rotate(360deg)" } });
-globalKeyframes("spinner-border", { to: { transform: "rotate(360deg)" } });
-globalKeyframes("spinner-grow", {
-  "0%": { transform: "scale(0)" },
-  "50%": { opacity: "1", transform: "none" },
+globalKeyframes("spinner-border", {
+  to: { transform: "rotate(360deg)" },
+});
+globalKeyframes("spinner-border", {
+  to: { transform: "rotate(360deg)" },
 });
 globalKeyframes("spinner-grow", {
   "0%": { transform: "scale(0)" },
   "50%": { opacity: "1", transform: "none" },
 });
-globalKeyframes("placeholder-glow", { "50%": { opacity: "0.2" } });
-globalKeyframes("placeholder-glow", { "50%": { opacity: "0.2" } });
+globalKeyframes("spinner-grow", {
+  "0%": { transform: "scale(0)" },
+  "50%": { opacity: "1", transform: "none" },
+});
+globalKeyframes("placeholder-glow", {
+  "50%": { opacity: "0.2" },
+});
+globalKeyframes("placeholder-glow", {
+  "50%": { opacity: "0.2" },
+});
 globalKeyframes("placeholder-wave", {
   "100%": { WebkitMaskPosition: "-200% 0%", maskPosition: "-200% 0%" },
 });
@@ -292,11 +300,6 @@ globalStyle("formFloatinglabel", {
   border: "1px solid transparent",
   transformOrigin: "0 0",
   transition: "opacity 0.1s ease-in-out , transform 0.1s ease-in-out",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   selectors: {
     "&:not(:-moz-placeholder-shown)": {
       opacity: "0.65",
@@ -319,6 +322,11 @@ globalStyle("formFloatinglabel", {
     "&:-webkit-autofill": {
       opacity: "0.65",
       transform: "scale(0.85) translateY(-0.5rem) translateX(0.15rem)",
+    },
+  },
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
     },
   },
 });
@@ -1027,11 +1035,6 @@ export const accordionButton = style({
   overflowAnchor: "none",
   transition:
     "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out , border-radius 0.15s ease",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   selectors: {
     "&:not": {
       color: "0c63e4",
@@ -1058,13 +1061,6 @@ export const accordionButton = style({
     backgroundSize: "1.25rem",
     transition: "transform 0.2s ease-in-out",
   },
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      "::after": {
-        transition: "none",
-      },
-    },
-  },
   ":hover": {
     zIndex: "2",
   },
@@ -1073,6 +1069,16 @@ export const accordionButton = style({
     borderColor: "86b7fe",
     outline: "0",
     boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
+  },
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
+    },
+    "(prefers-reduced-motion: reduce)": {
+      "::after": {
+        transition: "none",
+      },
+    },
   },
 });
 export const accordionFlush = style({
@@ -2379,11 +2385,6 @@ export const btn = style({
   borderRadius: "0.25rem",
   transition:
     "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   ":hover": {
     color: "212529",
   },
@@ -2399,6 +2400,11 @@ export const btn = style({
   opacity: "0.65",
   position: "relative",
   top: "-1px",
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
+    },
+  },
 });
 export const btnCheck = style({
   position: "absolute",
@@ -3608,20 +3614,14 @@ export const cardGroup = style({
       display: "flex",
       flexFlow: "row wrap",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       flex: "1 0 0%",
       marginBottom: "0",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       marginLeft: "0",
       borderLeft: "0",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       selectors: {
         "&:not(:last-child)": {
@@ -3630,8 +3630,6 @@ export const cardGroup = style({
         },
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       selectors: {
         "&:not(:last-child)": {
@@ -3639,8 +3637,6 @@ export const cardGroup = style({
         },
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       selectors: {
         "&:not(:last-child)": {
@@ -3648,8 +3644,6 @@ export const cardGroup = style({
         },
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       selectors: {
         "&:not(:last-child)": {
@@ -3657,8 +3651,6 @@ export const cardGroup = style({
         },
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       selectors: {
         "&:not(:last-child)": {
@@ -3666,8 +3658,6 @@ export const cardGroup = style({
         },
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       selectors: {
         "&:not(:first-child)": {
@@ -3676,8 +3666,6 @@ export const cardGroup = style({
         },
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       selectors: {
         "&:not(:first-child)": {
@@ -3685,8 +3673,6 @@ export const cardGroup = style({
         },
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       selectors: {
         "&:not(:first-child)": {
@@ -3694,8 +3680,6 @@ export const cardGroup = style({
         },
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       selectors: {
         "&:not(:first-child)": {
@@ -3703,8 +3687,6 @@ export const cardGroup = style({
         },
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       selectors: {
         "&:not(:first-child)": {
@@ -3804,11 +3786,6 @@ export const carouselControlNext = style({
   border: "0",
   opacity: "0.5",
   transition: "opacity 0.15s ease",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   ":hover": {
     color: "fff",
     textDecoration: "none",
@@ -3822,6 +3799,11 @@ export const carouselControlNext = style({
     opacity: "0.9",
   },
   right: "0",
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
+    },
+  },
 });
 export const carouselControlNextIcon = style({
   display: "inline-block",
@@ -3849,11 +3831,6 @@ export const carouselControlPrev = style({
   border: "0",
   opacity: "0.5",
   transition: "opacity 0.15s ease",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   ":hover": {
     color: "fff",
     textDecoration: "none",
@@ -3867,6 +3844,11 @@ export const carouselControlPrev = style({
     opacity: "0.9",
   },
   left: "0",
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
+    },
+  },
 });
 export const carouselControlPrevIcon = style({
   display: "inline-block",
@@ -3908,8 +3890,6 @@ export const carouselFade = style({
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
     },
-  },
-  "@media": {
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
     },
@@ -3948,6 +3928,7 @@ export const carouselIndicators = style({
       transition: "opacity 0.6s ease",
     },
   },
+  opacity: "1",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       selectors: {
@@ -3957,7 +3938,6 @@ export const carouselIndicators = style({
       },
     },
   },
-  opacity: "1",
 });
 export const carouselInner = style({
   position: "relative",
@@ -3978,12 +3958,12 @@ export const carouselItem = style({
   WebkitBackfaceVisibility: "hidden",
   backfaceVisibility: "hidden",
   transition: "transform 0.6s ease-in-out",
+  display: "block",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
     },
   },
-  display: "block",
 });
 export const carouselItemNext = style({
   display: "block",
@@ -4646,15 +4626,13 @@ export const collapsing = style({
   height: "0",
   overflow: "hidden",
   transition: "height 0.35s ease",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   width: "0",
   height: "auto",
   transition: "width 0.35s ease",
   "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
+    },
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
     },
@@ -4670,23 +4648,15 @@ export const container = style({
     "(min-width: 576px)": {
       maxWidth: "540px",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       maxWidth: "720px",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       maxWidth: "960px",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       maxWidth: "1140px",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       maxWidth: "1320px",
     },
@@ -4709,13 +4679,9 @@ export const containerLg = style({
     "(min-width: 992px)": {
       maxWidth: "960px",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       maxWidth: "1140px",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       maxWidth: "1320px",
     },
@@ -4731,18 +4697,12 @@ export const containerMd = style({
     "(min-width: 768px)": {
       maxWidth: "720px",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       maxWidth: "960px",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       maxWidth: "1140px",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       maxWidth: "1320px",
     },
@@ -4758,23 +4718,15 @@ export const containerSm = style({
     "(min-width: 576px)": {
       maxWidth: "540px",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       maxWidth: "720px",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       maxWidth: "960px",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       maxWidth: "1140px",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       maxWidth: "1320px",
     },
@@ -4790,8 +4742,6 @@ export const containerXl = style({
     "(min-width: 1200px)": {
       maxWidth: "1140px",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       maxWidth: "1320px",
     },
@@ -5447,8 +5397,6 @@ export const dropdownMenuLgEnd = style({
         "--bs-position": "end",
       },
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       selectors: {
         "&[data-bs-popper]": {
@@ -5466,8 +5414,6 @@ export const dropdownMenuLgStart = style({
         "--bs-position": "start",
       },
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       selectors: {
         "&[data-bs-popper]": {
@@ -5485,8 +5431,6 @@ export const dropdownMenuMdEnd = style({
         "--bs-position": "end",
       },
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       selectors: {
         "&[data-bs-popper]": {
@@ -5504,8 +5448,6 @@ export const dropdownMenuMdStart = style({
         "--bs-position": "start",
       },
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       selectors: {
         "&[data-bs-popper]": {
@@ -5523,8 +5465,6 @@ export const dropdownMenuSmEnd = style({
         "--bs-position": "end",
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       selectors: {
         "&[data-bs-popper]": {
@@ -5542,8 +5482,6 @@ export const dropdownMenuSmStart = style({
         "--bs-position": "start",
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       selectors: {
         "&[data-bs-popper]": {
@@ -5572,8 +5510,6 @@ export const dropdownMenuXlEnd = style({
         "--bs-position": "end",
       },
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       selectors: {
         "&[data-bs-popper]": {
@@ -5591,8 +5527,6 @@ export const dropdownMenuXlStart = style({
         "--bs-position": "start",
       },
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       selectors: {
         "&[data-bs-popper]": {
@@ -5610,8 +5544,6 @@ export const dropdownMenuXxlEnd = style({
         "--bs-position": "end",
       },
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       selectors: {
         "&[data-bs-popper]": {
@@ -5629,8 +5561,6 @@ export const dropdownMenuXxlStart = style({
         "--bs-position": "start",
       },
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       selectors: {
         "&[data-bs-popper]": {
@@ -5772,14 +5702,14 @@ export const end50 = style({
 });
 export const fade = style({
   transition: "opacity 0.15s linear",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   selectors: {
     "&:not": {
       opacity: "0",
+    },
+  },
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
     },
   },
 });
@@ -6494,11 +6424,6 @@ export const formControl = style({
   appearance: "none",
   borderRadius: "0.25rem",
   transition: "border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   selectors: {
     "&[type='file']": {
       overflow: "hidden",
@@ -6577,25 +6502,6 @@ export const formControl = style({
         "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
     },
   },
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      selectors: {
-        "&::-webkit-file-upload-button": {
-          WebkitTransition: "none",
-          transition: "none",
-        },
-      },
-    },
-  },
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      selectors: {
-        "&::file-selector-button": {
-          transition: "none",
-        },
-      },
-    },
-  },
   ":hover:not(:disabled):not([readonly])::-webkit-file-upload-button": {
     backgroundColor: "dde0e3",
   },
@@ -6622,16 +6528,6 @@ export const formControl = style({
         "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
     },
   },
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      selectors: {
-        "&::-webkit-file-upload-button": {
-          WebkitTransition: "none",
-          transition: "none",
-        },
-      },
-    },
-  },
   ":hover:not(:disabled):not([readonly])::-webkit-file-upload-button": {
     backgroundColor: "dde0e3",
   },
@@ -6656,6 +6552,34 @@ export const formControl = style({
   ":focus": {
     borderColor: "dc3545",
     boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.25)",
+  },
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
+    },
+    "(prefers-reduced-motion: reduce)": {
+      selectors: {
+        "&::-webkit-file-upload-button": {
+          WebkitTransition: "none",
+          transition: "none",
+        },
+      },
+    },
+    "(prefers-reduced-motion: reduce)": {
+      selectors: {
+        "&::file-selector-button": {
+          transition: "none",
+        },
+      },
+    },
+    "(prefers-reduced-motion: reduce)": {
+      selectors: {
+        "&::-webkit-file-upload-button": {
+          WebkitTransition: "none",
+          transition: "none",
+        },
+      },
+    },
   },
 });
 export const formControlColor = style({
@@ -6832,14 +6756,6 @@ export const formRange = style({
     WebkitAppearance: "none",
     appearance: "none",
   },
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      "::-webkit-slider-thumb": {
-        WebkitTransition: "none",
-        transition: "none",
-      },
-    },
-  },
   "::-webkit-slider-thumb:active": {
     backgroundColor: "b6d4fe",
   },
@@ -6865,14 +6781,6 @@ export const formRange = style({
     MozAppearance: "none",
     appearance: "none",
   },
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      "::-moz-range-thumb": {
-        MozTransition: "none",
-        transition: "none",
-      },
-    },
-  },
   "::-moz-range-thumb:active": {
     backgroundColor: "b6d4fe",
   },
@@ -6893,6 +6801,20 @@ export const formRange = style({
   },
   ":disabled::-moz-range-thumb": {
     backgroundColor: "adb5bd",
+  },
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      "::-webkit-slider-thumb": {
+        WebkitTransition: "none",
+        transition: "none",
+      },
+    },
+    "(prefers-reduced-motion: reduce)": {
+      "::-moz-range-thumb": {
+        MozTransition: "none",
+        transition: "none",
+      },
+    },
   },
 });
 export const formSelect = style({
@@ -6916,11 +6838,6 @@ export const formSelect = style({
   WebkitAppearance: "none",
   MozAppearance: "none",
   appearance: "none",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   ":focus": {
     borderColor: "86b7fe",
     outline: "0",
@@ -6993,6 +6910,11 @@ export const formSelect = style({
     borderColor: "dc3545",
     boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.25)",
   },
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
+    },
+  },
 });
 export const formSelectLg = style({
   paddingTop: "0.5rem",
@@ -7017,11 +6939,6 @@ export const formSwitch = style({
   backgroundPosition: "left center",
   borderRadius: "2em",
   transition: "background-position 0.15s ease-in-out",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   ":focus": {
     backgroundImage:
       "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e)",
@@ -7030,6 +6947,11 @@ export const formSwitch = style({
     backgroundPosition: "right center",
     backgroundImage:
       "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e)",
+  },
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
+    },
   },
 });
 export const formText = style({
@@ -7151,8 +7073,6 @@ export const gLg0 = style({
         "--bs-gutter-x": "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       vars: {
         "--bs-gutter-y": "0",
@@ -7167,8 +7087,6 @@ export const gLg1 = style({
         "--bs-gutter-x": "0.25rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       vars: {
         "--bs-gutter-y": "0.25rem",
@@ -7183,8 +7101,6 @@ export const gLg2 = style({
         "--bs-gutter-x": "0.5rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       vars: {
         "--bs-gutter-y": "0.5rem",
@@ -7199,8 +7115,6 @@ export const gLg3 = style({
         "--bs-gutter-x": "1rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       vars: {
         "--bs-gutter-y": "1rem",
@@ -7215,8 +7129,6 @@ export const gLg4 = style({
         "--bs-gutter-x": "1.5rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       vars: {
         "--bs-gutter-y": "1.5rem",
@@ -7231,8 +7143,6 @@ export const gLg5 = style({
         "--bs-gutter-x": "3rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       vars: {
         "--bs-gutter-y": "3rem",
@@ -7247,8 +7157,6 @@ export const gMd0 = style({
         "--bs-gutter-x": "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       vars: {
         "--bs-gutter-y": "0",
@@ -7263,8 +7171,6 @@ export const gMd1 = style({
         "--bs-gutter-x": "0.25rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       vars: {
         "--bs-gutter-y": "0.25rem",
@@ -7279,8 +7185,6 @@ export const gMd2 = style({
         "--bs-gutter-x": "0.5rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       vars: {
         "--bs-gutter-y": "0.5rem",
@@ -7295,8 +7199,6 @@ export const gMd3 = style({
         "--bs-gutter-x": "1rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       vars: {
         "--bs-gutter-y": "1rem",
@@ -7311,8 +7213,6 @@ export const gMd4 = style({
         "--bs-gutter-x": "1.5rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       vars: {
         "--bs-gutter-y": "1.5rem",
@@ -7327,8 +7227,6 @@ export const gMd5 = style({
         "--bs-gutter-x": "3rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       vars: {
         "--bs-gutter-y": "3rem",
@@ -7343,8 +7241,6 @@ export const gSm0 = style({
         "--bs-gutter-x": "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       vars: {
         "--bs-gutter-y": "0",
@@ -7359,8 +7255,6 @@ export const gSm1 = style({
         "--bs-gutter-x": "0.25rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       vars: {
         "--bs-gutter-y": "0.25rem",
@@ -7375,8 +7269,6 @@ export const gSm2 = style({
         "--bs-gutter-x": "0.5rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       vars: {
         "--bs-gutter-y": "0.5rem",
@@ -7391,8 +7283,6 @@ export const gSm3 = style({
         "--bs-gutter-x": "1rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       vars: {
         "--bs-gutter-y": "1rem",
@@ -7407,8 +7297,6 @@ export const gSm4 = style({
         "--bs-gutter-x": "1.5rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       vars: {
         "--bs-gutter-y": "1.5rem",
@@ -7423,8 +7311,6 @@ export const gSm5 = style({
         "--bs-gutter-x": "3rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       vars: {
         "--bs-gutter-y": "3rem",
@@ -7439,8 +7325,6 @@ export const gXl0 = style({
         "--bs-gutter-x": "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       vars: {
         "--bs-gutter-y": "0",
@@ -7455,8 +7339,6 @@ export const gXl1 = style({
         "--bs-gutter-x": "0.25rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       vars: {
         "--bs-gutter-y": "0.25rem",
@@ -7471,8 +7353,6 @@ export const gXl2 = style({
         "--bs-gutter-x": "0.5rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       vars: {
         "--bs-gutter-y": "0.5rem",
@@ -7487,8 +7367,6 @@ export const gXl3 = style({
         "--bs-gutter-x": "1rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       vars: {
         "--bs-gutter-y": "1rem",
@@ -7503,8 +7381,6 @@ export const gXl4 = style({
         "--bs-gutter-x": "1.5rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       vars: {
         "--bs-gutter-y": "1.5rem",
@@ -7519,8 +7395,6 @@ export const gXl5 = style({
         "--bs-gutter-x": "3rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       vars: {
         "--bs-gutter-y": "3rem",
@@ -7535,8 +7409,6 @@ export const gXxl0 = style({
         "--bs-gutter-x": "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       vars: {
         "--bs-gutter-y": "0",
@@ -7551,8 +7423,6 @@ export const gXxl1 = style({
         "--bs-gutter-x": "0.25rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       vars: {
         "--bs-gutter-y": "0.25rem",
@@ -7567,8 +7437,6 @@ export const gXxl2 = style({
         "--bs-gutter-x": "0.5rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       vars: {
         "--bs-gutter-y": "0.5rem",
@@ -7583,8 +7451,6 @@ export const gXxl3 = style({
         "--bs-gutter-x": "1rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       vars: {
         "--bs-gutter-y": "1rem",
@@ -7599,8 +7465,6 @@ export const gXxl4 = style({
         "--bs-gutter-x": "1.5rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       vars: {
         "--bs-gutter-y": "1.5rem",
@@ -7615,8 +7479,6 @@ export const gXxl5 = style({
         "--bs-gutter-x": "3rem",
       },
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       vars: {
         "--bs-gutter-y": "3rem",
@@ -9050,35 +8912,25 @@ export const listGroupHorizontalLg = style({
     "(min-width: 992px)": {
       flexDirection: "row",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       ":first-child": {
         borderBottomLeftRadius: "0.25rem",
         borderTopRightRadius: "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       ":last-child": {
         borderTopRightRadius: "0.25rem",
         borderBottomLeftRadius: "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       marginTop: "0",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       borderTopWidth: "1px",
       borderLeftWidth: "0",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       marginLeft: "-1px",
       borderLeftWidth: "1px",
@@ -9090,35 +8942,25 @@ export const listGroupHorizontalMd = style({
     "(min-width: 768px)": {
       flexDirection: "row",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       ":first-child": {
         borderBottomLeftRadius: "0.25rem",
         borderTopRightRadius: "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       ":last-child": {
         borderTopRightRadius: "0.25rem",
         borderBottomLeftRadius: "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       marginTop: "0",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       borderTopWidth: "1px",
       borderLeftWidth: "0",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       marginLeft: "-1px",
       borderLeftWidth: "1px",
@@ -9130,35 +8972,25 @@ export const listGroupHorizontalSm = style({
     "(min-width: 576px)": {
       flexDirection: "row",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       ":first-child": {
         borderBottomLeftRadius: "0.25rem",
         borderTopRightRadius: "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       ":last-child": {
         borderTopRightRadius: "0.25rem",
         borderBottomLeftRadius: "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       marginTop: "0",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       borderTopWidth: "1px",
       borderLeftWidth: "0",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       marginLeft: "-1px",
       borderLeftWidth: "1px",
@@ -9170,35 +9002,25 @@ export const listGroupHorizontalXl = style({
     "(min-width: 1200px)": {
       flexDirection: "row",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       ":first-child": {
         borderBottomLeftRadius: "0.25rem",
         borderTopRightRadius: "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       ":last-child": {
         borderTopRightRadius: "0.25rem",
         borderBottomLeftRadius: "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       marginTop: "0",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       borderTopWidth: "1px",
       borderLeftWidth: "0",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       marginLeft: "-1px",
       borderLeftWidth: "1px",
@@ -9210,35 +9032,25 @@ export const listGroupHorizontalXxl = style({
     "(min-width: 1400px)": {
       flexDirection: "row",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       ":first-child": {
         borderBottomLeftRadius: "0.25rem",
         borderTopRightRadius: "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       ":last-child": {
         borderTopRightRadius: "0.25rem",
         borderBottomLeftRadius: "0",
       },
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       marginTop: "0",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       borderTopWidth: "1px",
       borderLeftWidth: "0",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       marginLeft: "-1px",
       borderLeftWidth: "1px",
@@ -10262,13 +10074,13 @@ export const modal = style({
   outline: "0",
   transition: "transform 0.3s ease-out",
   transform: "translate(0,-50px)",
+  transform: "none",
+  transform: "scale(1.02)",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
     },
   },
-  transform: "none",
-  transform: "scale(1.02)",
 });
 export const modalBackdrop = style({
   position: "fixed",
@@ -10362,25 +10174,17 @@ export const modalFullscreenLgDown = style({
       height: "100%",
       margin: "0",
     },
-  },
-  "@media": {
     "(max-width: 991.98px)": {
       height: "100%",
       border: "0",
       borderRadius: "0",
     },
-  },
-  "@media": {
     "(max-width: 991.98px)": {
       borderRadius: "0",
     },
-  },
-  "@media": {
     "(max-width: 991.98px)": {
       overflowY: "auto",
     },
-  },
-  "@media": {
     "(max-width: 991.98px)": {
       borderRadius: "0",
     },
@@ -10394,25 +10198,17 @@ export const modalFullscreenMdDown = style({
       height: "100%",
       margin: "0",
     },
-  },
-  "@media": {
     "(max-width: 767.98px)": {
       height: "100%",
       border: "0",
       borderRadius: "0",
     },
-  },
-  "@media": {
     "(max-width: 767.98px)": {
       borderRadius: "0",
     },
-  },
-  "@media": {
     "(max-width: 767.98px)": {
       overflowY: "auto",
     },
-  },
-  "@media": {
     "(max-width: 767.98px)": {
       borderRadius: "0",
     },
@@ -10426,25 +10222,17 @@ export const modalFullscreenSmDown = style({
       height: "100%",
       margin: "0",
     },
-  },
-  "@media": {
     "(max-width: 575.98px)": {
       height: "100%",
       border: "0",
       borderRadius: "0",
     },
-  },
-  "@media": {
     "(max-width: 575.98px)": {
       borderRadius: "0",
     },
-  },
-  "@media": {
     "(max-width: 575.98px)": {
       overflowY: "auto",
     },
-  },
-  "@media": {
     "(max-width: 575.98px)": {
       borderRadius: "0",
     },
@@ -10458,25 +10246,17 @@ export const modalFullscreenXlDown = style({
       height: "100%",
       margin: "0",
     },
-  },
-  "@media": {
     "(max-width: 1199.98px)": {
       height: "100%",
       border: "0",
       borderRadius: "0",
     },
-  },
-  "@media": {
     "(max-width: 1199.98px)": {
       borderRadius: "0",
     },
-  },
-  "@media": {
     "(max-width: 1199.98px)": {
       overflowY: "auto",
     },
-  },
-  "@media": {
     "(max-width: 1199.98px)": {
       borderRadius: "0",
     },
@@ -10490,25 +10270,17 @@ export const modalFullscreenXxlDown = style({
       height: "100%",
       margin: "0",
     },
-  },
-  "@media": {
     "(max-width: 1399.98px)": {
       height: "100%",
       border: "0",
       borderRadius: "0",
     },
-  },
-  "@media": {
     "(max-width: 1399.98px)": {
       borderRadius: "0",
     },
-  },
-  "@media": {
     "(max-width: 1399.98px)": {
       overflowY: "auto",
     },
-  },
-  "@media": {
     "(max-width: 1399.98px)": {
       borderRadius: "0",
     },
@@ -10549,8 +10321,6 @@ export const modalXl = style({
     "(min-width: 992px)": {
       maxWidth: "800px",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       maxWidth: "1140px",
     },
@@ -11737,11 +11507,6 @@ export const navLink = style({
   textDecoration: "none",
   transition:
     "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   ":hover": {
     color: "0a58ca",
   },
@@ -11751,6 +11516,11 @@ export const navLink = style({
   color: "6c757d",
   pointerEvents: "none",
   cursor: "default",
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
+    },
+  },
 });
 export const navPills = style({
   background: "none",
@@ -11902,45 +11672,29 @@ export const navbarExpandLg = style({
       flexWrap: "nowrap",
       justifyContent: "flex-start",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       flexDirection: "row",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       position: "absolute",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       paddingRight: "0.5rem",
       paddingLeft: "0.5rem",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       overflow: "visible",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       display: "flex",
       flexBasis: "auto",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       display: "none",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       display: "none",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       position: "inherit",
       bottom: "0",
@@ -11953,22 +11707,16 @@ export const navbarExpandLg = style({
       transition: "none",
       transform: "none",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       height: "auto",
       borderTop: "0",
       borderBottom: "0",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       height: "auto",
       borderTop: "0",
       borderBottom: "0",
     },
-  },
-  "@media": {
     "(min-width: 992px)": {
       display: "flex",
       flexGrow: "0",
@@ -11983,45 +11731,29 @@ export const navbarExpandMd = style({
       flexWrap: "nowrap",
       justifyContent: "flex-start",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       flexDirection: "row",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       position: "absolute",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       paddingRight: "0.5rem",
       paddingLeft: "0.5rem",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       overflow: "visible",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       display: "flex",
       flexBasis: "auto",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       display: "none",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       display: "none",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       position: "inherit",
       bottom: "0",
@@ -12034,22 +11766,16 @@ export const navbarExpandMd = style({
       transition: "none",
       transform: "none",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       height: "auto",
       borderTop: "0",
       borderBottom: "0",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       height: "auto",
       borderTop: "0",
       borderBottom: "0",
     },
-  },
-  "@media": {
     "(min-width: 768px)": {
       display: "flex",
       flexGrow: "0",
@@ -12064,45 +11790,29 @@ export const navbarExpandSm = style({
       flexWrap: "nowrap",
       justifyContent: "flex-start",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       flexDirection: "row",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       position: "absolute",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       paddingRight: "0.5rem",
       paddingLeft: "0.5rem",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       overflow: "visible",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       display: "flex",
       flexBasis: "auto",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       display: "none",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       display: "none",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       position: "inherit",
       bottom: "0",
@@ -12115,22 +11825,16 @@ export const navbarExpandSm = style({
       transition: "none",
       transform: "none",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       height: "auto",
       borderTop: "0",
       borderBottom: "0",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       height: "auto",
       borderTop: "0",
       borderBottom: "0",
     },
-  },
-  "@media": {
     "(min-width: 576px)": {
       display: "flex",
       flexGrow: "0",
@@ -12145,45 +11849,29 @@ export const navbarExpandXl = style({
       flexWrap: "nowrap",
       justifyContent: "flex-start",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       flexDirection: "row",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       position: "absolute",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       paddingRight: "0.5rem",
       paddingLeft: "0.5rem",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       overflow: "visible",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       display: "flex",
       flexBasis: "auto",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       display: "none",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       display: "none",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       position: "inherit",
       bottom: "0",
@@ -12196,22 +11884,16 @@ export const navbarExpandXl = style({
       transition: "none",
       transform: "none",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       height: "auto",
       borderTop: "0",
       borderBottom: "0",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       height: "auto",
       borderTop: "0",
       borderBottom: "0",
     },
-  },
-  "@media": {
     "(min-width: 1200px)": {
       display: "flex",
       flexGrow: "0",
@@ -12226,45 +11908,29 @@ export const navbarExpandXxl = style({
       flexWrap: "nowrap",
       justifyContent: "flex-start",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       flexDirection: "row",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       position: "absolute",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       paddingRight: "0.5rem",
       paddingLeft: "0.5rem",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       overflow: "visible",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       display: "flex",
       flexBasis: "auto",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       display: "none",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       display: "none",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       position: "inherit",
       bottom: "0",
@@ -12277,22 +11943,16 @@ export const navbarExpandXxl = style({
       transition: "none",
       transform: "none",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       height: "auto",
       borderTop: "0",
       borderBottom: "0",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       height: "auto",
       borderTop: "0",
       borderBottom: "0",
     },
-  },
-  "@media": {
     "(min-width: 1400px)": {
       display: "flex",
       flexGrow: "0",
@@ -12351,11 +12011,6 @@ export const navbarToggler = style({
   border: "1px solid transparent",
   borderRadius: "0.25rem",
   transition: "box-shadow 0.15s ease-in-out",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   ":hover": {
     textDecoration: "none",
   },
@@ -12363,6 +12018,11 @@ export const navbarToggler = style({
     textDecoration: "none",
     outline: "0",
     boxShadow: "0 0 0 0.25rem",
+  },
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
+    },
   },
 });
 export const navbarTogglerIcon = style({
@@ -12386,12 +12046,12 @@ export const offcanvas = style({
   backgroundClip: "padding-box",
   outline: "0",
   transition: "transform 0.3s ease-in-out",
+  transform: "none",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
     },
   },
-  transform: "none",
 });
 export const offcanvasBackdrop = style({
   position: "fixed",
@@ -13498,11 +13158,6 @@ export const pageLink = style({
   border: "1px solid dee2e6",
   transition:
     "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  "@media": {
-    "(prefers-reduced-motion: reduce)": {
-      transition: "none",
-    },
-  },
   ":hover": {
     zIndex: "2",
     color: "0a58ca",
@@ -13517,6 +13172,11 @@ export const pageLink = style({
     boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
   },
   padding: "0.375rem 0.75rem",
+  "@media": {
+    "(prefers-reduced-motion: reduce)": {
+      transition: "none",
+    },
+  },
 });
 export const pagination = style({
   display: "flex",
