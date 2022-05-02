@@ -11,3 +11,5 @@ Cargo.lock
 
 dist
 node_modules
+
+.wireit
