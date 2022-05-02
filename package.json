@@ -39,9 +39,6 @@
     },
     "publish:node": {
       "command": "npm publish --workspace=packages/node",
-      "output": [
-        "./packages/node/dist"
-      ],
       "dependencies": [
         "build:node"
       ]
