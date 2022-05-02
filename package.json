@@ -14,7 +14,10 @@
   },
   "wireit": {
     "build:wasm": {
-      "command": "npm run build --workspace=packages/wasm"
+      "command": "npm run build --workspace=packages/wasm",
+      "output": [
+        "./packages/wasm/dist"
+      ]
     },
     "playground": {
       "command": "npm run dev --workspace=packages/playground",
@@ -27,12 +30,18 @@
     },
     "build:node": {
       "command": "npm run build-release --workspace=packages/node",
+      "output": [
+        "./packages/node/dist"
+      ],
       "dependencies": [
         "test"
       ]
     },
     "publish:node": {
       "command": "npm publish --workspace=packages/node",
+      "output": [
+        "./packages/node/dist"
+      ],
       "dependencies": [
         "build:node"
       ]
