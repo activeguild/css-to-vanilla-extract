@@ -6,7 +6,7 @@ use crate::{
     supports::get_supports_rule,
     utils::{
         is_simple_pseudo_func, wrap_export_const, wrap_global_style_func, wrap_property_with_colon,
-        wrap_property_with_comma, wrap_selectors, wrap_style_func,
+        wrap_property_with_comma, wrap_style_func,
     },
 };
 use convert_case::{Case, Casing};
@@ -14,6 +14,7 @@ use convert_case::{Case, Casing};
 pub struct Rule {
     pub ve: String,
     pub key: String,
+    pub selectors: BTreeMap<String, String>,
     pub is_global_style: bool,
     pub is_simple_pseudo: bool,
 }
@@ -38,6 +39,7 @@ pub struct Component {
 
 pub struct RuleMapValue {
     pub ve: String,
+    pub selectors: BTreeMap<String, String>,
     pub media: String,
     pub supports: String,
 }
@@ -53,17 +55,17 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 let rules = get_qualified_rule(qualfied_rule);
                 for rule in rules {
                     if rule.is_global_style {
-                        global_rule_map
+                        let _global_rule_map = global_rule_map
                             .entry(rule.key)
-                            .or_insert_with(RuleMapValue::default)
-                            .ve
-                            .push_str(&rule.ve);
+                            .or_insert_with(RuleMapValue::default);
+                        _global_rule_map.ve.push_str(&rule.ve);
+                        _global_rule_map.selectors.extend(rule.selectors);
                     } else {
-                        rule_map
+                        let _rule_map = rule_map
                             .entry(rule.key)
-                            .or_insert_with(RuleMapValue::default)
-                            .ve
-                            .push_str(&rule.ve);
+                            .or_insert_with(RuleMapValue::default);
+                        _rule_map.ve.push_str(&rule.ve);
+                        _rule_map.selectors.extend(rule.selectors);
                     }
                 }
             }
@@ -216,6 +218,18 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 value.supports,
             ));
         }
+        if !value.selectors.is_empty() {
+            let mut selectors = String::new();
+
+            for (key, value) in value.selectors.into_iter() {
+                selectors.push_str(&wrap_property_with_colon(format!("&{}", key), value));
+            }
+
+            properties.push_str(&wrap_property_with_colon(
+                "selectors".to_string(),
+                selectors,
+            ))
+        }
         ve.push_str(&wrap_global_style_func(wrap_property_with_comma(
             key, properties,
         )));
@@ -238,6 +252,18 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 value.supports,
             ));
         }
+        if !value.selectors.is_empty() {
+            let mut selectors = String::new();
+
+            for (key, value) in value.selectors.into_iter() {
+                selectors.push_str(&wrap_property_with_colon(format!("&{}", key), value));
+            }
+
+            properties.push_str(&wrap_property_with_colon(
+                "selectors".to_string(),
+                selectors,
+            ))
+        }
 
         ve.push_str(&wrap_export_const(key, wrap_style_func(properties)));
     }
@@ -257,6 +283,7 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
     for complex in complexes {
         let mut ve: String = String::new();
         let mut vars: Vec<String> = vec![];
+        let mut selectors: BTreeMap<String, String> = BTreeMap::default();
 
         let mut component_values = String::new();
         for block_value in &qualfied_rule.block.value {
@@ -270,11 +297,11 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
         }
 
         if !complex.pseudo.is_empty() {
-            ve.push_str(&wrap_selectors(
-                complex.pseudo,
-                component_values,
-                complex.is_simple_pseudo,
-            ));
+            if complex.is_simple_pseudo {
+                ve.push_str(&wrap_property_with_colon(complex.pseudo, component_values))
+            } else {
+                selectors.insert(complex.pseudo, component_values);
+            }
         } else {
             ve.push_str(&component_values);
         }
@@ -289,6 +316,7 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
         result.push(Rule {
             ve,
             key: complex.key,
+            selectors,
             is_global_style: complex.is_global_style,
             is_simple_pseudo: complex.is_simple_pseudo,
         })
@@ -1173,6 +1201,18 @@ mod tests {
 
         assert_eq!(
             "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalKeyframes(\"progress-bar-stripes\", {\n\"from\": {  backgroundPosition:\"1rem 0\",\n},\"to\": {  backgroundPosition:\"0 0\",\n},},\n);\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_20() {
+        let parsed_css = parse_css(".accordion-button:not(.collapsed) {color: #0c63e4;}.accordion-button:not(.collapsed)::after {transform: rotate(-180deg);}")
+        .unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n});\n",
             result
         )
     }

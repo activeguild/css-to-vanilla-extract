@@ -54,17 +54,6 @@ pub fn wrap_property_with_comma(key: String, rule: String) -> String {
     wrap_property(key, rule, ',')
 }
 
-pub fn wrap_selectors(key: String, rule: String, is_simple_pseudo: bool) -> String {
-    if is_simple_pseudo {
-        wrap_property_with_colon(key, rule)
-    } else {
-        format!(
-            "\"selectors\": {{\n{}}},\n",
-            wrap_property_with_colon(format!("&{}", key), rule)
-        )
-    }
-}
-
 const PSEUDO_MAPCONST: [&str; 95] = [
     ":-moz-any-link",
     ":-moz-full-screen",
