@@ -76,3 +76,12 @@
   src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
     url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
 } */
+
+@media (min-width: 1200px) {
+  .accordion-button:not(.collapsed) {
+    color: #0c63e4;
+  }
+  .accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
+  }
+}
