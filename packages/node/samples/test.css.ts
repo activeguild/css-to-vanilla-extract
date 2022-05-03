@@ -19,12 +19,10 @@ globalStyle("input", {
   "@media": {
     "(min-width: 1200px)": {
       fontSize: "5rem",
-      fontSize: "5rem",
     },
   },
   "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
-      fontSize: "5rem",
       fontSize: "5rem",
     },
   },
@@ -32,11 +30,13 @@ globalStyle("input", {
 export const accordionButton = style({
   "@media": {
     "(min-width: 1200px)": {
-      "&:not": {
-        color: "0c63e4",
-      },
-      "&:not::after": {
-        transform: "rotate(-180deg)",
+      selectors: {
+        "&:not": {
+          color: "0c63e4",
+        },
+        "&:not::after": {
+          transform: "rotate(-180deg)",
+        },
       },
     },
   },

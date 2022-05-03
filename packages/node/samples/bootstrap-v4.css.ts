@@ -1,4 +1,4 @@
-import { globalStyle, globalKeyframes, style } from "@vanilla-extract/css"
+import { globalKeyframes, globalStyle, style } from "@vanilla-extract/css";
 
 globalKeyframes("progress-bar-stripes", {
 "from": {  backgroundPosition:"1rem 0",
@@ -1681,10 +1681,6 @@ globalStyle("wasValidatedtextarea:valid", {
 },
 );
 export const  = style({
-"@media": {
-"print": {
-},
-},
 });
 export const accordion = style({
   overflowAnchor:"none",
@@ -3756,11 +3752,13 @@ export const cardGroup = style({
   marginBottom:"0",
   marginLeft:"0",
   borderLeft:"0",
+"selectors": {
 "&:not(:first-child)": {
   borderBottomLeftRadius:"0",
 },
 "&:not(:last-child)": {
   borderBottomRightRadius:"0",
+},
 },
 },
 },
