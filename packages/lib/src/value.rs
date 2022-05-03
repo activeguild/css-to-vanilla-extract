@@ -15,6 +15,7 @@ pub struct Rule {
     pub ve: String,
     pub key: String,
     pub selectors: BTreeMap<String, String>,
+
     pub is_global_style: bool,
     pub is_simple_pseudo: bool,
 }
@@ -32,14 +33,17 @@ pub struct Component {
     pub ve: String,
     pub vars: Vec<String>,
     pub key: String,
+    pub selectors: BTreeMap<String, String>,
     pub is_global_style: bool,
 }
 
-#[derive(Default, Clone)]
+#[derive(Debug, Default, Clone)]
 
 pub struct RuleMapValue {
     pub ve: String,
     pub selectors: BTreeMap<String, String>,
+    pub selectors_in_media: BTreeMap<String, BTreeMap<String, String>>,
+    pub selectors_in_supports: BTreeMap<String, BTreeMap<String, String>>,
     pub media: String,
     pub supports: String,
 }
@@ -129,20 +133,29 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         let components = get_component_value(component_value);
 
                         for component in components {
-                            let wrapped_rule =
-                                wrap_property_with_colon(media_condition.clone(), component.ve);
+                            let media_condition = media_condition.clone();
                             if component.is_global_style {
-                                global_rule_map
+                                let _global_rule_map = global_rule_map
                                     .entry(component.key)
-                                    .or_insert_with(RuleMapValue::default)
-                                    .media
-                                    .push_str(&wrapped_rule);
+                                    .or_insert_with(RuleMapValue::default);
+                                _global_rule_map.media.push_str(&component.ve);
+
+                                let selectors_map = _global_rule_map
+                                    .selectors_in_media
+                                    .entry(media_condition)
+                                    .or_insert_with(BTreeMap::new);
+                                selectors_map.extend(component.selectors);
                             } else {
-                                rule_map
+                                let _rule_map = rule_map
                                     .entry(component.key)
-                                    .or_insert_with(RuleMapValue::default)
-                                    .media
-                                    .push_str(&wrapped_rule);
+                                    .or_insert_with(RuleMapValue::default);
+                                _rule_map.media.push_str(&component.ve);
+
+                                let selectors_map = _rule_map
+                                    .selectors_in_media
+                                    .entry(media_condition)
+                                    .or_insert_with(BTreeMap::new);
+                                selectors_map.extend(component.selectors);
                             }
                         }
                     }
@@ -150,20 +163,30 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 swc_css_ast::AtRule::Supports(supports) => {
                     let supports_rule = get_supports_rule(supports);
                     for component in supports_rule.1 {
-                        let wrapped_rule =
-                            wrap_property_with_colon(supports_rule.0.clone(), component.ve);
+                        let supports_condition = supports_rule.0.clone();
+
                         if component.is_global_style {
-                            global_rule_map
+                            let _global_rule_map = global_rule_map
                                 .entry(component.key)
-                                .or_insert_with(RuleMapValue::default)
-                                .supports
-                                .push_str(&wrapped_rule);
+                                .or_insert_with(RuleMapValue::default);
+                            _global_rule_map.supports.push_str(&component.ve);
+
+                            let selectors_map = _global_rule_map
+                                .selectors_in_supports
+                                .entry(supports_condition)
+                                .or_insert_with(BTreeMap::new);
+                            selectors_map.extend(component.selectors);
                         } else {
-                            rule_map
+                            let _rule_map = rule_map
                                 .entry(component.key)
-                                .or_insert_with(RuleMapValue::default)
-                                .supports
-                                .push_str(&wrapped_rule);
+                                .or_insert_with(RuleMapValue::default);
+                            _rule_map.supports.push_str(&component.ve);
+
+                            let selectors_map = _rule_map
+                                .selectors_in_supports
+                                .entry(supports_condition)
+                                .or_insert_with(BTreeMap::new);
+                            selectors_map.extend(component.selectors);
                         }
                     }
                 }
@@ -206,17 +229,33 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
         if !value.ve.is_empty() {
             properties.push_str(&value.ve);
         }
-        if !value.media.is_empty() {
-            properties.push_str(&wrap_property_with_colon(
-                String::from("@media"),
-                value.media,
-            ));
+        if !value.media.is_empty() || !value.selectors_in_media.is_empty() {
+            let mut rule = String::new();
+            for (key, selectors_value) in value.selectors_in_media.into_iter() {
+                let mut selectors_rule = String::new();
+                for (key, _value) in selectors_value.into_iter() {
+                    selectors_rule.push_str(&wrap_property_with_colon(format!("&{}", key), _value));
+                }
+                rule.push_str(&wrap_property_with_colon(
+                    key,
+                    format!("{}{}", value.media, selectors_rule),
+                ));
+            }
+            properties.push_str(&wrap_property_with_colon(String::from("@media"), rule));
         }
-        if !value.supports.is_empty() {
-            properties.push_str(&wrap_property_with_colon(
-                String::from("@supports"),
-                value.supports,
-            ));
+        if !value.supports.is_empty() || !value.selectors_in_supports.is_empty() {
+            let mut rule = String::new();
+            for (key, selectors_value) in value.selectors_in_supports.into_iter() {
+                let mut selectors_rule = String::new();
+                for (key, _value) in selectors_value.into_iter() {
+                    selectors_rule.push_str(&wrap_property_with_colon(format!("&{}", key), _value));
+                }
+                rule.push_str(&wrap_property_with_colon(
+                    key,
+                    format!("{}{}", value.supports, selectors_rule),
+                ));
+            }
+            properties.push_str(&wrap_property_with_colon(String::from("@supports"), rule));
         }
         if !value.selectors.is_empty() {
             let mut selectors = String::new();
@@ -240,17 +279,34 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
         if !value.ve.is_empty() {
             properties.push_str(&value.ve);
         }
-        if !value.media.is_empty() {
-            properties.push_str(&wrap_property_with_colon(
-                String::from("@media"),
-                value.media,
-            ));
+        println!("value:{:?}", value);
+        if !value.media.is_empty() || !value.selectors_in_media.is_empty() {
+            let mut rule = String::new();
+            for (key, selectors_value) in value.selectors_in_media.into_iter() {
+                let mut selectors_rule = String::new();
+                for (key, _value) in selectors_value.into_iter() {
+                    selectors_rule.push_str(&wrap_property_with_colon(format!("&{}", key), _value));
+                }
+                rule.push_str(&wrap_property_with_colon(
+                    key,
+                    format!("{}{}", value.media, selectors_rule),
+                ));
+            }
+            properties.push_str(&wrap_property_with_colon(String::from("@media"), rule));
         }
-        if !value.supports.is_empty() {
-            properties.push_str(&wrap_property_with_colon(
-                String::from("@supports"),
-                value.supports,
-            ));
+        if !value.supports.is_empty() || !value.selectors_in_supports.is_empty() {
+            let mut rule = String::new();
+            for (key, selectors_value) in value.selectors_in_supports.into_iter() {
+                let mut selectors_rule = String::new();
+                for (key, _value) in selectors_value.into_iter() {
+                    selectors_rule.push_str(&wrap_property_with_colon(format!("&{}", key), _value));
+                }
+                rule.push_str(&wrap_property_with_colon(
+                    key,
+                    format!("{}{}", value.supports, selectors_rule),
+                ));
+            }
+            properties.push_str(&wrap_property_with_colon(String::from("@supports"), rule));
         }
         if !value.selectors.is_empty() {
             let mut selectors = String::new();
@@ -648,6 +704,7 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
                         ve: rule.ve,
                         key: rule.key,
                         vars: vec![],
+                        selectors: rule.selectors,
                         is_global_style: rule.is_global_style,
                     })
                 }
@@ -773,6 +830,7 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
         ve,
         vars,
         key,
+        selectors: BTreeMap::default(),
         is_global_style,
     }]
     .to_vec()
@@ -1213,6 +1271,30 @@ mod tests {
 
         assert_eq!(
             "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n});\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_21() {
+        let parsed_css = parse_css("@supports((position: -webkit-sticky) or (position: sticky)) {.accordion-button:not(.collapsed) {color: #0c63e4;}.accordion-button:not(.collapsed)::after {transform: rotate(-180deg);}}")
+        .unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n});\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_22() {
+        let parsed_css = parse_css("@media (min-width: 1200px){.accordion-button:not(.collapsed) {color: #0c63e4;}.accordion-button:not(.collapsed)::after {transform: rotate(-180deg);}}")
+        .unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n});\n",
             result
         )
     }
