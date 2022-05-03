@@ -666,7 +666,7 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
                 }
             }
 
-            ve.push_str(&format!("'{}': {{", &keyframe_selector));
+            ve.push_str(&format!("\"{}\": {{", &keyframe_selector));
 
             for block_value in &keyframe_block.block.value {
                 let component_value = get_component_value(block_value);
@@ -1172,7 +1172,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalKeyframes(\"progress-bar-stripes\", {\n'from': {  backgroundPosition:\"1rem 0\",\n},'to': {  backgroundPosition:\"0 0\",\n},},\n);\n",
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalKeyframes(\"progress-bar-stripes\", {\n\"from\": {  backgroundPosition:\"1rem 0\",\n},\"to\": {  backgroundPosition:\"0 0\",\n},},\n);\n",
             result
         )
     }
