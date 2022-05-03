@@ -19,11 +19,26 @@ globalStyle("input", {
   "@media": {
     "(min-width: 1200px)": {
       fontSize: "5rem",
+      fontSize: "5rem",
     },
   },
   "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
       fontSize: "5rem",
+      fontSize: "5rem",
+    },
+  },
+});
+globalStyle("input:not", {
+  color: "red",
+});
+globalStyle("table*>*", {
+  selectors: {
+    "&:not(caption)": {
+      padding: "0.5rem 0.5rem",
+      backgroundColor: "var(--bs-table-bg)",
+      borderBottomWidth: "1px",
+      boxShadow: "inset 0 0 0 9999px var(--bs-table-accent-bg)",
     },
   },
 });
