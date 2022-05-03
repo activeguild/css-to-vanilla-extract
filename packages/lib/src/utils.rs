@@ -43,7 +43,11 @@ pub fn wrap_keyframes(rule: String) -> String {
 }
 
 fn wrap_property(key: String, rule: String, separator: char) -> String {
-    format!("\"{}\"{} {{\n{}}},\n", key, separator, rule)
+    if rule.is_empty() {
+        String::new()
+    } else {
+        format!("\"{}\"{} {{\n{}}},\n", key, separator, rule)
+    }
 }
 
 pub fn wrap_property_with_colon(key: String, rule: String) -> String {

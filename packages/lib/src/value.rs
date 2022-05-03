@@ -238,7 +238,11 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 }
                 rule.push_str(&wrap_property_with_colon(
                     key,
-                    format!("{}{}", value.media, selectors_rule),
+                    format!(
+                        "{}{}",
+                        value.media,
+                        &wrap_property_with_colon("selectors".to_string(), selectors_rule)
+                    ),
                 ));
             }
             properties.push_str(&wrap_property_with_colon(String::from("@media"), rule));
@@ -252,7 +256,11 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 }
                 rule.push_str(&wrap_property_with_colon(
                     key,
-                    format!("{}{}", value.supports, selectors_rule),
+                    format!(
+                        "{}{}",
+                        value.supports,
+                        &wrap_property_with_colon("selectors".to_string(), selectors_rule)
+                    ),
                 ));
             }
             properties.push_str(&wrap_property_with_colon(String::from("@supports"), rule));
@@ -279,7 +287,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
         if !value.ve.is_empty() {
             properties.push_str(&value.ve);
         }
-        println!("value:{:?}", value);
+
         if !value.media.is_empty() || !value.selectors_in_media.is_empty() {
             let mut rule = String::new();
             for (key, selectors_value) in value.selectors_in_media.into_iter() {
@@ -289,7 +297,11 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 }
                 rule.push_str(&wrap_property_with_colon(
                     key,
-                    format!("{}{}", value.media, selectors_rule),
+                    format!(
+                        "{}{}",
+                        value.media,
+                        &wrap_property_with_colon("selectors".to_string(), selectors_rule)
+                    ),
                 ));
             }
             properties.push_str(&wrap_property_with_colon(String::from("@media"), rule));
@@ -303,7 +315,11 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 }
                 rule.push_str(&wrap_property_with_colon(
                     key,
-                    format!("{}{}", value.supports, selectors_rule),
+                    format!(
+                        "{}{}",
+                        value.supports,
+                        &wrap_property_with_colon("selectors".to_string(), selectors_rule)
+                    ),
                 ));
             }
             properties.push_str(&wrap_property_with_colon(String::from("@supports"), rule));
@@ -1282,7 +1298,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n},\n});\n",
             result
         )
     }
@@ -1294,7 +1310,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n},\n});\n",
             result
         )
     }
