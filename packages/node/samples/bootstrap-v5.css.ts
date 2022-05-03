@@ -1,48 +1,48 @@
 import { globalStyle, globalKeyframes, style } from "@vanilla-extract/css"
 
 globalKeyframes("progress-bar-stripes", {
-'0%': {  backgroundPositionX:"1rem",
+"0%": {  backgroundPositionX:"1rem",
 },},
 );
 globalKeyframes("progress-bar-stripes", {
-'0%': {  backgroundPositionX:"1rem",
+"0%": {  backgroundPositionX:"1rem",
 },},
 );
 globalKeyframes("spinner-border", {
-'to': {  transform:"rotate(360deg)",
+"to": {  transform:"rotate(360deg)",
 },},
 );
 globalKeyframes("spinner-border", {
-'to': {  transform:"rotate(360deg)",
+"to": {  transform:"rotate(360deg)",
 },},
 );
 globalKeyframes("spinner-grow", {
-'0%': {  transform:"scale(0)",
-},'50%': {  opacity:"1",
+"0%": {  transform:"scale(0)",
+},"50%": {  opacity:"1",
   transform:"none",
 },},
 );
 globalKeyframes("spinner-grow", {
-'0%': {  transform:"scale(0)",
-},'50%': {  opacity:"1",
+"0%": {  transform:"scale(0)",
+},"50%": {  opacity:"1",
   transform:"none",
 },},
 );
 globalKeyframes("placeholder-glow", {
-'50%': {  opacity:"0.2",
+"50%": {  opacity:"0.2",
 },},
 );
 globalKeyframes("placeholder-glow", {
-'50%': {  opacity:"0.2",
+"50%": {  opacity:"0.2",
 },},
 );
 globalKeyframes("placeholder-wave", {
-'100%': {  WebkitMaskPosition:"-200% 0%",
+"100%": {  WebkitMaskPosition:"-200% 0%",
   maskPosition:"-200% 0%",
 },},
 );
 globalKeyframes("placeholder-wave", {
-'100%': {  WebkitMaskPosition:"-200% 0%",
+"100%": {  WebkitMaskPosition:"-200% 0%",
   maskPosition:"-200% 0%",
 },},
 );
@@ -361,33 +361,29 @@ globalStyle("formFloatinglabel", {
   border:"1px solid transparent",
   transformOrigin:"0 0",
   transition:"opacity 0.1s ease-in-out , transform 0.1s ease-in-out",
-"selectors": {
-"&:not(:-moz-placeholder-shown)": {
-  opacity:"0.65",
-  transform:"scale(0.85) translateY(-0.5rem) translateX(0.15rem)",
-},
-},
 ":focus": {
   opacity:"0.65",
   transform:"scale(0.85) translateY(-0.5rem) translateX(0.15rem)",
 },
-"selectors": {
-"&:not(:placeholder-shown)": {
   opacity:"0.65",
   transform:"scale(0.85) translateY(-0.5rem) translateX(0.15rem)",
+"@media": {
+"(prefers-reduced-motion: reduce)": {
+  transition:"none",
 },
 },
-  opacity:"0.65",
-  transform:"scale(0.85) translateY(-0.5rem) translateX(0.15rem)",
 "selectors": {
 "&:-webkit-autofill": {
   opacity:"0.65",
   transform:"scale(0.85) translateY(-0.5rem) translateX(0.15rem)",
 },
+"&:not(:-moz-placeholder-shown)": {
+  opacity:"0.65",
+  transform:"scale(0.85) translateY(-0.5rem) translateX(0.15rem)",
 },
-"@media": {
-"(prefers-reduced-motion: reduce)": {
-  transition:"none",
+"&:not(:placeholder-shown)": {
+  opacity:"0.65",
+  transform:"scale(0.85) translateY(-0.5rem) translateX(0.15rem)",
 },
 },
 },
@@ -1201,19 +1197,6 @@ export const accordionButton = style({
   borderRadius:"0",
   overflowAnchor:"none",
   transition:"color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out , border-radius 0.15s ease",
-"selectors": {
-"&:not": {
-  color:"0c63e4",
-  backgroundColor:"e7f1ff",
-  boxShadow:"inset 0 -1px 0 rgba(0,0,0,0.125)",
-},
-},
-"selectors": {
-"&:not::after": {
-  backgroundImage:"url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e)",
-  transform:"rotate(-180deg)",
-},
-},
 "::after": {
   flexShrink:"0",
   width:"1.25rem",
@@ -1237,11 +1220,20 @@ export const accordionButton = style({
 "@media": {
 "(prefers-reduced-motion: reduce)": {
   transition:"none",
-},
-"(prefers-reduced-motion: reduce)": {
 "::after": {
   transition:"none",
 },
+},
+},
+"selectors": {
+"&:not": {
+  color:"0c63e4",
+  backgroundColor:"e7f1ff",
+  boxShadow:"inset 0 -1px 0 rgba(0,0,0,0.125)",
+},
+"&:not::after": {
+  backgroundImage:"url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e)",
+  transform:"rotate(-180deg)",
 },
 },
 });
@@ -1272,11 +1264,6 @@ export const accordionItem = style({
   borderTopLeftRadius:"calc(0.25rem-1px)",
   borderTopRightRadius:"calc(0.25rem-1px)",
 },
-"selectors": {
-"&:not(:first-of-type)": {
-  borderTop:"0",
-},
-},
 ":last-of-type": {
   borderBottomRightRadius:"0.25rem",
   borderBottomLeftRadius:"0.25rem",
@@ -1288,6 +1275,11 @@ export const accordionItem = style({
 ":last-of-type": {
   borderBottomRightRadius:"0.25rem",
   borderBottomLeftRadius:"0.25rem",
+},
+"selectors": {
+"&:not(:first-of-type)": {
+  borderTop:"0",
+},
 },
 });
 export const active = style({
@@ -2258,65 +2250,14 @@ export const breadcrumbItem = style({
 });
 export const bsPopoverAuto = style({
 "selectors": {
-"&[data-popper-placement^='top']": {
-  bottom:"calc(-0.5rem-1px)",
-},
-},
-"selectors": {
-"&[data-popper-placement^='top']::before": {
-  bottom:"0",
-  borderWidth:"0.5rem 0.5rem 0",
-  borderTopColor:"rgba(0,0,0,0.25)",
-},
-},
-"selectors": {
-"&[data-popper-placement^='top']::after": {
-  bottom:"1px",
-  borderWidth:"0.5rem 0.5rem 0",
-  borderTopColor:"fff",
-},
-},
-"selectors": {
-"&[data-popper-placement^='right']": {
-  left:"calc(-0.5rem-1px)",
-  width:"0.5rem",
-  height:"1rem",
-},
-},
-"selectors": {
-"&[data-popper-placement^='right']::before": {
-  left:"0",
-  borderWidth:"0.5rem 0.5rem 0.5rem 0",
-  borderRightColor:"rgba(0,0,0,0.25)",
-},
-},
-"selectors": {
-"&[data-popper-placement^='right']::after": {
-  left:"1px",
-  borderWidth:"0.5rem 0.5rem 0.5rem 0",
-  borderRightColor:"fff",
-},
-},
-"selectors": {
 "&[data-popper-placement^='bottom']": {
   top:"calc(-0.5rem-1px)",
 },
-},
-"selectors": {
-"&[data-popper-placement^='bottom']::before": {
-  top:"0",
-  borderWidth:"0 0.5rem 0.5rem 0.5rem",
-  borderBottomColor:"rgba(0,0,0,0.25)",
-},
-},
-"selectors": {
 "&[data-popper-placement^='bottom']::after": {
   top:"1px",
   borderWidth:"0 0.5rem 0.5rem 0.5rem",
   borderBottomColor:"fff",
 },
-},
-"selectors": {
 "&[data-popper-placement^='bottom']::before": {
   position:"absolute",
   top:"0",
@@ -2327,26 +2268,48 @@ export const bsPopoverAuto = style({
   content:"",
   borderBottom:"1px solid f0f0f0",
 },
-},
-"selectors": {
 "&[data-popper-placement^='left']": {
   right:"calc(-0.5rem-1px)",
   width:"0.5rem",
   height:"1rem",
 },
+"&[data-popper-placement^='left']::after": {
+  right:"1px",
+  borderWidth:"0.5rem 0 0.5rem 0.5rem",
+  borderLeftColor:"fff",
 },
-"selectors": {
 "&[data-popper-placement^='left']::before": {
   right:"0",
   borderWidth:"0.5rem 0 0.5rem 0.5rem",
   borderLeftColor:"rgba(0,0,0,0.25)",
 },
+"&[data-popper-placement^='right']": {
+  left:"calc(-0.5rem-1px)",
+  width:"0.5rem",
+  height:"1rem",
 },
-"selectors": {
-"&[data-popper-placement^='left']::after": {
-  right:"1px",
-  borderWidth:"0.5rem 0 0.5rem 0.5rem",
-  borderLeftColor:"fff",
+"&[data-popper-placement^='right']::after": {
+  left:"1px",
+  borderWidth:"0.5rem 0.5rem 0.5rem 0",
+  borderRightColor:"fff",
+},
+"&[data-popper-placement^='right']::before": {
+  left:"0",
+  borderWidth:"0.5rem 0.5rem 0.5rem 0",
+  borderRightColor:"rgba(0,0,0,0.25)",
+},
+"&[data-popper-placement^='top']": {
+  bottom:"calc(-0.5rem-1px)",
+},
+"&[data-popper-placement^='top']::after": {
+  bottom:"1px",
+  borderWidth:"0.5rem 0.5rem 0",
+  borderTopColor:"fff",
+},
+"&[data-popper-placement^='top']::before": {
+  bottom:"0",
+  borderWidth:"0.5rem 0.5rem 0",
+  borderTopColor:"rgba(0,0,0,0.25)",
 },
 },
 });
@@ -2418,75 +2381,41 @@ export const bsPopoverTop = style({
 });
 export const bsTooltipAuto = style({
 "selectors": {
-"&[data-popper-placement^='top']": {
-  padding:"0.4rem 0",
-},
-},
-"selectors": {
-"&[data-popper-placement^='top']": {
-  bottom:"0",
-},
-},
-"selectors": {
-"&[data-popper-placement^='top']::before": {
-  top:"-1px",
-  borderWidth:"0.4rem 0.4rem 0",
-  borderTopColor:"000",
-},
-},
-"selectors": {
-"&[data-popper-placement^='right']": {
-  padding:"0 0.4rem",
-},
-},
-"selectors": {
-"&[data-popper-placement^='right']": {
-  left:"0",
-  width:"0.4rem",
-  height:"0.8rem",
-},
-},
-"selectors": {
-"&[data-popper-placement^='right']::before": {
-  right:"-1px",
-  borderWidth:"0.4rem 0.4rem 0.4rem 0",
-  borderRightColor:"000",
-},
-},
-"selectors": {
-"&[data-popper-placement^='bottom']": {
-  padding:"0.4rem 0",
-},
-},
-"selectors": {
 "&[data-popper-placement^='bottom']": {
   top:"0",
 },
-},
-"selectors": {
 "&[data-popper-placement^='bottom']::before": {
   bottom:"-1px",
   borderWidth:"0 0.4rem 0.4rem",
   borderBottomColor:"000",
 },
-},
-"selectors": {
-"&[data-popper-placement^='left']": {
-  padding:"0 0.4rem",
-},
-},
-"selectors": {
 "&[data-popper-placement^='left']": {
   right:"0",
   width:"0.4rem",
   height:"0.8rem",
 },
-},
-"selectors": {
 "&[data-popper-placement^='left']::before": {
   left:"-1px",
   borderWidth:"0.4rem 0 0.4rem 0.4rem",
   borderLeftColor:"000",
+},
+"&[data-popper-placement^='right']": {
+  left:"0",
+  width:"0.4rem",
+  height:"0.8rem",
+},
+"&[data-popper-placement^='right']::before": {
+  right:"-1px",
+  borderWidth:"0.4rem 0.4rem 0.4rem 0",
+  borderRightColor:"000",
+},
+"&[data-popper-placement^='top']": {
+  bottom:"0",
+},
+"&[data-popper-placement^='top']::before": {
+  top:"-1px",
+  borderWidth:"0.4rem 0.4rem 0",
+  borderTopColor:"000",
 },
 },
 });
@@ -2573,13 +2502,6 @@ export const btnCheck = style({
   position:"absolute",
   clip:"rect(0,0,0,0)",
   pointerEvents:"none",
-"selectors": {
-"&[disabled]": {
-  pointerEvents:"none",
-  filter:"none",
-  opacity:"0.65",
-},
-},
 ":disabled": {
   pointerEvents:"none",
   filter:"none",
@@ -2917,6 +2839,13 @@ export const btnCheck = style({
 ":active:focus": {
   boxShadow:"0 0 0 0.25rem rgba(33,37,41,0.5)",
 },
+"selectors": {
+"&[disabled]": {
+  pointerEvents:"none",
+  filter:"none",
+  opacity:"0.65",
+},
+},
 });
 export const btnClose = style({
   boxSizing:"content-box",
@@ -3053,41 +2982,23 @@ export const btnGroup = style({
 },
   zIndex:"1",
 "selectors": {
-"&:not(:first-child)": {
-  marginLeft:"-1px",
-},
-},
-"selectors": {
-"&:not(:first-child)": {
-  marginLeft:"-1px",
-},
-},
-"selectors": {
-"&:not(:last-child):not": {
-  borderTopRightRadius:"0",
-  borderBottomRightRadius:"0",
-},
-},
-"selectors": {
-"&:not(:last-child)": {
-  borderTopRightRadius:"0",
-  borderBottomRightRadius:"0",
-},
-},
-"selectors": {
-"&:nth-child(+3)": {
-  borderTopLeftRadius:"0",
-  borderBottomLeftRadius:"0",
-},
-},
-"selectors": {
 "&:not": {
   borderTopLeftRadius:"0",
   borderBottomLeftRadius:"0",
 },
-},
-"selectors": {
 "&:not(:first-child)": {
+  borderTopLeftRadius:"0",
+  borderBottomLeftRadius:"0",
+},
+"&:not(:last-child)": {
+  borderTopRightRadius:"0",
+  borderBottomRightRadius:"0",
+},
+"&:not(:last-child):not": {
+  borderTopRightRadius:"0",
+  borderBottomRightRadius:"0",
+},
+"&:nth-child(+3)": {
   borderTopLeftRadius:"0",
   borderBottomLeftRadius:"0",
 },
@@ -3134,34 +3045,20 @@ export const btnGroupVertical = style({
   justifyContent:"center",
   width:"100%",
   width:"100%",
+  borderTopLeftRadius:"0",
+  borderTopRightRadius:"0",
 "selectors": {
 "&:not(:first-child)": {
-  marginTop:"-1px",
+  borderTopLeftRadius:"0",
+  borderTopRightRadius:"0",
 },
-},
-"selectors": {
-"&:not(:first-child)": {
-  marginTop:"-1px",
-},
-},
-"selectors": {
-"&:not(:last-child):not": {
-  borderBottomRightRadius:"0",
-  borderBottomLeftRadius:"0",
-},
-},
-"selectors": {
 "&:not(:last-child)": {
   borderBottomRightRadius:"0",
   borderBottomLeftRadius:"0",
 },
-},
-  borderTopLeftRadius:"0",
-  borderTopRightRadius:"0",
-"selectors": {
-"&:not(:first-child)": {
-  borderTopLeftRadius:"0",
-  borderTopRightRadius:"0",
+"&:not(:last-child):not": {
+  borderBottomRightRadius:"0",
+  borderBottomLeftRadius:"0",
 },
 },
 });
@@ -3775,85 +3672,15 @@ export const cardGroup = style({
 "(min-width: 576px)": {
   display:"flex",
   flexFlow:"row wrap",
-},
-"(min-width: 576px)": {
   flex:"1 0 0%",
   marginBottom:"0",
-},
-"(min-width: 576px)": {
   marginLeft:"0",
   borderLeft:"0",
-},
-"(min-width: 576px)": {
-"selectors": {
-"&:not(:last-child)": {
-  borderTopRightRadius:"0",
-  borderBottomRightRadius:"0",
-},
-},
-},
-"(min-width: 576px)": {
-"selectors": {
-"&:not(:last-child)": {
-  borderTopRightRadius:"0",
-},
-},
-},
-"(min-width: 576px)": {
-"selectors": {
-"&:not(:last-child)": {
-  borderTopRightRadius:"0",
-},
-},
-},
-"(min-width: 576px)": {
-"selectors": {
-"&:not(:last-child)": {
-  borderBottomRightRadius:"0",
-},
-},
-},
-"(min-width: 576px)": {
-"selectors": {
-"&:not(:last-child)": {
-  borderBottomRightRadius:"0",
-},
-},
-},
-"(min-width: 576px)": {
-"selectors": {
-"&:not(:first-child)": {
-  borderTopLeftRadius:"0",
-  borderBottomLeftRadius:"0",
-},
-},
-},
-"(min-width: 576px)": {
-"selectors": {
-"&:not(:first-child)": {
-  borderTopLeftRadius:"0",
-},
-},
-},
-"(min-width: 576px)": {
-"selectors": {
-"&:not(:first-child)": {
-  borderTopLeftRadius:"0",
-},
-},
-},
-"(min-width: 576px)": {
-"selectors": {
 "&:not(:first-child)": {
   borderBottomLeftRadius:"0",
 },
-},
-},
-"(min-width: 576px)": {
-"selectors": {
-"&:not(:first-child)": {
-  borderBottomLeftRadius:"0",
-},
+"&:not(:last-child)": {
+  borderBottomRightRadius:"0",
 },
 },
 },
@@ -4023,12 +3850,12 @@ export const carouselControlPrevIcon = style({
 export const carouselDark = style({
   filter:"invert(1) grayscale(100)",
   filter:"invert(1) grayscale(100)",
+  color:"000",
 "selectors": {
 "&[data-bs-target]": {
   backgroundColor:"000",
 },
 },
-  color:"000",
 });
 export const carouselFade = style({
   opacity:"0",
@@ -4049,8 +3876,6 @@ export const carouselFade = style({
 "@media": {
 "(prefers-reduced-motion: reduce)": {
   transition:"none",
-},
-"(prefers-reduced-motion: reduce)": {
   transition:"none",
 },
 },
@@ -4068,6 +3893,14 @@ export const carouselIndicators = style({
   marginBottom:"1rem",
   marginLeft:"15%",
   listStyle:"none",
+  opacity:"1",
+"@media": {
+"(prefers-reduced-motion: reduce)": {
+"&[data-bs-target]": {
+  transition:"none",
+},
+},
+},
 "selectors": {
 "&[data-bs-target]": {
   boxSizing:"content-box",
@@ -4086,16 +3919,6 @@ export const carouselIndicators = style({
   borderBottom:"10px solid transparent",
   opacity:"0.5",
   transition:"opacity 0.6s ease",
-},
-},
-  opacity:"1",
-"@media": {
-"(prefers-reduced-motion: reduce)": {
-"selectors": {
-"&[data-bs-target]": {
-  transition:"none",
-},
-},
 },
 },
 });
@@ -4792,8 +4615,6 @@ export const collapsing = style({
 "@media": {
 "(prefers-reduced-motion: reduce)": {
   transition:"none",
-},
-"(prefers-reduced-motion: reduce)": {
   transition:"none",
 },
 },
@@ -4805,19 +4626,39 @@ export const container = style({
   marginRight:"auto",
   marginLeft:"auto",
 "@media": {
-"(min-width: 576px)": {
-  maxWidth:"540px",
-},
-"(min-width: 768px)": {
-  maxWidth:"720px",
-},
-"(min-width: 992px)": {
-  maxWidth:"960px",
-},
 "(min-width: 1200px)": {
+  maxWidth:"540px",
+  maxWidth:"720px",
+  maxWidth:"960px",
   maxWidth:"1140px",
+  maxWidth:"1320px",
 },
 "(min-width: 1400px)": {
+  maxWidth:"540px",
+  maxWidth:"720px",
+  maxWidth:"960px",
+  maxWidth:"1140px",
+  maxWidth:"1320px",
+},
+"(min-width: 576px)": {
+  maxWidth:"540px",
+  maxWidth:"720px",
+  maxWidth:"960px",
+  maxWidth:"1140px",
+  maxWidth:"1320px",
+},
+"(min-width: 768px)": {
+  maxWidth:"540px",
+  maxWidth:"720px",
+  maxWidth:"960px",
+  maxWidth:"1140px",
+  maxWidth:"1320px",
+},
+"(min-width: 992px)": {
+  maxWidth:"540px",
+  maxWidth:"720px",
+  maxWidth:"960px",
+  maxWidth:"1140px",
   maxWidth:"1320px",
 },
 },
@@ -4836,13 +4677,19 @@ export const containerLg = style({
   marginRight:"auto",
   marginLeft:"auto",
 "@media": {
-"(min-width: 992px)": {
-  maxWidth:"960px",
-},
 "(min-width: 1200px)": {
+  maxWidth:"960px",
   maxWidth:"1140px",
+  maxWidth:"1320px",
 },
 "(min-width: 1400px)": {
+  maxWidth:"960px",
+  maxWidth:"1140px",
+  maxWidth:"1320px",
+},
+"(min-width: 992px)": {
+  maxWidth:"960px",
+  maxWidth:"1140px",
   maxWidth:"1320px",
 },
 },
@@ -4854,16 +4701,28 @@ export const containerMd = style({
   marginRight:"auto",
   marginLeft:"auto",
 "@media": {
-"(min-width: 768px)": {
-  maxWidth:"720px",
-},
-"(min-width: 992px)": {
-  maxWidth:"960px",
-},
 "(min-width: 1200px)": {
+  maxWidth:"720px",
+  maxWidth:"960px",
   maxWidth:"1140px",
+  maxWidth:"1320px",
 },
 "(min-width: 1400px)": {
+  maxWidth:"720px",
+  maxWidth:"960px",
+  maxWidth:"1140px",
+  maxWidth:"1320px",
+},
+"(min-width: 768px)": {
+  maxWidth:"720px",
+  maxWidth:"960px",
+  maxWidth:"1140px",
+  maxWidth:"1320px",
+},
+"(min-width: 992px)": {
+  maxWidth:"720px",
+  maxWidth:"960px",
+  maxWidth:"1140px",
   maxWidth:"1320px",
 },
 },
@@ -4875,19 +4734,39 @@ export const containerSm = style({
   marginRight:"auto",
   marginLeft:"auto",
 "@media": {
-"(min-width: 576px)": {
-  maxWidth:"540px",
-},
-"(min-width: 768px)": {
-  maxWidth:"720px",
-},
-"(min-width: 992px)": {
-  maxWidth:"960px",
-},
 "(min-width: 1200px)": {
+  maxWidth:"540px",
+  maxWidth:"720px",
+  maxWidth:"960px",
   maxWidth:"1140px",
+  maxWidth:"1320px",
 },
 "(min-width: 1400px)": {
+  maxWidth:"540px",
+  maxWidth:"720px",
+  maxWidth:"960px",
+  maxWidth:"1140px",
+  maxWidth:"1320px",
+},
+"(min-width: 576px)": {
+  maxWidth:"540px",
+  maxWidth:"720px",
+  maxWidth:"960px",
+  maxWidth:"1140px",
+  maxWidth:"1320px",
+},
+"(min-width: 768px)": {
+  maxWidth:"540px",
+  maxWidth:"720px",
+  maxWidth:"960px",
+  maxWidth:"1140px",
+  maxWidth:"1320px",
+},
+"(min-width: 992px)": {
+  maxWidth:"540px",
+  maxWidth:"720px",
+  maxWidth:"960px",
+  maxWidth:"1140px",
   maxWidth:"1320px",
 },
 },
@@ -4901,8 +4780,10 @@ export const containerXl = style({
 "@media": {
 "(min-width: 1200px)": {
   maxWidth:"1140px",
+  maxWidth:"1320px",
 },
 "(min-width: 1400px)": {
+  maxWidth:"1140px",
   maxWidth:"1320px",
 },
 },
@@ -5503,6 +5384,7 @@ export const dropdownMenu = style({
   backgroundClip:"padding-box",
   border:"1px solid rgba(0,0,0,0.15)",
   borderRadius:"0.25rem",
+  display:"block",
 "selectors": {
 "&[data-bs-popper]": {
   top:"100%",
@@ -5510,7 +5392,6 @@ export const dropdownMenu = style({
   marginTop:"0.125rem",
 },
 },
-  display:"block",
 });
 export const dropdownMenuDark = style({
   color:"dee2e6",
@@ -5556,13 +5437,9 @@ export const dropdownMenuLgEnd = style({
 "vars": {
   "--bs-position":"end",
 },
-},
-"(min-width: 992px)": {
-"selectors": {
 "&[data-bs-popper]": {
   right:"0",
   left:"auto",
-},
 },
 },
 },
@@ -5573,13 +5450,9 @@ export const dropdownMenuLgStart = style({
 "vars": {
   "--bs-position":"start",
 },
-},
-"(min-width: 992px)": {
-"selectors": {
 "&[data-bs-popper]": {
   right:"auto",
   left:"0",
-},
 },
 },
 },
@@ -5590,13 +5463,9 @@ export const dropdownMenuMdEnd = style({
 "vars": {
   "--bs-position":"end",
 },
-},
-"(min-width: 768px)": {
-"selectors": {
 "&[data-bs-popper]": {
   right:"0",
   left:"auto",
-},
 },
 },
 },
@@ -5607,13 +5476,9 @@ export const dropdownMenuMdStart = style({
 "vars": {
   "--bs-position":"start",
 },
-},
-"(min-width: 768px)": {
-"selectors": {
 "&[data-bs-popper]": {
   right:"auto",
   left:"0",
-},
 },
 },
 },
@@ -5624,13 +5489,9 @@ export const dropdownMenuSmEnd = style({
 "vars": {
   "--bs-position":"end",
 },
-},
-"(min-width: 576px)": {
-"selectors": {
 "&[data-bs-popper]": {
   right:"0",
   left:"auto",
-},
 },
 },
 },
@@ -5641,13 +5502,9 @@ export const dropdownMenuSmStart = style({
 "vars": {
   "--bs-position":"start",
 },
-},
-"(min-width: 576px)": {
-"selectors": {
 "&[data-bs-popper]": {
   right:"auto",
   left:"0",
-},
 },
 },
 },
@@ -5669,13 +5526,9 @@ export const dropdownMenuXlEnd = style({
 "vars": {
   "--bs-position":"end",
 },
-},
-"(min-width: 1200px)": {
-"selectors": {
 "&[data-bs-popper]": {
   right:"0",
   left:"auto",
-},
 },
 },
 },
@@ -5686,13 +5539,9 @@ export const dropdownMenuXlStart = style({
 "vars": {
   "--bs-position":"start",
 },
-},
-"(min-width: 1200px)": {
-"selectors": {
 "&[data-bs-popper]": {
   right:"auto",
   left:"0",
-},
 },
 },
 },
@@ -5703,13 +5552,9 @@ export const dropdownMenuXxlEnd = style({
 "vars": {
   "--bs-position":"end",
 },
-},
-"(min-width: 1400px)": {
-"selectors": {
 "&[data-bs-popper]": {
   right:"0",
   left:"auto",
-},
 },
 },
 },
@@ -5720,13 +5565,9 @@ export const dropdownMenuXxlStart = style({
 "vars": {
   "--bs-position":"start",
 },
-},
-"(min-width: 1400px)": {
-"selectors": {
 "&[data-bs-popper]": {
   right:"auto",
   left:"0",
-},
 },
 },
 },
@@ -5756,15 +5597,6 @@ export const dropdownToggleSplit = style({
 });
 export const dropend = style({
   position:"relative",
-"selectors": {
-"&[data-bs-popper]": {
-  top:"0",
-  right:"auto",
-  left:"100%",
-  marginTop:"0",
-  marginLeft:"0.125rem",
-},
-},
 "::after": {
   display:"inline-block",
   marginLeft:"0.255em",
@@ -5784,18 +5616,18 @@ export const dropend = style({
 "::after": {
   marginLeft:"0",
 },
-});
-export const dropstart = style({
-  position:"relative",
 "selectors": {
 "&[data-bs-popper]": {
   top:"0",
-  right:"100%",
-  left:"auto",
+  right:"auto",
+  left:"100%",
   marginTop:"0",
-  marginRight:"0.125rem",
+  marginLeft:"0.125rem",
 },
 },
+});
+export const dropstart = style({
+  position:"relative",
 "::after": {
   display:"inline-block",
   marginLeft:"0.255em",
@@ -5823,17 +5655,18 @@ export const dropstart = style({
 "::before": {
   marginRight:"0",
 },
+"selectors": {
+"&[data-bs-popper]": {
+  top:"0",
+  right:"100%",
+  left:"auto",
+  marginTop:"0",
+  marginRight:"0.125rem",
+},
+},
 });
 export const dropup = style({
   position:"relative",
-"selectors": {
-"&[data-bs-popper]": {
-  top:"auto",
-  bottom:"100%",
-  marginTop:"0",
-  marginBottom:"0.125rem",
-},
-},
 "::after": {
   display:"inline-block",
   marginLeft:"0.255em",
@@ -5850,6 +5683,14 @@ export const dropup = style({
 "::after": {
   marginLeft:"0",
 },
+"selectors": {
+"&[data-bs-popper]": {
+  top:"auto",
+  bottom:"100%",
+  marginTop:"0",
+  marginBottom:"0.125rem",
+},
+},
 });
 export const end0 = style({
   right:"0",
@@ -5862,14 +5703,14 @@ export const end50 = style({
 });
 export const fade = style({
   transition:"opacity 0.15s linear",
-"selectors": {
-"&:not": {
-  opacity:"0",
-},
-},
 "@media": {
 "(prefers-reduced-motion: reduce)": {
   transition:"none",
+},
+},
+"selectors": {
+"&:not": {
+  opacity:"0",
 },
 },
 });
@@ -6500,16 +6341,6 @@ export const formCheckInput = style({
   appearance:"none",
   WebkitPrintColorAdjust:"exact",
   colorAdjust:"exact",
-"selectors": {
-"&[type='checkbox']": {
-  borderRadius:"0.25em",
-},
-},
-"selectors": {
-"&[type='radio']": {
-  borderRadius:"50%",
-},
-},
 ":active": {
   filter:"brightness(90%)",
 },
@@ -6528,22 +6359,10 @@ export const formCheckInput = style({
 ":checked[type='radio']": {
   backgroundImage:"url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e)",
 },
-"selectors": {
-"&[type='checkbox']:indeterminate": {
-  backgroundColor:"0d6efd",
-  borderColor:"0d6efd",
-  backgroundImage:"url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e)",
-},
-},
 ":disabled": {
   pointerEvents:"none",
   filter:"none",
   opacity:"0.5",
-},
-"selectors": {
-"&[disabled]": {
-  opacity:"0.5",
-},
 },
 ":disabled": {
   opacity:"0.5",
@@ -6564,6 +6383,22 @@ export const formCheckInput = style({
   boxShadow:"0 0 0 0.25rem rgba(220,53,69,0.25)",
 },
   color:"dc3545",
+"selectors": {
+"&[disabled]": {
+  opacity:"0.5",
+},
+"&[type='checkbox']": {
+  borderRadius:"0.25em",
+},
+"&[type='checkbox']:indeterminate": {
+  backgroundColor:"0d6efd",
+  borderColor:"0d6efd",
+  backgroundImage:"url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e)",
+},
+"&[type='radio']": {
+  borderRadius:"50%",
+},
+},
 });
 export const formControl = style({
   display:"block",
@@ -6581,27 +6416,12 @@ export const formControl = style({
   appearance:"none",
   borderRadius:"0.25rem",
   transition:"border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-"selectors": {
-"&[type='file']": {
-  overflow:"hidden",
-},
-},
-"selectors": {
-"&[type='file']:not(:disabled):not([readonly])": {
-  cursor:"pointer",
-},
-},
 ":focus": {
   color:"212529",
   backgroundColor:"fff",
   borderColor:"86b7fe",
   outline:"0",
   boxShadow:"0 0 0 0.25rem rgba(13,110,253,0.25)",
-},
-"selectors": {
-"&::-webkit-date-and-time-value": {
-  height:"1.5em",
-},
 },
 "::-moz-placeholder": {
   color:"6c757d",
@@ -6615,70 +6435,11 @@ export const formControl = style({
   backgroundColor:"e9ecef",
   opacity:"1",
 },
-"selectors": {
-"&[readonly]": {
-  backgroundColor:"e9ecef",
-  opacity:"1",
-},
-},
-"selectors": {
-"&::-webkit-file-upload-button": {
-  padding:"0.375rem 0.75rem",
-  margin:"-0.375rem -0.75rem",
-  WebkitMarginEnd:"0.75rem",
-  marginInlineEnd:"0.75rem",
-  color:"212529",
-  backgroundColor:"e9ecef",
-  pointerEvents:"none",
-  borderColor:"inherit",
-  borderStyle:"solid",
-  borderWidth:"0",
-  borderInlineEndWidth:"1px",
-  borderRadius:"0",
-  WebkitTransition:"color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  transition:"color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-},
-},
-"selectors": {
-"&::file-selector-button": {
-  padding:"0.375rem 0.75rem",
-  margin:"-0.375rem -0.75rem",
-  WebkitMarginEnd:"0.75rem",
-  marginInlineEnd:"0.75rem",
-  color:"212529",
-  backgroundColor:"e9ecef",
-  pointerEvents:"none",
-  borderColor:"inherit",
-  borderStyle:"solid",
-  borderWidth:"0",
-  borderInlineEndWidth:"1px",
-  borderRadius:"0",
-  transition:"color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-},
-},
 ":hover:not(:disabled):not([readonly])::-webkit-file-upload-button": {
   backgroundColor:"dde0e3",
 },
 ":hover:not(:disabled):not([readonly])::file-selector-button": {
   backgroundColor:"dde0e3",
-},
-"selectors": {
-"&::-webkit-file-upload-button": {
-  padding:"0.375rem 0.75rem",
-  margin:"-0.375rem -0.75rem",
-  WebkitMarginEnd:"0.75rem",
-  marginInlineEnd:"0.75rem",
-  color:"212529",
-  backgroundColor:"e9ecef",
-  pointerEvents:"none",
-  borderColor:"inherit",
-  borderStyle:"solid",
-  borderWidth:"0",
-  borderInlineEndWidth:"1px",
-  borderRadius:"0",
-  WebkitTransition:"color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  transition:"color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-},
 },
 ":hover:not(:disabled):not([readonly])::-webkit-file-upload-button": {
   backgroundColor:"dde0e3",
@@ -6706,29 +6467,59 @@ export const formControl = style({
 "@media": {
 "(prefers-reduced-motion: reduce)": {
   transition:"none",
-},
-"(prefers-reduced-motion: reduce)": {
-"selectors": {
 "&::-webkit-file-upload-button": {
   WebkitTransition:"none",
   transition:"none",
 },
-},
-},
-"(prefers-reduced-motion: reduce)": {
-"selectors": {
 "&::file-selector-button": {
   transition:"none",
 },
 },
 },
-"(prefers-reduced-motion: reduce)": {
 "selectors": {
+"&::-webkit-date-and-time-value": {
+  height:"1.5em",
+},
 "&::-webkit-file-upload-button": {
-  WebkitTransition:"none",
-  transition:"none",
+  padding:"0.375rem 0.75rem",
+  margin:"-0.375rem -0.75rem",
+  WebkitMarginEnd:"0.75rem",
+  marginInlineEnd:"0.75rem",
+  color:"212529",
+  backgroundColor:"e9ecef",
+  pointerEvents:"none",
+  borderColor:"inherit",
+  borderStyle:"solid",
+  borderWidth:"0",
+  borderInlineEndWidth:"1px",
+  borderRadius:"0",
+  WebkitTransition:"color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+  transition:"color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
 },
+"&::file-selector-button": {
+  padding:"0.375rem 0.75rem",
+  margin:"-0.375rem -0.75rem",
+  WebkitMarginEnd:"0.75rem",
+  marginInlineEnd:"0.75rem",
+  color:"212529",
+  backgroundColor:"e9ecef",
+  pointerEvents:"none",
+  borderColor:"inherit",
+  borderStyle:"solid",
+  borderWidth:"0",
+  borderInlineEndWidth:"1px",
+  borderRadius:"0",
+  transition:"color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
 },
+"&[readonly]": {
+  backgroundColor:"e9ecef",
+  opacity:"1",
+},
+"&[type='file']": {
+  overflow:"hidden",
+},
+"&[type='file']:not(:disabled):not([readonly])": {
+  cursor:"pointer",
 },
 },
 });
@@ -6737,20 +6528,16 @@ export const formControlColor = style({
   height:"auto",
   padding:"0.375rem",
 "selectors": {
-"&:not(:disabled):not([readonly])": {
-  cursor:"pointer",
-},
-},
-"selectors": {
 "&::-moz-color-swatch": {
   height:"1.5em",
   borderRadius:"0.25rem",
 },
-},
-"selectors": {
 "&::-webkit-color-swatch": {
   height:"1.5em",
   borderRadius:"0.25rem",
+},
+"&:not(:disabled):not([readonly])": {
+  cursor:"pointer",
 },
 },
 });
@@ -6766,17 +6553,7 @@ export const formControlLg = style({
   WebkitMarginEnd:"1rem",
   marginInlineEnd:"1rem",
 },
-},
-"selectors": {
 "&::file-selector-button": {
-  padding:"0.5rem 1rem",
-  margin:"-0.5rem -1rem",
-  WebkitMarginEnd:"1rem",
-  marginInlineEnd:"1rem",
-},
-},
-"selectors": {
-"&::-webkit-file-upload-button": {
   padding:"0.5rem 1rem",
   margin:"-0.5rem -1rem",
   WebkitMarginEnd:"1rem",
@@ -6811,17 +6588,7 @@ export const formControlSm = style({
   WebkitMarginEnd:"0.5rem",
   marginInlineEnd:"0.5rem",
 },
-},
-"selectors": {
 "&::file-selector-button": {
-  padding:"0.25rem 0.5rem",
-  margin:"-0.25rem -0.5rem",
-  WebkitMarginEnd:"0.5rem",
-  marginInlineEnd:"0.5rem",
-},
-},
-"selectors": {
-"&::-webkit-file-upload-button": {
   padding:"0.25rem 0.5rem",
   margin:"-0.25rem -0.5rem",
   WebkitMarginEnd:"0.5rem",
@@ -6842,30 +6609,26 @@ export const formFloating = style({
 "::placeholder": {
   color:"transparent",
 },
-"selectors": {
-"&:not(:-moz-placeholder-shown)": {
-  paddingTop:"1.625rem",
-  paddingBottom:"0.625rem",
-},
-},
 ":focus": {
   paddingTop:"1.625rem",
   paddingBottom:"0.625rem",
 },
-"selectors": {
-"&:not(:placeholder-shown)": {
   paddingTop:"1.625rem",
   paddingBottom:"0.625rem",
-},
-},
 "selectors": {
 "&:-webkit-autofill": {
   paddingTop:"1.625rem",
   paddingBottom:"0.625rem",
 },
-},
+"&:not(:-moz-placeholder-shown)": {
   paddingTop:"1.625rem",
   paddingBottom:"0.625rem",
+},
+"&:not(:placeholder-shown)": {
+  paddingTop:"1.625rem",
+  paddingBottom:"0.625rem",
+},
+},
 });
 export const formLabel = style({
   marginBottom:"0.5rem",
@@ -6886,11 +6649,6 @@ export const formRange = style({
 },
 ":focus::-moz-range-thumb": {
   boxShadow:"0 0 0 1px fff , 0 0 0 0.25rem rgba(13,110,253,0.25)",
-},
-"selectors": {
-"&::-moz-focus-outer": {
-  border:"0",
-},
 },
 "::-webkit-slider-thumb": {
   width:"1rem",
@@ -6954,12 +6712,15 @@ export const formRange = style({
   WebkitTransition:"none",
   transition:"none",
 },
-},
-"(prefers-reduced-motion: reduce)": {
 "::-moz-range-thumb": {
   MozTransition:"none",
   transition:"none",
 },
+},
+},
+"selectors": {
+"&::-moz-focus-outer": {
+  border:"0",
 },
 },
 });
@@ -6988,65 +6749,15 @@ export const formSelect = style({
   outline:"0",
   boxShadow:"0 0 0 0.25rem rgba(13,110,253,0.25)",
 },
-"selectors": {
-"&[multiple]": {
-  paddingRight:"0.75rem",
-  backgroundImage:"none",
-},
-},
-"selectors": {
-"&[size]:not([size='1'])": {
-  paddingRight:"0.75rem",
-  backgroundImage:"none",
-},
-},
 ":disabled": {
   backgroundColor:"e9ecef",
 },
-"selectors": {
-"&:-moz-focusring": {
-  color:"transparent",
-  textShadow:"0 0 0 212529",
-},
-},
   borderColor:"198754",
-"selectors": {
-"&:not([multiple]):not([size])": {
-  paddingRight:"4.125rem",
-  backgroundImage:"url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
-  backgroundPosition:"right 0.75rem center , center right 2.25rem",
-  backgroundSize:"16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-},
-},
-"selectors": {
-"&:not([multiple])[size='1']": {
-  paddingRight:"4.125rem",
-  backgroundImage:"url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
-  backgroundPosition:"right 0.75rem center , center right 2.25rem",
-  backgroundSize:"16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-},
-},
 ":focus": {
   borderColor:"198754",
   boxShadow:"0 0 0 0.25rem rgba(25,135,84,0.25)",
 },
   borderColor:"dc3545",
-"selectors": {
-"&:not([multiple]):not([size])": {
-  paddingRight:"4.125rem",
-  backgroundImage:"url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
-  backgroundPosition:"right 0.75rem center , center right 2.25rem",
-  backgroundSize:"16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-},
-},
-"selectors": {
-"&:not([multiple])[size='1']": {
-  paddingRight:"4.125rem",
-  backgroundImage:"url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
-  backgroundPosition:"right 0.75rem center , center right 2.25rem",
-  backgroundSize:"16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-},
-},
 ":focus": {
   borderColor:"dc3545",
   boxShadow:"0 0 0 0.25rem rgba(220,53,69,0.25)",
@@ -7054,6 +6765,32 @@ export const formSelect = style({
 "@media": {
 "(prefers-reduced-motion: reduce)": {
   transition:"none",
+},
+},
+"selectors": {
+"&:-moz-focusring": {
+  color:"transparent",
+  textShadow:"0 0 0 212529",
+},
+"&:not([multiple]):not([size])": {
+  paddingRight:"4.125rem",
+  backgroundImage:"url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
+  backgroundPosition:"right 0.75rem center , center right 2.25rem",
+  backgroundSize:"16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
+},
+"&:not([multiple])[size='1']": {
+  paddingRight:"4.125rem",
+  backgroundImage:"url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
+  backgroundPosition:"right 0.75rem center , center right 2.25rem",
+  backgroundSize:"16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
+},
+"&[multiple]": {
+  paddingRight:"0.75rem",
+  backgroundImage:"none",
+},
+"&[size]:not([size='1'])": {
+  paddingRight:"0.75rem",
+  backgroundImage:"none",
 },
 },
 });
@@ -7210,8 +6947,6 @@ export const gLg0 = style({
 "vars": {
   "--bs-gutter-x":"0",
 },
-},
-"(min-width: 992px)": {
 "vars": {
   "--bs-gutter-y":"0",
 },
@@ -7224,8 +6959,6 @@ export const gLg1 = style({
 "vars": {
   "--bs-gutter-x":"0.25rem",
 },
-},
-"(min-width: 992px)": {
 "vars": {
   "--bs-gutter-y":"0.25rem",
 },
@@ -7238,8 +6971,6 @@ export const gLg2 = style({
 "vars": {
   "--bs-gutter-x":"0.5rem",
 },
-},
-"(min-width: 992px)": {
 "vars": {
   "--bs-gutter-y":"0.5rem",
 },
@@ -7252,8 +6983,6 @@ export const gLg3 = style({
 "vars": {
   "--bs-gutter-x":"1rem",
 },
-},
-"(min-width: 992px)": {
 "vars": {
   "--bs-gutter-y":"1rem",
 },
@@ -7266,8 +6995,6 @@ export const gLg4 = style({
 "vars": {
   "--bs-gutter-x":"1.5rem",
 },
-},
-"(min-width: 992px)": {
 "vars": {
   "--bs-gutter-y":"1.5rem",
 },
@@ -7280,8 +7007,6 @@ export const gLg5 = style({
 "vars": {
   "--bs-gutter-x":"3rem",
 },
-},
-"(min-width: 992px)": {
 "vars": {
   "--bs-gutter-y":"3rem",
 },
@@ -7294,8 +7019,6 @@ export const gMd0 = style({
 "vars": {
   "--bs-gutter-x":"0",
 },
-},
-"(min-width: 768px)": {
 "vars": {
   "--bs-gutter-y":"0",
 },
@@ -7308,8 +7031,6 @@ export const gMd1 = style({
 "vars": {
   "--bs-gutter-x":"0.25rem",
 },
-},
-"(min-width: 768px)": {
 "vars": {
   "--bs-gutter-y":"0.25rem",
 },
@@ -7322,8 +7043,6 @@ export const gMd2 = style({
 "vars": {
   "--bs-gutter-x":"0.5rem",
 },
-},
-"(min-width: 768px)": {
 "vars": {
   "--bs-gutter-y":"0.5rem",
 },
@@ -7336,8 +7055,6 @@ export const gMd3 = style({
 "vars": {
   "--bs-gutter-x":"1rem",
 },
-},
-"(min-width: 768px)": {
 "vars": {
   "--bs-gutter-y":"1rem",
 },
@@ -7350,8 +7067,6 @@ export const gMd4 = style({
 "vars": {
   "--bs-gutter-x":"1.5rem",
 },
-},
-"(min-width: 768px)": {
 "vars": {
   "--bs-gutter-y":"1.5rem",
 },
@@ -7364,8 +7079,6 @@ export const gMd5 = style({
 "vars": {
   "--bs-gutter-x":"3rem",
 },
-},
-"(min-width: 768px)": {
 "vars": {
   "--bs-gutter-y":"3rem",
 },
@@ -7378,8 +7091,6 @@ export const gSm0 = style({
 "vars": {
   "--bs-gutter-x":"0",
 },
-},
-"(min-width: 576px)": {
 "vars": {
   "--bs-gutter-y":"0",
 },
@@ -7392,8 +7103,6 @@ export const gSm1 = style({
 "vars": {
   "--bs-gutter-x":"0.25rem",
 },
-},
-"(min-width: 576px)": {
 "vars": {
   "--bs-gutter-y":"0.25rem",
 },
@@ -7406,8 +7115,6 @@ export const gSm2 = style({
 "vars": {
   "--bs-gutter-x":"0.5rem",
 },
-},
-"(min-width: 576px)": {
 "vars": {
   "--bs-gutter-y":"0.5rem",
 },
@@ -7420,8 +7127,6 @@ export const gSm3 = style({
 "vars": {
   "--bs-gutter-x":"1rem",
 },
-},
-"(min-width: 576px)": {
 "vars": {
   "--bs-gutter-y":"1rem",
 },
@@ -7434,8 +7139,6 @@ export const gSm4 = style({
 "vars": {
   "--bs-gutter-x":"1.5rem",
 },
-},
-"(min-width: 576px)": {
 "vars": {
   "--bs-gutter-y":"1.5rem",
 },
@@ -7448,8 +7151,6 @@ export const gSm5 = style({
 "vars": {
   "--bs-gutter-x":"3rem",
 },
-},
-"(min-width: 576px)": {
 "vars": {
   "--bs-gutter-y":"3rem",
 },
@@ -7462,8 +7163,6 @@ export const gXl0 = style({
 "vars": {
   "--bs-gutter-x":"0",
 },
-},
-"(min-width: 1200px)": {
 "vars": {
   "--bs-gutter-y":"0",
 },
@@ -7476,8 +7175,6 @@ export const gXl1 = style({
 "vars": {
   "--bs-gutter-x":"0.25rem",
 },
-},
-"(min-width: 1200px)": {
 "vars": {
   "--bs-gutter-y":"0.25rem",
 },
@@ -7490,8 +7187,6 @@ export const gXl2 = style({
 "vars": {
   "--bs-gutter-x":"0.5rem",
 },
-},
-"(min-width: 1200px)": {
 "vars": {
   "--bs-gutter-y":"0.5rem",
 },
@@ -7504,8 +7199,6 @@ export const gXl3 = style({
 "vars": {
   "--bs-gutter-x":"1rem",
 },
-},
-"(min-width: 1200px)": {
 "vars": {
   "--bs-gutter-y":"1rem",
 },
@@ -7518,8 +7211,6 @@ export const gXl4 = style({
 "vars": {
   "--bs-gutter-x":"1.5rem",
 },
-},
-"(min-width: 1200px)": {
 "vars": {
   "--bs-gutter-y":"1.5rem",
 },
@@ -7532,8 +7223,6 @@ export const gXl5 = style({
 "vars": {
   "--bs-gutter-x":"3rem",
 },
-},
-"(min-width: 1200px)": {
 "vars": {
   "--bs-gutter-y":"3rem",
 },
@@ -7546,8 +7235,6 @@ export const gXxl0 = style({
 "vars": {
   "--bs-gutter-x":"0",
 },
-},
-"(min-width: 1400px)": {
 "vars": {
   "--bs-gutter-y":"0",
 },
@@ -7560,8 +7247,6 @@ export const gXxl1 = style({
 "vars": {
   "--bs-gutter-x":"0.25rem",
 },
-},
-"(min-width: 1400px)": {
 "vars": {
   "--bs-gutter-y":"0.25rem",
 },
@@ -7574,8 +7259,6 @@ export const gXxl2 = style({
 "vars": {
   "--bs-gutter-x":"0.5rem",
 },
-},
-"(min-width: 1400px)": {
 "vars": {
   "--bs-gutter-y":"0.5rem",
 },
@@ -7588,8 +7271,6 @@ export const gXxl3 = style({
 "vars": {
   "--bs-gutter-x":"1rem",
 },
-},
-"(min-width: 1400px)": {
 "vars": {
   "--bs-gutter-y":"1rem",
 },
@@ -7602,8 +7283,6 @@ export const gXxl4 = style({
 "vars": {
   "--bs-gutter-x":"1.5rem",
 },
-},
-"(min-width: 1400px)": {
 "vars": {
   "--bs-gutter-y":"1.5rem",
 },
@@ -7616,8 +7295,6 @@ export const gXxl5 = style({
 "vars": {
   "--bs-gutter-x":"3rem",
 },
-},
-"(min-width: 1400px)": {
 "vars": {
   "--bs-gutter-y":"3rem",
 },
@@ -8576,29 +8253,21 @@ export const inputGroup = style({
 ":focus": {
   zIndex:"3",
 },
-"selectors": {
-"&:not:not(:last-child):not:not": {
-  borderTopRightRadius:"0",
-  borderBottomRightRadius:"0",
+  zIndex:"1",
+  zIndex:"1",
+":focus": {
+  zIndex:"3",
 },
+":focus": {
+  zIndex:"3",
 },
-"selectors": {
-"&:not:nth-last-child(+3)": {
-  borderTopRightRadius:"0",
-  borderBottomRightRadius:"0",
+  zIndex:"2",
+  zIndex:"2",
+":focus": {
+  zIndex:"3",
 },
-},
-"selectors": {
-"&:nth-last-child(+3):not:not": {
-  borderTopRightRadius:"0",
-  borderBottomRightRadius:"0",
-},
-},
-"selectors": {
-"&:nth-last-child(+4)": {
-  borderTopRightRadius:"0",
-  borderBottomRightRadius:"0",
-},
+":focus": {
+  zIndex:"3",
 },
 "selectors": {
 "&:not(:first-child):not:not:not:not:not": {
@@ -8606,22 +8275,22 @@ export const inputGroup = style({
   borderTopLeftRadius:"0",
   borderBottomLeftRadius:"0",
 },
+"&:not:not(:last-child):not:not": {
+  borderTopRightRadius:"0",
+  borderBottomRightRadius:"0",
 },
-  zIndex:"1",
-  zIndex:"1",
-":focus": {
-  zIndex:"3",
+"&:not:nth-last-child(+3)": {
+  borderTopRightRadius:"0",
+  borderBottomRightRadius:"0",
 },
-":focus": {
-  zIndex:"3",
+"&:nth-last-child(+3):not:not": {
+  borderTopRightRadius:"0",
+  borderBottomRightRadius:"0",
 },
-  zIndex:"2",
-  zIndex:"2",
-":focus": {
-  zIndex:"3",
+"&:nth-last-child(+4)": {
+  borderTopRightRadius:"0",
+  borderBottomRightRadius:"0",
 },
-":focus": {
-  zIndex:"3",
 },
 });
 export const inputGroupLg = style({
@@ -9049,27 +8718,17 @@ export const listGroupHorizontalLg = style({
 "@media": {
 "(min-width: 992px)": {
   flexDirection:"row",
-},
-"(min-width: 992px)": {
 ":first-child": {
   borderBottomLeftRadius:"0.25rem",
   borderTopRightRadius:"0",
 },
-},
-"(min-width: 992px)": {
 ":last-child": {
   borderTopRightRadius:"0.25rem",
   borderBottomLeftRadius:"0",
 },
-},
-"(min-width: 992px)": {
   marginTop:"0",
-},
-"(min-width: 992px)": {
   borderTopWidth:"1px",
   borderLeftWidth:"0",
-},
-"(min-width: 992px)": {
   marginLeft:"-1px",
   borderLeftWidth:"1px",
 },
@@ -9079,27 +8738,17 @@ export const listGroupHorizontalMd = style({
 "@media": {
 "(min-width: 768px)": {
   flexDirection:"row",
-},
-"(min-width: 768px)": {
 ":first-child": {
   borderBottomLeftRadius:"0.25rem",
   borderTopRightRadius:"0",
 },
-},
-"(min-width: 768px)": {
 ":last-child": {
   borderTopRightRadius:"0.25rem",
   borderBottomLeftRadius:"0",
 },
-},
-"(min-width: 768px)": {
   marginTop:"0",
-},
-"(min-width: 768px)": {
   borderTopWidth:"1px",
   borderLeftWidth:"0",
-},
-"(min-width: 768px)": {
   marginLeft:"-1px",
   borderLeftWidth:"1px",
 },
@@ -9109,27 +8758,17 @@ export const listGroupHorizontalSm = style({
 "@media": {
 "(min-width: 576px)": {
   flexDirection:"row",
-},
-"(min-width: 576px)": {
 ":first-child": {
   borderBottomLeftRadius:"0.25rem",
   borderTopRightRadius:"0",
 },
-},
-"(min-width: 576px)": {
 ":last-child": {
   borderTopRightRadius:"0.25rem",
   borderBottomLeftRadius:"0",
 },
-},
-"(min-width: 576px)": {
   marginTop:"0",
-},
-"(min-width: 576px)": {
   borderTopWidth:"1px",
   borderLeftWidth:"0",
-},
-"(min-width: 576px)": {
   marginLeft:"-1px",
   borderLeftWidth:"1px",
 },
@@ -9139,27 +8778,17 @@ export const listGroupHorizontalXl = style({
 "@media": {
 "(min-width: 1200px)": {
   flexDirection:"row",
-},
-"(min-width: 1200px)": {
 ":first-child": {
   borderBottomLeftRadius:"0.25rem",
   borderTopRightRadius:"0",
 },
-},
-"(min-width: 1200px)": {
 ":last-child": {
   borderTopRightRadius:"0.25rem",
   borderBottomLeftRadius:"0",
 },
-},
-"(min-width: 1200px)": {
   marginTop:"0",
-},
-"(min-width: 1200px)": {
   borderTopWidth:"1px",
   borderLeftWidth:"0",
-},
-"(min-width: 1200px)": {
   marginLeft:"-1px",
   borderLeftWidth:"1px",
 },
@@ -9169,27 +8798,17 @@ export const listGroupHorizontalXxl = style({
 "@media": {
 "(min-width: 1400px)": {
   flexDirection:"row",
-},
-"(min-width: 1400px)": {
 ":first-child": {
   borderBottomLeftRadius:"0.25rem",
   borderTopRightRadius:"0",
 },
-},
-"(min-width: 1400px)": {
 ":last-child": {
   borderTopRightRadius:"0.25rem",
   borderBottomLeftRadius:"0",
 },
-},
-"(min-width: 1400px)": {
   marginTop:"0",
-},
-"(min-width: 1400px)": {
   borderTopWidth:"1px",
   borderLeftWidth:"0",
-},
-"(min-width: 1400px)": {
   marginLeft:"-1px",
   borderLeftWidth:"1px",
 },
@@ -10311,19 +9930,11 @@ export const modalFullscreenLgDown = style({
   maxWidth:"none",
   height:"100%",
   margin:"0",
-},
-"(max-width: 991.98px)": {
   height:"100%",
   border:"0",
   borderRadius:"0",
-},
-"(max-width: 991.98px)": {
   borderRadius:"0",
-},
-"(max-width: 991.98px)": {
   overflowY:"auto",
-},
-"(max-width: 991.98px)": {
   borderRadius:"0",
 },
 },
@@ -10335,19 +9946,11 @@ export const modalFullscreenMdDown = style({
   maxWidth:"none",
   height:"100%",
   margin:"0",
-},
-"(max-width: 767.98px)": {
   height:"100%",
   border:"0",
   borderRadius:"0",
-},
-"(max-width: 767.98px)": {
   borderRadius:"0",
-},
-"(max-width: 767.98px)": {
   overflowY:"auto",
-},
-"(max-width: 767.98px)": {
   borderRadius:"0",
 },
 },
@@ -10359,19 +9962,11 @@ export const modalFullscreenSmDown = style({
   maxWidth:"none",
   height:"100%",
   margin:"0",
-},
-"(max-width: 575.98px)": {
   height:"100%",
   border:"0",
   borderRadius:"0",
-},
-"(max-width: 575.98px)": {
   borderRadius:"0",
-},
-"(max-width: 575.98px)": {
   overflowY:"auto",
-},
-"(max-width: 575.98px)": {
   borderRadius:"0",
 },
 },
@@ -10383,19 +9978,11 @@ export const modalFullscreenXlDown = style({
   maxWidth:"none",
   height:"100%",
   margin:"0",
-},
-"(max-width: 1199.98px)": {
   height:"100%",
   border:"0",
   borderRadius:"0",
-},
-"(max-width: 1199.98px)": {
   borderRadius:"0",
-},
-"(max-width: 1199.98px)": {
   overflowY:"auto",
-},
-"(max-width: 1199.98px)": {
   borderRadius:"0",
 },
 },
@@ -10407,19 +9994,11 @@ export const modalFullscreenXxlDown = style({
   maxWidth:"none",
   height:"100%",
   margin:"0",
-},
-"(max-width: 1399.98px)": {
   height:"100%",
   border:"0",
   borderRadius:"0",
-},
-"(max-width: 1399.98px)": {
   borderRadius:"0",
-},
-"(max-width: 1399.98px)": {
   overflowY:"auto",
-},
-"(max-width: 1399.98px)": {
   borderRadius:"0",
 },
 },
@@ -10456,10 +10035,12 @@ export const modalTitle = style({
 });
 export const modalXl = style({
 "@media": {
+"(min-width: 1200px)": {
+  maxWidth:"800px",
+  maxWidth:"1140px",
+},
 "(min-width: 992px)": {
   maxWidth:"800px",
-},
-"(min-width: 1200px)": {
   maxWidth:"1140px",
 },
 },
@@ -11807,31 +11388,15 @@ export const navbarExpandLg = style({
 "(min-width: 992px)": {
   flexWrap:"nowrap",
   justifyContent:"flex-start",
-},
-"(min-width: 992px)": {
   flexDirection:"row",
-},
-"(min-width: 992px)": {
   position:"absolute",
-},
-"(min-width: 992px)": {
   paddingRight:"0.5rem",
   paddingLeft:"0.5rem",
-},
-"(min-width: 992px)": {
   overflow:"visible",
-},
-"(min-width: 992px)": {
   display:"flex",
   flexBasis:"auto",
-},
-"(min-width: 992px)": {
   display:"none",
-},
-"(min-width: 992px)": {
   display:"none",
-},
-"(min-width: 992px)": {
   position:"inherit",
   bottom:"0",
   zIndex:"1000",
@@ -11842,18 +11407,12 @@ export const navbarExpandLg = style({
   borderLeft:"0",
   transition:"none",
   transform:"none",
-},
-"(min-width: 992px)": {
   height:"auto",
   borderTop:"0",
   borderBottom:"0",
-},
-"(min-width: 992px)": {
   height:"auto",
   borderTop:"0",
   borderBottom:"0",
-},
-"(min-width: 992px)": {
   display:"flex",
   flexGrow:"0",
   padding:"0",
@@ -11866,31 +11425,15 @@ export const navbarExpandMd = style({
 "(min-width: 768px)": {
   flexWrap:"nowrap",
   justifyContent:"flex-start",
-},
-"(min-width: 768px)": {
   flexDirection:"row",
-},
-"(min-width: 768px)": {
   position:"absolute",
-},
-"(min-width: 768px)": {
   paddingRight:"0.5rem",
   paddingLeft:"0.5rem",
-},
-"(min-width: 768px)": {
   overflow:"visible",
-},
-"(min-width: 768px)": {
   display:"flex",
   flexBasis:"auto",
-},
-"(min-width: 768px)": {
   display:"none",
-},
-"(min-width: 768px)": {
   display:"none",
-},
-"(min-width: 768px)": {
   position:"inherit",
   bottom:"0",
   zIndex:"1000",
@@ -11901,18 +11444,12 @@ export const navbarExpandMd = style({
   borderLeft:"0",
   transition:"none",
   transform:"none",
-},
-"(min-width: 768px)": {
   height:"auto",
   borderTop:"0",
   borderBottom:"0",
-},
-"(min-width: 768px)": {
   height:"auto",
   borderTop:"0",
   borderBottom:"0",
-},
-"(min-width: 768px)": {
   display:"flex",
   flexGrow:"0",
   padding:"0",
@@ -11925,31 +11462,15 @@ export const navbarExpandSm = style({
 "(min-width: 576px)": {
   flexWrap:"nowrap",
   justifyContent:"flex-start",
-},
-"(min-width: 576px)": {
   flexDirection:"row",
-},
-"(min-width: 576px)": {
   position:"absolute",
-},
-"(min-width: 576px)": {
   paddingRight:"0.5rem",
   paddingLeft:"0.5rem",
-},
-"(min-width: 576px)": {
   overflow:"visible",
-},
-"(min-width: 576px)": {
   display:"flex",
   flexBasis:"auto",
-},
-"(min-width: 576px)": {
   display:"none",
-},
-"(min-width: 576px)": {
   display:"none",
-},
-"(min-width: 576px)": {
   position:"inherit",
   bottom:"0",
   zIndex:"1000",
@@ -11960,18 +11481,12 @@ export const navbarExpandSm = style({
   borderLeft:"0",
   transition:"none",
   transform:"none",
-},
-"(min-width: 576px)": {
   height:"auto",
   borderTop:"0",
   borderBottom:"0",
-},
-"(min-width: 576px)": {
   height:"auto",
   borderTop:"0",
   borderBottom:"0",
-},
-"(min-width: 576px)": {
   display:"flex",
   flexGrow:"0",
   padding:"0",
@@ -11984,31 +11499,15 @@ export const navbarExpandXl = style({
 "(min-width: 1200px)": {
   flexWrap:"nowrap",
   justifyContent:"flex-start",
-},
-"(min-width: 1200px)": {
   flexDirection:"row",
-},
-"(min-width: 1200px)": {
   position:"absolute",
-},
-"(min-width: 1200px)": {
   paddingRight:"0.5rem",
   paddingLeft:"0.5rem",
-},
-"(min-width: 1200px)": {
   overflow:"visible",
-},
-"(min-width: 1200px)": {
   display:"flex",
   flexBasis:"auto",
-},
-"(min-width: 1200px)": {
   display:"none",
-},
-"(min-width: 1200px)": {
   display:"none",
-},
-"(min-width: 1200px)": {
   position:"inherit",
   bottom:"0",
   zIndex:"1000",
@@ -12019,18 +11518,12 @@ export const navbarExpandXl = style({
   borderLeft:"0",
   transition:"none",
   transform:"none",
-},
-"(min-width: 1200px)": {
   height:"auto",
   borderTop:"0",
   borderBottom:"0",
-},
-"(min-width: 1200px)": {
   height:"auto",
   borderTop:"0",
   borderBottom:"0",
-},
-"(min-width: 1200px)": {
   display:"flex",
   flexGrow:"0",
   padding:"0",
@@ -12043,31 +11536,15 @@ export const navbarExpandXxl = style({
 "(min-width: 1400px)": {
   flexWrap:"nowrap",
   justifyContent:"flex-start",
-},
-"(min-width: 1400px)": {
   flexDirection:"row",
-},
-"(min-width: 1400px)": {
   position:"absolute",
-},
-"(min-width: 1400px)": {
   paddingRight:"0.5rem",
   paddingLeft:"0.5rem",
-},
-"(min-width: 1400px)": {
   overflow:"visible",
-},
-"(min-width: 1400px)": {
   display:"flex",
   flexBasis:"auto",
-},
-"(min-width: 1400px)": {
   display:"none",
-},
-"(min-width: 1400px)": {
   display:"none",
-},
-"(min-width: 1400px)": {
   position:"inherit",
   bottom:"0",
   zIndex:"1000",
@@ -12078,18 +11555,12 @@ export const navbarExpandXxl = style({
   borderLeft:"0",
   transition:"none",
   transform:"none",
-},
-"(min-width: 1400px)": {
   height:"auto",
   borderTop:"0",
   borderBottom:"0",
-},
-"(min-width: 1400px)": {
   height:"auto",
   borderTop:"0",
   borderBottom:"0",
-},
-"(min-width: 1400px)": {
   display:"flex",
   flexGrow:"0",
   padding:"0",
@@ -13262,11 +12733,6 @@ export const pXxl5 = style({
 },
 });
 export const pageItem = style({
-"selectors": {
-"&:not(:first-child)": {
-  marginLeft:"-1px",
-},
-},
   zIndex:"3",
   color:"fff",
   backgroundColor:"0d6efd",
@@ -13282,6 +12748,11 @@ export const pageItem = style({
 ":last-child": {
   borderTopRightRadius:"0.25rem",
   borderBottomRightRadius:"0.25rem",
+},
+"selectors": {
+"&:not(:first-child)": {
+  marginLeft:"-1px",
+},
 },
 });
 export const pageLink = style({
