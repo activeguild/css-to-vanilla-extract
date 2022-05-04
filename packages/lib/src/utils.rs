@@ -42,6 +42,10 @@ pub fn wrap_keyframes(rule: String) -> String {
     format!("globalKeyframes({});\n", rule)
 }
 
+pub fn wrap_fontface(rule: String) -> String {
+    format!("globalFontFace({});\n", rule)
+}
+
 fn wrap_property(key: String, rule: String, separator: char) -> String {
     if rule.is_empty() {
         String::new()

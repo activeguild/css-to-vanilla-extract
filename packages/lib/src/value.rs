@@ -5,8 +5,8 @@ use crate::{
     media::{get_all_media_conditions, get_without_or_media_conditions},
     supports::get_supports_rule,
     utils::{
-        is_simple_pseudo_func, wrap_export_const, wrap_global_style_func, wrap_property_with_colon,
-        wrap_property_with_comma, wrap_style_func,
+        is_simple_pseudo_func, wrap_export_const, wrap_fontface, wrap_global_style_func,
+        wrap_property_with_colon, wrap_property_with_comma, wrap_style_func,
     },
 };
 use convert_case::{Case, Casing};
@@ -81,7 +81,24 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 swc_css_ast::AtRule::Import(_) => {
                     println!("Not supportted. (AtRule::Import)")
                 }
-                swc_css_ast::AtRule::FontFace(_) => println!("Not implemented. (AtRule::FontFace)"),
+                swc_css_ast::AtRule::FontFace(font_face) => {
+                    // globalFontFace('MyGlobalFont', {
+                    //   src: 'local("Comic Sans MS")'
+                    // });
+                    let mut block_values = String::new();
+                    for block_value in &font_face.block.value {
+                        println!("block_value:{:?}", block_value);
+                        let components = get_component_value(block_value);
+                        for component in components {
+                            block_values.push_str(&component.ve);
+                        }
+                    }
+
+                    ve.push_str(&wrap_fontface(wrap_property_with_comma(
+                        font_face.block.name.to_string(),
+                        block_values,
+                    )));
+                }
                 swc_css_ast::AtRule::Keyframes(keyframes) => {
                     ve.push_str(&get_keyframes(keyframes));
                 }
@@ -393,7 +410,6 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
             is_simple_pseudo: complex.is_simple_pseudo,
         })
     }
-
     result
 }
 
@@ -715,7 +731,6 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
                 for rule in get_qualified_rule(qualified_rule) {
                     let mut _ve: String = String::new();
                     let mut _key: String = String::new();
-
                     components.push(Component {
                         ve: rule.ve,
                         key: rule.key,
@@ -971,19 +986,19 @@ pub fn get_function(function: &swc_css_ast::Function) -> String {
 
 pub fn get_declaration(
     declaration: &swc_css_ast::Declaration,
-    is_supports: bool,
+    is_atrule_supports: bool,
 ) -> (String, Vec<String>) {
     let mut ve = String::new();
     let mut vars: Vec<String> = vec![];
     let mut declaration_name = String::new();
     let mut declaration_value = String::new();
-    let mut temp_dashed_ident = String::new();
+    let mut dashed_ident = String::new();
     match &declaration.name {
         swc_css_ast::DeclarationName::Ident(ident) => {
             declaration_name.push_str(&ident.raw.to_string())
         }
-        swc_css_ast::DeclarationName::DashedIdent(dashed_ident) => {
-            temp_dashed_ident = dashed_ident.raw.to_string()
+        swc_css_ast::DeclarationName::DashedIdent(_dashed_ident) => {
+            dashed_ident = _dashed_ident.raw.to_string()
         }
     }
     for declaration_component_value in &declaration.value {
@@ -1003,18 +1018,17 @@ pub fn get_declaration(
     } else {
         declaration_name = declaration_name.to_case(Case::Camel)
     }
-    if !temp_dashed_ident.is_empty() {
-        let formatted_declaration =
-            format!("  \"{}\":\"{}\",\n", temp_dashed_ident, declaration_value);
+    if !dashed_ident.is_empty() {
+        let formatted_declaration = format!("  \"{}\":\"{}\",\n", dashed_ident, declaration_value);
         vars.push(formatted_declaration);
-    } else if is_supports {
+    } else if is_atrule_supports {
         let formatted_declaration = format!("({}:{})", declaration_name, declaration_value);
         ve.push_str(&formatted_declaration);
     } else {
         let formatted_declaration = format!("  {}:\"{}\",\n", declaration_name, declaration_value);
         ve.push_str(&formatted_declaration);
     }
-
+    println!("ve:{:?}", ve);
     (ve, vars)
 }
 
@@ -1306,6 +1320,18 @@ mod tests {
     #[test]
     fn ast_to_vanilla_extract_22() {
         let parsed_css = parse_css("@media (min-width: 1200px){.accordion-button:not(.collapsed) {color: #0c63e4;}.accordion-button:not(.collapsed)::after {transform: rotate(-180deg);}}")
+        .unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n},\n});\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_23() {
+        let parsed_css = parse_css("@font-face {font-family: \"Open Sans\";src: url(\"/fonts/OpenSans-Regular-webfont.woff2\") format(\"woff2\"),url(\"/fonts/OpenSans-Regular-webfont.woff\") format(\"woff\");}")
         .unwrap();
         let result = ast_to_vanilla_extract(parsed_css);
 
