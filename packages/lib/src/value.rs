@@ -112,15 +112,20 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                     //   src: 'local("Comic Sans MS")'
                     // });
                     let mut block_values = String::new();
+                    let mut fontface_key = String::new();
                     for block_value in &font_face.block.value {
                         let components = get_component_value(block_value);
-                        for component in components {
-                            block_values.push_str(&component.ve);
+                        for (key, value) in components[0].key_value_pair.clone().into_iter() {
+                            if key == "fontFamily" {
+                                fontface_key.push_str(&value.to_case(Case::Camel))
+                            } else {
+                                block_values.push_str(&wrap_property(key, value));
+                            }
                         }
                     }
 
                     ve.push_str(&wrap_fontface(wrap_properties_with_comma(
-                        font_face.block.name.to_string(),
+                        fontface_key,
                         block_values,
                     )));
                 }
@@ -505,7 +510,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
 
     ve.insert_str(
         0,
-        "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\n",
+        "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\n",
     );
 
     ve
@@ -1240,7 +1245,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const bAR = style({\n\":hover\": {\n  position:\"absolute\",\n},\n});\nexport const foo = style({\n  position:\"absolute\",\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const bAR = style({\n\":hover\": {\n  position:\"absolute\",\n},\n});\nexport const foo = style({\n  position:\"absolute\",\n});\n",
             result
         )
     }
@@ -1253,7 +1258,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"*\", {\n  boxSizing:\"border-box\",\n},\n);\nglobalStyle(\"*::after\", {\n  boxSizing:\"border-box\",\n},\n);\nglobalStyle(\"*::before\", {\n  boxSizing:\"border-box\",\n},\n);\nexport const bAR = style({\n\":hover\": {\n  boxSizing:\"border-box\",\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"*\", {\n  boxSizing:\"border-box\",\n},\n);\nglobalStyle(\"*::after\", {\n  boxSizing:\"border-box\",\n},\n);\nglobalStyle(\"*::before\", {\n  boxSizing:\"border-box\",\n},\n);\nexport const bAR = style({\n\":hover\": {\n  boxSizing:\"border-box\",\n},\n});\n",
             result
         )
     }
@@ -1265,7 +1270,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"ol ol\", {\n  marginBottom:\"0\",\n},\n);\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"ol ol\", {\n  marginBottom:\"0\",\n},\n);\n",
             result
         )
     }
@@ -1279,7 +1284,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"[type^='button' s]:not(:disabled)\", {\n  cursor:\"pointer\",\n},\n);\nglobalStyle(\"button:not(:disabled)\", {\n  cursor:\"pointer\",\n},\n);\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"[type^='button' s]:not(:disabled)\", {\n  cursor:\"pointer\",\n},\n);\nglobalStyle(\"button:not(:disabled)\", {\n  cursor:\"pointer\",\n},\n);\n",
             result
         )
     }
@@ -1290,7 +1295,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\":root\", {\n\"vars\": {\n  \"--blue\":\"#007bff\",\n},\n},\n);\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\":root\", {\n\"vars\": {\n  \"--blue\":\"#007bff\",\n},\n},\n);\n",
             result
         )
     }
@@ -1301,7 +1306,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"#foo\", {\n  border:\"red 2px solid\",\n},\n);\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"#foo\", {\n  border:\"red 2px solid\",\n},\n);\n",
             result
         )
     }
@@ -1314,7 +1319,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
             result
         )
     }
@@ -1325,7 +1330,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\n",
             result
         )
     }
@@ -1336,7 +1341,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\nexport const display2 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\nexport const display2 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
             result
         )
     }
@@ -1347,7 +1352,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  fontSize:\"5rem\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  fontSize:\"5rem\",\n},\n},\n});\n",
             result
         )
     }
@@ -1358,7 +1363,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\n",
             result
         )
     }
@@ -1369,7 +1374,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\nexport const display2 = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\nexport const display2 = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
             result
         )
     }
@@ -1380,7 +1385,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const toast = style({\n\"selectors\": {\n\"&:not(:last-child)\": {\n  marginBottom:\"0.75rem\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const toast = style({\n\"selectors\": {\n\"&:not(:last-child)\": {\n  marginBottom:\"0.75rem\",\n},\n},\n});\n",
 
             result
         )
@@ -1393,7 +1398,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const tooltip = style({\n\"selectors\": {\n\"&[data-popper-placement^='top']\": {\n  padding:\"0.4rem 0\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const tooltip = style({\n\"selectors\": {\n\"&[data-popper-placement^='top']\": {\n  padding:\"0.4rem 0\",\n},\n},\n});\n",
             result
         )
     }
@@ -1404,7 +1409,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const foo = style({\n  position:\"absolute\",\n\":hover\": {\n  position:\"absolute\",\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const foo = style({\n  position:\"absolute\",\n\":hover\": {\n  position:\"absolute\",\n},\n});\n",
             result
         )
     }
@@ -1416,7 +1421,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"h4\", {\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"1.5rem\",\n},\n},\n},\n);\nexport const h4 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"1.5rem\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"h4\", {\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"1.5rem\",\n},\n},\n},\n);\nexport const h4 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"1.5rem\",\n},\n},\n});\n",
             result
         )
     }
@@ -1428,7 +1433,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor:\"blue\",\n\"@media\": {\n\"(min-width: 1200px)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor:\"blue\",\n\"@media\": {\n\"(min-width: 1200px)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
             result
         )
     }
@@ -1440,7 +1445,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor:\"blue\",\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor:\"blue\",\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
             result
         )
     }
@@ -1454,7 +1459,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalKeyframes(\"progress-bar-stripes\", {\n\"from\": {\n  backgroundPosition:\"1rem 0\",\n},\n\"to\": {\n  backgroundPosition:\"0 0\",\n},\n},\n);\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalKeyframes(\"progress-bar-stripes\", {\n\"from\": {\n  backgroundPosition:\"1rem 0\",\n},\n\"to\": {\n  backgroundPosition:\"0 0\",\n},\n},\n);\n",
             result
         )
     }
@@ -1466,7 +1471,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n});\n",
             result
         )
     }
@@ -1478,7 +1483,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n},\n});\n",
             result
         )
     }
@@ -1490,7 +1495,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n},\n});\n",
             result
         )
     }
@@ -1502,7 +1507,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalFontFace(\"openSans\", {\n  src:\"url(/fonts/OpenSans-Regular-webfont.woff2) format(woff2) , url(/fonts/OpenSans-Regular-webfont.woff) format(woff)\",\n},\n);\n",
             result
         )
     }
