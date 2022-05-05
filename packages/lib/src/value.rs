@@ -326,7 +326,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 }
             }
 
-            for (key, selectors_value) in value.selectors_in_media.into_iter() {
+            for (_key, selectors_value) in value.selectors_in_media.into_iter() {
                 let mut selectors_rule = String::new();
                 for (key, value) in selectors_value.into_iter() {
                     let mut properties = String::new();
@@ -356,7 +356,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 rule.push_str(&wrap_property(key, value));
             }
 
-            for (key, selectors_value) in value.selectors_in_supports.into_iter() {
+            for (_key, selectors_value) in value.selectors_in_supports.into_iter() {
                 let mut selectors_rule = String::new();
                 for (key, value) in selectors_value.into_iter() {
                     let mut properties = String::new();
@@ -430,7 +430,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 rule.push_str(&wrap_property(key, value));
             }
 
-            for (key, selectors_value) in value.selectors_in_media.into_iter() {
+            for (_key, selectors_value) in value.selectors_in_media.into_iter() {
                 let mut selectors_rule = String::new();
                 for (key, value) in selectors_value.into_iter() {
                     let mut properties = String::new();
@@ -460,7 +460,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 rule.push_str(&wrap_property(key, value));
             }
 
-            for (key, selectors_value) in value.selectors_in_supports.into_iter() {
+            for (_key, selectors_value) in value.selectors_in_supports.into_iter() {
                 let mut selectors_rule = String::new();
                 for (key, value) in selectors_value.into_iter() {
                     let mut properties = String::new();
