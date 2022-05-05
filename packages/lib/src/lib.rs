@@ -8,8 +8,8 @@ mod path;
 mod supports;
 mod utils;
 mod value;
-
 use path::resolve_paths;
+
 use utils::{is_css_request, parse_css};
 use value::ast_to_vanilla_extract;
 

@@ -50,8 +50,8 @@ export const bar = style({
 export const display1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      fontSize: "5rem",
       color: "red",
+      fontSize: "5rem",
     },
   },
 });
@@ -59,8 +59,8 @@ export const display2 = style({
   backgroundColor: "blue",
   "@media": {
     "(min-width: 1200px)": {
-      fontSize: "5rem",
       color: "red",
+      fontSize: "5rem",
     },
   },
 });
@@ -74,8 +74,8 @@ export const display3 = style({
 export const display4 = style({
   "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
-      fontSize: "5rem",
       color: "red",
+      fontSize: "5rem",
     },
   },
 });
@@ -83,8 +83,8 @@ export const display5 = style({
   backgroundColor: "blue",
   "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
-      fontSize: "5rem",
       color: "red",
+      fontSize: "5rem",
     },
   },
 });

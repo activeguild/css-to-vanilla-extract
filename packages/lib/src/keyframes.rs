@@ -1,5 +1,7 @@
 use crate::{
-    utils::{wrap_keyframes, wrap_property_with_comma},
+    utils::{
+        wrap_keyframes, wrap_properties_with_colon, wrap_properties_with_comma, wrap_property,
+    },
     value::get_component_value,
 };
 
@@ -15,10 +17,17 @@ pub fn get_keyframes(keyframes: &swc_css_ast::KeyframesRule) -> String {
     };
 
     let mut component_values = String::new();
+
     for component_value in &keyframes.block.value {
-        let component_value_as_str = get_component_value(component_value);
-        component_values.push_str(&component_value_as_str[0].ve.to_string());
+        let component = get_component_value(component_value);
+
+        let mut rule = String::new();
+        for (key, value) in component[0].key_value_pair.clone().into_iter() {
+            rule.push_str(&wrap_property(key, value));
+        }
+
+        component_values.push_str(&wrap_properties_with_colon(component[0].clone().ve, rule));
     }
 
-    wrap_keyframes(wrap_property_with_comma(keyframes_name, component_values))
+    wrap_keyframes(wrap_properties_with_comma(keyframes_name, component_values))
 }
