@@ -42,7 +42,15 @@ pub fn wrap_keyframes(rule: String) -> String {
     format!("globalKeyframes({});\n", rule)
 }
 
-fn wrap_property(key: String, rule: String, separator: char) -> String {
+pub fn wrap_fontface(rule: String) -> String {
+    format!("globalFontFace({});\n", rule)
+}
+
+pub fn wrap_property(key: String, rule: String) -> String {
+    format!("  {}:\"{}\",\n", key, rule)
+}
+
+fn wrap_properties(key: String, rule: String, separator: char) -> String {
     if rule.is_empty() {
         String::new()
     } else {
@@ -50,12 +58,12 @@ fn wrap_property(key: String, rule: String, separator: char) -> String {
     }
 }
 
-pub fn wrap_property_with_colon(key: String, rule: String) -> String {
-    wrap_property(key, rule, ':')
+pub fn wrap_properties_with_colon(key: String, rule: String) -> String {
+    wrap_properties(key, rule, ':')
 }
 
-pub fn wrap_property_with_comma(key: String, rule: String) -> String {
-    wrap_property(key, rule, ',')
+pub fn wrap_properties_with_comma(key: String, rule: String) -> String {
+    wrap_properties(key, rule, ',')
 }
 
 const PSEUDO_MAPCONST: [&str; 95] = [

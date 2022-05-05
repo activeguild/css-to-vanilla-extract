@@ -5,17 +5,23 @@ use crate::{
     media::{get_all_media_conditions, get_without_or_media_conditions},
     supports::get_supports_rule,
     utils::{
-        is_simple_pseudo_func, wrap_export_const, wrap_global_style_func, wrap_property_with_colon,
-        wrap_property_with_comma, wrap_style_func,
+        is_simple_pseudo_func, wrap_export_const, wrap_fontface, wrap_global_style_func,
+        wrap_properties_with_colon, wrap_properties_with_comma, wrap_property, wrap_style_func,
     },
 };
 use convert_case::{Case, Casing};
+
+type KeyValuePair = BTreeMap<String, String>;
+type KeyValuePairInPseudo = BTreeMap<String, KeyValuePair>;
+type KeyValuePairInSelectors = BTreeMap<String, KeyValuePair>;
+
 #[derive(Debug)]
 pub struct Rule {
     pub ve: String,
     pub key: String,
-    pub selectors: BTreeMap<String, String>,
-
+    pub key_value_pair: KeyValuePair,
+    pub key_value_pair_in_pseudo: KeyValuePairInPseudo,
+    pub key_value_pair_in_selectors: KeyValuePairInSelectors,
     pub is_global_style: bool,
     pub is_simple_pseudo: bool,
 }
@@ -28,12 +34,14 @@ pub struct Complex {
     pub is_simple_pseudo: bool,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Default, Clone)]
 pub struct Component {
     pub ve: String,
+    pub key_value_pair: KeyValuePair,
+    pub key_value_pair_in_pseudo: KeyValuePairInPseudo,
+    pub key_value_pair_in_selectors: KeyValuePairInSelectors,
     pub vars: Vec<String>,
     pub key: String,
-    pub selectors: BTreeMap<String, String>,
     pub is_global_style: bool,
 }
 
@@ -41,9 +49,13 @@ pub struct Component {
 
 pub struct RuleMapValue {
     pub ve: String,
-    pub selectors: BTreeMap<String, String>,
-    pub selectors_in_media: BTreeMap<String, BTreeMap<String, String>>,
-    pub selectors_in_supports: BTreeMap<String, BTreeMap<String, String>>,
+    pub key_value_pair: KeyValuePair,
+    pub key_value_pair_in_media: KeyValuePair,
+    pub key_value_pair_in_supports: KeyValuePair,
+    pub key_value_pair_in_pseudo: KeyValuePairInPseudo,
+    pub key_value_pair_in_selectors: KeyValuePairInSelectors,
+    pub selectors_in_media: BTreeMap<String, KeyValuePairInSelectors>,
+    pub selectors_in_supports: BTreeMap<String, KeyValuePairInSelectors>,
     pub media: String,
     pub supports: String,
 }
@@ -57,19 +69,33 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
         match rule {
             swc_css_ast::Rule::QualifiedRule(qualfied_rule) => {
                 let rules = get_qualified_rule(qualfied_rule);
+
                 for rule in rules {
                     if rule.is_global_style {
                         let _global_rule_map = global_rule_map
                             .entry(rule.key)
                             .or_insert_with(RuleMapValue::default);
                         _global_rule_map.ve.push_str(&rule.ve);
-                        _global_rule_map.selectors.extend(rule.selectors);
+                        _global_rule_map.key_value_pair.extend(rule.key_value_pair);
+                        _global_rule_map
+                            .key_value_pair_in_pseudo
+                            .extend(rule.key_value_pair_in_pseudo);
+                        _global_rule_map
+                            .key_value_pair_in_selectors
+                            .extend(rule.key_value_pair_in_selectors);
                     } else {
                         let _rule_map = rule_map
                             .entry(rule.key)
                             .or_insert_with(RuleMapValue::default);
                         _rule_map.ve.push_str(&rule.ve);
-                        _rule_map.selectors.extend(rule.selectors);
+                        _rule_map.key_value_pair.extend(rule.key_value_pair);
+                        _rule_map
+                            .key_value_pair_in_pseudo
+                            .extend(rule.key_value_pair_in_pseudo);
+
+                        _rule_map
+                            .key_value_pair_in_selectors
+                            .extend(rule.key_value_pair_in_selectors);
                     }
                 }
             }
@@ -81,7 +107,23 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 swc_css_ast::AtRule::Import(_) => {
                     println!("Not supportted. (AtRule::Import)")
                 }
-                swc_css_ast::AtRule::FontFace(_) => println!("Not implemented. (AtRule::FontFace)"),
+                swc_css_ast::AtRule::FontFace(font_face) => {
+                    // globalFontFace('MyGlobalFont', {
+                    //   src: 'local("Comic Sans MS")'
+                    // });
+                    let mut block_values = String::new();
+                    for block_value in &font_face.block.value {
+                        let components = get_component_value(block_value);
+                        for component in components {
+                            block_values.push_str(&component.ve);
+                        }
+                    }
+
+                    ve.push_str(&wrap_fontface(wrap_properties_with_comma(
+                        font_face.block.name.to_string(),
+                        block_values,
+                    )));
+                }
                 swc_css_ast::AtRule::Keyframes(keyframes) => {
                     ve.push_str(&get_keyframes(keyframes));
                 }
@@ -138,24 +180,40 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                 let _global_rule_map = global_rule_map
                                     .entry(component.key)
                                     .or_insert_with(RuleMapValue::default);
-                                _global_rule_map.media.push_str(&component.ve);
+                                if _global_rule_map.media.is_empty() {
+                                    _global_rule_map.media.push_str(&media_condition);
+                                }
+                                _global_rule_map
+                                    .key_value_pair_in_media
+                                    .extend(component.key_value_pair);
+                                _global_rule_map
+                                    .key_value_pair_in_pseudo
+                                    .extend(component.key_value_pair_in_pseudo);
 
                                 let selectors_map = _global_rule_map
                                     .selectors_in_media
                                     .entry(media_condition)
                                     .or_insert_with(BTreeMap::new);
-                                selectors_map.extend(component.selectors);
+                                selectors_map.extend(component.key_value_pair_in_selectors);
                             } else {
                                 let _rule_map = rule_map
                                     .entry(component.key)
                                     .or_insert_with(RuleMapValue::default);
-                                _rule_map.media.push_str(&component.ve);
+                                if _rule_map.media.is_empty() {
+                                    _rule_map.media.push_str(&media_condition);
+                                }
+                                _rule_map
+                                    .key_value_pair_in_media
+                                    .extend(component.key_value_pair);
+                                _rule_map
+                                    .key_value_pair_in_pseudo
+                                    .extend(component.key_value_pair_in_pseudo);
 
                                 let selectors_map = _rule_map
                                     .selectors_in_media
                                     .entry(media_condition)
                                     .or_insert_with(BTreeMap::new);
-                                selectors_map.extend(component.selectors);
+                                selectors_map.extend(component.key_value_pair_in_selectors);
                             }
                         }
                     }
@@ -169,24 +227,38 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                             let _global_rule_map = global_rule_map
                                 .entry(component.key)
                                 .or_insert_with(RuleMapValue::default);
-                            _global_rule_map.supports.push_str(&component.ve);
-
+                            if _global_rule_map.supports.is_empty() {
+                                _global_rule_map.supports.push_str(&supports_condition);
+                            }
+                            _global_rule_map
+                                .key_value_pair_in_supports
+                                .extend(component.key_value_pair);
+                            _global_rule_map
+                                .key_value_pair_in_pseudo
+                                .extend(component.key_value_pair_in_pseudo);
                             let selectors_map = _global_rule_map
                                 .selectors_in_supports
                                 .entry(supports_condition)
                                 .or_insert_with(BTreeMap::new);
-                            selectors_map.extend(component.selectors);
+                            selectors_map.extend(component.key_value_pair_in_selectors);
                         } else {
                             let _rule_map = rule_map
                                 .entry(component.key)
                                 .or_insert_with(RuleMapValue::default);
-                            _rule_map.supports.push_str(&component.ve);
-
+                            if _rule_map.supports.is_empty() {
+                                _rule_map.supports.push_str(&supports_condition);
+                            }
+                            _rule_map
+                                .key_value_pair_in_supports
+                                .extend(component.key_value_pair);
+                            _rule_map
+                                .key_value_pair_in_pseudo
+                                .extend(component.key_value_pair_in_pseudo);
                             let selectors_map = _rule_map
                                 .selectors_in_supports
                                 .entry(supports_condition)
                                 .or_insert_with(BTreeMap::new);
-                            selectors_map.extend(component.selectors);
+                            selectors_map.extend(component.key_value_pair_in_selectors);
                         }
                     }
                 }
@@ -229,55 +301,103 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
         if !value.ve.is_empty() {
             properties.push_str(&value.ve);
         }
+
+        for (key, value) in value.key_value_pair.into_iter() {
+            properties.push_str(&wrap_property(key, value));
+        }
+
+        if !value.key_value_pair_in_pseudo.is_empty() {
+            let mut pseudo_rule = String::new();
+            for (key, value) in value.key_value_pair_in_pseudo.into_iter() {
+                let mut properties = String::new();
+                for (key, value) in value.into_iter() {
+                    properties.push_str(&wrap_property(key, value));
+                }
+                pseudo_rule.push_str(&wrap_properties_with_colon(key, properties));
+            }
+            properties.push_str(&pseudo_rule);
+        }
+
         if !value.media.is_empty() || !value.selectors_in_media.is_empty() {
             let mut rule = String::new();
-            for (key, selectors_value) in value.selectors_in_media.into_iter() {
-                let mut selectors_rule = String::new();
-                for (key, _value) in selectors_value.into_iter() {
-                    selectors_rule.push_str(&wrap_property_with_colon(format!("&{}", key), _value));
+            if !value.key_value_pair_in_media.is_empty() {
+                for (key, value) in value.key_value_pair_in_media.into_iter() {
+                    rule.push_str(&wrap_property(key, value));
                 }
-                rule.push_str(&wrap_property_with_colon(
-                    key,
-                    format!(
-                        "{}{}",
-                        value.media,
-                        &wrap_property_with_colon("selectors".to_string(), selectors_rule)
-                    ),
-                ));
             }
-            properties.push_str(&wrap_property_with_colon(String::from("@media"), rule));
+
+            for (_key, selectors_value) in value.selectors_in_media.into_iter() {
+                let mut selectors_rule = String::new();
+                for (key, value) in selectors_value.into_iter() {
+                    let mut properties = String::new();
+                    for (key, value) in value.into_iter() {
+                        properties.push_str(&wrap_property(key, value));
+                    }
+                    selectors_rule
+                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                }
+
+                if !selectors_rule.is_empty() {
+                    rule.push_str(&wrap_properties_with_colon(
+                        "selectors".to_string(),
+                        selectors_rule,
+                    ));
+                }
+            }
+
+            properties.push_str(&wrap_properties_with_colon(
+                String::from("@media"),
+                wrap_properties_with_colon(value.media, rule),
+            ));
         }
         if !value.supports.is_empty() || !value.selectors_in_supports.is_empty() {
             let mut rule = String::new();
-            for (key, selectors_value) in value.selectors_in_supports.into_iter() {
-                let mut selectors_rule = String::new();
-                for (key, _value) in selectors_value.into_iter() {
-                    selectors_rule.push_str(&wrap_property_with_colon(format!("&{}", key), _value));
-                }
-                rule.push_str(&wrap_property_with_colon(
-                    key,
-                    format!(
-                        "{}{}",
-                        value.supports,
-                        &wrap_property_with_colon("selectors".to_string(), selectors_rule)
-                    ),
-                ));
+            for (key, value) in value.key_value_pair_in_supports.into_iter() {
+                rule.push_str(&wrap_property(key, value));
             }
-            properties.push_str(&wrap_property_with_colon(String::from("@supports"), rule));
+
+            for (_key, selectors_value) in value.selectors_in_supports.into_iter() {
+                let mut selectors_rule = String::new();
+                for (key, value) in selectors_value.into_iter() {
+                    let mut properties = String::new();
+                    for (key, value) in value.into_iter() {
+                        properties.push_str(&wrap_property(key, value));
+                    }
+                    selectors_rule
+                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                }
+
+                if !selectors_rule.is_empty() {
+                    rule.push_str(&wrap_properties_with_colon(
+                        "selectors".to_string(),
+                        selectors_rule,
+                    ));
+                }
+            }
+
+            properties.push_str(&wrap_properties_with_colon(
+                String::from("@supports"),
+                wrap_properties_with_colon(value.supports, rule),
+            ));
         }
-        if !value.selectors.is_empty() {
+
+        if !value.key_value_pair_in_selectors.is_empty() {
             let mut selectors = String::new();
 
-            for (key, value) in value.selectors.into_iter() {
-                selectors.push_str(&wrap_property_with_colon(format!("&{}", key), value));
+            for (key, value) in value.key_value_pair_in_selectors.into_iter() {
+                let mut properties = String::new();
+                for (key, value) in value.into_iter() {
+                    properties.push_str(&wrap_property(key, value));
+                }
+                selectors.push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
             }
 
-            properties.push_str(&wrap_property_with_colon(
+            properties.push_str(&wrap_properties_with_colon(
                 "selectors".to_string(),
                 selectors,
             ))
         }
-        ve.push_str(&wrap_global_style_func(wrap_property_with_comma(
+        ve.push_str(&wrap_global_style_func(wrap_properties_with_comma(
             key, properties,
         )));
     }
@@ -288,50 +408,93 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
             properties.push_str(&value.ve);
         }
 
+        for (key, value) in value.key_value_pair.into_iter() {
+            properties.push_str(&wrap_property(key, value));
+        }
+
+        if !value.key_value_pair_in_pseudo.is_empty() {
+            let mut pseudo_rule = String::new();
+            for (key, value) in value.key_value_pair_in_pseudo.into_iter() {
+                let mut properties = String::new();
+                for (key, value) in value.into_iter() {
+                    properties.push_str(&wrap_property(key, value));
+                }
+                pseudo_rule.push_str(&wrap_properties_with_colon(key, properties));
+            }
+            properties.push_str(&pseudo_rule);
+        }
+
         if !value.media.is_empty() || !value.selectors_in_media.is_empty() {
             let mut rule = String::new();
-            for (key, selectors_value) in value.selectors_in_media.into_iter() {
-                let mut selectors_rule = String::new();
-                for (key, _value) in selectors_value.into_iter() {
-                    selectors_rule.push_str(&wrap_property_with_colon(format!("&{}", key), _value));
-                }
-                rule.push_str(&wrap_property_with_colon(
-                    key,
-                    format!(
-                        "{}{}",
-                        value.media,
-                        &wrap_property_with_colon("selectors".to_string(), selectors_rule)
-                    ),
-                ));
+            for (key, value) in value.key_value_pair_in_media.into_iter() {
+                rule.push_str(&wrap_property(key, value));
             }
-            properties.push_str(&wrap_property_with_colon(String::from("@media"), rule));
+
+            for (_key, selectors_value) in value.selectors_in_media.into_iter() {
+                let mut selectors_rule = String::new();
+                for (key, value) in selectors_value.into_iter() {
+                    let mut properties = String::new();
+                    for (key, value) in value.into_iter() {
+                        properties.push_str(&wrap_property(key, value));
+                    }
+                    selectors_rule
+                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                }
+
+                if !selectors_rule.is_empty() {
+                    rule.push_str(&wrap_properties_with_colon(
+                        "selectors".to_string(),
+                        selectors_rule,
+                    ));
+                }
+            }
+
+            properties.push_str(&wrap_properties_with_colon(
+                String::from("@media"),
+                wrap_properties_with_colon(value.media, rule),
+            ));
         }
         if !value.supports.is_empty() || !value.selectors_in_supports.is_empty() {
             let mut rule = String::new();
-            for (key, selectors_value) in value.selectors_in_supports.into_iter() {
-                let mut selectors_rule = String::new();
-                for (key, _value) in selectors_value.into_iter() {
-                    selectors_rule.push_str(&wrap_property_with_colon(format!("&{}", key), _value));
-                }
-                rule.push_str(&wrap_property_with_colon(
-                    key,
-                    format!(
-                        "{}{}",
-                        value.supports,
-                        &wrap_property_with_colon("selectors".to_string(), selectors_rule)
-                    ),
-                ));
+            for (key, value) in value.key_value_pair_in_supports.into_iter() {
+                rule.push_str(&wrap_property(key, value));
             }
-            properties.push_str(&wrap_property_with_colon(String::from("@supports"), rule));
+
+            for (_key, selectors_value) in value.selectors_in_supports.into_iter() {
+                let mut selectors_rule = String::new();
+                for (key, value) in selectors_value.into_iter() {
+                    let mut properties = String::new();
+                    for (key, value) in value.into_iter() {
+                        properties.push_str(&wrap_property(key, value));
+                    }
+                    selectors_rule
+                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                }
+
+                if !selectors_rule.is_empty() {
+                    rule.push_str(&wrap_properties_with_colon(
+                        "selectors".to_string(),
+                        selectors_rule,
+                    ));
+                }
+            }
+            properties.push_str(&wrap_properties_with_colon(
+                String::from("@supports"),
+                wrap_properties_with_colon(value.supports, rule),
+            ));
         }
-        if !value.selectors.is_empty() {
+        if !value.key_value_pair_in_selectors.is_empty() {
             let mut selectors = String::new();
 
-            for (key, value) in value.selectors.into_iter() {
-                selectors.push_str(&wrap_property_with_colon(format!("&{}", key), value));
+            for (key, value) in value.key_value_pair_in_selectors.into_iter() {
+                let mut properties = String::new();
+                for (key, value) in value.into_iter() {
+                    properties.push_str(&wrap_property(key, value));
+                }
+                selectors.push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
             }
 
-            properties.push_str(&wrap_property_with_colon(
+            properties.push_str(&wrap_properties_with_colon(
                 "selectors".to_string(),
                 selectors,
             ))
@@ -355,13 +518,17 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
     for complex in complexes {
         let mut ve: String = String::new();
         let mut vars: Vec<String> = vec![];
-        let mut selectors: BTreeMap<String, String> = BTreeMap::default();
-
+        let mut key_value_pair: KeyValuePair = KeyValuePair::default();
+        let mut key_value_pair_in_pseudo: KeyValuePairInPseudo = BTreeMap::default();
+        let mut key_value_pair_in_selectors: KeyValuePairInSelectors =
+            KeyValuePairInSelectors::default();
         let mut component_values = String::new();
+
         for block_value in &qualfied_rule.block.value {
             let component_value = get_component_value(block_value);
 
             component_values.push_str(&component_value[0].ve);
+            key_value_pair.extend(component_value[0].key_value_pair.clone());
 
             for var in component_value[0].vars.clone() {
                 vars.push(var);
@@ -370,30 +537,43 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
 
         if !complex.pseudo.is_empty() {
             if complex.is_simple_pseudo {
-                ve.push_str(&wrap_property_with_colon(complex.pseudo, component_values))
+                key_value_pair_in_pseudo.insert(complex.pseudo, key_value_pair.clone());
             } else {
-                selectors.insert(complex.pseudo, component_values);
+                key_value_pair_in_selectors.insert(complex.pseudo, key_value_pair.clone());
             }
         } else {
             ve.push_str(&component_values);
         }
 
         if !vars.is_empty() {
-            ve.push_str(&wrap_property_with_colon(
+            ve.push_str(&wrap_properties_with_colon(
                 String::from("vars"),
                 vars.concat(),
             ));
         }
 
-        result.push(Rule {
-            ve,
-            key: complex.key,
-            selectors,
-            is_global_style: complex.is_global_style,
-            is_simple_pseudo: complex.is_simple_pseudo,
-        })
+        if !key_value_pair_in_pseudo.is_empty() || !key_value_pair_in_selectors.is_empty() {
+            result.push(Rule {
+                ve,
+                key: complex.key,
+                key_value_pair: KeyValuePair::new(),
+                key_value_pair_in_pseudo,
+                key_value_pair_in_selectors,
+                is_global_style: complex.is_global_style,
+                is_simple_pseudo: complex.is_simple_pseudo,
+            })
+        } else {
+            result.push(Rule {
+                ve,
+                key: complex.key,
+                key_value_pair,
+                key_value_pair_in_pseudo,
+                key_value_pair_in_selectors,
+                is_global_style: complex.is_global_style,
+                is_simple_pseudo: complex.is_simple_pseudo,
+            })
+        }
     }
-
     result
 }
 
@@ -620,6 +800,8 @@ fn get_pseudo_class_children(
 
 pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec<Component> {
     let mut ve: String = String::new();
+    let mut key_value_pair: KeyValuePair = KeyValuePair::new();
+    let key_value_pair_in_pseudo: BTreeMap<String, KeyValuePair> = BTreeMap::new();
     let mut vars: Vec<String> = vec![];
     let key: String = String::new();
     let is_global_style: bool = false;
@@ -696,8 +878,9 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
         swc_css_ast::ComponentValue::DeclarationOrAtRule(declaration_or_at_rule) => {
             match declaration_or_at_rule {
                 swc_css_ast::DeclarationOrAtRule::Declaration(declaration) => {
-                    let declaration_value = get_declaration(declaration, false);
-                    ve.push_str(declaration_value.0.as_ref());
+                    let declaration_value = get_declaration(declaration);
+                    key_value_pair.extend(declaration_value.0);
+                    // ve.push_str(declaration_value.0.as_ref());
                     for var in declaration_value.1 {
                         vars.push(var);
                     }
@@ -713,14 +896,13 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
                 let mut components: Vec<Component> = vec![];
 
                 for rule in get_qualified_rule(qualified_rule) {
-                    let mut _ve: String = String::new();
-                    let mut _key: String = String::new();
-
                     components.push(Component {
                         ve: rule.ve,
+                        key_value_pair: rule.key_value_pair,
+                        key_value_pair_in_pseudo: rule.key_value_pair_in_pseudo,
+                        key_value_pair_in_selectors: rule.key_value_pair_in_selectors,
                         key: rule.key,
                         vars: vec![],
-                        selectors: rule.selectors,
                         is_global_style: rule.is_global_style,
                     })
                 }
@@ -735,8 +917,9 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
         swc_css_ast::ComponentValue::StyleBlock(style_block) => match style_block {
             swc_css_ast::StyleBlock::AtRule(_) => todo!(),
             swc_css_ast::StyleBlock::Declaration(declaration) => {
-                let declaration_value = get_declaration(declaration, false);
-                ve.push_str(declaration_value.0.as_ref());
+                let declaration_value = get_declaration(declaration);
+                key_value_pair.extend(declaration_value.0);
+                // ve.push_str(declaration_value.0.as_ref());
                 for var in declaration_value.1 {
                     vars.push(var);
                 }
@@ -767,14 +950,13 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
                 }
             }
 
-            ve.push_str(&format!("\"{}\": {{", &keyframe_selector));
+            ve.push_str(&keyframe_selector);
 
             for block_value in &keyframe_block.block.value {
                 let component_value = get_component_value(block_value);
                 ve.push_str(&component_value[0].ve);
+                key_value_pair.extend(component_value[0].key_value_pair.clone());
             }
-
-            ve.push_str(&String::from("},"));
         }
         swc_css_ast::ComponentValue::Ident(ident) => ve.push_str(&ident.value.to_string()),
         swc_css_ast::ComponentValue::DashedIdent(dashed_ident) => {
@@ -844,9 +1026,11 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
 
     [Component {
         ve,
+        key_value_pair,
+        key_value_pair_in_pseudo,
+        key_value_pair_in_selectors: BTreeMap::default(),
         vars,
         key,
-        selectors: BTreeMap::default(),
         is_global_style,
     }]
     .to_vec()
@@ -971,19 +1155,18 @@ pub fn get_function(function: &swc_css_ast::Function) -> String {
 
 pub fn get_declaration(
     declaration: &swc_css_ast::Declaration,
-    is_supports: bool,
-) -> (String, Vec<String>) {
-    let mut ve = String::new();
+) -> (BTreeMap<String, String>, Vec<String>) {
+    let mut key_value_pair: BTreeMap<String, String> = BTreeMap::new();
     let mut vars: Vec<String> = vec![];
     let mut declaration_name = String::new();
     let mut declaration_value = String::new();
-    let mut temp_dashed_ident = String::new();
+    let mut dashed_ident = String::new();
     match &declaration.name {
         swc_css_ast::DeclarationName::Ident(ident) => {
             declaration_name.push_str(&ident.raw.to_string())
         }
-        swc_css_ast::DeclarationName::DashedIdent(dashed_ident) => {
-            temp_dashed_ident = dashed_ident.raw.to_string()
+        swc_css_ast::DeclarationName::DashedIdent(_dashed_ident) => {
+            dashed_ident = _dashed_ident.raw.to_string()
         }
     }
     for declaration_component_value in &declaration.value {
@@ -995,6 +1178,7 @@ pub fn get_declaration(
             declaration_value.push_str(&format!(" {}", component_value));
         }
     }
+
     if declaration_name.starts_with("--") {
         let formatted_declaration_name = format!("\"{}\"", &declaration_name);
         declaration_name = formatted_declaration_name
@@ -1003,19 +1187,15 @@ pub fn get_declaration(
     } else {
         declaration_name = declaration_name.to_case(Case::Camel)
     }
-    if !temp_dashed_ident.is_empty() {
-        let formatted_declaration =
-            format!("  \"{}\":\"{}\",\n", temp_dashed_ident, declaration_value);
+
+    if !dashed_ident.is_empty() {
+        let formatted_declaration = format!("  \"{}\":\"{}\",\n", dashed_ident, declaration_value);
         vars.push(formatted_declaration);
-    } else if is_supports {
-        let formatted_declaration = format!("({}:{})", declaration_name, declaration_value);
-        ve.push_str(&formatted_declaration);
     } else {
-        let formatted_declaration = format!("  {}:\"{}\",\n", declaration_name, declaration_value);
-        ve.push_str(&formatted_declaration);
+        key_value_pair.insert(declaration_name, declaration_value);
     }
 
-    (ve, vars)
+    (key_value_pair, vars)
 }
 
 #[cfg(test)]
@@ -1134,7 +1314,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"5rem\",\n  color:\"red\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
             result
         )
     }
@@ -1156,7 +1336,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\nexport const display2 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"5rem\",\n  color:\"red\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\nexport const display2 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
             result
         )
     }
@@ -1189,7 +1369,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\nexport const display2 = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  fontSize:\"5rem\",\n  color:\"red\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\nexport const display2 = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
             result
         )
     }
@@ -1248,7 +1428,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor:\"blue\",\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"5rem\",\n  color:\"red\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor:\"blue\",\n\"@media\": {\n\"(min-width: 1200px)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
             result
         )
     }
@@ -1260,7 +1440,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor:\"blue\",\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  fontSize:\"5rem\",\n  color:\"red\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor:\"blue\",\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
             result
         )
     }
@@ -1274,7 +1454,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalKeyframes(\"progress-bar-stripes\", {\n\"from\": {  backgroundPosition:\"1rem 0\",\n},\"to\": {  backgroundPosition:\"0 0\",\n},},\n);\n",
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nglobalKeyframes(\"progress-bar-stripes\", {\n\"from\": {\n  backgroundPosition:\"1rem 0\",\n},\n\"to\": {\n  backgroundPosition:\"0 0\",\n},\n},\n);\n",
             result
         )
     }
@@ -1306,6 +1486,18 @@ mod tests {
     #[test]
     fn ast_to_vanilla_extract_22() {
         let parsed_css = parse_css("@media (min-width: 1200px){.accordion-button:not(.collapsed) {color: #0c63e4;}.accordion-button:not(.collapsed)::after {transform: rotate(-180deg);}}")
+        .unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { globalStyle, globalKeyframes, style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n\"selectors\": {\n\"&:not\": {\n  color:\"0c63e4\",\n},\n\"&:not::after\": {\n  transform:\"rotate(-180deg)\",\n},\n},\n},\n},\n});\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_23() {
+        let parsed_css = parse_css("@font-face {font-family: \"Open Sans\";src: url(\"/fonts/OpenSans-Regular-webfont.woff2\") format(\"woff2\"),url(\"/fonts/OpenSans-Regular-webfont.woff\") format(\"woff\");}")
         .unwrap();
         let result = ast_to_vanilla_extract(parsed_css);
 
