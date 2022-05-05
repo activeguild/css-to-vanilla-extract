@@ -1,7 +1,20 @@
-import { globalFontFace, globalStyle, style } from "@vanilla-extract/css";
+import {
+  globalFontFace,
+  globalKeyframes,
+  globalStyle,
+  style,
+} from "@vanilla-extract/css";
 
 globalFontFace("openSans", {
   src: "url(/fonts/OpenSans-Regular-webfont.woff2) format(woff2) , url(/fonts/OpenSans-Regular-webfont.woff) format(woff)",
+});
+globalKeyframes("slidein", {
+  from: {
+    transform: "translateX(0%)",
+  },
+  to: {
+    transform: "translateX(100%)",
+  },
 });
 globalStyle("*", {
   boxSizing: "border-box",

@@ -78,6 +78,16 @@
     url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
 }
 
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
 @media (min-width: 1200px) {
   .accordion-button:not(.collapsed) {
     color: #0c63e4;
