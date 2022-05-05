@@ -1,5 +1,8 @@
-import { globalStyle, style } from "@vanilla-extract/css";
+import { globalFontFace, globalStyle, style } from "@vanilla-extract/css";
 
+globalFontFace("openSans", {
+  src: "url(/fonts/OpenSans-Regular-webfont.woff2) format(woff2) , url(/fonts/OpenSans-Regular-webfont.woff) format(woff)",
+});
 globalStyle("*", {
   boxSizing: "border-box",
 });
