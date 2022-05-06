@@ -402,9 +402,13 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 selectors,
             ))
         }
-        ve.push_str(&wrap_global_style_func(wrap_properties_with_comma(
-            key, properties,
-        )));
+
+        // No output for unsupported rules.
+        if !key.is_empty() {
+            ve.push_str(&wrap_global_style_func(wrap_properties_with_comma(
+                key, properties,
+            )));
+        }
     }
 
     for (key, value) in rule_map.into_iter() {
@@ -505,7 +509,10 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
             ))
         }
 
-        ve.push_str(&wrap_export_const(key, wrap_style_func(properties)));
+        // No output for unsupported rules.
+        if !key.is_empty() {
+            ve.push_str(&wrap_export_const(key, wrap_style_func(properties)));
+        }
     }
 
     ve.insert_str(
@@ -917,7 +924,7 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
             swc_css_ast::Rule::Invalid(_) => {
                 println!("Contains an invalid token.")
             }
-            swc_css_ast::Rule::AtRule(at_rule) => println!("at_rule:{:?}", at_rule),
+            swc_css_ast::Rule::AtRule(_) => println!("Not supportted. (Rule::AtRule)"),
         },
         swc_css_ast::ComponentValue::StyleBlock(style_block) => match style_block {
             swc_css_ast::StyleBlock::AtRule(_) => todo!(),
