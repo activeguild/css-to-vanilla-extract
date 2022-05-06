@@ -19,7 +19,22 @@ const EDITOR_DEFAULT_VALUE = `.foo {
   .bar {
     font-size: 10rem;
   }
-}`;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+`;
 const GITHUB_URL = "https://github.com/activeguild/css-to-vanilla-extract";
 
 function App() {
