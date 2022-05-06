@@ -117,7 +117,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         let components = get_component_value(block_value);
                         for (key, value) in components[0].key_value_pair.clone().into_iter() {
                             if key == "fontFamily" {
-                                fontface_key.push_str(&value.to_case(Case::Camel))
+                                fontface_key.push_str(&value);
                             } else {
                                 block_values.push_str(&wrap_property(key, value));
                             }
@@ -402,9 +402,13 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 selectors,
             ))
         }
-        ve.push_str(&wrap_global_style_func(wrap_properties_with_comma(
-            key, properties,
-        )));
+
+        // No output for unsupported rules.
+        if !key.is_empty() {
+            ve.push_str(&wrap_global_style_func(wrap_properties_with_comma(
+                key, properties,
+            )));
+        }
     }
 
     for (key, value) in rule_map.into_iter() {
@@ -505,7 +509,10 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
             ))
         }
 
-        ve.push_str(&wrap_export_const(key, wrap_style_func(properties)));
+        // No output for unsupported rules.
+        if !key.is_empty() {
+            ve.push_str(&wrap_export_const(key, wrap_style_func(properties)));
+        }
     }
 
     ve.insert_str(
@@ -917,7 +924,7 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
             swc_css_ast::Rule::Invalid(_) => {
                 println!("Contains an invalid token.")
             }
-            swc_css_ast::Rule::AtRule(at_rule) => println!("at_rule:{:?}", at_rule),
+            swc_css_ast::Rule::AtRule(_) => println!("Not supportted. (Rule::AtRule)"),
         },
         swc_css_ast::ComponentValue::StyleBlock(style_block) => match style_block {
             swc_css_ast::StyleBlock::AtRule(_) => todo!(),
@@ -1187,6 +1194,8 @@ pub fn get_declaration(
     if declaration_name.starts_with("--") {
         let formatted_declaration_name = format!("\"{}\"", &declaration_name);
         declaration_name = formatted_declaration_name
+    } else if declaration_name.starts_with("-ms") {
+        declaration_name = declaration_name.to_case(Case::Camel)
     } else if declaration_name.starts_with('-') {
         declaration_name = declaration_name.to_case(Case::Pascal)
     } else {
@@ -1265,12 +1274,13 @@ mod tests {
 
     #[test]
     fn ast_to_vanilla_extract_03() {
-        let parsed_css = parse_css("ol ol{margin-bottom: 0;}").unwrap();
+        let parsed_css =
+            parse_css("ol ol{margin-bottom: 0;-ms-overflow-style: scrollbar;}").unwrap();
 
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"ol ol\", {\n  marginBottom:\"0\",\n},\n);\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"ol ol\", {\n  marginBottom:\"0\",\n  msOverflowStyle:\"scrollbar\",\n},\n);\n",
             result
         )
     }
@@ -1507,7 +1517,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalFontFace(\"openSans\", {\n  src:\"url(/fonts/OpenSans-Regular-webfont.woff2) format(woff2) , url(/fonts/OpenSans-Regular-webfont.woff) format(woff)\",\n},\n);\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalFontFace(\"Open Sans\", {\n  src:\"url(/fonts/OpenSans-Regular-webfont.woff2) format(woff2) , url(/fonts/OpenSans-Regular-webfont.woff) format(woff)\",\n},\n);\n",
             result
         )
     }
