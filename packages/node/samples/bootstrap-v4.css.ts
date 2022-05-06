@@ -342,7 +342,6 @@ globalStyle("cardhr", {
   marginRight: "0",
 });
 globalStyle("carouselIndicatorsli", {
-  MsFlex: "0 1 auto",
   backgroundClip: "padding-box",
   backgroundColor: "fff",
   borderBottom: "10px solid transparent",
@@ -353,6 +352,7 @@ globalStyle("carouselIndicatorsli", {
   height: "3px",
   marginLeft: "3px",
   marginRight: "3px",
+  msFlex: "0 1 auto",
   opacity: "0.5",
   textIndent: "-999px",
   transition: "opacity 0.6s ease",
@@ -439,12 +439,12 @@ globalStyle("footer", {
 globalStyle("formInlinelabel", {
   "@media": {
     "(min-width: 576px)": {
-      MsFlexAlign: "center",
-      MsFlexPack: "center",
       alignItems: "center",
       display: "flex",
       justifyContent: "center",
       marginBottom: "0",
+      msFlexAlign: "center",
+      msFlexPack: "center",
     },
   },
 });
@@ -674,7 +674,6 @@ globalStyle("p", {
   },
 });
 globalStyle("pre", {
-  MsOverflowStyle: "scrollbar",
   color: "212529",
   display: "block",
   fontFamily:
@@ -682,6 +681,7 @@ globalStyle("pre", {
   fontSize: "87.5%",
   marginBottom: "1rem",
   marginTop: "0",
+  msOverflowStyle: "scrollbar",
   overflow: "auto",
   "@media": {
     print: {
@@ -700,248 +700,248 @@ globalStyle("progress", {
   verticalAlign: "baseline",
 });
 globalStyle("rowCols1*", {
-  MsFlex: "0 0 100%",
   flex: "0 0 100%",
   maxWidth: "100%",
+  msFlex: "0 0 100%",
 });
 globalStyle("rowCols2*", {
-  MsFlex: "0 0 50%",
   flex: "0 0 50%",
   maxWidth: "50%",
+  msFlex: "0 0 50%",
 });
 globalStyle("rowCols3*", {
-  MsFlex: "0 0 33.333333%",
   flex: "0 0 33.333333%",
   maxWidth: "33.333333%",
+  msFlex: "0 0 33.333333%",
 });
 globalStyle("rowCols4*", {
-  MsFlex: "0 0 25%",
   flex: "0 0 25%",
   maxWidth: "25%",
+  msFlex: "0 0 25%",
 });
 globalStyle("rowCols5*", {
-  MsFlex: "0 0 20%",
   flex: "0 0 20%",
   maxWidth: "20%",
+  msFlex: "0 0 20%",
 });
 globalStyle("rowCols6*", {
-  MsFlex: "0 0 16.666667%",
   flex: "0 0 16.666667%",
   maxWidth: "16.666667%",
+  msFlex: "0 0 16.666667%",
 });
 globalStyle("rowColsLg1*", {
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
+      msFlex: "0 0 100%",
     },
   },
 });
 globalStyle("rowColsLg2*", {
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
+      msFlex: "0 0 50%",
     },
   },
 });
 globalStyle("rowColsLg3*", {
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
+      msFlex: "0 0 33.333333%",
     },
   },
 });
 globalStyle("rowColsLg4*", {
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
+      msFlex: "0 0 25%",
     },
   },
 });
 globalStyle("rowColsLg5*", {
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 20%",
       flex: "0 0 20%",
       maxWidth: "20%",
+      msFlex: "0 0 20%",
     },
   },
 });
 globalStyle("rowColsLg6*", {
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
+      msFlex: "0 0 16.666667%",
     },
   },
 });
 globalStyle("rowColsMd1*", {
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
+      msFlex: "0 0 100%",
     },
   },
 });
 globalStyle("rowColsMd2*", {
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
+      msFlex: "0 0 50%",
     },
   },
 });
 globalStyle("rowColsMd3*", {
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
+      msFlex: "0 0 33.333333%",
     },
   },
 });
 globalStyle("rowColsMd4*", {
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
+      msFlex: "0 0 25%",
     },
   },
 });
 globalStyle("rowColsMd5*", {
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 20%",
       flex: "0 0 20%",
       maxWidth: "20%",
+      msFlex: "0 0 20%",
     },
   },
 });
 globalStyle("rowColsMd6*", {
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
+      msFlex: "0 0 16.666667%",
     },
   },
 });
 globalStyle("rowColsSm1*", {
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
+      msFlex: "0 0 100%",
     },
   },
 });
 globalStyle("rowColsSm2*", {
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
+      msFlex: "0 0 50%",
     },
   },
 });
 globalStyle("rowColsSm3*", {
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
+      msFlex: "0 0 33.333333%",
     },
   },
 });
 globalStyle("rowColsSm4*", {
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
+      msFlex: "0 0 25%",
     },
   },
 });
 globalStyle("rowColsSm5*", {
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 20%",
       flex: "0 0 20%",
       maxWidth: "20%",
+      msFlex: "0 0 20%",
     },
   },
 });
 globalStyle("rowColsSm6*", {
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
+      msFlex: "0 0 16.666667%",
     },
   },
 });
 globalStyle("rowColsXl1*", {
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
+      msFlex: "0 0 100%",
     },
   },
 });
 globalStyle("rowColsXl2*", {
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
+      msFlex: "0 0 50%",
     },
   },
 });
 globalStyle("rowColsXl3*", {
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
+      msFlex: "0 0 33.333333%",
     },
   },
 });
 globalStyle("rowColsXl4*", {
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
+      msFlex: "0 0 25%",
     },
   },
 });
 globalStyle("rowColsXl5*", {
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 20%",
       flex: "0 0 20%",
       maxWidth: "20%",
+      msFlex: "0 0 20%",
     },
   },
 });
 globalStyle("rowColsXl6*", {
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
+      msFlex: "0 0 16.666667%",
     },
   },
 });
@@ -1386,398 +1386,398 @@ export const alignBottom = style({
   verticalAlign: "bottom",
 });
 export const alignContentAround = style({
-  MsFlexLinePack: "distribute",
   alignContent: "space-around",
+  msFlexLinePack: "distribute",
 });
 export const alignContentBetween = style({
-  MsFlexLinePack: "justify",
   alignContent: "space-between",
+  msFlexLinePack: "justify",
 });
 export const alignContentCenter = style({
-  MsFlexLinePack: "center",
   alignContent: "center",
+  msFlexLinePack: "center",
 });
 export const alignContentEnd = style({
-  MsFlexLinePack: "end",
   alignContent: "flex-end",
+  msFlexLinePack: "end",
 });
 export const alignContentLgAround = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexLinePack: "distribute",
       alignContent: "space-around",
+      msFlexLinePack: "distribute",
     },
   },
 });
 export const alignContentLgBetween = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexLinePack: "justify",
       alignContent: "space-between",
+      msFlexLinePack: "justify",
     },
   },
 });
 export const alignContentLgCenter = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexLinePack: "center",
       alignContent: "center",
+      msFlexLinePack: "center",
     },
   },
 });
 export const alignContentLgEnd = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexLinePack: "end",
       alignContent: "flex-end",
+      msFlexLinePack: "end",
     },
   },
 });
 export const alignContentLgStart = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexLinePack: "start",
       alignContent: "flex-start",
+      msFlexLinePack: "start",
     },
   },
 });
 export const alignContentLgStretch = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexLinePack: "stretch",
       alignContent: "stretch",
+      msFlexLinePack: "stretch",
     },
   },
 });
 export const alignContentMdAround = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexLinePack: "distribute",
       alignContent: "space-around",
+      msFlexLinePack: "distribute",
     },
   },
 });
 export const alignContentMdBetween = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexLinePack: "justify",
       alignContent: "space-between",
+      msFlexLinePack: "justify",
     },
   },
 });
 export const alignContentMdCenter = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexLinePack: "center",
       alignContent: "center",
+      msFlexLinePack: "center",
     },
   },
 });
 export const alignContentMdEnd = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexLinePack: "end",
       alignContent: "flex-end",
+      msFlexLinePack: "end",
     },
   },
 });
 export const alignContentMdStart = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexLinePack: "start",
       alignContent: "flex-start",
+      msFlexLinePack: "start",
     },
   },
 });
 export const alignContentMdStretch = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexLinePack: "stretch",
       alignContent: "stretch",
+      msFlexLinePack: "stretch",
     },
   },
 });
 export const alignContentSmAround = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexLinePack: "distribute",
       alignContent: "space-around",
+      msFlexLinePack: "distribute",
     },
   },
 });
 export const alignContentSmBetween = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexLinePack: "justify",
       alignContent: "space-between",
+      msFlexLinePack: "justify",
     },
   },
 });
 export const alignContentSmCenter = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexLinePack: "center",
       alignContent: "center",
+      msFlexLinePack: "center",
     },
   },
 });
 export const alignContentSmEnd = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexLinePack: "end",
       alignContent: "flex-end",
+      msFlexLinePack: "end",
     },
   },
 });
 export const alignContentSmStart = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexLinePack: "start",
       alignContent: "flex-start",
+      msFlexLinePack: "start",
     },
   },
 });
 export const alignContentSmStretch = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexLinePack: "stretch",
       alignContent: "stretch",
+      msFlexLinePack: "stretch",
     },
   },
 });
 export const alignContentStart = style({
-  MsFlexLinePack: "start",
   alignContent: "flex-start",
+  msFlexLinePack: "start",
 });
 export const alignContentStretch = style({
-  MsFlexLinePack: "stretch",
   alignContent: "stretch",
+  msFlexLinePack: "stretch",
 });
 export const alignContentXlAround = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexLinePack: "distribute",
       alignContent: "space-around",
+      msFlexLinePack: "distribute",
     },
   },
 });
 export const alignContentXlBetween = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexLinePack: "justify",
       alignContent: "space-between",
+      msFlexLinePack: "justify",
     },
   },
 });
 export const alignContentXlCenter = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexLinePack: "center",
       alignContent: "center",
+      msFlexLinePack: "center",
     },
   },
 });
 export const alignContentXlEnd = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexLinePack: "end",
       alignContent: "flex-end",
+      msFlexLinePack: "end",
     },
   },
 });
 export const alignContentXlStart = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexLinePack: "start",
       alignContent: "flex-start",
+      msFlexLinePack: "start",
     },
   },
 });
 export const alignContentXlStretch = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexLinePack: "stretch",
       alignContent: "stretch",
+      msFlexLinePack: "stretch",
     },
   },
 });
 export const alignItemsBaseline = style({
-  MsFlexAlign: "baseline",
   alignItems: "baseline",
+  msFlexAlign: "baseline",
 });
 export const alignItemsCenter = style({
-  MsFlexAlign: "center",
   alignItems: "center",
+  msFlexAlign: "center",
 });
 export const alignItemsEnd = style({
-  MsFlexAlign: "end",
   alignItems: "flex-end",
+  msFlexAlign: "end",
 });
 export const alignItemsLgBaseline = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexAlign: "baseline",
       alignItems: "baseline",
+      msFlexAlign: "baseline",
     },
   },
 });
 export const alignItemsLgCenter = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexAlign: "center",
       alignItems: "center",
+      msFlexAlign: "center",
     },
   },
 });
 export const alignItemsLgEnd = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexAlign: "end",
       alignItems: "flex-end",
+      msFlexAlign: "end",
     },
   },
 });
 export const alignItemsLgStart = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexAlign: "start",
       alignItems: "flex-start",
+      msFlexAlign: "start",
     },
   },
 });
 export const alignItemsLgStretch = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexAlign: "stretch",
       alignItems: "stretch",
+      msFlexAlign: "stretch",
     },
   },
 });
 export const alignItemsMdBaseline = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexAlign: "baseline",
       alignItems: "baseline",
+      msFlexAlign: "baseline",
     },
   },
 });
 export const alignItemsMdCenter = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexAlign: "center",
       alignItems: "center",
+      msFlexAlign: "center",
     },
   },
 });
 export const alignItemsMdEnd = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexAlign: "end",
       alignItems: "flex-end",
+      msFlexAlign: "end",
     },
   },
 });
 export const alignItemsMdStart = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexAlign: "start",
       alignItems: "flex-start",
+      msFlexAlign: "start",
     },
   },
 });
 export const alignItemsMdStretch = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexAlign: "stretch",
       alignItems: "stretch",
+      msFlexAlign: "stretch",
     },
   },
 });
 export const alignItemsSmBaseline = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexAlign: "baseline",
       alignItems: "baseline",
+      msFlexAlign: "baseline",
     },
   },
 });
 export const alignItemsSmCenter = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexAlign: "center",
       alignItems: "center",
+      msFlexAlign: "center",
     },
   },
 });
 export const alignItemsSmEnd = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexAlign: "end",
       alignItems: "flex-end",
+      msFlexAlign: "end",
     },
   },
 });
 export const alignItemsSmStart = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexAlign: "start",
       alignItems: "flex-start",
+      msFlexAlign: "start",
     },
   },
 });
 export const alignItemsSmStretch = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexAlign: "stretch",
       alignItems: "stretch",
+      msFlexAlign: "stretch",
     },
   },
 });
 export const alignItemsStart = style({
-  MsFlexAlign: "start",
   alignItems: "flex-start",
+  msFlexAlign: "start",
 });
 export const alignItemsStretch = style({
-  MsFlexAlign: "stretch",
   alignItems: "stretch",
+  msFlexAlign: "stretch",
 });
 export const alignItemsXlBaseline = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexAlign: "baseline",
       alignItems: "baseline",
+      msFlexAlign: "baseline",
     },
   },
 });
 export const alignItemsXlCenter = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexAlign: "center",
       alignItems: "center",
+      msFlexAlign: "center",
     },
   },
 });
 export const alignItemsXlEnd = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexAlign: "end",
       alignItems: "flex-end",
+      msFlexAlign: "end",
     },
   },
 });
 export const alignItemsXlStart = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexAlign: "start",
       alignItems: "flex-start",
+      msFlexAlign: "start",
     },
   },
 });
 export const alignItemsXlStretch = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexAlign: "stretch",
       alignItems: "stretch",
+      msFlexAlign: "stretch",
     },
   },
 });
@@ -1785,218 +1785,218 @@ export const alignMiddle = style({
   verticalAlign: "middle",
 });
 export const alignSelfAuto = style({
-  MsFlexItemAlign: "auto",
   alignSelf: "auto",
+  msFlexItemAlign: "auto",
 });
 export const alignSelfBaseline = style({
-  MsFlexItemAlign: "baseline",
   alignSelf: "baseline",
+  msFlexItemAlign: "baseline",
 });
 export const alignSelfCenter = style({
-  MsFlexItemAlign: "center",
   alignSelf: "center",
+  msFlexItemAlign: "center",
 });
 export const alignSelfEnd = style({
-  MsFlexItemAlign: "end",
   alignSelf: "flex-end",
+  msFlexItemAlign: "end",
 });
 export const alignSelfLgAuto = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexItemAlign: "auto",
       alignSelf: "auto",
+      msFlexItemAlign: "auto",
     },
   },
 });
 export const alignSelfLgBaseline = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexItemAlign: "baseline",
       alignSelf: "baseline",
+      msFlexItemAlign: "baseline",
     },
   },
 });
 export const alignSelfLgCenter = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexItemAlign: "center",
       alignSelf: "center",
+      msFlexItemAlign: "center",
     },
   },
 });
 export const alignSelfLgEnd = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexItemAlign: "end",
       alignSelf: "flex-end",
+      msFlexItemAlign: "end",
     },
   },
 });
 export const alignSelfLgStart = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexItemAlign: "start",
       alignSelf: "flex-start",
+      msFlexItemAlign: "start",
     },
   },
 });
 export const alignSelfLgStretch = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexItemAlign: "stretch",
       alignSelf: "stretch",
+      msFlexItemAlign: "stretch",
     },
   },
 });
 export const alignSelfMdAuto = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexItemAlign: "auto",
       alignSelf: "auto",
+      msFlexItemAlign: "auto",
     },
   },
 });
 export const alignSelfMdBaseline = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexItemAlign: "baseline",
       alignSelf: "baseline",
+      msFlexItemAlign: "baseline",
     },
   },
 });
 export const alignSelfMdCenter = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexItemAlign: "center",
       alignSelf: "center",
+      msFlexItemAlign: "center",
     },
   },
 });
 export const alignSelfMdEnd = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexItemAlign: "end",
       alignSelf: "flex-end",
+      msFlexItemAlign: "end",
     },
   },
 });
 export const alignSelfMdStart = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexItemAlign: "start",
       alignSelf: "flex-start",
+      msFlexItemAlign: "start",
     },
   },
 });
 export const alignSelfMdStretch = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexItemAlign: "stretch",
       alignSelf: "stretch",
+      msFlexItemAlign: "stretch",
     },
   },
 });
 export const alignSelfSmAuto = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexItemAlign: "auto",
       alignSelf: "auto",
+      msFlexItemAlign: "auto",
     },
   },
 });
 export const alignSelfSmBaseline = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexItemAlign: "baseline",
       alignSelf: "baseline",
+      msFlexItemAlign: "baseline",
     },
   },
 });
 export const alignSelfSmCenter = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexItemAlign: "center",
       alignSelf: "center",
+      msFlexItemAlign: "center",
     },
   },
 });
 export const alignSelfSmEnd = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexItemAlign: "end",
       alignSelf: "flex-end",
+      msFlexItemAlign: "end",
     },
   },
 });
 export const alignSelfSmStart = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexItemAlign: "start",
       alignSelf: "flex-start",
+      msFlexItemAlign: "start",
     },
   },
 });
 export const alignSelfSmStretch = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexItemAlign: "stretch",
       alignSelf: "stretch",
+      msFlexItemAlign: "stretch",
     },
   },
 });
 export const alignSelfStart = style({
-  MsFlexItemAlign: "start",
   alignSelf: "flex-start",
+  msFlexItemAlign: "start",
 });
 export const alignSelfStretch = style({
-  MsFlexItemAlign: "stretch",
   alignSelf: "stretch",
+  msFlexItemAlign: "stretch",
 });
 export const alignSelfXlAuto = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexItemAlign: "auto",
       alignSelf: "auto",
+      msFlexItemAlign: "auto",
     },
   },
 });
 export const alignSelfXlBaseline = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexItemAlign: "baseline",
       alignSelf: "baseline",
+      msFlexItemAlign: "baseline",
     },
   },
 });
 export const alignSelfXlCenter = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexItemAlign: "center",
       alignSelf: "center",
+      msFlexItemAlign: "center",
     },
   },
 });
 export const alignSelfXlEnd = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexItemAlign: "end",
       alignSelf: "flex-end",
+      msFlexItemAlign: "end",
     },
   },
 });
 export const alignSelfXlStart = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexItemAlign: "start",
       alignSelf: "flex-start",
+      msFlexItemAlign: "start",
     },
   },
 });
 export const alignSelfXlStretch = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexItemAlign: "stretch",
       alignSelf: "stretch",
+      msFlexItemAlign: "stretch",
     },
   },
 });
@@ -2168,13 +2168,13 @@ export const borderWhite = style({
   borderColor: "fff",
 });
 export const breadcrumb = style({
-  MsFlexWrap: "wrap",
   backgroundColor: "e9ecef",
   borderRadius: "0.25rem",
   display: "flex",
   flexWrap: "wrap",
   listStyle: "none",
   marginBottom: "1rem",
+  msFlexWrap: "wrap",
   padding: "0.75rem 1rem",
 });
 export const breadcrumbItem = style({
@@ -2406,7 +2406,6 @@ export const bsTooltipTop = style({
 });
 export const btn = style({
   MozUserSelect: "none",
-  MsUserSelect: "none",
   WebkitUserSelect: "none",
   backgroundColor: "transparent",
   border: "1px solid transparent",
@@ -2417,6 +2416,7 @@ export const btn = style({
   fontSize: "1rem",
   fontWeight: "400",
   lineHeight: "1.5",
+  msUserSelect: "none",
   opacity: "0.65",
   outline: "0",
   padding: "0.375rem 0.75rem",
@@ -2535,9 +2535,9 @@ export const btnDark = style({
   },
 });
 export const btnGroup = style({
-  MsFlex: "1 1 auto",
   display: "inline-flex",
   flex: "1 1 auto",
+  msFlex: "1 1 auto",
   position: "relative",
   verticalAlign: "middle",
   zIndex: "1",
@@ -2585,15 +2585,15 @@ export const btnGroupToggle = style({
   marginBottom: "0",
 });
 export const btnGroupVertical = style({
-  MsFlex: "1 1 auto",
-  MsFlexAlign: "start",
-  MsFlexDirection: "column",
-  MsFlexPack: "center",
   alignItems: "flex-start",
   display: "inline-flex",
   flex: "1 1 auto",
   flexDirection: "column",
   justifyContent: "center",
+  msFlex: "1 1 auto",
+  msFlexAlign: "start",
+  msFlexDirection: "column",
+  msFlexPack: "center",
   position: "relative",
   verticalAlign: "middle",
   width: "100%",
@@ -3144,11 +3144,11 @@ export const btnSuccess = style({
   },
 });
 export const btnToolbar = style({
-  MsFlexPack: "start",
-  MsFlexWrap: "wrap",
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "flex-start",
+  msFlexPack: "start",
+  msFlexWrap: "wrap",
   width: "auto",
 });
 export const btnWarning = style({
@@ -3192,7 +3192,6 @@ export const btnWarning = style({
   },
 });
 export const card = style({
-  MsFlexDirection: "column",
   backgroundClip: "border-box",
   backgroundColor: "fff",
   border: "1px solid rgba(0,0,0,0.125)",
@@ -3202,6 +3201,7 @@ export const card = style({
   display: "flex",
   flexDirection: "column",
   minWidth: "0",
+  msFlexDirection: "column",
   position: "relative",
   wordWrap: "break-word",
   ":first-child": {
@@ -3216,9 +3216,9 @@ export const card = style({
   },
 });
 export const cardBody = style({
-  MsFlex: "1 1 auto",
   flex: "1 1 auto",
   minHeight: "1px",
+  msFlex: "1 1 auto",
   padding: "1.25rem",
 });
 export const cardColumns = style({
@@ -3242,14 +3242,14 @@ export const cardDeck = style({
   marginBottom: "15px",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "1 0 0%",
-      MsFlexFlow: "row wrap",
       display: "flex",
       flex: "1 0 0%",
       flexFlow: "row wrap",
       marginBottom: "0",
       marginLeft: "15px",
       marginRight: "15px",
+      msFlex: "1 0 0%",
+      msFlexFlow: "row wrap",
     },
   },
 });
@@ -3265,14 +3265,14 @@ export const cardGroup = style({
   marginBottom: "15px",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "1 0 0%",
-      MsFlexFlow: "row wrap",
       borderLeft: "0",
       display: "flex",
       flex: "1 0 0%",
       flexFlow: "row wrap",
       marginBottom: "0",
       marginLeft: "0",
+      msFlex: "1 0 0%",
+      msFlexFlow: "row wrap",
       selectors: {
         "&:not(:first-child)": {
           borderBottomLeftRadius: "0",
@@ -3304,19 +3304,19 @@ export const cardHeaderTabs = style({
   marginRight: "-0.625rem",
 });
 export const cardImg = style({
-  MsFlexNegative: "0",
   borderBottomLeftRadius: "calc(0.25rem-1px)",
   borderBottomRightRadius: "calc(0.25rem-1px)",
   borderTopLeftRadius: "calc(0.25rem-1px)",
   borderTopRightRadius: "calc(0.25rem-1px)",
   flexShrink: "0",
+  msFlexNegative: "0",
   width: "100%",
 });
 export const cardImgBottom = style({
-  MsFlexNegative: "0",
   borderBottomLeftRadius: "calc(0.25rem-1px)",
   borderBottomRightRadius: "calc(0.25rem-1px)",
   flexShrink: "0",
+  msFlexNegative: "0",
   width: "100%",
 });
 export const cardImgOverlay = style({
@@ -3329,10 +3329,10 @@ export const cardImgOverlay = style({
   top: "0",
 });
 export const cardImgTop = style({
-  MsFlexNegative: "0",
   borderTopLeftRadius: "calc(0.25rem-1px)",
   borderTopRightRadius: "calc(0.25rem-1px)",
   flexShrink: "0",
+  msFlexNegative: "0",
   width: "100%",
 });
 export const cardLink = style({
@@ -3354,7 +3354,7 @@ export const cardTitle = style({
   marginBottom: "0.75rem",
 });
 export const carousel = style({
-  MsTouchAction: "pan-y",
+  msTouchAction: "pan-y",
   position: "relative",
   touchAction: "pan-y",
 });
@@ -3370,8 +3370,6 @@ export const carouselCaption = style({
   zIndex: "10",
 });
 export const carouselControlNext = style({
-  MsFlexAlign: "center",
-  MsFlexPack: "center",
   alignItems: "center",
   background: "none",
   border: "0",
@@ -3379,6 +3377,8 @@ export const carouselControlNext = style({
   color: "fff",
   display: "flex",
   justifyContent: "center",
+  msFlexAlign: "center",
+  msFlexPack: "center",
   opacity: "0.5",
   padding: "0",
   position: "absolute",
@@ -3415,8 +3415,6 @@ export const carouselControlNextIcon = style({
   width: "20px",
 });
 export const carouselControlPrev = style({
-  MsFlexAlign: "center",
-  MsFlexPack: "center",
   alignItems: "center",
   background: "none",
   border: "0",
@@ -3425,6 +3423,8 @@ export const carouselControlPrev = style({
   display: "flex",
   justifyContent: "center",
   left: "0",
+  msFlexAlign: "center",
+  msFlexPack: "center",
   opacity: "0.5",
   padding: "0",
   position: "absolute",
@@ -3473,7 +3473,6 @@ export const carouselFade = style({
   },
 });
 export const carouselIndicators = style({
-  MsFlexPack: "center",
   bottom: "0",
   display: "flex",
   justifyContent: "center",
@@ -3481,6 +3480,7 @@ export const carouselIndicators = style({
   listStyle: "none",
   marginLeft: "15%",
   marginRight: "15%",
+  msFlexPack: "center",
   opacity: "1",
   paddingLeft: "0",
   position: "absolute",
@@ -3559,128 +3559,128 @@ export const close = style({
   },
 });
 export const col = style({
-  MsFlexPositive: "1",
-  MsFlexPreferredSize: "0",
   flexBasis: "0",
   flexGrow: "1",
   maxWidth: "100%",
+  msFlexPositive: "1",
+  msFlexPreferredSize: "0",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const col1 = style({
-  MsFlex: "0 0 8.333333%",
   flex: "0 0 8.333333%",
   maxWidth: "8.333333%",
+  msFlex: "0 0 8.333333%",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const col10 = style({
-  MsFlex: "0 0 83.333333%",
   flex: "0 0 83.333333%",
   maxWidth: "83.333333%",
+  msFlex: "0 0 83.333333%",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const col11 = style({
-  MsFlex: "0 0 91.666667%",
   flex: "0 0 91.666667%",
   maxWidth: "91.666667%",
+  msFlex: "0 0 91.666667%",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const col12 = style({
-  MsFlex: "0 0 100%",
   flex: "0 0 100%",
   maxWidth: "100%",
+  msFlex: "0 0 100%",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const col2 = style({
-  MsFlex: "0 0 16.666667%",
   flex: "0 0 16.666667%",
   maxWidth: "16.666667%",
+  msFlex: "0 0 16.666667%",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const col3 = style({
-  MsFlex: "0 0 25%",
   flex: "0 0 25%",
   maxWidth: "25%",
+  msFlex: "0 0 25%",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const col4 = style({
-  MsFlex: "0 0 33.333333%",
   flex: "0 0 33.333333%",
   maxWidth: "33.333333%",
+  msFlex: "0 0 33.333333%",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const col5 = style({
-  MsFlex: "0 0 41.666667%",
   flex: "0 0 41.666667%",
   maxWidth: "41.666667%",
+  msFlex: "0 0 41.666667%",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const col6 = style({
-  MsFlex: "0 0 50%",
   flex: "0 0 50%",
   maxWidth: "50%",
+  msFlex: "0 0 50%",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const col7 = style({
-  MsFlex: "0 0 58.333333%",
   flex: "0 0 58.333333%",
   maxWidth: "58.333333%",
+  msFlex: "0 0 58.333333%",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const col8 = style({
-  MsFlex: "0 0 66.666667%",
   flex: "0 0 66.666667%",
   maxWidth: "66.666667%",
+  msFlex: "0 0 66.666667%",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const col9 = style({
-  MsFlex: "0 0 75%",
   flex: "0 0 75%",
   maxWidth: "75%",
+  msFlex: "0 0 75%",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
   width: "100%",
 });
 export const colAuto = style({
-  MsFlex: "0 0 auto",
   flex: "0 0 auto",
   maxWidth: "100%",
+  msFlex: "0 0 auto",
   paddingLeft: "15px",
   paddingRight: "15px",
   position: "relative",
@@ -3712,11 +3712,11 @@ export const colLg = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlexPositive: "1",
-      MsFlexPreferredSize: "0",
       flexBasis: "0",
       flexGrow: "1",
       maxWidth: "100%",
+      msFlexPositive: "1",
+      msFlexPreferredSize: "0",
     },
   },
 });
@@ -3727,9 +3727,9 @@ export const colLg1 = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 8.333333%",
       flex: "0 0 8.333333%",
       maxWidth: "8.333333%",
+      msFlex: "0 0 8.333333%",
     },
   },
 });
@@ -3740,9 +3740,9 @@ export const colLg10 = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 83.333333%",
       flex: "0 0 83.333333%",
       maxWidth: "83.333333%",
+      msFlex: "0 0 83.333333%",
     },
   },
 });
@@ -3753,9 +3753,9 @@ export const colLg11 = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 91.666667%",
       flex: "0 0 91.666667%",
       maxWidth: "91.666667%",
+      msFlex: "0 0 91.666667%",
     },
   },
 });
@@ -3766,9 +3766,9 @@ export const colLg12 = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
+      msFlex: "0 0 100%",
     },
   },
 });
@@ -3779,9 +3779,9 @@ export const colLg2 = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
+      msFlex: "0 0 16.666667%",
     },
   },
 });
@@ -3792,9 +3792,9 @@ export const colLg3 = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
+      msFlex: "0 0 25%",
     },
   },
 });
@@ -3805,9 +3805,9 @@ export const colLg4 = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
+      msFlex: "0 0 33.333333%",
     },
   },
 });
@@ -3818,9 +3818,9 @@ export const colLg5 = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 41.666667%",
       flex: "0 0 41.666667%",
       maxWidth: "41.666667%",
+      msFlex: "0 0 41.666667%",
     },
   },
 });
@@ -3831,9 +3831,9 @@ export const colLg6 = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
+      msFlex: "0 0 50%",
     },
   },
 });
@@ -3844,9 +3844,9 @@ export const colLg7 = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 58.333333%",
       flex: "0 0 58.333333%",
       maxWidth: "58.333333%",
+      msFlex: "0 0 58.333333%",
     },
   },
 });
@@ -3857,9 +3857,9 @@ export const colLg8 = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 66.666667%",
       flex: "0 0 66.666667%",
       maxWidth: "66.666667%",
+      msFlex: "0 0 66.666667%",
     },
   },
 });
@@ -3870,9 +3870,9 @@ export const colLg9 = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 75%",
       flex: "0 0 75%",
       maxWidth: "75%",
+      msFlex: "0 0 75%",
     },
   },
 });
@@ -3883,9 +3883,9 @@ export const colLgAuto = style({
   width: "100%",
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "0 0 auto",
       flex: "0 0 auto",
       maxWidth: "100%",
+      msFlex: "0 0 auto",
       width: "auto",
     },
   },
@@ -3897,11 +3897,11 @@ export const colMd = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlexPositive: "1",
-      MsFlexPreferredSize: "0",
       flexBasis: "0",
       flexGrow: "1",
       maxWidth: "100%",
+      msFlexPositive: "1",
+      msFlexPreferredSize: "0",
     },
   },
 });
@@ -3912,9 +3912,9 @@ export const colMd1 = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 8.333333%",
       flex: "0 0 8.333333%",
       maxWidth: "8.333333%",
+      msFlex: "0 0 8.333333%",
     },
   },
 });
@@ -3925,9 +3925,9 @@ export const colMd10 = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 83.333333%",
       flex: "0 0 83.333333%",
       maxWidth: "83.333333%",
+      msFlex: "0 0 83.333333%",
     },
   },
 });
@@ -3938,9 +3938,9 @@ export const colMd11 = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 91.666667%",
       flex: "0 0 91.666667%",
       maxWidth: "91.666667%",
+      msFlex: "0 0 91.666667%",
     },
   },
 });
@@ -3951,9 +3951,9 @@ export const colMd12 = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
+      msFlex: "0 0 100%",
     },
   },
 });
@@ -3964,9 +3964,9 @@ export const colMd2 = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
+      msFlex: "0 0 16.666667%",
     },
   },
 });
@@ -3977,9 +3977,9 @@ export const colMd3 = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
+      msFlex: "0 0 25%",
     },
   },
 });
@@ -3990,9 +3990,9 @@ export const colMd4 = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
+      msFlex: "0 0 33.333333%",
     },
   },
 });
@@ -4003,9 +4003,9 @@ export const colMd5 = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 41.666667%",
       flex: "0 0 41.666667%",
       maxWidth: "41.666667%",
+      msFlex: "0 0 41.666667%",
     },
   },
 });
@@ -4016,9 +4016,9 @@ export const colMd6 = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
+      msFlex: "0 0 50%",
     },
   },
 });
@@ -4029,9 +4029,9 @@ export const colMd7 = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 58.333333%",
       flex: "0 0 58.333333%",
       maxWidth: "58.333333%",
+      msFlex: "0 0 58.333333%",
     },
   },
 });
@@ -4042,9 +4042,9 @@ export const colMd8 = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 66.666667%",
       flex: "0 0 66.666667%",
       maxWidth: "66.666667%",
+      msFlex: "0 0 66.666667%",
     },
   },
 });
@@ -4055,9 +4055,9 @@ export const colMd9 = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 75%",
       flex: "0 0 75%",
       maxWidth: "75%",
+      msFlex: "0 0 75%",
     },
   },
 });
@@ -4068,9 +4068,9 @@ export const colMdAuto = style({
   width: "100%",
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "0 0 auto",
       flex: "0 0 auto",
       maxWidth: "100%",
+      msFlex: "0 0 auto",
       width: "auto",
     },
   },
@@ -4082,11 +4082,11 @@ export const colSm = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlexPositive: "1",
-      MsFlexPreferredSize: "0",
       flexBasis: "0",
       flexGrow: "1",
       maxWidth: "100%",
+      msFlexPositive: "1",
+      msFlexPreferredSize: "0",
     },
   },
 });
@@ -4097,9 +4097,9 @@ export const colSm1 = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 8.333333%",
       flex: "0 0 8.333333%",
       maxWidth: "8.333333%",
+      msFlex: "0 0 8.333333%",
     },
   },
 });
@@ -4110,9 +4110,9 @@ export const colSm10 = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 83.333333%",
       flex: "0 0 83.333333%",
       maxWidth: "83.333333%",
+      msFlex: "0 0 83.333333%",
     },
   },
 });
@@ -4123,9 +4123,9 @@ export const colSm11 = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 91.666667%",
       flex: "0 0 91.666667%",
       maxWidth: "91.666667%",
+      msFlex: "0 0 91.666667%",
     },
   },
 });
@@ -4136,9 +4136,9 @@ export const colSm12 = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
+      msFlex: "0 0 100%",
     },
   },
 });
@@ -4149,9 +4149,9 @@ export const colSm2 = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
+      msFlex: "0 0 16.666667%",
     },
   },
 });
@@ -4162,9 +4162,9 @@ export const colSm3 = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
+      msFlex: "0 0 25%",
     },
   },
 });
@@ -4175,9 +4175,9 @@ export const colSm4 = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
+      msFlex: "0 0 33.333333%",
     },
   },
 });
@@ -4188,9 +4188,9 @@ export const colSm5 = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 41.666667%",
       flex: "0 0 41.666667%",
       maxWidth: "41.666667%",
+      msFlex: "0 0 41.666667%",
     },
   },
 });
@@ -4201,9 +4201,9 @@ export const colSm6 = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
+      msFlex: "0 0 50%",
     },
   },
 });
@@ -4214,9 +4214,9 @@ export const colSm7 = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 58.333333%",
       flex: "0 0 58.333333%",
       maxWidth: "58.333333%",
+      msFlex: "0 0 58.333333%",
     },
   },
 });
@@ -4227,9 +4227,9 @@ export const colSm8 = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 66.666667%",
       flex: "0 0 66.666667%",
       maxWidth: "66.666667%",
+      msFlex: "0 0 66.666667%",
     },
   },
 });
@@ -4240,9 +4240,9 @@ export const colSm9 = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 75%",
       flex: "0 0 75%",
       maxWidth: "75%",
+      msFlex: "0 0 75%",
     },
   },
 });
@@ -4253,9 +4253,9 @@ export const colSmAuto = style({
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 auto",
       flex: "0 0 auto",
       maxWidth: "100%",
+      msFlex: "0 0 auto",
       width: "auto",
     },
   },
@@ -4267,11 +4267,11 @@ export const colXl = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexPositive: "1",
-      MsFlexPreferredSize: "0",
       flexBasis: "0",
       flexGrow: "1",
       maxWidth: "100%",
+      msFlexPositive: "1",
+      msFlexPreferredSize: "0",
     },
   },
 });
@@ -4282,9 +4282,9 @@ export const colXl1 = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 8.333333%",
       flex: "0 0 8.333333%",
       maxWidth: "8.333333%",
+      msFlex: "0 0 8.333333%",
     },
   },
 });
@@ -4295,9 +4295,9 @@ export const colXl10 = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 83.333333%",
       flex: "0 0 83.333333%",
       maxWidth: "83.333333%",
+      msFlex: "0 0 83.333333%",
     },
   },
 });
@@ -4308,9 +4308,9 @@ export const colXl11 = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 91.666667%",
       flex: "0 0 91.666667%",
       maxWidth: "91.666667%",
+      msFlex: "0 0 91.666667%",
     },
   },
 });
@@ -4321,9 +4321,9 @@ export const colXl12 = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
+      msFlex: "0 0 100%",
     },
   },
 });
@@ -4334,9 +4334,9 @@ export const colXl2 = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
+      msFlex: "0 0 16.666667%",
     },
   },
 });
@@ -4347,9 +4347,9 @@ export const colXl3 = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
+      msFlex: "0 0 25%",
     },
   },
 });
@@ -4360,9 +4360,9 @@ export const colXl4 = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
+      msFlex: "0 0 33.333333%",
     },
   },
 });
@@ -4373,9 +4373,9 @@ export const colXl5 = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 41.666667%",
       flex: "0 0 41.666667%",
       maxWidth: "41.666667%",
+      msFlex: "0 0 41.666667%",
     },
   },
 });
@@ -4386,9 +4386,9 @@ export const colXl6 = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
+      msFlex: "0 0 50%",
     },
   },
 });
@@ -4399,9 +4399,9 @@ export const colXl7 = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 58.333333%",
       flex: "0 0 58.333333%",
       maxWidth: "58.333333%",
+      msFlex: "0 0 58.333333%",
     },
   },
 });
@@ -4412,9 +4412,9 @@ export const colXl8 = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 66.666667%",
       flex: "0 0 66.666667%",
       maxWidth: "66.666667%",
+      msFlex: "0 0 66.666667%",
     },
   },
 });
@@ -4425,9 +4425,9 @@ export const colXl9 = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 75%",
       flex: "0 0 75%",
       maxWidth: "75%",
+      msFlex: "0 0 75%",
     },
   },
 });
@@ -4438,9 +4438,9 @@ export const colXlAuto = style({
   width: "100%",
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "0 0 auto",
       flex: "0 0 auto",
       maxWidth: "100%",
+      msFlex: "0 0 auto",
       width: "auto",
     },
   },
@@ -4747,7 +4747,7 @@ export const customRange = style({
     marginRight: "15px",
   },
   "::-ms-thumb": {
-    MsTransition: "none",
+    msTransition: "none",
     transition: "none",
   },
   "::-ms-thumb:active": {
@@ -5573,434 +5573,434 @@ export const fixedTop = style({
   zIndex: "1030",
 });
 export const flexColumn = style({
-  MsFlexDirection: "column",
   flexDirection: "column",
+  msFlexDirection: "column",
 });
 export const flexColumnReverse = style({
-  MsFlexDirection: "column-reverse",
   flexDirection: "column-reverse",
+  msFlexDirection: "column-reverse",
 });
 export const flexFill = style({
-  MsFlex: "1 1 auto",
   flex: "1 1 auto",
+  msFlex: "1 1 auto",
 });
 export const flexGrow0 = style({
-  MsFlexPositive: "0",
   flexGrow: "0",
+  msFlexPositive: "0",
 });
 export const flexGrow1 = style({
-  MsFlexPositive: "1",
   flexGrow: "1",
+  msFlexPositive: "1",
 });
 export const flexLgColumn = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexDirection: "column",
       flexDirection: "column",
+      msFlexDirection: "column",
     },
   },
 });
 export const flexLgColumnReverse = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexDirection: "column-reverse",
       flexDirection: "column-reverse",
+      msFlexDirection: "column-reverse",
     },
   },
 });
 export const flexLgFill = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlex: "1 1 auto",
       flex: "1 1 auto",
+      msFlex: "1 1 auto",
     },
   },
 });
 export const flexLgGrow0 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexPositive: "0",
       flexGrow: "0",
+      msFlexPositive: "0",
     },
   },
 });
 export const flexLgGrow1 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexPositive: "1",
       flexGrow: "1",
+      msFlexPositive: "1",
     },
   },
 });
 export const flexLgNowrap = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexWrap: "nowrap",
       flexWrap: "nowrap",
+      msFlexWrap: "nowrap",
     },
   },
 });
 export const flexLgRow = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexDirection: "row",
       flexDirection: "row",
+      msFlexDirection: "row",
     },
   },
 });
 export const flexLgRowReverse = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexDirection: "row-reverse",
       flexDirection: "row-reverse",
+      msFlexDirection: "row-reverse",
     },
   },
 });
 export const flexLgShrink0 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexNegative: "0",
       flexShrink: "0",
+      msFlexNegative: "0",
     },
   },
 });
 export const flexLgShrink1 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexNegative: "1",
       flexShrink: "1",
+      msFlexNegative: "1",
     },
   },
 });
 export const flexLgWrap = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexWrap: "wrap",
       flexWrap: "wrap",
+      msFlexWrap: "wrap",
     },
   },
 });
 export const flexLgWrapReverse = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexWrap: "wrap-reverse",
       flexWrap: "wrap-reverse",
+      msFlexWrap: "wrap-reverse",
     },
   },
 });
 export const flexMdColumn = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexDirection: "column",
       flexDirection: "column",
+      msFlexDirection: "column",
     },
   },
 });
 export const flexMdColumnReverse = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexDirection: "column-reverse",
       flexDirection: "column-reverse",
+      msFlexDirection: "column-reverse",
     },
   },
 });
 export const flexMdFill = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlex: "1 1 auto",
       flex: "1 1 auto",
+      msFlex: "1 1 auto",
     },
   },
 });
 export const flexMdGrow0 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexPositive: "0",
       flexGrow: "0",
+      msFlexPositive: "0",
     },
   },
 });
 export const flexMdGrow1 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexPositive: "1",
       flexGrow: "1",
+      msFlexPositive: "1",
     },
   },
 });
 export const flexMdNowrap = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexWrap: "nowrap",
       flexWrap: "nowrap",
+      msFlexWrap: "nowrap",
     },
   },
 });
 export const flexMdRow = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexDirection: "row",
       flexDirection: "row",
+      msFlexDirection: "row",
     },
   },
 });
 export const flexMdRowReverse = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexDirection: "row-reverse",
       flexDirection: "row-reverse",
+      msFlexDirection: "row-reverse",
     },
   },
 });
 export const flexMdShrink0 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexNegative: "0",
       flexShrink: "0",
+      msFlexNegative: "0",
     },
   },
 });
 export const flexMdShrink1 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexNegative: "1",
       flexShrink: "1",
+      msFlexNegative: "1",
     },
   },
 });
 export const flexMdWrap = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexWrap: "wrap",
       flexWrap: "wrap",
+      msFlexWrap: "wrap",
     },
   },
 });
 export const flexMdWrapReverse = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexWrap: "wrap-reverse",
       flexWrap: "wrap-reverse",
+      msFlexWrap: "wrap-reverse",
     },
   },
 });
 export const flexNowrap = style({
-  MsFlexWrap: "nowrap",
   flexWrap: "nowrap",
+  msFlexWrap: "nowrap",
 });
 export const flexRow = style({
-  MsFlexDirection: "row",
   flexDirection: "row",
+  msFlexDirection: "row",
 });
 export const flexRowReverse = style({
-  MsFlexDirection: "row-reverse",
   flexDirection: "row-reverse",
+  msFlexDirection: "row-reverse",
 });
 export const flexShrink0 = style({
-  MsFlexNegative: "0",
   flexShrink: "0",
+  msFlexNegative: "0",
 });
 export const flexShrink1 = style({
-  MsFlexNegative: "1",
   flexShrink: "1",
+  msFlexNegative: "1",
 });
 export const flexSmColumn = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexDirection: "column",
       flexDirection: "column",
+      msFlexDirection: "column",
     },
   },
 });
 export const flexSmColumnReverse = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexDirection: "column-reverse",
       flexDirection: "column-reverse",
+      msFlexDirection: "column-reverse",
     },
   },
 });
 export const flexSmFill = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "1 1 auto",
       flex: "1 1 auto",
+      msFlex: "1 1 auto",
     },
   },
 });
 export const flexSmGrow0 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexPositive: "0",
       flexGrow: "0",
+      msFlexPositive: "0",
     },
   },
 });
 export const flexSmGrow1 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexPositive: "1",
       flexGrow: "1",
+      msFlexPositive: "1",
     },
   },
 });
 export const flexSmNowrap = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexWrap: "nowrap",
       flexWrap: "nowrap",
+      msFlexWrap: "nowrap",
     },
   },
 });
 export const flexSmRow = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexDirection: "row",
       flexDirection: "row",
+      msFlexDirection: "row",
     },
   },
 });
 export const flexSmRowReverse = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexDirection: "row-reverse",
       flexDirection: "row-reverse",
+      msFlexDirection: "row-reverse",
     },
   },
 });
 export const flexSmShrink0 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexNegative: "0",
       flexShrink: "0",
+      msFlexNegative: "0",
     },
   },
 });
 export const flexSmShrink1 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexNegative: "1",
       flexShrink: "1",
+      msFlexNegative: "1",
     },
   },
 });
 export const flexSmWrap = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexWrap: "wrap",
       flexWrap: "wrap",
+      msFlexWrap: "wrap",
     },
   },
 });
 export const flexSmWrapReverse = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexWrap: "wrap-reverse",
       flexWrap: "wrap-reverse",
+      msFlexWrap: "wrap-reverse",
     },
   },
 });
 export const flexWrap = style({
-  MsFlexWrap: "wrap",
   flexWrap: "wrap",
+  msFlexWrap: "wrap",
 });
 export const flexWrapReverse = style({
-  MsFlexWrap: "wrap-reverse",
   flexWrap: "wrap-reverse",
+  msFlexWrap: "wrap-reverse",
 });
 export const flexXlColumn = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexDirection: "column",
       flexDirection: "column",
+      msFlexDirection: "column",
     },
   },
 });
 export const flexXlColumnReverse = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexDirection: "column-reverse",
       flexDirection: "column-reverse",
+      msFlexDirection: "column-reverse",
     },
   },
 });
 export const flexXlFill = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlex: "1 1 auto",
       flex: "1 1 auto",
+      msFlex: "1 1 auto",
     },
   },
 });
 export const flexXlGrow0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexPositive: "0",
       flexGrow: "0",
+      msFlexPositive: "0",
     },
   },
 });
 export const flexXlGrow1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexPositive: "1",
       flexGrow: "1",
+      msFlexPositive: "1",
     },
   },
 });
 export const flexXlNowrap = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexWrap: "nowrap",
       flexWrap: "nowrap",
+      msFlexWrap: "nowrap",
     },
   },
 });
 export const flexXlRow = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexDirection: "row",
       flexDirection: "row",
+      msFlexDirection: "row",
     },
   },
 });
 export const flexXlRowReverse = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexDirection: "row-reverse",
       flexDirection: "row-reverse",
+      msFlexDirection: "row-reverse",
     },
   },
 });
 export const flexXlShrink0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexNegative: "0",
       flexShrink: "0",
+      msFlexNegative: "0",
     },
   },
 });
 export const flexXlShrink1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexNegative: "1",
       flexShrink: "1",
+      msFlexNegative: "1",
     },
   },
 });
 export const flexXlWrap = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexWrap: "wrap",
       flexWrap: "wrap",
+      msFlexWrap: "wrap",
     },
   },
 });
 export const flexXlWrapReverse = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexWrap: "wrap-reverse",
       flexWrap: "wrap-reverse",
+      msFlexWrap: "wrap-reverse",
     },
   },
 });
@@ -6121,12 +6121,12 @@ export const formCheck = style({
   position: "relative",
 });
 export const formCheckInline = style({
-  MsFlexAlign: "center",
   alignItems: "center",
   display: "inline-flex",
   marginLeft: "0",
   marginRight: "0.3125rem",
   marginTop: "0",
+  msFlexAlign: "center",
   paddingLeft: "0",
   position: "static",
 });
@@ -6253,19 +6253,14 @@ export const formGroup = style({
   marginBottom: "1rem",
 });
 export const formInline = style({
-  MsFlexAlign: "center",
-  MsFlexFlow: "row wrap",
   alignItems: "center",
   display: "flex",
   flexFlow: "row wrap",
+  msFlexAlign: "center",
+  msFlexFlow: "row wrap",
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
-      MsFlex: "0 0 auto",
-      MsFlexAlign: "center",
-      MsFlexFlow: "row wrap",
-      MsFlexNegative: "0",
-      MsFlexPack: "center",
       alignItems: "center",
       display: "flex",
       flex: "0 0 auto",
@@ -6276,6 +6271,11 @@ export const formInline = style({
       marginLeft: "0",
       marginRight: "0.25rem",
       marginTop: "0",
+      msFlex: "0 0 auto",
+      msFlexAlign: "center",
+      msFlexFlow: "row wrap",
+      msFlexNegative: "0",
+      msFlexPack: "center",
       paddingLeft: "0",
       position: "relative",
       verticalAlign: "middle",
@@ -6284,12 +6284,12 @@ export const formInline = style({
   },
 });
 export const formRow = style({
-  MsFlexWrap: "wrap",
   display: "flex",
   flexWrap: "wrap",
   left: "5px",
   marginLeft: "-5px",
   marginRight: "-5px",
+  msFlexWrap: "wrap",
   paddingLeft: "5px",
   paddingRight: "5px",
   selectors: {
@@ -6370,9 +6370,6 @@ export const initialism = style({
   textTransform: "uppercase",
 });
 export const inputGroup = style({
-  MsFlex: "1 1 auto",
-  MsFlexAlign: "center",
-  MsFlexWrap: "wrap",
   alignItems: "center",
   borderBottomLeftRadius: "0",
   borderBottomRightRadius: "0",
@@ -6384,6 +6381,9 @@ export const inputGroup = style({
   marginBottom: "0",
   marginLeft: "-1px",
   minWidth: "0",
+  msFlex: "1 1 auto",
+  msFlexAlign: "center",
+  msFlexWrap: "wrap",
   position: "relative",
   width: "1%",
   ":first-child:not(:first-child)": {
@@ -6478,7 +6478,6 @@ export const inputGroupSm = style({
   },
 });
 export const inputGroupText = style({
-  MsFlexAlign: "center",
   alignItems: "center",
   backgroundColor: "e9ecef",
   border: "1px solid ced4da",
@@ -6489,6 +6488,7 @@ export const inputGroupText = style({
   fontWeight: "400",
   lineHeight: "1.5",
   marginBottom: "0",
+  msFlexAlign: "center",
   padding: "0.375rem 0.75rem",
   textAlign: "center",
   whiteSpace: "nowrap",
@@ -6541,182 +6541,182 @@ export const jumbotronFluid = style({
   paddingRight: "0",
 });
 export const justifyContentAround = style({
-  MsFlexPack: "distribute",
   justifyContent: "space-around",
+  msFlexPack: "distribute",
 });
 export const justifyContentBetween = style({
-  MsFlexPack: "justify",
   justifyContent: "space-between",
+  msFlexPack: "justify",
 });
 export const justifyContentCenter = style({
-  MsFlexPack: "center",
   justifyContent: "center",
+  msFlexPack: "center",
 });
 export const justifyContentEnd = style({
-  MsFlexPack: "end",
   justifyContent: "flex-end",
+  msFlexPack: "end",
 });
 export const justifyContentLgAround = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexPack: "distribute",
       justifyContent: "space-around",
+      msFlexPack: "distribute",
     },
   },
 });
 export const justifyContentLgBetween = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexPack: "justify",
       justifyContent: "space-between",
+      msFlexPack: "justify",
     },
   },
 });
 export const justifyContentLgCenter = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexPack: "center",
       justifyContent: "center",
+      msFlexPack: "center",
     },
   },
 });
 export const justifyContentLgEnd = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexPack: "end",
       justifyContent: "flex-end",
+      msFlexPack: "end",
     },
   },
 });
 export const justifyContentLgStart = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexPack: "start",
       justifyContent: "flex-start",
+      msFlexPack: "start",
     },
   },
 });
 export const justifyContentMdAround = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexPack: "distribute",
       justifyContent: "space-around",
+      msFlexPack: "distribute",
     },
   },
 });
 export const justifyContentMdBetween = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexPack: "justify",
       justifyContent: "space-between",
+      msFlexPack: "justify",
     },
   },
 });
 export const justifyContentMdCenter = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexPack: "center",
       justifyContent: "center",
+      msFlexPack: "center",
     },
   },
 });
 export const justifyContentMdEnd = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexPack: "end",
       justifyContent: "flex-end",
+      msFlexPack: "end",
     },
   },
 });
 export const justifyContentMdStart = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexPack: "start",
       justifyContent: "flex-start",
+      msFlexPack: "start",
     },
   },
 });
 export const justifyContentSmAround = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexPack: "distribute",
       justifyContent: "space-around",
+      msFlexPack: "distribute",
     },
   },
 });
 export const justifyContentSmBetween = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexPack: "justify",
       justifyContent: "space-between",
+      msFlexPack: "justify",
     },
   },
 });
 export const justifyContentSmCenter = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexPack: "center",
       justifyContent: "center",
+      msFlexPack: "center",
     },
   },
 });
 export const justifyContentSmEnd = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexPack: "end",
       justifyContent: "flex-end",
+      msFlexPack: "end",
     },
   },
 });
 export const justifyContentSmStart = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexPack: "start",
       justifyContent: "flex-start",
+      msFlexPack: "start",
     },
   },
 });
 export const justifyContentStart = style({
-  MsFlexPack: "start",
   justifyContent: "flex-start",
+  msFlexPack: "start",
 });
 export const justifyContentXlAround = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexPack: "distribute",
       justifyContent: "space-around",
+      msFlexPack: "distribute",
     },
   },
 });
 export const justifyContentXlBetween = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexPack: "justify",
       justifyContent: "space-between",
+      msFlexPack: "justify",
     },
   },
 });
 export const justifyContentXlCenter = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexPack: "center",
       justifyContent: "center",
+      msFlexPack: "center",
     },
   },
 });
 export const justifyContentXlEnd = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexPack: "end",
       justifyContent: "flex-end",
+      msFlexPack: "end",
     },
   },
 });
 export const justifyContentXlStart = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexPack: "start",
       justifyContent: "flex-start",
+      msFlexPack: "start",
     },
   },
 });
@@ -6725,11 +6725,11 @@ export const lead = style({
   fontWeight: "300",
 });
 export const listGroup = style({
-  MsFlexDirection: "column",
   borderRadius: "0.25rem",
   display: "flex",
   flexDirection: "column",
   marginBottom: "0",
+  msFlexDirection: "column",
   paddingLeft: "0",
 });
 export const listGroupFlush = style({
@@ -6740,12 +6740,12 @@ export const listGroupFlush = style({
   },
 });
 export const listGroupHorizontal = style({
-  MsFlexDirection: "row",
   borderLeftWidth: "1px",
   borderTopWidth: "1px",
   flexDirection: "row",
   marginLeft: "-1px",
   marginTop: "0",
+  msFlexDirection: "row",
   ":first-child": {
     borderBottomLeftRadius: "0.25rem",
     borderTopRightRadius: "0",
@@ -6766,12 +6766,12 @@ export const listGroupHorizontalLg = style({
   },
   "@media": {
     "(min-width: 992px)": {
-      MsFlexDirection: "row",
       borderLeftWidth: "1px",
       borderTopWidth: "1px",
       flexDirection: "row",
       marginLeft: "-1px",
       marginTop: "0",
+      msFlexDirection: "row",
     },
   },
 });
@@ -6786,12 +6786,12 @@ export const listGroupHorizontalMd = style({
   },
   "@media": {
     "(min-width: 768px)": {
-      MsFlexDirection: "row",
       borderLeftWidth: "1px",
       borderTopWidth: "1px",
       flexDirection: "row",
       marginLeft: "-1px",
       marginTop: "0",
+      msFlexDirection: "row",
     },
   },
 });
@@ -6806,12 +6806,12 @@ export const listGroupHorizontalSm = style({
   },
   "@media": {
     "(min-width: 576px)": {
-      MsFlexDirection: "row",
       borderLeftWidth: "1px",
       borderTopWidth: "1px",
       flexDirection: "row",
       marginLeft: "-1px",
       marginTop: "0",
+      msFlexDirection: "row",
     },
   },
 });
@@ -6826,12 +6826,12 @@ export const listGroupHorizontalXl = style({
   },
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexDirection: "row",
       borderLeftWidth: "1px",
       borderTopWidth: "1px",
       flexDirection: "row",
       marginLeft: "-1px",
       marginTop: "0",
+      msFlexDirection: "row",
     },
   },
 });
@@ -7751,13 +7751,13 @@ export const mbXlN5 = style({
   },
 });
 export const media = style({
-  MsFlexAlign: "start",
   alignItems: "flex-start",
   display: "flex",
+  msFlexAlign: "start",
 });
 export const mediaBody = style({
-  MsFlex: "1",
   flex: "1",
+  msFlex: "1",
 });
 export const mh100 = style({
   maxHeight: "100%",
@@ -8170,19 +8170,19 @@ export const modalBackdrop = style({
   zIndex: "1040",
 });
 export const modalBody = style({
-  MsFlex: "1 1 auto",
   flex: "1 1 auto",
+  msFlex: "1 1 auto",
   padding: "1rem",
   position: "relative",
 });
 export const modalContent = style({
-  MsFlexDirection: "column",
   backgroundClip: "padding-box",
   backgroundColor: "fff",
   border: "1px solid rgba(0,0,0,0.2)",
   borderRadius: "0.3rem",
   display: "flex",
   flexDirection: "column",
+  msFlexDirection: "column",
   outline: "0",
   pointerEvents: "auto",
   position: "relative",
@@ -8201,9 +8201,6 @@ export const modalDialog = style({
   },
 });
 export const modalDialogCentered = style({
-  MsFlexAlign: "center",
-  MsFlexDirection: "column",
-  MsFlexPack: "center",
   alignItems: "center",
   display: "flex",
   flexDirection: "column",
@@ -8211,6 +8208,9 @@ export const modalDialogCentered = style({
   justifyContent: "center",
   maxHeight: "none",
   minHeight: "calc(100%-1rem)",
+  msFlexAlign: "center",
+  msFlexDirection: "column",
+  msFlexPack: "center",
   "::before": {
     height: "min-content",
   },
@@ -8221,10 +8221,10 @@ export const modalDialogCentered = style({
   },
 });
 export const modalDialogScrollable = style({
-  MsFlexNegative: "0",
   display: "flex",
   flexShrink: "0",
   maxHeight: "calc(100vh-1rem)",
+  msFlexNegative: "0",
   overflow: "hidden",
   overflowY: "auto",
   "@media": {
@@ -8234,9 +8234,6 @@ export const modalDialogScrollable = style({
   },
 });
 export const modalFooter = style({
-  MsFlexAlign: "center",
-  MsFlexPack: "end",
-  MsFlexWrap: "wrap",
   alignItems: "center",
   borderBottomLeftRadius: "calc(0.3rem-1px)",
   borderBottomRightRadius: "calc(0.3rem-1px)",
@@ -8244,11 +8241,12 @@ export const modalFooter = style({
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "flex-end",
+  msFlexAlign: "center",
+  msFlexPack: "end",
+  msFlexWrap: "wrap",
   padding: "0.75rem",
 });
 export const modalHeader = style({
-  MsFlexAlign: "start",
-  MsFlexPack: "justify",
   alignItems: "flex-start",
   borderBottom: "1px solid dee2e6",
   borderTopLeftRadius: "calc(0.3rem-1px)",
@@ -8256,6 +8254,8 @@ export const modalHeader = style({
   display: "flex",
   justifyContent: "space-between",
   margin: "-1rem -1rem -1rem auto",
+  msFlexAlign: "start",
+  msFlexPack: "justify",
   padding: "1rem 1rem",
 });
 export const modalLg = style({
@@ -9907,23 +9907,23 @@ export const myXlN5 = style({
   },
 });
 export const nav = style({
-  MsFlexWrap: "wrap",
   display: "flex",
   flexWrap: "wrap",
   listStyle: "none",
   marginBottom: "0",
+  msFlexWrap: "wrap",
   paddingLeft: "0",
 });
 export const navFill = style({
-  MsFlex: "1 1 auto",
   flex: "1 1 auto",
+  msFlex: "1 1 auto",
   textAlign: "center",
 });
 export const navJustified = style({
-  MsFlexPositive: "1",
-  MsFlexPreferredSize: "0",
   flexBasis: "0",
   flexGrow: "1",
+  msFlexPositive: "1",
+  msFlexPreferredSize: "0",
   textAlign: "center",
 });
 export const navLink = style({
@@ -9962,13 +9962,13 @@ export const navTabs = style({
   },
 });
 export const navbar = style({
-  MsFlexAlign: "center",
-  MsFlexPack: "justify",
-  MsFlexWrap: "wrap",
   alignItems: "center",
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "space-between",
+  msFlexAlign: "center",
+  msFlexPack: "justify",
+  msFlexWrap: "wrap",
   padding: "0.5rem 1rem",
   position: "relative",
   "@media": {
@@ -9993,12 +9993,12 @@ export const navbarBrand = style({
   },
 });
 export const navbarCollapse = style({
-  MsFlexAlign: "center",
-  MsFlexPositive: "1",
-  MsFlexPreferredSize: "100%",
   alignItems: "center",
   flexBasis: "100%",
   flexGrow: "1",
+  msFlexAlign: "center",
+  msFlexPositive: "1",
+  msFlexPreferredSize: "100%",
 });
 export const navbarDark = style({
   backgroundImage:
@@ -10013,17 +10013,17 @@ export const navbarDark = style({
   },
 });
 export const navbarExpand = style({
-  MsFlexDirection: "row",
-  MsFlexFlow: "row nowrap",
-  MsFlexPack: "start",
-  MsFlexPreferredSize: "auto",
-  MsFlexWrap: "nowrap",
   display: "none",
   flexBasis: "auto",
   flexDirection: "row",
   flexFlow: "row nowrap",
   flexWrap: "nowrap",
   justifyContent: "flex-start",
+  msFlexDirection: "row",
+  msFlexFlow: "row nowrap",
+  msFlexPack: "start",
+  msFlexPreferredSize: "auto",
+  msFlexWrap: "nowrap",
   overflow: "visible",
   paddingLeft: "0.5rem",
   paddingRight: "0.5rem",
@@ -10032,17 +10032,17 @@ export const navbarExpand = style({
 export const navbarExpandLg = style({
   "@media": {
     "(max-width: 991.98px)": {
-      MsFlexDirection: "row",
-      MsFlexFlow: "row nowrap",
-      MsFlexPack: "start",
-      MsFlexPreferredSize: "auto",
-      MsFlexWrap: "nowrap",
       display: "none",
       flexBasis: "auto",
       flexDirection: "row",
       flexFlow: "row nowrap",
       flexWrap: "nowrap",
       justifyContent: "flex-start",
+      msFlexDirection: "row",
+      msFlexFlow: "row nowrap",
+      msFlexPack: "start",
+      msFlexPreferredSize: "auto",
+      msFlexWrap: "nowrap",
       overflow: "visible",
       paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
@@ -10053,17 +10053,17 @@ export const navbarExpandLg = style({
 export const navbarExpandMd = style({
   "@media": {
     "(max-width: 767.98px)": {
-      MsFlexDirection: "row",
-      MsFlexFlow: "row nowrap",
-      MsFlexPack: "start",
-      MsFlexPreferredSize: "auto",
-      MsFlexWrap: "nowrap",
       display: "none",
       flexBasis: "auto",
       flexDirection: "row",
       flexFlow: "row nowrap",
       flexWrap: "nowrap",
       justifyContent: "flex-start",
+      msFlexDirection: "row",
+      msFlexFlow: "row nowrap",
+      msFlexPack: "start",
+      msFlexPreferredSize: "auto",
+      msFlexWrap: "nowrap",
       overflow: "visible",
       paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
@@ -10074,17 +10074,17 @@ export const navbarExpandMd = style({
 export const navbarExpandSm = style({
   "@media": {
     "(max-width: 575.98px)": {
-      MsFlexDirection: "row",
-      MsFlexFlow: "row nowrap",
-      MsFlexPack: "start",
-      MsFlexPreferredSize: "auto",
-      MsFlexWrap: "nowrap",
       display: "none",
       flexBasis: "auto",
       flexDirection: "row",
       flexFlow: "row nowrap",
       flexWrap: "nowrap",
       justifyContent: "flex-start",
+      msFlexDirection: "row",
+      msFlexFlow: "row nowrap",
+      msFlexPack: "start",
+      msFlexPreferredSize: "auto",
+      msFlexWrap: "nowrap",
       overflow: "visible",
       paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
@@ -10095,17 +10095,17 @@ export const navbarExpandSm = style({
 export const navbarExpandXl = style({
   "@media": {
     "(max-width: 1199.98px)": {
-      MsFlexDirection: "row",
-      MsFlexFlow: "row nowrap",
-      MsFlexPack: "start",
-      MsFlexPreferredSize: "auto",
-      MsFlexWrap: "nowrap",
       display: "none",
       flexBasis: "auto",
       flexDirection: "row",
       flexFlow: "row nowrap",
       flexWrap: "nowrap",
       justifyContent: "flex-start",
+      msFlexDirection: "row",
+      msFlexFlow: "row nowrap",
+      msFlexPack: "start",
+      msFlexPreferredSize: "auto",
+      msFlexWrap: "nowrap",
       overflow: "visible",
       paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
@@ -10126,12 +10126,12 @@ export const navbarLight = style({
   },
 });
 export const navbarNav = style({
-  MsFlexDirection: "column",
   display: "flex",
   flexDirection: "column",
   float: "none",
   listStyle: "none",
   marginBottom: "0",
+  msFlexDirection: "column",
   paddingLeft: "0",
   paddingRight: "0",
   position: "static",
@@ -10549,69 +10549,69 @@ export const offsetXl9 = style({
   },
 });
 export const order0 = style({
-  MsFlexOrder: "0",
+  msFlexOrder: "0",
   order: "0",
 });
 export const order1 = style({
-  MsFlexOrder: "1",
+  msFlexOrder: "1",
   order: "1",
 });
 export const order10 = style({
-  MsFlexOrder: "10",
+  msFlexOrder: "10",
   order: "10",
 });
 export const order11 = style({
-  MsFlexOrder: "11",
+  msFlexOrder: "11",
   order: "11",
 });
 export const order12 = style({
-  MsFlexOrder: "12",
+  msFlexOrder: "12",
   order: "12",
 });
 export const order2 = style({
-  MsFlexOrder: "2",
+  msFlexOrder: "2",
   order: "2",
 });
 export const order3 = style({
-  MsFlexOrder: "3",
+  msFlexOrder: "3",
   order: "3",
 });
 export const order4 = style({
-  MsFlexOrder: "4",
+  msFlexOrder: "4",
   order: "4",
 });
 export const order5 = style({
-  MsFlexOrder: "5",
+  msFlexOrder: "5",
   order: "5",
 });
 export const order6 = style({
-  MsFlexOrder: "6",
+  msFlexOrder: "6",
   order: "6",
 });
 export const order7 = style({
-  MsFlexOrder: "7",
+  msFlexOrder: "7",
   order: "7",
 });
 export const order8 = style({
-  MsFlexOrder: "8",
+  msFlexOrder: "8",
   order: "8",
 });
 export const order9 = style({
-  MsFlexOrder: "9",
+  msFlexOrder: "9",
   order: "9",
 });
 export const orderFirst = style({
-  MsFlexOrder: "-1",
+  msFlexOrder: "-1",
   order: "-1",
 });
 export const orderLast = style({
-  MsFlexOrder: "13",
+  msFlexOrder: "13",
   order: "13",
 });
 export const orderLg0 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "0",
+      msFlexOrder: "0",
       order: "0",
     },
   },
@@ -10619,7 +10619,7 @@ export const orderLg0 = style({
 export const orderLg1 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "1",
+      msFlexOrder: "1",
       order: "1",
     },
   },
@@ -10627,7 +10627,7 @@ export const orderLg1 = style({
 export const orderLg10 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "10",
+      msFlexOrder: "10",
       order: "10",
     },
   },
@@ -10635,7 +10635,7 @@ export const orderLg10 = style({
 export const orderLg11 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "11",
+      msFlexOrder: "11",
       order: "11",
     },
   },
@@ -10643,7 +10643,7 @@ export const orderLg11 = style({
 export const orderLg12 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "12",
+      msFlexOrder: "12",
       order: "12",
     },
   },
@@ -10651,7 +10651,7 @@ export const orderLg12 = style({
 export const orderLg2 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "2",
+      msFlexOrder: "2",
       order: "2",
     },
   },
@@ -10659,7 +10659,7 @@ export const orderLg2 = style({
 export const orderLg3 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "3",
+      msFlexOrder: "3",
       order: "3",
     },
   },
@@ -10667,7 +10667,7 @@ export const orderLg3 = style({
 export const orderLg4 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "4",
+      msFlexOrder: "4",
       order: "4",
     },
   },
@@ -10675,7 +10675,7 @@ export const orderLg4 = style({
 export const orderLg5 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "5",
+      msFlexOrder: "5",
       order: "5",
     },
   },
@@ -10683,7 +10683,7 @@ export const orderLg5 = style({
 export const orderLg6 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "6",
+      msFlexOrder: "6",
       order: "6",
     },
   },
@@ -10691,7 +10691,7 @@ export const orderLg6 = style({
 export const orderLg7 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "7",
+      msFlexOrder: "7",
       order: "7",
     },
   },
@@ -10699,7 +10699,7 @@ export const orderLg7 = style({
 export const orderLg8 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "8",
+      msFlexOrder: "8",
       order: "8",
     },
   },
@@ -10707,7 +10707,7 @@ export const orderLg8 = style({
 export const orderLg9 = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "9",
+      msFlexOrder: "9",
       order: "9",
     },
   },
@@ -10715,7 +10715,7 @@ export const orderLg9 = style({
 export const orderLgFirst = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "-1",
+      msFlexOrder: "-1",
       order: "-1",
     },
   },
@@ -10723,7 +10723,7 @@ export const orderLgFirst = style({
 export const orderLgLast = style({
   "@media": {
     "(min-width: 992px)": {
-      MsFlexOrder: "13",
+      msFlexOrder: "13",
       order: "13",
     },
   },
@@ -10731,7 +10731,7 @@ export const orderLgLast = style({
 export const orderMd0 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "0",
+      msFlexOrder: "0",
       order: "0",
     },
   },
@@ -10739,7 +10739,7 @@ export const orderMd0 = style({
 export const orderMd1 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "1",
+      msFlexOrder: "1",
       order: "1",
     },
   },
@@ -10747,7 +10747,7 @@ export const orderMd1 = style({
 export const orderMd10 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "10",
+      msFlexOrder: "10",
       order: "10",
     },
   },
@@ -10755,7 +10755,7 @@ export const orderMd10 = style({
 export const orderMd11 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "11",
+      msFlexOrder: "11",
       order: "11",
     },
   },
@@ -10763,7 +10763,7 @@ export const orderMd11 = style({
 export const orderMd12 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "12",
+      msFlexOrder: "12",
       order: "12",
     },
   },
@@ -10771,7 +10771,7 @@ export const orderMd12 = style({
 export const orderMd2 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "2",
+      msFlexOrder: "2",
       order: "2",
     },
   },
@@ -10779,7 +10779,7 @@ export const orderMd2 = style({
 export const orderMd3 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "3",
+      msFlexOrder: "3",
       order: "3",
     },
   },
@@ -10787,7 +10787,7 @@ export const orderMd3 = style({
 export const orderMd4 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "4",
+      msFlexOrder: "4",
       order: "4",
     },
   },
@@ -10795,7 +10795,7 @@ export const orderMd4 = style({
 export const orderMd5 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "5",
+      msFlexOrder: "5",
       order: "5",
     },
   },
@@ -10803,7 +10803,7 @@ export const orderMd5 = style({
 export const orderMd6 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "6",
+      msFlexOrder: "6",
       order: "6",
     },
   },
@@ -10811,7 +10811,7 @@ export const orderMd6 = style({
 export const orderMd7 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "7",
+      msFlexOrder: "7",
       order: "7",
     },
   },
@@ -10819,7 +10819,7 @@ export const orderMd7 = style({
 export const orderMd8 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "8",
+      msFlexOrder: "8",
       order: "8",
     },
   },
@@ -10827,7 +10827,7 @@ export const orderMd8 = style({
 export const orderMd9 = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "9",
+      msFlexOrder: "9",
       order: "9",
     },
   },
@@ -10835,7 +10835,7 @@ export const orderMd9 = style({
 export const orderMdFirst = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "-1",
+      msFlexOrder: "-1",
       order: "-1",
     },
   },
@@ -10843,7 +10843,7 @@ export const orderMdFirst = style({
 export const orderMdLast = style({
   "@media": {
     "(min-width: 768px)": {
-      MsFlexOrder: "13",
+      msFlexOrder: "13",
       order: "13",
     },
   },
@@ -10851,7 +10851,7 @@ export const orderMdLast = style({
 export const orderSm0 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "0",
+      msFlexOrder: "0",
       order: "0",
     },
   },
@@ -10859,7 +10859,7 @@ export const orderSm0 = style({
 export const orderSm1 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "1",
+      msFlexOrder: "1",
       order: "1",
     },
   },
@@ -10867,7 +10867,7 @@ export const orderSm1 = style({
 export const orderSm10 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "10",
+      msFlexOrder: "10",
       order: "10",
     },
   },
@@ -10875,7 +10875,7 @@ export const orderSm10 = style({
 export const orderSm11 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "11",
+      msFlexOrder: "11",
       order: "11",
     },
   },
@@ -10883,7 +10883,7 @@ export const orderSm11 = style({
 export const orderSm12 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "12",
+      msFlexOrder: "12",
       order: "12",
     },
   },
@@ -10891,7 +10891,7 @@ export const orderSm12 = style({
 export const orderSm2 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "2",
+      msFlexOrder: "2",
       order: "2",
     },
   },
@@ -10899,7 +10899,7 @@ export const orderSm2 = style({
 export const orderSm3 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "3",
+      msFlexOrder: "3",
       order: "3",
     },
   },
@@ -10907,7 +10907,7 @@ export const orderSm3 = style({
 export const orderSm4 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "4",
+      msFlexOrder: "4",
       order: "4",
     },
   },
@@ -10915,7 +10915,7 @@ export const orderSm4 = style({
 export const orderSm5 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "5",
+      msFlexOrder: "5",
       order: "5",
     },
   },
@@ -10923,7 +10923,7 @@ export const orderSm5 = style({
 export const orderSm6 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "6",
+      msFlexOrder: "6",
       order: "6",
     },
   },
@@ -10931,7 +10931,7 @@ export const orderSm6 = style({
 export const orderSm7 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "7",
+      msFlexOrder: "7",
       order: "7",
     },
   },
@@ -10939,7 +10939,7 @@ export const orderSm7 = style({
 export const orderSm8 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "8",
+      msFlexOrder: "8",
       order: "8",
     },
   },
@@ -10947,7 +10947,7 @@ export const orderSm8 = style({
 export const orderSm9 = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "9",
+      msFlexOrder: "9",
       order: "9",
     },
   },
@@ -10955,7 +10955,7 @@ export const orderSm9 = style({
 export const orderSmFirst = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "-1",
+      msFlexOrder: "-1",
       order: "-1",
     },
   },
@@ -10963,7 +10963,7 @@ export const orderSmFirst = style({
 export const orderSmLast = style({
   "@media": {
     "(min-width: 576px)": {
-      MsFlexOrder: "13",
+      msFlexOrder: "13",
       order: "13",
     },
   },
@@ -10971,7 +10971,7 @@ export const orderSmLast = style({
 export const orderXl0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "0",
+      msFlexOrder: "0",
       order: "0",
     },
   },
@@ -10979,7 +10979,7 @@ export const orderXl0 = style({
 export const orderXl1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "1",
+      msFlexOrder: "1",
       order: "1",
     },
   },
@@ -10987,7 +10987,7 @@ export const orderXl1 = style({
 export const orderXl10 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "10",
+      msFlexOrder: "10",
       order: "10",
     },
   },
@@ -10995,7 +10995,7 @@ export const orderXl10 = style({
 export const orderXl11 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "11",
+      msFlexOrder: "11",
       order: "11",
     },
   },
@@ -11003,7 +11003,7 @@ export const orderXl11 = style({
 export const orderXl12 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "12",
+      msFlexOrder: "12",
       order: "12",
     },
   },
@@ -11011,7 +11011,7 @@ export const orderXl12 = style({
 export const orderXl2 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "2",
+      msFlexOrder: "2",
       order: "2",
     },
   },
@@ -11019,7 +11019,7 @@ export const orderXl2 = style({
 export const orderXl3 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "3",
+      msFlexOrder: "3",
       order: "3",
     },
   },
@@ -11027,7 +11027,7 @@ export const orderXl3 = style({
 export const orderXl4 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "4",
+      msFlexOrder: "4",
       order: "4",
     },
   },
@@ -11035,7 +11035,7 @@ export const orderXl4 = style({
 export const orderXl5 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "5",
+      msFlexOrder: "5",
       order: "5",
     },
   },
@@ -11043,7 +11043,7 @@ export const orderXl5 = style({
 export const orderXl6 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "6",
+      msFlexOrder: "6",
       order: "6",
     },
   },
@@ -11051,7 +11051,7 @@ export const orderXl6 = style({
 export const orderXl7 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "7",
+      msFlexOrder: "7",
       order: "7",
     },
   },
@@ -11059,7 +11059,7 @@ export const orderXl7 = style({
 export const orderXl8 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "8",
+      msFlexOrder: "8",
       order: "8",
     },
   },
@@ -11067,7 +11067,7 @@ export const orderXl8 = style({
 export const orderXl9 = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "9",
+      msFlexOrder: "9",
       order: "9",
     },
   },
@@ -11075,7 +11075,7 @@ export const orderXl9 = style({
 export const orderXlFirst = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "-1",
+      msFlexOrder: "-1",
       order: "-1",
     },
   },
@@ -11083,7 +11083,7 @@ export const orderXlFirst = style({
 export const orderXlLast = style({
   "@media": {
     "(min-width: 1200px)": {
-      MsFlexOrder: "13",
+      msFlexOrder: "13",
       order: "13",
     },
   },
@@ -11999,13 +11999,13 @@ export const progress = style({
   overflow: "hidden",
 });
 export const progressBar = style({
-  MsFlexDirection: "column",
-  MsFlexPack: "center",
   backgroundColor: "007bff",
   color: "fff",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
+  msFlexDirection: "column",
+  msFlexPack: "center",
   overflow: "hidden",
   textAlign: "center",
   transition: "width 0.6s ease",
@@ -12684,11 +12684,11 @@ export const roundedTop = style({
   borderTopRightRadius: "0.25rem",
 });
 export const row = style({
-  MsFlexWrap: "wrap",
   display: "flex",
   flexWrap: "wrap",
   marginLeft: "-15px",
   marginRight: "-15px",
+  msFlexWrap: "wrap",
 });
 export const shadow = style({
   boxShadow: "0 0.5rem 1rem rgba(0,0,0,0.15)",
@@ -13091,7 +13091,6 @@ export const textXlRight = style({
   },
 });
 export const toast = style({
-  MsFlexPreferredSize: "350px",
   backgroundClip: "padding-box",
   backgroundColor: "rgba(255,255,255,0.85)",
   border: "1px solid rgba(0,0,0,0.1)",
@@ -13101,6 +13100,7 @@ export const toast = style({
   flexBasis: "350px",
   fontSize: "0.875rem",
   maxWidth: "350px",
+  msFlexPreferredSize: "350px",
   opacity: "1",
   selectors: {
     "&:not(:last-child)": {
@@ -13112,7 +13112,6 @@ export const toastBody = style({
   padding: "0.75rem",
 });
 export const toastHeader = style({
-  MsFlexAlign: "center",
   alignItems: "center",
   backgroundClip: "padding-box",
   backgroundColor: "rgba(255,255,255,0.85)",
@@ -13121,6 +13120,7 @@ export const toastHeader = style({
   borderTopRightRadius: "calc(0.25rem-1px)",
   color: "6c757d",
   display: "flex",
+  msFlexAlign: "center",
   padding: "0.25rem 0.75rem",
 });
 export const tooltip = style({
@@ -13169,14 +13169,14 @@ export const userSelectAll = style({
 });
 export const userSelectAuto = style({
   MozUserSelect: "auto",
-  MsUserSelect: "auto",
   WebkitUserSelect: "auto",
+  msUserSelect: "auto",
   userSelect: "auto",
 });
 export const userSelectNone = style({
   MozUserSelect: "none",
-  MsUserSelect: "none",
   WebkitUserSelect: "none",
+  msUserSelect: "none",
   userSelect: "none",
 });
 export const validFeedback = style({
