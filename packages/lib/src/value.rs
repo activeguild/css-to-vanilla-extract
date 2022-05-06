@@ -1194,6 +1194,8 @@ pub fn get_declaration(
     if declaration_name.starts_with("--") {
         let formatted_declaration_name = format!("\"{}\"", &declaration_name);
         declaration_name = formatted_declaration_name
+    } else if declaration_name.starts_with("-ms") {
+        declaration_name = declaration_name.to_case(Case::Camel)
     } else if declaration_name.starts_with('-') {
         declaration_name = declaration_name.to_case(Case::Pascal)
     } else {
@@ -1272,12 +1274,13 @@ mod tests {
 
     #[test]
     fn ast_to_vanilla_extract_03() {
-        let parsed_css = parse_css("ol ol{margin-bottom: 0;}").unwrap();
+        let parsed_css =
+            parse_css("ol ol{margin-bottom: 0;-ms-overflow-style: scrollbar;}").unwrap();
 
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"ol ol\", {\n  marginBottom:\"0\",\n},\n);\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"ol ol\", {\n  marginBottom:\"0\",\n  msOverflowStyle:\"scrollbar\",\n},\n);\n",
             result
         )
     }
