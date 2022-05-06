@@ -1,6 +1,6 @@
 {
   "name": "css-to-vanilla-extract-workspace",
-  "version": "0.0.15-alpha",
+  "version": "0.0.16-alpha",
   "description": "Convert css (scss/sass) to vanilla-extract.",
   "scripts": {
     "playground": "wireit",
