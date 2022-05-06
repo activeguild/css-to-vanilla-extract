@@ -117,7 +117,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         let components = get_component_value(block_value);
                         for (key, value) in components[0].key_value_pair.clone().into_iter() {
                             if key == "fontFamily" {
-                                fontface_key.push_str(&value.to_case(Case::Camel))
+                                fontface_key.push_str(&value);
                             } else {
                                 block_values.push_str(&wrap_property(key, value));
                             }
