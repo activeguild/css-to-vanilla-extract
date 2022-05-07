@@ -13278,9 +13278,11 @@ export const wasValidated = style({
   ":invalid": {
     zIndex: "2",
   },
-  ":invalid:checked": {
+  selectors: {
+     "&:invalid:checked": {
     backgroundColor: "dc3545",
-  },
+  }, 
+  }
   ":invalid:focus": {
     zIndex: "3",
   },
