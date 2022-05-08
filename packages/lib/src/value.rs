@@ -301,115 +301,19 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
         }
     }
 
-    for (key, value) in global_rule_map.into_iter() {
-        let mut properties = String::new();
-        if !value.ve.is_empty() {
-            properties.push_str(&value.ve);
-        }
+    ve.push_str(&finish_to_vanilla_extract(global_rule_map, true));
+    ve.push_str(&finish_to_vanilla_extract(rule_map, false));
 
-        for (key, value) in value.key_value_pair.into_iter() {
-            properties.push_str(&wrap_property(key, value));
-        }
+    ve.insert_str(
+        0,
+        "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\n",
+    );
 
-        if !value.key_value_pair_in_pseudo.is_empty() {
-            let mut pseudo_rule = String::new();
-            for (key, value) in value.key_value_pair_in_pseudo.into_iter() {
-                let mut properties = String::new();
-                for (key, value) in value.into_iter() {
-                    properties.push_str(&wrap_property(key, value));
-                }
-                pseudo_rule.push_str(&wrap_properties_with_colon(key, properties));
-            }
-            properties.push_str(&pseudo_rule);
-        }
+    ve
+}
 
-        if !value.media.is_empty() || !value.selectors_in_media.is_empty() {
-            let mut rule = String::new();
-            if !value.key_value_pair_in_media.is_empty() {
-                for (key, value) in value.key_value_pair_in_media.into_iter() {
-                    rule.push_str(&wrap_property(key, value));
-                }
-            }
-
-            for (_key, selectors_value) in value.selectors_in_media.into_iter() {
-                let mut selectors_rule = String::new();
-                for (key, value) in selectors_value.into_iter() {
-                    let mut properties = String::new();
-                    for (key, value) in value.into_iter() {
-                        properties.push_str(&wrap_property(key, value));
-                    }
-                    selectors_rule
-                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
-                }
-
-                if !selectors_rule.is_empty() {
-                    rule.push_str(&wrap_properties_with_colon(
-                        "selectors".to_string(),
-                        selectors_rule,
-                    ));
-                }
-            }
-
-            properties.push_str(&wrap_properties_with_colon(
-                String::from("@media"),
-                wrap_properties_with_colon(value.media, rule),
-            ));
-        }
-        if !value.supports.is_empty() || !value.selectors_in_supports.is_empty() {
-            let mut rule = String::new();
-            for (key, value) in value.key_value_pair_in_supports.into_iter() {
-                rule.push_str(&wrap_property(key, value));
-            }
-
-            for (_key, selectors_value) in value.selectors_in_supports.into_iter() {
-                let mut selectors_rule = String::new();
-                for (key, value) in selectors_value.into_iter() {
-                    let mut properties = String::new();
-                    for (key, value) in value.into_iter() {
-                        properties.push_str(&wrap_property(key, value));
-                    }
-                    selectors_rule
-                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
-                }
-
-                if !selectors_rule.is_empty() {
-                    rule.push_str(&wrap_properties_with_colon(
-                        "selectors".to_string(),
-                        selectors_rule,
-                    ));
-                }
-            }
-
-            properties.push_str(&wrap_properties_with_colon(
-                String::from("@supports"),
-                wrap_properties_with_colon(value.supports, rule),
-            ));
-        }
-
-        if !value.key_value_pair_in_selectors.is_empty() {
-            let mut selectors = String::new();
-
-            for (key, value) in value.key_value_pair_in_selectors.into_iter() {
-                let mut properties = String::new();
-                for (key, value) in value.into_iter() {
-                    properties.push_str(&wrap_property(key, value));
-                }
-                selectors.push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
-            }
-
-            properties.push_str(&wrap_properties_with_colon(
-                "selectors".to_string(),
-                selectors,
-            ))
-        }
-
-        // No output for unsupported rules.
-        if !key.is_empty() {
-            ve.push_str(&wrap_global_style_func(wrap_properties_with_comma(
-                key, properties,
-            )));
-        }
-    }
+fn finish_to_vanilla_extract(rule_map: BTreeMap<String, RuleMapValue>, is_global: bool) -> String {
+    let mut ve = String::new();
 
     for (key, value) in rule_map.into_iter() {
         let mut properties = String::new();
@@ -435,6 +339,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
 
         if !value.media.is_empty() || !value.selectors_in_media.is_empty() {
             let mut rule = String::new();
+
             for (key, value) in value.key_value_pair_in_media.into_iter() {
                 rule.push_str(&wrap_property(key, value));
             }
@@ -487,11 +392,13 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                     ));
                 }
             }
+
             properties.push_str(&wrap_properties_with_colon(
                 String::from("@supports"),
                 wrap_properties_with_colon(value.supports, rule),
             ));
         }
+
         if !value.key_value_pair_in_selectors.is_empty() {
             let mut selectors = String::new();
 
@@ -511,14 +418,15 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
 
         // No output for unsupported rules.
         if !key.is_empty() {
-            ve.push_str(&wrap_export_const(key, wrap_style_func(properties)));
+            if is_global {
+                ve.push_str(&wrap_global_style_func(wrap_properties_with_comma(
+                    key, properties,
+                )));
+            } else {
+                ve.push_str(&wrap_export_const(key, wrap_style_func(properties)));
+            }
         }
     }
-
-    ve.insert_str(
-        0,
-        "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\n",
-    );
 
     ve
 }
