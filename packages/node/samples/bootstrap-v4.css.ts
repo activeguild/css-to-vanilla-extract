@@ -2186,8 +2186,10 @@ export const breadcrumbItem = style({
     float: "left",
     paddingRight: "0.5rem",
   },
-  ":hover::before": {
-    textDecoration: "none",
+  selectors: {
+    "&:hover::before": {
+      textDecoration: "none",
+    },
   },
 });
 export const bsPopoverAuto = style({
@@ -4535,23 +4537,25 @@ export const customCheckbox = style({
   "::before": {
     borderRadius: "0.25rem",
   },
-  ":checked::after": {
-    backgroundImage:
-      "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e)",
-  },
-  ":disabled:checked::before": {
-    backgroundColor: "rgba(0,123,255,0.5)",
-  },
-  ":disabled:indeterminate::before": {
-    backgroundColor: "rgba(0,123,255,0.5)",
-  },
-  ":indeterminate::after": {
-    backgroundImage:
-      "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e)",
-  },
-  ":indeterminate::before": {
-    backgroundColor: "007bff",
-    borderColor: "007bff",
+  selectors: {
+    "&:checked::after": {
+      backgroundImage:
+        "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e)",
+    },
+    "&:disabled:checked::before": {
+      backgroundColor: "rgba(0,123,255,0.5)",
+    },
+    "&:disabled:indeterminate::before": {
+      backgroundColor: "rgba(0,123,255,0.5)",
+    },
+    "&:indeterminate::after": {
+      backgroundImage:
+        "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e)",
+    },
+    "&:indeterminate::before": {
+      backgroundColor: "007bff",
+      borderColor: "007bff",
+    },
   },
 });
 export const customControl = style({
@@ -4578,24 +4582,24 @@ export const customControlInput = style({
   "::before": {
     borderColor: "dc3545",
   },
-  ":checked::before": {
-    backgroundColor: "007bff",
-    borderColor: "007bff",
-    color: "fff",
-  },
   ":disabled": {
     color: "6c757d",
   },
-  ":disabled::before": {
-    backgroundColor: "e9ecef",
-  },
-  ":focus::before": {
-    boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
-  },
-  ":focus:not(:checked)::before": {
-    borderColor: "80bdff",
-  },
   selectors: {
+    "&:checked::before": {
+      backgroundColor: "007bff",
+      borderColor: "007bff",
+      color: "fff",
+    },
+    "&:disabled::before": {
+      backgroundColor: "e9ecef",
+    },
+    "&:focus::before": {
+      boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
+    },
+    "&:focus:not(:checked)::before": {
+      borderColor: "80bdff",
+    },
     "&:not(:disabled):active::before": {
       backgroundColor: "b3d7ff",
       borderColor: "b3d7ff",
@@ -4705,12 +4709,14 @@ export const customRadio = style({
   "::before": {
     borderRadius: "50%",
   },
-  ":checked::after": {
-    backgroundImage:
-      "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e)",
-  },
-  ":disabled:checked::before": {
-    backgroundColor: "rgba(0,123,255,0.5)",
+  selectors: {
+    "&:checked::after": {
+      backgroundImage:
+        "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e)",
+    },
+    "&:disabled:checked::before": {
+      backgroundColor: "rgba(0,123,255,0.5)",
+    },
   },
 });
 export const customRange = style({
@@ -4724,9 +4730,6 @@ export const customRange = style({
   "::-moz-range-thumb": {
     MozTransition: "none",
     transition: "none",
-  },
-  "::-moz-range-thumb:active": {
-    backgroundColor: "b3d7ff",
   },
   "::-moz-range-track": {
     backgroundColor: "dee2e6",
@@ -4750,9 +4753,6 @@ export const customRange = style({
     msTransition: "none",
     transition: "none",
   },
-  "::-ms-thumb:active": {
-    backgroundColor: "b3d7ff",
-  },
   "::-ms-track": {
     backgroundColor: "transparent",
     borderColor: "transparent",
@@ -4775,39 +4775,45 @@ export const customRange = style({
     WebkitTransition: "none",
     transition: "none",
   },
-  "::-webkit-slider-thumb:active": {
-    backgroundColor: "b3d7ff",
-  },
-  ":disabled::-moz-range-thumb": {
-    backgroundColor: "adb5bd",
-  },
-  ":disabled::-moz-range-track": {
-    cursor: "default",
-  },
-  ":disabled::-ms-thumb": {
-    backgroundColor: "adb5bd",
-  },
-  ":disabled::-webkit-slider-runnable-track": {
-    cursor: "default",
-  },
-  ":disabled::-webkit-slider-thumb": {
-    backgroundColor: "adb5bd",
-  },
   ":focus": {
     outline: "0",
-  },
-  ":focus::-moz-range-thumb": {
-    boxShadow: "0 0 0 1px fff , 0 0 0 0.2rem rgba(0,123,255,0.25)",
-  },
-  ":focus::-ms-thumb": {
-    boxShadow: "0 0 0 1px fff , 0 0 0 0.2rem rgba(0,123,255,0.25)",
-  },
-  ":focus::-webkit-slider-thumb": {
-    boxShadow: "0 0 0 1px fff , 0 0 0 0.2rem rgba(0,123,255,0.25)",
   },
   selectors: {
     "&::-moz-focus-outer": {
       border: "0",
+    },
+    "&::-moz-range-thumb:active": {
+      backgroundColor: "b3d7ff",
+    },
+    "&::-ms-thumb:active": {
+      backgroundColor: "b3d7ff",
+    },
+    "&::-webkit-slider-thumb:active": {
+      backgroundColor: "b3d7ff",
+    },
+    "&:disabled::-moz-range-thumb": {
+      backgroundColor: "adb5bd",
+    },
+    "&:disabled::-moz-range-track": {
+      cursor: "default",
+    },
+    "&:disabled::-ms-thumb": {
+      backgroundColor: "adb5bd",
+    },
+    "&:disabled::-webkit-slider-runnable-track": {
+      cursor: "default",
+    },
+    "&:disabled::-webkit-slider-thumb": {
+      backgroundColor: "adb5bd",
+    },
+    "&:focus::-moz-range-thumb": {
+      boxShadow: "0 0 0 1px fff , 0 0 0 0.2rem rgba(0,123,255,0.25)",
+    },
+    "&:focus::-ms-thumb": {
+      boxShadow: "0 0 0 1px fff , 0 0 0 0.2rem rgba(0,123,255,0.25)",
+    },
+    "&:focus::-webkit-slider-thumb": {
+      boxShadow: "0 0 0 1px fff , 0 0 0 0.2rem rgba(0,123,255,0.25)",
     },
   },
 });
@@ -4841,10 +4847,6 @@ export const customSelect = style({
     boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
     outline: "0",
   },
-  ":focus::-ms-value": {
-    backgroundColor: "fff",
-    color: "495057",
-  },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
@@ -4857,6 +4859,10 @@ export const customSelect = style({
     },
     "&::-ms-expand": {
       display: "none",
+    },
+    "&:focus::-ms-value": {
+      backgroundColor: "fff",
+      color: "495057",
     },
     "&[multiple]": {
       backgroundImage: "none",
@@ -4895,13 +4901,15 @@ export const customSwitch = style({
     pointerEvents: "all",
     width: "1.75rem",
   },
-  ":checked::after": {
-    WebkitTransform: "translateX(0.75rem)",
-    backgroundColor: "fff",
-    transform: "translateX(0.75rem)",
-  },
-  ":disabled:checked::before": {
-    backgroundColor: "rgba(0,123,255,0.5)",
+  selectors: {
+    "&:checked::after": {
+      WebkitTransform: "translateX(0.75rem)",
+      backgroundColor: "fff",
+      transform: "translateX(0.75rem)",
+    },
+    "&:disabled:checked::before": {
+      backgroundColor: "rgba(0,123,255,0.5)",
+    },
   },
 });
 export const dBlock = style({
@@ -5443,8 +5451,10 @@ export const dropdownToggle = style({
     marginLeft: "0.255em",
     verticalAlign: "0.255em",
   },
-  ":empty::after": {
-    marginLeft: "0",
+  selectors: {
+    "&:empty::after": {
+      marginLeft: "0",
+    },
   },
 });
 export const dropdownToggleSplit = style({
@@ -5467,8 +5477,10 @@ export const dropleft = style({
   "::before": {
     marginRight: "0",
   },
-  ":empty::after": {
-    marginLeft: "0",
+  selectors: {
+    "&:empty::after": {
+      marginLeft: "0",
+    },
   },
 });
 export const dropright = style({
@@ -5481,8 +5493,10 @@ export const dropright = style({
   "::after": {
     marginLeft: "0",
   },
-  ":empty::after": {
-    marginLeft: "0",
+  selectors: {
+    "&:empty::after": {
+      marginLeft: "0",
+    },
   },
 });
 export const dropup = style({
@@ -5494,8 +5508,10 @@ export const dropup = style({
   "::after": {
     marginLeft: "0",
   },
-  ":empty::after": {
-    marginLeft: "0",
+  selectors: {
+    "&:empty::after": {
+      marginLeft: "0",
+    },
   },
 });
 export const embedResponsive = style({
@@ -6386,22 +6402,22 @@ export const inputGroup = style({
   msFlexWrap: "wrap",
   position: "relative",
   width: "1%",
-  ":first-child:not(:first-child)": {
-    borderBottomLeftRadius: "0",
-    borderTopLeftRadius: "0",
-  },
   ":focus": {
     zIndex: "4",
   },
-  ":last-child:not(:last-child)": {
-    borderBottomRightRadius: "0",
-    borderTopRightRadius: "0",
-  },
-  ":last-child:not(:last-child):not": {
-    borderBottomRightRadius: "0",
-    borderTopRightRadius: "0",
-  },
   selectors: {
+    "&:first-child:not(:first-child)": {
+      borderBottomLeftRadius: "0",
+      borderTopLeftRadius: "0",
+    },
+    "&:last-child:not(:last-child)": {
+      borderBottomRightRadius: "0",
+      borderTopRightRadius: "0",
+    },
+    "&:last-child:not(:last-child):not": {
+      borderBottomRightRadius: "0",
+      borderTopRightRadius: "0",
+    },
     "&:not(:first-child)": {
       borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
@@ -13229,41 +13245,43 @@ export const wasValidated = style({
   ":invalid": {
     borderColor: "dc3545",
   },
-  ":invalid::before": {
-    borderColor: "dc3545",
-  },
-  ":invalid:checked::before": {
-    backgroundColor: "e4606d",
-    borderColor: "e4606d",
-  },
-  ":invalid:focus": {
-    borderColor: "dc3545",
-    boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
-  },
-  ":invalid:focus::before": {
-    boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
-  },
-  ":invalid:focus:not(:checked)::before": {
-    borderColor: "dc3545",
-  },
   ":valid": {
     borderColor: "28a745",
   },
-  ":valid::before": {
-    borderColor: "28a745",
-  },
-  ":valid:checked::before": {
-    backgroundColor: "34ce57",
-    borderColor: "34ce57",
-  },
-  ":valid:focus": {
-    borderColor: "28a745",
-    boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
-  },
-  ":valid:focus::before": {
-    boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
-  },
-  ":valid:focus:not(:checked)::before": {
-    borderColor: "28a745",
+  selectors: {
+    "&:invalid::before": {
+      borderColor: "dc3545",
+    },
+    "&:invalid:checked::before": {
+      backgroundColor: "e4606d",
+      borderColor: "e4606d",
+    },
+    "&:invalid:focus": {
+      borderColor: "dc3545",
+      boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
+    },
+    "&:invalid:focus::before": {
+      boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
+    },
+    "&:invalid:focus:not(:checked)::before": {
+      borderColor: "dc3545",
+    },
+    "&:valid::before": {
+      borderColor: "28a745",
+    },
+    "&:valid:checked::before": {
+      backgroundColor: "34ce57",
+      borderColor: "34ce57",
+    },
+    "&:valid:focus": {
+      borderColor: "28a745",
+      boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
+    },
+    "&:valid:focus::before": {
+      boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
+    },
+    "&:valid:focus:not(:checked)::before": {
+      borderColor: "28a745",
+    },
   },
 });

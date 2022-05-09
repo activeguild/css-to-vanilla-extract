@@ -2323,16 +2323,10 @@ export const btnCheck = style({
     borderColor: "212529",
     color: "fff",
   },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(33,37,41,0.5)",
-  },
   ":checked": {
     backgroundColor: "212529",
     borderColor: "212529",
     color: "fff",
-  },
-  ":checked:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(33,37,41,0.5)",
   },
   ":disabled": {
     filter: "none",
@@ -2343,6 +2337,12 @@ export const btnCheck = style({
     boxShadow: "0 0 0 0.25rem rgba(33,37,41,0.5)",
   },
   selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(33,37,41,0.5)",
+    },
+    "&:checked:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(33,37,41,0.5)",
+    },
     "&[disabled]": {
       filter: "none",
       opacity: "0.65",
@@ -2395,9 +2395,6 @@ export const btnDanger = style({
     borderColor: "a52834",
     color: "fff",
   },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(225,83,97,0.5)",
-  },
   ":disabled": {
     backgroundColor: "dc3545",
     borderColor: "dc3545",
@@ -2411,6 +2408,11 @@ export const btnDanger = style({
     borderColor: "b02a37",
     color: "fff",
   },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(225,83,97,0.5)",
+    },
+  },
 });
 export const btnDark = style({
   backgroundColor: "212529",
@@ -2420,9 +2422,6 @@ export const btnDark = style({
     backgroundColor: "1a1e21",
     borderColor: "191c1f",
     color: "fff",
-  },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(66,70,73,0.5)",
   },
   ":disabled": {
     backgroundColor: "212529",
@@ -2436,6 +2435,11 @@ export const btnDark = style({
     backgroundColor: "1c1f23",
     borderColor: "1a1e21",
     color: "fff",
+  },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(66,70,73,0.5)",
+    },
   },
 });
 export const btnGroup = style({
@@ -2541,9 +2545,6 @@ export const btnInfo = style({
     borderColor: "25cff2",
     color: "000",
   },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(11,172,204,0.5)",
-  },
   ":disabled": {
     backgroundColor: "0dcaf0",
     borderColor: "0dcaf0",
@@ -2556,6 +2557,11 @@ export const btnInfo = style({
     backgroundColor: "31d2f2",
     borderColor: "25cff2",
     color: "000",
+  },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(11,172,204,0.5)",
+    },
   },
 });
 export const btnLg = style({
@@ -2574,9 +2580,6 @@ export const btnLight = style({
     borderColor: "f9fafb",
     color: "000",
   },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(211,212,213,0.5)",
-  },
   ":disabled": {
     backgroundColor: "f8f9fa",
     borderColor: "f8f9fa",
@@ -2589,6 +2592,11 @@ export const btnLight = style({
     backgroundColor: "f9fafb",
     borderColor: "f9fafb",
     color: "000",
+  },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(211,212,213,0.5)",
+    },
   },
 });
 export const btnLink = style({
@@ -2611,9 +2619,6 @@ export const btnOutlineDanger = style({
     borderColor: "dc3545",
     color: "fff",
   },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.5)",
-  },
   ":disabled": {
     backgroundColor: "transparent",
     color: "dc3545",
@@ -2626,6 +2631,11 @@ export const btnOutlineDanger = style({
     borderColor: "dc3545",
     color: "fff",
   },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.5)",
+    },
+  },
 });
 export const btnOutlineDark = style({
   backgroundColor: "transparent",
@@ -2635,9 +2645,6 @@ export const btnOutlineDark = style({
     backgroundColor: "212529",
     borderColor: "212529",
     color: "fff",
-  },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(33,37,41,0.5)",
   },
   ":disabled": {
     backgroundColor: "transparent",
@@ -2651,6 +2658,11 @@ export const btnOutlineDark = style({
     borderColor: "212529",
     color: "fff",
   },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(33,37,41,0.5)",
+    },
+  },
 });
 export const btnOutlineInfo = style({
   backgroundColor: "transparent",
@@ -2660,9 +2672,6 @@ export const btnOutlineInfo = style({
     backgroundColor: "0dcaf0",
     borderColor: "0dcaf0",
     color: "000",
-  },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(13,202,240,0.5)",
   },
   ":disabled": {
     backgroundColor: "transparent",
@@ -2676,6 +2685,11 @@ export const btnOutlineInfo = style({
     borderColor: "0dcaf0",
     color: "000",
   },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(13,202,240,0.5)",
+    },
+  },
 });
 export const btnOutlineLight = style({
   backgroundColor: "transparent",
@@ -2685,9 +2699,6 @@ export const btnOutlineLight = style({
     backgroundColor: "f8f9fa",
     borderColor: "f8f9fa",
     color: "000",
-  },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(248,249,250,0.5)",
   },
   ":disabled": {
     backgroundColor: "transparent",
@@ -2701,6 +2712,11 @@ export const btnOutlineLight = style({
     borderColor: "f8f9fa",
     color: "000",
   },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(248,249,250,0.5)",
+    },
+  },
 });
 export const btnOutlinePrimary = style({
   backgroundColor: "transparent",
@@ -2710,9 +2726,6 @@ export const btnOutlinePrimary = style({
     backgroundColor: "0d6efd",
     borderColor: "0d6efd",
     color: "fff",
-  },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.5)",
   },
   ":disabled": {
     backgroundColor: "transparent",
@@ -2726,6 +2739,11 @@ export const btnOutlinePrimary = style({
     borderColor: "0d6efd",
     color: "fff",
   },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.5)",
+    },
+  },
 });
 export const btnOutlineSecondary = style({
   backgroundColor: "transparent",
@@ -2735,9 +2753,6 @@ export const btnOutlineSecondary = style({
     backgroundColor: "6c757d",
     borderColor: "6c757d",
     color: "fff",
-  },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(108,117,125,0.5)",
   },
   ":disabled": {
     backgroundColor: "transparent",
@@ -2751,6 +2766,11 @@ export const btnOutlineSecondary = style({
     borderColor: "6c757d",
     color: "fff",
   },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(108,117,125,0.5)",
+    },
+  },
 });
 export const btnOutlineSuccess = style({
   backgroundColor: "transparent",
@@ -2760,9 +2780,6 @@ export const btnOutlineSuccess = style({
     backgroundColor: "198754",
     borderColor: "198754",
     color: "fff",
-  },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(25,135,84,0.5)",
   },
   ":disabled": {
     backgroundColor: "transparent",
@@ -2776,6 +2793,11 @@ export const btnOutlineSuccess = style({
     borderColor: "198754",
     color: "fff",
   },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(25,135,84,0.5)",
+    },
+  },
 });
 export const btnOutlineWarning = style({
   backgroundColor: "transparent",
@@ -2785,9 +2807,6 @@ export const btnOutlineWarning = style({
     backgroundColor: "ffc107",
     borderColor: "ffc107",
     color: "000",
-  },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(255,193,7,0.5)",
   },
   ":disabled": {
     backgroundColor: "transparent",
@@ -2801,6 +2820,11 @@ export const btnOutlineWarning = style({
     borderColor: "ffc107",
     color: "000",
   },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(255,193,7,0.5)",
+    },
+  },
 });
 export const btnPrimary = style({
   backgroundColor: "0d6efd",
@@ -2810,9 +2834,6 @@ export const btnPrimary = style({
     backgroundColor: "0a58ca",
     borderColor: "0a53be",
     color: "fff",
-  },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(49,132,253,0.5)",
   },
   ":disabled": {
     backgroundColor: "0d6efd",
@@ -2827,6 +2848,11 @@ export const btnPrimary = style({
     borderColor: "0a58ca",
     color: "fff",
   },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(49,132,253,0.5)",
+    },
+  },
 });
 export const btnSecondary = style({
   backgroundColor: "6c757d",
@@ -2836,9 +2862,6 @@ export const btnSecondary = style({
     backgroundColor: "565e64",
     borderColor: "51585e",
     color: "fff",
-  },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(130,138,145,0.5)",
   },
   ":disabled": {
     backgroundColor: "6c757d",
@@ -2852,6 +2875,11 @@ export const btnSecondary = style({
     backgroundColor: "5c636a",
     borderColor: "565e64",
     color: "fff",
+  },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(130,138,145,0.5)",
+    },
   },
 });
 export const btnSm = style({
@@ -2870,9 +2898,6 @@ export const btnSuccess = style({
     borderColor: "13653f",
     color: "fff",
   },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(60,153,110,0.5)",
-  },
   ":disabled": {
     backgroundColor: "198754",
     borderColor: "198754",
@@ -2885,6 +2910,11 @@ export const btnSuccess = style({
     backgroundColor: "157347",
     borderColor: "146c43",
     color: "fff",
+  },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(60,153,110,0.5)",
+    },
   },
 });
 export const btnToolbar = style({
@@ -2902,9 +2932,6 @@ export const btnWarning = style({
     borderColor: "ffc720",
     color: "000",
   },
-  ":active:focus": {
-    boxShadow: "0 0 0 0.25rem rgba(217,164,6,0.5)",
-  },
   ":disabled": {
     backgroundColor: "ffc107",
     borderColor: "ffc107",
@@ -2917,6 +2944,11 @@ export const btnWarning = style({
     backgroundColor: "ffca2c",
     borderColor: "ffc720",
     color: "000",
+  },
+  selectors: {
+    "&:active:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(217,164,6,0.5)",
+    },
   },
 });
 export const captionTop = style({
@@ -4740,8 +4772,10 @@ export const dropdownToggle = style({
     marginLeft: "0.255em",
     verticalAlign: "0.255em",
   },
-  ":empty::after": {
-    marginLeft: "0",
+  selectors: {
+    "&:empty::after": {
+      marginLeft: "0",
+    },
   },
 });
 export const dropdownToggleSplit = style({
@@ -4756,10 +4790,10 @@ export const dropend = style({
   "::after": {
     marginLeft: "0",
   },
-  ":empty::after": {
-    marginLeft: "0",
-  },
   selectors: {
+    "&:empty::after": {
+      marginLeft: "0",
+    },
     "&[data-bs-popper]": {
       left: "100%",
       marginLeft: "0.125rem",
@@ -4777,10 +4811,10 @@ export const dropstart = style({
   "::before": {
     marginRight: "0",
   },
-  ":empty::after": {
-    marginLeft: "0",
-  },
   selectors: {
+    "&:empty::after": {
+      marginLeft: "0",
+    },
     "&[data-bs-popper]": {
       left: "auto",
       marginRight: "0.125rem",
@@ -4795,10 +4829,10 @@ export const dropup = style({
   "::after": {
     marginLeft: "0",
   },
-  ":empty::after": {
-    marginLeft: "0",
-  },
   selectors: {
+    "&:empty::after": {
+      marginLeft: "0",
+    },
     "&[data-bs-popper]": {
       bottom: "100%",
       marginBottom: "0.125rem",
@@ -5463,14 +5497,6 @@ export const formCheckInput = style({
   ":checked": {
     backgroundColor: "dc3545",
   },
-  ":checked[type='checkbox']": {
-    backgroundImage:
-      "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e)",
-  },
-  ":checked[type='radio']": {
-    backgroundImage:
-      "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e)",
-  },
   ":disabled": {
     opacity: "0.5",
   },
@@ -5478,6 +5504,14 @@ export const formCheckInput = style({
     boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.25)",
   },
   selectors: {
+    "&:checked[type='checkbox']": {
+      backgroundImage:
+        "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e)",
+    },
+    "&:checked[type='radio']": {
+      backgroundImage:
+        "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e)",
+    },
     "&[disabled]": {
       opacity: "0.5",
     },
@@ -5534,12 +5568,6 @@ export const formControl = style({
     borderColor: "dc3545",
     boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.25)",
   },
-  ":hover:not(:disabled):not([readonly])::-webkit-file-upload-button": {
-    backgroundColor: "dde0e3",
-  },
-  ":hover:not(:disabled):not([readonly])::file-selector-button": {
-    backgroundColor: "dde0e3",
-  },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
@@ -5591,6 +5619,12 @@ export const formControl = style({
       pointerEvents: "none",
       transition:
         "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+    },
+    "&:hover:not(:disabled):not([readonly])::-webkit-file-upload-button": {
+      backgroundColor: "dde0e3",
+    },
+    "&:hover:not(:disabled):not([readonly])::file-selector-button": {
+      backgroundColor: "dde0e3",
     },
     "&[readonly]": {
       backgroundColor: "e9ecef",
@@ -5722,9 +5756,6 @@ export const formRange = style({
     MozTransition: "none",
     transition: "none",
   },
-  "::-moz-range-thumb:active": {
-    backgroundColor: "b6d4fe",
-  },
   "::-moz-range-track": {
     backgroundColor: "dee2e6",
     borderColor: "transparent",
@@ -5747,30 +5778,33 @@ export const formRange = style({
     WebkitTransition: "none",
     transition: "none",
   },
-  "::-webkit-slider-thumb:active": {
-    backgroundColor: "b6d4fe",
-  },
   ":disabled": {
     pointerEvents: "none",
-  },
-  ":disabled::-moz-range-thumb": {
-    backgroundColor: "adb5bd",
-  },
-  ":disabled::-webkit-slider-thumb": {
-    backgroundColor: "adb5bd",
   },
   ":focus": {
     outline: "0",
   },
-  ":focus::-moz-range-thumb": {
-    boxShadow: "0 0 0 1px fff , 0 0 0 0.25rem rgba(13,110,253,0.25)",
-  },
-  ":focus::-webkit-slider-thumb": {
-    boxShadow: "0 0 0 1px fff , 0 0 0 0.25rem rgba(13,110,253,0.25)",
-  },
   selectors: {
     "&::-moz-focus-outer": {
       border: "0",
+    },
+    "&::-moz-range-thumb:active": {
+      backgroundColor: "b6d4fe",
+    },
+    "&::-webkit-slider-thumb:active": {
+      backgroundColor: "b6d4fe",
+    },
+    "&:disabled::-moz-range-thumb": {
+      backgroundColor: "adb5bd",
+    },
+    "&:disabled::-webkit-slider-thumb": {
+      backgroundColor: "adb5bd",
+    },
+    "&:focus::-moz-range-thumb": {
+      boxShadow: "0 0 0 1px fff , 0 0 0 0.25rem rgba(13,110,253,0.25)",
+    },
+    "&:focus::-webkit-slider-thumb": {
+      boxShadow: "0 0 0 1px fff , 0 0 0 0.25rem rgba(13,110,253,0.25)",
     },
   },
 });
@@ -13278,49 +13312,49 @@ export const wasValidated = style({
   ":invalid": {
     zIndex: "2",
   },
-  selectors: {
-     "&:invalid:checked": {
-    backgroundColor: "dc3545",
-  }, 
-  }
-  ":invalid:focus": {
-    zIndex: "3",
-  },
-  ":invalid:not([multiple]):not([size])": {
-    backgroundImage:
-      "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
-    backgroundPosition: "right 0.75rem center , center right 2.25rem",
-    backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-    paddingRight: "4.125rem",
-  },
-  ":invalid:not([multiple])[size='1']": {
-    backgroundImage:
-      "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
-    backgroundPosition: "right 0.75rem center , center right 2.25rem",
-    backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-    paddingRight: "4.125rem",
-  },
   ":valid": {
     zIndex: "1",
   },
-  ":valid:checked": {
-    backgroundColor: "198754",
-  },
-  ":valid:focus": {
-    zIndex: "3",
-  },
-  ":valid:not([multiple]):not([size])": {
-    backgroundImage:
-      "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
-    backgroundPosition: "right 0.75rem center , center right 2.25rem",
-    backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-    paddingRight: "4.125rem",
-  },
-  ":valid:not([multiple])[size='1']": {
-    backgroundImage:
-      "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
-    backgroundPosition: "right 0.75rem center , center right 2.25rem",
-    backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-    paddingRight: "4.125rem",
+  selectors: {
+    "&:invalid:checked": {
+      backgroundColor: "dc3545",
+    },
+    "&:invalid:focus": {
+      zIndex: "3",
+    },
+    "&:invalid:not([multiple]):not([size])": {
+      backgroundImage:
+        "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
+      backgroundPosition: "right 0.75rem center , center right 2.25rem",
+      backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
+      paddingRight: "4.125rem",
+    },
+    "&:invalid:not([multiple])[size='1']": {
+      backgroundImage:
+        "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
+      backgroundPosition: "right 0.75rem center , center right 2.25rem",
+      backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
+      paddingRight: "4.125rem",
+    },
+    "&:valid:checked": {
+      backgroundColor: "198754",
+    },
+    "&:valid:focus": {
+      zIndex: "3",
+    },
+    "&:valid:not([multiple]):not([size])": {
+      backgroundImage:
+        "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
+      backgroundPosition: "right 0.75rem center , center right 2.25rem",
+      backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
+      paddingRight: "4.125rem",
+    },
+    "&:valid:not([multiple])[size='1']": {
+      backgroundImage:
+        "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
+      backgroundPosition: "right 0.75rem center , center right 2.25rem",
+      backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
+      paddingRight: "4.125rem",
+    },
   },
 });
