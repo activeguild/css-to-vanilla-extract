@@ -26,7 +26,7 @@ pub struct Rule {
     pub is_simple_pseudo: bool,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Default)]
 pub struct Complex {
     pub pseudo: String,
     pub key: String,
@@ -574,6 +574,7 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
                                     key.push_str(&attribute_as_str)
                                 } else {
                                     pseudo.push_str(&attribute_as_str);
+                                    is_simple_pseudo = is_simple_pseudo_func(&pseudo);
                                 }
                             }
                             swc_css_ast::SubclassSelector::PseudoClass(pseudo_class) => {
@@ -585,12 +586,9 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
                                 if is_global_style {
                                     key.push_str(&formatted_pseudo_class)
                                 } else {
-                                    if pseudo.is_empty()
-                                        & is_simple_pseudo_func(&formatted_pseudo_class)
-                                    {
-                                        is_simple_pseudo = true;
-                                    }
                                     pseudo.push_str(&formatted_pseudo_class);
+
+                                    is_simple_pseudo = is_simple_pseudo_func(&pseudo);
                                 }
 
                                 if let Some(children) = &pseudo_class.children {
@@ -598,6 +596,7 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
                                         get_pseudo_class_children(children, is_global_style);
                                     key.push_str(&psudo_class_children.key);
                                     pseudo.push_str(&psudo_class_children.pseudo);
+                                    is_simple_pseudo = psudo_class_children.is_simple_pseudo;
                                 }
                             }
                             swc_css_ast::SubclassSelector::PseudoElement(pseudo_element) => {
@@ -609,12 +608,9 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
                                 if is_global_style {
                                     key.push_str(&formatted_pseudo_element)
                                 } else {
-                                    if pseudo.is_empty()
-                                        & is_simple_pseudo_func(&formatted_pseudo_element)
-                                    {
-                                        is_simple_pseudo = true;
-                                    }
                                     pseudo.push_str(&formatted_pseudo_element);
+
+                                    is_simple_pseudo = is_simple_pseudo_func(&pseudo);
                                 }
                             }
                         }
@@ -662,6 +658,7 @@ fn get_pseudo_class_children(
     let mut ve = String::new();
     let mut pseudo = String::new();
     let mut key: String = String::new();
+    let mut is_simple_pseudo: bool = false;
 
     for pseudo_class_children in pseudo_class_children {
         match pseudo_class_children {
@@ -687,13 +684,13 @@ fn get_pseudo_class_children(
             swc_css_ast::PseudoClassSelectorChildren::Delimiter(_) => todo!(),
             swc_css_ast::PseudoClassSelectorChildren::SelectorList(selector_list) => {
                 let complex_selectors = get_complex_selectors(&selector_list.children);
-
                 for complex_selector in &complex_selectors {
                     if complex_selector.is_global_style {
                         ve.push_str(&complex_selector.key)
                     } else {
                         ve.push_str(&complex_selector.pseudo)
                     }
+                    is_simple_pseudo = complex_selector.is_simple_pseudo;
                 }
             }
             swc_css_ast::PseudoClassSelectorChildren::CompoundSelectorList(_) => todo!(),
@@ -714,7 +711,7 @@ fn get_pseudo_class_children(
         pseudo,
         key,
         is_global_style,
-        is_simple_pseudo: false,
+        is_simple_pseudo,
     }
 }
 
@@ -839,7 +836,6 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
             swc_css_ast::StyleBlock::Declaration(declaration) => {
                 let declaration_value = get_declaration(declaration);
                 key_value_pair.extend(declaration_value.0);
-                // ve.push_str(declaration_value.0.as_ref());
                 for var in declaration_value.1 {
                     vars.push(var);
                 }
@@ -1426,6 +1422,43 @@ mod tests {
 
         assert_eq!(
             "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalFontFace(\"Open Sans\", {\n  src:\"url(/fonts/OpenSans-Regular-webfont.woff2) format(woff2) , url(/fonts/OpenSans-Regular-webfont.woff) format(woff)\",\n},\n);\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_24() {
+        let parsed_css =
+            parse_css(".input:invalid:focus { box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);}")
+                .unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const input = style({\n\"selectors\": {\n\"&:invalid:focus\": {\n  boxShadow:\"0 0 0 0.25rem rgba(220,53,69,0.25)\",\n},\n},\n});\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_25() {
+        let parsed_css =
+            parse_css(".form:active::-moz-range-thumb {background-color: #b6d4fe;}").unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const form = style({\n\"selectors\": {\n\"&:active::-moz-range-thumb\": {\n  backgroundColor:\"b6d4fe\",\n},\n},\n});\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_26() {
+        let parsed_css =
+            parse_css(".input:checked[type=\"checkbox\"] {background-color: red;}").unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const input = style({\n\"selectors\": {\n\"&:checked[type='checkbox']\": {\n  backgroundColor:\"red\",\n},\n},\n});\n",
             result
         )
     }

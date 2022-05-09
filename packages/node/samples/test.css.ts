@@ -106,9 +106,11 @@ export const display5 = style({
 });
 export const foo = style({
   position: "absolute",
+});
+export const input = style({
   selectors: {
-    "&:invalid:checked": {
-      backgroundColor: "dc3545",
+    "&:invalid:focus": {
+      boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.25)",
     },
   },
 });
@@ -116,10 +118,6 @@ export const toast = style({
   selectors: {
     "&:not(:last-child)": {
       marginBottom: "0.75rem",
-    },
-    "&:invalid:not([multiple]):not([size])": {
-      backgroundPosition: "right 0.75rem center , center right 2.25rem",
-      paddingRight: "4.125rem",
     },
   },
 });
