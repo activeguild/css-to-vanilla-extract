@@ -1,9 +1,8 @@
 samples
 .github
 src
+release
 release.sh
-tools
 target
 Cargo.lock
 Cargo.toml
-./index.js
