@@ -320,7 +320,10 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
     ve
 }
 
-fn finish_to_vanilla_extract(rule_map: BTreeMap<String, RuleMapValue>, is_global: bool) -> String {
+fn finish_to_vanilla_extract(
+    rule_map: BTreeMap<String, RuleMapValue>,
+    is_global_rule: bool,
+) -> String {
     let mut ve = String::new();
 
     for (key, value) in rule_map.into_iter() {
@@ -434,7 +437,7 @@ fn finish_to_vanilla_extract(rule_map: BTreeMap<String, RuleMapValue>, is_global
 
         // No output for unsupported rules.
         if !key.is_empty() {
-            if is_global {
+            if is_global_rule {
                 ve.push_str(&wrap_global_style_func(wrap_properties_with_comma(
                     key, properties,
                 )));
@@ -449,9 +452,8 @@ fn finish_to_vanilla_extract(rule_map: BTreeMap<String, RuleMapValue>, is_global
 
 pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rule> {
     let mut result: Vec<Rule> = vec![];
-    let complexes: Vec<Complex> = get_complex_selectors(&qualfied_rule.prelude.children);
 
-    for complex in complexes {
+    for complex in get_complex_selectors(&qualfied_rule.prelude.children) {
         let mut ve: String = String::new();
         let mut key_value_pair: KeyValuePair = KeyValuePair::default();
         let mut key_value_pair_in_vars: KeyValuePair = KeyValuePair::default();
@@ -502,6 +504,7 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
             })
         }
     }
+
     result
 }
 
@@ -726,10 +729,7 @@ fn get_pseudo_class_children(
 pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec<Component> {
     let mut ve: String = String::new();
     let mut key_value_pair: KeyValuePair = KeyValuePair::new();
-    let key_value_pair_in_pseudo: BTreeMap<String, KeyValuePair> = BTreeMap::new();
     let mut key_value_pair_in_vars: KeyValuePair = KeyValuePair::new();
-    let key: String = String::new();
-    let is_global_style: bool = false;
 
     match component_value {
         swc_css_ast::ComponentValue::PreservedToken(preserved_token) => {
@@ -947,10 +947,10 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
         ve,
         key_value_pair,
         key_value_pair_in_vars,
-        key_value_pair_in_pseudo,
+        key_value_pair_in_pseudo: BTreeMap::default(),
         key_value_pair_in_selectors: BTreeMap::default(),
-        key,
-        is_global_style,
+        key: String::new(),
+        is_global_style: false,
     }]
     .to_vec()
 }
