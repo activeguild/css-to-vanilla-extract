@@ -478,13 +478,6 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
             ve.push_str(&component_values);
         }
 
-        // if !vars.is_empty() {
-        //     ve.push_str(&wrap_properties_with_colon(
-        //         String::from("vars"),
-        //         vars.concat(),
-        //     ));
-        // }
-
         if !key_value_pair_in_pseudo.is_empty() || !key_value_pair_in_selectors.is_empty() {
             result.push(Rule {
                 ve,
