@@ -20,6 +20,7 @@ pub struct Rule {
     pub ve: String,
     pub key: String,
     pub key_value_pair: KeyValuePair,
+    pub key_value_pair_in_vars: KeyValuePair,
     pub key_value_pair_in_pseudo: KeyValuePairInPseudo,
     pub key_value_pair_in_selectors: KeyValuePairInSelectors,
     pub is_global_style: bool,
@@ -38,9 +39,9 @@ pub struct Complex {
 pub struct Component {
     pub ve: String,
     pub key_value_pair: KeyValuePair,
+    pub key_value_pair_in_vars: KeyValuePair,
     pub key_value_pair_in_pseudo: KeyValuePairInPseudo,
     pub key_value_pair_in_selectors: KeyValuePairInSelectors,
-    pub vars: Vec<String>,
     pub key: String,
     pub is_global_style: bool,
 }
@@ -50,6 +51,7 @@ pub struct Component {
 pub struct RuleMapValue {
     pub ve: String,
     pub key_value_pair: KeyValuePair,
+    pub key_value_pair_in_vars: KeyValuePair,
     pub key_value_pair_in_media: KeyValuePair,
     pub key_value_pair_in_supports: KeyValuePair,
     pub key_value_pair_in_pseudo: KeyValuePairInPseudo,
@@ -78,6 +80,9 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         _global_rule_map.ve.push_str(&rule.ve);
                         _global_rule_map.key_value_pair.extend(rule.key_value_pair);
                         _global_rule_map
+                            .key_value_pair_in_vars
+                            .extend(rule.key_value_pair_in_vars);
+                        _global_rule_map
                             .key_value_pair_in_pseudo
                             .extend(rule.key_value_pair_in_pseudo);
                         _global_rule_map
@@ -89,6 +94,9 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                             .or_insert_with(RuleMapValue::default);
                         _rule_map.ve.push_str(&rule.ve);
                         _rule_map.key_value_pair.extend(rule.key_value_pair);
+                        _rule_map
+                            .key_value_pair_in_vars
+                            .extend(rule.key_value_pair_in_vars);
                         _rule_map
                             .key_value_pair_in_pseudo
                             .extend(rule.key_value_pair_in_pseudo);
@@ -321,6 +329,14 @@ fn finish_to_vanilla_extract(rule_map: BTreeMap<String, RuleMapValue>, is_global
             properties.push_str(&value.ve);
         }
 
+        if !value.key_value_pair_in_vars.is_empty() {
+            let mut var_rule = String::new();
+            for (key, value) in value.key_value_pair_in_vars.into_iter() {
+                var_rule.push_str(&wrap_property(format!("\"{}\"", key), value));
+            }
+            properties.push_str(&wrap_properties_with_colon("vars".to_string(), var_rule));
+        }
+
         for (key, value) in value.key_value_pair.into_iter() {
             properties.push_str(&wrap_property(key, value));
         }
@@ -437,8 +453,8 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
 
     for complex in complexes {
         let mut ve: String = String::new();
-        let mut vars: Vec<String> = vec![];
         let mut key_value_pair: KeyValuePair = KeyValuePair::default();
+        let mut key_value_pair_in_vars: KeyValuePair = KeyValuePair::default();
         let mut key_value_pair_in_pseudo: KeyValuePairInPseudo = BTreeMap::default();
         let mut key_value_pair_in_selectors: KeyValuePairInSelectors =
             KeyValuePairInSelectors::default();
@@ -449,10 +465,7 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
 
             component_values.push_str(&component_value[0].ve);
             key_value_pair.extend(component_value[0].key_value_pair.clone());
-
-            for var in component_value[0].vars.clone() {
-                vars.push(var);
-            }
+            key_value_pair_in_vars.extend(component_value[0].key_value_pair_in_vars.clone());
         }
 
         if !complex.pseudo.is_empty() {
@@ -465,18 +478,19 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
             ve.push_str(&component_values);
         }
 
-        if !vars.is_empty() {
-            ve.push_str(&wrap_properties_with_colon(
-                String::from("vars"),
-                vars.concat(),
-            ));
-        }
+        // if !vars.is_empty() {
+        //     ve.push_str(&wrap_properties_with_colon(
+        //         String::from("vars"),
+        //         vars.concat(),
+        //     ));
+        // }
 
         if !key_value_pair_in_pseudo.is_empty() || !key_value_pair_in_selectors.is_empty() {
             result.push(Rule {
                 ve,
                 key: complex.key,
                 key_value_pair: KeyValuePair::new(),
+                key_value_pair_in_vars,
                 key_value_pair_in_pseudo,
                 key_value_pair_in_selectors,
                 is_global_style: complex.is_global_style,
@@ -487,6 +501,7 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
                 ve,
                 key: complex.key,
                 key_value_pair,
+                key_value_pair_in_vars,
                 key_value_pair_in_pseudo,
                 key_value_pair_in_selectors,
                 is_global_style: complex.is_global_style,
@@ -719,7 +734,7 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
     let mut ve: String = String::new();
     let mut key_value_pair: KeyValuePair = KeyValuePair::new();
     let key_value_pair_in_pseudo: BTreeMap<String, KeyValuePair> = BTreeMap::new();
-    let mut vars: Vec<String> = vec![];
+    let mut key_value_pair_in_vars: KeyValuePair = KeyValuePair::new();
     let key: String = String::new();
     let is_global_style: bool = false;
 
@@ -797,10 +812,7 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
                 swc_css_ast::DeclarationOrAtRule::Declaration(declaration) => {
                     let declaration_value = get_declaration(declaration);
                     key_value_pair.extend(declaration_value.0);
-                    // ve.push_str(declaration_value.0.as_ref());
-                    for var in declaration_value.1 {
-                        vars.push(var);
-                    }
+                    key_value_pair_in_vars.extend(declaration_value.1);
                 }
                 swc_css_ast::DeclarationOrAtRule::AtRule(_) => todo!(),
                 swc_css_ast::DeclarationOrAtRule::Invalid(_) => {
@@ -816,10 +828,10 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
                     components.push(Component {
                         ve: rule.ve,
                         key_value_pair: rule.key_value_pair,
+                        key_value_pair_in_vars: rule.key_value_pair_in_vars,
                         key_value_pair_in_pseudo: rule.key_value_pair_in_pseudo,
                         key_value_pair_in_selectors: rule.key_value_pair_in_selectors,
                         key: rule.key,
-                        vars: vec![],
                         is_global_style: rule.is_global_style,
                     })
                 }
@@ -836,9 +848,7 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
             swc_css_ast::StyleBlock::Declaration(declaration) => {
                 let declaration_value = get_declaration(declaration);
                 key_value_pair.extend(declaration_value.0);
-                for var in declaration_value.1 {
-                    vars.push(var);
-                }
+                key_value_pair_in_vars.extend(declaration_value.1);
             }
             swc_css_ast::StyleBlock::QualifiedRule(qualified_rule) => {
                 for rule in get_qualified_rule(qualified_rule) {
@@ -943,9 +953,9 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
     [Component {
         ve,
         key_value_pair,
+        key_value_pair_in_vars,
         key_value_pair_in_pseudo,
         key_value_pair_in_selectors: BTreeMap::default(),
-        vars,
         key,
         is_global_style,
     }]
@@ -1069,11 +1079,9 @@ pub fn get_function(function: &swc_css_ast::Function) -> String {
     )
 }
 
-pub fn get_declaration(
-    declaration: &swc_css_ast::Declaration,
-) -> (BTreeMap<String, String>, Vec<String>) {
-    let mut key_value_pair: BTreeMap<String, String> = BTreeMap::new();
-    let mut vars: Vec<String> = vec![];
+pub fn get_declaration(declaration: &swc_css_ast::Declaration) -> (KeyValuePair, KeyValuePair) {
+    let mut key_value_pair: KeyValuePair = KeyValuePair::new();
+    let mut key_value_pair_in_vars: KeyValuePair = KeyValuePair::new();
     let mut declaration_name = String::new();
     let mut declaration_value = String::new();
     let mut dashed_ident = String::new();
@@ -1107,13 +1115,12 @@ pub fn get_declaration(
     }
 
     if !dashed_ident.is_empty() {
-        let formatted_declaration = format!("  \"{}\":\"{}\",\n", dashed_ident, declaration_value);
-        vars.push(formatted_declaration);
+        key_value_pair_in_vars.insert(dashed_ident, declaration_value);
     } else {
         key_value_pair.insert(declaration_name, declaration_value);
     }
 
-    (key_value_pair, vars)
+    (key_value_pair, key_value_pair_in_vars)
 }
 
 #[cfg(test)]

@@ -112,19 +112,28 @@ globalStyle("::file-selector-button", {
 });
 globalStyle(":root", {
   vars: {
+    "--bs-black-rgb": "0 ,   0 ,   0",
     "--bs-blue": "#0d6efd",
-    "--bs-indigo": "#6610f2",
-    "--bs-purple": "#6f42c1",
-    "--bs-pink": "#d63384",
-    "--bs-red": "#dc3545",
-    "--bs-orange": "#fd7e14",
-    "--bs-yellow": "#ffc107",
-    "--bs-green": "#198754",
-    "--bs-teal": "#20c997",
+    "--bs-body-bg": "#fff",
+    "--bs-body-bg-rgb": "255 ,   255 ,   255",
+    "--bs-body-color": "#212529",
+    "--bs-body-color-rgb": "33 ,   37 ,   41",
+    "--bs-body-font-family": "var --bs-font-sans-serif )",
+    "--bs-body-font-size": "1rem",
+    "--bs-body-font-weight": "400",
+    "--bs-body-line-height": "1.5",
     "--bs-cyan": "#0dcaf0",
-    "--bs-white": "#fff",
+    "--bs-danger": "#dc3545",
+    "--bs-danger-rgb": "220 ,   53 ,   69",
+    "--bs-dark": "#212529",
+    "--bs-dark-rgb": "33 ,   37 ,   41",
+    "--bs-font-monospace":
+      "SFMono-Regular ,   Menlo ,   Monaco ,   Consolas ,   Liberation Mono ,   Courier New ,   monospace",
+    "--bs-font-sans-serif":
+      "system-ui ,   -apple-system ,   Segoe UI ,   Roboto ,   Helvetica Neue ,   Arial ,   Noto Sans ,   Liberation Sans ,   sans-serif ,   Apple Color Emoji ,   Segoe UI Emoji ,   Segoe UI Symbol ,   Noto Color Emoji",
+    "--bs-gradient":
+      "linear-gradient 180deg ,   rgba 255 ,   255 ,   255 ,   0.15 ) ,   rgba 255 ,   255 ,   255 ,   0 ) )",
     "--bs-gray": "#6c757d",
-    "--bs-gray-dark": "#343a40",
     "--bs-gray-100": "#f8f9fa",
     "--bs-gray-200": "#e9ecef",
     "--bs-gray-300": "#dee2e6",
@@ -134,38 +143,29 @@ globalStyle(":root", {
     "--bs-gray-700": "#495057",
     "--bs-gray-800": "#343a40",
     "--bs-gray-900": "#212529",
-    "--bs-primary": "#0d6efd",
-    "--bs-secondary": "#6c757d",
-    "--bs-success": "#198754",
+    "--bs-gray-dark": "#343a40",
+    "--bs-green": "#198754",
+    "--bs-indigo": "#6610f2",
     "--bs-info": "#0dcaf0",
-    "--bs-warning": "#ffc107",
-    "--bs-danger": "#dc3545",
-    "--bs-light": "#f8f9fa",
-    "--bs-dark": "#212529",
-    "--bs-primary-rgb": "13 ,   110 ,   253",
-    "--bs-secondary-rgb": "108 ,   117 ,   125",
-    "--bs-success-rgb": "25 ,   135 ,   84",
     "--bs-info-rgb": "13 ,   202 ,   240",
-    "--bs-warning-rgb": "255 ,   193 ,   7",
-    "--bs-danger-rgb": "220 ,   53 ,   69",
+    "--bs-light": "#f8f9fa",
     "--bs-light-rgb": "248 ,   249 ,   250",
-    "--bs-dark-rgb": "33 ,   37 ,   41",
+    "--bs-orange": "#fd7e14",
+    "--bs-pink": "#d63384",
+    "--bs-primary": "#0d6efd",
+    "--bs-primary-rgb": "13 ,   110 ,   253",
+    "--bs-purple": "#6f42c1",
+    "--bs-red": "#dc3545",
+    "--bs-secondary": "#6c757d",
+    "--bs-secondary-rgb": "108 ,   117 ,   125",
+    "--bs-success": "#198754",
+    "--bs-success-rgb": "25 ,   135 ,   84",
+    "--bs-teal": "#20c997",
+    "--bs-warning": "#ffc107",
+    "--bs-warning-rgb": "255 ,   193 ,   7",
+    "--bs-white": "#fff",
     "--bs-white-rgb": "255 ,   255 ,   255",
-    "--bs-black-rgb": "0 ,   0 ,   0",
-    "--bs-body-color-rgb": "33 ,   37 ,   41",
-    "--bs-body-bg-rgb": "255 ,   255 ,   255",
-    "--bs-font-sans-serif":
-      "system-ui ,   -apple-system ,   Segoe UI ,   Roboto ,   Helvetica Neue ,   Arial ,   Noto Sans ,   Liberation Sans ,   sans-serif ,   Apple Color Emoji ,   Segoe UI Emoji ,   Segoe UI Symbol ,   Noto Color Emoji",
-    "--bs-font-monospace":
-      "SFMono-Regular ,   Menlo ,   Monaco ,   Consolas ,   Liberation Mono ,   Courier New ,   monospace",
-    "--bs-gradient":
-      "linear-gradient 180deg ,   rgba 255 ,   255 ,   255 ,   0.15 ) ,   rgba 255 ,   255 ,   255 ,   0 ) )",
-    "--bs-body-font-family": "var --bs-font-sans-serif )",
-    "--bs-body-font-size": "1rem",
-    "--bs-body-font-weight": "400",
-    "--bs-body-line-height": "1.5",
-    "--bs-body-color": "#212529",
-    "--bs-body-bg": "#fff",
+    "--bs-yellow": "#ffc107",
   },
   "@media": {
     "(prefers-reduced-motion: no-preference)": {
@@ -5976,48 +5976,36 @@ export const fwNormal = style({
 export const g0 = style({
   vars: {
     "--bs-gutter-x": "0",
-  },
-  vars: {
     "--bs-gutter-y": "0",
   },
 });
 export const g1 = style({
   vars: {
     "--bs-gutter-x": "0.25rem",
-  },
-  vars: {
     "--bs-gutter-y": "0.25rem",
   },
 });
 export const g2 = style({
   vars: {
     "--bs-gutter-x": "0.5rem",
-  },
-  vars: {
     "--bs-gutter-y": "0.5rem",
   },
 });
 export const g3 = style({
   vars: {
     "--bs-gutter-x": "1rem",
-  },
-  vars: {
     "--bs-gutter-y": "1rem",
   },
 });
 export const g4 = style({
   vars: {
     "--bs-gutter-x": "1.5rem",
-  },
-  vars: {
     "--bs-gutter-y": "1.5rem",
   },
 });
 export const g5 = style({
   vars: {
     "--bs-gutter-x": "3rem",
-  },
-  vars: {
     "--bs-gutter-y": "3rem",
   },
 });
@@ -12671,14 +12659,14 @@ export const tabContent = style({
 });
 export const table = style({
   vars: {
-    "--bs-table-bg": "transparent",
     "--bs-table-accent-bg": "transparent",
-    "--bs-table-striped-color": "#212529",
-    "--bs-table-striped-bg": "rgba 0 ,   0 ,   0 ,   0.05 )",
-    "--bs-table-active-color": "#212529",
     "--bs-table-active-bg": "rgba 0 ,   0 ,   0 ,   0.1 )",
-    "--bs-table-hover-color": "#212529",
+    "--bs-table-active-color": "#212529",
+    "--bs-table-bg": "transparent",
     "--bs-table-hover-bg": "rgba 0 ,   0 ,   0 ,   0.075 )",
+    "--bs-table-hover-color": "#212529",
+    "--bs-table-striped-bg": "rgba 0 ,   0 ,   0 ,   0.05 )",
+    "--bs-table-striped-color": "#212529",
   },
   borderColor: "dee2e6",
   color: "212529",
@@ -12706,65 +12694,65 @@ export const tableBorderless = style({
 });
 export const tableDanger = style({
   vars: {
-    "--bs-table-bg": "#f8d7da",
-    "--bs-table-striped-bg": "#eccccf",
-    "--bs-table-striped-color": "#000",
     "--bs-table-active-bg": "#dfc2c4",
     "--bs-table-active-color": "#000",
+    "--bs-table-bg": "#f8d7da",
     "--bs-table-hover-bg": "#e5c7ca",
     "--bs-table-hover-color": "#000",
+    "--bs-table-striped-bg": "#eccccf",
+    "--bs-table-striped-color": "#000",
   },
   borderColor: "dfc2c4",
   color: "000",
 });
 export const tableDark = style({
   vars: {
-    "--bs-table-bg": "#212529",
-    "--bs-table-striped-bg": "#2c3034",
-    "--bs-table-striped-color": "#fff",
     "--bs-table-active-bg": "#373b3e",
     "--bs-table-active-color": "#fff",
+    "--bs-table-bg": "#212529",
     "--bs-table-hover-bg": "#323539",
     "--bs-table-hover-color": "#fff",
+    "--bs-table-striped-bg": "#2c3034",
+    "--bs-table-striped-color": "#fff",
   },
   borderColor: "373b3e",
   color: "fff",
 });
 export const tableInfo = style({
   vars: {
-    "--bs-table-bg": "#cff4fc",
-    "--bs-table-striped-bg": "#c5e8ef",
-    "--bs-table-striped-color": "#000",
     "--bs-table-active-bg": "#badce3",
     "--bs-table-active-color": "#000",
+    "--bs-table-bg": "#cff4fc",
     "--bs-table-hover-bg": "#bfe2e9",
     "--bs-table-hover-color": "#000",
+    "--bs-table-striped-bg": "#c5e8ef",
+    "--bs-table-striped-color": "#000",
   },
   borderColor: "badce3",
   color: "000",
 });
 export const tableLight = style({
   vars: {
-    "--bs-table-bg": "#f8f9fa",
-    "--bs-table-striped-bg": "#ecedee",
-    "--bs-table-striped-color": "#000",
     "--bs-table-active-bg": "#dfe0e1",
     "--bs-table-active-color": "#000",
+    "--bs-table-bg": "#f8f9fa",
     "--bs-table-hover-bg": "#e5e6e7",
     "--bs-table-hover-color": "#000",
+    "--bs-table-striped-bg": "#ecedee",
+    "--bs-table-striped-color": "#000",
   },
   borderColor: "dfe0e1",
   color: "000",
 });
 export const tablePrimary = style({
   vars: {
-    "--bs-table-bg": "#cfe2ff",
-    "--bs-table-striped-bg": "#c5d7f2",
-    "--bs-table-striped-color": "#000",
     "--bs-table-active-bg": "#bacbe6",
     "--bs-table-active-color": "#000",
+    "--bs-table-bg": "#cfe2ff",
     "--bs-table-hover-bg": "#bfd1ec",
     "--bs-table-hover-color": "#000",
+    "--bs-table-striped-bg": "#c5d7f2",
+    "--bs-table-striped-color": "#000",
   },
   borderColor: "bacbe6",
   color: "000",
@@ -12815,39 +12803,39 @@ export const tableResponsiveXxl = style({
 });
 export const tableSecondary = style({
   vars: {
-    "--bs-table-bg": "#e2e3e5",
-    "--bs-table-striped-bg": "#d7d8da",
-    "--bs-table-striped-color": "#000",
     "--bs-table-active-bg": "#cbccce",
     "--bs-table-active-color": "#000",
+    "--bs-table-bg": "#e2e3e5",
     "--bs-table-hover-bg": "#d1d2d4",
     "--bs-table-hover-color": "#000",
+    "--bs-table-striped-bg": "#d7d8da",
+    "--bs-table-striped-color": "#000",
   },
   borderColor: "cbccce",
   color: "000",
 });
 export const tableSuccess = style({
   vars: {
-    "--bs-table-bg": "#d1e7dd",
-    "--bs-table-striped-bg": "#c7dbd2",
-    "--bs-table-striped-color": "#000",
     "--bs-table-active-bg": "#bcd0c7",
     "--bs-table-active-color": "#000",
+    "--bs-table-bg": "#d1e7dd",
     "--bs-table-hover-bg": "#c1d6cc",
     "--bs-table-hover-color": "#000",
+    "--bs-table-striped-bg": "#c7dbd2",
+    "--bs-table-striped-color": "#000",
   },
   borderColor: "bcd0c7",
   color: "000",
 });
 export const tableWarning = style({
   vars: {
-    "--bs-table-bg": "#fff3cd",
-    "--bs-table-striped-bg": "#f2e7c3",
-    "--bs-table-striped-color": "#000",
     "--bs-table-active-bg": "#e6dbb9",
     "--bs-table-active-color": "#000",
+    "--bs-table-bg": "#fff3cd",
     "--bs-table-hover-bg": "#ece1be",
     "--bs-table-hover-color": "#000",
+    "--bs-table-striped-bg": "#f2e7c3",
+    "--bs-table-striped-color": "#000",
   },
   borderColor: "e6dbb9",
   color: "000",
