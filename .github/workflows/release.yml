@@ -32,7 +32,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           REPO: ${{github.repository}}
           COMMIT: ${{github.sha}}
-        run: ./packages/node/tools/release.sh
+        run: ./packages/node/release/release.sh
       - name: release
         run: npm run publish:node
         env:
