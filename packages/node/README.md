@@ -7,7 +7,7 @@ Convert CSS (SCSS/SASS) to [vanilla-extract](https://vanilla-extract.style/).
 ## Install
 
 ```bash
-npm i -D c2ve
+npm i -D css-to-vanilla-extract
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ Once installed, you can run it to convert css (scss/sass) files to vanilla-extra
 For example:
 
 ```
-npx c2ve sample/test.css
+npx css-to-vanilla-extract sample/test.css
 ```
 
 <strong>Output:</strong>sample/test.css.ts
