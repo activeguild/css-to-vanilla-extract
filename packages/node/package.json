@@ -24,7 +24,8 @@
     "convert",
     "vanilla-extract",
     "typescript",
-    "react"
+    "react",
+    "generate"
   ],
   "author": "j1ngzoue",
   "license": "MIT",
