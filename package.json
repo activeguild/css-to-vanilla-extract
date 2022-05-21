@@ -3,9 +3,10 @@
   "version": "0.0.21-alpha",
   "description": "Convert css (scss/sass) to vanilla-extract.",
   "scripts": {
-    "playground": "wireit",
     "build:wasm": "wireit",
     "build:node": "wireit",
+    "dev:playground": "wireit",
+    "build:playground": "wireit",
     "publish:node": "wireit",
     "test": "wireit",
     "lint": "eslint . --ext '.js,.jsx,.ts,.tsx' --ignore-path .gitignore",
@@ -17,9 +18,18 @@
       "command": "npm run build --workspace=packages/wasm",
       "output": [
         "./packages/wasm/dist"
+      ],
+      "dependencies": [
+        "test"
       ]
     },
-    "playground": {
+    "build:playground": {
+      "command": "npm run build --workspace=packages/playground",
+      "dependencies": [
+        "build:wasm"
+      ]
+    },
+    "dev:playground": {
       "command": "npm run dev --workspace=packages/playground",
       "dependencies": [
         "build:wasm"
