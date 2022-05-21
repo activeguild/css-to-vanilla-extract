@@ -1,5 +1,5 @@
 [package]
-name = "c2ve"
+name = "css-to-vanilla-extract"
 version = "0.0.21-alpha"
 license = "MIT"
 edition = "2021"
