@@ -4,7 +4,7 @@ import Prism from "prismjs";
 import { useEffect } from "react";
 import styles from "./App.module.css";
 import { useWasmWorker } from "./hooks/useWasmWorker";
-import "./prismjs";
+import "./prismjs/prismjs";
 const EDITOR_DEFAULT_VALUE = `.foo {
   background-color: blue;
 }
@@ -46,6 +46,9 @@ function App() {
 
   useEffect(() => {
     worker?.postMessage(EDITOR_DEFAULT_VALUE);
+    setTimeout(() => {
+      Prism.highlightAll();
+    }, 100);
   }, [worker]);
 
   return (
