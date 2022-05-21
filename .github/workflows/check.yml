@@ -11,6 +11,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "16.x"
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+      - uses: Swatinem/rust-cache@v1
+        with:
+          working-directory: packages/node
       - uses: sarthak-saxena/JSBundleSize@master
         with:
           bootstrap: "npm ci"
