@@ -1,7 +1,7 @@
 {
   "name": "css-to-vanilla-extract-workspace",
   "version": "0.0.21-alpha",
-  "description": "Convert css (scss/sass) to vanilla-extract.",
+  "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file.",
   "scripts": {
     "build:wasm": "wireit",
     "build:node": "wireit",
