@@ -1,13 +1,29 @@
 <h1 align="center">CSS-to-vanilla-extract ⚡ Welcome 😀</h1>
 
-Convert CSS (SCSS/SASS) to [vanilla-extract](https://vanilla-extract.style/).
+<p align="left">
+  <a href="https://github.com/actions/setup-node"><img alt="GitHub Actions status" src="https://github.com/activeguild/css-to-vanilla-extract/workflows/automatic%20release/badge.svg" style="max-width:100%;"></a>
+</p>
+
+Generate [vanilla-extract](https://vanilla-extract.style/) typescript file from the CSS (SCSS/SASS) file.
 
 [playground](https://grand-tapioca-e54f4f.netlify.app/)
+
+The following APIs are covered.
+
+- [styling-api/#style](https://vanilla-extract.style/documentation/styling-api/#style)
+- [styling-api/#globalstyle](https://vanilla-extract.style/documentation/styling-api/#globalstyle)
+- [styling-api/#globalfontface](https://vanilla-extract.style/documentation/styling-api/#globalfontface)
+- [styling-api/#globalkeyframes](https://vanilla-extract.style/documentation/styling-api/#globalkeyframes)
+
+## Motivation
+
+- Generate style definitions received from designers without any errors.
+- Cost-effective migration of existing projects using css modules.
 
 ## Install
 
 ```bash
-npm i -D c2ve
+npm i -D css-to-vanilla-extract
 ```
 
 ## Usage
@@ -16,14 +32,14 @@ Once installed, you can run it to convert css (scss/sass) files to vanilla-extra
 For example:
 
 ```
-npx c2ve sample/test.css
+npx css-to-vanilla-extract sample/test.css
 ```
 
 <strong>Output:</strong>sample/test.css.ts
 
 ## Sample
 
-### From
+### Input
 
 ```css
 .foo {
@@ -43,7 +59,7 @@ npx c2ve sample/test.css
 }
 ```
 
-### To
+### Output
 
 ```ts
 import { globalStyle, style } from "@vanilla-extract/css";

@@ -1,10 +1,10 @@
 {
-  "name": "c2ve",
-  "version": "0.0.20-alpha",
-  "description": "Convert css (scss/sass) to vanilla-extract for node.",
+  "name": "css-to-vanilla-extract",
+  "version": "0.0.21-alpha",
+  "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file. for node.",
   "main": "index.js",
   "bin": {
-    "c2ve": "dist/index.js"
+    "css-to-vanilla-extract": "dist/index.js"
   },
   "scripts": {
     "build": "cargo-cp-artifact -nc ./dist/index.node -- cargo build --target x86_64-apple-darwin --message-format=json-render-diagnostics",
@@ -24,7 +24,8 @@
     "convert",
     "vanilla-extract",
     "typescript",
-    "react"
+    "react",
+    "generate"
   ],
   "author": "j1ngzoue",
   "license": "MIT",

@@ -37,3 +37,12 @@ jobs:
         run: npm run publish:node
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: build - playground
+        run: npm run build:playground
+      - name: publish - playground
+        uses: netlify/actions/cli@master
+        with:
+          args: deploy --dir=packages/playground/dist --prod
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

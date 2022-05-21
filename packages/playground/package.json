@@ -1,7 +1,7 @@
 {
   "name": "playground",
-  "version": "0.0.20-alpha",
-  "description": "Convert css (scss/sass) to vanilla-extract for playground.",
+  "version": "0.0.21-alpha",
+  "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file. for playground.",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
