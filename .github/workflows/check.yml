@@ -1,4 +1,4 @@
-name: calculate Js bundle size
+name: test
 
 on:
   pull_request:
