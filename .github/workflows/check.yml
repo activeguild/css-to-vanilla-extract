@@ -11,6 +11,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "16.x"
+      - name: caching
+        uses: google/wireit@setup-github-actions-caching/v1
+      - name: install dependencies
+        run: npm ci
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
