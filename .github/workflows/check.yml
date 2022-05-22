@@ -1,4 +1,4 @@
-name: calculate Js bundle size
+name: test
 
 on:
   pull_request:
@@ -11,6 +11,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "16.x"
+      - name: caching
+        uses: google/wireit@setup-github-actions-caching/v1
+      - name: install dependencies
+        run: npm ci
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
@@ -18,9 +22,5 @@ jobs:
       - uses: Swatinem/rust-cache@v1
         with:
           working-directory: packages/node
-      - uses: sarthak-saxena/JSBundleSize@master
-        with:
-          bootstrap: "npm ci"
-          build_command: "npm run build:node"
-          dist_path: "packages/node/dist"
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: test
+        run: npm run test

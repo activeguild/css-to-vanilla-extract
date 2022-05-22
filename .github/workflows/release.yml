@@ -37,6 +37,8 @@ jobs:
         run: npm run publish:node
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
       - name: build - playground
         run: npm run build:playground
       - name: publish - playground
