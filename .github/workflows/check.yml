@@ -1,0 +1,22 @@
+name: calculate Js bundle size
+
+on:
+  pull_request:
+    types: ["opened", "reopened", "synchronize"]
+jobs:
+  calculate-size:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+      - uses: Swatinem/rust-cache@v1
+        with:
+          working-directory: packages/node
+      - name: test
+        run: npm run test
