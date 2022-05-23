@@ -76,7 +76,6 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         let _global_rule_map = global_rule_map
                             .entry(rule.key)
                             .or_insert_with(RuleMapValue::default);
-                        // _global_rule_map.ve.push_str(&rule.ve);
                         _global_rule_map.key_value_pair.extend(rule.key_value_pair);
                         _global_rule_map
                             .key_value_pair_in_vars
@@ -91,7 +90,6 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         let _rule_map = rule_map
                             .entry(rule.key)
                             .or_insert_with(RuleMapValue::default);
-                        // _rule_map.ve.push_str(&rule.ve);
                         _rule_map.key_value_pair.extend(rule.key_value_pair);
                         _rule_map
                             .key_value_pair_in_vars
