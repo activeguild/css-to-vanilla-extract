@@ -7,8 +7,8 @@ on:
       - "!*"
 jobs:
   release:
-    name: release
-    runs-on: macos-latest
+    name: release-playground
+    runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -19,24 +19,12 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - name: caching
         uses: google/wireit@setup-github-actions-caching/v1
-      - name: install can-npm-publish and dependencies
-        run: |
-          npm install -D can-npm-publish
-          npm ci
+      - name: install dependencies
+        run: npm ci
       - name: check target list
         run: rustup target list
       - name: add target list
         run: rustup target add wasm32-wasi
-      - name: check version and add tag
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          REPO: ${{github.repository}}
-          COMMIT: ${{github.sha}}
-        run: ./packages/node/release/release.sh
-      - name: release
-        run: npm run publish:node
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: install wasm-pack
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
       - name: build - playground
