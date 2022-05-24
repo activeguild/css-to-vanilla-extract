@@ -10,7 +10,6 @@ use crate::{
     },
 };
 use convert_case::{Case, Casing};
-use regex::Regex;
 
 type KeyValuePair = BTreeMap<String, String>;
 type KeyValuePairInPseudo = BTreeMap<String, KeyValuePair>;
@@ -555,11 +554,7 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
                                         "${{{}}}",
                                         &class.text.value.to_string().to_case(Case::Camel)
                                     );
-                                    println!(
-                                        "class.text.value.to_string():{:?}",
-                                        class.text.value.to_string()
-                                    );
-                                    println!("formatted_text_value:{:?}", formatted_text_value);
+
                                     if !key.is_empty() {
                                         complexes.push(Complex {
                                             pseudo: String::new(),
