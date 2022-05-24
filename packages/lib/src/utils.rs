@@ -50,22 +50,31 @@ pub fn wrap_property(key: String, rule: String) -> String {
     format!("  {}:\"{}\",\n", key, rule)
 }
 
-fn wrap_properties(key: String, rule: String, separator: char) -> String {
+fn wrap_properties(
+    key: String,
+    rule: String,
+    separator: char,
+    with_square_brackets: bool,
+) -> String {
     if rule.is_empty() {
         String::new()
     } else if key.contains("${") {
-        format!("`{}`{} {{\n{}}},\n", key, separator, rule)
+        if with_square_brackets {
+            format!("[`{}`]{} {{\n{}}},\n", key, separator, rule)
+        } else {
+            format!("`{}`{} {{\n{}}},\n", key, separator, rule)
+        }
     } else {
         format!("\"{}\"{} {{\n{}}},\n", key, separator, rule)
     }
 }
 
 pub fn wrap_properties_with_colon(key: String, rule: String) -> String {
-    wrap_properties(key, rule, ':')
+    wrap_properties(key, rule, ':', true)
 }
 
 pub fn wrap_properties_with_comma(key: String, rule: String) -> String {
-    wrap_properties(key, rule, ',')
+    wrap_properties(key, rule, ',', false)
 }
 
 const PSEUDO_MAPCONST: [&str; 95] = [

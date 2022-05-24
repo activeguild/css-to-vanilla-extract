@@ -10,6 +10,7 @@ use crate::{
     },
 };
 use convert_case::{Case, Casing};
+use swc_css_ast::ClassSelector;
 
 type KeyValuePair = BTreeMap<String, String>;
 type KeyValuePairInPseudo = BTreeMap<String, KeyValuePair>;
@@ -365,8 +366,14 @@ fn finish_to_vanilla_extract(
                     for (key, value) in value.into_iter() {
                         properties.push_str(&wrap_property(key, value));
                     }
-                    selectors_rule
-                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+
+                    if key.contains("${") {
+                        selectors_rule
+                            .push_str(&wrap_properties_with_colon(key.to_string(), properties));
+                    } else {
+                        selectors_rule
+                            .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                    }
                 }
 
                 if !selectors_rule.is_empty() {
@@ -395,8 +402,14 @@ fn finish_to_vanilla_extract(
                     for (key, value) in value.into_iter() {
                         properties.push_str(&wrap_property(key, value));
                     }
-                    selectors_rule
-                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+
+                    if key.contains("${") {
+                        selectors_rule
+                            .push_str(&wrap_properties_with_colon(key.to_string(), properties));
+                    } else {
+                        selectors_rule
+                            .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                    }
                 }
 
                 if !selectors_rule.is_empty() {
@@ -421,7 +434,12 @@ fn finish_to_vanilla_extract(
                 for (key, value) in value.into_iter() {
                     properties.push_str(&wrap_property(key, value));
                 }
-                selectors.push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                if key.contains("${") {
+                    selectors.push_str(&wrap_properties_with_colon(key.to_string(), properties));
+                } else {
+                    selectors
+                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                }
             }
 
             properties.push_str(&wrap_properties_with_colon(
@@ -510,6 +528,23 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
         let mut key: String = String::new();
         let mut is_global_style: bool = false;
         let mut is_simple_pseudo: bool = false;
+        let mut last_children_class: Option<ClassSelector> = None;
+
+        if complex_selector.children.len() > 1 {
+            if let Some(last_children) = complex_selector.children.last() {
+                if let swc_css_ast::ComplexSelectorChildren::CompoundSelector(compound_selector) =
+                    last_children
+                {
+                    if let Some(value) = compound_selector.subclass_selectors.last() {
+                        if let swc_css_ast::SubclassSelector::Class(class) = value {
+                            last_children_class = Some(class.clone());
+
+                            key.push_str(&class.text.value.to_string().to_case(Case::Camel));
+                        }
+                    }
+                }
+            }
+        }
 
         for complex_selector_children in &complex_selector.children {
             match complex_selector_children {
@@ -524,13 +559,23 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
                                 if key.is_empty() {
                                     is_global_style = true;
                                 }
-                                key.push_str(&tag_name.name.value.value.to_string());
+
+                                if !key.is_empty() && !is_global_style {
+                                    pseudo.push_str(&tag_name.name.value.value.to_string());
+                                } else {
+                                    key.push_str(&tag_name.name.value.value.to_string());
+                                }
                             }
                             swc_css_ast::TypeSelector::Universal(_) => {
                                 if key.is_empty() {
                                     is_global_style = true;
                                 }
-                                key.push('*');
+
+                                if !key.is_empty() && !is_global_style {
+                                    pseudo.push('*');
+                                } else {
+                                    key.push('*');
+                                }
                             }
                         }
                     }
@@ -546,7 +591,37 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
                             swc_css_ast::SubclassSelector::Class(class) => {
                                 if key.is_empty() {
                                     // The first class name is used as the variable name.
-                                    key.push_str(&class.text.value.to_string().to_case(Case::Camel))
+                                    key.push_str(
+                                        &class.text.value.to_string().to_case(Case::Camel),
+                                    );
+                                } else if !key.is_empty() && !is_global_style {
+                                    let formatted_text_value = if let Some(value) =
+                                        &last_children_class
+                                    {
+                                        if value.text == class.text {
+                                            "&".to_string()
+                                        } else {
+                                            format!(
+                                                "${{{}}}",
+                                                &class.text.value.to_string().to_case(Case::Camel)
+                                            )
+                                        }
+                                    } else {
+                                        format!(
+                                            "${{{}}}",
+                                            &class.text.value.to_string().to_case(Case::Camel)
+                                        )
+                                    };
+
+                                    complexes.push(Complex {
+                                        pseudo: String::new(),
+                                        key: class.text.value.to_string().to_case(Case::Camel),
+                                        is_global_style: false,
+                                        is_simple_pseudo: false,
+                                        has_component_value: false,
+                                    });
+
+                                    pseudo.push_str(&formatted_text_value);
                                 }
 
                                 if is_global_style {
@@ -648,23 +723,9 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
                 }
                 swc_css_ast::ComplexSelectorChildren::Combinator(combinator) => {
                     if is_global_style {
-                        match combinator.value {
-                            swc_css_ast::CombinatorValue::Descendant => {
-                                key.push(' ');
-                            }
-                            swc_css_ast::CombinatorValue::NextSibling => {
-                                key.push_str(" + ");
-                            }
-                            swc_css_ast::CombinatorValue::Child => {
-                                key.push_str(" > ");
-                            }
-                            swc_css_ast::CombinatorValue::LaterSibling => {
-                                key.push_str(" ~ ");
-                            }
-                            swc_css_ast::CombinatorValue::Column => {
-                                key.push_str(" || ");
-                            }
-                        }
+                        key.push_str(&get_combinator(combinator));
+                    } else {
+                        pseudo.push_str(&get_combinator(combinator));
                     }
                 }
             }
@@ -679,6 +740,16 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
     }
 
     complexes
+}
+
+fn get_combinator(combinator: &swc_css_ast::Combinator) -> String {
+    match combinator.value {
+        swc_css_ast::CombinatorValue::Descendant => ' '.to_string(),
+        swc_css_ast::CombinatorValue::NextSibling => " + ".to_string(),
+        swc_css_ast::CombinatorValue::Child => " > ".to_string(),
+        swc_css_ast::CombinatorValue::LaterSibling => " ~ ".to_string(),
+        swc_css_ast::CombinatorValue::Column => " || ".to_string(),
+    }
 }
 
 fn get_pseudo_class_children(
@@ -1491,7 +1562,21 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const btn = style({\n  width:\"100%\",\n});\nexport const icon = style({\n});\nglobalStyle(`input > ${btn} > ${icon}`, {\n  position:\"absolute\",\n},\n);\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const btn = style({\n  width:\"100%\",\n});\nexport const icon = style({\n\"selectors\": {\n[`input > ${btn} > &`]: {\n  position:\"absolute\",\n},\n},\n});\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_028() {
+        let parsed_css =
+            parse_css(".input > input > .btn > .icon {position: absolute;} .btn {width: 100%;}")
+                .unwrap();
+
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const btn = style({\n  width:\"100%\",\n});\nexport const icon = style({\n\"selectors\": {\n[`${input} > input > ${btn} > &`]: {\n  position:\"absolute\",\n},\n},\n});\nexport const input = style({\n});\n",
             result
         )
     }
