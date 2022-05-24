@@ -27,11 +27,11 @@ pub fn wrap_export_const(key: String, rule: String) -> String {
     format!("export const {} = {}", key, rule)
 }
 
-pub fn wrap_style_func(rule: String) -> String {
+pub fn wrap_style(rule: String) -> String {
     format!("style({{\n{}}});\n", rule)
 }
 
-pub fn wrap_global_style_func(rule: String) -> String {
+pub fn wrap_global_style(rule: String) -> String {
     // globalStyle(`input *`, {
     //   boxSizing: 'border-box'
     // });
@@ -53,6 +53,8 @@ pub fn wrap_property(key: String, rule: String) -> String {
 fn wrap_properties(key: String, rule: String, separator: char) -> String {
     if rule.is_empty() {
         String::new()
+    } else if key.contains("${") {
+        format!("`{}`{} {{\n{}}},\n", key, separator, rule)
     } else {
         format!("\"{}\"{} {{\n{}}},\n", key, separator, rule)
     }
