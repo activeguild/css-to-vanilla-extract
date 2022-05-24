@@ -327,6 +327,9 @@ fn finish_to_vanilla_extract(
 
     for (key, value) in rule_map.into_iter() {
         let mut properties = String::new();
+        let has_selectors = !value.key_value_pair_in_selectors.is_empty()
+            || !value.selectors_in_media.is_empty()
+            || !value.selectors_in_supports.is_empty();
 
         if !value.key_value_pair_in_vars.is_empty() {
             let mut var_rule = String::new();
@@ -449,14 +452,14 @@ fn finish_to_vanilla_extract(
         }
 
         // No output for unsupported rules.
-        if !key.is_empty() {
-            if is_global_rule {
-                ve.push_str(&wrap_global_style(wrap_properties_with_comma(
-                    key, properties,
-                )));
-            } else {
-                ve.push_str(&wrap_export_const(key, wrap_style(properties)));
-            }
+        if is_global_rule {
+            ve.push_str(&wrap_global_style(wrap_properties_with_comma(
+                key, properties,
+            )));
+        } else if has_selectors {
+            ve.push_str(&wrap_export_const(key, wrap_style(properties)));
+        } else {
+            ve.insert_str(0, &wrap_export_const(key, wrap_style(properties)));
         }
     }
 
@@ -1249,7 +1252,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const bAR = style({\n\":hover\": {\n  position:\"absolute\",\n},\n});\nexport const foo = style({\n  position:\"absolute\",\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const foo = style({\n  position:\"absolute\",\n});\nexport const bAR = style({\n\":hover\": {\n  position:\"absolute\",\n},\n});\n",
             result
         )
     }
@@ -1576,7 +1579,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const btn = style({\n  width:\"100%\",\n});\nexport const icon = style({\n\"selectors\": {\n[`${input} > input > ${btn} > &`]: {\n  position:\"absolute\",\n},\n},\n});\nexport const input = style({\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const input = style({\n});\nexport const btn = style({\n  width:\"100%\",\n});\nexport const icon = style({\n\"selectors\": {\n[`${input} > input > ${btn} > &`]: {\n  position:\"absolute\",\n},\n},\n});\n",
             result
         )
     }
