@@ -83,7 +83,13 @@ export const display5 = style({
 export const foo = style({
   position: "absolute",
 });
-export const icon = style({});
+export const icon = style({
+  selectors: {
+    [`input > ${btn} > &`]: {
+      position: "absolute",
+    },
+  },
+});
 export const input = style({
   selectors: {
     "&:invalid:focus": {
@@ -124,7 +130,4 @@ globalStyle("input", {
       fontSize: "5rem",
     },
   },
-});
-globalStyle(`input > ${btn} > ${icon}`, {
-  position: "absolute",
 });
