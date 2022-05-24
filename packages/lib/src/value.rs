@@ -1491,7 +1491,7 @@ mod tests {
     #[test]
     fn ast_to_vanilla_extract_027() {
         let parsed_css =
-            parse_css("input > .btn > .icon {position: absolute;} .btn {width: 100%}").unwrap();
+            parse_css("input > .btn > .icon {position: absolute;} .btn {width: 100%;}").unwrap();
 
         let result = ast_to_vanilla_extract(parsed_css);
 

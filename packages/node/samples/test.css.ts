@@ -1,7 +1,7 @@
 import {
-  globalFontFace,
-  globalKeyframes,
   globalStyle,
+  globalKeyframes,
+  globalFontFace,
   style,
 } from "@vanilla-extract/css";
 
@@ -14,33 +14,6 @@ globalKeyframes("slidein", {
   },
   to: {
     transform: "translateX(100%)",
-  },
-});
-globalStyle("*", {
-  boxSizing: "border-box",
-});
-globalStyle("*::after", {
-  boxSizing: "border-box",
-});
-globalStyle("*::before", {
-  boxSizing: "border-box",
-});
-globalStyle(":hover", {
-  color: "red",
-});
-globalStyle("[type^='button' s]", {
-  cursor: "pointer",
-});
-globalStyle("input", {
-  "@media": {
-    "(min-width: 1200px)": {
-      fontSize: "5rem",
-    },
-  },
-  "@supports": {
-    "(position:-webkit-sticky) or (position:sticky)": {
-      fontSize: "5rem",
-    },
   },
 });
 export const accordionButton = style({
@@ -62,6 +35,9 @@ export const bar = style({
   ":hover": {
     boxSizing: "border-box",
   },
+});
+export const btn = style({
+  width: "100%",
 });
 export const display1 = style({
   "@media": {
@@ -107,6 +83,7 @@ export const display5 = style({
 export const foo = style({
   position: "absolute",
 });
+export const icon = style({});
 export const input = style({
   selectors: {
     "&:invalid:focus": {
@@ -120,4 +97,34 @@ export const toast = style({
       marginBottom: "0.75rem",
     },
   },
+});
+globalStyle("*", {
+  boxSizing: "border-box",
+});
+globalStyle("*::after", {
+  boxSizing: "border-box",
+});
+globalStyle("*::before", {
+  boxSizing: "border-box",
+});
+globalStyle(":hover", {
+  color: "red",
+});
+globalStyle("[type^='button' s]", {
+  cursor: "pointer",
+});
+globalStyle("input", {
+  "@media": {
+    "(min-width: 1200px)": {
+      fontSize: "5rem",
+    },
+  },
+  "@supports": {
+    "(position:-webkit-sticky) or (position:sticky)": {
+      fontSize: "5rem",
+    },
+  },
+});
+globalStyle(`input > ${btn} > ${icon}`, {
+  position: "absolute",
 });
