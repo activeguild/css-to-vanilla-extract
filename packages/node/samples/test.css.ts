@@ -16,6 +16,18 @@ globalKeyframes("slidein", {
     transform: "translateX(100%)",
   },
 });
+export const bar = style({
+  position: "absolute",
+  ":hover": {
+    boxSizing: "border-box",
+  },
+});
+export const btn = style({
+  width: "100%",
+});
+export const foo = style({
+  position: "absolute",
+});
 export const accordionButton = style({
   "@media": {
     "(min-width: 1200px)": {
@@ -29,15 +41,6 @@ export const accordionButton = style({
       },
     },
   },
-});
-export const bar = style({
-  position: "absolute",
-  ":hover": {
-    boxSizing: "border-box",
-  },
-});
-export const btn = style({
-  width: "100%",
 });
 export const display1 = style({
   "@media": {
@@ -79,9 +82,6 @@ export const display5 = style({
       fontSize: "5rem",
     },
   },
-});
-export const foo = style({
-  position: "absolute",
 });
 export const icon = style({
   selectors: {
