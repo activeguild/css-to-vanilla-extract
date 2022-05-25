@@ -1,7 +1,7 @@
 import {
-  globalFontFace,
-  globalKeyframes,
   globalStyle,
+  globalKeyframes,
+  globalFontFace,
   style,
 } from "@vanilla-extract/css";
 
@@ -16,32 +16,17 @@ globalKeyframes("slidein", {
     transform: "translateX(100%)",
   },
 });
-globalStyle("*", {
-  boxSizing: "border-box",
-});
-globalStyle("*::after", {
-  boxSizing: "border-box",
-});
-globalStyle("*::before", {
-  boxSizing: "border-box",
-});
-globalStyle(":hover", {
-  color: "red",
-});
-globalStyle("[type^='button' s]", {
-  cursor: "pointer",
-});
-globalStyle("input", {
-  "@media": {
-    "(min-width: 1200px)": {
-      fontSize: "5rem",
-    },
+export const bar = style({
+  position: "absolute",
+  ":hover": {
+    boxSizing: "border-box",
   },
-  "@supports": {
-    "(position:-webkit-sticky) or (position:sticky)": {
-      fontSize: "5rem",
-    },
-  },
+});
+export const btn = style({
+  width: "100%",
+});
+export const foo = style({
+  position: "absolute",
 });
 export const accordionButton = style({
   "@media": {
@@ -55,12 +40,6 @@ export const accordionButton = style({
         },
       },
     },
-  },
-});
-export const bar = style({
-  position: "absolute",
-  ":hover": {
-    boxSizing: "border-box",
   },
 });
 export const display1 = style({
@@ -104,8 +83,12 @@ export const display5 = style({
     },
   },
 });
-export const foo = style({
-  position: "absolute",
+export const icon = style({
+  selectors: {
+    [`input > ${btn} > &`]: {
+      position: "absolute",
+    },
+  },
 });
 export const input = style({
   selectors: {
@@ -118,6 +101,33 @@ export const toast = style({
   selectors: {
     "&:not(:last-child)": {
       marginBottom: "0.75rem",
+    },
+  },
+});
+globalStyle("*", {
+  boxSizing: "border-box",
+});
+globalStyle("*::after", {
+  boxSizing: "border-box",
+});
+globalStyle("*::before", {
+  boxSizing: "border-box",
+});
+globalStyle(":hover", {
+  color: "red",
+});
+globalStyle("[type^='button' s]", {
+  cursor: "pointer",
+});
+globalStyle("input", {
+  "@media": {
+    "(min-width: 1200px)": {
+      fontSize: "5rem",
+    },
+  },
+  "@supports": {
+    "(position:-webkit-sticky) or (position:sticky)": {
+      fontSize: "5rem",
     },
   },
 });

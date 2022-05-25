@@ -5,11 +5,12 @@ use crate::{
     media::{get_all_media_conditions, get_without_or_media_conditions},
     supports::get_supports_rule,
     utils::{
-        is_simple_pseudo_func, wrap_export_const, wrap_fontface, wrap_global_style_func,
-        wrap_properties_with_colon, wrap_properties_with_comma, wrap_property, wrap_style_func,
+        is_simple_pseudo_func, wrap_export_const, wrap_fontface, wrap_global_style,
+        wrap_properties_with_colon, wrap_properties_with_comma, wrap_property, wrap_style,
     },
 };
 use convert_case::{Case, Casing};
+use swc_css_ast::ClassSelector;
 
 type KeyValuePair = BTreeMap<String, String>;
 type KeyValuePairInPseudo = BTreeMap<String, KeyValuePair>;
@@ -33,6 +34,7 @@ pub struct Complex {
     pub key: String,
     pub is_global_style: bool,
     pub is_simple_pseudo: bool,
+    pub has_component_value: bool,
 }
 
 #[derive(Debug, Default, Clone)]
@@ -76,7 +78,6 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         let _global_rule_map = global_rule_map
                             .entry(rule.key)
                             .or_insert_with(RuleMapValue::default);
-                        // _global_rule_map.ve.push_str(&rule.ve);
                         _global_rule_map.key_value_pair.extend(rule.key_value_pair);
                         _global_rule_map
                             .key_value_pair_in_vars
@@ -91,7 +92,6 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         let _rule_map = rule_map
                             .entry(rule.key)
                             .or_insert_with(RuleMapValue::default);
-                        // _rule_map.ve.push_str(&rule.ve);
                         _rule_map.key_value_pair.extend(rule.key_value_pair);
                         _rule_map
                             .key_value_pair_in_vars
@@ -308,8 +308,8 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
         }
     }
 
-    ve.push_str(&finish_to_vanilla_extract(global_rule_map, true));
     ve.push_str(&finish_to_vanilla_extract(rule_map, false));
+    ve.push_str(&finish_to_vanilla_extract(global_rule_map, true));
 
     ve.insert_str(
         0,
@@ -324,9 +324,13 @@ fn finish_to_vanilla_extract(
     is_global_rule: bool,
 ) -> String {
     let mut ve = String::new();
+    let mut ve_selectors = String::new();
 
     for (key, value) in rule_map.into_iter() {
         let mut properties = String::new();
+        let has_selectors = !value.key_value_pair_in_selectors.is_empty()
+            || !value.selectors_in_media.is_empty()
+            || !value.selectors_in_supports.is_empty();
 
         if !value.key_value_pair_in_vars.is_empty() {
             let mut var_rule = String::new();
@@ -366,8 +370,14 @@ fn finish_to_vanilla_extract(
                     for (key, value) in value.into_iter() {
                         properties.push_str(&wrap_property(key, value));
                     }
-                    selectors_rule
-                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+
+                    if key.contains("${") {
+                        selectors_rule
+                            .push_str(&wrap_properties_with_colon(key.to_string(), properties));
+                    } else {
+                        selectors_rule
+                            .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                    }
                 }
 
                 if !selectors_rule.is_empty() {
@@ -396,8 +406,14 @@ fn finish_to_vanilla_extract(
                     for (key, value) in value.into_iter() {
                         properties.push_str(&wrap_property(key, value));
                     }
-                    selectors_rule
-                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+
+                    if key.contains("${") {
+                        selectors_rule
+                            .push_str(&wrap_properties_with_colon(key.to_string(), properties));
+                    } else {
+                        selectors_rule
+                            .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                    }
                 }
 
                 if !selectors_rule.is_empty() {
@@ -422,7 +438,12 @@ fn finish_to_vanilla_extract(
                 for (key, value) in value.into_iter() {
                     properties.push_str(&wrap_property(key, value));
                 }
-                selectors.push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                if key.contains("${") {
+                    selectors.push_str(&wrap_properties_with_colon(key.to_string(), properties));
+                } else {
+                    selectors
+                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                }
             }
 
             properties.push_str(&wrap_properties_with_colon(
@@ -434,15 +455,23 @@ fn finish_to_vanilla_extract(
         // No output for unsupported rules.
         if !key.is_empty() {
             if is_global_rule {
-                ve.push_str(&wrap_global_style_func(wrap_properties_with_comma(
+                ve.push_str(&wrap_global_style(wrap_properties_with_comma(
                     key, properties,
                 )));
+            } else if has_selectors {
+                println!("key:{}", &format!("${{{}}}", key));
+                if ve_selectors.contains(&format!("${{{}}}", key)) {
+                    ve_selectors.insert_str(0, &wrap_export_const(key, wrap_style(properties)));
+                } else {
+                    ve_selectors.push_str(&wrap_export_const(key, wrap_style(properties)));
+                }
             } else {
-                ve.push_str(&wrap_export_const(key, wrap_style_func(properties)));
+                ve.push_str(&wrap_export_const(key, wrap_style(properties)));
             }
         }
     }
 
+    ve.push_str(&ve_selectors);
     ve
 }
 
@@ -456,18 +485,24 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
         let mut key_value_pair_in_selectors: KeyValuePairInSelectors =
             KeyValuePairInSelectors::default();
 
-        for block_value in &qualfied_rule.block.value {
-            let component_value = get_component_value(block_value);
+        // input > .btn
+        // {
+        //   position: absolute;
+        // }
+        if complex.has_component_value {
+            for block_value in &qualfied_rule.block.value {
+                let component_value = get_component_value(block_value);
 
-            key_value_pair.extend(component_value[0].key_value_pair.clone());
-            key_value_pair_in_vars.extend(component_value[0].key_value_pair_in_vars.clone());
-        }
+                key_value_pair.extend(component_value[0].key_value_pair.clone());
+                key_value_pair_in_vars.extend(component_value[0].key_value_pair_in_vars.clone());
+            }
 
-        if !complex.pseudo.is_empty() {
-            if complex.is_simple_pseudo {
-                key_value_pair_in_pseudo.insert(complex.pseudo, key_value_pair.clone());
-            } else {
-                key_value_pair_in_selectors.insert(complex.pseudo, key_value_pair.clone());
+            if !complex.pseudo.is_empty() {
+                if complex.is_simple_pseudo {
+                    key_value_pair_in_pseudo.insert(complex.pseudo, key_value_pair.clone());
+                } else {
+                    key_value_pair_in_selectors.insert(complex.pseudo, key_value_pair.clone());
+                }
             }
         }
 
@@ -505,6 +540,23 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
         let mut key: String = String::new();
         let mut is_global_style: bool = false;
         let mut is_simple_pseudo: bool = false;
+        let mut last_children_class: Option<ClassSelector> = None;
+
+        if complex_selector.children.len() > 1 {
+            if let Some(last_children) = complex_selector.children.last() {
+                if let swc_css_ast::ComplexSelectorChildren::CompoundSelector(compound_selector) =
+                    last_children
+                {
+                    if let Some(value) = compound_selector.subclass_selectors.last() {
+                        if let swc_css_ast::SubclassSelector::Class(class) = value {
+                            last_children_class = Some(class.clone());
+
+                            key.push_str(&class.text.value.to_string().to_case(Case::Camel));
+                        }
+                    }
+                }
+            }
+        }
 
         for complex_selector_children in &complex_selector.children {
             match complex_selector_children {
@@ -516,12 +568,26 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
                     for type_selector in &compound_selector.type_selector {
                         match type_selector {
                             swc_css_ast::TypeSelector::TagName(tag_name) => {
-                                key.push_str(&tag_name.name.value.value.to_string());
-                                is_global_style = true;
+                                if key.is_empty() {
+                                    is_global_style = true;
+                                }
+
+                                if !key.is_empty() && !is_global_style {
+                                    pseudo.push_str(&tag_name.name.value.value.to_string());
+                                } else {
+                                    key.push_str(&tag_name.name.value.value.to_string());
+                                }
                             }
                             swc_css_ast::TypeSelector::Universal(_) => {
-                                key.push('*');
-                                is_global_style = true;
+                                if key.is_empty() {
+                                    is_global_style = true;
+                                }
+
+                                if !key.is_empty() && !is_global_style {
+                                    pseudo.push('*');
+                                } else {
+                                    key.push('*');
+                                }
                             }
                         }
                     }
@@ -529,13 +595,63 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
                     for subclass_selector in &compound_selector.subclass_selectors {
                         match subclass_selector {
                             swc_css_ast::SubclassSelector::Id(id) => {
+                                if key.is_empty() {
+                                    is_global_style = true;
+                                }
                                 key.push_str(&format!("#{}", &id.text.value));
-                                is_global_style = true;
                             }
                             swc_css_ast::SubclassSelector::Class(class) => {
                                 if key.is_empty() {
                                     // The first class name is used as the variable name.
-                                    key.push_str(&class.text.value.to_string().to_case(Case::Camel))
+                                    key.push_str(
+                                        &class.text.value.to_string().to_case(Case::Camel),
+                                    );
+                                } else if !key.is_empty() && !is_global_style {
+                                    let formatted_text_value = if let Some(value) =
+                                        &last_children_class
+                                    {
+                                        if value.text == class.text {
+                                            "&".to_string()
+                                        } else {
+                                            format!(
+                                                "${{{}}}",
+                                                &class.text.value.to_string().to_case(Case::Camel)
+                                            )
+                                        }
+                                    } else {
+                                        format!(
+                                            "${{{}}}",
+                                            &class.text.value.to_string().to_case(Case::Camel)
+                                        )
+                                    };
+
+                                    complexes.push(Complex {
+                                        pseudo: String::new(),
+                                        key: class.text.value.to_string().to_case(Case::Camel),
+                                        is_global_style: false,
+                                        is_simple_pseudo: false,
+                                        has_component_value: false,
+                                    });
+
+                                    pseudo.push_str(&formatted_text_value);
+                                }
+
+                                if is_global_style {
+                                    let formatted_text_value = format!(
+                                        "${{{}}}",
+                                        &class.text.value.to_string().to_case(Case::Camel)
+                                    );
+
+                                    if !key.is_empty() {
+                                        complexes.push(Complex {
+                                            pseudo: String::new(),
+                                            key: class.text.value.to_string().to_case(Case::Camel),
+                                            is_global_style: false,
+                                            is_simple_pseudo: false,
+                                            has_component_value: false,
+                                        })
+                                    }
+                                    key.push_str(&formatted_text_value);
                                 }
                             }
                             swc_css_ast::SubclassSelector::Attribute(attribute) => {
@@ -619,23 +735,9 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
                 }
                 swc_css_ast::ComplexSelectorChildren::Combinator(combinator) => {
                     if is_global_style {
-                        match combinator.value {
-                            swc_css_ast::CombinatorValue::Descendant => {
-                                key.push(' ');
-                            }
-                            swc_css_ast::CombinatorValue::NextSibling => {
-                                key.push('+');
-                            }
-                            swc_css_ast::CombinatorValue::Child => {
-                                key.push('>');
-                            }
-                            swc_css_ast::CombinatorValue::LaterSibling => {
-                                key.push('~');
-                            }
-                            swc_css_ast::CombinatorValue::Column => {
-                                key.push_str("||");
-                            }
-                        }
+                        key.push_str(&get_combinator(combinator));
+                    } else {
+                        pseudo.push_str(&get_combinator(combinator));
                     }
                 }
             }
@@ -645,10 +747,21 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
             key,
             is_global_style,
             is_simple_pseudo,
+            has_component_value: true,
         })
     }
 
     complexes
+}
+
+fn get_combinator(combinator: &swc_css_ast::Combinator) -> String {
+    match combinator.value {
+        swc_css_ast::CombinatorValue::Descendant => ' '.to_string(),
+        swc_css_ast::CombinatorValue::NextSibling => " + ".to_string(),
+        swc_css_ast::CombinatorValue::Child => " > ".to_string(),
+        swc_css_ast::CombinatorValue::LaterSibling => " ~ ".to_string(),
+        swc_css_ast::CombinatorValue::Column => " || ".to_string(),
+    }
 }
 
 fn get_pseudo_class_children(
@@ -712,6 +825,7 @@ fn get_pseudo_class_children(
         key,
         is_global_style,
         is_simple_pseudo,
+        has_component_value: true,
     }
 }
 
@@ -1160,7 +1274,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"*\", {\n  boxSizing:\"border-box\",\n},\n);\nglobalStyle(\"*::after\", {\n  boxSizing:\"border-box\",\n},\n);\nglobalStyle(\"*::before\", {\n  boxSizing:\"border-box\",\n},\n);\nexport const bAR = style({\n\":hover\": {\n  boxSizing:\"border-box\",\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const bAR = style({\n\":hover\": {\n  boxSizing:\"border-box\",\n},\n});\nglobalStyle(\"*\", {\n  boxSizing:\"border-box\",\n},\n);\nglobalStyle(\"*::after\", {\n  boxSizing:\"border-box\",\n},\n);\nglobalStyle(\"*::before\", {\n  boxSizing:\"border-box\",\n},\n);\n",
             result
         )
     }
@@ -1244,7 +1358,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\nexport const display2 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const display2 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\nglobalStyle(\"input\", {\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\n",
             result
         )
     }
@@ -1277,7 +1391,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"input\", {\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\nexport const display2 = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const display2 = style({\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  color:\"red\",\n  fontSize:\"5rem\",\n},\n},\n});\nglobalStyle(\"input\", {\n\"@supports\": {\n\"(position:-webkit-sticky) or (position:sticky)\": {\n  fontSize:\"5rem\",\n},\n},\n},\n);\n",
             result
         )
     }
@@ -1324,7 +1438,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nglobalStyle(\"h4\", {\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"1.5rem\",\n},\n},\n},\n);\nexport const h4 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"1.5rem\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const h4 = style({\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"1.5rem\",\n},\n},\n});\nglobalStyle(\"h4\", {\n\"@media\": {\n\"(min-width: 1200px)\": {\n  fontSize:\"1.5rem\",\n},\n},\n},\n);\n",
             result
         )
     }
@@ -1448,6 +1562,33 @@ mod tests {
 
         assert_eq!(
             "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const input = style({\n\"selectors\": {\n\"&:checked[type='checkbox']\": {\n  backgroundColor:\"red\",\n},\n},\n});\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_027() {
+        let parsed_css =
+            parse_css("input > .btn > .icon {position: absolute;} .btn {width: 100%;}").unwrap();
+
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const btn = style({\n  width:\"100%\",\n});\nexport const icon = style({\n\"selectors\": {\n[`input > ${btn} > &`]: {\n  position:\"absolute\",\n},\n},\n});\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_028() {
+        let parsed_css =
+            parse_css(".input > input > .btn > .icon {position: absolute;} .btn {width: 100%;}")
+                .unwrap();
+
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const btn = style({\n  width:\"100%\",\n});\nexport const input = style({\n});\nexport const icon = style({\n\"selectors\": {\n[`${input} > input > ${btn} > &`]: {\n  position:\"absolute\",\n},\n},\n});\n",
             result
         )
     }
