@@ -459,6 +459,7 @@ fn finish_to_vanilla_extract(
                     key, properties,
                 )));
             } else if has_selectors {
+                println!("key:{}", &format!("${{{}}}", key));
                 if ve_selectors.contains(&format!("${{{}}}", key)) {
                     ve_selectors.insert_str(0, &wrap_export_const(key, wrap_style(properties)));
                 } else {
@@ -1260,7 +1261,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const input = style({\n});\nexport const btn = style({\n  width:\"100%\",\n});\nexport const icon = style({\n\"selectors\": {\n[`${input} > input > ${btn} > &`]: {\n  position:\"absolute\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const bAR = style({\n\":hover\": {\n  position:\"absolute\",\n},\n});\nexport const foo = style({\n  position:\"absolute\",\n});\n",
             result
         )
     }
@@ -1587,7 +1588,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "@vanilla-extract/css\"\n\nexport const btn = style({\n  width:\"100%\",\n});\nexport const input = style({\n});\nexport const icon = style({\n\"selectors\": {\n[`${input} > input > ${btn} > &`]: {\n  position:\"absolute\",\n},\n},\n});\n",
+            "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\nexport const btn = style({\n  width:\"100%\",\n});\nexport const input = style({\n});\nexport const icon = style({\n\"selectors\": {\n[`${input} > input > ${btn} > &`]: {\n  position:\"absolute\",\n},\n},\n});\n",
             result
         )
     }
