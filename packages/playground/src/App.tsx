@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import styles from "./App.module.css";
 import { useWasmWorker } from "./hooks/useWasmWorker";
 import "./prismjs/prismjs";
+
 const EDITOR_DEFAULT_VALUE = `.foo {
   background-color: blue;
 }

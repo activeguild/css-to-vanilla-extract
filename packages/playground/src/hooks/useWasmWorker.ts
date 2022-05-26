@@ -1,5 +1,5 @@
 import { format } from "prettier";
-import parserTypescript from "prettier/parser-typescript";
+import parserBabel from "prettier/parser-babel";
 import { useEffect, useState } from "react";
 import WasmWorker from "../worker?worker";
 
@@ -26,8 +26,8 @@ export const useWasmWorker = () => {
               tabWidth: 2,
               semi: true,
               singleQuote: false,
-              parser: "typescript",
-              plugins: [parserTypescript],
+              parser: "babel-ts",
+              plugins: [parserBabel],
             })
           );
           setReceiveErrorMessage("Success.");
