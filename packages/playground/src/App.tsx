@@ -61,7 +61,7 @@ function App() {
           </span>
           <a href={GITHUB_URL} className={styles.headerIcon} target="_blank">
             <strong>View on GitHub</strong>
-            <img src="github.png" alt="github" />
+            <img height={28} width={28} src="github.png" alt="github" />
           </a>
         </p>
       </header>
