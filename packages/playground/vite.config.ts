@@ -9,7 +9,6 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         output: {
           manualChunks: (id) => {
-            console.log("id :>> ", id);
             if (id.includes("node_modules")) {
               if (id.includes("prettier")) {
                 return "prettier";
@@ -19,6 +18,7 @@ export default defineConfig(({ mode }) => {
         },
       },
       experimentalCodeSplitting: true,
+      minify: "terser",
     },
     plugins: [
       react(),
