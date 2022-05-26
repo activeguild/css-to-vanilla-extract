@@ -5,6 +5,21 @@ import { visualizer } from "rollup-plugin-visualizer";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   return {
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: (id) => {
+            console.log("id :>> ", id);
+            if (id.includes("node_modules")) {
+              if (id.includes("prettier")) {
+                return "prettier";
+              }
+            }
+          },
+        },
+      },
+      experimentalCodeSplitting: true,
+    },
     plugins: [
       react(),
       sassDts(),
