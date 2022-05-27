@@ -1,6 +1,6 @@
 [package]
 name = "css_to_vanilla_extract"
-version = "0.0.25-alpha"
+version = "0.0.26-alpha"
 authors = ["j1ngzoue <workdrive0306@gmail.com>"]
 edition = "2021"
 
@@ -13,9 +13,6 @@ swc_common = "0.17.9"
 swc_css_ast = "0.88.0"
 convert_case = "0.5.0"
 regex = "1"
-
-[dev-dependencies]
-cargo-watch = "8.1.1"
 
 [profile.release]
 # Tell `rustc` to optimize for small code size.

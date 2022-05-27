@@ -10,7 +10,7 @@ use crate::{
     },
 };
 use convert_case::{Case, Casing};
-use swc_css_ast::ClassSelector;
+use swc_css_ast::{ClassSelector, ComplexSelectorChildren};
 
 type KeyValuePair = BTreeMap<String, String>;
 type KeyValuePairInPseudo = BTreeMap<String, KeyValuePair>;
@@ -543,23 +543,17 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
 
         if complex_selector.children.len() > 1 {
             if let Some(last_children) = complex_selector.children.last() {
-                if let swc_css_ast::ComplexSelectorChildren::CompoundSelector(compound_selector) =
-                    last_children
-                {
-                    if let Some(value) = compound_selector.subclass_selectors.last() {
-                        if let swc_css_ast::SubclassSelector::Class(class) = value {
-                            last_children_class = Some(class.clone());
+                last_children_class = get_last_children_class(last_children);
 
-                            key.push_str(&class.text.value.to_string().to_case(Case::Camel));
-                        }
-                    }
+                if let Some(value) = &last_children_class {
+                    key.push_str(&value.text.value.to_string().to_case(Case::Camel));
                 }
             }
         }
 
         for complex_selector_children in &complex_selector.children {
             match complex_selector_children {
-                swc_css_ast::ComplexSelectorChildren::CompoundSelector(compound_selector) => {
+                ComplexSelectorChildren::CompoundSelector(compound_selector) => {
                     for nesting_selector in &compound_selector.nesting_selector {
                         println!("nesting_selector: {:?}", nesting_selector)
                     }
@@ -732,7 +726,7 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
                     }
                     // input,div,sapn...,*
                 }
-                swc_css_ast::ComplexSelectorChildren::Combinator(combinator) => {
+                ComplexSelectorChildren::Combinator(combinator) => {
                     if is_global_style {
                         key.push_str(&get_combinator(combinator));
                     } else {
@@ -751,6 +745,18 @@ fn get_complex_selectors(comples_selectors: &[swc_css_ast::ComplexSelector]) -> 
     }
 
     complexes
+}
+
+fn get_last_children_class(last_children: &ComplexSelectorChildren) -> Option<ClassSelector> {
+    match last_children {
+        ComplexSelectorChildren::CompoundSelector(compound_selector) => {
+            match compound_selector.subclass_selectors.last() {
+                Some(swc_css_ast::SubclassSelector::Class(class)) => Some(class.clone()),
+                _ => None,
+            }
+        }
+        _ => None,
+    }
 }
 
 fn get_combinator(combinator: &swc_css_ast::Combinator) -> String {
