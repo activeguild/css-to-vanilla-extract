@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import styles from "./App.module.css";
 import { useWasmWorker } from "./hooks/useWasmWorker";
 import "./prismjs/prismjs";
+
 const EDITOR_DEFAULT_VALUE = `.foo {
   background-color: blue;
 }
@@ -60,7 +61,7 @@ function App() {
           </span>
           <a href={GITHUB_URL} className={styles.headerIcon} target="_blank">
             <strong>View on GitHub</strong>
-            <img src="github.png" alt="github" />
+            <img height={28} width={28} src="github.png" alt="github" />
           </a>
         </p>
       </header>
