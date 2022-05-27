@@ -14,9 +14,6 @@ swc_css_ast = "0.88.0"
 convert_case = "0.5.0"
 regex = "1"
 
-[dev-dependencies]
-cargo-watch = "8.1.1"
-
 [profile.release]
 # Tell `rustc` to optimize for small code size.
 lto = true
