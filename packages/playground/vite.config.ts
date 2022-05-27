@@ -22,6 +22,11 @@ export default defineConfig(({ mode }) => {
       },
       experimentalCodeSplitting: true,
       minify: "terser",
+      terserOptions: {
+        compress: {
+          passes: 2,
+        },
+      },
     },
     plugins: [
       react(),
