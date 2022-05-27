@@ -1,3 +1,11 @@
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #d9c9de;
+}
+
 div.code-toolbar {
   position: relative;
 }
