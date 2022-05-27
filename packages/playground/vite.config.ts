@@ -10,6 +10,9 @@ export default defineConfig(({ mode }) => {
         output: {
           manualChunks: (id) => {
             if (id.includes("node_modules")) {
+              if (id.includes("prettier/parser-babel")) {
+                return "parser-babel";
+              }
               if (id.includes("prettier")) {
                 return "prettier";
               }
