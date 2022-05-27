@@ -18,7 +18,6 @@ type KeyValuePairInSelectors = BTreeMap<String, KeyValuePair>;
 
 #[derive(Debug)]
 pub struct Rule {
-    // pub ve: String,
     pub key: String,
     pub key_value_pair: KeyValuePair,
     pub key_value_pair_in_vars: KeyValuePair,
