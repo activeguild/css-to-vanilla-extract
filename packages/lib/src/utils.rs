@@ -181,7 +181,7 @@ pub fn is_simple_pseudo_func(key: &str) -> bool {
 
 #[cfg(test)]
 mod tests {
-    use crate::utils::is_css_request;
+    use super::*;
 
     #[test]
     fn is_css_request_01() {
