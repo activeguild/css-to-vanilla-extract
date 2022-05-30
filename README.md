@@ -6,7 +6,7 @@
 
 Generate [vanilla-extract](https://vanilla-extract.style/) typescript file from the CSS (SCSS/SASS) file.
 
-[playground](https://grand-tapioca-e54f4f.netlify.app/)
+[playground](https://css-to-vanilla-extract.netlify.app/)
 
 The following APIs are covered.
 

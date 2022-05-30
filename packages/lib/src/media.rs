@@ -152,7 +152,8 @@ fn get_media_in_parens(media_in_parens: &swc_css_ast::MediaInParens) -> String {
 
 #[cfg(test)]
 mod tests {
-    use crate::media::{get_all_media_conditions, get_without_or_media_conditions};
+    use super::*;
+
     use swc_common::{Span, SyntaxContext};
     use swc_css_ast::{
         Dimension, Ident, Length, MediaConditionAllType, MediaConditionWithoutOrType, MediaFeature,

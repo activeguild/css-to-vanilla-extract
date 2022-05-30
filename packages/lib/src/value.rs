@@ -1229,7 +1229,8 @@ mod tests {
     use swc_common::{BytePos, Span, SyntaxContext};
     use swc_css_ast::{ComponentValue, Dimension, Ident, Length, Number};
 
-    use crate::{utils::parse_css, value::ast_to_vanilla_extract, value::get_component_value};
+    use super::*;
+    use crate::utils::parse_css;
 
     fn generate_span() -> Span {
         return Span {
