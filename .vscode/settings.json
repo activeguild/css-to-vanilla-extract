@@ -6,6 +6,7 @@
   "editor.codeActionsOnSave": ["source.fixAll.eslint"],
   "typescript.tsdk": "node_modules/typescript/lib",
   "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer", 
     "editor.formatOnSave": true
   },
   "rust-analyzer.cargo.allFeatures": true,
