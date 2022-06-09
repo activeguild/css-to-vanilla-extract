@@ -20,5 +20,8 @@
     "./packages/lib/Cargo.toml",
     "./packages/wasm/Cargo.toml",
     "./packages/node/Cargo.toml"
-  ]
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }

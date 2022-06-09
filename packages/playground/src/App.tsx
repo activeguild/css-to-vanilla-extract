@@ -56,9 +56,12 @@ function App() {
     <div className="App">
       <header className={styles.header}>
         <p className={styles.headerInnder}>
-          <span>
-            <strong>CSS to vanilla-extract</strong>
-          </span>
+          <div>
+            <div>
+              <strong>CSS to vanilla-extract playground</strong>
+            </div>
+            <div>Supported css, sass and scss.</div>
+          </div>
           <a href={GITHUB_URL} className={styles.headerIcon} target="_blank">
             <strong>View on GitHub</strong>
             <img height={28} width={28} src="github.png" alt="github" />
