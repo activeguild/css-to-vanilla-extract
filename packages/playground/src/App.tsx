@@ -1,7 +1,7 @@
-import Editor, { OnChange } from "@monaco-editor/react";
+import type { OnChange } from "@monaco-editor/react";
 import "modern-css-reset/dist/reset.min.css";
 import Prism from "prismjs";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import styles from "./App.module.css";
 import { useWasmWorker } from "./hooks/useWasmWorker";
 import "./prismjs/prismjs";
@@ -45,6 +45,8 @@ function App() {
     worker?.postMessage(value || "");
   };
 
+  const Editor = lazy(() => import('@monaco-editor/react'));
+
   useEffect(() => {
     worker?.postMessage(EDITOR_DEFAULT_VALUE);
     setTimeout(() => {
@@ -70,14 +72,16 @@ function App() {
       </header>
       <div className={styles.container}>
         <div className={styles.containerItem}>
-          <Editor
-            height="80vh"
-            defaultLanguage="scss"
-            defaultValue={EDITOR_DEFAULT_VALUE}
-            onChange={handleChange}
-            theme="vs-dark"
-            options={{ minimap: { enabled: false }, fontSize: 16 }}
-          />
+          <Suspense>
+            <Editor
+              height="80vh"
+              defaultLanguage="scss"
+              defaultValue={EDITOR_DEFAULT_VALUE}
+              onChange={handleChange}
+              theme="vs-dark"
+              options={{ minimap: { enabled: false }, fontSize: 16 }}
+            />
+          </Suspense>
         </div>
         <div className={styles.containerItem}>
           <pre className="language-typescript">
