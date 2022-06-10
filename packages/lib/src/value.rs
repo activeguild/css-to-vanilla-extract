@@ -133,7 +133,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                     ve.push_str(&wrap_fontface(wrap_properties_with_comma(
                         fontface_key,
                         block_values,
-                        None,
+                        Some(0),
                     )));
                 }
                 swc_css_ast::AtRule::Keyframes(keyframes) => {
