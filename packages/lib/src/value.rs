@@ -133,6 +133,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                     ve.push_str(&wrap_fontface(wrap_properties_with_comma(
                         fontface_key,
                         block_values,
+                        None,
                     )));
                 }
                 swc_css_ast::AtRule::Keyframes(keyframes) => {
@@ -340,7 +341,11 @@ fn finish_to_vanilla_extract(
             for (key, value) in value.key_value_pair_in_vars.into_iter() {
                 var_rule.push_str(&wrap_property(format!("\"{}\"", key), value, Some(4)));
             }
-            properties.push_str(&wrap_properties_with_colon("vars".to_string(), var_rule));
+            properties.push_str(&wrap_properties_with_colon(
+                "vars".to_string(),
+                var_rule,
+                Some(2),
+            ));
         }
 
         if !value.key_value_pair_in_pseudo.is_empty() {
@@ -350,7 +355,7 @@ fn finish_to_vanilla_extract(
                 for (key, value) in value.into_iter() {
                     properties.push_str(&wrap_property(key, value, Some(4)));
                 }
-                pseudo_rule.push_str(&wrap_properties_with_colon(key, properties));
+                pseudo_rule.push_str(&wrap_properties_with_colon(key, properties, Some(2)));
             }
             properties.push_str(&pseudo_rule);
         }
@@ -371,11 +376,17 @@ fn finish_to_vanilla_extract(
                     }
 
                     if key.contains("${") {
-                        selectors_rule
-                            .push_str(&wrap_properties_with_colon(key.to_string(), properties));
+                        selectors_rule.push_str(&wrap_properties_with_colon(
+                            key.to_string(),
+                            properties,
+                            Some(6),
+                        ));
                     } else {
-                        selectors_rule
-                            .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                        selectors_rule.push_str(&wrap_properties_with_colon(
+                            format!("&{}", key),
+                            properties,
+                            Some(6),
+                        ));
                     }
                 }
 
@@ -383,13 +394,15 @@ fn finish_to_vanilla_extract(
                     rule.push_str(&wrap_properties_with_colon(
                         "selectors".to_string(),
                         selectors_rule,
+                        Some(4),
                     ));
                 }
             }
 
             properties.push_str(&wrap_properties_with_colon(
                 String::from("@media"),
-                wrap_properties_with_colon(value.media, rule),
+                wrap_properties_with_colon(value.media, rule, Some(4)),
+                Some(2),
             ));
         }
         if !value.supports.is_empty() || !value.selectors_in_supports.is_empty() {
@@ -407,11 +420,17 @@ fn finish_to_vanilla_extract(
                     }
 
                     if key.contains("${") {
-                        selectors_rule
-                            .push_str(&wrap_properties_with_colon(key.to_string(), properties));
+                        selectors_rule.push_str(&wrap_properties_with_colon(
+                            key.to_string(),
+                            properties,
+                            Some(6),
+                        ));
                     } else {
-                        selectors_rule
-                            .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                        selectors_rule.push_str(&wrap_properties_with_colon(
+                            format!("&{}", key),
+                            properties,
+                            Some(6),
+                        ));
                     }
                 }
 
@@ -419,13 +438,15 @@ fn finish_to_vanilla_extract(
                     rule.push_str(&wrap_properties_with_colon(
                         "selectors".to_string(),
                         selectors_rule,
+                        Some(4),
                     ));
                 }
             }
 
             properties.push_str(&wrap_properties_with_colon(
                 String::from("@supports"),
-                wrap_properties_with_colon(value.supports, rule),
+                wrap_properties_with_colon(value.supports, rule, Some(4)),
+                Some(2),
             ));
         }
 
@@ -435,19 +456,27 @@ fn finish_to_vanilla_extract(
             for (key, value) in value.key_value_pair_in_selectors.into_iter() {
                 let mut properties = String::new();
                 for (key, value) in value.into_iter() {
-                    properties.push_str(&wrap_property(key, value, Some(4)));
+                    properties.push_str(&wrap_property(key, value, Some(6)));
                 }
                 if key.contains("${") {
-                    selectors.push_str(&wrap_properties_with_colon(key.to_string(), properties));
+                    selectors.push_str(&wrap_properties_with_colon(
+                        key.to_string(),
+                        properties,
+                        Some(4),
+                    ));
                 } else {
-                    selectors
-                        .push_str(&wrap_properties_with_colon(format!("&{}", key), properties));
+                    selectors.push_str(&wrap_properties_with_colon(
+                        format!("&{}", key),
+                        properties,
+                        Some(4),
+                    ));
                 }
             }
 
             properties.push_str(&wrap_properties_with_colon(
                 "selectors".to_string(),
                 selectors,
+                Some(2),
             ))
         }
 
@@ -455,10 +484,11 @@ fn finish_to_vanilla_extract(
         if !key.is_empty() {
             if is_global_rule {
                 ve.push_str(&wrap_global_style(wrap_properties_with_comma(
-                    key, properties,
+                    key,
+                    properties,
+                    Some(0),
                 )));
             } else if has_selectors {
-                println!("key:{}", &format!("${{{}}}", key));
                 if ve_selectors.contains(&format!("${{{}}}", key)) {
                     ve_selectors.insert_str(0, &wrap_export_const(key, wrap_style(properties)));
                 } else {
