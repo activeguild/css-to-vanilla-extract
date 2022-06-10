@@ -7,11 +7,12 @@
     "css-to-vanilla-extract": "dist/index.js"
   },
   "scripts": {
-    "build": "cargo-cp-artifact -nc ./dist/index.node -- cargo build --target x86_64-apple-darwin --message-format=json-render-diagnostics",
+    "build": "npm run clean && cargo-cp-artifact -nc ./dist/index.node -- cargo build --target aarch64-apple-darwin --message-format=json-render-diagnostics",
     "build-release": "npm run build -- --release && cp release/index.js ./dist",
     "test-dir": "node ./dist/index.js ./samples",
     "test-file": "node ./dist/index.js ./samples/test.css",
-    "test-css": "node -r esbuild-register ./samples/index.ts"
+    "test-css": "node -r esbuild-register ./samples/index.ts",
+    "clean": "rm -rf ./dist"
   },
   "repository": {
     "type": "git",
