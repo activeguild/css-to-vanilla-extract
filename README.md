@@ -57,36 +57,65 @@ npx css-to-vanilla-extract sample/test.css
     font-size: 10rem;
   }
 }
+@font-face {
+  font-family: "Roboto";
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
 ```
 
 ### Output
 
 ```ts
-import { globalStyle, style } from "@vanilla-extract/css";
+import { globalStyle, globalKeyframes, globalFontFace, style } from "@vanilla-extract/css"
 
-globalStyle("input", {
-  "@media": {
-    "(min-width: 1200px)": {
-      fontSize: "5rem",
-    },
+globalFontFace("Roboto", {
+  src: "url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap)",
+},);
+
+globalKeyframes("slidein", {
+  "from": {
+    transform: "translateX(0%)",
   },
-});
+  "to": {
+    transform: "translateX(100%)",
+  },
+},);
+
 export const bar = style({
   "@media": {
     "(min-width: 1200px)": {
-      fontSize: "10rem",
+    fontSize: "10rem",
     },
   },
 });
+
 export const foo = style({
   backgroundColor: "blue",
   "@media": {
     "(min-width: 1200px)": {
-      fontSize: "5rem",
-      color: "red",
+    color: "red",
+    fontSize: "5rem",
     },
   },
 });
+
+globalStyle("input", {
+  "@media": {
+    "(min-width: 1200px)": {
+    fontSize: "5rem",
+    },
+  },
+},);
 ```
 
 ## Principles of conduct

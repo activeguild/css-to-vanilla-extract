@@ -6,6 +6,7 @@
   "editor.codeActionsOnSave": ["source.fixAll.eslint"],
   "typescript.tsdk": "node_modules/typescript/lib",
   "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer", 
     "editor.formatOnSave": true
   },
   "rust-analyzer.cargo.allFeatures": true,
@@ -19,5 +20,8 @@
     "./packages/lib/Cargo.toml",
     "./packages/wasm/Cargo.toml",
     "./packages/node/Cargo.toml"
-  ]
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }

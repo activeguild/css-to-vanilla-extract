@@ -23,11 +23,19 @@ pub fn get_keyframes(keyframes: &swc_css_ast::KeyframesRule) -> String {
 
         let mut rule = String::new();
         for (key, value) in component[0].key_value_pair.clone().into_iter() {
-            rule.push_str(&wrap_property(key, value));
+            rule.push_str(&wrap_property(key, value, Some(4)));
         }
 
-        component_values.push_str(&wrap_properties_with_colon(component[0].clone().ve, rule));
+        component_values.push_str(&wrap_properties_with_colon(
+            component[0].clone().ve,
+            rule,
+            Some(2),
+        ));
     }
 
-    wrap_keyframes(wrap_properties_with_comma(keyframes_name, component_values))
+    wrap_keyframes(wrap_properties_with_comma(
+        keyframes_name,
+        component_values,
+        Some(0),
+    ))
 }

@@ -28,26 +28,26 @@ pub fn wrap_export_const(key: String, rule: String) -> String {
 }
 
 pub fn wrap_style(rule: String) -> String {
-    format!("style({{\n{}}});\n", rule)
+    remove_superfluou_line_breaks(format!("style({{\n{}}});\n\n", rule))
 }
 
 pub fn wrap_global_style(rule: String) -> String {
     // globalStyle(`input *`, {
     //   boxSizing: 'border-box'
     // });
-    format!("globalStyle({});\n", rule)
+    remove_superfluou_line_breaks(format!("globalStyle({});\n\n", rule))
 }
 
 pub fn wrap_keyframes(rule: String) -> String {
-    format!("globalKeyframes({});\n", rule)
+    remove_superfluou_line_breaks(format!("globalKeyframes({});\n\n", rule))
 }
 
 pub fn wrap_fontface(rule: String) -> String {
-    format!("globalFontFace({});\n", rule)
+    remove_superfluou_line_breaks(format!("globalFontFace({});\n\n", rule))
 }
 
-pub fn wrap_property(key: String, rule: String) -> String {
-    format!("  {}:\"{}\",\n", key, rule)
+pub fn wrap_property(key: String, rule: String, spacer: Option<i8>) -> String {
+    format!("{}{}: \"{}\",\n", generate_spaces(spacer), key, rule)
 }
 
 fn wrap_properties(
@@ -55,26 +55,50 @@ fn wrap_properties(
     rule: String,
     separator: char,
     with_square_brackets: bool,
+    spacer: Option<i8>,
 ) -> String {
+    let spaces = generate_spaces(spacer);
     if rule.is_empty() {
         String::new()
     } else if key.contains("${") {
         if with_square_brackets {
-            format!("[`{}`]{} {{\n{}}},\n", key, separator, rule)
+            format!(
+                "{}[`{}`]{} {{\n{}{}}},\n",
+                spaces, key, separator, rule, spaces
+            )
         } else {
-            format!("`{}`{} {{\n{}}},\n", key, separator, rule)
+            format!(
+                "{}`{}`{} {{\n{}{}}},\n",
+                spaces, key, separator, rule, spaces
+            )
         }
     } else {
-        format!("\"{}\"{} {{\n{}}},\n", key, separator, rule)
+        format!(
+            "{}\"{}\"{} {{\n{}{}}},\n",
+            spaces, key, separator, rule, spaces
+        )
     }
 }
 
-pub fn wrap_properties_with_colon(key: String, rule: String) -> String {
-    wrap_properties(key, rule, ':', true)
+pub fn wrap_properties_with_colon(key: String, rule: String, spacer: Option<i8>) -> String {
+    wrap_properties(key, rule, ':', true, spacer)
 }
 
-pub fn wrap_properties_with_comma(key: String, rule: String) -> String {
-    wrap_properties(key, rule, ',', false)
+pub fn wrap_properties_with_comma(key: String, rule: String, spacer: Option<i8>) -> String {
+    wrap_properties(key, rule, ',', false, spacer)
+}
+
+pub fn generate_spaces(spacer: Option<i8>) -> String {
+    let mut spaces: Vec<String> = vec![];
+    for _i in 0..spacer.unwrap_or(2).try_into().unwrap() {
+        spaces.push(" ".to_string());
+    }
+    spaces.join("")
+}
+
+pub fn remove_superfluou_line_breaks(value: String) -> String {
+    let re = Regex::new(r"},\n\)").unwrap();
+    re.replace_all(&value, "},)").to_string()
 }
 
 const PSEUDO_MAPCONST: [&str; 95] = [
