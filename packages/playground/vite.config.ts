@@ -6,20 +6,6 @@ import { visualizer } from "rollup-plugin-visualizer";
 export default defineConfig(({ mode }) => {
   return {
     build: {
-      rollupOptions: {
-        output: {
-          manualChunks: (id) => {
-            if (id.includes("node_modules")) {
-              if (id.includes("prettier/parser-babel")) {
-                return "parser-babel";
-              }
-              if (id.includes("prettier")) {
-                return "prettier";
-              }
-            }
-          },
-        },
-      },
       experimentalCodeSplitting: true,
       minify: "terser",
       terserOptions: {
