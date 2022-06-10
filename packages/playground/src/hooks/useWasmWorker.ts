@@ -1,5 +1,3 @@
-import { format } from "prettier";
-import parserBabel from "prettier/parser-babel";
 import { useEffect, useState } from "react";
 import WasmWorker from "../worker?worker";
 
@@ -21,14 +19,7 @@ export const useWasmWorker = () => {
           setReceiveErrorMessage(e.data.error);
         } else {
           setReceiveMessage(
-            format(e.data.code, {
-              trailingComma: "es5",
-              tabWidth: 2,
-              semi: true,
-              singleQuote: false,
-              parser: "babel-ts",
-              plugins: [parserBabel],
-            })
+            e.data.code
           );
           setReceiveErrorMessage("Success.");
         }

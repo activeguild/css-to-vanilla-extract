@@ -26,13 +26,11 @@
     "@monaco-editor/react": "^4.4.5",
     "modern-css-reset": "^1.4.0",
     "monaco-editor": "^0.33.0",
-    "prettier": "^2.6.2",
     "prismjs": "^1.28.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@types/prettier": "^2.6.3",
     "@types/prismjs": "^1.26.0",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
