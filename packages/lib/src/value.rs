@@ -125,7 +125,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                             if key == "fontFamily" {
                                 fontface_key.push_str(&value);
                             } else {
-                                block_values.push_str(&wrap_property(key, value));
+                                block_values.push_str(&wrap_property(key, value, None));
                             }
                         }
                     }
@@ -331,16 +331,16 @@ fn finish_to_vanilla_extract(
             || !value.selectors_in_media.is_empty()
             || !value.selectors_in_supports.is_empty();
 
+        for (key, value) in value.key_value_pair.into_iter() {
+            properties.push_str(&wrap_property(key, value, Some(2)));
+        }
+
         if !value.key_value_pair_in_vars.is_empty() {
             let mut var_rule = String::new();
             for (key, value) in value.key_value_pair_in_vars.into_iter() {
-                var_rule.push_str(&wrap_property(format!("\"{}\"", key), value));
+                var_rule.push_str(&wrap_property(format!("\"{}\"", key), value, Some(4)));
             }
             properties.push_str(&wrap_properties_with_colon("vars".to_string(), var_rule));
-        }
-
-        for (key, value) in value.key_value_pair.into_iter() {
-            properties.push_str(&wrap_property(key, value));
         }
 
         if !value.key_value_pair_in_pseudo.is_empty() {
@@ -348,7 +348,7 @@ fn finish_to_vanilla_extract(
             for (key, value) in value.key_value_pair_in_pseudo.into_iter() {
                 let mut properties = String::new();
                 for (key, value) in value.into_iter() {
-                    properties.push_str(&wrap_property(key, value));
+                    properties.push_str(&wrap_property(key, value, Some(4)));
                 }
                 pseudo_rule.push_str(&wrap_properties_with_colon(key, properties));
             }
@@ -359,7 +359,7 @@ fn finish_to_vanilla_extract(
             let mut rule = String::new();
 
             for (key, value) in value.key_value_pair_in_media.into_iter() {
-                rule.push_str(&wrap_property(key, value));
+                rule.push_str(&wrap_property(key, value, Some(4)));
             }
 
             for (_key, selectors_value) in value.selectors_in_media.into_iter() {
@@ -367,7 +367,7 @@ fn finish_to_vanilla_extract(
                 for (key, value) in selectors_value.into_iter() {
                     let mut properties = String::new();
                     for (key, value) in value.into_iter() {
-                        properties.push_str(&wrap_property(key, value));
+                        properties.push_str(&wrap_property(key, value, Some(4)));
                     }
 
                     if key.contains("${") {
@@ -395,7 +395,7 @@ fn finish_to_vanilla_extract(
         if !value.supports.is_empty() || !value.selectors_in_supports.is_empty() {
             let mut rule = String::new();
             for (key, value) in value.key_value_pair_in_supports.into_iter() {
-                rule.push_str(&wrap_property(key, value));
+                rule.push_str(&wrap_property(key, value, Some(4)));
             }
 
             for (_key, selectors_value) in value.selectors_in_supports.into_iter() {
@@ -403,7 +403,7 @@ fn finish_to_vanilla_extract(
                 for (key, value) in selectors_value.into_iter() {
                     let mut properties = String::new();
                     for (key, value) in value.into_iter() {
-                        properties.push_str(&wrap_property(key, value));
+                        properties.push_str(&wrap_property(key, value, Some(6)));
                     }
 
                     if key.contains("${") {
@@ -435,7 +435,7 @@ fn finish_to_vanilla_extract(
             for (key, value) in value.key_value_pair_in_selectors.into_iter() {
                 let mut properties = String::new();
                 for (key, value) in value.into_iter() {
-                    properties.push_str(&wrap_property(key, value));
+                    properties.push_str(&wrap_property(key, value, Some(4)));
                 }
                 if key.contains("${") {
                     selectors.push_str(&wrap_properties_with_colon(key.to_string(), properties));
