@@ -1,6 +1,7 @@
 use regex::Regex;
 
 static CSSLANGS: &str = ".(css|sass|scss)$";
+static SUPERFLUOU_LINE_BREAKS: &str = r"},\n\)";
 
 pub fn parse_css(css: &str) -> Result<swc_css_ast::Stylesheet, swc_css_parser::error::Error> {
     let start_pos = swc_common::BytePos(0);
@@ -89,15 +90,12 @@ pub fn wrap_properties_with_comma(key: String, rule: String, spacer: Option<i8>)
 }
 
 pub fn generate_spaces(spacer: Option<i8>) -> String {
-    let mut spaces: Vec<String> = vec![];
-    for _i in 0..spacer.unwrap_or(2).try_into().unwrap() {
-        spaces.push(" ".to_string());
-    }
-    spaces.join("")
+    let spaces: Vec<String> = vec![" ".to_string(); spacer.unwrap_or(2).try_into().unwrap()];
+    spaces.concat()
 }
 
 pub fn remove_superfluou_line_breaks(value: String) -> String {
-    let re = Regex::new(r"},\n\)").unwrap();
+    let re = Regex::new(SUPERFLUOU_LINE_BREAKS).unwrap();
     re.replace_all(&value, "})").to_string()
 }
 
