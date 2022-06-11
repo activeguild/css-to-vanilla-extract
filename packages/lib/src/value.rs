@@ -364,7 +364,7 @@ fn finish_to_vanilla_extract(
             let mut rule = String::new();
 
             for (key, value) in value.key_value_pair_in_media.into_iter() {
-                rule.push_str(&wrap_property(key, value, Some(4)));
+                rule.push_str(&wrap_property(key, value, Some(6)));
             }
 
             for (_key, selectors_value) in value.selectors_in_media.into_iter() {
@@ -372,20 +372,20 @@ fn finish_to_vanilla_extract(
                 for (key, value) in selectors_value.into_iter() {
                     let mut properties = String::new();
                     for (key, value) in value.into_iter() {
-                        properties.push_str(&wrap_property(key, value, Some(4)));
+                        properties.push_str(&wrap_property(key, value, Some(10)));
                     }
 
                     if key.contains("${") {
                         selectors_rule.push_str(&wrap_properties_with_colon(
                             key.to_string(),
                             properties,
-                            Some(6),
+                            Some(8),
                         ));
                     } else {
                         selectors_rule.push_str(&wrap_properties_with_colon(
                             format!("&{}", key),
                             properties,
-                            Some(6),
+                            Some(8),
                         ));
                     }
                 }
@@ -394,7 +394,7 @@ fn finish_to_vanilla_extract(
                     rule.push_str(&wrap_properties_with_colon(
                         "selectors".to_string(),
                         selectors_rule,
-                        Some(4),
+                        Some(6),
                     ));
                 }
             }
@@ -408,7 +408,7 @@ fn finish_to_vanilla_extract(
         if !value.supports.is_empty() || !value.selectors_in_supports.is_empty() {
             let mut rule = String::new();
             for (key, value) in value.key_value_pair_in_supports.into_iter() {
-                rule.push_str(&wrap_property(key, value, Some(4)));
+                rule.push_str(&wrap_property(key, value, Some(6)));
             }
 
             for (_key, selectors_value) in value.selectors_in_supports.into_iter() {
@@ -416,20 +416,20 @@ fn finish_to_vanilla_extract(
                 for (key, value) in selectors_value.into_iter() {
                     let mut properties = String::new();
                     for (key, value) in value.into_iter() {
-                        properties.push_str(&wrap_property(key, value, Some(6)));
+                        properties.push_str(&wrap_property(key, value, Some(10)));
                     }
 
                     if key.contains("${") {
                         selectors_rule.push_str(&wrap_properties_with_colon(
                             key.to_string(),
                             properties,
-                            Some(6),
+                            Some(8),
                         ));
                     } else {
                         selectors_rule.push_str(&wrap_properties_with_colon(
                             format!("&{}", key),
                             properties,
-                            Some(6),
+                            Some(8),
                         ));
                     }
                 }
@@ -438,7 +438,7 @@ fn finish_to_vanilla_extract(
                     rule.push_str(&wrap_properties_with_colon(
                         "selectors".to_string(),
                         selectors_rule,
-                        Some(4),
+                        Some(6),
                     ));
                 }
             }

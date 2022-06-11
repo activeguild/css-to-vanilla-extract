@@ -31,14 +31,14 @@ export const foo = style({
 export const accordionButton = style({
   "@media": {
     "(min-width: 1200px)": {
-    "selectors": {
-      "&:not": {
-    color: "0c63e4",
+      "selectors": {
+        "&:not": {
+          color: "0c63e4",
+        },
+        "&:not::after": {
+          transform: "rotate(-180deg)",
+        },
       },
-      "&:not::after": {
-    transform: "rotate(-180deg)",
-      },
-    },
     },
   },
 });
@@ -46,8 +46,8 @@ export const accordionButton = style({
 export const display1 = style({
   "@media": {
     "(min-width: 1200px)": {
-    color: "red",
-    fontSize: "5rem",
+      color: "red",
+      fontSize: "5rem",
     },
   },
 });
@@ -56,8 +56,8 @@ export const display2 = style({
   backgroundColor: "blue",
   "@media": {
     "(min-width: 1200px)": {
-    color: "red",
-    fontSize: "5rem",
+      color: "red",
+      fontSize: "5rem",
     },
   },
 });
@@ -65,7 +65,7 @@ export const display2 = style({
 export const display3 = style({
   "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
-    fontSize: "5rem",
+      fontSize: "5rem",
     },
   },
 });
@@ -73,8 +73,8 @@ export const display3 = style({
 export const display4 = style({
   "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
-    color: "red",
-    fontSize: "5rem",
+      color: "red",
+      fontSize: "5rem",
     },
   },
 });
@@ -83,8 +83,8 @@ export const display5 = style({
   backgroundColor: "blue",
   "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
-    color: "red",
-    fontSize: "5rem",
+      color: "red",
+      fontSize: "5rem",
     },
   },
 });
@@ -136,12 +136,12 @@ globalStyle("[type^='button' s]", {
 globalStyle("input", {
   "@media": {
     "(min-width: 1200px)": {
-    fontSize: "5rem",
+      fontSize: "5rem",
     },
   },
   "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
-    fontSize: "5rem",
+      fontSize: "5rem",
     },
   },
 });
