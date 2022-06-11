@@ -7,7 +7,7 @@ globalKeyframes("progress-bar-stripes", {
   "to": {
     backgroundPosition: "0 0",
   },
-},);
+});
 
 globalKeyframes("progress-bar-stripes", {
   "from": {
@@ -16,21 +16,21 @@ globalKeyframes("progress-bar-stripes", {
   "to": {
     backgroundPosition: "0 0",
   },
-},);
+});
 
 globalKeyframes("spinner-border", {
   "to": {
     WebkitTransform: "rotate(360deg)",
     transform: "rotate(360deg)",
   },
-},);
+});
 
 globalKeyframes("spinner-border", {
   "to": {
     WebkitTransform: "rotate(360deg)",
     transform: "rotate(360deg)",
   },
-},);
+});
 
 globalKeyframes("spinner-grow", {
   "0%": {
@@ -42,7 +42,7 @@ globalKeyframes("spinner-grow", {
     opacity: "1",
     transform: "none",
   },
-},);
+});
 
 globalKeyframes("spinner-grow", {
   "0%": {
@@ -54,7 +54,7 @@ globalKeyframes("spinner-grow", {
     opacity: "1",
     transform: "none",
   },
-},);
+});
 
 export const alert = style({
   border: "1px solid transparent",
@@ -16601,7 +16601,7 @@ globalStyle("*", {
     textShadow: "none",
     },
   },
-},);
+});
 
 globalStyle("*::after", {
   boxSizing: "border-box",
@@ -16611,7 +16611,7 @@ globalStyle("*::after", {
     textShadow: "none",
     },
   },
-},);
+});
 
 globalStyle("*::before", {
   boxSizing: "border-box",
@@ -16621,12 +16621,12 @@ globalStyle("*::before", {
     textShadow: "none",
     },
   },
-},);
+});
 
 globalStyle("::-webkit-file-upload-button", {
   WebkitAppearance: "button",
   font: "inherit",
-},);
+});
 
 globalStyle(":root", {
   "vars": {
@@ -16659,370 +16659,370 @@ globalStyle(":root", {
     "--white": "#fff",
     "--yellow": "#ffc107",
   },
-},);
+});
 
 globalStyle("[hidden]", {
   display: "none",
-},);
+});
 
 globalStyle("[role='button']", {
   cursor: "pointer",
-},);
+});
 
 globalStyle("[tabindex='-1']:focus:not(:focus-visible)", {
   outline: "0",
-},);
+});
 
 globalStyle("[type='button']", {
   WebkitAppearance: "button",
-},);
+});
 
 globalStyle("[type='button']::-moz-focus-inner", {
   borderStyle: "none",
   padding: "0",
-},);
+});
 
 globalStyle("[type='button']:not(:disabled)", {
   cursor: "pointer",
-},);
+});
 
 globalStyle("[type='number']::-webkit-inner-spin-button", {
   height: "auto",
-},);
+});
 
 globalStyle("[type='number']::-webkit-outer-spin-button", {
   height: "auto",
-},);
+});
 
 globalStyle("[type='reset']", {
   WebkitAppearance: "button",
-},);
+});
 
 globalStyle("[type='reset']::-moz-focus-inner", {
   borderStyle: "none",
   padding: "0",
-},);
+});
 
 globalStyle("[type='reset']:not(:disabled)", {
   cursor: "pointer",
-},);
+});
 
 globalStyle("[type='search']", {
   WebkitAppearance: "none",
   outlineOffset: "-2px",
-},);
+});
 
 globalStyle("[type='search']::-webkit-search-decoration", {
   WebkitAppearance: "none",
-},);
+});
 
 globalStyle("[type='submit']", {
   WebkitAppearance: "button",
-},);
+});
 
 globalStyle("[type='submit']::-moz-focus-inner", {
   borderStyle: "none",
   padding: "0",
-},);
+});
 
 globalStyle("[type='submit']:not(:disabled)", {
   cursor: "pointer",
-},);
+});
 
 globalStyle("a", {
   backgroundColor: "transparent",
   color: "007bff",
   textDecoration: "none",
-},);
+});
 
 globalStyle("a > code", {
   color: "inherit",
-},);
+});
 
 globalStyle(`a${badgeDanger}${focus}`, {
   boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeDanger}:focus`, {
   backgroundColor: "bd2130",
   boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
   color: "fff",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeDanger}:hover`, {
   backgroundColor: "bd2130",
   color: "fff",
-},);
+});
 
 globalStyle(`a${badgeDark}${focus}`, {
   boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeDark}:focus`, {
   backgroundColor: "1d2124",
   boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
   color: "fff",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeDark}:hover`, {
   backgroundColor: "1d2124",
   color: "fff",
-},);
+});
 
 globalStyle(`a${badgeInfo}${focus}`, {
   boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeInfo}:focus`, {
   backgroundColor: "117a8b",
   boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
   color: "fff",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeInfo}:hover`, {
   backgroundColor: "117a8b",
   color: "fff",
-},);
+});
 
 globalStyle(`a${badgeLight}${focus}`, {
   boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeLight}:focus`, {
   backgroundColor: "dae0e5",
   boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
   color: "212529",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeLight}:hover`, {
   backgroundColor: "dae0e5",
   color: "212529",
-},);
+});
 
 globalStyle(`a${badgePrimary}${focus}`, {
   boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgePrimary}:focus`, {
   backgroundColor: "0062cc",
   boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
   color: "fff",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgePrimary}:hover`, {
   backgroundColor: "0062cc",
   color: "fff",
-},);
+});
 
 globalStyle(`a${badgeSecondary}${focus}`, {
   boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeSecondary}:focus`, {
   backgroundColor: "545b62",
   boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
   color: "fff",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeSecondary}:hover`, {
   backgroundColor: "545b62",
   color: "fff",
-},);
+});
 
 globalStyle(`a${badgeSuccess}${focus}`, {
   boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeSuccess}:focus`, {
   backgroundColor: "1e7e34",
   boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
   color: "fff",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeSuccess}:hover`, {
   backgroundColor: "1e7e34",
   color: "fff",
-},);
+});
 
 globalStyle(`a${badgeWarning}${focus}`, {
   boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeWarning}:focus`, {
   backgroundColor: "d39e00",
   boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
   color: "212529",
   outline: "0",
-},);
+});
 
 globalStyle(`a${badgeWarning}:hover`, {
   backgroundColor: "d39e00",
   color: "212529",
-},);
+});
 
 globalStyle(`a${badge}:focus`, {
   textDecoration: "none",
-},);
+});
 
 globalStyle(`a${badge}:hover`, {
   textDecoration: "none",
-},);
+});
 
 globalStyle(`a${bgDanger}:focus`, {
   backgroundColor: "bd2130",
-},);
+});
 
 globalStyle(`a${bgDanger}:hover`, {
   backgroundColor: "bd2130",
-},);
+});
 
 globalStyle(`a${bgDark}:focus`, {
   backgroundColor: "1d2124",
-},);
+});
 
 globalStyle(`a${bgDark}:hover`, {
   backgroundColor: "1d2124",
-},);
+});
 
 globalStyle(`a${bgInfo}:focus`, {
   backgroundColor: "117a8b",
-},);
+});
 
 globalStyle(`a${bgInfo}:hover`, {
   backgroundColor: "117a8b",
-},);
+});
 
 globalStyle(`a${bgLight}:focus`, {
   backgroundColor: "dae0e5",
-},);
+});
 
 globalStyle(`a${bgLight}:hover`, {
   backgroundColor: "dae0e5",
-},);
+});
 
 globalStyle(`a${bgPrimary}:focus`, {
   backgroundColor: "0062cc",
-},);
+});
 
 globalStyle(`a${bgPrimary}:hover`, {
   backgroundColor: "0062cc",
-},);
+});
 
 globalStyle(`a${bgSecondary}:focus`, {
   backgroundColor: "545b62",
-},);
+});
 
 globalStyle(`a${bgSecondary}:hover`, {
   backgroundColor: "545b62",
-},);
+});
 
 globalStyle(`a${bgSuccess}:focus`, {
   backgroundColor: "1e7e34",
-},);
+});
 
 globalStyle(`a${bgSuccess}:hover`, {
   backgroundColor: "1e7e34",
-},);
+});
 
 globalStyle(`a${bgWarning}:focus`, {
   backgroundColor: "d39e00",
-},);
+});
 
 globalStyle(`a${bgWarning}:hover`, {
   backgroundColor: "d39e00",
-},);
+});
 
 globalStyle(`a${btn}${disabled}`, {
   pointerEvents: "none",
-},);
+});
 
 globalStyle(`a${close}${disabled}`, {
   pointerEvents: "none",
-},);
+});
 
 globalStyle(`a${textDanger}:focus`, {
   color: "a71d2a",
-},);
+});
 
 globalStyle(`a${textDanger}:hover`, {
   color: "a71d2a",
-},);
+});
 
 globalStyle(`a${textDark}:focus`, {
   color: "121416",
-},);
+});
 
 globalStyle(`a${textDark}:hover`, {
   color: "121416",
-},);
+});
 
 globalStyle(`a${textInfo}:focus`, {
   color: "0f6674",
-},);
+});
 
 globalStyle(`a${textInfo}:hover`, {
   color: "0f6674",
-},);
+});
 
 globalStyle(`a${textLight}:focus`, {
   color: "cbd3da",
-},);
+});
 
 globalStyle(`a${textLight}:hover`, {
   color: "cbd3da",
-},);
+});
 
 globalStyle(`a${textPrimary}:focus`, {
   color: "0056b3",
-},);
+});
 
 globalStyle(`a${textPrimary}:hover`, {
   color: "0056b3",
-},);
+});
 
 globalStyle(`a${textSecondary}:focus`, {
   color: "494f54",
-},);
+});
 
 globalStyle(`a${textSecondary}:hover`, {
   color: "494f54",
-},);
+});
 
 globalStyle(`a${textSuccess}:focus`, {
   color: "19692c",
-},);
+});
 
 globalStyle(`a${textSuccess}:hover`, {
   color: "19692c",
-},);
+});
 
 globalStyle(`a${textWarning}:focus`, {
   color: "ba8b00",
-},);
+});
 
 globalStyle(`a${textWarning}:hover`, {
   color: "ba8b00",
-},);
+});
 
 globalStyle("a:hover", {
   color: "0056b3",
   textDecoration: "underline",
-},);
+});
 
 globalStyle("a:not", {
   "@media": {
@@ -17030,17 +17030,17 @@ globalStyle("a:not", {
     textDecoration: "underline",
     },
   },
-},);
+});
 
 globalStyle("a:not([href]):not([class])", {
   color: "inherit",
   textDecoration: "none",
-},);
+});
 
 globalStyle("a:not([href]):not([class]):hover", {
   color: "inherit",
   textDecoration: "none",
-},);
+});
 
 globalStyle("abbr[data-original-title]", {
   WebkitTextDecoration: "underline dotted",
@@ -17049,7 +17049,7 @@ globalStyle("abbr[data-original-title]", {
   cursor: "help",
   textDecoration: "underline dotted",
   textDecorationSkipInk: "none",
-},);
+});
 
 globalStyle("abbr[title]", {
   WebkitTextDecoration: "underline dotted",
@@ -17058,7 +17058,7 @@ globalStyle("abbr[title]", {
   cursor: "help",
   textDecoration: "underline dotted",
   textDecorationSkipInk: "none",
-},);
+});
 
 globalStyle("abbr[title]::after", {
   "@media": {
@@ -17066,25 +17066,25 @@ globalStyle("abbr[title]::after", {
     content: " ( attr(title) )",
     },
   },
-},);
+});
 
 globalStyle("address", {
   fontStyle: "normal",
   lineHeight: "inherit",
   marginBottom: "1rem",
-},);
+});
 
 globalStyle("article", {
   display: "block",
-},);
+});
 
 globalStyle("aside", {
   display: "block",
-},);
+});
 
 globalStyle("b", {
   fontWeight: "bolder",
-},);
+});
 
 globalStyle("blockquote", {
   margin: "0 0 1rem",
@@ -17094,7 +17094,7 @@ globalStyle("blockquote", {
     pageBreakInside: "avoid",
     },
   },
-},);
+});
 
 globalStyle("body", {
   backgroundColor: "fff",
@@ -17110,7 +17110,7 @@ globalStyle("body", {
     minWidth: "992px",
     },
   },
-},);
+});
 
 globalStyle("button", {
   WebkitAppearance: "button",
@@ -17121,90 +17121,90 @@ globalStyle("button", {
   margin: "0",
   overflow: "visible",
   textTransform: "none",
-},);
+});
 
 globalStyle(`button${bgDanger}:focus`, {
   backgroundColor: "bd2130",
-},);
+});
 
 globalStyle(`button${bgDanger}:hover`, {
   backgroundColor: "bd2130",
-},);
+});
 
 globalStyle(`button${bgDark}:focus`, {
   backgroundColor: "1d2124",
-},);
+});
 
 globalStyle(`button${bgDark}:hover`, {
   backgroundColor: "1d2124",
-},);
+});
 
 globalStyle(`button${bgInfo}:focus`, {
   backgroundColor: "117a8b",
-},);
+});
 
 globalStyle(`button${bgInfo}:hover`, {
   backgroundColor: "117a8b",
-},);
+});
 
 globalStyle(`button${bgLight}:focus`, {
   backgroundColor: "dae0e5",
-},);
+});
 
 globalStyle(`button${bgLight}:hover`, {
   backgroundColor: "dae0e5",
-},);
+});
 
 globalStyle(`button${bgPrimary}:focus`, {
   backgroundColor: "0062cc",
-},);
+});
 
 globalStyle(`button${bgPrimary}:hover`, {
   backgroundColor: "0062cc",
-},);
+});
 
 globalStyle(`button${bgSecondary}:focus`, {
   backgroundColor: "545b62",
-},);
+});
 
 globalStyle(`button${bgSecondary}:hover`, {
   backgroundColor: "545b62",
-},);
+});
 
 globalStyle(`button${bgSuccess}:focus`, {
   backgroundColor: "1e7e34",
-},);
+});
 
 globalStyle(`button${bgSuccess}:hover`, {
   backgroundColor: "1e7e34",
-},);
+});
 
 globalStyle(`button${bgWarning}:focus`, {
   backgroundColor: "d39e00",
-},);
+});
 
 globalStyle(`button${bgWarning}:hover`, {
   backgroundColor: "d39e00",
-},);
+});
 
 globalStyle(`button${close}`, {
   backgroundColor: "transparent",
   border: "0",
   padding: "0",
-},);
+});
 
 globalStyle("button::-moz-focus-inner", {
   borderStyle: "none",
   padding: "0",
-},);
+});
 
 globalStyle("button:focus:not(:focus-visible)", {
   outline: "0",
-},);
+});
 
 globalStyle("button:not(:disabled)", {
   cursor: "pointer",
-},);
+});
 
 globalStyle("caption", {
   captionSide: "bottom",
@@ -17212,48 +17212,48 @@ globalStyle("caption", {
   paddingBottom: "0.75rem",
   paddingTop: "0.75rem",
   textAlign: "left",
-},);
+});
 
 globalStyle("code", {
   color: "e83e8c",
   fontFamily: "SFMono-Regular , Menlo , Monaco , Consolas , Liberation Mono , Courier New , monospace",
   fontSize: "87.5%",
   wordWrap: "break-word",
-},);
+});
 
 globalStyle("dd", {
   marginBottom: "0.5rem",
   marginLeft: "0",
-},);
+});
 
 globalStyle("dl", {
   marginBottom: "1rem",
   marginTop: "0",
-},);
+});
 
 globalStyle("dt", {
   fontWeight: "700",
-},);
+});
 
 globalStyle("fieldset", {
   border: "0",
   margin: "0",
   minWidth: "0",
   padding: "0",
-},);
+});
 
 globalStyle("figcaption", {
   display: "block",
-},);
+});
 
 globalStyle("figure", {
   display: "block",
   margin: "0 0 1rem",
-},);
+});
 
 globalStyle("footer", {
   display: "block",
-},);
+});
 
 globalStyle("h1", {
   fontSize: "2.5rem",
@@ -17261,7 +17261,7 @@ globalStyle("h1", {
   lineHeight: "1.2",
   marginBottom: "0.5rem",
   marginTop: "0",
-},);
+});
 
 globalStyle("h2", {
   fontSize: "2rem",
@@ -17276,7 +17276,7 @@ globalStyle("h2", {
     widows: "3",
     },
   },
-},);
+});
 
 globalStyle("h3", {
   fontSize: "1.75rem",
@@ -17291,7 +17291,7 @@ globalStyle("h3", {
     widows: "3",
     },
   },
-},);
+});
 
 globalStyle("h4", {
   fontSize: "1.5rem",
@@ -17299,7 +17299,7 @@ globalStyle("h4", {
   lineHeight: "1.2",
   marginBottom: "0.5rem",
   marginTop: "0",
-},);
+});
 
 globalStyle("h5", {
   fontSize: "1.25rem",
@@ -17307,7 +17307,7 @@ globalStyle("h5", {
   lineHeight: "1.2",
   marginBottom: "0.5rem",
   marginTop: "0",
-},);
+});
 
 globalStyle("h6", {
   fontSize: "1rem",
@@ -17315,15 +17315,15 @@ globalStyle("h6", {
   lineHeight: "1.2",
   marginBottom: "0.5rem",
   marginTop: "0",
-},);
+});
 
 globalStyle("header", {
   display: "block",
-},);
+});
 
 globalStyle("hgroup", {
   display: "block",
-},);
+});
 
 globalStyle("hr", {
   border: "0",
@@ -17333,14 +17333,14 @@ globalStyle("hr", {
   marginBottom: "1rem",
   marginTop: "1rem",
   overflow: "visible",
-},);
+});
 
 globalStyle("html", {
   WebkitTapHighlightColor: "rgba(0,0,0,0)",
   WebkitTextSizeAdjust: "100%",
   fontFamily: "sans-serif",
   lineHeight: "1.15",
-},);
+});
 
 globalStyle("img", {
   borderStyle: "none",
@@ -17350,7 +17350,7 @@ globalStyle("img", {
     pageBreakInside: "avoid",
     },
   },
-},);
+});
 
 globalStyle("input", {
   fontFamily: "inherit",
@@ -17358,53 +17358,53 @@ globalStyle("input", {
   lineHeight: "inherit",
   margin: "0",
   overflow: "visible",
-},);
+});
 
 globalStyle(`input[type='button']${btnBlock}`, {
   width: "100%",
-},);
+});
 
 globalStyle("input[type='checkbox']", {
   boxSizing: "border-box",
   padding: "0",
-},);
+});
 
 globalStyle(`input[type='date']${formControl}`, {
   MozAppearance: "none",
   WebkitAppearance: "none",
   appearance: "none",
-},);
+});
 
 globalStyle(`input[type='datetime-local']${formControl}`, {
   MozAppearance: "none",
   WebkitAppearance: "none",
   appearance: "none",
-},);
+});
 
 globalStyle(`input[type='month']${formControl}`, {
   MozAppearance: "none",
   WebkitAppearance: "none",
   appearance: "none",
-},);
+});
 
 globalStyle("input[type='radio']", {
   boxSizing: "border-box",
   padding: "0",
-},);
+});
 
 globalStyle(`input[type='reset']${btnBlock}`, {
   width: "100%",
-},);
+});
 
 globalStyle(`input[type='submit']${btnBlock}`, {
   width: "100%",
-},);
+});
 
 globalStyle(`input[type='time']${formControl}`, {
   MozAppearance: "none",
   WebkitAppearance: "none",
   appearance: "none",
-},);
+});
 
 globalStyle("kbd", {
   backgroundColor: "212529",
@@ -17413,18 +17413,18 @@ globalStyle("kbd", {
   fontFamily: "SFMono-Regular , Menlo , Monaco , Consolas , Liberation Mono , Courier New , monospace",
   fontSize: "87.5%",
   padding: "0.2rem 0.4rem",
-},);
+});
 
 globalStyle("kbd kbd", {
   fontSize: "100%",
   fontWeight: "700",
   padding: "0",
-},);
+});
 
 globalStyle("label", {
   display: "inline-block",
   marginBottom: "0.5rem",
-},);
+});
 
 globalStyle("legend", {
   color: "inherit",
@@ -17436,44 +17436,44 @@ globalStyle("legend", {
   padding: "0",
   whiteSpace: "normal",
   width: "100%",
-},);
+});
 
 globalStyle("main", {
   display: "block",
-},);
+});
 
 globalStyle("mark", {
   backgroundColor: "fcf8e3",
   padding: "0.2em",
-},);
+});
 
 globalStyle("nav", {
   display: "block",
-},);
+});
 
 globalStyle("ol", {
   marginBottom: "1rem",
   marginTop: "0",
-},);
+});
 
 globalStyle("ol ol", {
   marginBottom: "0",
-},);
+});
 
 globalStyle("ol ul", {
   marginBottom: "0",
-},);
+});
 
 globalStyle("optgroup", {
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
   margin: "0",
-},);
+});
 
 globalStyle("output", {
   display: "inline-block",
-},);
+});
 
 globalStyle("p", {
   marginBottom: "1rem",
@@ -17484,7 +17484,7 @@ globalStyle("p", {
     widows: "3",
     },
   },
-},);
+});
 
 globalStyle("pre", {
   color: "212529",
@@ -17502,26 +17502,26 @@ globalStyle("pre", {
     whiteSpace: "pre-wrap",
     },
   },
-},);
+});
 
 globalStyle("pre code", {
   color: "inherit",
   fontSize: "inherit",
   wordBreak: "normal",
-},);
+});
 
 globalStyle("progress", {
   verticalAlign: "baseline",
-},);
+});
 
 globalStyle("samp", {
   fontFamily: "SFMono-Regular , Menlo , Monaco , Consolas , Liberation Mono , Courier New , monospace",
   fontSize: "1em",
-},);
+});
 
 globalStyle("section", {
   display: "block",
-},);
+});
 
 globalStyle("select", {
   fontFamily: "inherit",
@@ -17530,44 +17530,44 @@ globalStyle("select", {
   margin: "0",
   textTransform: "none",
   wordWrap: "normal",
-},);
+});
 
 globalStyle(`select${formControl}${isInvalid}`, {
   backgroundPosition: "right 1.5rem center",
   paddingRight: "3rem",
-},);
+});
 
 globalStyle(`select${formControl}${isValid}`, {
   backgroundPosition: "right 1.5rem center",
   paddingRight: "3rem",
-},);
+});
 
 globalStyle(`select${formControl}:-moz-focusring`, {
   color: "transparent",
   textShadow: "0 0 0 495057",
-},);
+});
 
 globalStyle(`select${formControl}:focus::-ms-value`, {
   backgroundColor: "fff",
   color: "495057",
-},);
+});
 
 globalStyle(`select${formControl}[multiple]`, {
   height: "auto",
-},);
+});
 
 globalStyle(`select${formControl}[size]`, {
   height: "auto",
-},);
+});
 
 globalStyle("small", {
   fontSize: "80%",
   fontWeight: "400",
-},);
+});
 
 globalStyle("strong", {
   fontWeight: "bolder",
-},);
+});
 
 globalStyle("sub", {
   bottom: "-0.25em",
@@ -17575,12 +17575,12 @@ globalStyle("sub", {
   lineHeight: "0",
   position: "relative",
   verticalAlign: "baseline",
-},);
+});
 
 globalStyle("summary", {
   cursor: "pointer",
   display: "list-item",
-},);
+});
 
 globalStyle("sup", {
   fontSize: "75%",
@@ -17588,20 +17588,20 @@ globalStyle("sup", {
   position: "relative",
   top: "-0.5em",
   verticalAlign: "baseline",
-},);
+});
 
 globalStyle("svg", {
   overflow: "hidden",
   verticalAlign: "middle",
-},);
+});
 
 globalStyle("table", {
   borderCollapse: "collapse",
-},);
+});
 
 globalStyle("template", {
   display: "none",
-},);
+});
 
 globalStyle("textarea", {
   fontFamily: "inherit",
@@ -17610,25 +17610,25 @@ globalStyle("textarea", {
   margin: "0",
   overflow: "auto",
   resize: "vertical",
-},);
+});
 
 globalStyle(`textarea${formControl}`, {
   height: "auto",
-},);
+});
 
 globalStyle(`textarea${formControl}${isInvalid}`, {
   backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
   paddingRight: "calc(1.5em+0.75rem)",
-},);
+});
 
 globalStyle(`textarea${formControl}${isValid}`, {
   backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
   paddingRight: "calc(1.5em+0.75rem)",
-},);
+});
 
 globalStyle("th", {
   textAlign: "-webkit-match-parent",
-},);
+});
 
 globalStyle("tr", {
   "@media": {
@@ -17636,18 +17636,18 @@ globalStyle("tr", {
     pageBreakInside: "avoid",
     },
   },
-},);
+});
 
 globalStyle("ul", {
   marginBottom: "1rem",
   marginTop: "0",
-},);
+});
 
 globalStyle("ul ol", {
   marginBottom: "0",
-},);
+});
 
 globalStyle("ul ul", {
   marginBottom: "0",
-},);
+});
 

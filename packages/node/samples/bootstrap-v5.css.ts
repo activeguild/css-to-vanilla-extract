@@ -4,25 +4,25 @@ globalKeyframes("progress-bar-stripes", {
   "0%": {
     backgroundPositionX: "1rem",
   },
-},);
+});
 
 globalKeyframes("progress-bar-stripes", {
   "0%": {
     backgroundPositionX: "1rem",
   },
-},);
+});
 
 globalKeyframes("spinner-border", {
   "to": {
     transform: "rotate(360deg)",
   },
-},);
+});
 
 globalKeyframes("spinner-border", {
   "to": {
     transform: "rotate(360deg)",
   },
-},);
+});
 
 globalKeyframes("spinner-grow", {
   "0%": {
@@ -32,7 +32,7 @@ globalKeyframes("spinner-grow", {
     opacity: "1",
     transform: "none",
   },
-},);
+});
 
 globalKeyframes("spinner-grow", {
   "0%": {
@@ -42,33 +42,33 @@ globalKeyframes("spinner-grow", {
     opacity: "1",
     transform: "none",
   },
-},);
+});
 
 globalKeyframes("placeholder-glow", {
   "50%": {
     opacity: "0.2",
   },
-},);
+});
 
 globalKeyframes("placeholder-glow", {
   "50%": {
     opacity: "0.2",
   },
-},);
+});
 
 globalKeyframes("placeholder-wave", {
   "100%": {
     WebkitMaskPosition: "-200% 0%",
     maskPosition: "-200% 0%",
   },
-},);
+});
 
 globalKeyframes("placeholder-wave", {
   "100%": {
     WebkitMaskPosition: "-200% 0%",
     maskPosition: "-200% 0%",
   },
-},);
+});
 
 export const accordionBody = style({
   padding: "1rem 1.25rem",
@@ -17075,69 +17075,69 @@ export const visuallyHiddenFocusable = style({
 
 globalStyle("*", {
   boxSizing: "border-box",
-},);
+});
 
 globalStyle("*::after", {
   boxSizing: "border-box",
-},);
+});
 
 globalStyle("*::before", {
   boxSizing: "border-box",
-},);
+});
 
 globalStyle("::-moz-focus-inner", {
   borderStyle: "none",
   padding: "0",
-},);
+});
 
 globalStyle("::-webkit-color-swatch-wrapper", {
   padding: "0",
-},);
+});
 
 globalStyle("::-webkit-datetime-edit-day-field", {
   padding: "0",
-},);
+});
 
 globalStyle("::-webkit-datetime-edit-fields-wrapper", {
   padding: "0",
-},);
+});
 
 globalStyle("::-webkit-datetime-edit-hour-field", {
   padding: "0",
-},);
+});
 
 globalStyle("::-webkit-datetime-edit-minute", {
   padding: "0",
-},);
+});
 
 globalStyle("::-webkit-datetime-edit-month-field", {
   padding: "0",
-},);
+});
 
 globalStyle("::-webkit-datetime-edit-text", {
   padding: "0",
-},);
+});
 
 globalStyle("::-webkit-datetime-edit-year-field", {
   padding: "0",
-},);
+});
 
 globalStyle("::-webkit-file-upload-button", {
   WebkitAppearance: "button",
   font: "inherit",
-},);
+});
 
 globalStyle("::-webkit-inner-spin-button", {
   height: "auto",
-},);
+});
 
 globalStyle("::-webkit-search-decoration", {
   WebkitAppearance: "none",
-},);
+});
 
 globalStyle("::file-selector-button", {
   font: "inherit",
-},);
+});
 
 globalStyle(":root", {
   "vars": {
@@ -17198,71 +17198,71 @@ globalStyle(":root", {
     scrollBehavior: "smooth",
     },
   },
-},);
+});
 
 globalStyle("[hidden]", {
   display: "none",
-},);
+});
 
 globalStyle("[list]::-webkit-calendar-picker-indicator", {
   display: "none",
-},);
+});
 
 globalStyle("[role='button']", {
   cursor: "pointer",
-},);
+});
 
 globalStyle("[type='button']", {
   WebkitAppearance: "button",
-},);
+});
 
 globalStyle("[type='button']:not(:disabled)", {
   cursor: "pointer",
-},);
+});
 
 globalStyle("[type='reset']", {
   WebkitAppearance: "button",
-},);
+});
 
 globalStyle("[type='reset']:not(:disabled)", {
   cursor: "pointer",
-},);
+});
 
 globalStyle("[type='search']", {
   WebkitAppearance: "textfield",
   outlineOffset: "-2px",
-},);
+});
 
 globalStyle("[type='submit']", {
   WebkitAppearance: "button",
-},);
+});
 
 globalStyle("[type='submit']:not(:disabled)", {
   cursor: "pointer",
-},);
+});
 
 globalStyle("a", {
   color: "0d6efd",
   textDecoration: "underline",
-},);
+});
 
 globalStyle("a > code", {
   color: "inherit",
-},);
+});
 
 globalStyle("a:hover", {
   color: "0a58ca",
-},);
+});
 
 globalStyle("a:not([href]):not([class])", {
   color: "inherit",
   textDecoration: "none",
-},);
+});
 
 globalStyle("a:not([href]):not([class]):hover", {
   color: "inherit",
   textDecoration: "none",
-},);
+});
 
 globalStyle("abbr[data-bs-original-title]", {
   WebkitTextDecoration: "underline dotted",
@@ -17270,7 +17270,7 @@ globalStyle("abbr[data-bs-original-title]", {
   cursor: "help",
   textDecoration: "underline dotted",
   textDecorationSkipInk: "none",
-},);
+});
 
 globalStyle("abbr[title]", {
   WebkitTextDecoration: "underline dotted",
@@ -17278,21 +17278,21 @@ globalStyle("abbr[title]", {
   cursor: "help",
   textDecoration: "underline dotted",
   textDecorationSkipInk: "none",
-},);
+});
 
 globalStyle("address", {
   fontStyle: "normal",
   lineHeight: "inherit",
   marginBottom: "1rem",
-},);
+});
 
 globalStyle("b", {
   fontWeight: "bolder",
-},);
+});
 
 globalStyle("blockquote", {
   margin: "0 0 1rem",
-},);
+});
 
 globalStyle("body", {
   WebkitTapHighlightColor: "rgba(0,0,0,0)",
@@ -17305,7 +17305,7 @@ globalStyle("body", {
   lineHeight: "var(--bs-body-line-height)",
   margin: "0",
   textAlign: "var(--bs-body-text-align)",
-},);
+});
 
 globalStyle("button", {
   WebkitAppearance: "button",
@@ -17315,22 +17315,22 @@ globalStyle("button", {
   lineHeight: "inherit",
   margin: "0",
   textTransform: "none",
-},);
+});
 
 globalStyle("button:focus:not(:focus-visible)", {
   outline: "0",
-},);
+});
 
 globalStyle("button:not(:disabled)", {
   cursor: "pointer",
-},);
+});
 
 globalStyle("caption", {
   color: "6c757d",
   paddingBottom: "0.5rem",
   paddingTop: "0.5rem",
   textAlign: "left",
-},);
+});
 
 globalStyle("code", {
   color: "d63384",
@@ -17339,32 +17339,32 @@ globalStyle("code", {
   fontSize: "0.875em",
   unicodeBidi: "bidi-override",
   wordWrap: "break-word",
-},);
+});
 
 globalStyle("dd", {
   marginBottom: "0.5rem",
   marginLeft: "0",
-},);
+});
 
 globalStyle("dl", {
   marginBottom: "1rem",
   marginTop: "0",
-},);
+});
 
 globalStyle("dt", {
   fontWeight: "700",
-},);
+});
 
 globalStyle("fieldset", {
   border: "0",
   margin: "0",
   minWidth: "0",
   padding: "0",
-},);
+});
 
 globalStyle("figure", {
   margin: "0 0 1rem",
-},);
+});
 
 globalStyle("h1", {
   fontSize: "calc(1.375rem+1.5vw)",
@@ -17377,7 +17377,7 @@ globalStyle("h1", {
     fontSize: "2.5rem",
     },
   },
-},);
+});
 
 globalStyle("h2", {
   fontSize: "calc(1.325rem+0.9vw)",
@@ -17390,7 +17390,7 @@ globalStyle("h2", {
     fontSize: "2rem",
     },
   },
-},);
+});
 
 globalStyle("h3", {
   fontSize: "calc(1.3rem+0.6vw)",
@@ -17403,7 +17403,7 @@ globalStyle("h3", {
     fontSize: "1.75rem",
     },
   },
-},);
+});
 
 globalStyle("h4", {
   fontSize: "calc(1.275rem+0.3vw)",
@@ -17416,7 +17416,7 @@ globalStyle("h4", {
     fontSize: "1.5rem",
     },
   },
-},);
+});
 
 globalStyle("h5", {
   fontSize: "1.25rem",
@@ -17424,7 +17424,7 @@ globalStyle("h5", {
   lineHeight: "1.2",
   marginBottom: "0.5rem",
   marginTop: "0",
-},);
+});
 
 globalStyle("h6", {
   fontSize: "1rem",
@@ -17432,7 +17432,7 @@ globalStyle("h6", {
   lineHeight: "1.2",
   marginBottom: "0.5rem",
   marginTop: "0",
-},);
+});
 
 globalStyle("hr", {
   backgroundColor: "currentColor",
@@ -17440,26 +17440,26 @@ globalStyle("hr", {
   color: "inherit",
   margin: "1rem 0",
   opacity: "0.25",
-},);
+});
 
 globalStyle("hr:not([size])", {
   height: "1px",
-},);
+});
 
 globalStyle("iframe", {
   border: "0",
-},);
+});
 
 globalStyle("img", {
   verticalAlign: "middle",
-},);
+});
 
 globalStyle("input", {
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
   margin: "0",
-},);
+});
 
 globalStyle("kbd", {
   backgroundColor: "212529",
@@ -17470,17 +17470,17 @@ globalStyle("kbd", {
   fontSize: "0.875em",
   padding: "0.2rem 0.4rem",
   unicodeBidi: "bidi-override",
-},);
+});
 
 globalStyle("kbd kbd", {
   fontSize: "1em",
   fontWeight: "700",
   padding: "0",
-},);
+});
 
 globalStyle("label", {
   display: "inline-block",
-},);
+});
 
 globalStyle("legend", {
   float: "left",
@@ -17494,46 +17494,46 @@ globalStyle("legend", {
     fontSize: "1.5rem",
     },
   },
-},);
+});
 
 globalStyle("legend + *", {
   clear: "left",
-},);
+});
 
 globalStyle("mark", {
   backgroundColor: "fcf8e3",
   padding: "0.2em",
-},);
+});
 
 globalStyle("ol", {
   marginBottom: "1rem",
   marginTop: "0",
   paddingLeft: "2rem",
-},);
+});
 
 globalStyle("ol ol", {
   marginBottom: "0",
-},);
+});
 
 globalStyle("ol ul", {
   marginBottom: "0",
-},);
+});
 
 globalStyle("optgroup", {
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
   margin: "0",
-},);
+});
 
 globalStyle("output", {
   display: "inline-block",
-},);
+});
 
 globalStyle("p", {
   marginBottom: "1rem",
   marginTop: "0",
-},);
+});
 
 globalStyle("pre", {
   direction: "ltr",
@@ -17544,24 +17544,24 @@ globalStyle("pre", {
   marginTop: "0",
   overflow: "auto",
   unicodeBidi: "bidi-override",
-},);
+});
 
 globalStyle("pre code", {
   color: "inherit",
   fontSize: "inherit",
   wordBreak: "normal",
-},);
+});
 
 globalStyle("progress", {
   verticalAlign: "baseline",
-},);
+});
 
 globalStyle("samp", {
   direction: "ltr",
   fontFamily: "var(--bs-font-monospace)",
   fontSize: "1em",
   unicodeBidi: "bidi-override",
-},);
+});
 
 globalStyle("select", {
   fontFamily: "inherit",
@@ -17570,19 +17570,19 @@ globalStyle("select", {
   margin: "0",
   textTransform: "none",
   wordWrap: "normal",
-},);
+});
 
 globalStyle("select:disabled", {
   opacity: "1",
-},);
+});
 
 globalStyle("small", {
   fontSize: "0.875em",
-},);
+});
 
 globalStyle("strong", {
   fontWeight: "bolder",
-},);
+});
 
 globalStyle("sub", {
   bottom: "-0.25em",
@@ -17590,12 +17590,12 @@ globalStyle("sub", {
   lineHeight: "0",
   position: "relative",
   verticalAlign: "baseline",
-},);
+});
 
 globalStyle("summary", {
   cursor: "pointer",
   display: "list-item",
-},);
+});
 
 globalStyle("sup", {
   fontSize: "0.75em",
@@ -17603,28 +17603,28 @@ globalStyle("sup", {
   position: "relative",
   top: "-0.5em",
   verticalAlign: "baseline",
-},);
+});
 
 globalStyle("svg", {
   verticalAlign: "middle",
-},);
+});
 
 globalStyle("table", {
   borderCollapse: "collapse",
   captionSide: "bottom",
-},);
+});
 
 globalStyle("tbody", {
   borderColor: "inherit",
   borderStyle: "solid",
   borderWidth: "0",
-},);
+});
 
 globalStyle("td", {
   borderColor: "inherit",
   borderStyle: "solid",
   borderWidth: "0",
-},);
+});
 
 globalStyle("textarea", {
   fontFamily: "inherit",
@@ -17632,66 +17632,66 @@ globalStyle("textarea", {
   lineHeight: "inherit",
   margin: "0",
   resize: "vertical",
-},);
+});
 
 globalStyle(`textarea${formControlLg}`, {
   minHeight: "calc(1.5em+1rem+2px)",
-},);
+});
 
 globalStyle(`textarea${formControlSm}`, {
   minHeight: "calc(1.5em+0.5rem+2px)",
-},);
+});
 
 globalStyle(`textarea${formControl}`, {
   minHeight: "calc(1.5em+0.75rem+2px)",
-},);
+});
 
 globalStyle(`textarea${formControl}${isInvalid}`, {
   backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
   paddingRight: "calc(1.5em+0.75rem)",
-},);
+});
 
 globalStyle(`textarea${formControl}${isValid}`, {
   backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
   paddingRight: "calc(1.5em+0.75rem)",
-},);
+});
 
 globalStyle("tfoot", {
   borderColor: "inherit",
   borderStyle: "solid",
   borderWidth: "0",
-},);
+});
 
 globalStyle("th", {
   borderColor: "inherit",
   borderStyle: "solid",
   borderWidth: "0",
   textAlign: "-webkit-match-parent",
-},);
+});
 
 globalStyle("thead", {
   borderColor: "inherit",
   borderStyle: "solid",
   borderWidth: "0",
-},);
+});
 
 globalStyle("tr", {
   borderColor: "inherit",
   borderStyle: "solid",
   borderWidth: "0",
-},);
+});
 
 globalStyle("ul", {
   marginBottom: "1rem",
   marginTop: "0",
   paddingLeft: "2rem",
-},);
+});
 
 globalStyle("ul ol", {
   marginBottom: "0",
-},);
+});
 
 globalStyle("ul ul", {
   marginBottom: "0",
-},);
+});
 

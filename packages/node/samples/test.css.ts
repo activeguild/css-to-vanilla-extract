@@ -1,8 +1,8 @@
 import { globalStyle, globalKeyframes, globalFontFace, style } from "@vanilla-extract/css"
 
-globalFontFace(  "Roboto", {
+globalFontFace("Roboto", {
   src: "url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap)",
-  },);
+});
 
 globalKeyframes("slidein", {
   "from": {
@@ -11,7 +11,7 @@ globalKeyframes("slidein", {
   "to": {
     transform: "translateX(100%)",
   },
-},);
+});
 
 export const bar = style({
   position: "absolute",
@@ -115,23 +115,23 @@ export const toast = style({
 
 globalStyle("*", {
   boxSizing: "border-box",
-},);
+});
 
 globalStyle("*::after", {
   boxSizing: "border-box",
-},);
+});
 
 globalStyle("*::before", {
   boxSizing: "border-box",
-},);
+});
 
 globalStyle(":hover", {
   color: "red",
-},);
+});
 
 globalStyle("[type^='button' s]", {
   cursor: "pointer",
-},);
+});
 
 globalStyle("input", {
   "@media": {
@@ -144,5 +144,5 @@ globalStyle("input", {
     fontSize: "5rem",
     },
   },
-},);
+});
 

@@ -98,7 +98,7 @@ pub fn generate_spaces(spacer: Option<i8>) -> String {
 
 pub fn remove_superfluou_line_breaks(value: String) -> String {
     let re = Regex::new(r"},\n\)").unwrap();
-    re.replace_all(&value, "},)").to_string()
+    re.replace_all(&value, "})").to_string()
 }
 
 const PSEUDO_MAPCONST: [&str; 95] = [
