@@ -19,6 +19,9 @@
   margin: 0;
   font-size: 1em;
 }
+.headerDesc {
+  font-size: 0.8em;
+}
 .headerIcon {
   display: flex;
   align-items: center;

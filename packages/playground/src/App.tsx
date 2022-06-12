@@ -60,7 +60,7 @@ function App() {
             <div>
               <strong>CSS to vanilla-extract playground</strong>
             </div>
-            <div>Supported css, sass and scss.</div>
+            <div className={styles.headerDesc}>Supported css and sass and scss.</div>
           </div>
           <a href={GITHUB_URL} className={styles.headerIcon} target="_blank">
             <strong>View on GitHub</strong>
