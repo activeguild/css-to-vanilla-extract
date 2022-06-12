@@ -80,7 +80,7 @@ import { globalStyle, globalKeyframes, globalFontFace, style } from "@vanilla-ex
 
 globalFontFace("Roboto", {
   src: "url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap)",
-},);
+});
 
 globalKeyframes("slidein", {
   "from": {
@@ -89,7 +89,7 @@ globalKeyframes("slidein", {
   "to": {
     transform: "translateX(100%)",
   },
-},);
+});
 
 export const bar = style({
   "@media": {
@@ -115,7 +115,7 @@ globalStyle("input", {
     fontSize: "5rem",
     },
   },
-},);
+});
 ```
 
 ## Principles of conduct
