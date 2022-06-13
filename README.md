@@ -76,7 +76,7 @@ npx css-to-vanilla-extract sample/test.css
 ### Output
 
 ```ts
-import { globalStyle, globalKeyframes, globalFontFace, style } from "@vanilla-extract/css"
+import { globalFontFace, globalKeyframes, globalStyle, style } from "@vanilla-extract/css"
 
 globalFontFace("Roboto", {
   src: "url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap)",
