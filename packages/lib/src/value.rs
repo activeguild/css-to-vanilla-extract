@@ -1,4 +1,4 @@
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, HashSet};
 
 use crate::{
     keyframes::get_keyframes,
@@ -66,6 +66,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
     let mut ve: String = String::new();
     let mut rule_map: BTreeMap<String, RuleMapValue> = BTreeMap::new();
     let mut global_rule_map: BTreeMap<String, RuleMapValue> = BTreeMap::new();
+    let mut named_imports: HashSet<String> = HashSet::new();
 
     for rule in &parsed_css.rules {
         match rule {
@@ -118,26 +119,36 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                     //   src: 'local("Comic Sans MS")'
                     // });
                     let mut block_values = String::new();
-                    let mut fontface_key = String::new();
+                    let mut font_face_key = String::new();
                     for block_value in &font_face.block.value {
                         let components = get_component_value(block_value);
                         for (key, value) in components[0].key_value_pair.clone().into_iter() {
                             if key == "fontFamily" {
-                                fontface_key.push_str(&value);
+                                font_face_key.push_str(&value);
                             } else {
                                 block_values.push_str(&wrap_property(key, value, None));
                             }
                         }
                     }
 
+                    if !font_face_key.is_empty() {
+                        named_imports.insert("globalFontFace".to_string());
+                    }
+
                     ve.push_str(&wrap_fontface(wrap_properties_with_comma(
-                        fontface_key,
+                        font_face_key,
                         block_values,
                         Some(0),
                     )));
                 }
                 swc_css_ast::AtRule::Keyframes(keyframes) => {
-                    ve.push_str(&get_keyframes(keyframes));
+                    let keyframes_rule = get_keyframes(keyframes);
+
+                    if !keyframes_rule.is_empty() {
+                        named_imports.insert("globalKeyframes".to_string());
+                    }
+
+                    ve.push_str(&keyframes_rule);
                 }
                 swc_css_ast::AtRule::Layer(_) => {
                     println!("Not supportted. (AtRule::Layer)")
@@ -308,12 +319,27 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
         }
     }
 
-    ve.push_str(&finish_to_vanilla_extract(rule_map, false));
-    ve.push_str(&finish_to_vanilla_extract(global_rule_map, true));
+    ve.push_str(&finish_to_vanilla_extract(rule_map.clone(), false));
+    ve.push_str(&finish_to_vanilla_extract(global_rule_map.clone(), true));
+
+    if !rule_map.is_empty() {
+        named_imports.insert("style".to_string());
+    }
+    if !global_rule_map.is_empty() {
+        named_imports.insert("globalStyle".to_string());
+    }
+
+    let named_imports_as_str: String = named_imports
+        .into_iter()
+        .collect::<Vec<String>>()
+        .join(", ");
 
     ve.insert_str(
         0,
-        "import { globalStyle, globalKeyframes, globalFontFace, style } from \"@vanilla-extract/css\"\n\n",
+        &format!(
+            "import {{ {} }} from \"@vanilla-extract/css\"\n\n",
+            named_imports_as_str
+        ),
     );
 
     ve
