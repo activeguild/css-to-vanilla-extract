@@ -6,8 +6,7 @@ import styles from "./App.module.css";
 import { useWasmWorker } from "./hooks/useWasmWorker";
 import "./prismjs/prismjs";
 
-const EDITOR_DEFAULT_VALUE =
-  `.foo {
+const EDITOR_DEFAULT_VALUE = `.foo {
   background-color: blue;
 }
 @media (min-width: 1200px) {
@@ -61,7 +60,9 @@ function App() {
             <div>
               <strong>CSS to vanilla-extract playground</strong>
             </div>
-            <div className={styles.headerDesc}>Supported css and sass and scss.</div>
+            <div className={styles.headerDesc}>
+              Supported css and sass and scss.
+            </div>
           </div>
           <a href={GITHUB_URL} className={styles.headerIcon} target="_blank">
             <strong>View on GitHub</strong>
