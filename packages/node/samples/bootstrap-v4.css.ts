@@ -1,4 +1,4 @@
-import { globalStyle, globalKeyframes, globalFontFace, style } from "@vanilla-extract/css"
+import { globalKeyframes, globalStyle, style } from "@vanilla-extract/css"
 
 globalKeyframes("progress-bar-stripes", {
   "from": {
