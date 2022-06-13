@@ -1,6 +1,6 @@
 {
   "name": "css-to-vanilla-extract",
-  "version": "0.0.29-alpha",
+  "version": "0.0.30-alpha",
   "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file. for node.",
   "main": "index.js",
   "bin": {
@@ -26,7 +26,9 @@
     "vanilla-extract",
     "typescript",
     "react",
-    "generate"
+    "generate",
+    "mygrate",
+    "mygration"
   ],
   "author": "j1ngzoue",
   "license": "MIT",
