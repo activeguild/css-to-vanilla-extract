@@ -45,7 +45,6 @@
 }
 .containerItem + .containerItem {
   padding-left: 0;
-  overflow: scroll;
 }
 .containerItem + .containerItem > pre {
   height: 100%;
@@ -59,5 +58,5 @@
   margin: 12px;
   padding: 12px;
   color: white;
-  overflow: scroll;
+  overflow: auto;
 }

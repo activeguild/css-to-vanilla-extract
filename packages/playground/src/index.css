@@ -20,8 +20,11 @@ code {
 
 .language-typescript {
   margin: 0 !important;
+  max-height: calc(80vh);
+  height: calc(80vh);
 }
 
 pre[class*="language-"] {
   background-color: var(--vs-dark);
+  border-radius: 0%;
 }
