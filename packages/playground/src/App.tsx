@@ -6,7 +6,8 @@ import styles from "./App.module.css";
 import { useWasmWorker } from "./hooks/useWasmWorker";
 import "./prismjs/prismjs";
 
-const EDITOR_DEFAULT_VALUE = `.foo {
+const EDITOR_DEFAULT_VALUE =
+  `.foo {
   background-color: blue;
 }
 @media (min-width: 1200px) {
@@ -53,7 +54,7 @@ function App() {
   }, [worker]);
 
   return (
-    <div className="App">
+    <div>
       <header className={styles.header}>
         <p className={styles.headerInnder}>
           <div>
