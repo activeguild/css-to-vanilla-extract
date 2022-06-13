@@ -66,7 +66,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
     let mut ve: String = String::new();
     let mut rule_map: BTreeMap<String, RuleMapValue> = BTreeMap::new();
     let mut global_rule_map: BTreeMap<String, RuleMapValue> = BTreeMap::new();
-    let mut named_imports: HashSet<String> = HashSet::new();
+    let mut named_imports_hash: HashSet<String> = HashSet::new();
 
     for rule in &parsed_css.rules {
         match rule {
@@ -132,7 +132,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                     }
 
                     if !font_face_key.is_empty() {
-                        named_imports.insert("globalFontFace".to_string());
+                        named_imports_hash.insert("globalFontFace".to_string());
                     }
 
                     ve.push_str(&wrap_fontface(wrap_properties_with_comma(
@@ -145,7 +145,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                     let keyframes_rule = get_keyframes(keyframes);
 
                     if !keyframes_rule.is_empty() {
-                        named_imports.insert("globalKeyframes".to_string());
+                        named_imports_hashv.insert("globalKeyframes".to_string());
                     }
 
                     ve.push_str(&keyframes_rule);
@@ -323,22 +323,20 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
     ve.push_str(&finish_to_vanilla_extract(global_rule_map.clone(), true));
 
     if !rule_map.is_empty() {
-        named_imports.insert("style".to_string());
+        named_imports_hash.insert("style".to_string());
     }
     if !global_rule_map.is_empty() {
-        named_imports.insert("globalStyle".to_string());
+        named_imports_hash.insert("globalStyle".to_string());
     }
 
-    let named_imports_as_str: String = named_imports
-        .into_iter()
-        .collect::<Vec<String>>()
-        .join(", ");
+    let mut named_imports: Vec<String> = named_imports_hash.into_iter().collect::<Vec<String>>();
+    named_imports.sort();
 
     ve.insert_str(
         0,
         &format!(
             "import {{ {} }} from \"@vanilla-extract/css\"\n\n",
-            named_imports_as_str
+            named_imports.join(", ")
         ),
     );
 
