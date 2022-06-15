@@ -58,7 +58,7 @@ function App() {
         <p className={styles.headerInnder}>
           <div>
             <div>
-              <strong>CSS to vanilla-extract playground</strong>
+              <h1>CSS to vanilla-extract playground</h1>
             </div>
             <div className={styles.headerDesc}>
               Supported css and sass and scss.
