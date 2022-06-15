@@ -3,6 +3,7 @@ declare const classNames: {
   readonly headerInnder: "headerInnder";
   readonly headerDesc: "headerDesc";
   readonly headerIcon: "headerIcon";
+  readonly headerDarkMode: "headerDarkMode";
   readonly container: "container";
   readonly containerItem: "containerItem";
   readonly error: "error";
@@ -13,6 +14,7 @@ export type ClassNames =
   | "headerInnder"
   | "headerDesc"
   | "headerIcon"
+  | "headerDarkMode"
   | "container"
   | "containerItem"
   | "error";

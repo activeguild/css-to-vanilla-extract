@@ -4,6 +4,7 @@ import Prism from "prismjs";
 import { useEffect } from "react";
 import styles from "./App.module.css";
 import { useWasmWorker } from "./hooks/useWasmWorker";
+import { useToggleDarkMode } from "./hooks/toggleDarkMode/useToggleDarkMode";
 import "./prismjs/prismjs";
 
 const EDITOR_DEFAULT_VALUE = `.foo {
@@ -40,6 +41,7 @@ const GITHUB_URL = "https://github.com/activeguild/css-to-vanilla-extract";
 
 function App() {
   const { worker, receiveMessage, receiveErrorMessage } = useWasmWorker();
+  const { renderToggleDarkMode } = useToggleDarkMode();
 
   const handleChange: OnChange = (value) => {
     worker?.postMessage(value || "");
@@ -55,7 +57,7 @@ function App() {
   return (
     <div>
       <header className={styles.header}>
-        <p className={styles.headerInnder}>
+        <div className={styles.headerInnder}>
           <div>
             <div>
               <h1>CSS to vanilla-extract playground</h1>
@@ -64,12 +66,19 @@ function App() {
               Supported css and sass and scss.
             </div>
           </div>
-          <a href={GITHUB_URL} className={styles.headerIcon} target="_blank">
-            <strong>View on GitHub</strong>
-            <img height={28} width={28} src="github.png" alt="github" />
-          </a>
-        </p>
-      </header>
+          <div>
+            <div>
+              <a href={GITHUB_URL} className={styles.headerIcon} target="_blank">
+                <strong>View on GitHub</strong>
+                <img height={14} width={14} src="github.png" alt="github" />
+              </a>
+            </div>
+            <div className={styles.headerDarkMode} >
+              {renderToggleDarkMode()}
+            </div>
+          </div>
+        </div>
+      </header >
       <div className={styles.container}>
         <div className={styles.containerItem}>
           <Editor
@@ -96,7 +105,7 @@ function App() {
         </div>
         <div className={styles.error}> {receiveErrorMessage} </div>
       </div>
-    </div>
+    </div >
   );
 }
 

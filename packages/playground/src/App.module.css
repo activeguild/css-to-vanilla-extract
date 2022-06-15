@@ -25,7 +25,6 @@
 .headerIcon {
   display: flex;
   align-items: center;
-  height: 28px;
   margin-left: 12px;
   cursor: pointer;
   text-decoration: none;
@@ -34,6 +33,9 @@
 .headerIcon > img {
   margin-left: 12px;
   height: 100%;
+}
+.headerDarkMode {
+  text-align: right;
 }
 .container {
   display: grid;
