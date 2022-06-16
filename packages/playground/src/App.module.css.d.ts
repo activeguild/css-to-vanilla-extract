@@ -7,6 +7,8 @@ declare const classNames: {
   readonly container: "container";
   readonly containerItem: "containerItem";
   readonly error: "error";
+  readonly light: "light";
+  readonly dark: "dark";
 };
 export default classNames;
 export type ClassNames =
@@ -17,4 +19,6 @@ export type ClassNames =
   | "headerDarkMode"
   | "container"
   | "containerItem"
-  | "error";
+  | "error"
+  | "light"
+  | "dark";

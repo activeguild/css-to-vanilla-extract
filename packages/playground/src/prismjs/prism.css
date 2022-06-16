@@ -1,8 +1,69 @@
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url,
+.token.variable {
+  color: black;
+}
+
 .token.property,
 .token.tag,
 .token.constant,
 .token.symbol,
 .token.deleted {
+  color: #ff0000;
+}
+
+.token.punctuation {
+  color: black;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.class-name,
+.token.function {
+  color: black;
+}
+
+.light .token.attr-name,
+.light .token.builtin,
+.light .token.char,
+.light .token.inserted,
+.light .token.selector,
+.light .token.string {
+  color: #098658;
+}
+
+.light .token.keyword {
+  color: #0000ff;
+}
+
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url,
+.token.variable {
+  color: white;
+}
+
+.dark .token.punctuation {
+  color: white;
+}
+
+.dark .dark .token.atrule,
+.dark .token.attr-value,
+.dark .token.class-name,
+.dark .token.function {
+  color: white;
+}
+
+.dark .token.property,
+.dark .token.tag,
+.dark .token.constant,
+.dark .token.symbol,
+.dark .token.deleted {
   color: #d9c9de;
 }
 
@@ -76,23 +137,45 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
 	background: red;
 } */
 
-pre[class*="language-"] {
-  background-color: var(--vs-dark);
+pre[class*="language-"],
+code[class*="language-"] {
+  background-color: var(--vs);
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-weight: normal;
+  text-shadow: none;
   border-radius: 0%;
+  color: black;
+}
+
+.dark pre[class*="language-"],
+.dark code[class*="language-"] {
+  background-color: var(--vs-dark);
+  color: white;
 }
 
 ::-webkit-scrollbar {
   width: 14px;
-  border-left: red;
-  border-width: 1px;
-  border-style: solid;
+  border-width: 100px;
 }
 
-::-webkit-scrollbar-track {
+.dark ::-webkit-scrollbar-track {
   background-color: var(--vs-dark);
   box-shadow: inset 1px 0 0 rgb(52, 52, 52);
 }
 
-::-webkit-scrollbar-thumb {
+.light ::-webkit-scrollbar-track {
+  background-color: var(--vs);
+  box-shadow: inset 1px 0 0 rgb(216, 216, 215);
+}
+
+.dark ::-webkit-scrollbar-thumb {
   background-color: rgb(71, 71, 71);
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background-color: rgb(138, 138, 138);
+}
+
+pre[class*="language-"] > code {
+  border-left: none;
 }

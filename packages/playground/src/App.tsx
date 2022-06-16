@@ -41,7 +41,7 @@ const GITHUB_URL = "https://github.com/activeguild/css-to-vanilla-extract";
 
 function App() {
   const { worker, receiveMessage, receiveErrorMessage } = useWasmWorker();
-  const { renderToggleDarkMode } = useToggleDarkMode();
+  const { isDark, renderToggleDarkMode } = useToggleDarkMode();
 
   const handleChange: OnChange = (value) => {
     worker?.postMessage(value || "");
@@ -53,6 +53,10 @@ function App() {
       Prism.highlightAll();
     }, 100);
   }, [worker]);
+
+  useEffect(() => {
+    document.body.className = isDark ? "dark" : "light"
+  }, [isDark])
 
   return (
     <div>
@@ -86,7 +90,7 @@ function App() {
             defaultLanguage="scss"
             defaultValue={EDITOR_DEFAULT_VALUE}
             onChange={handleChange}
-            theme="vs-dark"
+            theme={isDark ? "vs-dark" : 'vs'}
             options={{ minimap: { enabled: false }, fontSize: 16 }}
           />
         </div>
@@ -103,7 +107,7 @@ function App() {
             ></code>
           </pre>
         </div>
-        <div className={styles.error}> {receiveErrorMessage} </div>
+        <div className={`${styles.error} ${isDark ? styles.dark : styles.light}`}> {receiveErrorMessage} </div>
       </div>
     </div >
   );
