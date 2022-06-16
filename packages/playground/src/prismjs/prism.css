@@ -1,8 +1,69 @@
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url,
+.token.variable {
+  color: black;
+}
+
 .token.property,
 .token.tag,
 .token.constant,
 .token.symbol,
 .token.deleted {
+  color: #ff0000;
+}
+
+.token.punctuation {
+  color: black;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.class-name,
+.token.function {
+  color: black;
+}
+
+.light .token.attr-name,
+.light .token.builtin,
+.light .token.char,
+.light .token.inserted,
+.light .token.selector,
+.light .token.string {
+  color: #098658;
+}
+
+.light .token.keyword {
+  color: #0000ff;
+}
+
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url,
+.token.variable {
+  color: white;
+}
+
+.dark .token.punctuation {
+  color: white;
+}
+
+.dark .dark .token.atrule,
+.dark .token.attr-value,
+.dark .token.class-name,
+.dark .token.function {
+  color: white;
+}
+
+.dark .token.property,
+.dark .token.tag,
+.dark .token.constant,
+.dark .token.symbol,
+.dark .token.deleted {
   color: #d9c9de;
 }
 
@@ -18,16 +79,6 @@ div.code-toolbar > .toolbar {
   transition: opacity 0.3s ease-in-out;
   opacity: 1;
 }
-
-/* div.code-toolbar:hover > .toolbar {
-  opacity: 1;
-} */
-
-/* Separate line b/c rules are thrown out if selector is invalid.
-   IE11 and old Edge versions don't support :focus-within. */
-/* div.code-toolbar:focus-within > .toolbar {
-  opacity: 1;
-} */
 
 div.code-toolbar > .toolbar > .toolbar-item {
   display: inline-block;
@@ -60,7 +111,9 @@ div.code-toolbar > .toolbar > .toolbar-item > span {
   background: #f5f2f0;
   background: rgba(224, 224, 224, 0.2);
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
-  border-radius: 0 0.5em 0 0.5em;
+  border-radius: 0.5em;
+  margin-right: 19px;
+  margin-top: 4px;
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > a:hover,
@@ -71,4 +124,58 @@ div.code-toolbar > .toolbar > .toolbar-item > span:hover,
 div.code-toolbar > .toolbar > .toolbar-item > span:focus {
   color: lightgreen;
   text-decoration: none;
+}
+
+.language-typescript {
+  margin: 0 !important;
+  max-height: calc(80vh);
+  height: calc(80vh);
+}
+
+/* .language-typescript::-webkit-scrollbar-track {
+  border-radius: 10px;
+	background: red;
+} */
+
+pre[class*="language-"],
+code[class*="language-"] {
+  background-color: var(--vs);
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-weight: normal;
+  text-shadow: none;
+  border-radius: 0%;
+  color: black;
+}
+
+.dark pre[class*="language-"],
+.dark code[class*="language-"] {
+  background-color: var(--vs-dark);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  border-width: 100px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background-color: var(--vs-dark);
+  box-shadow: inset 1px 0 0 rgb(52, 52, 52);
+}
+
+.light ::-webkit-scrollbar-track {
+  background-color: var(--vs);
+  box-shadow: inset 1px 0 0 rgb(216, 216, 215);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: rgb(71, 71, 71);
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background-color: rgb(138, 138, 138);
+}
+
+pre[class*="language-"] > code {
+  border-left: none;
 }

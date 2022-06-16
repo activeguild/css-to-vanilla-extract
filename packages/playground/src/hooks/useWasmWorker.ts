@@ -18,9 +18,7 @@ export const useWasmWorker = () => {
         } else if ("error" in e.data) {
           setReceiveErrorMessage(e.data.error);
         } else {
-          setReceiveMessage(
-            e.data.code
-          );
+          setReceiveMessage(e.data.code);
           setReceiveErrorMessage("Success.");
         }
       },

@@ -25,7 +25,6 @@
 .headerIcon {
   display: flex;
   align-items: center;
-  height: 28px;
   margin-left: 12px;
   cursor: pointer;
   text-decoration: none;
@@ -34,6 +33,9 @@
 .headerIcon > img {
   margin-left: 12px;
   height: 100%;
+}
+.headerDarkMode {
+  text-align: right;
 }
 .container {
   display: grid;
@@ -45,7 +47,6 @@
 }
 .containerItem + .containerItem {
   padding-left: 0;
-  overflow: scroll;
 }
 .containerItem + .containerItem > pre {
   height: 100%;
@@ -53,11 +54,18 @@
 .error {
   /* 100vh - header - editor-container */
   height: calc(100vh - 80vh - 96px);
-  background-color: var(--vs-dark);
   grid-row: 2;
   grid-column: 1 / span 2;
   margin: 12px;
   padding: 12px;
+  overflow: auto;
+}
+
+.light.error {
+  background-color: var(--vs);
+  color: black;
+}
+.dark.error {
+  background-color: var(--vs-dark);
   color: white;
-  overflow: scroll;
 }

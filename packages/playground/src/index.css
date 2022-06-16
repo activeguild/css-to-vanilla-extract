@@ -1,6 +1,8 @@
 :root {
-  --base: #313131;
+  --base: #dddddd;
+  --base-dark: #313131;
   --vs-dark: #1e1e1e;
+  --vs: rgb(254, 255, 254);
 }
 
 body {
@@ -10,6 +12,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark {
+  background-color: var(--base-dark);
+}
+
+body.light {
   background-color: var(--base);
 }
 
@@ -18,10 +27,6 @@ code {
     monospace;
 }
 
-.language-typescript {
-  margin: 0 !important;
-}
-
-pre[class*="language-"] {
-  background-color: var(--vs-dark);
+h1 {
+  font-size: 1em;
 }
