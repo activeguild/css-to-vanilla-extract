@@ -25,7 +25,7 @@ export const useToggleDarkMode = () => {
   };
 
   const renderToggleDarkMode = () => (
-    <div onClick={toggle} className={`${styles.toggle} ${darkMode === 'dark' ? styles.toggleChecked : ''}`}>
+    <div onClick={toggle} className={`${styles.toggle} ${darkMode === 'dark' ? styles.dark : styles.light}`}>
       <div className={styles.toggleContainer}>
         <div className={styles.toggleDark}>
           {/* Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}

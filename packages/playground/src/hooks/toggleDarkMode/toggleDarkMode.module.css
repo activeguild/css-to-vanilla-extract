@@ -61,8 +61,15 @@
   height: 20px;
   padding: 0;
   border-radius: 30px;
-  background-color: #4d4d4d;
   transition: all 0.2s ease;
+}
+
+.dark .toggleContainer {
+  background-color: #4d4d4d;
+}
+
+.light .toggleContainer {
+  background-color: rgb(216, 216, 215);
 }
 
 .toggleCircle {
@@ -72,19 +79,27 @@
   left: 1px;
   width: 18px;
   height: 18px;
-  border: 1px solid #4d4d4d;
   border-radius: 50%;
-  background-color: #fafafa;
   box-sizing: border-box;
   transition: all 0.25s ease;
 }
 
-.toggleChecked .toggleDark {
+.dark .toggleCircle {
+  border: 1px solid #4d4d4d;
+  background-color: #fafafa;
+}
+
+.light .toggleCircle {
+  border: 1px solid rgb(138, 138, 138);
+  background-color: rgb(138, 138, 138);
+}
+
+.dark .toggleDark {
   opacity: 1;
 }
-.toggleChecked .toggleLight {
+.dark .toggleLight {
   opacity: 0;
 }
-.toggleChecked .toggleCircle {
+.dark .toggleCircle {
   left: 27px;
 }

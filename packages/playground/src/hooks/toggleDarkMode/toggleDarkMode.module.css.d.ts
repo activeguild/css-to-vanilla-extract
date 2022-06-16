@@ -4,8 +4,9 @@ declare const classNames: {
   readonly toggleDark: "toggleDark";
   readonly toggleLight: "toggleLight";
   readonly toggleContainer: "toggleContainer";
+  readonly dark: "dark";
+  readonly light: "light";
   readonly toggleCircle: "toggleCircle";
-  readonly toggleChecked: "toggleChecked";
 };
 export default classNames;
 export type ClassNames =
@@ -14,5 +15,6 @@ export type ClassNames =
   | "toggleDark"
   | "toggleLight"
   | "toggleContainer"
-  | "toggleCircle"
-  | "toggleChecked";
+  | "dark"
+  | "light"
+  | "toggleCircle";
