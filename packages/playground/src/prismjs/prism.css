@@ -160,20 +160,20 @@ code[class*="language-"] {
 
 .dark ::-webkit-scrollbar-track {
   background-color: var(--vs-dark);
-  box-shadow: inset 1px 0 0 rgb(52, 52, 52);
+  box-shadow: inset 1px 0 0 #343434;
 }
 
 .light ::-webkit-scrollbar-track {
   background-color: var(--vs);
-  box-shadow: inset 1px 0 0 rgb(216, 216, 215);
+  box-shadow: inset 1px 0 0 #d8d8d7;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background-color: rgb(71, 71, 71);
+  background-color: #474747;
 }
 
 .light ::-webkit-scrollbar-thumb {
-  background-color: rgb(138, 138, 138);
+  background-color: #8a8a8a;
 }
 
 pre[class*="language-"] > code {

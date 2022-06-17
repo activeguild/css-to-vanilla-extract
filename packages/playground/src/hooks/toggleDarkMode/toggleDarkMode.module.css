@@ -90,8 +90,8 @@
 }
 
 .light .toggleCircle {
-  border: 1px solid rgb(138, 138, 138);
-  background-color: rgb(138, 138, 138);
+  border: 1px solid #8a8a8a;
+  background-color: #8a8a8a;
 }
 
 .dark .toggleDark {
