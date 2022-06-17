@@ -1,8 +1,8 @@
 :root {
-  --base: #dddddd;
+  --base: #e6e8e9;
   --base-dark: #313131;
   --vs-dark: #1e1e1e;
-  --vs: rgb(254, 255, 254);
+  --vs: #fefffe;
 }
 
 body {
@@ -29,4 +29,8 @@ code {
 
 h1 {
   font-size: 1em;
+}
+
+.light span.mtk4 {
+  color: #ee0000;
 }

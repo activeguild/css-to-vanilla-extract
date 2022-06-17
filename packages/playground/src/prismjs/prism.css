@@ -12,7 +12,7 @@
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #ff0000;
+  color: #ee0000;
 }
 
 .token.punctuation {
@@ -39,12 +39,12 @@
   color: #0000ff;
 }
 
-.language-css .token.string,
-.style .token.string,
-.token.entity,
-.token.operator,
-.token.url,
-.token.variable {
+.dark .language-css .token.string,
+.dark .style .token.string,
+.dark .token.entity,
+.dark .token.operator,
+.dark .token.url,
+.dark .token.variable {
   color: white;
 }
 
