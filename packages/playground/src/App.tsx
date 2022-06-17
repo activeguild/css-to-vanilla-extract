@@ -49,9 +49,6 @@ function App() {
 
   useEffect(() => {
     worker?.postMessage(EDITOR_DEFAULT_VALUE);
-    setTimeout(() => {
-      Prism.highlightAll();
-    }, 100);
   }, [worker]);
 
   useEffect(() => {
