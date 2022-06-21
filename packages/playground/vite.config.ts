@@ -14,10 +14,6 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-    plugins: [
-      react(),
-      sassDts(),
-      mode === "analyze" && visualizer({ gzipSize: true, open: true }),
-    ],
+    plugins: [react(), sassDts(), visualizer({ gzipSize: true, open: true })],
   };
 });
