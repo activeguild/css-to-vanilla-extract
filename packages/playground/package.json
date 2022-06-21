@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "analyze": "vite build --mode analyze",
+    "analyze": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext '.js,.jsx,.ts,.tsx' --ignore-path .gitignore",
     "lint:fix": "eslint . --fix --ext '.js,.jsx,.ts,.tsx' --ignore-path .gitignore",
