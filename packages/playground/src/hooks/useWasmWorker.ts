@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import WasmWorker from "../worker?worker";
 
+type Message = {
+  loaded?: boolean;
+  error?: string;
+  code?: string;
+};
+
 export const useWasmWorker = () => {
   const [worker, setWorker] = useState<Worker | null>(null);
   const [wasmLoaded, setWasmLoaded] = useState(false);
@@ -8,26 +14,29 @@ export const useWasmWorker = () => {
   const [receiveErrorMessage, setReceiveErrorMessage] = useState<string>("");
 
   useEffect(() => {
-    const worker = new WasmWorker();
+    const _worker = new WasmWorker();
 
-    worker.addEventListener(
-      "message",
-      (e) => {
-        if ("loaded" in e.data) {
-          setWasmLoaded(true);
-        } else if ("error" in e.data) {
-          setReceiveErrorMessage(e.data.error);
-        } else {
-          setReceiveMessage(e.data.code);
-          setReceiveErrorMessage("Success.");
-        }
-      },
-      false
-    );
+    const handle = (e: MessageEvent<Message>) => {
+      if (e.data.loaded) {
+        setWasmLoaded(true);
+      } else if (e.data.error) {
+        setReceiveErrorMessage(e.data.error);
+      } else if (e.data.code) {
+        setReceiveMessage(e.data.code);
+        setReceiveErrorMessage("Success.");
+      }
+    };
 
-    setWorker(worker);
-    return () => worker.terminate();
+    _worker.addEventListener("message", handle, false);
+
+    setWorker(_worker);
+
+    return () => {
+      _worker.removeEventListener("message", handle);
+      _worker.terminate();
+    };
   }, []);
+
   return {
     worker: wasmLoaded ? worker : null,
     receiveMessage,
