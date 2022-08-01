@@ -69,10 +69,10 @@
   "homepage": "https://github.com/activeguild/css-to-vanilla-extract#readme",
   "private": true,
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.29.0",
-    "eslint": "^8.18.0",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.7.1",
-    "wireit": "^0.7.0"
+    "wireit": "^0.7.1"
   }
 }
