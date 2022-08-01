@@ -11,9 +11,9 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-wasm-bindgen = "0.2.80"
+wasm-bindgen = "0.2.82"
 css_to_vanilla_extract = { version = "0.0.35-alpha", path = "../lib" }
-getrandom = { version = "0.2", features = ["js"] }
+getrandom = { version = "0.2.7", features = ["js"] }
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
 # logging them with `console.error`. This is great for development, but requires
@@ -29,7 +29,7 @@ console_error_panic_hook = { version = "0.1.6", optional = true }
 wee_alloc = { version = "0.4.5", optional = true }
 
 [dev-dependencies]
-wasm-bindgen-test = "0.3.13"
+wasm-bindgen-test = "0.3.32"
 
 [profile.release]
 # Tell `rustc` to optimize for small code size.
