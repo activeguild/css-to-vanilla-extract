@@ -73,6 +73,8 @@
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.7.1",
+    "vite-plugin-sass-dts": "^1.1.40",
+    "vite-plugin-wasm": "^2.1.0",
     "wireit": "^0.7.1"
   }
 }

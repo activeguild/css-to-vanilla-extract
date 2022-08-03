@@ -307,45 +307,6 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         }
                     }
                 }
-                // swc_css_ast::AtRule::Charset(_) => {
-                //     println!("Not supportted. (AtRule::Charset)")
-                // }
-                // swc_css_ast::AtRule::Import(_) => {
-                //     println!("Not supportted. (AtRule::Import)")
-                // }
-                // swc_css_ast::AtRule::Layer(_) => {
-                //     println!("Not supportted. (AtRule::Layer)")
-                // }
-                // swc_css_ast::AtRule::Page(_) => {
-                //     println!("Not supportted. (AtRule::Page)")
-                // }
-                // swc_css_ast::AtRule::PageMargin(_) => {
-                //     println!("Not supportted. (AtRule::PageMargin)")
-                // }
-                // swc_css_ast::AtRule::Namespace(_) => {
-                //     println!("Not supportted. (AtRule::Namespace)")
-                // }
-                // swc_css_ast::AtRule::Nest(_) => {
-                //     println!("Not supportted. (AtRule::Nest)")
-                // }
-                // swc_css_ast::AtRule::Viewport(_) => {
-                //     println!("Not supportted. (AtRule::Viewport)")
-                // }
-                // swc_css_ast::AtRule::Document(_) => {
-                //     println!("Not supportted. (AtRule::Document)")
-                // }
-                // swc_css_ast::AtRule::ColorProfile(_) => {
-                //     println!("Not supportted. (AtRule::ColorProfile)")
-                // }
-                // swc_css_ast::AtRule::CounterStyle(_) => {
-                //     println!("Not supportted. (AtRule::LaCounterStyleyer)")
-                // }
-                // swc_css_ast::AtRule::Property(_) => {
-                //     println!("Not supportted. (AtRule::Property)")
-                // }
-                // swc_css_ast::AtRule::Unknown(_) => {
-                //     println!("Not supportted. (AtRule::Unknown)")
-                // }
             }
         }
     }
