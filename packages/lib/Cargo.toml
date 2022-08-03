@@ -1,18 +1,18 @@
 [package]
 name = "css_to_vanilla_extract"
-version = "0.0.34-alpha"
+version = "0.0.35-alpha"
 authors = ["j1ngzoue <workdrive0306@gmail.com>"]
 edition = "2021"
 
 [dependencies]
-grass = "0.10.8"
-cssparser = "0.29.2"
-clap = "3.1.0"
-swc_css_parser = "0.95.0"
-swc_common = "0.17.9"
-swc_css_ast = "0.88.0"
+grass = "0.11.0"
+cssparser = "0.29.6"
+clap = "3.2.16"
+swc_css_parser = "0.113.0"
+swc_common = "0.26.0"
+swc_css_ast = "0.104.0"
 convert_case = "0.5.0"
-regex = "1"
+regex = "1.6"
 
 [profile.release]
 # Tell `rustc` to optimize for small code size.

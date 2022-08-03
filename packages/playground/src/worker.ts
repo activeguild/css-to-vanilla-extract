@@ -1,5 +1,5 @@
 import init, { from_code } from "../../wasm/dist/wasm_css_to_vanilla_extract";
-import "../../wasm/dist/wasm_css_to_vanilla_extract_bg.wasm";
+import "../../wasm/dist/wasm_css_to_vanilla_extract_bg.wasm?init";
 
 init()
   .then(() => {

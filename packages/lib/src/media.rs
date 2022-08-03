@@ -177,7 +177,7 @@ mod tests {
                 left: MediaFeatureValue::Ident(Ident {
                     span: generate_span(),
                     value: "width".into(),
-                    raw: "width".into(),
+                    raw: Some("width".into()),
                 }),
                 comparison: MediaFeatureRangeComparison::Le,
                 right: MediaFeatureValue::Dimension(Dimension::Length(Length {
@@ -185,12 +185,12 @@ mod tests {
                     value: Number {
                         span: generate_span(),
                         value: 32.0,
-                        raw: "32.0".into(),
+                        raw: Some("32.0".into()),
                     },
                     unit: Ident {
                         span: generate_span(),
                         value: "em".into(),
-                        raw: "em".into(),
+                        raw: Some("em".into()),
                     },
                 })),
             }),
@@ -209,7 +209,7 @@ mod tests {
                 left: MediaFeatureValue::Ident(Ident {
                     span: generate_span(),
                     value: "width".into(),
-                    raw: "width".into(),
+                    raw: Some("width".into()),
                 }),
                 comparison: MediaFeatureRangeComparison::Le,
                 right: MediaFeatureValue::Dimension(Dimension::Length(Length {
@@ -217,12 +217,12 @@ mod tests {
                     value: Number {
                         span: generate_span(),
                         value: 32.0,
-                        raw: "32.0".into(),
+                        raw: Some("32.0".into()),
                     },
                     unit: Ident {
                         span: generate_span(),
                         value: "em".into(),
-                        raw: "em".into(),
+                        raw: Some("em".into()),
                     },
                 })),
             }),

@@ -107,57 +107,33 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                 }
             }
             swc_css_ast::Rule::Invalid(_) => println!("Contains an invalid token."),
-            swc_css_ast::Rule::AtRule(at_rule) => match at_rule {
-                swc_css_ast::AtRule::Charset(_) => {
-                    println!("Not supportted. (AtRule::Charset)")
-                }
-                swc_css_ast::AtRule::Import(_) => {
-                    println!("Not supportted. (AtRule::Import)")
-                }
-                swc_css_ast::AtRule::FontFace(font_face) => {
-                    // globalFontFace('MyGlobalFont', {
-                    //   src: 'local("Comic Sans MS")'
-                    // });
-                    let mut block_values = String::new();
-                    let mut font_face_key = String::new();
-                    for block_value in &font_face.block.value {
-                        let components = get_component_value(block_value);
-                        for (key, value) in components[0].key_value_pair.clone().into_iter() {
-                            if key == "fontFamily" {
-                                font_face_key.push_str(&value);
-                            } else {
-                                block_values.push_str(&wrap_property(key, value, None));
-                            }
+            swc_css_ast::Rule::AtRule(at_rule) => {
+                if let Some(value) = &at_rule.prelude {
+                    match value {
+                        swc_css_ast::AtRulePrelude::ListOfComponentValues(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::CharsetPrelude(_) => {
+                            println!("Not supportted. (AtRule::Charset)")
                         }
-                    }
+                        swc_css_ast::AtRulePrelude::PropertyPrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::CounterStylePrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::ColorProfilePrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::DocumentPrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::FontPaletteValuesPrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::NestPrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::KeyframesPrelude(keyframes_prelude) => {
+                            let keyframes_rule = get_keyframes(keyframes_prelude, &at_rule.block);
 
-                    if !font_face_key.is_empty() {
-                        named_imports_hash.insert("globalFontFace".to_string());
-                    }
+                            if !keyframes_rule.is_empty() {
+                                named_imports_hash.insert("globalKeyframes".to_string());
+                            }
 
-                    ve.push_str(&wrap_fontface(wrap_properties_with_comma(
-                        font_face_key,
-                        block_values,
-                        Some(0),
-                    )));
-                }
-                swc_css_ast::AtRule::Keyframes(keyframes) => {
-                    let keyframes_rule = get_keyframes(keyframes);
-
-                    if !keyframes_rule.is_empty() {
-                        named_imports_hash.insert("globalKeyframes".to_string());
-                    }
-
-                    ve.push_str(&keyframes_rule);
-                }
-                swc_css_ast::AtRule::Layer(_) => {
-                    println!("Not supportted. (AtRule::Layer)")
-                }
-                swc_css_ast::AtRule::Media(media) => {
-                    let mut media_condition = String::new();
-                    match &media.media {
-                        Some(media) => {
-                            for (index, media_query) in media.queries.iter().enumerate() {
+                            ve.push_str(&keyframes_rule);
+                        }
+                        swc_css_ast::AtRulePrelude::ImportPrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::NamespacePrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::MediaPrelude(media_prelude) => {
+                            let mut media_condition = String::new();
+                            for (index, media_query) in media_prelude.queries.iter().enumerate() {
                                 if index > 0 {
                                     media_condition.push_str(&String::from(", "));
                                 }
@@ -190,132 +166,147 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                 }
                                 media_condition.push_str(&condition);
                             }
+
+                            if let Some(block) = &at_rule.block {
+                                for component_value in &block.value {
+                                    let components = get_component_value(component_value);
+
+                                    for component in components {
+                                        let media_condition = media_condition.clone();
+                                        if component.is_global_style {
+                                            let _global_rule_map = global_rule_map
+                                                .entry(component.key)
+                                                .or_insert_with(RuleMapValue::default);
+                                            if _global_rule_map.media.is_empty() {
+                                                _global_rule_map.media.push_str(&media_condition);
+                                            }
+                                            _global_rule_map
+                                                .key_value_pair_in_media
+                                                .extend(component.key_value_pair);
+                                            _global_rule_map
+                                                .key_value_pair_in_pseudo
+                                                .extend(component.key_value_pair_in_pseudo);
+
+                                            let selectors_map = _global_rule_map
+                                                .selectors_in_media
+                                                .entry(media_condition)
+                                                .or_insert_with(BTreeMap::new);
+                                            selectors_map
+                                                .extend(component.key_value_pair_in_selectors);
+                                        } else {
+                                            let _rule_map = rule_map
+                                                .entry(component.key)
+                                                .or_insert_with(RuleMapValue::default);
+                                            if _rule_map.media.is_empty() {
+                                                _rule_map.media.push_str(&media_condition);
+                                            }
+                                            _rule_map
+                                                .key_value_pair_in_media
+                                                .extend(component.key_value_pair);
+                                            _rule_map
+                                                .key_value_pair_in_pseudo
+                                                .extend(component.key_value_pair_in_pseudo);
+
+                                            let selectors_map = _rule_map
+                                                .selectors_in_media
+                                                .entry(media_condition)
+                                                .or_insert_with(BTreeMap::new);
+                                            selectors_map
+                                                .extend(component.key_value_pair_in_selectors);
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        None => (),
-                    };
+                        swc_css_ast::AtRulePrelude::SupportsPrelude(supports_prelude) => {
+                            let supports_rule = get_supports_rule(supports_prelude, &at_rule.block);
+                            for component in supports_rule.1 {
+                                let supports_condition = supports_rule.0.clone();
 
-                    for component_value in &media.block.value {
-                        let components = get_component_value(component_value);
-
-                        for component in components {
-                            let media_condition = media_condition.clone();
-                            if component.is_global_style {
-                                let _global_rule_map = global_rule_map
-                                    .entry(component.key)
-                                    .or_insert_with(RuleMapValue::default);
-                                if _global_rule_map.media.is_empty() {
-                                    _global_rule_map.media.push_str(&media_condition);
+                                if component.is_global_style {
+                                    let _global_rule_map = global_rule_map
+                                        .entry(component.key)
+                                        .or_insert_with(RuleMapValue::default);
+                                    if _global_rule_map.supports.is_empty() {
+                                        _global_rule_map.supports.push_str(&supports_condition);
+                                    }
+                                    _global_rule_map
+                                        .key_value_pair_in_supports
+                                        .extend(component.key_value_pair);
+                                    _global_rule_map
+                                        .key_value_pair_in_pseudo
+                                        .extend(component.key_value_pair_in_pseudo);
+                                    let selectors_map = _global_rule_map
+                                        .selectors_in_supports
+                                        .entry(supports_condition)
+                                        .or_insert_with(BTreeMap::new);
+                                    selectors_map.extend(component.key_value_pair_in_selectors);
+                                } else {
+                                    let _rule_map = rule_map
+                                        .entry(component.key)
+                                        .or_insert_with(RuleMapValue::default);
+                                    if _rule_map.supports.is_empty() {
+                                        _rule_map.supports.push_str(&supports_condition);
+                                    }
+                                    _rule_map
+                                        .key_value_pair_in_supports
+                                        .extend(component.key_value_pair);
+                                    _rule_map
+                                        .key_value_pair_in_pseudo
+                                        .extend(component.key_value_pair_in_pseudo);
+                                    let selectors_map = _rule_map
+                                        .selectors_in_supports
+                                        .entry(supports_condition)
+                                        .or_insert_with(BTreeMap::new);
+                                    selectors_map.extend(component.key_value_pair_in_selectors);
                                 }
-                                _global_rule_map
-                                    .key_value_pair_in_media
-                                    .extend(component.key_value_pair);
-                                _global_rule_map
-                                    .key_value_pair_in_pseudo
-                                    .extend(component.key_value_pair_in_pseudo);
+                            }
+                        }
+                        swc_css_ast::AtRulePrelude::PagePrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::LayerPrelude(_) => todo!(),
+                    }
+                } else {
+                    match &at_rule.name {
+                        swc_css_ast::AtRuleName::DashedIdent(_) => todo!(),
+                        swc_css_ast::AtRuleName::Ident(ident) => {
+                            if let Some(name) = &ident.raw {
+                                if name.to_string() == *"font-face" {
+                                    // globalFontFace('MyGlobalFont', {
+                                    //   src: 'local("Comic Sans MS")'
+                                    // });
+                                    let mut block_values = String::new();
+                                    let mut font_face_key = String::new();
+                                    if let Some(block) = &at_rule.block {
+                                        for block_value in &block.value {
+                                            let components = get_component_value(block_value);
+                                            for (key, value) in
+                                                components[0].key_value_pair.clone().into_iter()
+                                            {
+                                                if key == "fontFamily" {
+                                                    font_face_key.push_str(&value);
+                                                } else {
+                                                    block_values
+                                                        .push_str(&wrap_property(key, value, None));
+                                                }
+                                            }
+                                        }
 
-                                let selectors_map = _global_rule_map
-                                    .selectors_in_media
-                                    .entry(media_condition)
-                                    .or_insert_with(BTreeMap::new);
-                                selectors_map.extend(component.key_value_pair_in_selectors);
-                            } else {
-                                let _rule_map = rule_map
-                                    .entry(component.key)
-                                    .or_insert_with(RuleMapValue::default);
-                                if _rule_map.media.is_empty() {
-                                    _rule_map.media.push_str(&media_condition);
+                                        if !font_face_key.is_empty() {
+                                            named_imports_hash.insert("globalFontFace".to_string());
+                                        }
+
+                                        ve.push_str(&wrap_fontface(wrap_properties_with_comma(
+                                            font_face_key,
+                                            block_values,
+                                            Some(0),
+                                        )));
+                                    }
                                 }
-                                _rule_map
-                                    .key_value_pair_in_media
-                                    .extend(component.key_value_pair);
-                                _rule_map
-                                    .key_value_pair_in_pseudo
-                                    .extend(component.key_value_pair_in_pseudo);
-
-                                let selectors_map = _rule_map
-                                    .selectors_in_media
-                                    .entry(media_condition)
-                                    .or_insert_with(BTreeMap::new);
-                                selectors_map.extend(component.key_value_pair_in_selectors);
                             }
                         }
                     }
                 }
-                swc_css_ast::AtRule::Supports(supports) => {
-                    let supports_rule = get_supports_rule(supports);
-                    for component in supports_rule.1 {
-                        let supports_condition = supports_rule.0.clone();
-
-                        if component.is_global_style {
-                            let _global_rule_map = global_rule_map
-                                .entry(component.key)
-                                .or_insert_with(RuleMapValue::default);
-                            if _global_rule_map.supports.is_empty() {
-                                _global_rule_map.supports.push_str(&supports_condition);
-                            }
-                            _global_rule_map
-                                .key_value_pair_in_supports
-                                .extend(component.key_value_pair);
-                            _global_rule_map
-                                .key_value_pair_in_pseudo
-                                .extend(component.key_value_pair_in_pseudo);
-                            let selectors_map = _global_rule_map
-                                .selectors_in_supports
-                                .entry(supports_condition)
-                                .or_insert_with(BTreeMap::new);
-                            selectors_map.extend(component.key_value_pair_in_selectors);
-                        } else {
-                            let _rule_map = rule_map
-                                .entry(component.key)
-                                .or_insert_with(RuleMapValue::default);
-                            if _rule_map.supports.is_empty() {
-                                _rule_map.supports.push_str(&supports_condition);
-                            }
-                            _rule_map
-                                .key_value_pair_in_supports
-                                .extend(component.key_value_pair);
-                            _rule_map
-                                .key_value_pair_in_pseudo
-                                .extend(component.key_value_pair_in_pseudo);
-                            let selectors_map = _rule_map
-                                .selectors_in_supports
-                                .entry(supports_condition)
-                                .or_insert_with(BTreeMap::new);
-                            selectors_map.extend(component.key_value_pair_in_selectors);
-                        }
-                    }
-                }
-                swc_css_ast::AtRule::Page(_) => {
-                    println!("Not supportted. (AtRule::Page)")
-                }
-                swc_css_ast::AtRule::PageMargin(_) => {
-                    println!("Not supportted. (AtRule::PageMargin)")
-                }
-                swc_css_ast::AtRule::Namespace(_) => {
-                    println!("Not supportted. (AtRule::Namespace)")
-                }
-                swc_css_ast::AtRule::Nest(_) => {
-                    println!("Not supportted. (AtRule::Nest)")
-                }
-                swc_css_ast::AtRule::Viewport(_) => {
-                    println!("Not supportted. (AtRule::Viewport)")
-                }
-                swc_css_ast::AtRule::Document(_) => {
-                    println!("Not supportted. (AtRule::Document)")
-                }
-                swc_css_ast::AtRule::ColorProfile(_) => {
-                    println!("Not supportted. (AtRule::ColorProfile)")
-                }
-                swc_css_ast::AtRule::CounterStyle(_) => {
-                    println!("Not supportted. (AtRule::LaCounterStyleyer)")
-                }
-                swc_css_ast::AtRule::Property(_) => {
-                    println!("Not supportted. (AtRule::Property)")
-                }
-                swc_css_ast::AtRule::Unknown(_) => {
-                    println!("Not supportted. (AtRule::Unknown)")
-                }
-            },
+            }
         }
     }
 
@@ -531,54 +522,61 @@ fn finish_to_vanilla_extract(
 pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rule> {
     let mut result: Vec<Rule> = vec![];
 
-    for complex in get_complex_selectors(&qualfied_rule.prelude.children) {
-        let mut key_value_pair: KeyValuePair = KeyValuePair::default();
-        let mut key_value_pair_in_vars: KeyValuePair = KeyValuePair::default();
-        let mut key_value_pair_in_pseudo: KeyValuePairInPseudo = BTreeMap::default();
-        let mut key_value_pair_in_selectors: KeyValuePairInSelectors =
-            KeyValuePairInSelectors::default();
+    match &qualfied_rule.prelude {
+        swc_css_ast::QualifiedRulePrelude::ListOfComponentValues(_) => todo!(),
+        swc_css_ast::QualifiedRulePrelude::SelectorList(selector_list) => {
+            for complex in get_complex_selectors(&selector_list.children) {
+                let mut key_value_pair: KeyValuePair = KeyValuePair::default();
+                let mut key_value_pair_in_vars: KeyValuePair = KeyValuePair::default();
+                let mut key_value_pair_in_pseudo: KeyValuePairInPseudo = BTreeMap::default();
+                let mut key_value_pair_in_selectors: KeyValuePairInSelectors =
+                    KeyValuePairInSelectors::default();
 
-        // input > .btn
-        // {
-        //   position: absolute;
-        // }
-        if complex.has_component_value {
-            for block_value in &qualfied_rule.block.value {
-                let component_value = get_component_value(block_value);
+                // input > .btn
+                // {
+                //   position: absolute;
+                // }
+                if complex.has_component_value {
+                    for block_value in &qualfied_rule.block.value {
+                        let component_value = get_component_value(block_value);
 
-                key_value_pair.extend(component_value[0].key_value_pair.clone());
-                key_value_pair_in_vars.extend(component_value[0].key_value_pair_in_vars.clone());
-            }
+                        key_value_pair.extend(component_value[0].key_value_pair.clone());
+                        key_value_pair_in_vars
+                            .extend(component_value[0].key_value_pair_in_vars.clone());
+                    }
 
-            if !complex.pseudo.is_empty() {
-                if complex.is_simple_pseudo {
-                    key_value_pair_in_pseudo.insert(complex.pseudo, key_value_pair.clone());
+                    if !complex.pseudo.is_empty() {
+                        if complex.is_simple_pseudo {
+                            key_value_pair_in_pseudo.insert(complex.pseudo, key_value_pair.clone());
+                        } else {
+                            key_value_pair_in_selectors
+                                .insert(complex.pseudo, key_value_pair.clone());
+                        }
+                    }
+                }
+
+                if !key_value_pair_in_pseudo.is_empty() || !key_value_pair_in_selectors.is_empty() {
+                    result.push(Rule {
+                        key: complex.key,
+                        key_value_pair: KeyValuePair::new(),
+                        key_value_pair_in_vars,
+                        key_value_pair_in_pseudo,
+                        key_value_pair_in_selectors,
+                        is_global_style: complex.is_global_style,
+                        is_simple_pseudo: complex.is_simple_pseudo,
+                    })
                 } else {
-                    key_value_pair_in_selectors.insert(complex.pseudo, key_value_pair.clone());
+                    result.push(Rule {
+                        key: complex.key,
+                        key_value_pair,
+                        key_value_pair_in_vars,
+                        key_value_pair_in_pseudo,
+                        key_value_pair_in_selectors,
+                        is_global_style: complex.is_global_style,
+                        is_simple_pseudo: complex.is_simple_pseudo,
+                    })
                 }
             }
-        }
-
-        if !key_value_pair_in_pseudo.is_empty() || !key_value_pair_in_selectors.is_empty() {
-            result.push(Rule {
-                key: complex.key,
-                key_value_pair: KeyValuePair::new(),
-                key_value_pair_in_vars,
-                key_value_pair_in_pseudo,
-                key_value_pair_in_selectors,
-                is_global_style: complex.is_global_style,
-                is_simple_pseudo: complex.is_simple_pseudo,
-            })
-        } else {
-            result.push(Rule {
-                key: complex.key,
-                key_value_pair,
-                key_value_pair_in_vars,
-                key_value_pair_in_pseudo,
-                key_value_pair_in_selectors,
-                is_global_style: complex.is_global_style,
-                is_simple_pseudo: complex.is_simple_pseudo,
-            })
         }
     }
 
@@ -1011,9 +1009,7 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
                     key_value_pair_in_vars.extend(rule.key_value_pair_in_vars.clone());
                 }
             }
-            swc_css_ast::StyleBlock::Invalid(_) => {
-                println!("Contains an invalid token.")
-            }
+            swc_css_ast::StyleBlock::ListOfComponentValues(_) => todo!(),
         },
         swc_css_ast::ComponentValue::KeyframeBlock(keyframe_block) => {
             let mut keyframe_selector = String::new();
@@ -1082,8 +1078,18 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
         swc_css_ast::ComponentValue::Ratio(_) => todo!(),
         swc_css_ast::ComponentValue::UnicodeRange(_) => todo!(),
         swc_css_ast::ComponentValue::Color(color) => match color {
-            swc_css_ast::Color::HexColor(hex_color) => ve.push_str(&hex_color.value),
+            swc_css_ast::Color::AbsoluteColorBase(color) => match color {
+                swc_css_ast::AbsoluteColorBase::HexColor(hex_color) => match &hex_color.raw {
+                    Some(value) => ve.push_str(value),
+                    None => ve.push_str(""),
+                },
+                swc_css_ast::AbsoluteColorBase::NamedColorOrTransparent(_) => todo!(),
+                swc_css_ast::AbsoluteColorBase::Function(function) => {
+                    ve.push_str(&get_function(function));
+                }
+            },
             swc_css_ast::Color::Function(function) => ve.push_str(&get_function(function)),
+            swc_css_ast::Color::CurrentColorOrSystemColor(_) => todo!(),
         },
         swc_css_ast::ComponentValue::AlphaValue(alpha_value) => match alpha_value {
             swc_css_ast::AlphaValue::Number(number) => ve.push_str(&number.value.to_string()),
@@ -1103,6 +1109,7 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
             ve.push_str(&get_calc_sum(calc_sum));
         }
         swc_css_ast::ComponentValue::ComplexSelector(_) => todo!(),
+        swc_css_ast::ComponentValue::LayerName(_) => todo!(),
     }
 
     [Component {
@@ -1241,11 +1248,15 @@ pub fn get_declaration(declaration: &swc_css_ast::Declaration) -> (KeyValuePair,
     let mut declaration_value = String::new();
     let mut dashed_ident = String::new();
     match &declaration.name {
-        swc_css_ast::DeclarationName::Ident(ident) => {
-            declaration_name.push_str(&ident.raw.to_string())
-        }
+        swc_css_ast::DeclarationName::Ident(ident) => declaration_name.push_str(match &ident.raw {
+            Some(value) => &value,
+            None => "",
+        }),
         swc_css_ast::DeclarationName::DashedIdent(_dashed_ident) => {
-            dashed_ident = _dashed_ident.raw.to_string()
+            dashed_ident = match &_dashed_ident.raw {
+                Some(value) => (&value).to_string(),
+                None => "".to_string(),
+            }
         }
     }
     for declaration_component_value in &declaration.value {
@@ -1301,12 +1312,12 @@ mod tests {
             value: Number {
                 span: generate_span(),
                 value: 10.0,
-                raw: "10.0".into(),
+                raw: Some("10.0".into()),
             },
             unit: Ident {
                 span: generate_span(),
                 value: "px".into(),
-                raw: "px".into(),
+                raw: Some("px".into()),
             },
         }));
 
