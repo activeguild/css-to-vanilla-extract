@@ -266,234 +266,55 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         swc_css_ast::AtRulePrelude::PagePrelude(_) => todo!(),
                         swc_css_ast::AtRulePrelude::LayerPrelude(_) => todo!(),
                     }
-                }
-                // if prelude = at_rule ==
-                // at_rule.prelude.unwrap()
-                // match &at_rule.name {
-                //     swc_css_ast::AtRuleName::DashedIdent(_) => todo!(),
-                //     swc_css_ast::AtRuleName::Ident(ident) => {
-                //         if ident.value.to_string() == "supports" {
-                //             let supports_rule = get_supports_rule(supports);
-                //             for component in supports_rule.1 {
-                //                 let supports_condition = supports_rule.0.clone();
+                } else {
+                    match &at_rule.name {
+                        swc_css_ast::AtRuleName::DashedIdent(_) => todo!(),
+                        swc_css_ast::AtRuleName::Ident(ident) => {
+                            if let Some(name) = &ident.raw {
+                                if name.to_string() == *"font-face" {
+                                    // globalFontFace('MyGlobalFont', {
+                                    //   src: 'local("Comic Sans MS")'
+                                    // });
+                                    let mut block_values = String::new();
+                                    let mut font_face_key = String::new();
+                                    if let Some(block) = &at_rule.block {
+                                        for block_value in &block.value {
+                                            let components = get_component_value(block_value);
+                                            for (key, value) in
+                                                components[0].key_value_pair.clone().into_iter()
+                                            {
+                                                if key == "fontFamily" {
+                                                    font_face_key.push_str(&value);
+                                                } else {
+                                                    block_values
+                                                        .push_str(&wrap_property(key, value, None));
+                                                }
+                                            }
+                                        }
 
-                //                 if component.is_global_style {
-                //                     let _global_rule_map = global_rule_map
-                //                         .entry(component.key)
-                //                         .or_insert_with(RuleMapValue::default);
-                //                     if _global_rule_map.supports.is_empty() {
-                //                         _global_rule_map.supports.push_str(&supports_condition);
-                //                     }
-                //                     _global_rule_map
-                //                         .key_value_pair_in_supports
-                //                         .extend(component.key_value_pair);
-                //                     _global_rule_map
-                //                         .key_value_pair_in_pseudo
-                //                         .extend(component.key_value_pair_in_pseudo);
-                //                     let selectors_map = _global_rule_map
-                //                         .selectors_in_supports
-                //                         .entry(supports_condition)
-                //                         .or_insert_with(BTreeMap::new);
-                //                     selectors_map.extend(component.key_value_pair_in_selectors);
-                //                 } else {
-                //                     let _rule_map = rule_map
-                //                         .entry(component.key)
-                //                         .or_insert_with(RuleMapValue::default);
-                //                     if _rule_map.supports.is_empty() {
-                //                         _rule_map.supports.push_str(&supports_condition);
-                //                     }
-                //                     _rule_map
-                //                         .key_value_pair_in_supports
-                //                         .extend(component.key_value_pair);
-                //                     _rule_map
-                //                         .key_value_pair_in_pseudo
-                //                         .extend(component.key_value_pair_in_pseudo);
-                //                     let selectors_map = _rule_map
-                //                         .selectors_in_supports
-                //                         .entry(supports_condition)
-                //                         .or_insert_with(BTreeMap::new);
-                //                     selectors_map.extend(component.key_value_pair_in_selectors);
-                //                 }
-                //             }
-                //         }
-                //     }
-                // }
+                                        if !font_face_key.is_empty() {
+                                            named_imports_hash.insert("globalFontFace".to_string());
+                                        }
+
+                                        ve.push_str(&wrap_fontface(wrap_properties_with_comma(
+                                            font_face_key,
+                                            block_values,
+                                            Some(0),
+                                        )));
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 // swc_css_ast::AtRule::Charset(_) => {
                 //     println!("Not supportted. (AtRule::Charset)")
                 // }
                 // swc_css_ast::AtRule::Import(_) => {
                 //     println!("Not supportted. (AtRule::Import)")
                 // }
-                // swc_css_ast::AtRule::FontFace(font_face) => {
-                //     // globalFontFace('MyGlobalFont', {
-                //     //   src: 'local("Comic Sans MS")'
-                //     // });
-                //     let mut block_values = String::new();
-                //     let mut font_face_key = String::new();
-                //     for block_value in &font_face.block.value {
-                //         let components = get_component_value(block_value);
-                //         for (key, value) in components[0].key_value_pair.clone().into_iter() {
-                //             if key == "fontFamily" {
-                //                 font_face_key.push_str(&value);
-                //             } else {
-                //                 block_values.push_str(&wrap_property(key, value, None));
-                //             }
-                //         }
-                //     }
-
-                //     if !font_face_key.is_empty() {
-                //         named_imports_hash.insert("globalFontFace".to_string());
-                //     }
-
-                //     ve.push_str(&wrap_fontface(wrap_properties_with_comma(
-                //         font_face_key,
-                //         block_values,
-                //         Some(0),
-                //     )));
-                // }
-                // swc_css_ast::AtRule::Keyframes(keyframes) => {
-                //     let keyframes_rule = get_keyframes(keyframes);
-
-                //     if !keyframes_rule.is_empty() {
-                //         named_imports_hash.insert("globalKeyframes".to_string());
-                //     }
-
-                //     ve.push_str(&keyframes_rule);
-                // }
                 // swc_css_ast::AtRule::Layer(_) => {
                 //     println!("Not supportted. (AtRule::Layer)")
-                // }
-                // swc_css_ast::AtRule::Media(media) => {
-                //     let mut media_condition = String::new();
-                //     match &media.media {
-                //         Some(media) => {
-                //             for (index, media_query) in media.queries.iter().enumerate() {
-                //                 if index > 0 {
-                //                     media_condition.push_str(&String::from(", "));
-                //                 }
-                //                 let modifier = match &media_query.modifier {
-                //                     Some(value) => format!("{} ", &value.value.to_string()),
-                //                     None => String::new(),
-                //                 };
-                //                 media_condition.push_str(&modifier);
-
-                //                 let media_type = match &media_query.media_type {
-                //                     Some(value) => value.value.to_string(),
-                //                     None => String::new(),
-                //                 };
-                //                 media_condition.push_str(&media_type);
-
-                //                 let condition = match &media_query.condition {
-                //                     Some(value) => match value {
-                //                         swc_css_ast::MediaConditionType::All(all) => {
-                //                             get_all_media_conditions(&all.conditions)
-                //                         }
-                //                         swc_css_ast::MediaConditionType::WithoutOr(without_or) => {
-                //                             get_without_or_media_conditions(&without_or.conditions)
-                //                         }
-                //                     },
-                //                     None => String::new(),
-                //                 };
-
-                //                 if !condition.is_empty() && !media_type.is_empty() {
-                //                     media_condition.push_str(&String::from(" and "));
-                //                 }
-                //                 media_condition.push_str(&condition);
-                //             }
-                //         }
-                //         None => (),
-                //     };
-
-                //     for component_value in &media.block.value {
-                //         let components = get_component_value(component_value);
-
-                //         for component in components {
-                //             let media_condition = media_condition.clone();
-                //             if component.is_global_style {
-                //                 let _global_rule_map = global_rule_map
-                //                     .entry(component.key)
-                //                     .or_insert_with(RuleMapValue::default);
-                //                 if _global_rule_map.media.is_empty() {
-                //                     _global_rule_map.media.push_str(&media_condition);
-                //                 }
-                //                 _global_rule_map
-                //                     .key_value_pair_in_media
-                //                     .extend(component.key_value_pair);
-                //                 _global_rule_map
-                //                     .key_value_pair_in_pseudo
-                //                     .extend(component.key_value_pair_in_pseudo);
-
-                //                 let selectors_map = _global_rule_map
-                //                     .selectors_in_media
-                //                     .entry(media_condition)
-                //                     .or_insert_with(BTreeMap::new);
-                //                 selectors_map.extend(component.key_value_pair_in_selectors);
-                //             } else {
-                //                 let _rule_map = rule_map
-                //                     .entry(component.key)
-                //                     .or_insert_with(RuleMapValue::default);
-                //                 if _rule_map.media.is_empty() {
-                //                     _rule_map.media.push_str(&media_condition);
-                //                 }
-                //                 _rule_map
-                //                     .key_value_pair_in_media
-                //                     .extend(component.key_value_pair);
-                //                 _rule_map
-                //                     .key_value_pair_in_pseudo
-                //                     .extend(component.key_value_pair_in_pseudo);
-
-                //                 let selectors_map = _rule_map
-                //                     .selectors_in_media
-                //                     .entry(media_condition)
-                //                     .or_insert_with(BTreeMap::new);
-                //                 selectors_map.extend(component.key_value_pair_in_selectors);
-                //             }
-                //         }
-                //     }
-                // }
-                // swc_css_ast::AtRule::Supports(supports) => {
-                //     let supports_rule = get_supports_rule(supports);
-                //     for component in supports_rule.1 {
-                //         let supports_condition = supports_rule.0.clone();
-
-                //         if component.is_global_style {
-                //             let _global_rule_map = global_rule_map
-                //                 .entry(component.key)
-                //                 .or_insert_with(RuleMapValue::default);
-                //             if _global_rule_map.supports.is_empty() {
-                //                 _global_rule_map.supports.push_str(&supports_condition);
-                //             }
-                //             _global_rule_map
-                //                 .key_value_pair_in_supports
-                //                 .extend(component.key_value_pair);
-                //             _global_rule_map
-                //                 .key_value_pair_in_pseudo
-                //                 .extend(component.key_value_pair_in_pseudo);
-                //             let selectors_map = _global_rule_map
-                //                 .selectors_in_supports
-                //                 .entry(supports_condition)
-                //                 .or_insert_with(BTreeMap::new);
-                //             selectors_map.extend(component.key_value_pair_in_selectors);
-                //         } else {
-                //             let _rule_map = rule_map
-                //                 .entry(component.key)
-                //                 .or_insert_with(RuleMapValue::default);
-                //             if _rule_map.supports.is_empty() {
-                //                 _rule_map.supports.push_str(&supports_condition);
-                //             }
-                //             _rule_map
-                //                 .key_value_pair_in_supports
-                //                 .extend(component.key_value_pair);
-                //             _rule_map
-                //                 .key_value_pair_in_pseudo
-                //                 .extend(component.key_value_pair_in_pseudo);
-                //             let selectors_map = _rule_map
-                //                 .selectors_in_supports
-                //                 .entry(supports_condition)
-                //                 .or_insert_with(BTreeMap::new);
-                //             selectors_map.extend(component.key_value_pair_in_selectors);
-                //         }
-                //     }
                 // }
                 // swc_css_ast::AtRule::Page(_) => {
                 //     println!("Not supportted. (AtRule::Page)")
@@ -1299,11 +1120,13 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
         swc_css_ast::ComponentValue::Color(color) => match color {
             swc_css_ast::Color::AbsoluteColorBase(color) => match color {
                 swc_css_ast::AbsoluteColorBase::HexColor(hex_color) => match &hex_color.raw {
-                    Some(value) => ve.push_str(&value),
+                    Some(value) => ve.push_str(value),
                     None => ve.push_str(""),
                 },
                 swc_css_ast::AbsoluteColorBase::NamedColorOrTransparent(_) => todo!(),
-                swc_css_ast::AbsoluteColorBase::Function(_) => todo!(),
+                swc_css_ast::AbsoluteColorBase::Function(function) => {
+                    ve.push_str(&get_function(function));
+                }
             },
             swc_css_ast::Color::Function(function) => ve.push_str(&get_function(function)),
             swc_css_ast::Color::CurrentColorOrSystemColor(_) => todo!(),
