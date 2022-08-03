@@ -1,8 +1,13 @@
 use std::collections::{BTreeMap, HashSet};
 
-use crate::utils::{
-    is_simple_pseudo_func, wrap_export_const, wrap_fontface, wrap_global_style,
-    wrap_properties_with_colon, wrap_properties_with_comma, wrap_property, wrap_style,
+use crate::{
+    keyframes::get_keyframes,
+    media::{get_all_media_conditions, get_without_or_media_conditions},
+    supports::get_supports_rule,
+    utils::{
+        is_simple_pseudo_func, wrap_export_const, wrap_fontface, wrap_global_style,
+        wrap_properties_with_colon, wrap_properties_with_comma, wrap_property, wrap_style,
+    },
 };
 use convert_case::{Case, Casing};
 use swc_css_ast::{ClassSelector, ComplexSelectorChildren};
@@ -104,55 +109,215 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
             swc_css_ast::Rule::Invalid(_) => println!("Contains an invalid token."),
             swc_css_ast::Rule::AtRule(at_rule) => {
                 println!("at_rule.name{:?}", at_rule.name);
-                match &at_rule.name {
-                    swc_css_ast::AtRuleName::DashedIdent(_) => todo!(),
-                    swc_css_ast::AtRuleName::Ident(ident) => {
-                        if ident.value.to_string() == "supports" {
-                            //     let supports_rule = get_supports_rule(supports);
-                            //     for component in supports_rule.1 {
-                            //         let supports_condition = supports_rule.0.clone();
+                println!("at_rule.name{:?}", at_rule.prelude);
+                println!("at_rule.name{:?}", at_rule.block);
+                if let Some(value) = &at_rule.prelude {
+                    match value {
+                        swc_css_ast::AtRulePrelude::ListOfComponentValues(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::CharsetPrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::PropertyPrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::CounterStylePrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::ColorProfilePrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::DocumentPrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::FontPaletteValuesPrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::NestPrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::KeyframesPrelude(keyframes_prelude) => {
+                            let keyframes_rule = get_keyframes(keyframes_prelude, &at_rule.block);
 
-                            //         if component.is_global_style {
-                            //             let _global_rule_map = global_rule_map
-                            //                 .entry(component.key)
-                            //                 .or_insert_with(RuleMapValue::default);
-                            //             if _global_rule_map.supports.is_empty() {
-                            //                 _global_rule_map.supports.push_str(&supports_condition);
-                            //             }
-                            //             _global_rule_map
-                            //                 .key_value_pair_in_supports
-                            //                 .extend(component.key_value_pair);
-                            //             _global_rule_map
-                            //                 .key_value_pair_in_pseudo
-                            //                 .extend(component.key_value_pair_in_pseudo);
-                            //             let selectors_map = _global_rule_map
-                            //                 .selectors_in_supports
-                            //                 .entry(supports_condition)
-                            //                 .or_insert_with(BTreeMap::new);
-                            //             selectors_map.extend(component.key_value_pair_in_selectors);
-                            //         } else {
-                            //             let _rule_map = rule_map
-                            //                 .entry(component.key)
-                            //                 .or_insert_with(RuleMapValue::default);
-                            //             if _rule_map.supports.is_empty() {
-                            //                 _rule_map.supports.push_str(&supports_condition);
-                            //             }
-                            //             _rule_map
-                            //                 .key_value_pair_in_supports
-                            //                 .extend(component.key_value_pair);
-                            //             _rule_map
-                            //                 .key_value_pair_in_pseudo
-                            //                 .extend(component.key_value_pair_in_pseudo);
-                            //             let selectors_map = _rule_map
-                            //                 .selectors_in_supports
-                            //                 .entry(supports_condition)
-                            //                 .or_insert_with(BTreeMap::new);
-                            //             selectors_map.extend(component.key_value_pair_in_selectors);
-                            //         }
-                            //     }
+                            if !keyframes_rule.is_empty() {
+                                named_imports_hash.insert("globalKeyframes".to_string());
+                            }
+
+                            ve.push_str(&keyframes_rule);
                         }
+                        swc_css_ast::AtRulePrelude::ImportPrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::NamespacePrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::MediaPrelude(media_prelude) => {
+                            let mut media_condition = String::new();
+                            for (index, media_query) in media_prelude.queries.iter().enumerate() {
+                                if index > 0 {
+                                    media_condition.push_str(&String::from(", "));
+                                }
+                                let modifier = match &media_query.modifier {
+                                    Some(value) => format!("{} ", &value.value.to_string()),
+                                    None => String::new(),
+                                };
+                                media_condition.push_str(&modifier);
+
+                                let media_type = match &media_query.media_type {
+                                    Some(value) => value.value.to_string(),
+                                    None => String::new(),
+                                };
+                                media_condition.push_str(&media_type);
+
+                                let condition = match &media_query.condition {
+                                    Some(value) => match value {
+                                        swc_css_ast::MediaConditionType::All(all) => {
+                                            get_all_media_conditions(&all.conditions)
+                                        }
+                                        swc_css_ast::MediaConditionType::WithoutOr(without_or) => {
+                                            get_without_or_media_conditions(&without_or.conditions)
+                                        }
+                                    },
+                                    None => String::new(),
+                                };
+
+                                if !condition.is_empty() && !media_type.is_empty() {
+                                    media_condition.push_str(&String::from(" and "));
+                                }
+                                media_condition.push_str(&condition);
+                            }
+
+                            if let Some(block) = &at_rule.block {
+                                for component_value in &block.value {
+                                    let components = get_component_value(component_value);
+
+                                    for component in components {
+                                        let media_condition = media_condition.clone();
+                                        if component.is_global_style {
+                                            let _global_rule_map = global_rule_map
+                                                .entry(component.key)
+                                                .or_insert_with(RuleMapValue::default);
+                                            if _global_rule_map.media.is_empty() {
+                                                _global_rule_map.media.push_str(&media_condition);
+                                            }
+                                            _global_rule_map
+                                                .key_value_pair_in_media
+                                                .extend(component.key_value_pair);
+                                            _global_rule_map
+                                                .key_value_pair_in_pseudo
+                                                .extend(component.key_value_pair_in_pseudo);
+
+                                            let selectors_map = _global_rule_map
+                                                .selectors_in_media
+                                                .entry(media_condition)
+                                                .or_insert_with(BTreeMap::new);
+                                            selectors_map
+                                                .extend(component.key_value_pair_in_selectors);
+                                        } else {
+                                            let _rule_map = rule_map
+                                                .entry(component.key)
+                                                .or_insert_with(RuleMapValue::default);
+                                            if _rule_map.media.is_empty() {
+                                                _rule_map.media.push_str(&media_condition);
+                                            }
+                                            _rule_map
+                                                .key_value_pair_in_media
+                                                .extend(component.key_value_pair);
+                                            _rule_map
+                                                .key_value_pair_in_pseudo
+                                                .extend(component.key_value_pair_in_pseudo);
+
+                                            let selectors_map = _rule_map
+                                                .selectors_in_media
+                                                .entry(media_condition)
+                                                .or_insert_with(BTreeMap::new);
+                                            selectors_map
+                                                .extend(component.key_value_pair_in_selectors);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        swc_css_ast::AtRulePrelude::SupportsPrelude(supports_prelude) => {
+                            let supports_rule = get_supports_rule(supports_prelude, &at_rule.block);
+                            for component in supports_rule.1 {
+                                let supports_condition = supports_rule.0.clone();
+
+                                if component.is_global_style {
+                                    let _global_rule_map = global_rule_map
+                                        .entry(component.key)
+                                        .or_insert_with(RuleMapValue::default);
+                                    if _global_rule_map.supports.is_empty() {
+                                        _global_rule_map.supports.push_str(&supports_condition);
+                                    }
+                                    _global_rule_map
+                                        .key_value_pair_in_supports
+                                        .extend(component.key_value_pair);
+                                    _global_rule_map
+                                        .key_value_pair_in_pseudo
+                                        .extend(component.key_value_pair_in_pseudo);
+                                    let selectors_map = _global_rule_map
+                                        .selectors_in_supports
+                                        .entry(supports_condition)
+                                        .or_insert_with(BTreeMap::new);
+                                    selectors_map.extend(component.key_value_pair_in_selectors);
+                                } else {
+                                    let _rule_map = rule_map
+                                        .entry(component.key)
+                                        .or_insert_with(RuleMapValue::default);
+                                    if _rule_map.supports.is_empty() {
+                                        _rule_map.supports.push_str(&supports_condition);
+                                    }
+                                    _rule_map
+                                        .key_value_pair_in_supports
+                                        .extend(component.key_value_pair);
+                                    _rule_map
+                                        .key_value_pair_in_pseudo
+                                        .extend(component.key_value_pair_in_pseudo);
+                                    let selectors_map = _rule_map
+                                        .selectors_in_supports
+                                        .entry(supports_condition)
+                                        .or_insert_with(BTreeMap::new);
+                                    selectors_map.extend(component.key_value_pair_in_selectors);
+                                }
+                            }
+                        }
+                        swc_css_ast::AtRulePrelude::PagePrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::LayerPrelude(_) => todo!(),
                     }
                 }
+                // if prelude = at_rule ==
+                // at_rule.prelude.unwrap()
+                // match &at_rule.name {
+                //     swc_css_ast::AtRuleName::DashedIdent(_) => todo!(),
+                //     swc_css_ast::AtRuleName::Ident(ident) => {
+                //         if ident.value.to_string() == "supports" {
+                //             let supports_rule = get_supports_rule(supports);
+                //             for component in supports_rule.1 {
+                //                 let supports_condition = supports_rule.0.clone();
+
+                //                 if component.is_global_style {
+                //                     let _global_rule_map = global_rule_map
+                //                         .entry(component.key)
+                //                         .or_insert_with(RuleMapValue::default);
+                //                     if _global_rule_map.supports.is_empty() {
+                //                         _global_rule_map.supports.push_str(&supports_condition);
+                //                     }
+                //                     _global_rule_map
+                //                         .key_value_pair_in_supports
+                //                         .extend(component.key_value_pair);
+                //                     _global_rule_map
+                //                         .key_value_pair_in_pseudo
+                //                         .extend(component.key_value_pair_in_pseudo);
+                //                     let selectors_map = _global_rule_map
+                //                         .selectors_in_supports
+                //                         .entry(supports_condition)
+                //                         .or_insert_with(BTreeMap::new);
+                //                     selectors_map.extend(component.key_value_pair_in_selectors);
+                //                 } else {
+                //                     let _rule_map = rule_map
+                //                         .entry(component.key)
+                //                         .or_insert_with(RuleMapValue::default);
+                //                     if _rule_map.supports.is_empty() {
+                //                         _rule_map.supports.push_str(&supports_condition);
+                //                     }
+                //                     _rule_map
+                //                         .key_value_pair_in_supports
+                //                         .extend(component.key_value_pair);
+                //                     _rule_map
+                //                         .key_value_pair_in_pseudo
+                //                         .extend(component.key_value_pair_in_pseudo);
+                //                     let selectors_map = _rule_map
+                //                         .selectors_in_supports
+                //                         .entry(supports_condition)
+                //                         .or_insert_with(BTreeMap::new);
+                //                     selectors_map.extend(component.key_value_pair_in_selectors);
+                //                 }
+                //             }
+                //         }
+                //     }
+                // }
                 // swc_css_ast::AtRule::Charset(_) => {
                 //     println!("Not supportted. (AtRule::Charset)")
                 // }

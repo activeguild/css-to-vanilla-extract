@@ -2,18 +2,24 @@ use std::collections::BTreeMap;
 
 use crate::value::{get_component_value, get_declaration, get_function, Component};
 
-// pub fn get_supports_rule(supports: &swc_css_ast::SupportsRule) -> (String, Vec<Component>) {
-//     let mut conditions = String::new();
-//     for condition in &supports.condition.conditions {
-//         conditions.push_str(&get_supports_condition(condition).ve);
-//     }
-//     let mut components: Vec<Component> = vec![];
-//     for simple_block_value in &supports.block.value {
-//         components.push(get_component_value(simple_block_value)[0].clone());
-//     }
+pub fn get_supports_rule(
+    supports: &swc_css_ast::SupportsCondition,
+    block: &Option<swc_css_ast::SimpleBlock>,
+) -> (String, Vec<Component>) {
+    let mut conditions = String::new();
+    for condition in &supports.conditions {
+        conditions.push_str(&get_supports_condition(condition).ve);
+    }
 
-//     (conditions, components)
-// }
+    let mut components: Vec<Component> = vec![];
+    if let Some(block) = &block {
+        for simple_block_value in &block.value {
+            components.push(get_component_value(simple_block_value)[0].clone());
+        }
+    }
+
+    (conditions, components)
+}
 
 fn get_supports_condition(condition: &swc_css_ast::SupportsConditionType) -> Component {
     let mut component = Component::default();
