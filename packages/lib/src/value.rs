@@ -108,13 +108,12 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
             }
             swc_css_ast::Rule::Invalid(_) => println!("Contains an invalid token."),
             swc_css_ast::Rule::AtRule(at_rule) => {
-                println!("at_rule.name{:?}", at_rule.name);
-                println!("at_rule.name{:?}", at_rule.prelude);
-                println!("at_rule.name{:?}", at_rule.block);
                 if let Some(value) = &at_rule.prelude {
                     match value {
                         swc_css_ast::AtRulePrelude::ListOfComponentValues(_) => todo!(),
-                        swc_css_ast::AtRulePrelude::CharsetPrelude(_) => todo!(),
+                        swc_css_ast::AtRulePrelude::CharsetPrelude(_) => {
+                            println!("Not supportted. (AtRule::Charset)")
+                        }
                         swc_css_ast::AtRulePrelude::PropertyPrelude(_) => todo!(),
                         swc_css_ast::AtRulePrelude::CounterStylePrelude(_) => todo!(),
                         swc_css_ast::AtRulePrelude::ColorProfilePrelude(_) => todo!(),
