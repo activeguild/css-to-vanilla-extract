@@ -38,6 +38,7 @@
     "rollup-plugin-visualizer": "^5.7.1",
     "typescript": "^4.7.4",
     "vite": "^3.0.4",
-    "vite-plugin-sass-dts": "^1.1.37"
+    "vite-plugin-sass-dts": "^1.1.40",
+    "vite-plugin-wasm": "^2.1.0"
   }
 }
