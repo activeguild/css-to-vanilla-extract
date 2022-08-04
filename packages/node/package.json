@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "npm run clean && cargo-cp-artifact -nc ./dist/index.node -- cargo build --message-format=json-render-diagnostics && cp release/index.js ./dist",
-    "build-release": "npm run build -- --release && cp release/index.js ./dist",
+    "build-release": "npm run build",
     "test-dir": "node ./dist/index.js ./samples",
     "test-file": "node ./dist/index.js ./samples/test.css",
     "test-css": "node -r esbuild-register ./samples/index.ts",
