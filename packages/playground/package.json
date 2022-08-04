@@ -1,6 +1,6 @@
 {
   "name": "playground",
-  "version": "0.0.36-alpha",
+  "version": "0.0.37-alpha",
   "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file. for playground.",
   "main": "index.js",
   "scripts": {
@@ -36,8 +36,10 @@
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
     "rollup-plugin-visualizer": "^5.7.1",
+    "terser": "^5.14.2",
     "typescript": "^4.7.4",
     "vite": "^3.0.4",
-    "vite-plugin-sass-dts": "^1.1.37"
+    "vite-plugin-sass-dts": "^1.1.40",
+    "vite-plugin-wasm": "^2.1.0"
   }
 }

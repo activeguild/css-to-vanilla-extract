@@ -1,6 +1,6 @@
 {
   "name": "css-to-vanilla-extract-workspace",
-  "version": "0.0.36-alpha",
+  "version": "0.0.37-alpha",
   "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file.",
   "scripts": {
     "build:wasm": "wireit",
@@ -73,8 +73,6 @@
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.7.1",
-    "vite-plugin-sass-dts": "^1.1.40",
-    "vite-plugin-wasm": "^2.1.0",
     "wireit": "^0.7.1"
   }
 }
