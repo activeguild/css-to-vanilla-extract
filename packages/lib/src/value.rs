@@ -270,7 +270,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         swc_css_ast::AtRuleName::DashedIdent(_) => todo!(),
                         swc_css_ast::AtRuleName::Ident(ident) => {
                             if let Some(name) = &ident.raw {
-                                if name.to_string() == *"font-face" {
+                                if name == "font-face" {
                                     // globalFontFace('MyGlobalFont', {
                                     //   src: 'local("Comic Sans MS")'
                                     // });
@@ -1249,7 +1249,7 @@ pub fn get_declaration(declaration: &swc_css_ast::Declaration) -> (KeyValuePair,
     let mut dashed_ident = String::new();
     match &declaration.name {
         swc_css_ast::DeclarationName::Ident(ident) => declaration_name.push_str(match &ident.raw {
-            Some(value) => &value,
+            Some(value) => value,
             None => "",
         }),
         swc_css_ast::DeclarationName::DashedIdent(_dashed_ident) => {

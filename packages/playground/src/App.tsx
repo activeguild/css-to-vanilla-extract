@@ -55,6 +55,10 @@ function App() {
     document.body.className = isDark ? "dark" : "light"
   }, [isDark])
 
+  setTimeout(() => {
+    Prism.highlightAll()
+  }, 100)
+
   return (
     <div>
       <header className={styles.header}>
