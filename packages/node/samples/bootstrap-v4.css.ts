@@ -3130,6 +3130,8 @@ export const modalDialogCentered = style({
   minHeight: "calc(100%-1rem)",
   msFlexAlign: "center",
   "::before": {
+    content: "",
+    display: "block",
     height: "min-content",
   },
   "@media": {
@@ -3764,6 +3766,13 @@ export const dropright = style({
       marginLeft: "0",
     },
     [` ${dropdownToggle}::after`]: {
+      borderBottom: "0.3em solid transparent",
+      borderLeft: "0.3em solid",
+      borderRight: "0",
+      borderTop: "0.3em solid transparent",
+      content: "",
+      display: "inline-block",
+      marginLeft: "0.255em",
       verticalAlign: "0",
     },
     [` ${dropdownToggle}:empty::after`]: {
@@ -3779,9 +3788,18 @@ export const dropleft = style({
       marginRight: "0",
     },
     [` ${dropdownToggle}::after`]: {
+      content: "",
       display: "none",
+      marginLeft: "0.255em",
+      verticalAlign: "0.255em",
     },
     [` ${dropdownToggle}::before`]: {
+      borderBottom: "0.3em solid transparent",
+      borderRight: "0.3em solid",
+      borderTop: "0.3em solid transparent",
+      content: "",
+      display: "inline-block",
+      marginRight: "0.255em",
       verticalAlign: "0",
     },
     [` ${dropdownToggle}:empty::after`]: {
@@ -3844,9 +3862,19 @@ export const customSelect = style({
   },
   "selectors": {
     [`${inputGroupLg} > &`]: {
+      borderRadius: "0.3rem",
+      fontSize: "1.25rem",
+      height: "calc(1.5em+1rem+2px)",
+      lineHeight: "1.5",
+      padding: "0.5rem 1rem",
       paddingRight: "1.75rem",
     },
     [`${inputGroupSm} > &`]: {
+      borderRadius: "0.2rem",
+      fontSize: "0.875rem",
+      height: "calc(1.5em+0.5rem+2px)",
+      lineHeight: "1.5",
+      padding: "0.25rem 0.5rem",
       paddingRight: "1.75rem",
     },
     [`${inputGroup} > ${customFile} + &`]: {
@@ -4024,7 +4052,17 @@ export const customControlLabel = style({
     width: "1rem",
   },
   "::before": {
+    backgroundColor: "fff",
+    border: "adb5bd solid 1px",
+    content: "",
+    display: "block",
+    height: "1rem",
+    left: "-1.5rem",
+    pointerEvents: "none",
+    position: "absolute",
+    top: "0.25rem",
     transition: "none",
+    width: "1rem",
   },
   "@media": {
     "(min-width: 576px)": {
@@ -4385,6 +4423,7 @@ export const btnGroupVertical = style({
     [` > ${btn}:not(:first-child)`]: {
       borderTopLeftRadius: "0",
       borderTopRightRadius: "0",
+      marginTop: "-1px",
     },
     [` > ${btn}:not(:last-child):not`]: {
       borderBottomLeftRadius: "0",
@@ -4438,6 +4477,7 @@ export const btnGroup = style({
     [` > ${btn}:not(:first-child)`]: {
       borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      marginLeft: "-1px",
     },
     [` > ${btn}:not(:last-child):not`]: {
       borderBottomRightRadius: "0",
@@ -4510,6 +4550,9 @@ export const btn = style({
       borderBottomRightRadius: "0",
     },
     [`${btnGroupVertical} > &`]: {
+      flex: "1 1 auto",
+      msFlex: "1 1 auto",
+      position: "relative",
       width: "100%",
     },
     [`${btnGroup} > ${btnGroup}:not(:first-child) > &`]: {
@@ -7718,6 +7761,8 @@ export const container = style({
     [`${navbarExpand} > &`]: {
       flexWrap: "nowrap",
       msFlexWrap: "nowrap",
+      paddingLeft: "0",
+      paddingRight: "0",
     },
     [`${navbar} &`]: {
       alignItems: "center",
@@ -7793,6 +7838,8 @@ export const containerFluid = style({
     [`${navbarExpand} > &`]: {
       flexWrap: "nowrap",
       msFlexWrap: "nowrap",
+      paddingLeft: "0",
+      paddingRight: "0",
     },
     [`${navbar} &`]: {
       alignItems: "center",
@@ -7869,6 +7916,8 @@ export const containerLg = style({
     [`${navbarExpand} > &`]: {
       flexWrap: "nowrap",
       msFlexWrap: "nowrap",
+      paddingLeft: "0",
+      paddingRight: "0",
     },
     [`${navbar} &`]: {
       alignItems: "center",
@@ -7945,6 +7994,8 @@ export const containerMd = style({
     [`${navbarExpand} > &`]: {
       flexWrap: "nowrap",
       msFlexWrap: "nowrap",
+      paddingLeft: "0",
+      paddingRight: "0",
     },
     [`${navbar} &`]: {
       alignItems: "center",
@@ -8021,6 +8072,8 @@ export const containerSm = style({
     [`${navbarExpand} > &`]: {
       flexWrap: "nowrap",
       msFlexWrap: "nowrap",
+      paddingLeft: "0",
+      paddingRight: "0",
     },
     [`${navbar} &`]: {
       alignItems: "center",
@@ -8097,6 +8150,8 @@ export const containerXl = style({
     [`${navbarExpand} > &`]: {
       flexWrap: "nowrap",
       msFlexWrap: "nowrap",
+      paddingLeft: "0",
+      paddingRight: "0",
     },
     [`${navbar} &`]: {
       alignItems: "center",
@@ -8178,7 +8233,13 @@ export const customFile = style({
     [`${inputGroup} > &`]: {
       alignItems: "center",
       display: "flex",
+      flex: "1 1 auto",
+      marginBottom: "0",
+      minWidth: "0",
+      msFlex: "1 1 auto",
       msFlexAlign: "center",
+      position: "relative",
+      width: "1%",
     },
   },
 });
@@ -8224,8 +8285,15 @@ export const customRange = style({
   padding: "0",
   width: "100%",
   "::-moz-range-thumb": {
+    MozAppearance: "none",
     MozTransition: "none",
+    appearance: "none",
+    backgroundColor: "007bff",
+    border: "0",
+    borderRadius: "1rem",
+    height: "1rem",
     transition: "none",
+    width: "1rem",
   },
   "::-moz-range-track": {
     backgroundColor: "dee2e6",
@@ -8246,8 +8314,17 @@ export const customRange = style({
     marginRight: "15px",
   },
   "::-ms-thumb": {
+    appearance: "none",
+    backgroundColor: "007bff",
+    border: "0",
+    borderRadius: "1rem",
+    height: "1rem",
+    marginLeft: "0.2rem",
+    marginRight: "0.2rem",
+    marginTop: "0",
     msTransition: "none",
     transition: "none",
+    width: "1rem",
   },
   "::-ms-track": {
     backgroundColor: "transparent",
@@ -8268,8 +8345,16 @@ export const customRange = style({
     width: "100%",
   },
   "::-webkit-slider-thumb": {
+    WebkitAppearance: "none",
     WebkitTransition: "none",
+    appearance: "none",
+    backgroundColor: "007bff",
+    border: "0",
+    borderRadius: "1rem",
+    height: "1rem",
+    marginTop: "-0.25rem",
     transition: "none",
+    width: "1rem",
   },
   ":focus": {
     outline: "0",

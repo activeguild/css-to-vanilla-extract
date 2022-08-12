@@ -3516,13 +3516,21 @@ export const formSelect = style({
   },
   "selectors": {
     [`${formFloating} > &`]: {
+      height: "calc(3.5rem+2px)",
+      lineHeight: "1.25",
       paddingBottom: "0.625rem",
       paddingTop: "1.625rem",
     },
     [`${inputGroupLg} > &`]: {
+      borderRadius: "0.3rem",
+      fontSize: "1.25rem",
+      padding: "0.5rem 1rem",
       paddingRight: "3rem",
     },
     [`${inputGroupSm} > &`]: {
+      borderRadius: "0.2rem",
+      fontSize: "0.875rem",
+      padding: "0.25rem 0.5rem",
       paddingRight: "3rem",
     },
     [`${inputGroup} > &`]: {
@@ -5190,6 +5198,8 @@ export const btn = style({
       borderTopRightRadius: "0",
     },
     [`${btnGroupVertical} > &`]: {
+      flex: "1 1 auto",
+      position: "relative",
       width: "100%",
     },
     [`${btnGroup} > ${btnCheck}:checked + &`]: {
@@ -5288,7 +5298,15 @@ export const accordionButton = style({
   transition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out , border-radius 0.15s ease",
   width: "100%",
   "::after": {
+    backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e)",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "1.25rem",
+    content: "",
+    flexShrink: "0",
+    height: "1.25rem",
+    marginLeft: "auto",
     transition: "none",
+    width: "1.25rem",
   },
   ":focus": {
     borderColor: "86b7fe",
@@ -8410,6 +8428,13 @@ export const dropend = style({
       marginLeft: "0",
     },
     [` ${dropdownToggle}::after`]: {
+      borderBottom: "0.3em solid transparent",
+      borderLeft: "0.3em solid",
+      borderRight: "0",
+      borderTop: "0.3em solid transparent",
+      content: "",
+      display: "inline-block",
+      marginLeft: "0.255em",
       verticalAlign: "0",
     },
     [` ${dropdownToggle}:empty::after`]: {
@@ -8432,9 +8457,18 @@ export const dropstart = style({
       marginRight: "0",
     },
     [` ${dropdownToggle}::after`]: {
+      content: "",
       display: "none",
+      marginLeft: "0.255em",
+      verticalAlign: "0.255em",
     },
     [` ${dropdownToggle}::before`]: {
+      borderBottom: "0.3em solid transparent",
+      borderRight: "0.3em solid",
+      borderTop: "0.3em solid transparent",
+      content: "",
+      display: "inline-block",
+      marginRight: "0.255em",
       verticalAlign: "0",
     },
     [` ${dropdownToggle}:empty::after`]: {
@@ -9251,6 +9285,8 @@ export const formControl = style({
   },
   "selectors": {
     [`${formFloating} > &`]: {
+      height: "calc(3.5rem+2px)",
+      lineHeight: "1.25",
       padding: "1rem 0.75rem",
     },
     [`${inputGroupLg} > &`]: {
@@ -9417,8 +9453,15 @@ export const formRange = style({
   padding: "0",
   width: "100%",
   "::-moz-range-thumb": {
+    MozAppearance: "none",
     MozTransition: "none",
+    appearance: "none",
+    backgroundColor: "0d6efd",
+    border: "0",
+    borderRadius: "1rem",
+    height: "1rem",
     transition: "none",
+    width: "1rem",
   },
   "::-moz-range-track": {
     backgroundColor: "dee2e6",
@@ -9439,8 +9482,16 @@ export const formRange = style({
     width: "100%",
   },
   "::-webkit-slider-thumb": {
+    WebkitAppearance: "none",
     WebkitTransition: "none",
+    appearance: "none",
+    backgroundColor: "0d6efd",
+    border: "0",
+    borderRadius: "1rem",
+    height: "1rem",
+    marginTop: "-0.25rem",
     transition: "none",
+    width: "1rem",
   },
   ":disabled": {
     pointerEvents: "none",
