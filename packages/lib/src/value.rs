@@ -1662,4 +1662,17 @@ mod tests {
             result
         )
     }
+
+    #[test]
+    fn ast_to_vanilla_extract_29() {
+        // [Note] #31 Merge identical selectors.
+        let parsed_css =
+            parse_css(".foo .bar {background-color: blue;} .foo .bar {font-size: 5rem;}").unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const foo = style({\n});\n\nexport const bar = style({\n  \"selectors\": {\n    [`${foo} &`]: {\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            result
+        )
+    }
 }
