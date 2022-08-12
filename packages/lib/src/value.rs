@@ -85,13 +85,19 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         _global_rule_map
                             .key_value_pair_in_pseudo
                             .extend(rule.key_value_pair_in_pseudo);
-                        _global_rule_map
-                            .key_value_pair_in_selectors
-                            .extend(rule.key_value_pair_in_selectors);
+
+                        for selector in rule.key_value_pair_in_selectors {
+                            let selector_map = _global_rule_map
+                                .key_value_pair_in_selectors
+                                .entry(selector.0)
+                                .or_insert_with(BTreeMap::new);
+                            selector_map.extend(selector.1);
+                        }
                     } else {
                         let _rule_map = rule_map
                             .entry(rule.key)
                             .or_insert_with(RuleMapValue::default);
+
                         _rule_map.key_value_pair.extend(rule.key_value_pair);
                         _rule_map
                             .key_value_pair_in_vars
@@ -100,9 +106,13 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                             .key_value_pair_in_pseudo
                             .extend(rule.key_value_pair_in_pseudo);
 
-                        _rule_map
-                            .key_value_pair_in_selectors
-                            .extend(rule.key_value_pair_in_selectors);
+                        for selector in rule.key_value_pair_in_selectors {
+                            let selector_map = _rule_map
+                                .key_value_pair_in_selectors
+                                .entry(selector.0)
+                                .or_insert_with(BTreeMap::new);
+                            selector_map.extend(selector.1);
+                        }
                     }
                 }
             }
@@ -309,6 +319,9 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
             }
         }
     }
+
+    println!("rule_map{:?}", rule_map);
+    println!("rule_map{:?}", global_rule_map);
 
     ve.push_str(&finish_to_vanilla_extract(rule_map.clone(), false));
     ve.push_str(&finish_to_vanilla_extract(global_rule_map.clone(), true));
@@ -1671,7 +1684,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { style } from \"@vanilla-extract/css\"\n\nexport const foo = style({\n});\n\nexport const bar = style({\n  \"selectors\": {\n    [`${foo} &`]: {\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const foo = style({\n});\n\nexport const bar = style({\n  \"selectors\": {\n    [`${foo} &`]: {\n      backgroundColor: \"blue\",\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
             result
         )
     }
