@@ -586,7 +586,7 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
     let mut result: Vec<Rule> = vec![];
 
     match &qualfied_rule.prelude {
-        swc_css_ast::QualifiedRulePrelude::ListOfComponentValues(list_of_component_values) => (),
+        swc_css_ast::QualifiedRulePrelude::ListOfComponentValues(_) => (),
         swc_css_ast::QualifiedRulePrelude::SelectorList(selector_list) => {
             for complex in get_complex_selectors(&selector_list.children) {
                 let mut key_value_pair: KeyValuePair = KeyValuePair::default();
