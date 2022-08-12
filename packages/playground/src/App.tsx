@@ -36,6 +36,13 @@ const EDITOR_DEFAULT_VALUE = `.foo {
     transform: translateX(100%);
   }
 }
+
+.fizz .buzz {
+   background-color: blue;
+}
+.fizz .buzz {
+   font-size: 5rem;
+}
 `;
 const GITHUB_URL = "https://github.com/activeguild/css-to-vanilla-extract";
 
