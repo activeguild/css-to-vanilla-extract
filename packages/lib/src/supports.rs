@@ -14,7 +14,9 @@ pub fn get_supports_rule(
     let mut components: Vec<Component> = vec![];
     if let Some(block) = &block {
         for simple_block_value in &block.value {
-            components.push(get_component_value(simple_block_value)[0].clone());
+            for component_value in get_component_value(simple_block_value) {
+                components.push(component_value);
+            }
         }
     }
 

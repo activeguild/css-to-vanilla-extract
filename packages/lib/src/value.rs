@@ -82,9 +82,14 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         _global_rule_map
                             .key_value_pair_in_vars
                             .extend(rule.key_value_pair_in_vars);
-                        _global_rule_map
-                            .key_value_pair_in_pseudo
-                            .extend(rule.key_value_pair_in_pseudo);
+
+                        for pseudo in rule.key_value_pair_in_pseudo {
+                            let pseudo_map = _global_rule_map
+                                .key_value_pair_in_pseudo
+                                .entry(pseudo.0)
+                                .or_insert_with(BTreeMap::new);
+                            pseudo_map.extend(pseudo.1);
+                        }
 
                         for selector in rule.key_value_pair_in_selectors {
                             let selector_map = _global_rule_map
@@ -102,9 +107,14 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                         _rule_map
                             .key_value_pair_in_vars
                             .extend(rule.key_value_pair_in_vars);
-                        _rule_map
-                            .key_value_pair_in_pseudo
-                            .extend(rule.key_value_pair_in_pseudo);
+
+                        for pseudo in rule.key_value_pair_in_pseudo {
+                            let pseudo_map = _rule_map
+                                .key_value_pair_in_pseudo
+                                .entry(pseudo.0.to_string())
+                                .or_insert_with(BTreeMap::new);
+                            pseudo_map.extend(pseudo.1);
+                        }
 
                         for selector in rule.key_value_pair_in_selectors {
                             let selector_map = _rule_map
@@ -180,7 +190,6 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                             if let Some(block) = &at_rule.block {
                                 for component_value in &block.value {
                                     let components = get_component_value(component_value);
-
                                     for component in components {
                                         let media_condition = media_condition.clone();
                                         if component.is_global_style {
@@ -193,16 +202,26 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                             _global_rule_map
                                                 .key_value_pair_in_media
                                                 .extend(component.key_value_pair);
-                                            _global_rule_map
-                                                .key_value_pair_in_pseudo
-                                                .extend(component.key_value_pair_in_pseudo);
+
+                                            for pseudo in component.key_value_pair_in_pseudo {
+                                                let pseudo_map = _global_rule_map
+                                                    .key_value_pair_in_pseudo
+                                                    .entry(pseudo.0)
+                                                    .or_insert_with(BTreeMap::new);
+                                                pseudo_map.extend(pseudo.1);
+                                            }
 
                                             let selectors_map = _global_rule_map
                                                 .selectors_in_media
                                                 .entry(media_condition)
                                                 .or_insert_with(BTreeMap::new);
-                                            selectors_map
-                                                .extend(component.key_value_pair_in_selectors);
+
+                                            for selector in component.key_value_pair_in_selectors {
+                                                let selector_map = selectors_map
+                                                    .entry(selector.0)
+                                                    .or_insert_with(BTreeMap::new);
+                                                selector_map.extend(selector.1);
+                                            }
                                         } else {
                                             let _rule_map = rule_map
                                                 .entry(component.key)
@@ -213,16 +232,26 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                             _rule_map
                                                 .key_value_pair_in_media
                                                 .extend(component.key_value_pair);
-                                            _rule_map
-                                                .key_value_pair_in_pseudo
-                                                .extend(component.key_value_pair_in_pseudo);
+
+                                            for pseudo in component.key_value_pair_in_pseudo {
+                                                let pseudo_map = _rule_map
+                                                    .key_value_pair_in_pseudo
+                                                    .entry(pseudo.0)
+                                                    .or_insert_with(BTreeMap::new);
+                                                pseudo_map.extend(pseudo.1);
+                                            }
 
                                             let selectors_map = _rule_map
                                                 .selectors_in_media
                                                 .entry(media_condition)
                                                 .or_insert_with(BTreeMap::new);
-                                            selectors_map
-                                                .extend(component.key_value_pair_in_selectors);
+
+                                            for selector in component.key_value_pair_in_selectors {
+                                                let selector_map = selectors_map
+                                                    .entry(selector.0)
+                                                    .or_insert_with(BTreeMap::new);
+                                                selector_map.extend(selector.1);
+                                            }
                                         }
                                     }
                                 }
@@ -243,14 +272,26 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                     _global_rule_map
                                         .key_value_pair_in_supports
                                         .extend(component.key_value_pair);
-                                    _global_rule_map
-                                        .key_value_pair_in_pseudo
-                                        .extend(component.key_value_pair_in_pseudo);
+
+                                    for pseudo in component.key_value_pair_in_pseudo {
+                                        let pseudo_map = _global_rule_map
+                                            .key_value_pair_in_pseudo
+                                            .entry(pseudo.0)
+                                            .or_insert_with(BTreeMap::new);
+                                        pseudo_map.extend(pseudo.1);
+                                    }
+
                                     let selectors_map = _global_rule_map
                                         .selectors_in_supports
                                         .entry(supports_condition)
                                         .or_insert_with(BTreeMap::new);
-                                    selectors_map.extend(component.key_value_pair_in_selectors);
+
+                                    for selector in component.key_value_pair_in_selectors {
+                                        let selector_map = selectors_map
+                                            .entry(selector.0)
+                                            .or_insert_with(BTreeMap::new);
+                                        selector_map.extend(selector.1);
+                                    }
                                 } else {
                                     let _rule_map = rule_map
                                         .entry(component.key)
@@ -261,14 +302,26 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                     _rule_map
                                         .key_value_pair_in_supports
                                         .extend(component.key_value_pair);
-                                    _rule_map
-                                        .key_value_pair_in_pseudo
-                                        .extend(component.key_value_pair_in_pseudo);
+
+                                    for pseudo in component.key_value_pair_in_pseudo {
+                                        let pseudo_map = _rule_map
+                                            .key_value_pair_in_pseudo
+                                            .entry(pseudo.0)
+                                            .or_insert_with(BTreeMap::new);
+                                        pseudo_map.extend(pseudo.1);
+                                    }
+
                                     let selectors_map = _rule_map
                                         .selectors_in_supports
                                         .entry(supports_condition)
                                         .or_insert_with(BTreeMap::new);
-                                    selectors_map.extend(component.key_value_pair_in_selectors);
+
+                                    for selector in component.key_value_pair_in_selectors {
+                                        let selector_map = selectors_map
+                                            .entry(selector.0)
+                                            .or_insert_with(BTreeMap::new);
+                                        selector_map.extend(selector.1);
+                                    }
                                 }
                             }
                         }
@@ -319,9 +372,6 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
             }
         }
     }
-
-    println!("rule_map{:?}", rule_map);
-    println!("rule_map{:?}", global_rule_map);
 
     ve.push_str(&finish_to_vanilla_extract(rule_map.clone(), false));
     ve.push_str(&finish_to_vanilla_extract(global_rule_map.clone(), true));
@@ -536,7 +586,7 @@ pub fn get_qualified_rule(qualfied_rule: &swc_css_ast::QualifiedRule) -> Vec<Rul
     let mut result: Vec<Rule> = vec![];
 
     match &qualfied_rule.prelude {
-        swc_css_ast::QualifiedRulePrelude::ListOfComponentValues(_) => todo!(),
+        swc_css_ast::QualifiedRulePrelude::ListOfComponentValues(list_of_component_values) => (),
         swc_css_ast::QualifiedRulePrelude::SelectorList(selector_list) => {
             for complex in get_complex_selectors(&selector_list.children) {
                 let mut key_value_pair: KeyValuePair = KeyValuePair::default();
@@ -1685,6 +1735,68 @@ mod tests {
 
         assert_eq!(
             "import { style } from \"@vanilla-extract/css\"\n\nexport const foo = style({\n});\n\nexport const bar = style({\n  \"selectors\": {\n    [`${foo} &`]: {\n      backgroundColor: \"blue\",\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_30() {
+        // [Note] #31 Merge identical pseudos.
+        let parsed_css =
+            parse_css(".foo:hover {background-color: blue;} .foo:hover {font-size: 5rem;}")
+                .unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+           "import { style } from \"@vanilla-extract/css\"\n\nexport const foo = style({\n  \":hover\": {\n    backgroundColor: \"blue\",\n    fontSize: \"5rem\",\n  },\n});\n\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_31() {
+        let parsed_css = parse_css("@supports((position: -webkit-sticky) or (position: sticky)) {.foo .bar {background-color: blue;}.foo .bar {font-size: 5rem;};}}")
+        .unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const foo = style({\n});\n\nexport const bar = style({\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      \"selectors\": {\n        [`${foo} &`]: {\n          backgroundColor: \"blue\",\n          fontSize: \"5rem\",\n        },\n      },\n    },\n  },\n});\n\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_32() {
+        let parsed_css = parse_css("@supports((position: -webkit-sticky) or (position: sticky)) {.foo:hover {background-color: blue;}.foo:hover {font-size: 5rem;};}}")
+        .unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const foo = style({\n  \":hover\": {\n    backgroundColor: \"blue\",\n    fontSize: \"5rem\",\n  },\n});\n\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_33() {
+        let parsed_css = parse_css("@media (min-width: 1200px) {.foo .bar {background-color: blue;} .foo .bar {font-size: 5rem;};}}")
+        .unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const foo = style({\n});\n\nexport const bar = style({\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      \"selectors\": {\n        [`${foo} &`]: {\n          backgroundColor: \"blue\",\n          fontSize: \"5rem\",\n        },\n      },\n    },\n  },\n});\n\n",
+            result
+        )
+    }
+
+    #[test]
+    fn ast_to_vanilla_extract_34() {
+        let parsed_css = parse_css("@media (min-width: 1200px) {.foo:hover {background-color: blue;}.foo:hover {font-size: 5rem;};}}")
+        .unwrap();
+        let result = ast_to_vanilla_extract(parsed_css);
+
+        assert_eq!(
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const foo = style({\n  \":hover\": {\n    backgroundColor: \"blue\",\n    fontSize: \"5rem\",\n  },\n});\n\n",
             result
         )
     }
