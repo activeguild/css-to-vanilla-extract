@@ -1,8 +1,9 @@
 name: test
 
 on:
-  pull_request:
-    types: ["opened", "reopened", "synchronize"]
+  push:
+    branches:
+      - master
 jobs:
   calculate-size:
     runs-on: macos-latest
