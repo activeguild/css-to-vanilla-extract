@@ -1470,7 +1470,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      color: \"red\",\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      fontSize: \"5rem\",\n      color: \"red\",\n    },\n  },\n});\n\n",
             result
         )
     }
@@ -1492,7 +1492,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, style } from \"@vanilla-extract/css\"\n\nexport const display2 = style({\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      color: \"red\",\n      fontSize: \"5rem\",\n    },\n  },\n});\n\nglobalStyle(\"input\", {\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            "import { globalStyle, style } from \"@vanilla-extract/css\"\n\nexport const display2 = style({\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      fontSize: \"5rem\",\n      color: \"red\",\n    },\n  },\n});\n\nglobalStyle(\"input\", {\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
             result
         )
     }
@@ -1525,7 +1525,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, style } from \"@vanilla-extract/css\"\n\nexport const display2 = style({\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      color: \"red\",\n      fontSize: \"5rem\",\n    },\n  },\n});\n\nglobalStyle(\"input\", {\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            "import { globalStyle, style } from \"@vanilla-extract/css\"\n\nexport const display2 = style({\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      fontSize: \"5rem\",\n      color: \"red\",\n    },\n  },\n});\n\nglobalStyle(\"input\", {\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
             result
         )
     }
@@ -1583,7 +1583,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor: \"blue\",\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      color: \"red\",\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor: \"blue\",\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      fontSize: \"5rem\",\n      color: \"red\",\n    },\n  },\n});\n\n",
             result
         )
     }
@@ -1595,7 +1595,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor: \"blue\",\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      color: \"red\",\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor: \"blue\",\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      fontSize: \"5rem\",\n      color: \"red\",\n    },\n  },\n});\n\n",
             result
         )
     }
