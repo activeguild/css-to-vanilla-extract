@@ -1,9 +1,7 @@
 name: test
 
-on:
-  push:
-    branches:
-      - master
+on: push
+
 jobs:
   calculate-size:
     runs-on: macos-latest
