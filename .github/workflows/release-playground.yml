@@ -19,9 +19,7 @@ jobs:
         uses: google/wireit@setup-github-actions-caching/v1
       - name: install dependencies
         run: npm ci
-      - name: check target list
-        run: rustup target list
-      - name: add target list
+      - name: add target
         run: rustup target add wasm32-wasi
       - name: install wasm-pack
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
