@@ -79,23 +79,23 @@ export const accordionHeader = style({
 });
 
 export const alert = style({
+  position: "relative",
+  padding: "1rem 1rem",
+  marginBottom: "1rem",
   border: "1px solid transparent",
   borderRadius: "0.25rem",
-  marginBottom: "1rem",
-  padding: "1rem 1rem",
-  position: "relative",
 });
 
 export const alertDanger = style({
+  color: "842029",
   backgroundColor: "f8d7da",
   borderColor: "f5c2c7",
-  color: "842029",
 });
 
 export const alertDark = style({
+  color: "141619",
   backgroundColor: "d3d3d4",
   borderColor: "bcbebf",
-  color: "141619",
 });
 
 export const alertDismissible = style({
@@ -107,39 +107,39 @@ export const alertHeading = style({
 });
 
 export const alertInfo = style({
+  color: "055160",
   backgroundColor: "cff4fc",
   borderColor: "b6effb",
-  color: "055160",
 });
 
 export const alertLight = style({
+  color: "636464",
   backgroundColor: "fefefe",
   borderColor: "fdfdfe",
-  color: "636464",
 });
 
 export const alertPrimary = style({
+  color: "084298",
   backgroundColor: "cfe2ff",
   borderColor: "b6d4fe",
-  color: "084298",
 });
 
 export const alertSecondary = style({
+  color: "41464b",
   backgroundColor: "e2e3e5",
   borderColor: "d3d6d8",
-  color: "41464b",
 });
 
 export const alertSuccess = style({
+  color: "0f5132",
   backgroundColor: "d1e7dd",
   borderColor: "badbcc",
-  color: "0f5132",
 });
 
 export const alertWarning = style({
+  color: "664d03",
   backgroundColor: "fff3cd",
   borderColor: "ffecb5",
-  color: "664d03",
 });
 
 export const alignBaseline = style({
@@ -353,10 +353,10 @@ export const bgWhite = style({
 });
 
 export const blockquoteFooter = style({
-  color: "6c757d",
-  fontSize: "0.875em",
-  marginBottom: "1rem",
   marginTop: "-1rem",
+  marginBottom: "1rem",
+  fontSize: "0.875em",
+  color: "6c757d",
   "::before": {
     content: "— ",
   },
@@ -473,9 +473,9 @@ export const bottom50 = style({
 export const breadcrumb = style({
   display: "flex",
   flexWrap: "wrap",
-  listStyle: "none",
-  marginBottom: "1rem",
   padding: "0 0",
+  marginBottom: "1rem",
+  listStyle: "none",
 });
 
 export const btnCloseWhite = style({
@@ -489,15 +489,15 @@ export const btnGroupSm = style({
 });
 
 export const btnLg = style({
-  borderRadius: "0.3rem",
-  fontSize: "1.25rem",
   padding: "0.5rem 1rem",
+  fontSize: "1.25rem",
+  borderRadius: "0.3rem",
 });
 
 export const btnSm = style({
-  borderRadius: "0.2rem",
-  fontSize: "0.875rem",
   padding: "0.25rem 0.5rem",
+  fontSize: "0.875rem",
+  borderRadius: "0.2rem",
 });
 
 export const btnToolbar = style({
@@ -516,38 +516,38 @@ export const cardBody = style({
 });
 
 export const cardHeaderPills = style({
-  marginLeft: "-0.5rem",
   marginRight: "-0.5rem",
+  marginLeft: "-0.5rem",
 });
 
 export const cardHeaderTabs = style({
-  borderBottom: "0",
+  marginRight: "-0.5rem",
   marginBottom: "-0.5rem",
   marginLeft: "-0.5rem",
-  marginRight: "-0.5rem",
+  borderBottom: "0",
 });
 
 export const cardImg = style({
-  borderBottomLeftRadius: "calc(0.25rem-1px)",
-  borderBottomRightRadius: "calc(0.25rem-1px)",
+  width: "100%",
   borderTopLeftRadius: "calc(0.25rem-1px)",
   borderTopRightRadius: "calc(0.25rem-1px)",
-  width: "100%",
+  borderBottomRightRadius: "calc(0.25rem-1px)",
+  borderBottomLeftRadius: "calc(0.25rem-1px)",
 });
 
 export const cardImgOverlay = style({
-  borderRadius: "calc(0.25rem-1px)",
+  position: "absolute",
+  top: "0",
+  right: "0",
   bottom: "0",
   left: "0",
   padding: "1rem",
-  position: "absolute",
-  right: "0",
-  top: "0",
+  borderRadius: "calc(0.25rem-1px)",
 });
 
 export const cardSubtitle = style({
-  marginBottom: "0",
   marginTop: "-0.25rem",
+  marginBottom: "0",
 });
 
 export const cardText = style({
@@ -561,21 +561,21 @@ export const cardTitle = style({
 });
 
 export const carouselInner = style({
-  overflow: "hidden",
   position: "relative",
   width: "100%",
+  overflow: "hidden",
   "::after": {
+    display: "block",
     clear: "both",
     content: "",
-    display: "block",
   },
 });
 
 export const clearfix = style({
   "::after": {
+    display: "block",
     clear: "both",
     content: "",
-    display: "block",
   },
 });
 
@@ -649,23 +649,23 @@ export const colAuto = style({
 });
 
 export const colFormLabel = style({
+  paddingTop: "calc(0.375rem+1px)",
+  paddingBottom: "calc(0.375rem+1px)",
+  marginBottom: "0",
   fontSize: "inherit",
   lineHeight: "1.5",
-  marginBottom: "0",
-  paddingBottom: "calc(0.375rem+1px)",
-  paddingTop: "calc(0.375rem+1px)",
 });
 
 export const colFormLabelLg = style({
-  fontSize: "1.25rem",
-  paddingBottom: "calc(0.5rem+1px)",
   paddingTop: "calc(0.5rem+1px)",
+  paddingBottom: "calc(0.5rem+1px)",
+  fontSize: "1.25rem",
 });
 
 export const colFormLabelSm = style({
-  fontSize: "0.875rem",
-  paddingBottom: "calc(0.25rem+1px)",
   paddingTop: "calc(0.25rem+1px)",
+  paddingBottom: "calc(0.25rem+1px)",
+  fontSize: "0.875rem",
 });
 
 export const dBlock = style({
@@ -729,28 +729,28 @@ export const figure = style({
 });
 
 export const figureCaption = style({
-  color: "6c757d",
   fontSize: "0.875em",
+  color: "6c757d",
 });
 
 export const figureImg = style({
-  lineHeight: "1",
   marginBottom: "0.5rem",
+  lineHeight: "1",
 });
 
 export const fixedBottom = style({
-  bottom: "0",
-  left: "0",
   position: "fixed",
   right: "0",
+  bottom: "0",
+  left: "0",
   zIndex: "1030",
 });
 
 export const fixedTop = style({
-  left: "0",
   position: "fixed",
-  right: "0",
   top: "0",
+  right: "0",
+  left: "0",
   zIndex: "1030",
 });
 
@@ -820,9 +820,9 @@ export const fontMonospace = style({
 
 export const formCheck = style({
   display: "block",
-  marginBottom: "0.125rem",
   minHeight: "1.5rem",
   paddingLeft: "1.5em",
+  marginBottom: "0.125rem",
 });
 
 export const formCheckInline = style({
@@ -835,25 +835,25 @@ export const formLabel = style({
 });
 
 export const formSelectLg = style({
-  borderRadius: "0.3rem",
-  fontSize: "1.25rem",
+  paddingTop: "0.5rem",
   paddingBottom: "0.5rem",
   paddingLeft: "1rem",
-  paddingTop: "0.5rem",
+  fontSize: "1.25rem",
+  borderRadius: "0.3rem",
 });
 
 export const formSelectSm = style({
-  borderRadius: "0.2rem",
-  fontSize: "0.875rem",
+  paddingTop: "0.25rem",
   paddingBottom: "0.25rem",
   paddingLeft: "0.5rem",
-  paddingTop: "0.25rem",
+  fontSize: "0.875rem",
+  borderRadius: "0.2rem",
 });
 
 export const formText = style({
-  color: "6c757d",
-  fontSize: "0.875em",
   marginTop: "0.25rem",
+  fontSize: "0.875em",
+  color: "6c757d",
 });
 
 export const fs5 = style({
@@ -1039,11 +1039,11 @@ export const h25 = style({
 });
 
 export const h5 = style({
-  fontSize: "1.25rem",
+  marginTop: "0",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "1.25rem",
 });
 
 export const h50 = style({
@@ -1051,11 +1051,11 @@ export const h50 = style({
 });
 
 export const h6 = style({
-  fontSize: "1rem",
+  marginTop: "0",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "1rem",
 });
 
 export const h75 = style({
@@ -1070,24 +1070,24 @@ export const hasValidation = style({
 });
 
 export const hstack = style({
-  alignItems: "center",
-  alignSelf: "stretch",
   display: "flex",
   flexDirection: "row",
+  alignItems: "center",
+  alignSelf: "stretch",
 });
 
 export const imgFluid = style({
-  height: "auto",
   maxWidth: "100%",
+  height: "auto",
 });
 
 export const imgThumbnail = style({
+  padding: "0.25rem",
   backgroundColor: "fff",
   border: "1px solid dee2e6",
   borderRadius: "0.25rem",
-  height: "auto",
   maxWidth: "100%",
-  padding: "0.25rem",
+  height: "auto",
 });
 
 export const initialism = style({
@@ -1231,35 +1231,35 @@ export const linkWarning = style({
 });
 
 export const listGroupItemAction = style({
+  width: "100%",
   color: "495057",
   textAlign: "inherit",
-  width: "100%",
   ":active": {
-    backgroundColor: "e9ecef",
     color: "212529",
+    backgroundColor: "e9ecef",
   },
   ":focus": {
-    backgroundColor: "f8f9fa",
+    zIndex: "1",
     color: "495057",
     textDecoration: "none",
-    zIndex: "1",
+    backgroundColor: "f8f9fa",
   },
   ":hover": {
-    backgroundColor: "f8f9fa",
+    zIndex: "1",
     color: "495057",
     textDecoration: "none",
-    zIndex: "1",
+    backgroundColor: "f8f9fa",
   },
 });
 
 export const listInline = style({
-  listStyle: "none",
   paddingLeft: "0",
+  listStyle: "none",
 });
 
 export const listUnstyled = style({
-  listStyle: "none",
   paddingLeft: "0",
+  listStyle: "none",
 });
 
 export const m0 = style({
@@ -1291,8 +1291,8 @@ export const mAuto = style({
 });
 
 export const mark = style({
-  backgroundColor: "fcf8e3",
   padding: "0.2em",
+  backgroundColor: "fcf8e3",
 });
 
 export const mb0 = style({
@@ -1364,18 +1364,18 @@ export const minVw100 = style({
 });
 
 export const modalFullscreen = style({
+  width: "100vw",
+  maxWidth: "none",
   height: "100%",
   margin: "0",
-  maxWidth: "none",
-  width: "100vw",
 });
 
 export const modalStatic = style({
 });
 
 export const modalTitle = style({
-  lineHeight: "1.5",
   marginBottom: "0",
+  lineHeight: "1.5",
 });
 
 export const ms0 = style({
@@ -1439,81 +1439,81 @@ export const mw100 = style({
 });
 
 export const mx0 = style({
-  marginLeft: "0",
   marginRight: "0",
+  marginLeft: "0",
 });
 
 export const mx1 = style({
-  marginLeft: "0.25rem",
   marginRight: "0.25rem",
+  marginLeft: "0.25rem",
 });
 
 export const mx2 = style({
-  marginLeft: "0.5rem",
   marginRight: "0.5rem",
+  marginLeft: "0.5rem",
 });
 
 export const mx3 = style({
-  marginLeft: "1rem",
   marginRight: "1rem",
+  marginLeft: "1rem",
 });
 
 export const mx4 = style({
-  marginLeft: "1.5rem",
   marginRight: "1.5rem",
+  marginLeft: "1.5rem",
 });
 
 export const mx5 = style({
-  marginLeft: "3rem",
   marginRight: "3rem",
+  marginLeft: "3rem",
 });
 
 export const mxAuto = style({
-  marginLeft: "auto",
   marginRight: "auto",
+  marginLeft: "auto",
 });
 
 export const my0 = style({
-  marginBottom: "0",
   marginTop: "0",
+  marginBottom: "0",
 });
 
 export const my1 = style({
-  marginBottom: "0.25rem",
   marginTop: "0.25rem",
+  marginBottom: "0.25rem",
 });
 
 export const my2 = style({
-  marginBottom: "0.5rem",
   marginTop: "0.5rem",
+  marginBottom: "0.5rem",
 });
 
 export const my3 = style({
-  marginBottom: "1rem",
   marginTop: "1rem",
+  marginBottom: "1rem",
 });
 
 export const my4 = style({
-  marginBottom: "1.5rem",
   marginTop: "1.5rem",
+  marginBottom: "1.5rem",
 });
 
 export const my5 = style({
-  marginBottom: "3rem",
   marginTop: "3rem",
+  marginBottom: "3rem",
 });
 
 export const myAuto = style({
-  marginBottom: "auto",
   marginTop: "auto",
+  marginBottom: "auto",
 });
 
 export const nav = style({
   display: "flex",
   flexWrap: "wrap",
-  listStyle: "none",
-  marginBottom: "0",
   paddingLeft: "0",
+  marginBottom: "0",
+  listStyle: "none",
 });
 
 export const navFill = style({
@@ -1526,13 +1526,13 @@ export const navPills = style({
 });
 
 export const navbar = style({
-  alignItems: "center",
+  position: "relative",
   display: "flex",
   flexWrap: "wrap",
+  alignItems: "center",
   justifyContent: "space-between",
-  paddingBottom: "0.5rem",
   paddingTop: "0.5rem",
-  position: "relative",
+  paddingBottom: "0.5rem",
 });
 
 export const navbarExpand = style({
@@ -1541,24 +1541,24 @@ export const navbarExpand = style({
 });
 
 export const offcanvasEnd = style({
-  borderLeft: "1px solid rgba(0,0,0,0.2)",
-  right: "0",
   top: "0",
-  transform: "translateX(100%)",
+  right: "0",
   width: "400px",
+  borderLeft: "1px solid rgba(0,0,0,0.2)",
+  transform: "translateX(100%)",
 });
 
 export const offcanvasStart = style({
-  borderRight: "1px solid rgba(0,0,0,0.2)",
-  left: "0",
   top: "0",
-  transform: "translateX(-100%)",
+  left: "0",
   width: "400px",
+  borderRight: "1px solid rgba(0,0,0,0.2)",
+  transform: "translateX(-100%)",
 });
 
 export const offcanvasTitle = style({
-  lineHeight: "1.5",
   marginBottom: "0",
+  lineHeight: "1.5",
 });
 
 export const offset1 = style({
@@ -1702,8 +1702,8 @@ export const pageItem = style({
 
 export const pagination = style({
   display: "flex",
-  listStyle: "none",
   paddingLeft: "0",
+  listStyle: "none",
 });
 
 export const paginationLg = style({
@@ -1780,12 +1780,12 @@ export const placeholderSm = style({
 });
 
 export const placeholderWave = style({
-  WebkitAnimation: "placeholder-wave 2s linear infinite",
   WebkitMaskImage: "linear-gradient(130deg,00055%,rgba(0,0,0,0.8)75%,00095%)",
-  WebkitMaskSize: "200% 100%",
-  animation: "placeholder-wave 2s linear infinite",
   maskImage: "linear-gradient(130deg,00055%,rgba(0,0,0,0.8)75%,00095%)",
+  WebkitMaskSize: "200% 100%",
   maskSize: "200% 100%",
+  WebkitAnimation: "placeholder-wave 2s linear infinite",
+  animation: "placeholder-wave 2s linear infinite",
 });
 
 export const placeholderXs = style({
@@ -1796,18 +1796,18 @@ export const pointerEvent = style({
 });
 
 export const popoverBody = style({
-  color: "212529",
   padding: "1rem 1rem",
+  color: "212529",
 });
 
 export const popoverHeader = style({
+  padding: "0.5rem 1rem",
+  marginBottom: "0",
+  fontSize: "1rem",
   backgroundColor: "f0f0f0",
   borderBottom: "1px solid rgba(0,0,0,0.2)",
   borderTopLeftRadius: "calc(0.3rem-1px)",
   borderTopRightRadius: "calc(0.3rem-1px)",
-  fontSize: "1rem",
-  marginBottom: "0",
-  padding: "0.5rem 1rem",
   ":empty": {
     display: "none",
   },
@@ -1830,16 +1830,17 @@ export const positionStatic = style({
 });
 
 export const positionSticky = style({
+  position: "-webkit-sticky",
   position: "sticky",
 });
 
 export const progress = style({
-  backgroundColor: "e9ecef",
-  borderRadius: "0.25rem",
   display: "flex",
-  fontSize: "0.75rem",
   height: "1rem",
   overflow: "hidden",
+  fontSize: "0.75rem",
+  backgroundColor: "e9ecef",
+  borderRadius: "0.25rem",
 });
 
 export const progressBarStriped = style({
@@ -1896,63 +1897,63 @@ export const pt5 = style({
 });
 
 export const px0 = style({
-  paddingLeft: "0",
   paddingRight: "0",
+  paddingLeft: "0",
 });
 
 export const px1 = style({
-  paddingLeft: "0.25rem",
   paddingRight: "0.25rem",
+  paddingLeft: "0.25rem",
 });
 
 export const px2 = style({
-  paddingLeft: "0.5rem",
   paddingRight: "0.5rem",
+  paddingLeft: "0.5rem",
 });
 
 export const px3 = style({
-  paddingLeft: "1rem",
   paddingRight: "1rem",
+  paddingLeft: "1rem",
 });
 
 export const px4 = style({
-  paddingLeft: "1.5rem",
   paddingRight: "1.5rem",
+  paddingLeft: "1.5rem",
 });
 
 export const px5 = style({
-  paddingLeft: "3rem",
   paddingRight: "3rem",
+  paddingLeft: "3rem",
 });
 
 export const py0 = style({
-  paddingBottom: "0",
   paddingTop: "0",
+  paddingBottom: "0",
 });
 
 export const py1 = style({
-  paddingBottom: "0.25rem",
   paddingTop: "0.25rem",
+  paddingBottom: "0.25rem",
 });
 
 export const py2 = style({
-  paddingBottom: "0.5rem",
   paddingTop: "0.5rem",
+  paddingBottom: "0.5rem",
 });
 
 export const py3 = style({
-  paddingBottom: "1rem",
   paddingTop: "1rem",
+  paddingBottom: "1rem",
 });
 
 export const py4 = style({
-  paddingBottom: "1.5rem",
   paddingTop: "1.5rem",
+  paddingBottom: "1.5rem",
 });
 
 export const py5 = style({
-  paddingBottom: "3rem",
   paddingTop: "3rem",
+  paddingBottom: "3rem",
 });
 
 export const ratio16X9 = style({
@@ -2000,8 +2001,8 @@ export const rounded3 = style({
 });
 
 export const roundedBottom = style({
-  borderBottomLeftRadius: "0.25rem",
   borderBottomRightRadius: "0.25rem",
+  borderBottomLeftRadius: "0.25rem",
 });
 
 export const roundedCircle = style({
@@ -2009,8 +2010,8 @@ export const roundedCircle = style({
 });
 
 export const roundedEnd = style({
-  borderBottomRightRadius: "0.25rem",
   borderTopRightRadius: "0.25rem",
+  borderBottomRightRadius: "0.25rem",
 });
 
 export const roundedPill = style({
@@ -2051,14 +2052,14 @@ export const small = style({
 });
 
 export const spinnerBorderSm = style({
-  borderWidth: "0.2em",
-  height: "1rem",
   width: "1rem",
+  height: "1rem",
+  borderWidth: "0.2em",
 });
 
 export const spinnerGrowSm = style({
-  height: "1rem",
   width: "1rem",
+  height: "1rem",
 });
 
 export const start0 = style({
@@ -2074,6 +2075,7 @@ export const start50 = style({
 });
 
 export const stickyTop = style({
+  position: "-webkit-sticky",
   position: "sticky",
   top: "0",
   zIndex: "1020",
@@ -2081,13 +2083,13 @@ export const stickyTop = style({
 
 export const stretchedLink = style({
   "::after": {
-    bottom: "0",
-    content: "",
-    left: "0",
     position: "absolute",
-    right: "0",
     top: "0",
+    right: "0",
+    bottom: "0",
+    left: "0",
     zIndex: "1",
+    content: "",
   },
 });
 
@@ -2102,119 +2104,119 @@ export const tableActive = style({
 });
 
 export const tableDanger = style({
-  borderColor: "dfc2c4",
   color: "000",
+  borderColor: "dfc2c4",
   "vars": {
-    "--bs-table-active-bg": "#dfc2c4",
-    "--bs-table-active-color": "#000",
     "--bs-table-bg": "#f8d7da",
-    "--bs-table-hover-bg": "#e5c7ca",
-    "--bs-table-hover-color": "#000",
     "--bs-table-striped-bg": "#eccccf",
     "--bs-table-striped-color": "#000",
+    "--bs-table-active-bg": "#dfc2c4",
+    "--bs-table-active-color": "#000",
+    "--bs-table-hover-bg": "#e5c7ca",
+    "--bs-table-hover-color": "#000",
   },
 });
 
 export const tableDark = style({
-  borderColor: "373b3e",
   color: "fff",
+  borderColor: "373b3e",
   "vars": {
-    "--bs-table-active-bg": "#373b3e",
-    "--bs-table-active-color": "#fff",
     "--bs-table-bg": "#212529",
-    "--bs-table-hover-bg": "#323539",
-    "--bs-table-hover-color": "#fff",
     "--bs-table-striped-bg": "#2c3034",
     "--bs-table-striped-color": "#fff",
+    "--bs-table-active-bg": "#373b3e",
+    "--bs-table-active-color": "#fff",
+    "--bs-table-hover-bg": "#323539",
+    "--bs-table-hover-color": "#fff",
   },
 });
 
 export const tableInfo = style({
-  borderColor: "badce3",
   color: "000",
+  borderColor: "badce3",
   "vars": {
-    "--bs-table-active-bg": "#badce3",
-    "--bs-table-active-color": "#000",
     "--bs-table-bg": "#cff4fc",
-    "--bs-table-hover-bg": "#bfe2e9",
-    "--bs-table-hover-color": "#000",
     "--bs-table-striped-bg": "#c5e8ef",
     "--bs-table-striped-color": "#000",
+    "--bs-table-active-bg": "#badce3",
+    "--bs-table-active-color": "#000",
+    "--bs-table-hover-bg": "#bfe2e9",
+    "--bs-table-hover-color": "#000",
   },
 });
 
 export const tableLight = style({
-  borderColor: "dfe0e1",
   color: "000",
+  borderColor: "dfe0e1",
   "vars": {
-    "--bs-table-active-bg": "#dfe0e1",
-    "--bs-table-active-color": "#000",
     "--bs-table-bg": "#f8f9fa",
-    "--bs-table-hover-bg": "#e5e6e7",
-    "--bs-table-hover-color": "#000",
     "--bs-table-striped-bg": "#ecedee",
     "--bs-table-striped-color": "#000",
+    "--bs-table-active-bg": "#dfe0e1",
+    "--bs-table-active-color": "#000",
+    "--bs-table-hover-bg": "#e5e6e7",
+    "--bs-table-hover-color": "#000",
   },
 });
 
 export const tablePrimary = style({
-  borderColor: "bacbe6",
   color: "000",
+  borderColor: "bacbe6",
   "vars": {
-    "--bs-table-active-bg": "#bacbe6",
-    "--bs-table-active-color": "#000",
     "--bs-table-bg": "#cfe2ff",
-    "--bs-table-hover-bg": "#bfd1ec",
-    "--bs-table-hover-color": "#000",
     "--bs-table-striped-bg": "#c5d7f2",
     "--bs-table-striped-color": "#000",
+    "--bs-table-active-bg": "#bacbe6",
+    "--bs-table-active-color": "#000",
+    "--bs-table-hover-bg": "#bfd1ec",
+    "--bs-table-hover-color": "#000",
   },
 });
 
 export const tableResponsive = style({
-  WebkitOverflowScrolling: "touch",
   overflowX: "auto",
+  WebkitOverflowScrolling: "touch",
 });
 
 export const tableSecondary = style({
-  borderColor: "cbccce",
   color: "000",
+  borderColor: "cbccce",
   "vars": {
-    "--bs-table-active-bg": "#cbccce",
-    "--bs-table-active-color": "#000",
     "--bs-table-bg": "#e2e3e5",
-    "--bs-table-hover-bg": "#d1d2d4",
-    "--bs-table-hover-color": "#000",
     "--bs-table-striped-bg": "#d7d8da",
     "--bs-table-striped-color": "#000",
+    "--bs-table-active-bg": "#cbccce",
+    "--bs-table-active-color": "#000",
+    "--bs-table-hover-bg": "#d1d2d4",
+    "--bs-table-hover-color": "#000",
   },
 });
 
 export const tableSuccess = style({
-  borderColor: "bcd0c7",
   color: "000",
+  borderColor: "bcd0c7",
   "vars": {
-    "--bs-table-active-bg": "#bcd0c7",
-    "--bs-table-active-color": "#000",
     "--bs-table-bg": "#d1e7dd",
-    "--bs-table-hover-bg": "#c1d6cc",
-    "--bs-table-hover-color": "#000",
     "--bs-table-striped-bg": "#c7dbd2",
     "--bs-table-striped-color": "#000",
+    "--bs-table-active-bg": "#bcd0c7",
+    "--bs-table-active-color": "#000",
+    "--bs-table-hover-bg": "#c1d6cc",
+    "--bs-table-hover-color": "#000",
   },
 });
 
 export const tableWarning = style({
-  borderColor: "e6dbb9",
   color: "000",
+  borderColor: "e6dbb9",
   "vars": {
-    "--bs-table-active-bg": "#e6dbb9",
-    "--bs-table-active-color": "#000",
     "--bs-table-bg": "#fff3cd",
-    "--bs-table-hover-bg": "#ece1be",
-    "--bs-table-hover-color": "#000",
     "--bs-table-striped-bg": "#f2e7c3",
     "--bs-table-striped-color": "#000",
+    "--bs-table-active-bg": "#e6dbb9",
+    "--bs-table-active-color": "#000",
+    "--bs-table-hover-bg": "#ece1be",
+    "--bs-table-hover-color": "#000",
   },
 });
 
@@ -2240,8 +2242,8 @@ export const textBody = style({
 });
 
 export const textBreak = style({
-  wordBreak: "break-word",
   wordWrap: "break-word",
+  wordBreak: "break-word",
 });
 
 export const textCapitalize = style({
@@ -2408,24 +2410,24 @@ export const toastBody = style({
 });
 
 export const toastHeader = style({
+  display: "flex",
   alignItems: "center",
-  backgroundClip: "padding-box",
+  padding: "0.5rem 0.75rem",
+  color: "6c757d",
   backgroundColor: "rgba(255,255,255,0.85)",
+  backgroundClip: "padding-box",
   borderBottom: "1px solid rgba(0,0,0,0.05)",
   borderTopLeftRadius: "calc(0.25rem-1px)",
   borderTopRightRadius: "calc(0.25rem-1px)",
-  color: "6c757d",
-  display: "flex",
-  padding: "0.5rem 0.75rem",
 });
 
 export const tooltipInner = style({
-  backgroundColor: "000",
-  borderRadius: "0.25rem",
-  color: "fff",
   maxWidth: "200px",
   padding: "0.25rem 0.5rem",
+  color: "fff",
   textAlign: "center",
+  backgroundColor: "000",
+  borderRadius: "0.25rem",
 });
 
 export const top0 = style({
@@ -2453,20 +2455,20 @@ export const translateMiddleY = style({
 });
 
 export const userSelectAll = style({
-  MozUserSelect: "all",
   WebkitUserSelect: "all",
+  MozUserSelect: "all",
   userSelect: "all",
 });
 
 export const userSelectAuto = style({
-  MozUserSelect: "auto",
   WebkitUserSelect: "auto",
+  MozUserSelect: "auto",
   userSelect: "auto",
 });
 
 export const userSelectNone = style({
-  MozUserSelect: "none",
   WebkitUserSelect: "none",
+  MozUserSelect: "none",
   userSelect: "none",
 });
 
@@ -2479,31 +2481,31 @@ export const visible = style({
 });
 
 export const visuallyHidden = style({
-  border: "0",
-  clip: "rect(0,0,0,0)",
+  position: "absolute",
+  width: "1px",
   height: "1px",
+  padding: "0",
   margin: "-1px",
   overflow: "hidden",
-  padding: "0",
-  position: "absolute",
+  clip: "rect(0,0,0,0)",
   whiteSpace: "nowrap",
-  width: "1px",
+  border: "0",
 });
 
 export const vr = style({
-  alignSelf: "stretch",
-  backgroundColor: "currentColor",
   display: "inline-block",
-  minHeight: "1em",
-  opacity: "0.25",
+  alignSelf: "stretch",
   width: "1px",
+  minHeight: "1em",
+  backgroundColor: "currentColor",
+  opacity: "0.25",
 });
 
 export const vstack = style({
-  alignSelf: "stretch",
   display: "flex",
   flex: "1 1 auto",
   flexDirection: "column",
+  alignSelf: "stretch",
 });
 
 export const vw100 = style({
@@ -2551,24 +2553,24 @@ export const wasValidated = style({
       boxShadow: "0 0 0 0.25rem rgba(25,135,84,0.25)",
     },
     [` ${formControl}:invalid`]: {
-      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
-      backgroundPosition: "right calc(0.375em+0.1875rem) center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
       borderColor: "dc3545",
       paddingRight: "calc(1.5em+0.75rem)",
+      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "right calc(0.375em+0.1875rem) center",
+      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
     },
     [` ${formControl}:invalid:focus`]: {
       borderColor: "dc3545",
       boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.25)",
     },
     [` ${formControl}:valid`]: {
-      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
-      backgroundPosition: "right calc(0.375em+0.1875rem) center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
       borderColor: "198754",
       paddingRight: "calc(1.5em+0.75rem)",
+      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "right calc(0.375em+0.1875rem) center",
+      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
     },
     [` ${formControl}:valid:focus`]: {
       borderColor: "198754",
@@ -2582,16 +2584,16 @@ export const wasValidated = style({
       boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.25)",
     },
     [` ${formSelect}:invalid:not([multiple]):not([size])`]: {
+      paddingRight: "4.125rem",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
       backgroundPosition: "right 0.75rem center , center right 2.25rem",
       backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-      paddingRight: "4.125rem",
     },
     [` ${formSelect}:invalid:not([multiple])[size='1']`]: {
+      paddingRight: "4.125rem",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
       backgroundPosition: "right 0.75rem center , center right 2.25rem",
       backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-      paddingRight: "4.125rem",
     },
     [` ${formSelect}:valid`]: {
       borderColor: "198754",
@@ -2601,16 +2603,16 @@ export const wasValidated = style({
       boxShadow: "0 0 0 0.25rem rgba(25,135,84,0.25)",
     },
     [` ${formSelect}:valid:not([multiple]):not([size])`]: {
+      paddingRight: "4.125rem",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
       backgroundPosition: "right 0.75rem center , center right 2.25rem",
       backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-      paddingRight: "4.125rem",
     },
     [` ${formSelect}:valid:not([multiple])[size='1']`]: {
+      paddingRight: "4.125rem",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
       backgroundPosition: "right 0.75rem center , center right 2.25rem",
       backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-      paddingRight: "4.125rem",
     },
     [` ${inputGroup} ${formControl}:invalid`]: {
       zIndex: "2",
@@ -2637,12 +2639,12 @@ export const wasValidated = style({
       zIndex: "3",
     },
     [` textarea${formControl}:invalid`]: {
-      backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
       paddingRight: "calc(1.5em+0.75rem)",
+      backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
     },
     [` textarea${formControl}:valid`]: {
-      backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
       paddingRight: "calc(1.5em+0.75rem)",
+      backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
     },
   },
 });
@@ -2653,14 +2655,14 @@ export const tooltipArrow = style({
       top: "0",
     },
     [`${bsTooltipAuto}[data-popper-placement^='left'] &`]: {
-      height: "0.8rem",
       right: "0",
       width: "0.4rem",
+      height: "0.8rem",
     },
     [`${bsTooltipAuto}[data-popper-placement^='right'] &`]: {
-      height: "0.8rem",
       left: "0",
       width: "0.4rem",
+      height: "0.8rem",
     },
     [`${bsTooltipAuto}[data-popper-placement^='top'] &`]: {
       bottom: "0",
@@ -2669,23 +2671,23 @@ export const tooltipArrow = style({
       top: "0",
     },
     [`${bsTooltipEnd} &`]: {
-      height: "0.8rem",
       left: "0",
       width: "0.4rem",
+      height: "0.8rem",
     },
     [`${bsTooltipStart} &`]: {
-      height: "0.8rem",
       right: "0",
       width: "0.4rem",
+      height: "0.8rem",
     },
     [`${bsTooltipTop} &`]: {
       bottom: "0",
     },
     [`${tooltip} &`]: {
-      display: "block",
-      height: "0.4rem",
       position: "absolute",
+      display: "block",
       width: "0.8rem",
+      height: "0.4rem",
     },
   },
 });
@@ -2725,14 +2727,14 @@ export const popoverArrow = style({
       top: "calc(-0.5rem-1px)",
     },
     [`${bsPopoverAuto}[data-popper-placement^='left'] > &`]: {
-      height: "1rem",
       right: "calc(-0.5rem-1px)",
       width: "0.5rem",
+      height: "1rem",
     },
     [`${bsPopoverAuto}[data-popper-placement^='right'] > &`]: {
-      height: "1rem",
       left: "calc(-0.5rem-1px)",
       width: "0.5rem",
+      height: "1rem",
     },
     [`${bsPopoverAuto}[data-popper-placement^='top'] > &`]: {
       bottom: "calc(-0.5rem-1px)",
@@ -2741,30 +2743,30 @@ export const popoverArrow = style({
       top: "calc(-0.5rem-1px)",
     },
     [`${bsPopoverEnd} > &`]: {
-      height: "1rem",
       left: "calc(-0.5rem-1px)",
       width: "0.5rem",
+      height: "1rem",
     },
     [`${bsPopoverStart} > &`]: {
-      height: "1rem",
       right: "calc(-0.5rem-1px)",
       width: "0.5rem",
+      height: "1rem",
     },
     [`${bsPopoverTop} > &`]: {
       bottom: "calc(-0.5rem-1px)",
     },
     [`${popover} &`]: {
-      display: "block",
-      height: "0.5rem",
       position: "absolute",
+      display: "block",
       width: "1rem",
+      height: "0.5rem",
     },
   },
 });
 
 export const offcanvasHeader = style({
-  alignItems: "center",
   display: "flex",
+  alignItems: "center",
   justifyContent: "space-between",
   padding: "1rem 1rem",
   "@media": {
@@ -2804,8 +2806,8 @@ export const offcanvasHeader = style({
 });
 
 export const navbarText = style({
-  paddingBottom: "0.5rem",
   paddingTop: "0.5rem",
+  paddingBottom: "0.5rem",
   "selectors": {
     [`${navbarDark} &`]: {
       color: "rgba(255,255,255,0.55)",
@@ -2819,9 +2821,9 @@ export const navbarText = style({
 export const navbarNav = style({
   display: "flex",
   flexDirection: "column",
-  listStyle: "none",
-  marginBottom: "0",
   paddingLeft: "0",
+  marginBottom: "0",
+  listStyle: "none",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
@@ -2970,9 +2972,9 @@ export const navTabs = style({
 });
 
 export const navLink = style({
-  color: "0d6efd",
   display: "block",
   padding: "0.5rem 1rem",
+  color: "0d6efd",
   textDecoration: "none",
   transition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out",
   ":focus": {
@@ -2986,32 +2988,32 @@ export const navLink = style({
       transition: "none",
       "selectors": {
         [`${navbarExpandXl} ${navbarNav} &`]: {
-          paddingLeft: "0.5rem",
           paddingRight: "0.5rem",
+          paddingLeft: "0.5rem",
         },
       },
       "selectors": {
         [`${navbarExpandXxl} ${navbarNav} &`]: {
-          paddingLeft: "0.5rem",
           paddingRight: "0.5rem",
+          paddingLeft: "0.5rem",
         },
       },
       "selectors": {
         [`${navbarExpandSm} ${navbarNav} &`]: {
-          paddingLeft: "0.5rem",
           paddingRight: "0.5rem",
+          paddingLeft: "0.5rem",
         },
       },
       "selectors": {
         [`${navbarExpandMd} ${navbarNav} &`]: {
-          paddingLeft: "0.5rem",
           paddingRight: "0.5rem",
+          paddingLeft: "0.5rem",
         },
       },
       "selectors": {
         [`${navbarExpandLg} ${navbarNav} &`]: {
-          paddingLeft: "0.5rem",
           paddingRight: "0.5rem",
+          paddingLeft: "0.5rem",
         },
       },
     },
@@ -3019,8 +3021,8 @@ export const navLink = style({
   "selectors": {
     [`${disabled}`]: {
       color: "6c757d",
-      cursor: "default",
       pointerEvents: "none",
+      cursor: "default",
     },
     [`${navFill} ${navItem} &`]: {
       width: "100%",
@@ -3038,8 +3040,8 @@ export const navLink = style({
       textAlign: "center",
     },
     [`${navPills} ${show} > &`]: {
-      backgroundColor: "0d6efd",
       color: "fff",
+      backgroundColor: "0d6efd",
     },
     [`${navPills} &`]: {
       background: "none",
@@ -3047,16 +3049,16 @@ export const navLink = style({
       borderRadius: "0.25rem",
     },
     [`${navTabs} ${navItem}${show} &`]: {
+      color: "495057",
       backgroundColor: "fff",
       borderColor: "dee2e6 dee2e6 fff",
-      color: "495057",
     },
     [`${navTabs} &`]: {
+      marginBottom: "-1px",
       background: "none",
       border: "1px solid transparent",
       borderTopLeftRadius: "0.25rem",
       borderTopRightRadius: "0.25rem",
-      marginBottom: "-1px",
     },
     [`${navbarDark} ${navbarNav} ${show} > &`]: {
       color: "fff",
@@ -3065,8 +3067,8 @@ export const navLink = style({
       color: "rgba(255,255,255,0.55)",
     },
     [`${navbarExpand} ${navbarNav} &`]: {
-      paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
+      paddingLeft: "0.5rem",
     },
     [`${navbarLight} ${navbarNav} ${show} > &`]: {
       color: "rgba(0,0,0,0.9)",
@@ -3075,21 +3077,21 @@ export const navLink = style({
       color: "rgba(0,0,0,0.55)",
     },
     [`${navbarNav} &`]: {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
 
 export const modalHeader = style({
+  display: "flex",
+  flexShrink: "0",
   alignItems: "center",
+  justifyContent: "space-between",
+  padding: "1rem 1rem",
   borderBottom: "1px solid dee2e6",
   borderTopLeftRadius: "calc(0.3rem-1px)",
   borderTopRightRadius: "calc(0.3rem-1px)",
-  display: "flex",
-  flexShrink: "0",
-  justifyContent: "space-between",
-  padding: "1rem 1rem",
   "@media": {
     "(max-width: 575.98px)": {
       "selectors": {
@@ -3129,10 +3131,10 @@ export const modalHeader = style({
 export const modalFullscreenXxlDown = style({
   "@media": {
     "(max-width: 1399.98px)": {
+      width: "100vw",
+      maxWidth: "none",
       height: "100%",
       margin: "0",
-      maxWidth: "none",
-      width: "100vw",
     },
   },
 });
@@ -3140,10 +3142,10 @@ export const modalFullscreenXxlDown = style({
 export const modalFullscreenXlDown = style({
   "@media": {
     "(max-width: 1199.98px)": {
+      width: "100vw",
+      maxWidth: "none",
       height: "100%",
       margin: "0",
-      maxWidth: "none",
-      width: "100vw",
     },
   },
 });
@@ -3151,10 +3153,10 @@ export const modalFullscreenXlDown = style({
 export const modalFullscreenSmDown = style({
   "@media": {
     "(max-width: 575.98px)": {
+      width: "100vw",
+      maxWidth: "none",
       height: "100%",
       margin: "0",
-      maxWidth: "none",
-      width: "100vw",
     },
   },
 });
@@ -3162,10 +3164,10 @@ export const modalFullscreenSmDown = style({
 export const modalFullscreenMdDown = style({
   "@media": {
     "(max-width: 767.98px)": {
+      width: "100vw",
+      maxWidth: "none",
       height: "100%",
       margin: "0",
-      maxWidth: "none",
-      width: "100vw",
     },
   },
 });
@@ -3173,10 +3175,10 @@ export const modalFullscreenMdDown = style({
 export const modalFullscreenLgDown = style({
   "@media": {
     "(max-width: 991.98px)": {
+      width: "100vw",
+      maxWidth: "none",
       height: "100%",
       margin: "0",
-      maxWidth: "none",
-      width: "100vw",
     },
   },
 });
@@ -3191,78 +3193,78 @@ export const modalDialogScrollable = style({
 });
 
 export const listGroupItem = style({
-  backgroundColor: "fff",
-  border: "1px solid rgba(0,0,0,0.125)",
-  color: "212529",
+  position: "relative",
   display: "block",
   padding: "0.5rem 1rem",
-  position: "relative",
+  color: "212529",
   textDecoration: "none",
+  backgroundColor: "fff",
+  border: "1px solid rgba(0,0,0,0.125)",
   ":disabled": {
-    backgroundColor: "fff",
     color: "6c757d",
     pointerEvents: "none",
+    backgroundColor: "fff",
   },
   ":first-child": {
     borderTopLeftRadius: "inherit",
     borderTopRightRadius: "inherit",
   },
   ":last-child": {
-    borderBottomLeftRadius: "inherit",
     borderBottomRightRadius: "inherit",
+    borderBottomLeftRadius: "inherit",
   },
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
         [`${listGroupHorizontalXl} > ${listGroupItem} + &`]: {
-          borderLeftWidth: "0",
           borderTopWidth: "1px",
+          borderLeftWidth: "0",
         },
       },
       "selectors": {
         [`${listGroupHorizontalXxl} > ${listGroupItem} + &`]: {
-          borderLeftWidth: "0",
           borderTopWidth: "1px",
+          borderLeftWidth: "0",
         },
       },
       "selectors": {
         [`${listGroupHorizontalSm} > ${listGroupItem} + &`]: {
-          borderLeftWidth: "0",
           borderTopWidth: "1px",
+          borderLeftWidth: "0",
         },
       },
       "selectors": {
         [`${listGroupHorizontalMd} > ${listGroupItem} + &`]: {
-          borderLeftWidth: "0",
           borderTopWidth: "1px",
+          borderLeftWidth: "0",
         },
       },
       "selectors": {
         [`${listGroupHorizontalLg} > ${listGroupItem} + &`]: {
-          borderLeftWidth: "0",
           borderTopWidth: "1px",
+          borderLeftWidth: "0",
         },
       },
     },
   },
   "selectors": {
     [`${active}`]: {
+      zIndex: "2",
+      color: "fff",
       backgroundColor: "0d6efd",
       borderColor: "0d6efd",
-      color: "fff",
-      zIndex: "2",
     },
     [`${disabled}`]: {
-      backgroundColor: "fff",
       color: "6c757d",
       pointerEvents: "none",
+      backgroundColor: "fff",
     },
     [`${listGroupFlush} > &`]: {
       borderWidth: "0 0 1px",
     },
     [`${listGroupHorizontal} > ${listGroupItem} + &`]: {
-      borderLeftWidth: "0",
       borderTopWidth: "1px",
+      borderLeftWidth: "0",
     },
     [`${listGroupItem} + &`]: {
       borderTopWidth: "0",
@@ -3280,8 +3282,8 @@ export const listGroupHorizontalXxl = style({
           borderTopRightRadius: "0",
         },
         [` > ${listGroupItem}:last-child`]: {
-          borderBottomLeftRadius: "0",
           borderTopRightRadius: "0.25rem",
+          borderBottomLeftRadius: "0",
         },
       },
     },
@@ -3298,8 +3300,8 @@ export const listGroupHorizontalXl = style({
           borderTopRightRadius: "0",
         },
         [` > ${listGroupItem}:last-child`]: {
-          borderBottomLeftRadius: "0",
           borderTopRightRadius: "0.25rem",
+          borderBottomLeftRadius: "0",
         },
       },
     },
@@ -3316,8 +3318,8 @@ export const listGroupHorizontalSm = style({
           borderTopRightRadius: "0",
         },
         [` > ${listGroupItem}:last-child`]: {
-          borderBottomLeftRadius: "0",
           borderTopRightRadius: "0.25rem",
+          borderBottomLeftRadius: "0",
         },
       },
     },
@@ -3334,8 +3336,8 @@ export const listGroupHorizontalMd = style({
           borderTopRightRadius: "0",
         },
         [` > ${listGroupItem}:last-child`]: {
-          borderBottomLeftRadius: "0",
           borderTopRightRadius: "0.25rem",
+          borderBottomLeftRadius: "0",
         },
       },
     },
@@ -3352,8 +3354,8 @@ export const listGroupHorizontalLg = style({
           borderTopRightRadius: "0",
         },
         [` > ${listGroupItem}:last-child`]: {
-          borderBottomLeftRadius: "0",
           borderTopRightRadius: "0.25rem",
+          borderBottomLeftRadius: "0",
         },
       },
     },
@@ -3368,25 +3370,25 @@ export const listGroupHorizontal = style({
       borderTopRightRadius: "0",
     },
     [` > ${listGroupItem}:last-child`]: {
-      borderBottomLeftRadius: "0",
       borderTopRightRadius: "0.25rem",
+      borderBottomLeftRadius: "0",
     },
   },
 });
 
 export const listGroup = style({
-  borderRadius: "0.25rem",
   display: "flex",
   flexDirection: "column",
-  marginBottom: "0",
   paddingLeft: "0",
+  marginBottom: "0",
+  borderRadius: "0.25rem",
   "selectors": {
     [`${card} > ${cardHeader} + &`]: {
       borderTop: "0",
     },
     [`${card} > &`]: {
-      borderBottom: "inherit",
       borderTop: "inherit",
+      borderBottom: "inherit",
     },
   },
 });
@@ -3414,10 +3416,10 @@ export const isInvalid = style({
 });
 
 export const inputGroup = style({
-  alignItems: "stretch",
+  position: "relative",
   display: "flex",
   flexWrap: "wrap",
-  position: "relative",
+  alignItems: "stretch",
   width: "100%",
   "selectors": {
     [` ${btn}:focus`]: {
@@ -3442,28 +3444,28 @@ export const inputGroup = style({
       zIndex: "3",
     },
     "& > :not(:first-child):not:not:not:not:not": {
-      borderBottomLeftRadius: "0",
-      borderTopLeftRadius: "0",
       marginLeft: "-1px",
+      borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${btnToolbar} &`]: {
       width: "auto",
     },
     [`${hasValidation} > ${dropdownToggle}:nth-last-child(+4)`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${hasValidation} > :nth-last-child(+3):not:not`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`:not > ${dropdownToggle}:nth-last-child(+3)`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     "&:not > :not(:last-child):not:not": {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
   },
 });
@@ -3472,8 +3474,8 @@ export const formSwitch = style({
   paddingLeft: "2.5em",
   "selectors": {
     [` ${formCheckInput}:checked`]: {
-      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e)",
       backgroundPosition: "right center",
+      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e)",
     },
     [` ${formCheckInput}:focus`]: {
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e)",
@@ -3482,32 +3484,32 @@ export const formSwitch = style({
 });
 
 export const formSelect = style({
-  MozAppearance: "none",
-  MozPaddingStart: "calc(0.75rem-3px)",
-  WebkitAppearance: "none",
-  appearance: "none",
-  backgroundColor: "fff",
-  backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e)",
-  backgroundPosition: "right 0.75rem center",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "16px 12px",
-  border: "1px solid ced4da",
-  borderRadius: "0.25rem",
-  color: "212529",
   display: "block",
+  width: "100%",
+  padding: "0.375rem 2.25rem 0.375rem 0.75rem",
+  MozPaddingStart: "calc(0.75rem-3px)",
   fontSize: "1rem",
   fontWeight: "400",
   lineHeight: "1.5",
-  padding: "0.375rem 2.25rem 0.375rem 0.75rem",
+  color: "212529",
+  backgroundColor: "fff",
+  backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e)",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "right 0.75rem center",
+  backgroundSize: "16px 12px",
+  border: "1px solid ced4da",
+  borderRadius: "0.25rem",
   transition: "border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  width: "100%",
+  WebkitAppearance: "none",
+  MozAppearance: "none",
+  appearance: "none",
   ":disabled": {
     backgroundColor: "e9ecef",
   },
   ":focus": {
     borderColor: "86b7fe",
-    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
     outline: "0",
+    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
   },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
@@ -3518,26 +3520,26 @@ export const formSelect = style({
     [`${formFloating} > &`]: {
       height: "calc(3.5rem+2px)",
       lineHeight: "1.25",
-      paddingBottom: "0.625rem",
       paddingTop: "1.625rem",
+      paddingBottom: "0.625rem",
     },
     [`${inputGroupLg} > &`]: {
-      borderRadius: "0.3rem",
-      fontSize: "1.25rem",
       padding: "0.5rem 1rem",
+      fontSize: "1.25rem",
+      borderRadius: "0.3rem",
       paddingRight: "3rem",
     },
     [`${inputGroupSm} > &`]: {
-      borderRadius: "0.2rem",
-      fontSize: "0.875rem",
       padding: "0.25rem 0.5rem",
+      fontSize: "0.875rem",
+      borderRadius: "0.2rem",
       paddingRight: "3rem",
     },
     [`${inputGroup} > &`]: {
-      flex: "1 1 auto",
-      minWidth: "0",
       position: "relative",
+      flex: "1 1 auto",
       width: "1%",
+      minWidth: "0",
     },
     [`${isInvalid}`]: {
       borderColor: "dc3545",
@@ -3547,16 +3549,16 @@ export const formSelect = style({
       boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.25)",
     },
     [`${isInvalid}:not([multiple]):not([size])`]: {
+      paddingRight: "4.125rem",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
       backgroundPosition: "right 0.75rem center , center right 2.25rem",
       backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-      paddingRight: "4.125rem",
     },
     [`${isInvalid}:not([multiple])[size='1']`]: {
+      paddingRight: "4.125rem",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
       backgroundPosition: "right 0.75rem center , center right 2.25rem",
       backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-      paddingRight: "4.125rem",
     },
     [`${isValid}`]: {
       borderColor: "198754",
@@ -3566,28 +3568,28 @@ export const formSelect = style({
       boxShadow: "0 0 0 0.25rem rgba(25,135,84,0.25)",
     },
     [`${isValid}:not([multiple]):not([size])`]: {
+      paddingRight: "4.125rem",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
       backgroundPosition: "right 0.75rem center , center right 2.25rem",
       backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-      paddingRight: "4.125rem",
     },
     [`${isValid}:not([multiple])[size='1']`]: {
+      paddingRight: "4.125rem",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e) , url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
       backgroundPosition: "right 0.75rem center , center right 2.25rem",
       backgroundSize: "16px 12px , calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
-      paddingRight: "4.125rem",
     },
     "&:-moz-focusring": {
       color: "transparent",
       textShadow: "0 0 0 212529",
     },
     "&[multiple]": {
-      backgroundImage: "none",
       paddingRight: "0.75rem",
+      backgroundImage: "none",
     },
     "&[size]:not([size='1'])": {
-      backgroundImage: "none",
       paddingRight: "0.75rem",
+      backgroundImage: "none",
     },
   },
 });
@@ -3605,8 +3607,8 @@ export const formFloating = style({
   },
   "selectors": {
     [` > ${formControl}:-webkit-autofill`]: {
-      paddingBottom: "0.625rem",
       paddingTop: "1.625rem",
+      paddingBottom: "0.625rem",
     },
     [` > ${formControl}:-webkit-autofill ~ label`]: {
       opacity: "0.65",
@@ -3619,24 +3621,24 @@ export const formFloating = style({
       color: "transparent",
     },
     [` > ${formControl}:focus`]: {
-      paddingBottom: "0.625rem",
       paddingTop: "1.625rem",
+      paddingBottom: "0.625rem",
     },
     [` > ${formControl}:focus ~ label`]: {
       opacity: "0.65",
       transform: "scale(0.85) translateY(-0.5rem) translateX(0.15rem)",
     },
     [` > ${formControl}:not(:-moz-placeholder-shown)`]: {
-      paddingBottom: "0.625rem",
       paddingTop: "1.625rem",
+      paddingBottom: "0.625rem",
     },
     [` > ${formControl}:not(:-moz-placeholder-shown) ~ label`]: {
       opacity: "0.65",
       transform: "scale(0.85) translateY(-0.5rem) translateX(0.15rem)",
     },
     [` > ${formControl}:not(:placeholder-shown)`]: {
-      paddingBottom: "0.625rem",
       paddingTop: "1.625rem",
+      paddingBottom: "0.625rem",
     },
     [` > ${formControl}:not(:placeholder-shown) ~ label`]: {
       opacity: "0.65",
@@ -3647,13 +3649,13 @@ export const formFloating = style({
       transform: "scale(0.85) translateY(-0.5rem) translateX(0.15rem)",
     },
     "& > label": {
-      border: "1px solid transparent",
-      height: "100%",
-      left: "0",
-      padding: "1rem 0.75rem",
-      pointerEvents: "none",
       position: "absolute",
       top: "0",
+      left: "0",
+      height: "100%",
+      padding: "1rem 0.75rem",
+      pointerEvents: "none",
+      border: "1px solid transparent",
       transformOrigin: "0 0",
       transition: "opacity 0.1s ease-in-out , transform 0.1s ease-in-out",
     },
@@ -3661,22 +3663,26 @@ export const formFloating = style({
 });
 
 export const formControlSm = style({
-  borderRadius: "0.2rem",
-  fontSize: "0.875rem",
   minHeight: "calc(1.5em+0.5rem+2px)",
   padding: "0.25rem 0.5rem",
+  fontSize: "0.875rem",
+  borderRadius: "0.2rem",
   "selectors": {
     "&::-webkit-file-upload-button": {
-      WebkitMarginEnd: "0.5rem",
+      padding: "0.25rem 0.5rem",
       margin: "-0.25rem -0.5rem",
+      WebkitMarginEnd: "0.5rem",
       marginInlineEnd: "0.5rem",
       padding: "0.25rem 0.5rem",
+      margin: "-0.25rem -0.5rem",
+      WebkitMarginEnd: "0.5rem",
+      marginInlineEnd: "0.5rem",
     },
     "&::file-selector-button": {
-      WebkitMarginEnd: "0.5rem",
-      margin: "-0.25rem -0.5rem",
-      marginInlineEnd: "0.5rem",
       padding: "0.25rem 0.5rem",
+      margin: "-0.25rem -0.5rem",
+      WebkitMarginEnd: "0.5rem",
+      marginInlineEnd: "0.5rem",
     },
   },
 });
@@ -3684,55 +3690,55 @@ export const formControlSm = style({
 export const dropdownToggle = style({
   whiteSpace: "nowrap",
   "::after": {
-    borderBottom: "0",
-    borderLeft: "0.3em solid transparent",
-    borderRight: "0.3em solid transparent",
-    borderTop: "0.3em solid",
-    content: "",
     display: "inline-block",
     marginLeft: "0.255em",
     verticalAlign: "0.255em",
+    content: "",
+    borderTop: "0.3em solid",
+    borderRight: "0.3em solid transparent",
+    borderBottom: "0",
+    borderLeft: "0.3em solid transparent",
   },
   "selectors": {
     [`${show} > ${btnDanger}&`]: {
+      color: "fff",
       backgroundColor: "b02a37",
       borderColor: "a52834",
-      color: "fff",
     },
     [`${show} > ${btnDark}&`]: {
+      color: "fff",
       backgroundColor: "1a1e21",
       borderColor: "191c1f",
-      color: "fff",
     },
     [`${show} > ${btnInfo}&`]: {
+      color: "000",
       backgroundColor: "3dd5f3",
       borderColor: "25cff2",
-      color: "000",
     },
     [`${show} > ${btnLight}&`]: {
+      color: "000",
       backgroundColor: "f9fafb",
       borderColor: "f9fafb",
-      color: "000",
     },
     [`${show} > ${btnPrimary}&`]: {
+      color: "fff",
       backgroundColor: "0a58ca",
       borderColor: "0a53be",
-      color: "fff",
     },
     [`${show} > ${btnSecondary}&`]: {
+      color: "fff",
       backgroundColor: "565e64",
       borderColor: "51585e",
-      color: "fff",
     },
     [`${show} > ${btnSuccess}&`]: {
+      color: "fff",
       backgroundColor: "146c43",
       borderColor: "13653f",
-      color: "fff",
     },
     [`${show} > ${btnWarning}&`]: {
+      color: "000",
       backgroundColor: "ffcd39",
       borderColor: "ffc720",
-      color: "000",
     },
     "&:empty::after": {
       marginLeft: "0",
@@ -3741,68 +3747,68 @@ export const dropdownToggle = style({
 });
 
 export const dropdownMenuDark = style({
+  color: "dee2e6",
   backgroundColor: "343a40",
   borderColor: "rgba(0,0,0,0.15)",
-  color: "dee2e6",
   "selectors": {
     [` ${dropdownItem}:active`]: {
-      backgroundColor: "0d6efd",
       color: "fff",
+      backgroundColor: "0d6efd",
     },
     [` ${dropdownItem}:disabled`]: {
       color: "adb5bd",
     },
     [` ${dropdownItem}:focus`]: {
-      backgroundColor: "rgba(255,255,255,0.15)",
       color: "fff",
+      backgroundColor: "rgba(255,255,255,0.15)",
     },
     [` ${dropdownItem}:hover`]: {
-      backgroundColor: "rgba(255,255,255,0.15)",
       color: "fff",
+      backgroundColor: "rgba(255,255,255,0.15)",
     },
   },
 });
 
 export const dropdownItem = style({
-  backgroundColor: "transparent",
-  border: "0",
-  clear: "both",
-  color: "212529",
   display: "block",
-  fontWeight: "400",
+  width: "100%",
   padding: "0.25rem 1rem",
+  clear: "both",
+  fontWeight: "400",
+  color: "212529",
   textAlign: "inherit",
   textDecoration: "none",
   whiteSpace: "nowrap",
-  width: "100%",
+  backgroundColor: "transparent",
+  border: "0",
   ":active": {
-    backgroundColor: "0d6efd",
     color: "fff",
     textDecoration: "none",
+    backgroundColor: "0d6efd",
   },
   ":disabled": {
-    backgroundColor: "transparent",
     color: "adb5bd",
     pointerEvents: "none",
+    backgroundColor: "transparent",
   },
   ":focus": {
-    backgroundColor: "e9ecef",
     color: "1e2125",
+    backgroundColor: "e9ecef",
   },
   ":hover": {
-    backgroundColor: "e9ecef",
     color: "1e2125",
+    backgroundColor: "e9ecef",
   },
   "selectors": {
     [`${active}`]: {
-      backgroundColor: "0d6efd",
       color: "fff",
       textDecoration: "none",
+      backgroundColor: "0d6efd",
     },
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "adb5bd",
       pointerEvents: "none",
+      backgroundColor: "transparent",
     },
     [`${dropdownMenuDark} &`]: {
       color: "dee2e6",
@@ -3816,9 +3822,9 @@ export const disabled = style({
       color: "adb5bd",
     },
     [`${navTabs} ${navLink}&`]: {
+      color: "6c757d",
       backgroundColor: "transparent",
       borderColor: "transparent",
-      color: "6c757d",
     },
     [`${navbarDark} ${navbarNav} ${navLink}&`]: {
       color: "rgba(255,255,255,0.25)",
@@ -3841,13 +3847,13 @@ export const carouselItemStart = style({
   },
   "selectors": {
     [`${carouselFade} ${active}&`]: {
+      zIndex: "0",
       opacity: "0",
       transition: "opacity 0s 0.6s",
-      zIndex: "0",
     },
     [`${carouselFade} ${carouselItemNext}&`]: {
-      opacity: "1",
       zIndex: "1",
+      opacity: "1",
     },
   },
 });
@@ -3873,26 +3879,26 @@ export const carouselItemEnd = style({
   },
   "selectors": {
     [`${carouselFade} ${active}&`]: {
+      zIndex: "0",
       opacity: "0",
       transition: "opacity 0s 0.6s",
-      zIndex: "0",
     },
     [`${carouselFade} ${carouselItemPrev}&`]: {
-      opacity: "1",
       zIndex: "1",
+      opacity: "1",
     },
   },
 });
 
 export const carouselItem = style({
-  WebkitBackfaceVisibility: "hidden",
-  backfaceVisibility: "hidden",
+  position: "relative",
   display: "none",
   float: "left",
-  marginRight: "-100%",
-  position: "relative",
-  transition: "transform 0.6s ease-in-out",
   width: "100%",
+  marginRight: "-100%",
+  WebkitBackfaceVisibility: "hidden",
+  backfaceVisibility: "hidden",
+  transition: "transform 0.6s ease-in-out",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
@@ -3904,25 +3910,25 @@ export const carouselItem = style({
     },
     [`${carouselFade} &`]: {
       opacity: "0",
-      transform: "none",
       transitionProperty: "opacity",
+      transform: "none",
     },
   },
 });
 
 export const carouselIndicators = style({
-  bottom: "0",
-  display: "flex",
-  justifyContent: "center",
-  left: "0",
-  listStyle: "none",
-  marginBottom: "1rem",
-  marginLeft: "15%",
-  marginRight: "15%",
-  padding: "0",
   position: "absolute",
   right: "0",
+  bottom: "0",
+  left: "0",
   zIndex: "2",
+  display: "flex",
+  justifyContent: "center",
+  padding: "0",
+  marginRight: "15%",
+  marginBottom: "1rem",
+  marginLeft: "15%",
+  listStyle: "none",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       "selectors": {
@@ -3934,22 +3940,22 @@ export const carouselIndicators = style({
   },
   "selectors": {
     "& [data-bs-target]": {
-      backgroundClip: "padding-box",
-      backgroundColor: "fff",
-      border: "0",
-      borderBottom: "10px solid transparent",
-      borderTop: "10px solid transparent",
       boxSizing: "content-box",
-      cursor: "pointer",
       flex: "0 1 auto",
-      height: "3px",
-      marginLeft: "3px",
-      marginRight: "3px",
-      opacity: "0.5",
-      padding: "0",
-      textIndent: "-999px",
-      transition: "opacity 0.6s ease",
       width: "30px",
+      height: "3px",
+      padding: "0",
+      marginRight: "3px",
+      marginLeft: "3px",
+      textIndent: "-999px",
+      cursor: "pointer",
+      backgroundColor: "fff",
+      backgroundClip: "padding-box",
+      border: "0",
+      borderTop: "10px solid transparent",
+      borderBottom: "10px solid transparent",
+      opacity: "0.5",
+      transition: "opacity 0.6s ease",
     },
   },
 });
@@ -3972,12 +3978,12 @@ export const cardGroup = style({
       flexFlow: "row wrap",
       "selectors": {
         [` > ${card}:not(:first-child)`]: {
-          borderBottomLeftRadius: "0",
           borderTopLeftRadius: "0",
+          borderBottomLeftRadius: "0",
         },
         [` > ${card}:not(:last-child)`]: {
-          borderBottomRightRadius: "0",
           borderTopRightRadius: "0",
+          borderBottomRightRadius: "0",
         },
       },
     },
@@ -3985,59 +3991,59 @@ export const cardGroup = style({
 });
 
 export const btnWarning = style({
+  color: "000",
   backgroundColor: "ffc107",
   borderColor: "ffc107",
-  color: "000",
   ":active": {
+    color: "000",
     backgroundColor: "ffcd39",
     borderColor: "ffc720",
-    color: "000",
   },
   ":disabled": {
+    color: "000",
     backgroundColor: "ffc107",
     borderColor: "ffc107",
-    color: "000",
   },
   ":focus": {
+    color: "000",
     backgroundColor: "ffca2c",
     borderColor: "ffc720",
     boxShadow: "0 0 0 0.25rem rgba(217,164,6,0.5)",
-    color: "000",
   },
   ":hover": {
+    color: "000",
     backgroundColor: "ffca2c",
     borderColor: "ffc720",
-    color: "000",
   },
   "selectors": {
     [`${active}`]: {
+      color: "000",
       backgroundColor: "ffcd39",
       borderColor: "ffc720",
-      color: "000",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(217,164,6,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "000",
       backgroundColor: "ffcd39",
       borderColor: "ffc720",
-      color: "000",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "000",
       backgroundColor: "ffcd39",
       borderColor: "ffc720",
-      color: "000",
     },
     [`${btnCheck}:focus + &`]: {
+      color: "000",
       backgroundColor: "ffca2c",
       borderColor: "ffc720",
       boxShadow: "0 0 0 0.25rem rgba(217,164,6,0.5)",
-      color: "000",
     },
     [`${disabled}`]: {
+      color: "000",
       backgroundColor: "ffc107",
       borderColor: "ffc107",
-      color: "000",
     },
     "&:active:focus": {
       boxShadow: "0 0 0 0.25rem rgba(217,164,6,0.5)",
@@ -4046,59 +4052,59 @@ export const btnWarning = style({
 });
 
 export const btnSuccess = style({
+  color: "fff",
   backgroundColor: "198754",
   borderColor: "198754",
-  color: "fff",
   ":active": {
+    color: "fff",
     backgroundColor: "146c43",
     borderColor: "13653f",
-    color: "fff",
   },
   ":disabled": {
+    color: "fff",
     backgroundColor: "198754",
     borderColor: "198754",
-    color: "fff",
   },
   ":focus": {
+    color: "fff",
     backgroundColor: "157347",
     borderColor: "146c43",
     boxShadow: "0 0 0 0.25rem rgba(60,153,110,0.5)",
-    color: "fff",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "157347",
     borderColor: "146c43",
-    color: "fff",
   },
   "selectors": {
     [`${active}`]: {
+      color: "fff",
       backgroundColor: "146c43",
       borderColor: "13653f",
-      color: "fff",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(60,153,110,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "fff",
       backgroundColor: "146c43",
       borderColor: "13653f",
-      color: "fff",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "fff",
       backgroundColor: "146c43",
       borderColor: "13653f",
-      color: "fff",
     },
     [`${btnCheck}:focus + &`]: {
+      color: "fff",
       backgroundColor: "157347",
       borderColor: "146c43",
       boxShadow: "0 0 0 0.25rem rgba(60,153,110,0.5)",
-      color: "fff",
     },
     [`${disabled}`]: {
+      color: "fff",
       backgroundColor: "198754",
       borderColor: "198754",
-      color: "fff",
     },
     "&:active:focus": {
       boxShadow: "0 0 0 0.25rem rgba(60,153,110,0.5)",
@@ -4107,59 +4113,59 @@ export const btnSuccess = style({
 });
 
 export const btnSecondary = style({
+  color: "fff",
   backgroundColor: "6c757d",
   borderColor: "6c757d",
-  color: "fff",
   ":active": {
+    color: "fff",
     backgroundColor: "565e64",
     borderColor: "51585e",
-    color: "fff",
   },
   ":disabled": {
+    color: "fff",
     backgroundColor: "6c757d",
     borderColor: "6c757d",
-    color: "fff",
   },
   ":focus": {
+    color: "fff",
     backgroundColor: "5c636a",
     borderColor: "565e64",
     boxShadow: "0 0 0 0.25rem rgba(130,138,145,0.5)",
-    color: "fff",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "5c636a",
     borderColor: "565e64",
-    color: "fff",
   },
   "selectors": {
     [`${active}`]: {
+      color: "fff",
       backgroundColor: "565e64",
       borderColor: "51585e",
-      color: "fff",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(130,138,145,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "fff",
       backgroundColor: "565e64",
       borderColor: "51585e",
-      color: "fff",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "fff",
       backgroundColor: "565e64",
       borderColor: "51585e",
-      color: "fff",
     },
     [`${btnCheck}:focus + &`]: {
+      color: "fff",
       backgroundColor: "5c636a",
       borderColor: "565e64",
       boxShadow: "0 0 0 0.25rem rgba(130,138,145,0.5)",
-      color: "fff",
     },
     [`${disabled}`]: {
+      color: "fff",
       backgroundColor: "6c757d",
       borderColor: "6c757d",
-      color: "fff",
     },
     "&:active:focus": {
       boxShadow: "0 0 0 0.25rem rgba(130,138,145,0.5)",
@@ -4168,59 +4174,59 @@ export const btnSecondary = style({
 });
 
 export const btnPrimary = style({
+  color: "fff",
   backgroundColor: "0d6efd",
   borderColor: "0d6efd",
-  color: "fff",
   ":active": {
+    color: "fff",
     backgroundColor: "0a58ca",
     borderColor: "0a53be",
-    color: "fff",
   },
   ":disabled": {
+    color: "fff",
     backgroundColor: "0d6efd",
     borderColor: "0d6efd",
-    color: "fff",
   },
   ":focus": {
+    color: "fff",
     backgroundColor: "0b5ed7",
     borderColor: "0a58ca",
     boxShadow: "0 0 0 0.25rem rgba(49,132,253,0.5)",
-    color: "fff",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "0b5ed7",
     borderColor: "0a58ca",
-    color: "fff",
   },
   "selectors": {
     [`${active}`]: {
+      color: "fff",
       backgroundColor: "0a58ca",
       borderColor: "0a53be",
-      color: "fff",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(49,132,253,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "fff",
       backgroundColor: "0a58ca",
       borderColor: "0a53be",
-      color: "fff",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "fff",
       backgroundColor: "0a58ca",
       borderColor: "0a53be",
-      color: "fff",
     },
     [`${btnCheck}:focus + &`]: {
+      color: "fff",
       backgroundColor: "0b5ed7",
       borderColor: "0a58ca",
       boxShadow: "0 0 0 0.25rem rgba(49,132,253,0.5)",
-      color: "fff",
     },
     [`${disabled}`]: {
+      color: "fff",
       backgroundColor: "0d6efd",
       borderColor: "0d6efd",
-      color: "fff",
     },
     "&:active:focus": {
       boxShadow: "0 0 0 0.25rem rgba(49,132,253,0.5)",
@@ -4229,55 +4235,55 @@ export const btnPrimary = style({
 });
 
 export const btnOutlineWarning = style({
-  borderColor: "ffc107",
   color: "ffc107",
+  borderColor: "ffc107",
   ":active": {
+    color: "000",
     backgroundColor: "ffc107",
     borderColor: "ffc107",
-    color: "000",
   },
   ":disabled": {
-    backgroundColor: "transparent",
     color: "ffc107",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.25rem rgba(255,193,7,0.5)",
   },
   ":hover": {
+    color: "000",
     backgroundColor: "ffc107",
     borderColor: "ffc107",
-    color: "000",
   },
   "selectors": {
     [`${active}`]: {
+      color: "000",
       backgroundColor: "ffc107",
       borderColor: "ffc107",
-      color: "000",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(255,193,7,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "000",
       backgroundColor: "ffc107",
       borderColor: "ffc107",
-      color: "000",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "000",
       backgroundColor: "ffc107",
       borderColor: "ffc107",
-      color: "000",
     },
     [`${btnCheck}:focus + &`]: {
       boxShadow: "0 0 0 0.25rem rgba(255,193,7,0.5)",
     },
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "ffc107",
+      backgroundColor: "transparent",
     },
     [`${dropdownToggle}${show}`]: {
+      color: "000",
       backgroundColor: "ffc107",
       borderColor: "ffc107",
-      color: "000",
     },
     [`${dropdownToggle}${show}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(255,193,7,0.5)",
@@ -4289,55 +4295,55 @@ export const btnOutlineWarning = style({
 });
 
 export const btnOutlineSuccess = style({
-  borderColor: "198754",
   color: "198754",
+  borderColor: "198754",
   ":active": {
+    color: "fff",
     backgroundColor: "198754",
     borderColor: "198754",
-    color: "fff",
   },
   ":disabled": {
-    backgroundColor: "transparent",
     color: "198754",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.25rem rgba(25,135,84,0.5)",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "198754",
     borderColor: "198754",
-    color: "fff",
   },
   "selectors": {
     [`${active}`]: {
+      color: "fff",
       backgroundColor: "198754",
       borderColor: "198754",
-      color: "fff",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(25,135,84,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "fff",
       backgroundColor: "198754",
       borderColor: "198754",
-      color: "fff",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "fff",
       backgroundColor: "198754",
       borderColor: "198754",
-      color: "fff",
     },
     [`${btnCheck}:focus + &`]: {
       boxShadow: "0 0 0 0.25rem rgba(25,135,84,0.5)",
     },
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "198754",
+      backgroundColor: "transparent",
     },
     [`${dropdownToggle}${show}`]: {
+      color: "fff",
       backgroundColor: "198754",
       borderColor: "198754",
-      color: "fff",
     },
     [`${dropdownToggle}${show}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(25,135,84,0.5)",
@@ -4349,55 +4355,55 @@ export const btnOutlineSuccess = style({
 });
 
 export const btnOutlineSecondary = style({
-  borderColor: "6c757d",
   color: "6c757d",
+  borderColor: "6c757d",
   ":active": {
+    color: "fff",
     backgroundColor: "6c757d",
     borderColor: "6c757d",
-    color: "fff",
   },
   ":disabled": {
-    backgroundColor: "transparent",
     color: "6c757d",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.25rem rgba(108,117,125,0.5)",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "6c757d",
     borderColor: "6c757d",
-    color: "fff",
   },
   "selectors": {
     [`${active}`]: {
+      color: "fff",
       backgroundColor: "6c757d",
       borderColor: "6c757d",
-      color: "fff",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(108,117,125,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "fff",
       backgroundColor: "6c757d",
       borderColor: "6c757d",
-      color: "fff",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "fff",
       backgroundColor: "6c757d",
       borderColor: "6c757d",
-      color: "fff",
     },
     [`${btnCheck}:focus + &`]: {
       boxShadow: "0 0 0 0.25rem rgba(108,117,125,0.5)",
     },
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "6c757d",
+      backgroundColor: "transparent",
     },
     [`${dropdownToggle}${show}`]: {
+      color: "fff",
       backgroundColor: "6c757d",
       borderColor: "6c757d",
-      color: "fff",
     },
     [`${dropdownToggle}${show}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(108,117,125,0.5)",
@@ -4409,55 +4415,55 @@ export const btnOutlineSecondary = style({
 });
 
 export const btnOutlinePrimary = style({
-  borderColor: "0d6efd",
   color: "0d6efd",
+  borderColor: "0d6efd",
   ":active": {
+    color: "fff",
     backgroundColor: "0d6efd",
     borderColor: "0d6efd",
-    color: "fff",
   },
   ":disabled": {
-    backgroundColor: "transparent",
     color: "0d6efd",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.5)",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "0d6efd",
     borderColor: "0d6efd",
-    color: "fff",
   },
   "selectors": {
     [`${active}`]: {
+      color: "fff",
       backgroundColor: "0d6efd",
       borderColor: "0d6efd",
-      color: "fff",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "fff",
       backgroundColor: "0d6efd",
       borderColor: "0d6efd",
-      color: "fff",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "fff",
       backgroundColor: "0d6efd",
       borderColor: "0d6efd",
-      color: "fff",
     },
     [`${btnCheck}:focus + &`]: {
       boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.5)",
     },
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "0d6efd",
+      backgroundColor: "transparent",
     },
     [`${dropdownToggle}${show}`]: {
+      color: "fff",
       backgroundColor: "0d6efd",
       borderColor: "0d6efd",
-      color: "fff",
     },
     [`${dropdownToggle}${show}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.5)",
@@ -4469,55 +4475,55 @@ export const btnOutlinePrimary = style({
 });
 
 export const btnOutlineLight = style({
-  borderColor: "f8f9fa",
   color: "f8f9fa",
+  borderColor: "f8f9fa",
   ":active": {
+    color: "000",
     backgroundColor: "f8f9fa",
     borderColor: "f8f9fa",
-    color: "000",
   },
   ":disabled": {
-    backgroundColor: "transparent",
     color: "f8f9fa",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.25rem rgba(248,249,250,0.5)",
   },
   ":hover": {
+    color: "000",
     backgroundColor: "f8f9fa",
     borderColor: "f8f9fa",
-    color: "000",
   },
   "selectors": {
     [`${active}`]: {
+      color: "000",
       backgroundColor: "f8f9fa",
       borderColor: "f8f9fa",
-      color: "000",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(248,249,250,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "000",
       backgroundColor: "f8f9fa",
       borderColor: "f8f9fa",
-      color: "000",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "000",
       backgroundColor: "f8f9fa",
       borderColor: "f8f9fa",
-      color: "000",
     },
     [`${btnCheck}:focus + &`]: {
       boxShadow: "0 0 0 0.25rem rgba(248,249,250,0.5)",
     },
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "f8f9fa",
+      backgroundColor: "transparent",
     },
     [`${dropdownToggle}${show}`]: {
+      color: "000",
       backgroundColor: "f8f9fa",
       borderColor: "f8f9fa",
-      color: "000",
     },
     [`${dropdownToggle}${show}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(248,249,250,0.5)",
@@ -4529,55 +4535,55 @@ export const btnOutlineLight = style({
 });
 
 export const btnOutlineInfo = style({
-  borderColor: "0dcaf0",
   color: "0dcaf0",
+  borderColor: "0dcaf0",
   ":active": {
+    color: "000",
     backgroundColor: "0dcaf0",
     borderColor: "0dcaf0",
-    color: "000",
   },
   ":disabled": {
-    backgroundColor: "transparent",
     color: "0dcaf0",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.25rem rgba(13,202,240,0.5)",
   },
   ":hover": {
+    color: "000",
     backgroundColor: "0dcaf0",
     borderColor: "0dcaf0",
-    color: "000",
   },
   "selectors": {
     [`${active}`]: {
+      color: "000",
       backgroundColor: "0dcaf0",
       borderColor: "0dcaf0",
-      color: "000",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(13,202,240,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "000",
       backgroundColor: "0dcaf0",
       borderColor: "0dcaf0",
-      color: "000",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "000",
       backgroundColor: "0dcaf0",
       borderColor: "0dcaf0",
-      color: "000",
     },
     [`${btnCheck}:focus + &`]: {
       boxShadow: "0 0 0 0.25rem rgba(13,202,240,0.5)",
     },
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "0dcaf0",
+      backgroundColor: "transparent",
     },
     [`${dropdownToggle}${show}`]: {
+      color: "000",
       backgroundColor: "0dcaf0",
       borderColor: "0dcaf0",
-      color: "000",
     },
     [`${dropdownToggle}${show}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(13,202,240,0.5)",
@@ -4589,55 +4595,55 @@ export const btnOutlineInfo = style({
 });
 
 export const btnOutlineDark = style({
-  borderColor: "212529",
   color: "212529",
+  borderColor: "212529",
   ":active": {
+    color: "fff",
     backgroundColor: "212529",
     borderColor: "212529",
-    color: "fff",
   },
   ":disabled": {
-    backgroundColor: "transparent",
     color: "212529",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.25rem rgba(33,37,41,0.5)",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "212529",
     borderColor: "212529",
-    color: "fff",
   },
   "selectors": {
     [`${active}`]: {
+      color: "fff",
       backgroundColor: "212529",
       borderColor: "212529",
-      color: "fff",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(33,37,41,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "fff",
       backgroundColor: "212529",
       borderColor: "212529",
-      color: "fff",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "fff",
       backgroundColor: "212529",
       borderColor: "212529",
-      color: "fff",
     },
     [`${btnCheck}:focus + &`]: {
       boxShadow: "0 0 0 0.25rem rgba(33,37,41,0.5)",
     },
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "212529",
+      backgroundColor: "transparent",
     },
     [`${dropdownToggle}${show}`]: {
+      color: "fff",
       backgroundColor: "212529",
       borderColor: "212529",
-      color: "fff",
     },
     [`${dropdownToggle}${show}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(33,37,41,0.5)",
@@ -4649,55 +4655,55 @@ export const btnOutlineDark = style({
 });
 
 export const btnOutlineDanger = style({
-  borderColor: "dc3545",
   color: "dc3545",
+  borderColor: "dc3545",
   ":active": {
+    color: "fff",
     backgroundColor: "dc3545",
     borderColor: "dc3545",
-    color: "fff",
   },
   ":disabled": {
-    backgroundColor: "transparent",
     color: "dc3545",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.5)",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "dc3545",
     borderColor: "dc3545",
-    color: "fff",
   },
   "selectors": {
     [`${active}`]: {
+      color: "fff",
       backgroundColor: "dc3545",
       borderColor: "dc3545",
-      color: "fff",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "fff",
       backgroundColor: "dc3545",
       borderColor: "dc3545",
-      color: "fff",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "fff",
       backgroundColor: "dc3545",
       borderColor: "dc3545",
-      color: "fff",
     },
     [`${btnCheck}:focus + &`]: {
       boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.5)",
     },
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "dc3545",
+      backgroundColor: "transparent",
     },
     [`${dropdownToggle}${show}`]: {
+      color: "fff",
       backgroundColor: "dc3545",
       borderColor: "dc3545",
-      color: "fff",
     },
     [`${dropdownToggle}${show}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.5)",
@@ -4709,59 +4715,59 @@ export const btnOutlineDanger = style({
 });
 
 export const btnLight = style({
+  color: "000",
   backgroundColor: "f8f9fa",
   borderColor: "f8f9fa",
-  color: "000",
   ":active": {
+    color: "000",
     backgroundColor: "f9fafb",
     borderColor: "f9fafb",
-    color: "000",
   },
   ":disabled": {
+    color: "000",
     backgroundColor: "f8f9fa",
     borderColor: "f8f9fa",
-    color: "000",
   },
   ":focus": {
+    color: "000",
     backgroundColor: "f9fafb",
     borderColor: "f9fafb",
     boxShadow: "0 0 0 0.25rem rgba(211,212,213,0.5)",
-    color: "000",
   },
   ":hover": {
+    color: "000",
     backgroundColor: "f9fafb",
     borderColor: "f9fafb",
-    color: "000",
   },
   "selectors": {
     [`${active}`]: {
+      color: "000",
       backgroundColor: "f9fafb",
       borderColor: "f9fafb",
-      color: "000",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(211,212,213,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "000",
       backgroundColor: "f9fafb",
       borderColor: "f9fafb",
-      color: "000",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "000",
       backgroundColor: "f9fafb",
       borderColor: "f9fafb",
-      color: "000",
     },
     [`${btnCheck}:focus + &`]: {
+      color: "000",
       backgroundColor: "f9fafb",
       borderColor: "f9fafb",
       boxShadow: "0 0 0 0.25rem rgba(211,212,213,0.5)",
-      color: "000",
     },
     [`${disabled}`]: {
+      color: "000",
       backgroundColor: "f8f9fa",
       borderColor: "f8f9fa",
-      color: "000",
     },
     "&:active:focus": {
       boxShadow: "0 0 0 0.25rem rgba(211,212,213,0.5)",
@@ -4770,59 +4776,59 @@ export const btnLight = style({
 });
 
 export const btnInfo = style({
+  color: "000",
   backgroundColor: "0dcaf0",
   borderColor: "0dcaf0",
-  color: "000",
   ":active": {
+    color: "000",
     backgroundColor: "3dd5f3",
     borderColor: "25cff2",
-    color: "000",
   },
   ":disabled": {
+    color: "000",
     backgroundColor: "0dcaf0",
     borderColor: "0dcaf0",
-    color: "000",
   },
   ":focus": {
+    color: "000",
     backgroundColor: "31d2f2",
     borderColor: "25cff2",
     boxShadow: "0 0 0 0.25rem rgba(11,172,204,0.5)",
-    color: "000",
   },
   ":hover": {
+    color: "000",
     backgroundColor: "31d2f2",
     borderColor: "25cff2",
-    color: "000",
   },
   "selectors": {
     [`${active}`]: {
+      color: "000",
       backgroundColor: "3dd5f3",
       borderColor: "25cff2",
-      color: "000",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(11,172,204,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "000",
       backgroundColor: "3dd5f3",
       borderColor: "25cff2",
-      color: "000",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "000",
       backgroundColor: "3dd5f3",
       borderColor: "25cff2",
-      color: "000",
     },
     [`${btnCheck}:focus + &`]: {
+      color: "000",
       backgroundColor: "31d2f2",
       borderColor: "25cff2",
       boxShadow: "0 0 0 0.25rem rgba(11,172,204,0.5)",
-      color: "000",
     },
     [`${disabled}`]: {
+      color: "000",
       backgroundColor: "0dcaf0",
       borderColor: "0dcaf0",
-      color: "000",
     },
     "&:active:focus": {
       boxShadow: "0 0 0 0.25rem rgba(11,172,204,0.5)",
@@ -4831,12 +4837,12 @@ export const btnInfo = style({
 });
 
 export const btnGroupVertical = style({
-  alignItems: "flex-start",
-  display: "inline-flex",
-  flexDirection: "column",
-  justifyContent: "center",
   position: "relative",
+  display: "inline-flex",
   verticalAlign: "middle",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "center",
   "selectors": {
     [` > ${btnGroup}:not(:first-child)`]: {
       marginTop: "-1px",
@@ -4854,15 +4860,15 @@ export const btnGroupVertical = style({
       marginTop: "-1px",
     },
     [` > ${btn}:not(:last-child):not`]: {
-      borderBottomLeftRadius: "0",
       borderBottomRightRadius: "0",
+      borderBottomLeftRadius: "0",
     },
   },
 });
 
 export const btnGroup = style({
-  display: "inline-flex",
   position: "relative",
+  display: "inline-flex",
   verticalAlign: "middle",
   "selectors": {
     [` > ${btnGroup}:not(:first-child)`]: {
@@ -4881,12 +4887,12 @@ export const btnGroup = style({
       marginLeft: "-1px",
     },
     [` > ${btn}:not(:last-child):not`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [` > ${btn}:nth-child(+3)`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${btnGroupVertical} > &`]: {
       width: "100%",
@@ -4895,59 +4901,59 @@ export const btnGroup = style({
 });
 
 export const btnDark = style({
+  color: "fff",
   backgroundColor: "212529",
   borderColor: "212529",
-  color: "fff",
   ":active": {
+    color: "fff",
     backgroundColor: "1a1e21",
     borderColor: "191c1f",
-    color: "fff",
   },
   ":disabled": {
+    color: "fff",
     backgroundColor: "212529",
     borderColor: "212529",
-    color: "fff",
   },
   ":focus": {
+    color: "fff",
     backgroundColor: "1c1f23",
     borderColor: "1a1e21",
     boxShadow: "0 0 0 0.25rem rgba(66,70,73,0.5)",
-    color: "fff",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "1c1f23",
     borderColor: "1a1e21",
-    color: "fff",
   },
   "selectors": {
     [`${active}`]: {
+      color: "fff",
       backgroundColor: "1a1e21",
       borderColor: "191c1f",
-      color: "fff",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(66,70,73,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "fff",
       backgroundColor: "1a1e21",
       borderColor: "191c1f",
-      color: "fff",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "fff",
       backgroundColor: "1a1e21",
       borderColor: "191c1f",
-      color: "fff",
     },
     [`${btnCheck}:focus + &`]: {
+      color: "fff",
       backgroundColor: "1c1f23",
       borderColor: "1a1e21",
       boxShadow: "0 0 0 0.25rem rgba(66,70,73,0.5)",
-      color: "fff",
     },
     [`${disabled}`]: {
+      color: "fff",
       backgroundColor: "212529",
       borderColor: "212529",
-      color: "fff",
     },
     "&:active:focus": {
       boxShadow: "0 0 0 0.25rem rgba(66,70,73,0.5)",
@@ -4956,59 +4962,59 @@ export const btnDark = style({
 });
 
 export const btnDanger = style({
+  color: "fff",
   backgroundColor: "dc3545",
   borderColor: "dc3545",
-  color: "fff",
   ":active": {
+    color: "fff",
     backgroundColor: "b02a37",
     borderColor: "a52834",
-    color: "fff",
   },
   ":disabled": {
+    color: "fff",
     backgroundColor: "dc3545",
     borderColor: "dc3545",
-    color: "fff",
   },
   ":focus": {
+    color: "fff",
     backgroundColor: "bb2d3b",
     borderColor: "b02a37",
     boxShadow: "0 0 0 0.25rem rgba(225,83,97,0.5)",
-    color: "fff",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "bb2d3b",
     borderColor: "b02a37",
-    color: "fff",
   },
   "selectors": {
     [`${active}`]: {
+      color: "fff",
       backgroundColor: "b02a37",
       borderColor: "a52834",
-      color: "fff",
     },
     [`${active}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(225,83,97,0.5)",
     },
     [`${btnCheck}:active + &`]: {
+      color: "fff",
       backgroundColor: "b02a37",
       borderColor: "a52834",
-      color: "fff",
     },
     [`${btnCheck}:checked + &`]: {
+      color: "fff",
       backgroundColor: "b02a37",
       borderColor: "a52834",
-      color: "fff",
     },
     [`${btnCheck}:focus + &`]: {
+      color: "fff",
       backgroundColor: "bb2d3b",
       borderColor: "b02a37",
       boxShadow: "0 0 0 0.25rem rgba(225,83,97,0.5)",
-      color: "fff",
     },
     [`${disabled}`]: {
+      color: "fff",
       backgroundColor: "dc3545",
       borderColor: "dc3545",
-      color: "fff",
     },
     "&:active:focus": {
       boxShadow: "0 0 0 0.25rem rgba(225,83,97,0.5)",
@@ -5017,9 +5023,9 @@ export const btnDanger = style({
 });
 
 export const btnCheck = style({
+  position: "absolute",
   clip: "rect(0,0,0,0)",
   pointerEvents: "none",
-  position: "absolute",
   "selectors": {
     [`:active + ${btnDanger}:focus`]: {
       boxShadow: "0 0 0 0.25rem rgba(225,83,97,0.5)",
@@ -5121,30 +5127,30 @@ export const btnCheck = style({
 });
 
 export const btn = style({
-  MozUserSelect: "none",
-  WebkitUserSelect: "none",
-  backgroundColor: "transparent",
-  border: "1px solid transparent",
-  borderRadius: "0.25rem",
-  color: "212529",
-  cursor: "pointer",
   display: "inline-block",
-  fontSize: "1rem",
   fontWeight: "400",
   lineHeight: "1.5",
-  padding: "0.375rem 0.75rem",
+  color: "212529",
   textAlign: "center",
   textDecoration: "none",
-  transition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  userSelect: "none",
   verticalAlign: "middle",
+  cursor: "pointer",
+  WebkitUserSelect: "none",
+  MozUserSelect: "none",
+  userSelect: "none",
+  backgroundColor: "transparent",
+  border: "1px solid transparent",
+  padding: "0.375rem 0.75rem",
+  fontSize: "1rem",
+  borderRadius: "0.25rem",
+  transition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
   ":disabled": {
-    opacity: "0.65",
     pointerEvents: "none",
+    opacity: "0.65",
   },
   ":focus": {
-    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
     outline: "0",
+    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
   },
   ":hover": {
     color: "212529",
@@ -5156,28 +5162,28 @@ export const btn = style({
   },
   "selectors": {
     [`${btnCheck}:disabled + &`]: {
+      pointerEvents: "none",
       filter: "none",
       opacity: "0.65",
-      pointerEvents: "none",
     },
     [`${btnCheck}:focus + &`]: {
-      boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
       outline: "0",
+      boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
     },
     [`${btnCheck}[disabled] + &`]: {
+      pointerEvents: "none",
       filter: "none",
       opacity: "0.65",
-      pointerEvents: "none",
     },
     [`${btnGroupLg} > &`]: {
-      borderRadius: "0.3rem",
-      fontSize: "1.25rem",
       padding: "0.5rem 1rem",
+      fontSize: "1.25rem",
+      borderRadius: "0.3rem",
     },
     [`${btnGroupSm} > &`]: {
-      borderRadius: "0.2rem",
-      fontSize: "0.875rem",
       padding: "0.25rem 0.5rem",
+      fontSize: "0.875rem",
+      borderRadius: "0.2rem",
     },
     [`${btnGroupVertical} > ${btnCheck}:checked + &`]: {
       zIndex: "1",
@@ -5190,16 +5196,16 @@ export const btn = style({
       borderTopRightRadius: "0",
     },
     [`${btnGroupVertical} > ${btnGroup}:not(:last-child) > &`]: {
-      borderBottomLeftRadius: "0",
       borderBottomRightRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${btnGroupVertical} > ${btn} ~ &`]: {
       borderTopLeftRadius: "0",
       borderTopRightRadius: "0",
     },
     [`${btnGroupVertical} > &`]: {
-      flex: "1 1 auto",
       position: "relative",
+      flex: "1 1 auto",
       width: "100%",
     },
     [`${btnGroup} > ${btnCheck}:checked + &`]: {
@@ -5209,42 +5215,42 @@ export const btn = style({
       zIndex: "1",
     },
     [`${btnGroup} > ${btnGroup}:not(:first-child) > &`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${btnGroup} > ${btnGroup}:not(:last-child) > &`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${btnGroup} > &`]: {
-      flex: "1 1 auto",
       position: "relative",
+      flex: "1 1 auto",
     },
     [`${btnGroup} > :not + &`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${disabled}`]: {
-      opacity: "0.65",
       pointerEvents: "none",
+      opacity: "0.65",
     },
     [`${inputGroupLg} > &`]: {
-      borderRadius: "0.3rem",
-      fontSize: "1.25rem",
       padding: "0.5rem 1rem",
+      fontSize: "1.25rem",
+      borderRadius: "0.3rem",
     },
     [`${inputGroupSm} > &`]: {
-      borderRadius: "0.2rem",
-      fontSize: "0.875rem",
       padding: "0.25rem 0.5rem",
+      fontSize: "0.875rem",
+      borderRadius: "0.2rem",
     },
     [`${inputGroup} &`]: {
       position: "relative",
       zIndex: "2",
     },
     "&fieldset:disabled &": {
-      opacity: "0.65",
       pointerEvents: "none",
+      opacity: "0.65",
     },
   },
 });
@@ -5257,14 +5263,14 @@ export const accordionItem = style({
     borderTopRightRadius: "0.25rem",
   },
   ":last-of-type": {
-    borderBottomLeftRadius: "0.25rem",
     borderBottomRightRadius: "0.25rem",
+    borderBottomLeftRadius: "0.25rem",
   },
   "selectors": {
     [`${accordionFlush} &`]: {
+      borderRight: "0",
       borderLeft: "0",
       borderRadius: "0",
-      borderRight: "0",
     },
     "&:not(:first-of-type)": {
       borderTop: "0",
@@ -5284,35 +5290,36 @@ export const accordionFlush = style({
 });
 
 export const accordionButton = style({
+  position: "relative",
+  display: "flex",
   alignItems: "center",
+  width: "100%",
+  padding: "1rem 1.25rem",
+  fontSize: "1rem",
+  color: "212529",
+  textAlign: "left",
   backgroundColor: "fff",
   border: "0",
   borderRadius: "0",
-  color: "212529",
-  display: "flex",
-  fontSize: "1rem",
   overflowAnchor: "none",
-  padding: "1rem 1.25rem",
-  position: "relative",
-  textAlign: "left",
   transition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out , border-radius 0.15s ease",
-  width: "100%",
   "::after": {
+    flexShrink: "0",
+    width: "1.25rem",
+    height: "1.25rem",
+    marginLeft: "auto",
+    content: "",
     backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e)",
     backgroundRepeat: "no-repeat",
     backgroundSize: "1.25rem",
-    content: "",
-    flexShrink: "0",
-    height: "1.25rem",
-    marginLeft: "auto",
+    transition: "transform 0.2s ease-in-out",
     transition: "none",
-    width: "1.25rem",
   },
   ":focus": {
-    borderColor: "86b7fe",
-    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
-    outline: "0",
     zIndex: "3",
+    borderColor: "86b7fe",
+    outline: "0",
+    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
   },
   ":hover": {
     zIndex: "2",
@@ -5331,9 +5338,9 @@ export const accordionButton = style({
       borderTopRightRadius: "calc(0.25rem-1px)",
     },
     "&:not": {
+      color: "0c63e4",
       backgroundColor: "e7f1ff",
       boxShadow: "inset 0 -1px 0 rgba(0,0,0,0.125)",
-      color: "0c63e4",
     },
     "&:not::after": {
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e)",
@@ -5348,8 +5355,8 @@ export const accordionCollapse = style({
       borderWidth: "0",
     },
     [`${accordionItem}:last-of-type &`]: {
-      borderBottomLeftRadius: "0.25rem",
       borderBottomRightRadius: "0.25rem",
+      borderBottomLeftRadius: "0.25rem",
     },
   },
 });
@@ -5359,8 +5366,8 @@ export const active = style({
     "(min-width: 576px)": {
       "selectors": {
         [`${listGroupHorizontalXl} > ${listGroupItem} + ${listGroupItem}&`]: {
-          borderLeftWidth: "1px",
           marginLeft: "-1px",
+          borderLeftWidth: "1px",
         },
         [`${listGroupHorizontalXl} > ${listGroupItem}&`]: {
           marginTop: "0",
@@ -5368,8 +5375,8 @@ export const active = style({
       },
       "selectors": {
         [`${listGroupHorizontalXxl} > ${listGroupItem} + ${listGroupItem}&`]: {
-          borderLeftWidth: "1px",
           marginLeft: "-1px",
+          borderLeftWidth: "1px",
         },
         [`${listGroupHorizontalXxl} > ${listGroupItem}&`]: {
           marginTop: "0",
@@ -5377,8 +5384,8 @@ export const active = style({
       },
       "selectors": {
         [`${listGroupHorizontalSm} > ${listGroupItem} + ${listGroupItem}&`]: {
-          borderLeftWidth: "1px",
           marginLeft: "-1px",
+          borderLeftWidth: "1px",
         },
         [`${listGroupHorizontalSm} > ${listGroupItem}&`]: {
           marginTop: "0",
@@ -5386,8 +5393,8 @@ export const active = style({
       },
       "selectors": {
         [`${listGroupHorizontalMd} > ${listGroupItem} + ${listGroupItem}&`]: {
-          borderLeftWidth: "1px",
           marginLeft: "-1px",
+          borderLeftWidth: "1px",
         },
         [`${listGroupHorizontalMd} > ${listGroupItem}&`]: {
           marginTop: "0",
@@ -5395,8 +5402,8 @@ export const active = style({
       },
       "selectors": {
         [`${listGroupHorizontalLg} > ${listGroupItem} + ${listGroupItem}&`]: {
-          borderLeftWidth: "1px",
           marginLeft: "-1px",
+          borderLeftWidth: "1px",
         },
         [`${listGroupHorizontalLg} > ${listGroupItem}&`]: {
           marginTop: "0",
@@ -5412,8 +5419,8 @@ export const active = style({
       zIndex: "1",
     },
     [`${carouselFade} ${carouselItem}&`]: {
-      opacity: "1",
       zIndex: "1",
+      opacity: "1",
     },
     [`${carouselIndicators} &`]: {
       opacity: "1",
@@ -5425,28 +5432,28 @@ export const active = style({
       transform: "translateX(-100%)",
     },
     [`${dropdownMenuDark} ${dropdownItem}&`]: {
-      backgroundColor: "0d6efd",
       color: "fff",
+      backgroundColor: "0d6efd",
     },
     [`${listGroupHorizontal} > ${listGroupItem} + ${listGroupItem}&`]: {
-      borderLeftWidth: "1px",
       marginLeft: "-1px",
+      borderLeftWidth: "1px",
     },
     [`${listGroupHorizontal} > ${listGroupItem}&`]: {
       marginTop: "0",
     },
     [`${listGroupItem} + ${listGroupItem}&`]: {
-      borderTopWidth: "1px",
       marginTop: "-1px",
+      borderTopWidth: "1px",
     },
     [`${navPills} ${navLink}&`]: {
-      backgroundColor: "0d6efd",
       color: "fff",
+      backgroundColor: "0d6efd",
     },
     [`${navTabs} ${navLink}&`]: {
+      color: "495057",
       backgroundColor: "fff",
       borderColor: "dee2e6 dee2e6 fff",
-      color: "495057",
     },
     [`${navbarDark} ${navbarNav} ${navLink}&`]: {
       color: "fff",
@@ -6171,16 +6178,16 @@ export const alignSelfXxlStretch = style({
 });
 
 export const badge = style({
-  borderRadius: "0.25rem",
-  color: "fff",
   display: "inline-block",
+  padding: "0.35em 0.65em",
   fontSize: "0.75em",
   fontWeight: "700",
   lineHeight: "1",
-  padding: "0.35em 0.65em",
+  color: "fff",
   textAlign: "center",
-  verticalAlign: "baseline",
   whiteSpace: "nowrap",
+  verticalAlign: "baseline",
+  borderRadius: "0.25rem",
   ":empty": {
     display: "none",
   },
@@ -6193,8 +6200,8 @@ export const badge = style({
 });
 
 export const blockquote = style({
-  fontSize: "1.25rem",
   marginBottom: "1rem",
+  fontSize: "1.25rem",
   "selectors": {
     "& > :last-child": {
       marginBottom: "0",
@@ -6205,10 +6212,10 @@ export const blockquote = style({
 export const breadcrumbItem = style({
   "selectors": {
     [` + ${breadcrumbItem}::before`]: {
-      color: "6c757d",
-      content: "var(--bs-breadcrumb-divider,/)",
       float: "left",
       paddingRight: "0.5rem",
+      color: "6c757d",
+      content: "var(--bs-breadcrumb-divider,/)",
     },
     [`${active}`]: {
       color: "6c757d",
@@ -6222,54 +6229,54 @@ export const breadcrumbItem = style({
 export const bsPopoverAuto = style({
   "selectors": {
     [`[data-popper-placement^='bottom'] ${popoverHeader}::before`]: {
-      borderBottom: "1px solid f0f0f0",
-      content: "",
-      display: "block",
-      left: "50%",
-      marginLeft: "-0.5rem",
       position: "absolute",
       top: "0",
+      left: "50%",
+      display: "block",
       width: "1rem",
+      marginLeft: "-0.5rem",
+      content: "",
+      borderBottom: "1px solid f0f0f0",
     },
     [`[data-popper-placement^='bottom'] > ${popoverArrow}::after`]: {
-      borderBottomColor: "fff",
-      borderWidth: "0 0.5rem 0.5rem 0.5rem",
       top: "1px",
+      borderWidth: "0 0.5rem 0.5rem 0.5rem",
+      borderBottomColor: "fff",
     },
     [`[data-popper-placement^='bottom'] > ${popoverArrow}::before`]: {
-      borderBottomColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0 0.5rem 0.5rem 0.5rem",
       top: "0",
+      borderWidth: "0 0.5rem 0.5rem 0.5rem",
+      borderBottomColor: "rgba(0,0,0,0.25)",
     },
     [`[data-popper-placement^='left'] > ${popoverArrow}::after`]: {
-      borderLeftColor: "fff",
-      borderWidth: "0.5rem 0 0.5rem 0.5rem",
       right: "1px",
+      borderWidth: "0.5rem 0 0.5rem 0.5rem",
+      borderLeftColor: "fff",
     },
     [`[data-popper-placement^='left'] > ${popoverArrow}::before`]: {
-      borderLeftColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0.5rem 0 0.5rem 0.5rem",
       right: "0",
+      borderWidth: "0.5rem 0 0.5rem 0.5rem",
+      borderLeftColor: "rgba(0,0,0,0.25)",
     },
     [`[data-popper-placement^='right'] > ${popoverArrow}::after`]: {
-      borderRightColor: "fff",
-      borderWidth: "0.5rem 0.5rem 0.5rem 0",
       left: "1px",
+      borderWidth: "0.5rem 0.5rem 0.5rem 0",
+      borderRightColor: "fff",
     },
     [`[data-popper-placement^='right'] > ${popoverArrow}::before`]: {
-      borderRightColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0.5rem 0.5rem 0.5rem 0",
       left: "0",
+      borderWidth: "0.5rem 0.5rem 0.5rem 0",
+      borderRightColor: "rgba(0,0,0,0.25)",
     },
     [`[data-popper-placement^='top'] > ${popoverArrow}::after`]: {
-      borderTopColor: "fff",
-      borderWidth: "0.5rem 0.5rem 0",
       bottom: "1px",
+      borderWidth: "0.5rem 0.5rem 0",
+      borderTopColor: "fff",
     },
     [`[data-popper-placement^='top'] > ${popoverArrow}::before`]: {
-      borderTopColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0.5rem 0.5rem 0",
       bottom: "0",
+      borderWidth: "0.5rem 0.5rem 0",
+      borderTopColor: "rgba(0,0,0,0.25)",
     },
   },
 });
@@ -6277,24 +6284,24 @@ export const bsPopoverAuto = style({
 export const bsPopoverBottom = style({
   "selectors": {
     [` ${popoverHeader}::before`]: {
-      borderBottom: "1px solid f0f0f0",
-      content: "",
-      display: "block",
-      left: "50%",
-      marginLeft: "-0.5rem",
       position: "absolute",
       top: "0",
+      left: "50%",
+      display: "block",
       width: "1rem",
+      marginLeft: "-0.5rem",
+      content: "",
+      borderBottom: "1px solid f0f0f0",
     },
     [` > ${popoverArrow}::after`]: {
-      borderBottomColor: "fff",
-      borderWidth: "0 0.5rem 0.5rem 0.5rem",
       top: "1px",
+      borderWidth: "0 0.5rem 0.5rem 0.5rem",
+      borderBottomColor: "fff",
     },
     [` > ${popoverArrow}::before`]: {
-      borderBottomColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0 0.5rem 0.5rem 0.5rem",
       top: "0",
+      borderWidth: "0 0.5rem 0.5rem 0.5rem",
+      borderBottomColor: "rgba(0,0,0,0.25)",
     },
   },
 });
@@ -6302,14 +6309,14 @@ export const bsPopoverBottom = style({
 export const bsPopoverEnd = style({
   "selectors": {
     [` > ${popoverArrow}::after`]: {
-      borderRightColor: "fff",
-      borderWidth: "0.5rem 0.5rem 0.5rem 0",
       left: "1px",
+      borderWidth: "0.5rem 0.5rem 0.5rem 0",
+      borderRightColor: "fff",
     },
     [` > ${popoverArrow}::before`]: {
-      borderRightColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0.5rem 0.5rem 0.5rem 0",
       left: "0",
+      borderWidth: "0.5rem 0.5rem 0.5rem 0",
+      borderRightColor: "rgba(0,0,0,0.25)",
     },
   },
 });
@@ -6317,14 +6324,14 @@ export const bsPopoverEnd = style({
 export const bsPopoverStart = style({
   "selectors": {
     [` > ${popoverArrow}::after`]: {
-      borderLeftColor: "fff",
-      borderWidth: "0.5rem 0 0.5rem 0.5rem",
       right: "1px",
+      borderWidth: "0.5rem 0 0.5rem 0.5rem",
+      borderLeftColor: "fff",
     },
     [` > ${popoverArrow}::before`]: {
-      borderLeftColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0.5rem 0 0.5rem 0.5rem",
       right: "0",
+      borderWidth: "0.5rem 0 0.5rem 0.5rem",
+      borderLeftColor: "rgba(0,0,0,0.25)",
     },
   },
 });
@@ -6332,14 +6339,14 @@ export const bsPopoverStart = style({
 export const bsPopoverTop = style({
   "selectors": {
     [` > ${popoverArrow}::after`]: {
-      borderTopColor: "fff",
-      borderWidth: "0.5rem 0.5rem 0",
       bottom: "1px",
+      borderWidth: "0.5rem 0.5rem 0",
+      borderTopColor: "fff",
     },
     [` > ${popoverArrow}::before`]: {
-      borderTopColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0.5rem 0.5rem 0",
       bottom: "0",
+      borderWidth: "0.5rem 0.5rem 0",
+      borderTopColor: "rgba(0,0,0,0.25)",
     },
   },
 });
@@ -6350,33 +6357,33 @@ export const bsTooltipAuto = style({
       padding: "0.4rem 0",
     },
     [`[data-popper-placement^='bottom'] ${tooltipArrow}::before`]: {
-      borderBottomColor: "000",
-      borderWidth: "0 0.4rem 0.4rem",
       bottom: "-1px",
+      borderWidth: "0 0.4rem 0.4rem",
+      borderBottomColor: "000",
     },
     "&[data-popper-placement^='left']": {
       padding: "0 0.4rem",
     },
     [`[data-popper-placement^='left'] ${tooltipArrow}::before`]: {
-      borderLeftColor: "000",
-      borderWidth: "0.4rem 0 0.4rem 0.4rem",
       left: "-1px",
+      borderWidth: "0.4rem 0 0.4rem 0.4rem",
+      borderLeftColor: "000",
     },
     "&[data-popper-placement^='right']": {
       padding: "0 0.4rem",
     },
     [`[data-popper-placement^='right'] ${tooltipArrow}::before`]: {
-      borderRightColor: "000",
-      borderWidth: "0.4rem 0.4rem 0.4rem 0",
       right: "-1px",
+      borderWidth: "0.4rem 0.4rem 0.4rem 0",
+      borderRightColor: "000",
     },
     "&[data-popper-placement^='top']": {
       padding: "0.4rem 0",
     },
     [`[data-popper-placement^='top'] ${tooltipArrow}::before`]: {
-      borderTopColor: "000",
-      borderWidth: "0.4rem 0.4rem 0",
       top: "-1px",
+      borderWidth: "0.4rem 0.4rem 0",
+      borderTopColor: "000",
     },
   },
 });
@@ -6385,9 +6392,9 @@ export const bsTooltipBottom = style({
   padding: "0.4rem 0",
   "selectors": {
     [` ${tooltipArrow}::before`]: {
-      borderBottomColor: "000",
-      borderWidth: "0 0.4rem 0.4rem",
       bottom: "-1px",
+      borderWidth: "0 0.4rem 0.4rem",
+      borderBottomColor: "000",
     },
   },
 });
@@ -6396,9 +6403,9 @@ export const bsTooltipEnd = style({
   padding: "0 0.4rem",
   "selectors": {
     [` ${tooltipArrow}::before`]: {
-      borderRightColor: "000",
-      borderWidth: "0.4rem 0.4rem 0.4rem 0",
       right: "-1px",
+      borderWidth: "0.4rem 0.4rem 0.4rem 0",
+      borderRightColor: "000",
     },
   },
 });
@@ -6407,9 +6414,9 @@ export const bsTooltipStart = style({
   padding: "0 0.4rem",
   "selectors": {
     [` ${tooltipArrow}::before`]: {
-      borderLeftColor: "000",
-      borderWidth: "0.4rem 0 0.4rem 0.4rem",
       left: "-1px",
+      borderWidth: "0.4rem 0 0.4rem 0.4rem",
+      borderLeftColor: "000",
     },
   },
 });
@@ -6418,75 +6425,75 @@ export const bsTooltipTop = style({
   padding: "0.4rem 0",
   "selectors": {
     [` ${tooltipArrow}::before`]: {
-      borderTopColor: "000",
-      borderWidth: "0.4rem 0.4rem 0",
       top: "-1px",
+      borderWidth: "0.4rem 0.4rem 0",
+      borderTopColor: "000",
     },
   },
 });
 
 export const btnClose = style({
+  boxSizing: "content-box",
+  width: "1em",
+  height: "1em",
+  padding: "0.25em 0.25em",
+  color: "000",
   background: "transparent url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e) center / 1em auto no-repeat",
   border: "0",
   borderRadius: "0.25rem",
-  boxSizing: "content-box",
-  color: "000",
-  height: "1em",
   opacity: "0.5",
-  padding: "0.25em 0.25em",
-  width: "1em",
   ":disabled": {
-    MozUserSelect: "none",
-    WebkitUserSelect: "none",
-    opacity: "0.25",
     pointerEvents: "none",
+    WebkitUserSelect: "none",
+    MozUserSelect: "none",
     userSelect: "none",
+    opacity: "0.25",
   },
   ":focus": {
+    outline: "0",
     boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
     opacity: "1",
-    outline: "0",
   },
   ":hover": {
     color: "000",
-    opacity: "0.75",
     textDecoration: "none",
+    opacity: "0.75",
   },
   "selectors": {
     [`${alertDismissible} &`]: {
-      padding: "1.25rem 1rem",
       position: "absolute",
-      right: "0",
       top: "0",
+      right: "0",
       zIndex: "2",
+      padding: "1.25rem 1rem",
     },
     [`${disabled}`]: {
-      MozUserSelect: "none",
-      WebkitUserSelect: "none",
-      opacity: "0.25",
       pointerEvents: "none",
+      WebkitUserSelect: "none",
+      MozUserSelect: "none",
       userSelect: "none",
+      opacity: "0.25",
     },
     [`${modalHeader} &`]: {
-      margin: "-0.5rem -0.5rem -0.5rem auto",
       padding: "0.5rem 0.5rem",
+      margin: "-0.5rem -0.5rem -0.5rem auto",
     },
     [`${offcanvasHeader} &`]: {
-      marginBottom: "-0.5rem",
-      marginRight: "-0.5rem",
-      marginTop: "-0.5rem",
       padding: "0.5rem 0.5rem",
+      marginTop: "-0.5rem",
+      marginRight: "-0.5rem",
+      marginBottom: "-0.5rem",
     },
     [`${toastHeader} &`]: {
-      marginLeft: "0.75rem",
       marginRight: "-0.375rem",
+      marginLeft: "0.75rem",
     },
   },
 });
 
 export const btnLink = style({
-  color: "0d6efd",
   fontWeight: "400",
+  color: "0d6efd",
   textDecoration: "underline",
   ":disabled": {
     color: "6c757d",
@@ -6502,21 +6509,21 @@ export const btnLink = style({
 });
 
 export const card = style({
-  backgroundClip: "border-box",
-  backgroundColor: "fff",
-  border: "1px solid rgba(0,0,0,0.125)",
-  borderRadius: "0.25rem",
+  position: "relative",
   display: "flex",
   flexDirection: "column",
   minWidth: "0",
-  position: "relative",
   wordWrap: "break-word",
+  backgroundColor: "fff",
+  backgroundClip: "border-box",
+  border: "1px solid rgba(0,0,0,0.125)",
+  borderRadius: "0.25rem",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
         [`${cardGroup} > ${card} + &`]: {
-          borderLeft: "0",
           marginLeft: "0",
+          borderLeft: "0",
         },
         [`${cardGroup} > &`]: {
           flex: "1 0 0%",
@@ -6527,18 +6534,18 @@ export const card = style({
   },
   "selectors": {
     [` > ${listGroup}:first-child`]: {
+      borderTopWidth: "0",
       borderTopLeftRadius: "calc(0.25rem-1px)",
       borderTopRightRadius: "calc(0.25rem-1px)",
-      borderTopWidth: "0",
     },
     [` > ${listGroup}:last-child`]: {
-      borderBottomLeftRadius: "calc(0.25rem-1px)",
-      borderBottomRightRadius: "calc(0.25rem-1px)",
       borderBottomWidth: "0",
+      borderBottomRightRadius: "calc(0.25rem-1px)",
+      borderBottomLeftRadius: "calc(0.25rem-1px)",
     },
     "& > hr": {
-      marginLeft: "0",
       marginRight: "0",
+      marginLeft: "0",
     },
     [`${cardGroup} > &`]: {
       marginBottom: "0.75rem",
@@ -6547,9 +6554,9 @@ export const card = style({
 });
 
 export const cardFooter = style({
+  padding: "0.5rem 1rem",
   backgroundColor: "rgba(0,0,0,0.03)",
   borderTop: "1px solid rgba(0,0,0,0.125)",
-  padding: "0.5rem 1rem",
   ":last-child": {
     borderRadius: "0 0 calc(0.25rem-1px) calc(0.25rem-1px)",
   },
@@ -6573,10 +6580,10 @@ export const cardFooter = style({
 });
 
 export const cardHeader = style({
+  padding: "0.5rem 1rem",
+  marginBottom: "0",
   backgroundColor: "rgba(0,0,0,0.03)",
   borderBottom: "1px solid rgba(0,0,0,0.125)",
-  marginBottom: "0",
-  padding: "0.5rem 1rem",
   ":first-child": {
     borderRadius: "calc(0.25rem-1px) calc(0.25rem-1px) 0 0",
   },
@@ -6595,9 +6602,9 @@ export const cardHeader = style({
 });
 
 export const cardImgBottom = style({
-  borderBottomLeftRadius: "calc(0.25rem-1px)",
-  borderBottomRightRadius: "calc(0.25rem-1px)",
   width: "100%",
+  borderBottomRightRadius: "calc(0.25rem-1px)",
+  borderBottomLeftRadius: "calc(0.25rem-1px)",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
@@ -6613,9 +6620,9 @@ export const cardImgBottom = style({
 });
 
 export const cardImgTop = style({
+  width: "100%",
   borderTopLeftRadius: "calc(0.25rem-1px)",
   borderTopRightRadius: "calc(0.25rem-1px)",
-  width: "100%",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
@@ -6648,13 +6655,13 @@ export const carousel = style({
 });
 
 export const carouselCaption = style({
-  bottom: "1.25rem",
-  color: "fff",
-  left: "15%",
-  paddingBottom: "1.25rem",
-  paddingTop: "1.25rem",
   position: "absolute",
   right: "15%",
+  bottom: "1.25rem",
+  left: "15%",
+  paddingTop: "1.25rem",
+  paddingBottom: "1.25rem",
+  color: "fff",
   textAlign: "center",
   "selectors": {
     [`${carouselDark} &`]: {
@@ -6664,33 +6671,33 @@ export const carouselCaption = style({
 });
 
 export const carouselControlNext = style({
+  position: "absolute",
+  top: "0",
+  bottom: "0",
+  zIndex: "1",
+  display: "flex",
   alignItems: "center",
+  justifyContent: "center",
+  width: "15%",
+  padding: "0",
+  color: "fff",
+  textAlign: "center",
   background: "none",
   border: "0",
-  bottom: "0",
-  color: "fff",
-  display: "flex",
-  justifyContent: "center",
   opacity: "0.5",
-  padding: "0",
-  position: "absolute",
-  right: "0",
-  textAlign: "center",
-  top: "0",
   transition: "opacity 0.15s ease",
-  width: "15%",
-  zIndex: "1",
+  right: "0",
   ":focus": {
     color: "fff",
-    opacity: "0.9",
-    outline: "0",
     textDecoration: "none",
+    outline: "0",
+    opacity: "0.9",
   },
   ":hover": {
     color: "fff",
-    opacity: "0.9",
-    outline: "0",
     textDecoration: "none",
+    outline: "0",
+    opacity: "0.9",
   },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
@@ -6700,13 +6707,13 @@ export const carouselControlNext = style({
 });
 
 export const carouselControlNextIcon = style({
-  backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e)",
-  backgroundPosition: "50%",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "100% 100%",
   display: "inline-block",
-  height: "2rem",
   width: "2rem",
+  height: "2rem",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "50%",
+  backgroundSize: "100% 100%",
+  backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e)",
   "selectors": {
     [`${carouselDark} &`]: {
       filter: "invert(1) grayscale(100)",
@@ -6715,33 +6722,33 @@ export const carouselControlNextIcon = style({
 });
 
 export const carouselControlPrev = style({
+  position: "absolute",
+  top: "0",
+  bottom: "0",
+  zIndex: "1",
+  display: "flex",
   alignItems: "center",
+  justifyContent: "center",
+  width: "15%",
+  padding: "0",
+  color: "fff",
+  textAlign: "center",
   background: "none",
   border: "0",
-  bottom: "0",
-  color: "fff",
-  display: "flex",
-  justifyContent: "center",
-  left: "0",
   opacity: "0.5",
-  padding: "0",
-  position: "absolute",
-  textAlign: "center",
-  top: "0",
   transition: "opacity 0.15s ease",
-  width: "15%",
-  zIndex: "1",
+  left: "0",
   ":focus": {
     color: "fff",
-    opacity: "0.9",
-    outline: "0",
     textDecoration: "none",
+    outline: "0",
+    opacity: "0.9",
   },
   ":hover": {
     color: "fff",
-    opacity: "0.9",
-    outline: "0",
     textDecoration: "none",
+    outline: "0",
+    opacity: "0.9",
   },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
@@ -6751,13 +6758,13 @@ export const carouselControlPrev = style({
 });
 
 export const carouselControlPrevIcon = style({
-  backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e)",
-  backgroundPosition: "50%",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "100% 100%",
   display: "inline-block",
-  height: "2rem",
   width: "2rem",
+  height: "2rem",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "50%",
+  backgroundSize: "100% 100%",
+  backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e)",
   "selectors": {
     [`${carouselDark} &`]: {
       filter: "invert(1) grayscale(100)",
@@ -7413,8 +7420,8 @@ export const collapseHorizontal = style({
 export const collapsed = style({
   "selectors": {
     [`${accordionItem}:last-of-type ${accordionButton}&`]: {
-      borderBottomLeftRadius: "calc(0.25rem-1px)",
       borderBottomRightRadius: "calc(0.25rem-1px)",
+      borderBottomLeftRadius: "calc(0.25rem-1px)",
     },
   },
 });
@@ -7435,140 +7442,154 @@ export const collapsing = style({
   },
   "selectors": {
     [`${collapseHorizontal}`]: {
+      width: "0",
       height: "auto",
       transition: "width 0.35s ease",
-      width: "0",
     },
   },
 });
 
 export const container = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "var(--bs-gutter-x,0.75rem)",
-  paddingRight: "var(--bs-gutter-x,0.75rem)",
   width: "100%",
+  paddingRight: "var(--bs-gutter-x,0.75rem)",
+  paddingLeft: "var(--bs-gutter-x,0.75rem)",
+  marginRight: "auto",
+  marginLeft: "auto",
   "@media": {
     "(min-width: 576px)": {
+      maxWidth: "540px",
+      maxWidth: "720px",
+      maxWidth: "960px",
+      maxWidth: "1140px",
       maxWidth: "1320px",
     },
   },
   "selectors": {
     [`${navbar} > &`]: {
-      alignItems: "center",
       display: "flex",
       flexWrap: "inherit",
+      alignItems: "center",
       justifyContent: "space-between",
     },
   },
 });
 
 export const containerFluid = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "var(--bs-gutter-x,0.75rem)",
-  paddingRight: "var(--bs-gutter-x,0.75rem)",
   width: "100%",
+  paddingRight: "var(--bs-gutter-x,0.75rem)",
+  paddingLeft: "var(--bs-gutter-x,0.75rem)",
+  marginRight: "auto",
+  marginLeft: "auto",
   "selectors": {
     [`${navbar} > &`]: {
-      alignItems: "center",
       display: "flex",
       flexWrap: "inherit",
+      alignItems: "center",
       justifyContent: "space-between",
     },
   },
 });
 
 export const containerLg = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "var(--bs-gutter-x,0.75rem)",
-  paddingRight: "var(--bs-gutter-x,0.75rem)",
   width: "100%",
+  paddingRight: "var(--bs-gutter-x,0.75rem)",
+  paddingLeft: "var(--bs-gutter-x,0.75rem)",
+  marginRight: "auto",
+  marginLeft: "auto",
   "@media": {
     "(min-width: 992px)": {
+      maxWidth: "960px",
+      maxWidth: "1140px",
       maxWidth: "1320px",
     },
   },
   "selectors": {
     [`${navbar} > &`]: {
-      alignItems: "center",
       display: "flex",
       flexWrap: "inherit",
+      alignItems: "center",
       justifyContent: "space-between",
     },
   },
 });
 
 export const containerMd = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "var(--bs-gutter-x,0.75rem)",
-  paddingRight: "var(--bs-gutter-x,0.75rem)",
   width: "100%",
+  paddingRight: "var(--bs-gutter-x,0.75rem)",
+  paddingLeft: "var(--bs-gutter-x,0.75rem)",
+  marginRight: "auto",
+  marginLeft: "auto",
   "@media": {
     "(min-width: 768px)": {
+      maxWidth: "720px",
+      maxWidth: "960px",
+      maxWidth: "1140px",
       maxWidth: "1320px",
     },
   },
   "selectors": {
     [`${navbar} > &`]: {
-      alignItems: "center",
       display: "flex",
       flexWrap: "inherit",
+      alignItems: "center",
       justifyContent: "space-between",
     },
   },
 });
 
 export const containerSm = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "var(--bs-gutter-x,0.75rem)",
-  paddingRight: "var(--bs-gutter-x,0.75rem)",
   width: "100%",
+  paddingRight: "var(--bs-gutter-x,0.75rem)",
+  paddingLeft: "var(--bs-gutter-x,0.75rem)",
+  marginRight: "auto",
+  marginLeft: "auto",
   "@media": {
     "(min-width: 576px)": {
+      maxWidth: "540px",
+      maxWidth: "720px",
+      maxWidth: "960px",
+      maxWidth: "1140px",
       maxWidth: "1320px",
     },
   },
   "selectors": {
     [`${navbar} > &`]: {
-      alignItems: "center",
       display: "flex",
       flexWrap: "inherit",
+      alignItems: "center",
       justifyContent: "space-between",
     },
   },
 });
 
 export const containerXl = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "var(--bs-gutter-x,0.75rem)",
-  paddingRight: "var(--bs-gutter-x,0.75rem)",
   width: "100%",
+  paddingRight: "var(--bs-gutter-x,0.75rem)",
+  paddingLeft: "var(--bs-gutter-x,0.75rem)",
+  marginRight: "auto",
+  marginLeft: "auto",
   "@media": {
     "(min-width: 1200px)": {
+      maxWidth: "1140px",
       maxWidth: "1320px",
     },
   },
   "selectors": {
     [`${navbar} > &`]: {
-      alignItems: "center",
       display: "flex",
       flexWrap: "inherit",
+      alignItems: "center",
       justifyContent: "space-between",
     },
   },
 });
 
 export const containerXxl = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "var(--bs-gutter-x,0.75rem)",
-  paddingRight: "var(--bs-gutter-x,0.75rem)",
   width: "100%",
+  paddingRight: "var(--bs-gutter-x,0.75rem)",
+  paddingLeft: "var(--bs-gutter-x,0.75rem)",
+  marginRight: "auto",
+  marginLeft: "auto",
   "@media": {
     "(min-width: 1400px)": {
       maxWidth: "1320px",
@@ -7576,9 +7597,9 @@ export const containerXxl = style({
   },
   "selectors": {
     [`${navbar} > &`]: {
-      alignItems: "center",
       display: "flex",
       flexWrap: "inherit",
+      alignItems: "center",
       justifyContent: "space-between",
     },
   },
@@ -8131,10 +8152,10 @@ export const display6 = style({
 });
 
 export const dropdownDivider = style({
-  borderTop: "1px solid rgba(0,0,0,0.15)",
   height: "0",
   margin: "0.5rem 0",
   overflow: "hidden",
+  borderTop: "1px solid rgba(0,0,0,0.15)",
   "selectors": {
     [`${dropdownMenuDark} &`]: {
       borderColor: "rgba(0,0,0,0.15)",
@@ -8143,11 +8164,11 @@ export const dropdownDivider = style({
 });
 
 export const dropdownHeader = style({
-  color: "6c757d",
   display: "block",
-  fontSize: "0.875rem",
-  marginBottom: "0",
   padding: "0.5rem 1rem",
+  marginBottom: "0",
+  fontSize: "0.875rem",
+  color: "6c757d",
   whiteSpace: "nowrap",
   "selectors": {
     [`${dropdownMenuDark} &`]: {
@@ -8157,9 +8178,9 @@ export const dropdownHeader = style({
 });
 
 export const dropdownItemText = style({
-  color: "212529",
   display: "block",
   padding: "0.25rem 1rem",
+  color: "212529",
   "selectors": {
     [`${dropdownMenuDark} &`]: {
       color: "dee2e6",
@@ -8168,20 +8189,20 @@ export const dropdownItemText = style({
 });
 
 export const dropdownMenu = style({
-  backgroundClip: "padding-box",
-  backgroundColor: "fff",
-  border: "1px solid rgba(0,0,0,0.15)",
-  borderRadius: "0.25rem",
-  color: "212529",
+  position: "absolute",
+  zIndex: "1000",
   display: "none",
-  fontSize: "1rem",
-  listStyle: "none",
-  margin: "0",
   minWidth: "10rem",
   padding: "0.5rem 0",
-  position: "absolute",
+  margin: "0",
+  fontSize: "1rem",
+  color: "212529",
   textAlign: "left",
-  zIndex: "1000",
+  listStyle: "none",
+  backgroundColor: "fff",
+  backgroundClip: "padding-box",
+  border: "1px solid rgba(0,0,0,0.15)",
+  borderRadius: "0.25rem",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
@@ -8213,9 +8234,9 @@ export const dropdownMenu = style({
   },
   "selectors": {
     [`${navTabs} &`]: {
+      marginTop: "-1px",
       borderTopLeftRadius: "0",
       borderTopRightRadius: "0",
-      marginTop: "-1px",
     },
     [`${navbarExpand} ${navbarNav} &`]: {
       position: "absolute",
@@ -8227,9 +8248,9 @@ export const dropdownMenu = style({
       display: "block",
     },
     "&[data-bs-popper]": {
+      top: "100%",
       left: "0",
       marginTop: "0.125rem",
-      top: "100%",
     },
   },
 });
@@ -8240,8 +8261,8 @@ export const dropdownMenuEnd = style({
   },
   "selectors": {
     "&[data-bs-popper]": {
-      left: "auto",
       right: "0",
+      left: "auto",
     },
   },
 });
@@ -8251,8 +8272,8 @@ export const dropdownMenuLgEnd = style({
     "(min-width: 992px)": {
       "selectors": {
         "&[data-bs-popper]": {
-          left: "auto",
           right: "0",
+          left: "auto",
         },
       },
     },
@@ -8264,8 +8285,8 @@ export const dropdownMenuLgStart = style({
     "(min-width: 992px)": {
       "selectors": {
         "&[data-bs-popper]": {
-          left: "0",
           right: "auto",
+          left: "0",
         },
       },
     },
@@ -8277,8 +8298,8 @@ export const dropdownMenuMdEnd = style({
     "(min-width: 768px)": {
       "selectors": {
         "&[data-bs-popper]": {
-          left: "auto",
           right: "0",
+          left: "auto",
         },
       },
     },
@@ -8290,8 +8311,8 @@ export const dropdownMenuMdStart = style({
     "(min-width: 768px)": {
       "selectors": {
         "&[data-bs-popper]": {
-          left: "0",
           right: "auto",
+          left: "0",
         },
       },
     },
@@ -8303,8 +8324,8 @@ export const dropdownMenuSmEnd = style({
     "(min-width: 576px)": {
       "selectors": {
         "&[data-bs-popper]": {
-          left: "auto",
           right: "0",
+          left: "auto",
         },
       },
     },
@@ -8316,8 +8337,8 @@ export const dropdownMenuSmStart = style({
     "(min-width: 576px)": {
       "selectors": {
         "&[data-bs-popper]": {
-          left: "0",
           right: "auto",
+          left: "0",
         },
       },
     },
@@ -8330,8 +8351,8 @@ export const dropdownMenuStart = style({
   },
   "selectors": {
     "&[data-bs-popper]": {
-      left: "0",
       right: "auto",
+      left: "0",
     },
   },
 });
@@ -8341,8 +8362,8 @@ export const dropdownMenuXlEnd = style({
     "(min-width: 1200px)": {
       "selectors": {
         "&[data-bs-popper]": {
-          left: "auto",
           right: "0",
+          left: "auto",
         },
       },
     },
@@ -8354,8 +8375,8 @@ export const dropdownMenuXlStart = style({
     "(min-width: 1200px)": {
       "selectors": {
         "&[data-bs-popper]": {
-          left: "0",
           right: "auto",
+          left: "0",
         },
       },
     },
@@ -8367,8 +8388,8 @@ export const dropdownMenuXxlEnd = style({
     "(min-width: 1400px)": {
       "selectors": {
         "&[data-bs-popper]": {
-          left: "auto",
           right: "0",
+          left: "auto",
         },
       },
     },
@@ -8380,8 +8401,8 @@ export const dropdownMenuXxlStart = style({
     "(min-width: 1400px)": {
       "selectors": {
         "&[data-bs-popper]": {
-          left: "0",
           right: "auto",
+          left: "0",
         },
       },
     },
@@ -8389,27 +8410,27 @@ export const dropdownMenuXxlStart = style({
 });
 
 export const dropdownToggleSplit = style({
-  paddingLeft: "0.5625rem",
   paddingRight: "0.5625rem",
+  paddingLeft: "0.5625rem",
   "::after": {
     marginLeft: "0",
   },
   "selectors": {
     [`${btnGroupLg} > ${btn} + &`]: {
-      paddingLeft: "0.75rem",
       paddingRight: "0.75rem",
+      paddingLeft: "0.75rem",
     },
     [`${btnGroupSm} > ${btn} + &`]: {
-      paddingLeft: "0.375rem",
       paddingRight: "0.375rem",
+      paddingLeft: "0.375rem",
     },
     [`${btnLg} + &`]: {
-      paddingLeft: "0.75rem",
       paddingRight: "0.75rem",
+      paddingLeft: "0.75rem",
     },
     [`${btnSm} + &`]: {
-      paddingLeft: "0.375rem",
       paddingRight: "0.375rem",
+      paddingLeft: "0.375rem",
     },
   },
 });
@@ -8418,23 +8439,24 @@ export const dropend = style({
   position: "relative",
   "selectors": {
     [` ${dropdownMenu}[data-bs-popper]`]: {
-      left: "100%",
-      marginLeft: "0.125rem",
-      marginTop: "0",
-      right: "auto",
       top: "0",
+      right: "auto",
+      left: "100%",
+      marginTop: "0",
+      marginLeft: "0.125rem",
     },
     [` ${dropdownToggleSplit}::after`]: {
       marginLeft: "0",
     },
     [` ${dropdownToggle}::after`]: {
-      borderBottom: "0.3em solid transparent",
-      borderLeft: "0.3em solid",
-      borderRight: "0",
-      borderTop: "0.3em solid transparent",
-      content: "",
       display: "inline-block",
       marginLeft: "0.255em",
+      verticalAlign: "0.255em",
+      content: "",
+      borderTop: "0.3em solid transparent",
+      borderRight: "0",
+      borderBottom: "0.3em solid transparent",
+      borderLeft: "0.3em solid",
       verticalAlign: "0",
     },
     [` ${dropdownToggle}:empty::after`]: {
@@ -8447,28 +8469,30 @@ export const dropstart = style({
   position: "relative",
   "selectors": {
     [` ${dropdownMenu}[data-bs-popper]`]: {
-      left: "auto",
-      marginRight: "0.125rem",
-      marginTop: "0",
-      right: "100%",
       top: "0",
+      right: "100%",
+      left: "auto",
+      marginTop: "0",
+      marginRight: "0.125rem",
     },
     [` ${dropdownToggleSplit}::before`]: {
       marginRight: "0",
     },
     [` ${dropdownToggle}::after`]: {
-      content: "",
-      display: "none",
+      display: "inline-block",
       marginLeft: "0.255em",
       verticalAlign: "0.255em",
+      content: "",
+      display: "none",
     },
     [` ${dropdownToggle}::before`]: {
-      borderBottom: "0.3em solid transparent",
-      borderRight: "0.3em solid",
-      borderTop: "0.3em solid transparent",
-      content: "",
       display: "inline-block",
       marginRight: "0.255em",
+      verticalAlign: "0.255em",
+      content: "",
+      borderTop: "0.3em solid transparent",
+      borderRight: "0.3em solid",
+      borderBottom: "0.3em solid transparent",
       verticalAlign: "0",
     },
     [` ${dropdownToggle}:empty::after`]: {
@@ -8481,23 +8505,23 @@ export const dropup = style({
   position: "relative",
   "selectors": {
     [` ${dropdownMenu}[data-bs-popper]`]: {
-      bottom: "100%",
-      marginBottom: "0.125rem",
-      marginTop: "0",
       top: "auto",
+      bottom: "100%",
+      marginTop: "0",
+      marginBottom: "0.125rem",
     },
     [` ${dropdownToggleSplit}::after`]: {
       marginLeft: "0",
     },
     [` ${dropdownToggle}::after`]: {
-      borderBottom: "0.3em solid",
-      borderLeft: "0.3em solid transparent",
-      borderRight: "0.3em solid transparent",
-      borderTop: "0",
-      content: "",
       display: "inline-block",
       marginLeft: "0.255em",
       verticalAlign: "0.255em",
+      content: "",
+      borderTop: "0",
+      borderRight: "0.3em solid transparent",
+      borderBottom: "0.3em solid",
+      borderLeft: "0.3em solid transparent",
     },
     [` ${dropdownToggle}:empty::after`]: {
       marginLeft: "0",
@@ -9120,20 +9144,20 @@ export const floatXxlStart = style({
 });
 
 export const formCheckInput = style({
-  MozAppearance: "none",
-  WebkitAppearance: "none",
-  WebkitPrintColorAdjust: "exact",
-  appearance: "none",
-  backgroundColor: "fff",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "contain",
-  border: "1px solid rgba(0,0,0,0.25)",
-  colorAdjust: "exact",
+  width: "1em",
   height: "1em",
   marginTop: "0.25em",
   verticalAlign: "top",
-  width: "1em",
+  backgroundColor: "fff",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  backgroundSize: "contain",
+  border: "1px solid rgba(0,0,0,0.25)",
+  WebkitAppearance: "none",
+  MozAppearance: "none",
+  appearance: "none",
+  WebkitPrintColorAdjust: "exact",
+  colorAdjust: "exact",
   ":active": {
     filter: "brightness(90%)",
   },
@@ -9142,14 +9166,14 @@ export const formCheckInput = style({
     borderColor: "0d6efd",
   },
   ":disabled": {
+    pointerEvents: "none",
     filter: "none",
     opacity: "0.5",
-    pointerEvents: "none",
   },
   ":focus": {
     borderColor: "86b7fe",
-    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
     outline: "0",
+    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
   },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
@@ -9166,12 +9190,12 @@ export const formCheckInput = style({
       marginLeft: "-1.5em",
     },
     [`${formSwitch} &`]: {
+      width: "2em",
+      marginLeft: "-2.5em",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e)",
       backgroundPosition: "left center",
       borderRadius: "2em",
-      marginLeft: "-2.5em",
       transition: "background-position 0.15s ease-in-out",
-      width: "2em",
     },
     [`${isInvalid}`]: {
       borderColor: "dc3545",
@@ -9202,8 +9226,8 @@ export const formCheckInput = style({
     },
     "&[type='checkbox']:indeterminate": {
       backgroundColor: "0d6efd",
-      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e)",
       borderColor: "0d6efd",
+      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e)",
     },
     "&[type='radio']": {
       borderRadius: "50%",
@@ -9235,21 +9259,21 @@ export const formCheckLabel = style({
 });
 
 export const formControl = style({
-  MozAppearance: "none",
-  WebkitAppearance: "none",
-  appearance: "none",
-  backgroundClip: "padding-box",
-  backgroundColor: "fff",
-  border: "1px solid ced4da",
-  borderRadius: "0.25rem",
-  color: "212529",
   display: "block",
+  width: "100%",
+  padding: "0.375rem 0.75rem",
   fontSize: "1rem",
   fontWeight: "400",
   lineHeight: "1.5",
-  padding: "0.375rem 0.75rem",
+  color: "212529",
+  backgroundColor: "fff",
+  backgroundClip: "padding-box",
+  border: "1px solid ced4da",
+  WebkitAppearance: "none",
+  MozAppearance: "none",
+  appearance: "none",
+  borderRadius: "0.25rem",
   transition: "border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  width: "100%",
   "::-moz-placeholder": {
     color: "6c757d",
     opacity: "1",
@@ -9263,17 +9287,19 @@ export const formControl = style({
     opacity: "1",
   },
   ":focus": {
+    color: "212529",
     backgroundColor: "fff",
     borderColor: "86b7fe",
-    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
-    color: "212529",
     outline: "0",
+    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
   },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
       "selectors": {
         "&::-webkit-file-upload-button": {
+          WebkitTransition: "none",
+          transition: "none",
           WebkitTransition: "none",
           transition: "none",
         },
@@ -9290,40 +9316,40 @@ export const formControl = style({
       padding: "1rem 0.75rem",
     },
     [`${inputGroupLg} > &`]: {
-      borderRadius: "0.3rem",
-      fontSize: "1.25rem",
       padding: "0.5rem 1rem",
+      fontSize: "1.25rem",
+      borderRadius: "0.3rem",
     },
     [`${inputGroupSm} > &`]: {
-      borderRadius: "0.2rem",
-      fontSize: "0.875rem",
       padding: "0.25rem 0.5rem",
+      fontSize: "0.875rem",
+      borderRadius: "0.2rem",
     },
     [`${inputGroup} > &`]: {
-      flex: "1 1 auto",
-      minWidth: "0",
       position: "relative",
+      flex: "1 1 auto",
       width: "1%",
+      minWidth: "0",
     },
     [`${isInvalid}`]: {
-      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
-      backgroundPosition: "right calc(0.375em+0.1875rem) center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
       borderColor: "dc3545",
       paddingRight: "calc(1.5em+0.75rem)",
+      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "right calc(0.375em+0.1875rem) center",
+      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
     },
     [`${isInvalid}:focus`]: {
       borderColor: "dc3545",
       boxShadow: "0 0 0 0.25rem rgba(220,53,69,0.25)",
     },
     [`${isValid}`]: {
-      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
-      backgroundPosition: "right calc(0.375em+0.1875rem) center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
       borderColor: "198754",
       paddingRight: "calc(1.5em+0.75rem)",
+      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "right calc(0.375em+0.1875rem) center",
+      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
     },
     [`${isValid}:focus`]: {
       borderColor: "198754",
@@ -9333,37 +9359,52 @@ export const formControl = style({
       height: "1.5em",
     },
     "&::-webkit-file-upload-button": {
+      padding: "0.375rem 0.75rem",
+      margin: "-0.375rem -0.75rem",
       WebkitMarginEnd: "0.75rem",
-      WebkitTransition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+      marginInlineEnd: "0.75rem",
+      color: "212529",
       backgroundColor: "e9ecef",
+      pointerEvents: "none",
       borderColor: "inherit",
-      borderInlineEndWidth: "1px",
-      borderRadius: "0",
       borderStyle: "solid",
       borderWidth: "0",
-      color: "212529",
-      margin: "-0.375rem -0.75rem",
-      marginInlineEnd: "0.75rem",
+      borderInlineEndWidth: "1px",
+      borderRadius: "0",
+      WebkitTransition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+      transition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
       padding: "0.375rem 0.75rem",
+      margin: "-0.375rem -0.75rem",
+      WebkitMarginEnd: "0.75rem",
+      marginInlineEnd: "0.75rem",
+      color: "212529",
+      backgroundColor: "e9ecef",
       pointerEvents: "none",
+      borderColor: "inherit",
+      borderStyle: "solid",
+      borderWidth: "0",
+      borderInlineEndWidth: "1px",
+      borderRadius: "0",
+      WebkitTransition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
       transition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
     },
     "&::file-selector-button": {
+      padding: "0.375rem 0.75rem",
+      margin: "-0.375rem -0.75rem",
       WebkitMarginEnd: "0.75rem",
+      marginInlineEnd: "0.75rem",
+      color: "212529",
       backgroundColor: "e9ecef",
+      pointerEvents: "none",
       borderColor: "inherit",
-      borderInlineEndWidth: "1px",
-      borderRadius: "0",
       borderStyle: "solid",
       borderWidth: "0",
-      color: "212529",
-      margin: "-0.375rem -0.75rem",
-      marginInlineEnd: "0.75rem",
-      padding: "0.375rem 0.75rem",
-      pointerEvents: "none",
+      borderInlineEndWidth: "1px",
+      borderRadius: "0",
       transition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
     },
     "&:hover:not(:disabled):not([readonly])::-webkit-file-upload-button": {
+      backgroundColor: "dde0e3",
       backgroundColor: "dde0e3",
     },
     "&:hover:not(:disabled):not([readonly])::file-selector-button": {
@@ -9383,17 +9424,17 @@ export const formControl = style({
 });
 
 export const formControlColor = style({
+  width: "3rem",
   height: "auto",
   padding: "0.375rem",
-  width: "3rem",
   "selectors": {
     "&::-moz-color-swatch": {
-      borderRadius: "0.25rem",
       height: "1.5em",
+      borderRadius: "0.25rem",
     },
     "&::-webkit-color-swatch": {
-      borderRadius: "0.25rem",
       height: "1.5em",
+      borderRadius: "0.25rem",
     },
     "&:not(:disabled):not([readonly])": {
       cursor: "pointer",
@@ -9402,96 +9443,104 @@ export const formControlColor = style({
 });
 
 export const formControlLg = style({
-  borderRadius: "0.3rem",
-  fontSize: "1.25rem",
   minHeight: "calc(1.5em+1rem+2px)",
   padding: "0.5rem 1rem",
+  fontSize: "1.25rem",
+  borderRadius: "0.3rem",
   "selectors": {
     "&::-webkit-file-upload-button": {
-      WebkitMarginEnd: "1rem",
+      padding: "0.5rem 1rem",
       margin: "-0.5rem -1rem",
+      WebkitMarginEnd: "1rem",
       marginInlineEnd: "1rem",
       padding: "0.5rem 1rem",
+      margin: "-0.5rem -1rem",
+      WebkitMarginEnd: "1rem",
+      marginInlineEnd: "1rem",
     },
     "&::file-selector-button": {
-      WebkitMarginEnd: "1rem",
-      margin: "-0.5rem -1rem",
-      marginInlineEnd: "1rem",
       padding: "0.5rem 1rem",
+      margin: "-0.5rem -1rem",
+      WebkitMarginEnd: "1rem",
+      marginInlineEnd: "1rem",
     },
   },
 });
 
 export const formControlPlaintext = style({
+  display: "block",
+  width: "100%",
+  padding: "0.375rem 0",
+  marginBottom: "0",
+  lineHeight: "1.5",
+  color: "212529",
   backgroundColor: "transparent",
   border: "solid transparent",
   borderWidth: "1px 0",
-  color: "212529",
-  display: "block",
-  lineHeight: "1.5",
-  marginBottom: "0",
-  padding: "0.375rem 0",
-  width: "100%",
   "selectors": {
     [`${formControlLg}`]: {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
     [`${formControlSm}`]: {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
 
 export const formRange = style({
-  MozAppearance: "none",
-  WebkitAppearance: "none",
-  appearance: "none",
-  backgroundColor: "transparent",
+  width: "100%",
   height: "1.5rem",
   padding: "0",
-  width: "100%",
+  backgroundColor: "transparent",
+  WebkitAppearance: "none",
+  MozAppearance: "none",
+  appearance: "none",
   "::-moz-range-thumb": {
-    MozAppearance: "none",
-    MozTransition: "none",
-    appearance: "none",
+    width: "1rem",
+    height: "1rem",
     backgroundColor: "0d6efd",
     border: "0",
     borderRadius: "1rem",
-    height: "1rem",
+    MozTransition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+    transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+    MozAppearance: "none",
+    appearance: "none",
+    MozTransition: "none",
     transition: "none",
-    width: "1rem",
   },
   "::-moz-range-track": {
+    width: "100%",
+    height: "0.5rem",
+    color: "transparent",
+    cursor: "pointer",
     backgroundColor: "dee2e6",
     borderColor: "transparent",
     borderRadius: "1rem",
-    color: "transparent",
-    cursor: "pointer",
-    height: "0.5rem",
-    width: "100%",
   },
   "::-webkit-slider-runnable-track": {
+    width: "100%",
+    height: "0.5rem",
+    color: "transparent",
+    cursor: "pointer",
     backgroundColor: "dee2e6",
     borderColor: "transparent",
     borderRadius: "1rem",
-    color: "transparent",
-    cursor: "pointer",
-    height: "0.5rem",
-    width: "100%",
   },
   "::-webkit-slider-thumb": {
-    WebkitAppearance: "none",
-    WebkitTransition: "none",
-    appearance: "none",
+    width: "1rem",
+    height: "1rem",
+    marginTop: "-0.25rem",
     backgroundColor: "0d6efd",
     border: "0",
     borderRadius: "1rem",
-    height: "1rem",
-    marginTop: "-0.25rem",
+    WebkitTransition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+    transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+    WebkitAppearance: "none",
+    appearance: "none",
+    WebkitTransition: "none",
     transition: "none",
-    width: "1rem",
   },
   ":disabled": {
     pointerEvents: "none",
@@ -10071,11 +10120,11 @@ export const gyXxl5 = style({
 });
 
 export const h1 = style({
-  fontSize: "calc(1.375rem+1.5vw)",
+  marginTop: "0",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "calc(1.375rem+1.5vw)",
   "@media": {
     "(min-width: 1200px)": {
       fontSize: "2.5rem",
@@ -10084,11 +10133,11 @@ export const h1 = style({
 });
 
 export const h2 = style({
-  fontSize: "calc(1.325rem+0.9vw)",
+  marginTop: "0",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "calc(1.325rem+0.9vw)",
   "@media": {
     "(min-width: 1200px)": {
       fontSize: "2rem",
@@ -10097,11 +10146,11 @@ export const h2 = style({
 });
 
 export const h3 = style({
-  fontSize: "calc(1.3rem+0.6vw)",
+  marginTop: "0",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "calc(1.3rem+0.6vw)",
   "@media": {
     "(min-width: 1200px)": {
       fontSize: "1.75rem",
@@ -10110,11 +10159,11 @@ export const h3 = style({
 });
 
 export const h4 = style({
-  fontSize: "calc(1.275rem+0.3vw)",
+  marginTop: "0",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "calc(1.275rem+0.3vw)",
   "@media": {
     "(min-width: 1200px)": {
       fontSize: "1.5rem",
@@ -10123,38 +10172,38 @@ export const h4 = style({
 });
 
 export const inputGroupText = style({
-  alignItems: "center",
-  backgroundColor: "e9ecef",
-  border: "1px solid ced4da",
-  borderRadius: "0.25rem",
-  color: "212529",
   display: "flex",
+  alignItems: "center",
+  padding: "0.375rem 0.75rem",
   fontSize: "1rem",
   fontWeight: "400",
   lineHeight: "1.5",
-  padding: "0.375rem 0.75rem",
+  color: "212529",
   textAlign: "center",
   whiteSpace: "nowrap",
+  backgroundColor: "e9ecef",
+  border: "1px solid ced4da",
+  borderRadius: "0.25rem",
   "selectors": {
     [`${inputGroupLg} > &`]: {
-      borderRadius: "0.3rem",
-      fontSize: "1.25rem",
       padding: "0.5rem 1rem",
+      fontSize: "1.25rem",
+      borderRadius: "0.3rem",
     },
     [`${inputGroupSm} > &`]: {
-      borderRadius: "0.2rem",
-      fontSize: "0.875rem",
       padding: "0.25rem 0.5rem",
+      fontSize: "0.875rem",
+      borderRadius: "0.2rem",
     },
   },
 });
 
 export const invalidFeedback = style({
-  color: "dc3545",
   display: "none",
-  fontSize: "0.875em",
-  marginTop: "0.25rem",
   width: "100%",
+  marginTop: "0.25rem",
+  fontSize: "0.875em",
+  color: "dc3545",
   "selectors": {
     [`${formCheckInline} ${formCheckInput} ~ &`]: {
       marginLeft: "0.5em",
@@ -10169,17 +10218,17 @@ export const invalidFeedback = style({
 });
 
 export const invalidTooltip = style({
-  backgroundColor: "rgba(220,53,69,0.9)",
-  borderRadius: "0.25rem",
-  color: "fff",
-  display: "none",
-  fontSize: "0.875rem",
-  marginTop: "0.1rem",
-  maxWidth: "100%",
-  padding: "0.25rem 0.5rem",
   position: "absolute",
   top: "100%",
   zIndex: "5",
+  display: "none",
+  maxWidth: "100%",
+  padding: "0.25rem 0.5rem",
+  marginTop: "0.1rem",
+  fontSize: "0.875rem",
+  color: "fff",
+  backgroundColor: "rgba(220,53,69,0.9)",
+  borderRadius: "0.25rem",
   "selectors": {
     [`${isInvalid} ~ &`]: {
       display: "block",
@@ -10440,168 +10489,168 @@ export const listGroupFlush = style({
 });
 
 export const listGroupItemDanger = style({
-  backgroundColor: "f8d7da",
   color: "842029",
+  backgroundColor: "f8d7da",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "842029",
       borderColor: "842029",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "dfc2c4",
       color: "842029",
+      backgroundColor: "dfc2c4",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "dfc2c4",
       color: "842029",
+      backgroundColor: "dfc2c4",
     },
   },
 });
 
 export const listGroupItemDark = style({
-  backgroundColor: "d3d3d4",
   color: "141619",
+  backgroundColor: "d3d3d4",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "141619",
       borderColor: "141619",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "bebebf",
       color: "141619",
+      backgroundColor: "bebebf",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "bebebf",
       color: "141619",
+      backgroundColor: "bebebf",
     },
   },
 });
 
 export const listGroupItemInfo = style({
-  backgroundColor: "cff4fc",
   color: "055160",
+  backgroundColor: "cff4fc",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "055160",
       borderColor: "055160",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "badce3",
       color: "055160",
+      backgroundColor: "badce3",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "badce3",
       color: "055160",
+      backgroundColor: "badce3",
     },
   },
 });
 
 export const listGroupItemLight = style({
-  backgroundColor: "fefefe",
   color: "636464",
+  backgroundColor: "fefefe",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "636464",
       borderColor: "636464",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "e5e5e5",
       color: "636464",
+      backgroundColor: "e5e5e5",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "e5e5e5",
       color: "636464",
+      backgroundColor: "e5e5e5",
     },
   },
 });
 
 export const listGroupItemPrimary = style({
-  backgroundColor: "cfe2ff",
   color: "084298",
+  backgroundColor: "cfe2ff",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "084298",
       borderColor: "084298",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "bacbe6",
       color: "084298",
+      backgroundColor: "bacbe6",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "bacbe6",
       color: "084298",
+      backgroundColor: "bacbe6",
     },
   },
 });
 
 export const listGroupItemSecondary = style({
-  backgroundColor: "e2e3e5",
   color: "41464b",
+  backgroundColor: "e2e3e5",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "41464b",
       borderColor: "41464b",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "cbccce",
       color: "41464b",
+      backgroundColor: "cbccce",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "cbccce",
       color: "41464b",
+      backgroundColor: "cbccce",
     },
   },
 });
 
 export const listGroupItemSuccess = style({
-  backgroundColor: "d1e7dd",
   color: "0f5132",
+  backgroundColor: "d1e7dd",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "0f5132",
       borderColor: "0f5132",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "bcd0c7",
       color: "0f5132",
+      backgroundColor: "bcd0c7",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "bcd0c7",
       color: "0f5132",
+      backgroundColor: "bcd0c7",
     },
   },
 });
 
 export const listGroupItemWarning = style({
-  backgroundColor: "fff3cd",
   color: "664d03",
+  backgroundColor: "fff3cd",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "664d03",
       borderColor: "664d03",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "e6dbb9",
       color: "664d03",
+      backgroundColor: "e6dbb9",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "e6dbb9",
       color: "664d03",
+      backgroundColor: "e6dbb9",
     },
   },
 });
 
 export const listGroupNumbered = style({
-  counterReset: "section",
   listStyleType: "none",
+  counterReset: "section",
   "selectors": {
     "& > li::before": {
       content: "counters(section,.) . ",
@@ -11460,26 +11509,26 @@ export const meXxlAuto = style({
 });
 
 export const modal = style({
-  display: "none",
-  height: "100%",
-  left: "0",
-  outline: "0",
-  overflowX: "hidden",
-  overflowY: "auto",
   position: "fixed",
   top: "0",
-  width: "100%",
+  left: "0",
   zIndex: "1055",
+  display: "none",
+  width: "100%",
+  height: "100%",
+  overflowX: "hidden",
+  overflowY: "auto",
+  outline: "0",
 });
 
 export const modalBackdrop = style({
-  backgroundColor: "000",
-  height: "100vh",
-  left: "0",
   position: "fixed",
   top: "0",
-  width: "100vw",
+  left: "0",
   zIndex: "1050",
+  width: "100vw",
+  height: "100vh",
+  backgroundColor: "000",
   "selectors": {
     [`${fade}`]: {
       opacity: "0",
@@ -11491,9 +11540,9 @@ export const modalBackdrop = style({
 });
 
 export const modalBody = style({
+  position: "relative",
   flex: "1 1 auto",
   padding: "1rem",
-  position: "relative",
   "@media": {
     "(max-width: 575.98px)": {
       "selectors": {
@@ -11534,51 +11583,51 @@ export const modalBody = style({
 });
 
 export const modalContent = style({
-  backgroundClip: "padding-box",
-  backgroundColor: "fff",
-  border: "1px solid rgba(0,0,0,0.2)",
-  borderRadius: "0.3rem",
+  position: "relative",
   display: "flex",
   flexDirection: "column",
-  outline: "0",
-  pointerEvents: "auto",
-  position: "relative",
   width: "100%",
+  pointerEvents: "auto",
+  backgroundColor: "fff",
+  backgroundClip: "padding-box",
+  border: "1px solid rgba(0,0,0,0.2)",
+  borderRadius: "0.3rem",
+  outline: "0",
   "@media": {
     "(max-width: 575.98px)": {
       "selectors": {
         [`${modalFullscreenXlDown} &`]: {
+          height: "100%",
           border: "0",
           borderRadius: "0",
-          height: "100%",
         },
       },
       "selectors": {
         [`${modalFullscreenXxlDown} &`]: {
+          height: "100%",
           border: "0",
           borderRadius: "0",
-          height: "100%",
         },
       },
       "selectors": {
         [`${modalFullscreenSmDown} &`]: {
+          height: "100%",
           border: "0",
           borderRadius: "0",
-          height: "100%",
         },
       },
       "selectors": {
         [`${modalFullscreenMdDown} &`]: {
+          height: "100%",
           border: "0",
           borderRadius: "0",
-          height: "100%",
         },
       },
       "selectors": {
         [`${modalFullscreenLgDown} &`]: {
+          height: "100%",
           border: "0",
           borderRadius: "0",
-          height: "100%",
         },
       },
     },
@@ -11589,22 +11638,22 @@ export const modalContent = style({
       overflow: "hidden",
     },
     [`${modalFullscreen} &`]: {
+      height: "100%",
       border: "0",
       borderRadius: "0",
-      height: "100%",
     },
   },
 });
 
 export const modalDialog = style({
-  margin: "0.5rem",
-  pointerEvents: "none",
   position: "relative",
   width: "auto",
+  margin: "0.5rem",
+  pointerEvents: "none",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
-      margin: "1.75rem auto",
       maxWidth: "500px",
+      margin: "1.75rem auto",
       "selectors": {
         [`${modal}${fade} &`]: {
           transition: "none",
@@ -11614,8 +11663,8 @@ export const modalDialog = style({
   },
   "selectors": {
     [`${modal}${fade} &`]: {
-      transform: "translate(0,-50px)",
       transition: "transform 0.3s ease-out",
+      transform: "translate(0,-50px)",
     },
     [`${modal}${modalStatic} &`]: {
       transform: "scale(1.02)",
@@ -11627,8 +11676,8 @@ export const modalDialog = style({
 });
 
 export const modalDialogCentered = style({
-  alignItems: "center",
   display: "flex",
+  alignItems: "center",
   minHeight: "calc(100%-1rem)",
   "@media": {
     "(min-width: 576px)": {
@@ -11638,15 +11687,15 @@ export const modalDialogCentered = style({
 });
 
 export const modalFooter = style({
-  alignItems: "center",
-  borderBottomLeftRadius: "calc(0.3rem-1px)",
-  borderBottomRightRadius: "calc(0.3rem-1px)",
-  borderTop: "1px solid dee2e6",
   display: "flex",
-  flexShrink: "0",
   flexWrap: "wrap",
+  flexShrink: "0",
+  alignItems: "center",
   justifyContent: "flex-end",
   padding: "0.75rem",
+  borderTop: "1px solid dee2e6",
+  borderBottomRightRadius: "calc(0.3rem-1px)",
+  borderBottomLeftRadius: "calc(0.3rem-1px)",
   "@media": {
     "(max-width: 575.98px)": {
       "selectors": {
@@ -11705,6 +11754,7 @@ export const modalSm = style({
 export const modalXl = style({
   "@media": {
     "(min-width: 992px)": {
+      maxWidth: "800px",
       maxWidth: "1140px",
     },
   },
@@ -12273,8 +12323,8 @@ export const mtXxlAuto = style({
 export const mxLg0 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "0",
       marginRight: "0",
+      marginLeft: "0",
     },
   },
 });
@@ -12282,8 +12332,8 @@ export const mxLg0 = style({
 export const mxLg1 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "0.25rem",
       marginRight: "0.25rem",
+      marginLeft: "0.25rem",
     },
   },
 });
@@ -12291,8 +12341,8 @@ export const mxLg1 = style({
 export const mxLg2 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "0.5rem",
       marginRight: "0.5rem",
+      marginLeft: "0.5rem",
     },
   },
 });
@@ -12300,8 +12350,8 @@ export const mxLg2 = style({
 export const mxLg3 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "1rem",
       marginRight: "1rem",
+      marginLeft: "1rem",
     },
   },
 });
@@ -12309,8 +12359,8 @@ export const mxLg3 = style({
 export const mxLg4 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "1.5rem",
       marginRight: "1.5rem",
+      marginLeft: "1.5rem",
     },
   },
 });
@@ -12318,8 +12368,8 @@ export const mxLg4 = style({
 export const mxLg5 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "3rem",
       marginRight: "3rem",
+      marginLeft: "3rem",
     },
   },
 });
@@ -12327,8 +12377,8 @@ export const mxLg5 = style({
 export const mxLgAuto = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "auto",
       marginRight: "auto",
+      marginLeft: "auto",
     },
   },
 });
@@ -12336,8 +12386,8 @@ export const mxLgAuto = style({
 export const mxMd0 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "0",
       marginRight: "0",
+      marginLeft: "0",
     },
   },
 });
@@ -12345,8 +12395,8 @@ export const mxMd0 = style({
 export const mxMd1 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "0.25rem",
       marginRight: "0.25rem",
+      marginLeft: "0.25rem",
     },
   },
 });
@@ -12354,8 +12404,8 @@ export const mxMd1 = style({
 export const mxMd2 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "0.5rem",
       marginRight: "0.5rem",
+      marginLeft: "0.5rem",
     },
   },
 });
@@ -12363,8 +12413,8 @@ export const mxMd2 = style({
 export const mxMd3 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "1rem",
       marginRight: "1rem",
+      marginLeft: "1rem",
     },
   },
 });
@@ -12372,8 +12422,8 @@ export const mxMd3 = style({
 export const mxMd4 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "1.5rem",
       marginRight: "1.5rem",
+      marginLeft: "1.5rem",
     },
   },
 });
@@ -12381,8 +12431,8 @@ export const mxMd4 = style({
 export const mxMd5 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "3rem",
       marginRight: "3rem",
+      marginLeft: "3rem",
     },
   },
 });
@@ -12390,8 +12440,8 @@ export const mxMd5 = style({
 export const mxMdAuto = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "auto",
       marginRight: "auto",
+      marginLeft: "auto",
     },
   },
 });
@@ -12399,8 +12449,8 @@ export const mxMdAuto = style({
 export const mxSm0 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "0",
       marginRight: "0",
+      marginLeft: "0",
     },
   },
 });
@@ -12408,8 +12458,8 @@ export const mxSm0 = style({
 export const mxSm1 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "0.25rem",
       marginRight: "0.25rem",
+      marginLeft: "0.25rem",
     },
   },
 });
@@ -12417,8 +12467,8 @@ export const mxSm1 = style({
 export const mxSm2 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "0.5rem",
       marginRight: "0.5rem",
+      marginLeft: "0.5rem",
     },
   },
 });
@@ -12426,8 +12476,8 @@ export const mxSm2 = style({
 export const mxSm3 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "1rem",
       marginRight: "1rem",
+      marginLeft: "1rem",
     },
   },
 });
@@ -12435,8 +12485,8 @@ export const mxSm3 = style({
 export const mxSm4 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "1.5rem",
       marginRight: "1.5rem",
+      marginLeft: "1.5rem",
     },
   },
 });
@@ -12444,8 +12494,8 @@ export const mxSm4 = style({
 export const mxSm5 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "3rem",
       marginRight: "3rem",
+      marginLeft: "3rem",
     },
   },
 });
@@ -12453,8 +12503,8 @@ export const mxSm5 = style({
 export const mxSmAuto = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "auto",
       marginRight: "auto",
+      marginLeft: "auto",
     },
   },
 });
@@ -12462,8 +12512,8 @@ export const mxSmAuto = style({
 export const mxXl0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "0",
       marginRight: "0",
+      marginLeft: "0",
     },
   },
 });
@@ -12471,8 +12521,8 @@ export const mxXl0 = style({
 export const mxXl1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "0.25rem",
       marginRight: "0.25rem",
+      marginLeft: "0.25rem",
     },
   },
 });
@@ -12480,8 +12530,8 @@ export const mxXl1 = style({
 export const mxXl2 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "0.5rem",
       marginRight: "0.5rem",
+      marginLeft: "0.5rem",
     },
   },
 });
@@ -12489,8 +12539,8 @@ export const mxXl2 = style({
 export const mxXl3 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "1rem",
       marginRight: "1rem",
+      marginLeft: "1rem",
     },
   },
 });
@@ -12498,8 +12548,8 @@ export const mxXl3 = style({
 export const mxXl4 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "1.5rem",
       marginRight: "1.5rem",
+      marginLeft: "1.5rem",
     },
   },
 });
@@ -12507,8 +12557,8 @@ export const mxXl4 = style({
 export const mxXl5 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "3rem",
       marginRight: "3rem",
+      marginLeft: "3rem",
     },
   },
 });
@@ -12516,8 +12566,8 @@ export const mxXl5 = style({
 export const mxXlAuto = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "auto",
       marginRight: "auto",
+      marginLeft: "auto",
     },
   },
 });
@@ -12525,8 +12575,8 @@ export const mxXlAuto = style({
 export const mxXxl0 = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginLeft: "0",
       marginRight: "0",
+      marginLeft: "0",
     },
   },
 });
@@ -12534,8 +12584,8 @@ export const mxXxl0 = style({
 export const mxXxl1 = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginLeft: "0.25rem",
       marginRight: "0.25rem",
+      marginLeft: "0.25rem",
     },
   },
 });
@@ -12543,8 +12593,8 @@ export const mxXxl1 = style({
 export const mxXxl2 = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginLeft: "0.5rem",
       marginRight: "0.5rem",
+      marginLeft: "0.5rem",
     },
   },
 });
@@ -12552,8 +12602,8 @@ export const mxXxl2 = style({
 export const mxXxl3 = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginLeft: "1rem",
       marginRight: "1rem",
+      marginLeft: "1rem",
     },
   },
 });
@@ -12561,8 +12611,8 @@ export const mxXxl3 = style({
 export const mxXxl4 = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginLeft: "1.5rem",
       marginRight: "1.5rem",
+      marginLeft: "1.5rem",
     },
   },
 });
@@ -12570,8 +12620,8 @@ export const mxXxl4 = style({
 export const mxXxl5 = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginLeft: "3rem",
       marginRight: "3rem",
+      marginLeft: "3rem",
     },
   },
 });
@@ -12579,8 +12629,8 @@ export const mxXxl5 = style({
 export const mxXxlAuto = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginLeft: "auto",
       marginRight: "auto",
+      marginLeft: "auto",
     },
   },
 });
@@ -12588,8 +12638,8 @@ export const mxXxlAuto = style({
 export const myLg0 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "0",
       marginTop: "0",
+      marginBottom: "0",
     },
   },
 });
@@ -12597,8 +12647,8 @@ export const myLg0 = style({
 export const myLg1 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "0.25rem",
       marginTop: "0.25rem",
+      marginBottom: "0.25rem",
     },
   },
 });
@@ -12606,8 +12656,8 @@ export const myLg1 = style({
 export const myLg2 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "0.5rem",
       marginTop: "0.5rem",
+      marginBottom: "0.5rem",
     },
   },
 });
@@ -12615,8 +12665,8 @@ export const myLg2 = style({
 export const myLg3 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "1rem",
       marginTop: "1rem",
+      marginBottom: "1rem",
     },
   },
 });
@@ -12624,8 +12674,8 @@ export const myLg3 = style({
 export const myLg4 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "1.5rem",
       marginTop: "1.5rem",
+      marginBottom: "1.5rem",
     },
   },
 });
@@ -12633,8 +12683,8 @@ export const myLg4 = style({
 export const myLg5 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "3rem",
       marginTop: "3rem",
+      marginBottom: "3rem",
     },
   },
 });
@@ -12642,8 +12692,8 @@ export const myLg5 = style({
 export const myLgAuto = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "auto",
       marginTop: "auto",
+      marginBottom: "auto",
     },
   },
 });
@@ -12651,8 +12701,8 @@ export const myLgAuto = style({
 export const myMd0 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "0",
       marginTop: "0",
+      marginBottom: "0",
     },
   },
 });
@@ -12660,8 +12710,8 @@ export const myMd0 = style({
 export const myMd1 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "0.25rem",
       marginTop: "0.25rem",
+      marginBottom: "0.25rem",
     },
   },
 });
@@ -12669,8 +12719,8 @@ export const myMd1 = style({
 export const myMd2 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "0.5rem",
       marginTop: "0.5rem",
+      marginBottom: "0.5rem",
     },
   },
 });
@@ -12678,8 +12728,8 @@ export const myMd2 = style({
 export const myMd3 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "1rem",
       marginTop: "1rem",
+      marginBottom: "1rem",
     },
   },
 });
@@ -12687,8 +12737,8 @@ export const myMd3 = style({
 export const myMd4 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "1.5rem",
       marginTop: "1.5rem",
+      marginBottom: "1.5rem",
     },
   },
 });
@@ -12696,8 +12746,8 @@ export const myMd4 = style({
 export const myMd5 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "3rem",
       marginTop: "3rem",
+      marginBottom: "3rem",
     },
   },
 });
@@ -12705,8 +12755,8 @@ export const myMd5 = style({
 export const myMdAuto = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "auto",
       marginTop: "auto",
+      marginBottom: "auto",
     },
   },
 });
@@ -12714,8 +12764,8 @@ export const myMdAuto = style({
 export const mySm0 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "0",
       marginTop: "0",
+      marginBottom: "0",
     },
   },
 });
@@ -12723,8 +12773,8 @@ export const mySm0 = style({
 export const mySm1 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "0.25rem",
       marginTop: "0.25rem",
+      marginBottom: "0.25rem",
     },
   },
 });
@@ -12732,8 +12782,8 @@ export const mySm1 = style({
 export const mySm2 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "0.5rem",
       marginTop: "0.5rem",
+      marginBottom: "0.5rem",
     },
   },
 });
@@ -12741,8 +12791,8 @@ export const mySm2 = style({
 export const mySm3 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "1rem",
       marginTop: "1rem",
+      marginBottom: "1rem",
     },
   },
 });
@@ -12750,8 +12800,8 @@ export const mySm3 = style({
 export const mySm4 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "1.5rem",
       marginTop: "1.5rem",
+      marginBottom: "1.5rem",
     },
   },
 });
@@ -12759,8 +12809,8 @@ export const mySm4 = style({
 export const mySm5 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "3rem",
       marginTop: "3rem",
+      marginBottom: "3rem",
     },
   },
 });
@@ -12768,8 +12818,8 @@ export const mySm5 = style({
 export const mySmAuto = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "auto",
       marginTop: "auto",
+      marginBottom: "auto",
     },
   },
 });
@@ -12777,8 +12827,8 @@ export const mySmAuto = style({
 export const myXl0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "0",
       marginTop: "0",
+      marginBottom: "0",
     },
   },
 });
@@ -12786,8 +12836,8 @@ export const myXl0 = style({
 export const myXl1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "0.25rem",
       marginTop: "0.25rem",
+      marginBottom: "0.25rem",
     },
   },
 });
@@ -12795,8 +12845,8 @@ export const myXl1 = style({
 export const myXl2 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "0.5rem",
       marginTop: "0.5rem",
+      marginBottom: "0.5rem",
     },
   },
 });
@@ -12804,8 +12854,8 @@ export const myXl2 = style({
 export const myXl3 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "1rem",
       marginTop: "1rem",
+      marginBottom: "1rem",
     },
   },
 });
@@ -12813,8 +12863,8 @@ export const myXl3 = style({
 export const myXl4 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "1.5rem",
       marginTop: "1.5rem",
+      marginBottom: "1.5rem",
     },
   },
 });
@@ -12822,8 +12872,8 @@ export const myXl4 = style({
 export const myXl5 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "3rem",
       marginTop: "3rem",
+      marginBottom: "3rem",
     },
   },
 });
@@ -12831,8 +12881,8 @@ export const myXl5 = style({
 export const myXlAuto = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "auto",
       marginTop: "auto",
+      marginBottom: "auto",
     },
   },
 });
@@ -12840,8 +12890,8 @@ export const myXlAuto = style({
 export const myXxl0 = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginBottom: "0",
       marginTop: "0",
+      marginBottom: "0",
     },
   },
 });
@@ -12849,8 +12899,8 @@ export const myXxl0 = style({
 export const myXxl1 = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginBottom: "0.25rem",
       marginTop: "0.25rem",
+      marginBottom: "0.25rem",
     },
   },
 });
@@ -12858,8 +12908,8 @@ export const myXxl1 = style({
 export const myXxl2 = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginBottom: "0.5rem",
       marginTop: "0.5rem",
+      marginBottom: "0.5rem",
     },
   },
 });
@@ -12867,8 +12917,8 @@ export const myXxl2 = style({
 export const myXxl3 = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginBottom: "1rem",
       marginTop: "1rem",
+      marginBottom: "1rem",
     },
   },
 });
@@ -12876,8 +12926,8 @@ export const myXxl3 = style({
 export const myXxl4 = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginBottom: "1.5rem",
       marginTop: "1.5rem",
+      marginBottom: "1.5rem",
     },
   },
 });
@@ -12885,8 +12935,8 @@ export const myXxl4 = style({
 export const myXxl5 = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginBottom: "3rem",
       marginTop: "3rem",
+      marginBottom: "3rem",
     },
   },
 });
@@ -12894,8 +12944,8 @@ export const myXxl5 = style({
 export const myXxlAuto = style({
   "@media": {
     "(min-width: 1400px)": {
-      marginBottom: "auto",
       marginTop: "auto",
+      marginBottom: "auto",
     },
   },
 });
@@ -12915,10 +12965,10 @@ export const navItem = style({
 });
 
 export const navbarBrand = style({
-  fontSize: "1.25rem",
-  marginRight: "1rem",
-  paddingBottom: "0.3125rem",
   paddingTop: "0.3125rem",
+  paddingBottom: "0.3125rem",
+  marginRight: "1rem",
+  fontSize: "1.25rem",
   textDecoration: "none",
   whiteSpace: "nowrap",
   "selectors": {
@@ -12932,9 +12982,9 @@ export const navbarBrand = style({
 });
 
 export const navbarCollapse = style({
-  alignItems: "center",
   flexBasis: "100%",
   flexGrow: "1",
+  alignItems: "center",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
@@ -13017,17 +13067,17 @@ export const navbarNavScroll = style({
 });
 
 export const navbarToggler = style({
+  padding: "0.25rem 0.75rem",
+  fontSize: "1.25rem",
+  lineHeight: "1",
   backgroundColor: "transparent",
   border: "1px solid transparent",
   borderRadius: "0.25rem",
-  fontSize: "1.25rem",
-  lineHeight: "1",
-  padding: "0.25rem 0.75rem",
   transition: "box-shadow 0.15s ease-in-out",
   ":focus": {
-    boxShadow: "0 0 0 0.25rem",
-    outline: "0",
     textDecoration: "none",
+    outline: "0",
+    boxShadow: "0 0 0 0.25rem",
   },
   ":hover": {
     textDecoration: "none",
@@ -13064,27 +13114,27 @@ export const navbarToggler = style({
   },
   "selectors": {
     [`${navbarDark} &`]: {
-      borderColor: "rgba(255,255,255,0.1)",
       color: "rgba(255,255,255,0.55)",
+      borderColor: "rgba(255,255,255,0.1)",
     },
     [`${navbarExpand} &`]: {
       display: "none",
     },
     [`${navbarLight} &`]: {
-      borderColor: "rgba(0,0,0,0.1)",
       color: "rgba(0,0,0,0.55)",
+      borderColor: "rgba(0,0,0,0.1)",
     },
   },
 });
 
 export const navbarTogglerIcon = style({
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "100%",
   display: "inline-block",
+  width: "1.5em",
   height: "1.5em",
   verticalAlign: "middle",
-  width: "1.5em",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  backgroundSize: "100%",
   "selectors": {
     [`${navbarDark} &`]: {
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e)",
@@ -13096,104 +13146,104 @@ export const navbarTogglerIcon = style({
 });
 
 export const offcanvas = style({
-  backgroundClip: "padding-box",
-  backgroundColor: "fff",
+  position: "fixed",
   bottom: "0",
+  zIndex: "1045",
   display: "flex",
   flexDirection: "column",
   maxWidth: "100%",
-  outline: "0",
-  position: "fixed",
-  transition: "transform 0.3s ease-in-out",
   visibility: "hidden",
-  zIndex: "1045",
+  backgroundColor: "fff",
+  backgroundClip: "padding-box",
+  outline: "0",
+  transition: "transform 0.3s ease-in-out",
   "@media": {
     "(min-width: 576px)": {
       transition: "none",
       "selectors": {
         [`${navbarExpandXl} &`]: {
-          backgroundColor: "transparent",
-          borderLeft: "0",
-          borderRight: "0",
-          bottom: "0",
-          flexGrow: "1",
           position: "inherit",
-          transform: "none",
-          transition: "none",
-          visibility: "visible",
+          bottom: "0",
           zIndex: "1000",
+          flexGrow: "1",
+          visibility: "visible",
+          backgroundColor: "transparent",
+          borderRight: "0",
+          borderLeft: "0",
+          transition: "none",
+          transform: "none",
         },
       },
       "selectors": {
         [`${navbarExpandXxl} &`]: {
-          backgroundColor: "transparent",
-          borderLeft: "0",
-          borderRight: "0",
-          bottom: "0",
-          flexGrow: "1",
           position: "inherit",
-          transform: "none",
-          transition: "none",
-          visibility: "visible",
+          bottom: "0",
           zIndex: "1000",
+          flexGrow: "1",
+          visibility: "visible",
+          backgroundColor: "transparent",
+          borderRight: "0",
+          borderLeft: "0",
+          transition: "none",
+          transform: "none",
         },
       },
       "selectors": {
         [`${navbarExpandSm} &`]: {
-          backgroundColor: "transparent",
-          borderLeft: "0",
-          borderRight: "0",
-          bottom: "0",
-          flexGrow: "1",
           position: "inherit",
-          transform: "none",
-          transition: "none",
-          visibility: "visible",
+          bottom: "0",
           zIndex: "1000",
+          flexGrow: "1",
+          visibility: "visible",
+          backgroundColor: "transparent",
+          borderRight: "0",
+          borderLeft: "0",
+          transition: "none",
+          transform: "none",
         },
       },
       "selectors": {
         [`${navbarExpandMd} &`]: {
-          backgroundColor: "transparent",
-          borderLeft: "0",
-          borderRight: "0",
-          bottom: "0",
-          flexGrow: "1",
           position: "inherit",
-          transform: "none",
-          transition: "none",
-          visibility: "visible",
+          bottom: "0",
           zIndex: "1000",
+          flexGrow: "1",
+          visibility: "visible",
+          backgroundColor: "transparent",
+          borderRight: "0",
+          borderLeft: "0",
+          transition: "none",
+          transform: "none",
         },
       },
       "selectors": {
         [`${navbarExpandLg} &`]: {
-          backgroundColor: "transparent",
-          borderLeft: "0",
-          borderRight: "0",
-          bottom: "0",
-          flexGrow: "1",
           position: "inherit",
-          transform: "none",
-          transition: "none",
-          visibility: "visible",
+          bottom: "0",
           zIndex: "1000",
+          flexGrow: "1",
+          visibility: "visible",
+          backgroundColor: "transparent",
+          borderRight: "0",
+          borderLeft: "0",
+          transition: "none",
+          transform: "none",
         },
       },
     },
   },
   "selectors": {
     [`${navbarExpand} &`]: {
-      backgroundColor: "transparent",
-      borderLeft: "0",
-      borderRight: "0",
-      bottom: "0",
-      flexGrow: "1",
       position: "inherit",
-      transform: "none",
-      transition: "none",
-      visibility: "visible",
+      bottom: "0",
       zIndex: "1000",
+      flexGrow: "1",
+      visibility: "visible",
+      backgroundColor: "transparent",
+      borderRight: "0",
+      borderLeft: "0",
+      transition: "none",
+      transform: "none",
     },
     [`${show}`]: {
       transform: "none",
@@ -13202,13 +13252,13 @@ export const offcanvas = style({
 });
 
 export const offcanvasBackdrop = style({
-  backgroundColor: "000",
-  height: "100vh",
-  left: "0",
   position: "fixed",
   top: "0",
-  width: "100vw",
+  left: "0",
   zIndex: "1040",
+  width: "100vw",
+  height: "100vh",
+  backgroundColor: "000",
   "selectors": {
     [`${fade}`]: {
       opacity: "0",
@@ -13221,48 +13271,48 @@ export const offcanvasBackdrop = style({
 
 export const offcanvasBody = style({
   flexGrow: "1",
-  overflowY: "auto",
   padding: "1rem 1rem",
+  overflowY: "auto",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
         [`${navbarExpandXl} &`]: {
           display: "flex",
           flexGrow: "0",
-          overflowY: "visible",
           padding: "0",
+          overflowY: "visible",
         },
       },
       "selectors": {
         [`${navbarExpandXxl} &`]: {
           display: "flex",
           flexGrow: "0",
-          overflowY: "visible",
           padding: "0",
+          overflowY: "visible",
         },
       },
       "selectors": {
         [`${navbarExpandSm} &`]: {
           display: "flex",
           flexGrow: "0",
-          overflowY: "visible",
           padding: "0",
+          overflowY: "visible",
         },
       },
       "selectors": {
         [`${navbarExpandMd} &`]: {
           display: "flex",
           flexGrow: "0",
-          overflowY: "visible",
           padding: "0",
+          overflowY: "visible",
         },
       },
       "selectors": {
         [`${navbarExpandLg} &`]: {
           display: "flex",
           flexGrow: "0",
-          overflowY: "visible",
           padding: "0",
+          overflowY: "visible",
         },
       },
     },
@@ -13271,119 +13321,119 @@ export const offcanvasBody = style({
     [`${navbarExpand} &`]: {
       display: "flex",
       flexGrow: "0",
-      overflowY: "visible",
       padding: "0",
+      overflowY: "visible",
     },
   },
 });
 
 export const offcanvasBottom = style({
-  borderTop: "1px solid rgba(0,0,0,0.2)",
-  height: "30vh",
-  left: "0",
-  maxHeight: "100%",
   right: "0",
+  left: "0",
+  height: "30vh",
+  maxHeight: "100%",
+  borderTop: "1px solid rgba(0,0,0,0.2)",
   transform: "translateY(100%)",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
         [`${navbarExpandXl} &`]: {
-          borderBottom: "0",
-          borderTop: "0",
           height: "auto",
+          borderTop: "0",
+          borderBottom: "0",
         },
       },
       "selectors": {
         [`${navbarExpandXxl} &`]: {
-          borderBottom: "0",
-          borderTop: "0",
           height: "auto",
+          borderTop: "0",
+          borderBottom: "0",
         },
       },
       "selectors": {
         [`${navbarExpandSm} &`]: {
-          borderBottom: "0",
-          borderTop: "0",
           height: "auto",
+          borderTop: "0",
+          borderBottom: "0",
         },
       },
       "selectors": {
         [`${navbarExpandMd} &`]: {
-          borderBottom: "0",
-          borderTop: "0",
           height: "auto",
+          borderTop: "0",
+          borderBottom: "0",
         },
       },
       "selectors": {
         [`${navbarExpandLg} &`]: {
-          borderBottom: "0",
-          borderTop: "0",
           height: "auto",
+          borderTop: "0",
+          borderBottom: "0",
         },
       },
     },
   },
   "selectors": {
     [`${navbarExpand} &`]: {
-      borderBottom: "0",
-      borderTop: "0",
       height: "auto",
+      borderTop: "0",
+      borderBottom: "0",
     },
   },
 });
 
 export const offcanvasTop = style({
-  borderBottom: "1px solid rgba(0,0,0,0.2)",
-  height: "30vh",
-  left: "0",
-  maxHeight: "100%",
-  right: "0",
   top: "0",
+  right: "0",
+  left: "0",
+  height: "30vh",
+  maxHeight: "100%",
+  borderBottom: "1px solid rgba(0,0,0,0.2)",
   transform: "translateY(-100%)",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
         [`${navbarExpandXl} &`]: {
-          borderBottom: "0",
-          borderTop: "0",
           height: "auto",
+          borderTop: "0",
+          borderBottom: "0",
         },
       },
       "selectors": {
         [`${navbarExpandXxl} &`]: {
-          borderBottom: "0",
-          borderTop: "0",
           height: "auto",
+          borderTop: "0",
+          borderBottom: "0",
         },
       },
       "selectors": {
         [`${navbarExpandSm} &`]: {
-          borderBottom: "0",
-          borderTop: "0",
           height: "auto",
+          borderTop: "0",
+          borderBottom: "0",
         },
       },
       "selectors": {
         [`${navbarExpandMd} &`]: {
-          borderBottom: "0",
-          borderTop: "0",
           height: "auto",
+          borderTop: "0",
+          borderBottom: "0",
         },
       },
       "selectors": {
         [`${navbarExpandLg} &`]: {
-          borderBottom: "0",
-          borderTop: "0",
           height: "auto",
+          borderTop: "0",
+          borderBottom: "0",
         },
       },
     },
   },
   "selectors": {
     [`${navbarExpand} &`]: {
-      borderBottom: "0",
-      borderTop: "0",
       height: "auto",
+      borderTop: "0",
+      borderBottom: "0",
     },
   },
 });
@@ -14429,26 +14479,26 @@ export const pXxl5 = style({
 });
 
 export const pageLink = style({
+  position: "relative",
+  display: "block",
+  color: "0d6efd",
+  textDecoration: "none",
   backgroundColor: "fff",
   border: "1px solid dee2e6",
-  color: "0d6efd",
-  display: "block",
-  padding: "0.375rem 0.75rem",
-  position: "relative",
-  textDecoration: "none",
   transition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+  padding: "0.375rem 0.75rem",
   ":focus": {
-    backgroundColor: "e9ecef",
-    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
-    color: "0a58ca",
-    outline: "0",
     zIndex: "3",
+    color: "0a58ca",
+    backgroundColor: "e9ecef",
+    outline: "0",
+    boxShadow: "0 0 0 0.25rem rgba(13,110,253,0.25)",
   },
   ":hover": {
+    zIndex: "2",
+    color: "0a58ca",
     backgroundColor: "e9ecef",
     borderColor: "dee2e6",
-    color: "0a58ca",
-    zIndex: "2",
   },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
@@ -14457,51 +14507,51 @@ export const pageLink = style({
   },
   "selectors": {
     [`${pageItem}${active} &`]: {
+      zIndex: "3",
+      color: "fff",
       backgroundColor: "0d6efd",
       borderColor: "0d6efd",
-      color: "fff",
-      zIndex: "3",
     },
     [`${pageItem}${disabled} &`]: {
-      backgroundColor: "fff",
-      borderColor: "dee2e6",
       color: "6c757d",
       pointerEvents: "none",
+      backgroundColor: "fff",
+      borderColor: "dee2e6",
     },
     [`${pageItem}:first-child &`]: {
-      borderBottomLeftRadius: "0.25rem",
       borderTopLeftRadius: "0.25rem",
+      borderBottomLeftRadius: "0.25rem",
     },
     [`${pageItem}:last-child &`]: {
-      borderBottomRightRadius: "0.25rem",
       borderTopRightRadius: "0.25rem",
+      borderBottomRightRadius: "0.25rem",
     },
     [`${pageItem}:not(:first-child) &`]: {
       marginLeft: "-1px",
     },
     [`${paginationLg} ${pageItem}:first-child &`]: {
-      borderBottomLeftRadius: "0.3rem",
       borderTopLeftRadius: "0.3rem",
+      borderBottomLeftRadius: "0.3rem",
     },
     [`${paginationLg} ${pageItem}:last-child &`]: {
-      borderBottomRightRadius: "0.3rem",
       borderTopRightRadius: "0.3rem",
+      borderBottomRightRadius: "0.3rem",
     },
     [`${paginationLg} &`]: {
-      fontSize: "1.25rem",
       padding: "0.75rem 1.5rem",
+      fontSize: "1.25rem",
     },
     [`${paginationSm} ${pageItem}:first-child &`]: {
-      borderBottomLeftRadius: "0.2rem",
       borderTopLeftRadius: "0.2rem",
+      borderBottomLeftRadius: "0.2rem",
     },
     [`${paginationSm} ${pageItem}:last-child &`]: {
-      borderBottomRightRadius: "0.2rem",
       borderTopRightRadius: "0.2rem",
+      borderBottomRightRadius: "0.2rem",
     },
     [`${paginationSm} &`]: {
-      fontSize: "0.875rem",
       padding: "0.25rem 0.5rem",
+      fontSize: "0.875rem",
     },
   },
 });
@@ -14987,16 +15037,16 @@ export const peXxl5 = style({
 });
 
 export const placeholder = style({
-  backgroundColor: "currentColor",
-  cursor: "wait",
   display: "inline-block",
   minHeight: "1em",
-  opacity: "0.5",
   verticalAlign: "middle",
+  cursor: "wait",
+  backgroundColor: "currentColor",
+  opacity: "0.5",
   "selectors": {
     [`${btn}::before`]: {
-      content: "",
       display: "inline-block",
+      content: "",
     },
     [`${placeholderGlow} &`]: {
       WebkitAnimation: "placeholder-glow 2s ease-in-out infinite",
@@ -15006,59 +15056,60 @@ export const placeholder = style({
 });
 
 export const popover = style({
-  backgroundClip: "padding-box",
-  backgroundColor: "fff",
-  border: "1px solid rgba(0,0,0,0.2)",
-  borderRadius: "0.3rem",
+  position: "absolute",
+  top: "0",
+  left: "0",
+  zIndex: "1070",
   display: "block",
+  maxWidth: "276px",
   fontFamily: "var(--bs-font-sans-serif)",
-  fontSize: "0.875rem",
   fontStyle: "normal",
   fontWeight: "400",
-  left: "0",
-  letterSpacing: "normal",
-  lineBreak: "auto",
   lineHeight: "1.5",
-  maxWidth: "276px",
-  position: "absolute",
+  textAlign: "left",
   textAlign: "start",
   textDecoration: "none",
   textShadow: "none",
   textTransform: "none",
-  top: "0",
-  whiteSpace: "normal",
+  letterSpacing: "normal",
   wordBreak: "normal",
   wordSpacing: "normal",
+  whiteSpace: "normal",
+  lineBreak: "auto",
+  fontSize: "0.875rem",
   wordWrap: "break-word",
-  zIndex: "1070",
+  backgroundColor: "fff",
+  backgroundClip: "padding-box",
+  border: "1px solid rgba(0,0,0,0.2)",
+  borderRadius: "0.3rem",
   "selectors": {
     [` ${popoverArrow}::after`]: {
+      position: "absolute",
+      display: "block",
+      content: "",
       borderColor: "transparent",
       borderStyle: "solid",
-      content: "",
-      display: "block",
-      position: "absolute",
     },
     [` ${popoverArrow}::before`]: {
+      position: "absolute",
+      display: "block",
+      content: "",
       borderColor: "transparent",
       borderStyle: "solid",
-      content: "",
-      display: "block",
-      position: "absolute",
     },
   },
 });
 
 export const progressBar = style({
-  backgroundColor: "0d6efd",
-  color: "fff",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   overflow: "hidden",
+  color: "fff",
   textAlign: "center",
-  transition: "width 0.6s ease",
   whiteSpace: "nowrap",
+  backgroundColor: "0d6efd",
+  transition: "width 0.6s ease",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
@@ -15560,8 +15611,8 @@ export const ptXxl5 = style({
 export const pxLg0 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
@@ -15569,8 +15620,8 @@ export const pxLg0 = style({
 export const pxLg1 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingLeft: "0.25rem",
       paddingRight: "0.25rem",
+      paddingLeft: "0.25rem",
     },
   },
 });
@@ -15578,8 +15629,8 @@ export const pxLg1 = style({
 export const pxLg2 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
+      paddingLeft: "0.5rem",
     },
   },
 });
@@ -15587,8 +15638,8 @@ export const pxLg2 = style({
 export const pxLg3 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingLeft: "1rem",
       paddingRight: "1rem",
+      paddingLeft: "1rem",
     },
   },
 });
@@ -15596,8 +15647,8 @@ export const pxLg3 = style({
 export const pxLg4 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingLeft: "1.5rem",
       paddingRight: "1.5rem",
+      paddingLeft: "1.5rem",
     },
   },
 });
@@ -15605,8 +15656,8 @@ export const pxLg4 = style({
 export const pxLg5 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingLeft: "3rem",
       paddingRight: "3rem",
+      paddingLeft: "3rem",
     },
   },
 });
@@ -15614,8 +15665,8 @@ export const pxLg5 = style({
 export const pxMd0 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
@@ -15623,8 +15674,8 @@ export const pxMd0 = style({
 export const pxMd1 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingLeft: "0.25rem",
       paddingRight: "0.25rem",
+      paddingLeft: "0.25rem",
     },
   },
 });
@@ -15632,8 +15683,8 @@ export const pxMd1 = style({
 export const pxMd2 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
+      paddingLeft: "0.5rem",
     },
   },
 });
@@ -15641,8 +15692,8 @@ export const pxMd2 = style({
 export const pxMd3 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingLeft: "1rem",
       paddingRight: "1rem",
+      paddingLeft: "1rem",
     },
   },
 });
@@ -15650,8 +15701,8 @@ export const pxMd3 = style({
 export const pxMd4 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingLeft: "1.5rem",
       paddingRight: "1.5rem",
+      paddingLeft: "1.5rem",
     },
   },
 });
@@ -15659,8 +15710,8 @@ export const pxMd4 = style({
 export const pxMd5 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingLeft: "3rem",
       paddingRight: "3rem",
+      paddingLeft: "3rem",
     },
   },
 });
@@ -15668,8 +15719,8 @@ export const pxMd5 = style({
 export const pxSm0 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
@@ -15677,8 +15728,8 @@ export const pxSm0 = style({
 export const pxSm1 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingLeft: "0.25rem",
       paddingRight: "0.25rem",
+      paddingLeft: "0.25rem",
     },
   },
 });
@@ -15686,8 +15737,8 @@ export const pxSm1 = style({
 export const pxSm2 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
+      paddingLeft: "0.5rem",
     },
   },
 });
@@ -15695,8 +15746,8 @@ export const pxSm2 = style({
 export const pxSm3 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingLeft: "1rem",
       paddingRight: "1rem",
+      paddingLeft: "1rem",
     },
   },
 });
@@ -15704,8 +15755,8 @@ export const pxSm3 = style({
 export const pxSm4 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingLeft: "1.5rem",
       paddingRight: "1.5rem",
+      paddingLeft: "1.5rem",
     },
   },
 });
@@ -15713,8 +15764,8 @@ export const pxSm4 = style({
 export const pxSm5 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingLeft: "3rem",
       paddingRight: "3rem",
+      paddingLeft: "3rem",
     },
   },
 });
@@ -15722,8 +15773,8 @@ export const pxSm5 = style({
 export const pxXl0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
@@ -15731,8 +15782,8 @@ export const pxXl0 = style({
 export const pxXl1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingLeft: "0.25rem",
       paddingRight: "0.25rem",
+      paddingLeft: "0.25rem",
     },
   },
 });
@@ -15740,8 +15791,8 @@ export const pxXl1 = style({
 export const pxXl2 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
+      paddingLeft: "0.5rem",
     },
   },
 });
@@ -15749,8 +15800,8 @@ export const pxXl2 = style({
 export const pxXl3 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingLeft: "1rem",
       paddingRight: "1rem",
+      paddingLeft: "1rem",
     },
   },
 });
@@ -15758,8 +15809,8 @@ export const pxXl3 = style({
 export const pxXl4 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingLeft: "1.5rem",
       paddingRight: "1.5rem",
+      paddingLeft: "1.5rem",
     },
   },
 });
@@ -15767,8 +15818,8 @@ export const pxXl4 = style({
 export const pxXl5 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingLeft: "3rem",
       paddingRight: "3rem",
+      paddingLeft: "3rem",
     },
   },
 });
@@ -15776,8 +15827,8 @@ export const pxXl5 = style({
 export const pxXxl0 = style({
   "@media": {
     "(min-width: 1400px)": {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
@@ -15785,8 +15836,8 @@ export const pxXxl0 = style({
 export const pxXxl1 = style({
   "@media": {
     "(min-width: 1400px)": {
-      paddingLeft: "0.25rem",
       paddingRight: "0.25rem",
+      paddingLeft: "0.25rem",
     },
   },
 });
@@ -15794,8 +15845,8 @@ export const pxXxl1 = style({
 export const pxXxl2 = style({
   "@media": {
     "(min-width: 1400px)": {
-      paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
+      paddingLeft: "0.5rem",
     },
   },
 });
@@ -15803,8 +15854,8 @@ export const pxXxl2 = style({
 export const pxXxl3 = style({
   "@media": {
     "(min-width: 1400px)": {
-      paddingLeft: "1rem",
       paddingRight: "1rem",
+      paddingLeft: "1rem",
     },
   },
 });
@@ -15812,8 +15863,8 @@ export const pxXxl3 = style({
 export const pxXxl4 = style({
   "@media": {
     "(min-width: 1400px)": {
-      paddingLeft: "1.5rem",
       paddingRight: "1.5rem",
+      paddingLeft: "1.5rem",
     },
   },
 });
@@ -15821,8 +15872,8 @@ export const pxXxl4 = style({
 export const pxXxl5 = style({
   "@media": {
     "(min-width: 1400px)": {
-      paddingLeft: "3rem",
       paddingRight: "3rem",
+      paddingLeft: "3rem",
     },
   },
 });
@@ -15830,8 +15881,8 @@ export const pxXxl5 = style({
 export const pyLg0 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingBottom: "0",
       paddingTop: "0",
+      paddingBottom: "0",
     },
   },
 });
@@ -15839,8 +15890,8 @@ export const pyLg0 = style({
 export const pyLg1 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingBottom: "0.25rem",
       paddingTop: "0.25rem",
+      paddingBottom: "0.25rem",
     },
   },
 });
@@ -15848,8 +15899,8 @@ export const pyLg1 = style({
 export const pyLg2 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingBottom: "0.5rem",
       paddingTop: "0.5rem",
+      paddingBottom: "0.5rem",
     },
   },
 });
@@ -15857,8 +15908,8 @@ export const pyLg2 = style({
 export const pyLg3 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingBottom: "1rem",
       paddingTop: "1rem",
+      paddingBottom: "1rem",
     },
   },
 });
@@ -15866,8 +15917,8 @@ export const pyLg3 = style({
 export const pyLg4 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingBottom: "1.5rem",
       paddingTop: "1.5rem",
+      paddingBottom: "1.5rem",
     },
   },
 });
@@ -15875,8 +15926,8 @@ export const pyLg4 = style({
 export const pyLg5 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingBottom: "3rem",
       paddingTop: "3rem",
+      paddingBottom: "3rem",
     },
   },
 });
@@ -15884,8 +15935,8 @@ export const pyLg5 = style({
 export const pyMd0 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingBottom: "0",
       paddingTop: "0",
+      paddingBottom: "0",
     },
   },
 });
@@ -15893,8 +15944,8 @@ export const pyMd0 = style({
 export const pyMd1 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingBottom: "0.25rem",
       paddingTop: "0.25rem",
+      paddingBottom: "0.25rem",
     },
   },
 });
@@ -15902,8 +15953,8 @@ export const pyMd1 = style({
 export const pyMd2 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingBottom: "0.5rem",
       paddingTop: "0.5rem",
+      paddingBottom: "0.5rem",
     },
   },
 });
@@ -15911,8 +15962,8 @@ export const pyMd2 = style({
 export const pyMd3 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingBottom: "1rem",
       paddingTop: "1rem",
+      paddingBottom: "1rem",
     },
   },
 });
@@ -15920,8 +15971,8 @@ export const pyMd3 = style({
 export const pyMd4 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingBottom: "1.5rem",
       paddingTop: "1.5rem",
+      paddingBottom: "1.5rem",
     },
   },
 });
@@ -15929,8 +15980,8 @@ export const pyMd4 = style({
 export const pyMd5 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingBottom: "3rem",
       paddingTop: "3rem",
+      paddingBottom: "3rem",
     },
   },
 });
@@ -15938,8 +15989,8 @@ export const pyMd5 = style({
 export const pySm0 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingBottom: "0",
       paddingTop: "0",
+      paddingBottom: "0",
     },
   },
 });
@@ -15947,8 +15998,8 @@ export const pySm0 = style({
 export const pySm1 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingBottom: "0.25rem",
       paddingTop: "0.25rem",
+      paddingBottom: "0.25rem",
     },
   },
 });
@@ -15956,8 +16007,8 @@ export const pySm1 = style({
 export const pySm2 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingBottom: "0.5rem",
       paddingTop: "0.5rem",
+      paddingBottom: "0.5rem",
     },
   },
 });
@@ -15965,8 +16016,8 @@ export const pySm2 = style({
 export const pySm3 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingBottom: "1rem",
       paddingTop: "1rem",
+      paddingBottom: "1rem",
     },
   },
 });
@@ -15974,8 +16025,8 @@ export const pySm3 = style({
 export const pySm4 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingBottom: "1.5rem",
       paddingTop: "1.5rem",
+      paddingBottom: "1.5rem",
     },
   },
 });
@@ -15983,8 +16034,8 @@ export const pySm4 = style({
 export const pySm5 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingBottom: "3rem",
       paddingTop: "3rem",
+      paddingBottom: "3rem",
     },
   },
 });
@@ -15992,8 +16043,8 @@ export const pySm5 = style({
 export const pyXl0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingBottom: "0",
       paddingTop: "0",
+      paddingBottom: "0",
     },
   },
 });
@@ -16001,8 +16052,8 @@ export const pyXl0 = style({
 export const pyXl1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingBottom: "0.25rem",
       paddingTop: "0.25rem",
+      paddingBottom: "0.25rem",
     },
   },
 });
@@ -16010,8 +16061,8 @@ export const pyXl1 = style({
 export const pyXl2 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingBottom: "0.5rem",
       paddingTop: "0.5rem",
+      paddingBottom: "0.5rem",
     },
   },
 });
@@ -16019,8 +16070,8 @@ export const pyXl2 = style({
 export const pyXl3 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingBottom: "1rem",
       paddingTop: "1rem",
+      paddingBottom: "1rem",
     },
   },
 });
@@ -16028,8 +16079,8 @@ export const pyXl3 = style({
 export const pyXl4 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingBottom: "1.5rem",
       paddingTop: "1.5rem",
+      paddingBottom: "1.5rem",
     },
   },
 });
@@ -16037,8 +16088,8 @@ export const pyXl4 = style({
 export const pyXl5 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingBottom: "3rem",
       paddingTop: "3rem",
+      paddingBottom: "3rem",
     },
   },
 });
@@ -16046,8 +16097,8 @@ export const pyXl5 = style({
 export const pyXxl0 = style({
   "@media": {
     "(min-width: 1400px)": {
-      paddingBottom: "0",
       paddingTop: "0",
+      paddingBottom: "0",
     },
   },
 });
@@ -16055,8 +16106,8 @@ export const pyXxl0 = style({
 export const pyXxl1 = style({
   "@media": {
     "(min-width: 1400px)": {
-      paddingBottom: "0.25rem",
       paddingTop: "0.25rem",
+      paddingBottom: "0.25rem",
     },
   },
 });
@@ -16064,8 +16115,8 @@ export const pyXxl1 = style({
 export const pyXxl2 = style({
   "@media": {
     "(min-width: 1400px)": {
-      paddingBottom: "0.5rem",
       paddingTop: "0.5rem",
+      paddingBottom: "0.5rem",
     },
   },
 });
@@ -16073,8 +16124,8 @@ export const pyXxl2 = style({
 export const pyXxl3 = style({
   "@media": {
     "(min-width: 1400px)": {
-      paddingBottom: "1rem",
       paddingTop: "1rem",
+      paddingBottom: "1rem",
     },
   },
 });
@@ -16082,8 +16133,8 @@ export const pyXxl3 = style({
 export const pyXxl4 = style({
   "@media": {
     "(min-width: 1400px)": {
-      paddingBottom: "1.5rem",
       paddingTop: "1.5rem",
+      paddingBottom: "1.5rem",
     },
   },
 });
@@ -16091,8 +16142,8 @@ export const pyXxl4 = style({
 export const pyXxl5 = style({
   "@media": {
     "(min-width: 1400px)": {
-      paddingBottom: "3rem",
       paddingTop: "3rem",
+      paddingBottom: "3rem",
     },
   },
 });
@@ -16101,17 +16152,17 @@ export const ratio = style({
   position: "relative",
   width: "100%",
   "::before": {
-    content: "",
     display: "block",
     paddingTop: "var(--bs-aspect-ratio)",
+    content: "",
   },
   "selectors": {
     "& > *": {
-      height: "100%",
-      left: "0",
       position: "absolute",
       top: "0",
+      left: "0",
       width: "100%",
+      height: "100%",
     },
   },
 });
@@ -16119,9 +16170,9 @@ export const ratio = style({
 export const row = style({
   display: "flex",
   flexWrap: "wrap",
-  marginLeft: "calc(-0.5*var(--bs-gutter-x))",
-  marginRight: "calc(-0.5*var(--bs-gutter-x))",
   marginTop: "calc(-1*var(--bs-gutter-y))",
+  marginRight: "calc(-0.5*var(--bs-gutter-x))",
+  marginLeft: "calc(-0.5*var(--bs-gutter-x))",
   "vars": {
     "--bs-gutter-x": "1.5rem",
     "--bs-gutter-y": "0",
@@ -16129,11 +16180,11 @@ export const row = style({
   "selectors": {
     "& > *": {
       flexShrink: "0",
-      marginTop: "var(--bs-gutter-y)",
-      maxWidth: "100%",
-      paddingLeft: "calc(var(--bs-gutter-x)*0.5)",
-      paddingRight: "calc(var(--bs-gutter-x)*0.5)",
       width: "100%",
+      maxWidth: "100%",
+      paddingRight: "calc(var(--bs-gutter-x)*0.5)",
+      paddingLeft: "calc(var(--bs-gutter-x)*0.5)",
+      marginTop: "var(--bs-gutter-y)",
     },
   },
 });
@@ -16657,15 +16708,15 @@ export const rowColsXxlAuto = style({
 });
 
 export const spinnerBorder = style({
-  WebkitAnimation: "0.75s linear infinite spinner-border",
-  animation: "0.75s linear infinite spinner-border",
-  border: "0.25em solid currentColor",
-  borderRadius: "50%",
-  borderRightColor: "transparent",
   display: "inline-block",
+  width: "2rem",
   height: "2rem",
   verticalAlign: "-0.125em",
-  width: "2rem",
+  border: "0.25em solid currentColor",
+  borderRightColor: "transparent",
+  borderRadius: "50%",
+  WebkitAnimation: "0.75s linear infinite spinner-border",
+  animation: "0.75s linear infinite spinner-border",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       WebkitAnimationDuration: "1.5s",
@@ -16675,15 +16726,15 @@ export const spinnerBorder = style({
 });
 
 export const spinnerGrow = style({
-  WebkitAnimation: "0.75s linear infinite spinner-grow",
-  animation: "0.75s linear infinite spinner-grow",
+  display: "inline-block",
+  width: "2rem",
+  height: "2rem",
+  verticalAlign: "-0.125em",
   backgroundColor: "currentColor",
   borderRadius: "50%",
-  display: "inline-block",
-  height: "2rem",
   opacity: "0",
-  verticalAlign: "-0.125em",
-  width: "2rem",
+  WebkitAnimation: "0.75s linear infinite spinner-grow",
+  animation: "0.75s linear infinite spinner-grow",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       WebkitAnimationDuration: "1.5s",
@@ -16695,6 +16746,7 @@ export const spinnerGrow = style({
 export const stickyLgTop = style({
   "@media": {
     "(min-width: 992px)": {
+      position: "-webkit-sticky",
       position: "sticky",
       top: "0",
       zIndex: "1020",
@@ -16705,6 +16757,7 @@ export const stickyLgTop = style({
 export const stickyMdTop = style({
   "@media": {
     "(min-width: 768px)": {
+      position: "-webkit-sticky",
       position: "sticky",
       top: "0",
       zIndex: "1020",
@@ -16715,6 +16768,7 @@ export const stickyMdTop = style({
 export const stickySmTop = style({
   "@media": {
     "(min-width: 576px)": {
+      position: "-webkit-sticky",
       position: "sticky",
       top: "0",
       zIndex: "1020",
@@ -16725,6 +16779,7 @@ export const stickySmTop = style({
 export const stickyXlTop = style({
   "@media": {
     "(min-width: 1200px)": {
+      position: "-webkit-sticky",
       position: "sticky",
       top: "0",
       zIndex: "1020",
@@ -16735,6 +16790,7 @@ export const stickyXlTop = style({
 export const stickyXxlTop = style({
   "@media": {
     "(min-width: 1400px)": {
+      position: "-webkit-sticky",
       position: "sticky",
       top: "0",
       zIndex: "1020",
@@ -16751,30 +16807,30 @@ export const tabPane = style({
 });
 
 export const table = style({
-  borderColor: "dee2e6",
-  color: "212529",
-  marginBottom: "1rem",
-  verticalAlign: "top",
   width: "100%",
+  marginBottom: "1rem",
+  color: "212529",
+  verticalAlign: "top",
+  borderColor: "dee2e6",
   "vars": {
-    "--bs-table-accent-bg": "transparent",
-    "--bs-table-active-bg": "rgba 0 ,   0 ,   0 ,   0.1 )",
-    "--bs-table-active-color": "#212529",
     "--bs-table-bg": "transparent",
-    "--bs-table-hover-bg": "rgba 0 ,   0 ,   0 ,   0.075 )",
-    "--bs-table-hover-color": "#212529",
-    "--bs-table-striped-bg": "rgba 0 ,   0 ,   0 ,   0.05 )",
+    "--bs-table-accent-bg": "transparent",
     "--bs-table-striped-color": "#212529",
+    "--bs-table-striped-bg": "rgba 0 ,   0 ,   0 ,   0.05 )",
+    "--bs-table-active-color": "#212529",
+    "--bs-table-active-bg": "rgba 0 ,   0 ,   0 ,   0.1 )",
+    "--bs-table-hover-color": "#212529",
+    "--bs-table-hover-bg": "rgba 0 ,   0 ,   0 ,   0.075 )",
   },
   "selectors": {
     "& > :not(:first-child)": {
       borderTop: "2px solid currentColor",
     },
     "& > :not(caption) > * > *": {
+      padding: "0.5rem 0.5rem",
       backgroundColor: "var(--bs-table-bg)",
       borderBottomWidth: "1px",
       boxShadow: "inset 0 0 0 9999px var(--bs-table-accent-bg)",
-      padding: "0.5rem 0.5rem",
     },
     "& > tbody": {
       verticalAlign: "inherit",
@@ -16821,8 +16877,8 @@ export const tableHover = style({
 export const tableResponsiveLg = style({
   "@media": {
     "(max-width: 991.98px)": {
-      WebkitOverflowScrolling: "touch",
       overflowX: "auto",
+      WebkitOverflowScrolling: "touch",
     },
   },
 });
@@ -16830,8 +16886,8 @@ export const tableResponsiveLg = style({
 export const tableResponsiveMd = style({
   "@media": {
     "(max-width: 767.98px)": {
-      WebkitOverflowScrolling: "touch",
       overflowX: "auto",
+      WebkitOverflowScrolling: "touch",
     },
   },
 });
@@ -16839,8 +16895,8 @@ export const tableResponsiveMd = style({
 export const tableResponsiveSm = style({
   "@media": {
     "(max-width: 575.98px)": {
-      WebkitOverflowScrolling: "touch",
       overflowX: "auto",
+      WebkitOverflowScrolling: "touch",
     },
   },
 });
@@ -16848,8 +16904,8 @@ export const tableResponsiveSm = style({
 export const tableResponsiveXl = style({
   "@media": {
     "(max-width: 1199.98px)": {
-      WebkitOverflowScrolling: "touch",
       overflowX: "auto",
+      WebkitOverflowScrolling: "touch",
     },
   },
 });
@@ -16857,8 +16913,8 @@ export const tableResponsiveXl = style({
 export const tableResponsiveXxl = style({
   "@media": {
     "(max-width: 1399.98px)": {
-      WebkitOverflowScrolling: "touch",
       overflowX: "auto",
+      WebkitOverflowScrolling: "touch",
     },
   },
 });
@@ -17003,15 +17059,15 @@ export const textXxlStart = style({
 });
 
 export const toast = style({
-  backgroundClip: "padding-box",
-  backgroundColor: "rgba(255,255,255,0.85)",
-  border: "1px solid rgba(0,0,0,0.1)",
-  borderRadius: "0.25rem",
-  boxShadow: "0 0.5rem 1rem rgba(0,0,0,0.15)",
-  fontSize: "0.875rem",
-  maxWidth: "100%",
-  pointerEvents: "auto",
   width: "350px",
+  maxWidth: "100%",
+  fontSize: "0.875rem",
+  pointerEvents: "auto",
+  backgroundColor: "rgba(255,255,255,0.85)",
+  backgroundClip: "padding-box",
+  border: "1px solid rgba(0,0,0,0.1)",
+  boxShadow: "0 0.5rem 1rem rgba(0,0,0,0.15)",
+  borderRadius: "0.25rem",
   "selectors": {
     [`${showing}`]: {
       opacity: "0",
@@ -17023,9 +17079,11 @@ export const toast = style({
 });
 
 export const toastContainer = style({
+  width: "-webkit-max-content",
+  width: "-moz-max-content",
+  width: "max-content",
   maxWidth: "100%",
   pointerEvents: "none",
-  width: "max-content",
   "selectors": {
     "& > :not(:last-child)": {
       marginBottom: "0.75rem",
@@ -17034,32 +17092,33 @@ export const toastContainer = style({
 });
 
 export const tooltip = style({
+  position: "absolute",
+  zIndex: "1080",
   display: "block",
+  margin: "0",
   fontFamily: "var(--bs-font-sans-serif)",
-  fontSize: "0.875rem",
   fontStyle: "normal",
   fontWeight: "400",
-  letterSpacing: "normal",
-  lineBreak: "auto",
   lineHeight: "1.5",
-  margin: "0",
-  opacity: "0",
-  position: "absolute",
+  textAlign: "left",
   textAlign: "start",
   textDecoration: "none",
   textShadow: "none",
   textTransform: "none",
-  whiteSpace: "normal",
+  letterSpacing: "normal",
   wordBreak: "normal",
   wordSpacing: "normal",
+  whiteSpace: "normal",
+  lineBreak: "auto",
+  fontSize: "0.875rem",
   wordWrap: "break-word",
-  zIndex: "1080",
+  opacity: "0",
   "selectors": {
     [` ${tooltipArrow}::before`]: {
+      position: "absolute",
+      content: "",
       borderColor: "transparent",
       borderStyle: "solid",
-      content: "",
-      position: "absolute",
     },
     [`${show}`]: {
       opacity: "0.9",
@@ -17068,11 +17127,11 @@ export const tooltip = style({
 });
 
 export const validFeedback = style({
-  color: "198754",
   display: "none",
-  fontSize: "0.875em",
-  marginTop: "0.25rem",
   width: "100%",
+  marginTop: "0.25rem",
+  fontSize: "0.875em",
+  color: "198754",
   "selectors": {
     [`${formCheckInline} ${formCheckInput} ~ &`]: {
       marginLeft: "0.5em",
@@ -17087,17 +17146,17 @@ export const validFeedback = style({
 });
 
 export const validTooltip = style({
-  backgroundColor: "rgba(25,135,84,0.9)",
-  borderRadius: "0.25rem",
-  color: "fff",
-  display: "none",
-  fontSize: "0.875rem",
-  marginTop: "0.1rem",
-  maxWidth: "100%",
-  padding: "0.25rem 0.5rem",
   position: "absolute",
   top: "100%",
   zIndex: "5",
+  display: "none",
+  maxWidth: "100%",
+  padding: "0.25rem 0.5rem",
+  marginTop: "0.1rem",
+  fontSize: "0.875rem",
+  color: "fff",
+  backgroundColor: "rgba(25,135,84,0.9)",
+  borderRadius: "0.25rem",
   "selectors": {
     [`${isValid} ~ &`]: {
       display: "block",
@@ -17111,15 +17170,15 @@ export const validTooltip = style({
 export const visuallyHiddenFocusable = style({
   "selectors": {
     "&:not(:focus):not(:focus-within)": {
-      border: "0",
-      clip: "rect(0,0,0,0)",
+      position: "absolute",
+      width: "1px",
       height: "1px",
+      padding: "0",
       margin: "-1px",
       overflow: "hidden",
-      padding: "0",
-      position: "absolute",
+      clip: "rect(0,0,0,0)",
       whiteSpace: "nowrap",
-      width: "1px",
+      border: "0",
     },
   },
 });
@@ -17137,8 +17196,8 @@ globalStyle("*::before", {
 });
 
 globalStyle("::-moz-focus-inner", {
-  borderStyle: "none",
   padding: "0",
+  borderStyle: "none",
 });
 
 globalStyle("::-webkit-color-swatch-wrapper", {
@@ -17174,8 +17233,9 @@ globalStyle("::-webkit-datetime-edit-year-field", {
 });
 
 globalStyle("::-webkit-file-upload-button", {
-  WebkitAppearance: "button",
   font: "inherit",
+  font: "inherit",
+  WebkitAppearance: "button",
 });
 
 globalStyle("::-webkit-inner-spin-button", {
@@ -17192,25 +17252,19 @@ globalStyle("::file-selector-button", {
 
 globalStyle(":root", {
   "vars": {
-    "--bs-black-rgb": "0 ,   0 ,   0",
     "--bs-blue": "#0d6efd",
-    "--bs-body-bg": "#fff",
-    "--bs-body-bg-rgb": "255 ,   255 ,   255",
-    "--bs-body-color": "#212529",
-    "--bs-body-color-rgb": "33 ,   37 ,   41",
-    "--bs-body-font-family": "var --bs-font-sans-serif )",
-    "--bs-body-font-size": "1rem",
-    "--bs-body-font-weight": "400",
-    "--bs-body-line-height": "1.5",
+    "--bs-indigo": "#6610f2",
+    "--bs-purple": "#6f42c1",
+    "--bs-pink": "#d63384",
+    "--bs-red": "#dc3545",
+    "--bs-orange": "#fd7e14",
+    "--bs-yellow": "#ffc107",
+    "--bs-green": "#198754",
+    "--bs-teal": "#20c997",
     "--bs-cyan": "#0dcaf0",
-    "--bs-danger": "#dc3545",
-    "--bs-danger-rgb": "220 ,   53 ,   69",
-    "--bs-dark": "#212529",
-    "--bs-dark-rgb": "33 ,   37 ,   41",
-    "--bs-font-monospace": "SFMono-Regular ,   Menlo ,   Monaco ,   Consolas ,   Liberation Mono ,   Courier New ,   monospace",
-    "--bs-font-sans-serif": "system-ui ,   -apple-system ,   Segoe UI ,   Roboto ,   Helvetica Neue ,   Arial ,   Noto Sans ,   Liberation Sans ,   sans-serif ,   Apple Color Emoji ,   Segoe UI Emoji ,   Segoe UI Symbol ,   Noto Color Emoji",
-    "--bs-gradient": "linear-gradient 180deg ,   rgba 255 ,   255 ,   255 ,   0.15 ) ,   rgba 255 ,   255 ,   255 ,   0 ) )",
+    "--bs-white": "#fff",
     "--bs-gray": "#6c757d",
+    "--bs-gray-dark": "#343a40",
     "--bs-gray-100": "#f8f9fa",
     "--bs-gray-200": "#e9ecef",
     "--bs-gray-300": "#dee2e6",
@@ -17220,29 +17274,35 @@ globalStyle(":root", {
     "--bs-gray-700": "#495057",
     "--bs-gray-800": "#343a40",
     "--bs-gray-900": "#212529",
-    "--bs-gray-dark": "#343a40",
-    "--bs-green": "#198754",
-    "--bs-indigo": "#6610f2",
-    "--bs-info": "#0dcaf0",
-    "--bs-info-rgb": "13 ,   202 ,   240",
-    "--bs-light": "#f8f9fa",
-    "--bs-light-rgb": "248 ,   249 ,   250",
-    "--bs-orange": "#fd7e14",
-    "--bs-pink": "#d63384",
     "--bs-primary": "#0d6efd",
-    "--bs-primary-rgb": "13 ,   110 ,   253",
-    "--bs-purple": "#6f42c1",
-    "--bs-red": "#dc3545",
     "--bs-secondary": "#6c757d",
-    "--bs-secondary-rgb": "108 ,   117 ,   125",
     "--bs-success": "#198754",
-    "--bs-success-rgb": "25 ,   135 ,   84",
-    "--bs-teal": "#20c997",
+    "--bs-info": "#0dcaf0",
     "--bs-warning": "#ffc107",
+    "--bs-danger": "#dc3545",
+    "--bs-light": "#f8f9fa",
+    "--bs-dark": "#212529",
+    "--bs-primary-rgb": "13 ,   110 ,   253",
+    "--bs-secondary-rgb": "108 ,   117 ,   125",
+    "--bs-success-rgb": "25 ,   135 ,   84",
+    "--bs-info-rgb": "13 ,   202 ,   240",
     "--bs-warning-rgb": "255 ,   193 ,   7",
-    "--bs-white": "#fff",
+    "--bs-danger-rgb": "220 ,   53 ,   69",
+    "--bs-light-rgb": "248 ,   249 ,   250",
+    "--bs-dark-rgb": "33 ,   37 ,   41",
     "--bs-white-rgb": "255 ,   255 ,   255",
-    "--bs-yellow": "#ffc107",
+    "--bs-black-rgb": "0 ,   0 ,   0",
+    "--bs-body-color-rgb": "33 ,   37 ,   41",
+    "--bs-body-bg-rgb": "255 ,   255 ,   255",
+    "--bs-font-sans-serif": "system-ui ,   -apple-system ,   Segoe UI ,   Roboto ,   Helvetica Neue ,   Arial ,   Noto Sans ,   Liberation Sans ,   sans-serif ,   Apple Color Emoji ,   Segoe UI Emoji ,   Segoe UI Symbol ,   Noto Color Emoji",
+    "--bs-font-monospace": "SFMono-Regular ,   Menlo ,   Monaco ,   Consolas ,   Liberation Mono ,   Courier New ,   monospace",
+    "--bs-gradient": "linear-gradient 180deg ,   rgba 255 ,   255 ,   255 ,   0.15 ) ,   rgba 255 ,   255 ,   255 ,   0 ) )",
+    "--bs-body-font-family": "var --bs-font-sans-serif )",
+    "--bs-body-font-size": "1rem",
+    "--bs-body-font-weight": "400",
+    "--bs-body-line-height": "1.5",
+    "--bs-body-color": "#212529",
+    "--bs-body-bg": "#fff",
   },
   "@media": {
     "(prefers-reduced-motion: no-preference)": {
@@ -17280,8 +17340,8 @@ globalStyle("[type='reset']:not(:disabled)", {
 });
 
 globalStyle("[type='search']", {
-  WebkitAppearance: "textfield",
   outlineOffset: "-2px",
+  WebkitAppearance: "textfield",
 });
 
 globalStyle("[type='submit']", {
@@ -17317,24 +17377,24 @@ globalStyle("a:not([href]):not([class]):hover", {
 
 globalStyle("abbr[data-bs-original-title]", {
   WebkitTextDecoration: "underline dotted",
-  WebkitTextDecorationSkipInk: "none",
-  cursor: "help",
   textDecoration: "underline dotted",
+  cursor: "help",
+  WebkitTextDecorationSkipInk: "none",
   textDecorationSkipInk: "none",
 });
 
 globalStyle("abbr[title]", {
   WebkitTextDecoration: "underline dotted",
-  WebkitTextDecorationSkipInk: "none",
-  cursor: "help",
   textDecoration: "underline dotted",
+  cursor: "help",
+  WebkitTextDecorationSkipInk: "none",
   textDecorationSkipInk: "none",
 });
 
 globalStyle("address", {
+  marginBottom: "1rem",
   fontStyle: "normal",
   lineHeight: "inherit",
-  marginBottom: "1rem",
 });
 
 globalStyle("b", {
@@ -17346,26 +17406,26 @@ globalStyle("blockquote", {
 });
 
 globalStyle("body", {
-  WebkitTapHighlightColor: "rgba(0,0,0,0)",
-  WebkitTextSizeAdjust: "100%",
-  backgroundColor: "var(--bs-body-bg)",
-  color: "var(--bs-body-color)",
+  margin: "0",
   fontFamily: "var(--bs-body-font-family)",
   fontSize: "var(--bs-body-font-size)",
   fontWeight: "var(--bs-body-font-weight)",
   lineHeight: "var(--bs-body-line-height)",
-  margin: "0",
+  color: "var(--bs-body-color)",
   textAlign: "var(--bs-body-text-align)",
+  backgroundColor: "var(--bs-body-bg)",
+  WebkitTextSizeAdjust: "100%",
+  WebkitTapHighlightColor: "rgba(0,0,0,0)",
 });
 
 globalStyle("button", {
-  WebkitAppearance: "button",
   borderRadius: "0",
+  margin: "0",
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
-  margin: "0",
   textTransform: "none",
+  WebkitAppearance: "button",
 });
 
 globalStyle("button:focus:not(:focus-visible)", {
@@ -17377,18 +17437,19 @@ globalStyle("button:not(:disabled)", {
 });
 
 globalStyle("caption", {
-  color: "6c757d",
-  paddingBottom: "0.5rem",
   paddingTop: "0.5rem",
+  paddingBottom: "0.5rem",
+  color: "6c757d",
   textAlign: "left",
 });
 
 globalStyle("code", {
-  color: "d63384",
-  direction: "ltr",
   fontFamily: "var(--bs-font-monospace)",
-  fontSize: "0.875em",
+  fontSize: "1em",
+  direction: "ltr",
   unicodeBidi: "bidi-override",
+  fontSize: "0.875em",
+  color: "d63384",
   wordWrap: "break-word",
 });
 
@@ -17398,8 +17459,8 @@ globalStyle("dd", {
 });
 
 globalStyle("dl", {
-  marginBottom: "1rem",
   marginTop: "0",
+  marginBottom: "1rem",
 });
 
 globalStyle("dt", {
@@ -17407,10 +17468,10 @@ globalStyle("dt", {
 });
 
 globalStyle("fieldset", {
-  border: "0",
-  margin: "0",
   minWidth: "0",
   padding: "0",
+  margin: "0",
+  border: "0",
 });
 
 globalStyle("figure", {
@@ -17418,11 +17479,11 @@ globalStyle("figure", {
 });
 
 globalStyle("h1", {
-  fontSize: "calc(1.375rem+1.5vw)",
+  marginTop: "0",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "calc(1.375rem+1.5vw)",
   "@media": {
     "(min-width: 1200px)": {
       fontSize: "2.5rem",
@@ -17431,11 +17492,11 @@ globalStyle("h1", {
 });
 
 globalStyle("h2", {
-  fontSize: "calc(1.325rem+0.9vw)",
+  marginTop: "0",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "calc(1.325rem+0.9vw)",
   "@media": {
     "(min-width: 1200px)": {
       fontSize: "2rem",
@@ -17444,11 +17505,11 @@ globalStyle("h2", {
 });
 
 globalStyle("h3", {
-  fontSize: "calc(1.3rem+0.6vw)",
+  marginTop: "0",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "calc(1.3rem+0.6vw)",
   "@media": {
     "(min-width: 1200px)": {
       fontSize: "1.75rem",
@@ -17457,11 +17518,11 @@ globalStyle("h3", {
 });
 
 globalStyle("h4", {
-  fontSize: "calc(1.275rem+0.3vw)",
+  marginTop: "0",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "calc(1.275rem+0.3vw)",
   "@media": {
     "(min-width: 1200px)": {
       fontSize: "1.5rem",
@@ -17470,26 +17531,26 @@ globalStyle("h4", {
 });
 
 globalStyle("h5", {
-  fontSize: "1.25rem",
+  marginTop: "0",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "1.25rem",
 });
 
 globalStyle("h6", {
-  fontSize: "1rem",
+  marginTop: "0",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "1rem",
 });
 
 globalStyle("hr", {
+  margin: "1rem 0",
+  color: "inherit",
   backgroundColor: "currentColor",
   border: "0",
-  color: "inherit",
-  margin: "1rem 0",
   opacity: "0.25",
 });
 
@@ -17506,27 +17567,28 @@ globalStyle("img", {
 });
 
 globalStyle("input", {
+  margin: "0",
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
-  margin: "0",
 });
 
 globalStyle("kbd", {
+  fontFamily: "var(--bs-font-monospace)",
+  fontSize: "1em",
+  direction: "ltr",
+  unicodeBidi: "bidi-override",
+  padding: "0.2rem 0.4rem",
+  fontSize: "0.875em",
+  color: "fff",
   backgroundColor: "212529",
   borderRadius: "0.2rem",
-  color: "fff",
-  direction: "ltr",
-  fontFamily: "var(--bs-font-monospace)",
-  fontSize: "0.875em",
-  padding: "0.2rem 0.4rem",
-  unicodeBidi: "bidi-override",
 });
 
 globalStyle("kbd kbd", {
+  padding: "0",
   fontSize: "1em",
   fontWeight: "700",
-  padding: "0",
 });
 
 globalStyle("label", {
@@ -17535,11 +17597,11 @@ globalStyle("label", {
 
 globalStyle("legend", {
   float: "left",
+  width: "100%",
+  padding: "0",
+  marginBottom: "0.5rem",
   fontSize: "calc(1.275rem+0.3vw)",
   lineHeight: "inherit",
-  marginBottom: "0.5rem",
-  padding: "0",
-  width: "100%",
   "@media": {
     "(min-width: 1200px)": {
       fontSize: "1.5rem",
@@ -17552,14 +17614,14 @@ globalStyle("legend + *", {
 });
 
 globalStyle("mark", {
-  backgroundColor: "fcf8e3",
   padding: "0.2em",
+  backgroundColor: "fcf8e3",
 });
 
 globalStyle("ol", {
-  marginBottom: "1rem",
-  marginTop: "0",
   paddingLeft: "2rem",
+  marginTop: "0",
+  marginBottom: "1rem",
 });
 
 globalStyle("ol ol", {
@@ -17571,10 +17633,10 @@ globalStyle("ol ul", {
 });
 
 globalStyle("optgroup", {
+  margin: "0",
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
-  margin: "0",
 });
 
 globalStyle("output", {
@@ -17582,24 +17644,25 @@ globalStyle("output", {
 });
 
 globalStyle("p", {
-  marginBottom: "1rem",
   marginTop: "0",
+  marginBottom: "1rem",
 });
 
 globalStyle("pre", {
-  direction: "ltr",
-  display: "block",
   fontFamily: "var(--bs-font-monospace)",
-  fontSize: "0.875em",
-  marginBottom: "1rem",
-  marginTop: "0",
-  overflow: "auto",
+  fontSize: "1em",
+  direction: "ltr",
   unicodeBidi: "bidi-override",
+  display: "block",
+  marginTop: "0",
+  marginBottom: "1rem",
+  overflow: "auto",
+  fontSize: "0.875em",
 });
 
 globalStyle("pre code", {
-  color: "inherit",
   fontSize: "inherit",
+  color: "inherit",
   wordBreak: "normal",
 });
 
@@ -17608,17 +17671,17 @@ globalStyle("progress", {
 });
 
 globalStyle("samp", {
-  direction: "ltr",
   fontFamily: "var(--bs-font-monospace)",
   fontSize: "1em",
+  direction: "ltr",
   unicodeBidi: "bidi-override",
 });
 
 globalStyle("select", {
+  margin: "0",
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
-  margin: "0",
   textTransform: "none",
   wordWrap: "normal",
 });
@@ -17636,24 +17699,24 @@ globalStyle("strong", {
 });
 
 globalStyle("sub", {
-  bottom: "-0.25em",
+  position: "relative",
   fontSize: "0.75em",
   lineHeight: "0",
-  position: "relative",
   verticalAlign: "baseline",
+  bottom: "-0.25em",
 });
 
 globalStyle("summary", {
-  cursor: "pointer",
   display: "list-item",
+  cursor: "pointer",
 });
 
 globalStyle("sup", {
+  position: "relative",
   fontSize: "0.75em",
   lineHeight: "0",
-  position: "relative",
-  top: "-0.5em",
   verticalAlign: "baseline",
+  top: "-0.5em",
 });
 
 globalStyle("svg", {
@@ -17661,8 +17724,8 @@ globalStyle("svg", {
 });
 
 globalStyle("table", {
-  borderCollapse: "collapse",
   captionSide: "bottom",
+  borderCollapse: "collapse",
 });
 
 globalStyle("tbody", {
@@ -17678,10 +17741,10 @@ globalStyle("td", {
 });
 
 globalStyle("textarea", {
+  margin: "0",
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
-  margin: "0",
   resize: "vertical",
 });
 
@@ -17698,13 +17761,13 @@ globalStyle(`textarea${formControl}`, {
 });
 
 globalStyle(`textarea${formControl}${isInvalid}`, {
-  backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
   paddingRight: "calc(1.5em+0.75rem)",
+  backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
 });
 
 globalStyle(`textarea${formControl}${isValid}`, {
-  backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
   paddingRight: "calc(1.5em+0.75rem)",
+  backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
 });
 
 globalStyle("tfoot", {
@@ -17714,10 +17777,11 @@ globalStyle("tfoot", {
 });
 
 globalStyle("th", {
+  textAlign: "inherit",
+  textAlign: "-webkit-match-parent",
   borderColor: "inherit",
   borderStyle: "solid",
   borderWidth: "0",
-  textAlign: "-webkit-match-parent",
 });
 
 globalStyle("thead", {
@@ -17733,9 +17797,9 @@ globalStyle("tr", {
 });
 
 globalStyle("ul", {
-  marginBottom: "1rem",
-  marginTop: "0",
   paddingLeft: "2rem",
+  marginTop: "0",
+  marginBottom: "1rem",
 });
 
 globalStyle("ul ol", {

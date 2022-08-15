@@ -46,8 +46,8 @@ export const accordionButton = style({
 export const display1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      color: "red",
       fontSize: "5rem",
+      color: "red",
     },
   },
 });
@@ -56,8 +56,8 @@ export const display2 = style({
   backgroundColor: "blue",
   "@media": {
     "(min-width: 1200px)": {
-      color: "red",
       fontSize: "5rem",
+      color: "red",
     },
   },
 });
@@ -73,8 +73,8 @@ export const display3 = style({
 export const display4 = style({
   "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
-      color: "red",
       fontSize: "5rem",
+      color: "red",
     },
   },
 });
@@ -83,8 +83,8 @@ export const display5 = style({
   backgroundColor: "blue",
   "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
-      color: "red",
       fontSize: "5rem",
+      color: "red",
     },
   },
 });
@@ -137,10 +137,12 @@ globalStyle("input", {
   "@media": {
     "(min-width: 1200px)": {
       fontSize: "5rem",
+      fontSize: "5rem",
     },
   },
   "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
+      fontSize: "5rem",
       fontSize: "5rem",
     },
   },
