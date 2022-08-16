@@ -27,7 +27,7 @@ fn get_supports_condition(condition: &swc_css_ast::SupportsConditionType) -> Com
         swc_css_ast::SupportsConditionType::Not(not) => {
             let supports_in_parens = &get_supports_in_parens(&not.condition);
             component.ve.push_str(&supports_in_parens.ve);
-            for key_value in &supports_in_parens.key_value_pair {
+            for key_value in &supports_in_parens.key_value_pairs {
                 component.ve.push_str(&format!(
                     " not {}",
                     &format!("({}:{})", key_value.key, key_value.value)
@@ -39,7 +39,7 @@ fn get_supports_condition(condition: &swc_css_ast::SupportsConditionType) -> Com
         swc_css_ast::SupportsConditionType::And(and) => {
             let supports_in_parens = &get_supports_in_parens(&and.condition);
             component.ve.push_str(&supports_in_parens.ve);
-            for key_value in &supports_in_parens.key_value_pair {
+            for key_value in &supports_in_parens.key_value_pairs {
                 component.ve.push_str(&format!(
                     " and {}",
                     &format!("({}:{})", key_value.key, key_value.value)
@@ -51,7 +51,7 @@ fn get_supports_condition(condition: &swc_css_ast::SupportsConditionType) -> Com
         swc_css_ast::SupportsConditionType::Or(or) => {
             let supports_in_parens = &get_supports_in_parens(&or.condition);
             component.ve.push_str(&supports_in_parens.ve);
-            for key_value in &supports_in_parens.key_value_pair {
+            for key_value in &supports_in_parens.key_value_pairs {
                 component.ve.push_str(&format!(
                     " or {}",
                     &format!("({}:{})", key_value.key, key_value.value)
@@ -63,7 +63,7 @@ fn get_supports_condition(condition: &swc_css_ast::SupportsConditionType) -> Com
         swc_css_ast::SupportsConditionType::SupportsInParens(supports_in_parens) => {
             let supports_in_parens = get_supports_in_parens(supports_in_parens);
             component.ve.push_str(&supports_in_parens.ve);
-            for key_value in &supports_in_parens.key_value_pair {
+            for key_value in &supports_in_parens.key_value_pairs {
                 component
                     .ve
                     .push_str(&format!("({}:{})", key_value.key, key_value.value));
@@ -89,7 +89,7 @@ fn get_supports_in_parens(supports_in_parens: &swc_css_ast::SupportsInParens) ->
         swc_css_ast::SupportsInParens::Feature(feature) => {
             let supports_feature = get_supports_feature(feature);
 
-            component.key_value_pair.extend(supports_feature.0);
+            component.key_value_pairs.extend(supports_feature.0);
             component.ve.push_str(&supports_feature.1);
             component
         }
@@ -103,14 +103,14 @@ fn get_supports_in_parens(supports_in_parens: &swc_css_ast::SupportsInParens) ->
                 }
                 swc_css_ast::GeneralEnclosed::SimpleBlock(simple_block) => {
                     let mut simple_block_values = String::new();
-                    let mut key_value_pair: Vec<KeyValue> = vec![];
+                    let mut key_value_pairs: Vec<KeyValue> = vec![];
                     for simple_block_value in &simple_block.value {
                         let component_value = get_component_value(simple_block_value);
                         simple_block_values.push_str(&component_value[0].ve);
-                        key_value_pair.extend(component_value[0].key_value_pair.clone());
+                        key_value_pairs.extend(component_value[0].key_value_pairs.clone());
                     }
 
-                    component.key_value_pair.extend(key_value_pair);
+                    component.key_value_pairs.extend(key_value_pairs);
                     component.ve.push_str(&simple_block_values);
                     component.key.push_str(&simple_block.name.to_string());
                     component

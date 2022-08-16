@@ -26,7 +26,7 @@ pub fn get_keyframes(
             let component = get_component_value(component_value);
 
             let mut rule = String::new();
-            for key_value in component[0].key_value_pair.clone().into_iter() {
+            for key_value in component[0].key_value_pairs.clone().into_iter() {
                 rule.push_str(&wrap_property(key_value.key, key_value.value, Some(4)));
             }
 
