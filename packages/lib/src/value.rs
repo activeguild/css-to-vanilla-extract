@@ -64,8 +64,8 @@ pub struct RuleMapValue {
     pub key_value_pairs_in_selectors: KeyValuePairsInSelectors,
     pub selectors_in_media: BTreeMap<String, KeyValuePairsInSelectors>,
     pub selectors_in_supports: BTreeMap<String, KeyValuePairsInSelectors>,
-    pub media: String,
-    pub supports: String,
+    pub media_confition: String,
+    pub supports_confition: String,
 }
 
 pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
@@ -204,8 +204,10 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                             let _global_rule_map = global_rule_map
                                                 .entry(component.key)
                                                 .or_insert_with(RuleMapValue::default);
-                                            if _global_rule_map.media.is_empty() {
-                                                _global_rule_map.media.push_str(&media_condition);
+                                            if _global_rule_map.media_confition.is_empty() {
+                                                _global_rule_map
+                                                    .media_confition
+                                                    .push_str(&media_condition);
                                             }
                                             _global_rule_map
                                                 .key_value_pairs_in_media
@@ -234,8 +236,10 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                             let _rule_map = rule_map
                                                 .entry(component.key)
                                                 .or_insert_with(RuleMapValue::default);
-                                            if _rule_map.media.is_empty() {
-                                                _rule_map.media.push_str(&media_condition);
+                                            if _rule_map.media_confition.is_empty() {
+                                                _rule_map
+                                                    .media_confition
+                                                    .push_str(&media_condition);
                                             }
                                             _rule_map
                                                 .key_value_pairs_in_media
@@ -274,8 +278,10 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                     let _global_rule_map = global_rule_map
                                         .entry(component.key)
                                         .or_insert_with(RuleMapValue::default);
-                                    if _global_rule_map.supports.is_empty() {
-                                        _global_rule_map.supports.push_str(&supports_condition);
+                                    if _global_rule_map.supports_confition.is_empty() {
+                                        _global_rule_map
+                                            .supports_confition
+                                            .push_str(&supports_condition);
                                     }
                                     _global_rule_map
                                         .key_value_pairs_in_supports
@@ -304,8 +310,8 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                     let _rule_map = rule_map
                                         .entry(component.key)
                                         .or_insert_with(RuleMapValue::default);
-                                    if _rule_map.supports.is_empty() {
-                                        _rule_map.supports.push_str(&supports_condition);
+                                    if _rule_map.supports_confition.is_empty() {
+                                        _rule_map.supports_confition.push_str(&supports_condition);
                                     }
                                     _rule_map
                                         .key_value_pairs_in_supports
@@ -453,7 +459,7 @@ fn finish_to_vanilla_extract(
             properties.push_str(&pseudo_rule);
         }
 
-        if !value.media.is_empty() || !value.selectors_in_media.is_empty() {
+        if !value.media_confition.is_empty() || !value.selectors_in_media.is_empty() {
             let mut rule = String::new();
 
             for key_value in value.key_value_pairs_in_media.into_iter() {
@@ -498,11 +504,11 @@ fn finish_to_vanilla_extract(
 
             properties.push_str(&wrap_properties_with_colon(
                 String::from("@media"),
-                wrap_properties_with_colon(value.media, rule, Some(4)),
+                wrap_properties_with_colon(value.media_confition, rule, Some(4)),
                 Some(2),
             ));
         }
-        if !value.supports.is_empty() || !value.selectors_in_supports.is_empty() {
+        if !value.supports_confition.is_empty() || !value.selectors_in_supports.is_empty() {
             let mut rule = String::new();
             for key_value in value.key_value_pairs_in_supports.into_iter() {
                 rule.push_str(&wrap_property(key_value.key, key_value.value, Some(6)));
@@ -546,7 +552,7 @@ fn finish_to_vanilla_extract(
 
             properties.push_str(&wrap_properties_with_colon(
                 String::from("@supports"),
-                wrap_properties_with_colon(value.supports, rule, Some(4)),
+                wrap_properties_with_colon(value.supports_confition, rule, Some(4)),
                 Some(2),
             ));
         }
