@@ -71,30 +71,54 @@ npx css-to-vanilla-extract sample/test.css
     transform: translateX(100%);
   }
 }
+
+.fizz .buzz {
+  background-color: blue;
+}
+
+.fizz .buzz {
+  font-size: 5rem;
+}
 ```
 
 ### Output
 
 ```ts
-import { globalFontFace, globalKeyframes, globalStyle, style } from "@vanilla-extract/css"
+import {
+  globalFontFace,
+  globalKeyframes,
+  globalStyle,
+  style,
+} from "@vanilla-extract/css";
 
 globalFontFace("Roboto", {
   src: "url(https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap)",
 });
 
 globalKeyframes("slidein", {
-  "from": {
+  from: {
     transform: "translateX(0%)",
   },
-  "to": {
+  to: {
     transform: "translateX(100%)",
   },
 });
 
+export const fizz = style({});
+
 export const bar = style({
   "@media": {
     "(min-width: 1200px)": {
-    fontSize: "10rem",
+      fontSize: "10rem",
+    },
+  },
+});
+
+export const buzz = style({
+  selectors: {
+    [`${fizz} &`]: {
+      backgroundColor: "blue",
+      fontSize: "5rem",
     },
   },
 });
@@ -103,8 +127,8 @@ export const foo = style({
   backgroundColor: "blue",
   "@media": {
     "(min-width: 1200px)": {
-    color: "red",
-    fontSize: "5rem",
+      color: "red",
+      fontSize: "5rem",
     },
   },
 });
@@ -112,7 +136,7 @@ export const foo = style({
 globalStyle("input", {
   "@media": {
     "(min-width: 1200px)": {
-    fontSize: "5rem",
+      fontSize: "5rem",
     },
   },
 });

@@ -38,8 +38,8 @@ globalKeyframes("spinner-grow", {
     transform: "scale(0)",
   },
   "50%": {
-    WebkitTransform: "none",
     opacity: "1",
+    WebkitTransform: "none",
     transform: "none",
   },
 });
@@ -50,18 +50,18 @@ globalKeyframes("spinner-grow", {
     transform: "scale(0)",
   },
   "50%": {
-    WebkitTransform: "none",
     opacity: "1",
+    WebkitTransform: "none",
     transform: "none",
   },
 });
 
 export const alert = style({
+  position: "relative",
+  padding: "0.75rem 1.25rem",
+  marginBottom: "1rem",
   border: "1px solid transparent",
   borderRadius: "0.25rem",
-  marginBottom: "1rem",
-  padding: "0.75rem 1.25rem",
-  position: "relative",
 });
 
 export const alertDismissible = style({
@@ -81,58 +81,58 @@ export const alignBottom = style({
 });
 
 export const alignContentAround = style({
-  alignContent: "space-around",
   msFlexLinePack: "distribute",
+  alignContent: "space-around",
 });
 
 export const alignContentBetween = style({
-  alignContent: "space-between",
   msFlexLinePack: "justify",
+  alignContent: "space-between",
 });
 
 export const alignContentCenter = style({
-  alignContent: "center",
   msFlexLinePack: "center",
+  alignContent: "center",
 });
 
 export const alignContentEnd = style({
-  alignContent: "flex-end",
   msFlexLinePack: "end",
+  alignContent: "flex-end",
 });
 
 export const alignContentStart = style({
-  alignContent: "flex-start",
   msFlexLinePack: "start",
+  alignContent: "flex-start",
 });
 
 export const alignContentStretch = style({
-  alignContent: "stretch",
   msFlexLinePack: "stretch",
+  alignContent: "stretch",
 });
 
 export const alignItemsBaseline = style({
-  alignItems: "baseline",
   msFlexAlign: "baseline",
+  alignItems: "baseline",
 });
 
 export const alignItemsCenter = style({
-  alignItems: "center",
   msFlexAlign: "center",
+  alignItems: "center",
 });
 
 export const alignItemsEnd = style({
-  alignItems: "flex-end",
   msFlexAlign: "end",
+  alignItems: "flex-end",
 });
 
 export const alignItemsStart = style({
-  alignItems: "flex-start",
   msFlexAlign: "start",
+  alignItems: "flex-start",
 });
 
 export const alignItemsStretch = style({
-  alignItems: "stretch",
   msFlexAlign: "stretch",
+  alignItems: "stretch",
 });
 
 export const alignMiddle = style({
@@ -140,33 +140,33 @@ export const alignMiddle = style({
 });
 
 export const alignSelfAuto = style({
-  alignSelf: "auto",
   msFlexItemAlign: "auto",
+  alignSelf: "auto",
 });
 
 export const alignSelfBaseline = style({
-  alignSelf: "baseline",
   msFlexItemAlign: "baseline",
+  alignSelf: "baseline",
 });
 
 export const alignSelfCenter = style({
-  alignSelf: "center",
   msFlexItemAlign: "center",
+  alignSelf: "center",
 });
 
 export const alignSelfEnd = style({
-  alignSelf: "flex-end",
   msFlexItemAlign: "end",
+  alignSelf: "flex-end",
 });
 
 export const alignSelfStart = style({
-  alignSelf: "flex-start",
   msFlexItemAlign: "start",
+  alignSelf: "flex-start",
 });
 
 export const alignSelfStretch = style({
-  alignSelf: "stretch",
   msFlexItemAlign: "stretch",
+  alignSelf: "stretch",
 });
 
 export const alignTextBottom = style({
@@ -182,49 +182,49 @@ export const alignTop = style({
 });
 
 export const badgeDanger = style({
-  backgroundColor: "dc3545",
   color: "fff",
+  backgroundColor: "dc3545",
 });
 
 export const badgeDark = style({
-  backgroundColor: "343a40",
   color: "fff",
+  backgroundColor: "343a40",
 });
 
 export const badgeInfo = style({
-  backgroundColor: "17a2b8",
   color: "fff",
+  backgroundColor: "17a2b8",
 });
 
 export const badgeLight = style({
-  backgroundColor: "f8f9fa",
   color: "212529",
+  backgroundColor: "f8f9fa",
 });
 
 export const badgePill = style({
-  borderRadius: "10rem",
-  paddingLeft: "0.6em",
   paddingRight: "0.6em",
+  paddingLeft: "0.6em",
+  borderRadius: "10rem",
 });
 
 export const badgePrimary = style({
-  backgroundColor: "007bff",
   color: "fff",
+  backgroundColor: "007bff",
 });
 
 export const badgeSecondary = style({
-  backgroundColor: "6c757d",
   color: "fff",
+  backgroundColor: "6c757d",
 });
 
 export const badgeSuccess = style({
-  backgroundColor: "28a745",
   color: "fff",
+  backgroundColor: "28a745",
 });
 
 export const badgeWarning = style({
-  backgroundColor: "ffc107",
   color: "212529",
+  backgroundColor: "ffc107",
 });
 
 export const bgDanger = style({
@@ -268,14 +268,14 @@ export const bgWhite = style({
 });
 
 export const blockquote = style({
-  fontSize: "1.25rem",
   marginBottom: "1rem",
+  fontSize: "1.25rem",
 });
 
 export const blockquoteFooter = style({
-  color: "6c757d",
   display: "block",
   fontSize: "80%",
+  color: "6c757d",
   "::before": {
     content: "— ",
   },
@@ -358,14 +358,15 @@ export const borderWhite = style({
 });
 
 export const breadcrumb = style({
+  display: "-ms-flexbox",
+  display: "flex",
+  msFlexWrap: "wrap",
+  flexWrap: "wrap",
+  padding: "0.75rem 1rem",
+  marginBottom: "1rem",
+  listStyle: "none",
   backgroundColor: "e9ecef",
   borderRadius: "0.25rem",
-  display: "flex",
-  flexWrap: "wrap",
-  listStyle: "none",
-  marginBottom: "1rem",
-  msFlexWrap: "wrap",
-  padding: "0.75rem 1rem",
 });
 
 export const btnGroupLg = style({
@@ -375,69 +376,70 @@ export const btnGroupSm = style({
 });
 
 export const btnLg = style({
-  borderRadius: "0.3rem",
+  padding: "0.5rem 1rem",
   fontSize: "1.25rem",
   lineHeight: "1.5",
-  padding: "0.5rem 1rem",
+  borderRadius: "0.3rem",
 });
 
 export const btnSm = style({
-  borderRadius: "0.2rem",
+  padding: "0.25rem 0.5rem",
   fontSize: "0.875rem",
   lineHeight: "1.5",
-  padding: "0.25rem 0.5rem",
+  borderRadius: "0.2rem",
 });
 
 export const btnToolbar = style({
+  display: "-ms-flexbox",
   display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "flex-start",
-  msFlexPack: "start",
   msFlexWrap: "wrap",
+  flexWrap: "wrap",
+  msFlexPack: "start",
+  justifyContent: "flex-start",
 });
 
 export const cardBody = style({
+  msFlex: "1 1 auto",
   flex: "1 1 auto",
   minHeight: "1px",
-  msFlex: "1 1 auto",
   padding: "1.25rem",
 });
 
 export const cardHeaderPills = style({
-  marginLeft: "-0.625rem",
   marginRight: "-0.625rem",
+  marginLeft: "-0.625rem",
 });
 
 export const cardHeaderTabs = style({
-  borderBottom: "0",
+  marginRight: "-0.625rem",
   marginBottom: "-0.75rem",
   marginLeft: "-0.625rem",
-  marginRight: "-0.625rem",
+  borderBottom: "0",
 });
 
 export const cardImg = style({
-  borderBottomLeftRadius: "calc(0.25rem-1px)",
-  borderBottomRightRadius: "calc(0.25rem-1px)",
+  msFlexNegative: "0",
+  flexShrink: "0",
+  width: "100%",
   borderTopLeftRadius: "calc(0.25rem-1px)",
   borderTopRightRadius: "calc(0.25rem-1px)",
-  flexShrink: "0",
-  msFlexNegative: "0",
-  width: "100%",
+  borderBottomRightRadius: "calc(0.25rem-1px)",
+  borderBottomLeftRadius: "calc(0.25rem-1px)",
 });
 
 export const cardImgOverlay = style({
-  borderRadius: "calc(0.25rem-1px)",
+  position: "absolute",
+  top: "0",
+  right: "0",
   bottom: "0",
   left: "0",
   padding: "1.25rem",
-  position: "absolute",
-  right: "0",
-  top: "0",
+  borderRadius: "calc(0.25rem-1px)",
 });
 
 export const cardSubtitle = style({
-  marginBottom: "0",
   marginTop: "-0.375rem",
+  marginBottom: "0",
 });
 
 export const cardText = style({
@@ -451,223 +453,225 @@ export const cardTitle = style({
 });
 
 export const carouselCaption = style({
-  bottom: "20px",
-  color: "fff",
-  left: "15%",
-  paddingBottom: "20px",
-  paddingTop: "20px",
   position: "absolute",
   right: "15%",
-  textAlign: "center",
+  bottom: "20px",
+  left: "15%",
   zIndex: "10",
+  paddingTop: "20px",
+  paddingBottom: "20px",
+  color: "fff",
+  textAlign: "center",
 });
 
 export const carouselControlNextIcon = style({
+  display: "inline-block",
+  width: "20px",
+  height: "20px",
   background: "50% / 100% 100% no-repeat",
   backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e)",
-  display: "inline-block",
-  height: "20px",
-  width: "20px",
 });
 
 export const carouselControlPrevIcon = style({
+  display: "inline-block",
+  width: "20px",
+  height: "20px",
   background: "50% / 100% 100% no-repeat",
   backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e)",
-  display: "inline-block",
-  height: "20px",
-  width: "20px",
 });
 
 export const carouselInner = style({
-  overflow: "hidden",
   position: "relative",
   width: "100%",
+  overflow: "hidden",
   "::after": {
+    display: "block",
     clear: "both",
     content: "",
-    display: "block",
   },
 });
 
 export const clearfix = style({
   "::after": {
+    display: "block",
     clear: "both",
     content: "",
-    display: "block",
   },
 });
 
 export const col1 = style({
-  flex: "0 0 8.333333%",
-  maxWidth: "8.333333%",
-  msFlex: "0 0 8.333333%",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 8.333333%",
+  flex: "0 0 8.333333%",
+  maxWidth: "8.333333%",
 });
 
 export const col10 = style({
-  flex: "0 0 83.333333%",
-  maxWidth: "83.333333%",
-  msFlex: "0 0 83.333333%",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 83.333333%",
+  flex: "0 0 83.333333%",
+  maxWidth: "83.333333%",
 });
 
 export const col11 = style({
-  flex: "0 0 91.666667%",
-  maxWidth: "91.666667%",
-  msFlex: "0 0 91.666667%",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 91.666667%",
+  flex: "0 0 91.666667%",
+  maxWidth: "91.666667%",
 });
 
 export const col12 = style({
-  flex: "0 0 100%",
-  maxWidth: "100%",
-  msFlex: "0 0 100%",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 100%",
+  flex: "0 0 100%",
+  maxWidth: "100%",
 });
 
 export const col2 = style({
-  flex: "0 0 16.666667%",
-  maxWidth: "16.666667%",
-  msFlex: "0 0 16.666667%",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 16.666667%",
+  flex: "0 0 16.666667%",
+  maxWidth: "16.666667%",
 });
 
 export const col3 = style({
-  flex: "0 0 25%",
-  maxWidth: "25%",
-  msFlex: "0 0 25%",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 25%",
+  flex: "0 0 25%",
+  maxWidth: "25%",
 });
 
 export const col4 = style({
-  flex: "0 0 33.333333%",
-  maxWidth: "33.333333%",
-  msFlex: "0 0 33.333333%",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 33.333333%",
+  flex: "0 0 33.333333%",
+  maxWidth: "33.333333%",
 });
 
 export const col5 = style({
-  flex: "0 0 41.666667%",
-  maxWidth: "41.666667%",
-  msFlex: "0 0 41.666667%",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 41.666667%",
+  flex: "0 0 41.666667%",
+  maxWidth: "41.666667%",
 });
 
 export const col6 = style({
-  flex: "0 0 50%",
-  maxWidth: "50%",
-  msFlex: "0 0 50%",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 50%",
+  flex: "0 0 50%",
+  maxWidth: "50%",
 });
 
 export const col7 = style({
-  flex: "0 0 58.333333%",
-  maxWidth: "58.333333%",
-  msFlex: "0 0 58.333333%",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 58.333333%",
+  flex: "0 0 58.333333%",
+  maxWidth: "58.333333%",
 });
 
 export const col8 = style({
-  flex: "0 0 66.666667%",
-  maxWidth: "66.666667%",
-  msFlex: "0 0 66.666667%",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 66.666667%",
+  flex: "0 0 66.666667%",
+  maxWidth: "66.666667%",
 });
 
 export const col9 = style({
-  flex: "0 0 75%",
-  maxWidth: "75%",
-  msFlex: "0 0 75%",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 75%",
+  flex: "0 0 75%",
+  maxWidth: "75%",
 });
 
 export const colAuto = style({
-  flex: "0 0 auto",
-  maxWidth: "100%",
-  msFlex: "0 0 auto",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
+  width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlex: "0 0 auto",
+  flex: "0 0 auto",
   width: "auto",
+  maxWidth: "100%",
 });
 
 export const colFormLabel = style({
+  paddingTop: "calc(0.375rem+1px)",
+  paddingBottom: "calc(0.375rem+1px)",
+  marginBottom: "0",
   fontSize: "inherit",
   lineHeight: "1.5",
-  marginBottom: "0",
-  paddingBottom: "calc(0.375rem+1px)",
-  paddingTop: "calc(0.375rem+1px)",
 });
 
 export const colFormLabelLg = style({
+  paddingTop: "calc(0.5rem+1px)",
+  paddingBottom: "calc(0.5rem+1px)",
   fontSize: "1.25rem",
   lineHeight: "1.5",
-  paddingBottom: "calc(0.5rem+1px)",
-  paddingTop: "calc(0.5rem+1px)",
 });
 
 export const colFormLabelSm = style({
+  paddingTop: "calc(0.25rem+1px)",
+  paddingBottom: "calc(0.25rem+1px)",
   fontSize: "0.875rem",
   lineHeight: "1.5",
-  paddingBottom: "calc(0.25rem+1px)",
-  paddingTop: "calc(0.25rem+1px)",
 });
 
 export const customControlInline = style({
+  display: "-ms-inline-flexbox",
   display: "inline-flex",
   marginRight: "1rem",
 });
 
 export const customSelectLg = style({
-  fontSize: "1.25rem",
   height: "calc(1.5em+1rem+2px)",
+  paddingTop: "0.5rem",
   paddingBottom: "0.5rem",
   paddingLeft: "1rem",
-  paddingTop: "0.5rem",
+  fontSize: "1.25rem",
 });
 
 export const customSelectSm = style({
-  fontSize: "0.875rem",
   height: "calc(1.5em+0.5rem+2px)",
+  paddingTop: "0.25rem",
   paddingBottom: "0.25rem",
   paddingLeft: "0.5rem",
-  paddingTop: "0.25rem",
+  fontSize: "0.875rem",
 });
 
 export const dBlock = style({
@@ -675,6 +679,7 @@ export const dBlock = style({
 });
 
 export const dFlex = style({
+  display: "-ms-flexbox",
   display: "flex",
 });
 
@@ -687,6 +692,7 @@ export const dInlineBlock = style({
 });
 
 export const dInlineFlex = style({
+  display: "-ms-inline-flexbox",
   display: "inline-flex",
 });
 
@@ -735,35 +741,35 @@ export const dropdown = style({
 });
 
 export const dropdownDivider = style({
-  borderTop: "1px solid e9ecef",
   height: "0",
   margin: "0.5rem 0",
   overflow: "hidden",
+  borderTop: "1px solid e9ecef",
 });
 
 export const dropdownHeader = style({
-  color: "6c757d",
   display: "block",
-  fontSize: "0.875rem",
-  marginBottom: "0",
   padding: "0.5rem 1.5rem",
+  marginBottom: "0",
+  fontSize: "0.875rem",
+  color: "6c757d",
   whiteSpace: "nowrap",
 });
 
 export const dropdownItemText = style({
-  color: "212529",
   display: "block",
   padding: "0.25rem 1.5rem",
+  color: "212529",
 });
 
 export const dropdownMenuLeft = style({
-  left: "0",
   right: "auto",
+  left: "0",
 });
 
 export const dropdownMenuRight = style({
-  left: "auto",
   right: "0",
+  left: "auto",
 });
 
 export const embedResponsive16By9 = style({
@@ -795,89 +801,89 @@ export const figure = style({
 });
 
 export const figureCaption = style({
-  color: "6c757d",
   fontSize: "90%",
+  color: "6c757d",
 });
 
 export const figureImg = style({
-  lineHeight: "1",
   marginBottom: "0.5rem",
+  lineHeight: "1",
 });
 
 export const fixedBottom = style({
-  bottom: "0",
-  left: "0",
   position: "fixed",
   right: "0",
+  bottom: "0",
+  left: "0",
   zIndex: "1030",
 });
 
 export const fixedTop = style({
-  left: "0",
   position: "fixed",
-  right: "0",
   top: "0",
+  right: "0",
+  left: "0",
   zIndex: "1030",
 });
 
 export const flexColumn = style({
-  flexDirection: "column",
   msFlexDirection: "column",
+  flexDirection: "column",
 });
 
 export const flexColumnReverse = style({
-  flexDirection: "column-reverse",
   msFlexDirection: "column-reverse",
+  flexDirection: "column-reverse",
 });
 
 export const flexFill = style({
-  flex: "1 1 auto",
   msFlex: "1 1 auto",
+  flex: "1 1 auto",
 });
 
 export const flexGrow0 = style({
-  flexGrow: "0",
   msFlexPositive: "0",
+  flexGrow: "0",
 });
 
 export const flexGrow1 = style({
-  flexGrow: "1",
   msFlexPositive: "1",
+  flexGrow: "1",
 });
 
 export const flexNowrap = style({
-  flexWrap: "nowrap",
   msFlexWrap: "nowrap",
+  flexWrap: "nowrap",
 });
 
 export const flexRow = style({
-  flexDirection: "row",
   msFlexDirection: "row",
+  flexDirection: "row",
 });
 
 export const flexRowReverse = style({
-  flexDirection: "row-reverse",
   msFlexDirection: "row-reverse",
+  flexDirection: "row-reverse",
 });
 
 export const flexShrink0 = style({
-  flexShrink: "0",
   msFlexNegative: "0",
+  flexShrink: "0",
 });
 
 export const flexShrink1 = style({
-  flexShrink: "1",
   msFlexNegative: "1",
+  flexShrink: "1",
 });
 
 export const flexWrap = style({
-  flexWrap: "wrap",
   msFlexWrap: "wrap",
+  flexWrap: "wrap",
 });
 
 export const flexWrapReverse = style({
-  flexWrap: "wrap-reverse",
   msFlexWrap: "wrap-reverse",
+  flexWrap: "wrap-reverse",
 });
 
 export const floatLeft = style({
@@ -920,11 +926,12 @@ export const fontWeightNormal = style({
 });
 
 export const formCheckInline = style({
-  alignItems: "center",
+  display: "-ms-inline-flexbox",
   display: "inline-flex",
-  marginRight: "0.75rem",
   msFlexAlign: "center",
+  alignItems: "center",
   paddingLeft: "0",
+  marginRight: "0.75rem",
 });
 
 export const formControlFile = style({
@@ -933,11 +940,11 @@ export const formControlFile = style({
 });
 
 export const formControlLg = style({
-  borderRadius: "0.3rem",
-  fontSize: "1.25rem",
   height: "calc(1.5em+1rem+2px)",
-  lineHeight: "1.5",
   padding: "0.5rem 1rem",
+  fontSize: "1.25rem",
+  lineHeight: "1.5",
+  borderRadius: "0.3rem",
 });
 
 export const formControlRange = style({
@@ -946,11 +953,11 @@ export const formControlRange = style({
 });
 
 export const formControlSm = style({
-  borderRadius: "0.2rem",
-  fontSize: "0.875rem",
   height: "calc(1.5em+0.5rem+2px)",
-  lineHeight: "1.5",
   padding: "0.25rem 0.5rem",
+  fontSize: "0.875rem",
+  lineHeight: "1.5",
+  borderRadius: "0.2rem",
 });
 
 export const formText = style({
@@ -959,10 +966,10 @@ export const formText = style({
 });
 
 export const h1 = style({
-  fontSize: "2.5rem",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
+  fontSize: "2.5rem",
 });
 
 export const h100 = style({
@@ -970,10 +977,10 @@ export const h100 = style({
 });
 
 export const h2 = style({
-  fontSize: "2rem",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
+  fontSize: "2rem",
 });
 
 export const h25 = style({
@@ -981,24 +988,24 @@ export const h25 = style({
 });
 
 export const h3 = style({
-  fontSize: "1.75rem",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
+  fontSize: "1.75rem",
 });
 
 export const h4 = style({
-  fontSize: "1.5rem",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
+  fontSize: "1.5rem",
 });
 
 export const h5 = style({
-  fontSize: "1.25rem",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
+  fontSize: "1.25rem",
 });
 
 export const h50 = style({
@@ -1006,10 +1013,10 @@ export const h50 = style({
 });
 
 export const h6 = style({
-  fontSize: "1rem",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
+  fontSize: "1rem",
 });
 
 export const h75 = style({
@@ -1027,17 +1034,17 @@ export const hide = style({
 });
 
 export const imgFluid = style({
-  height: "auto",
   maxWidth: "100%",
+  height: "auto",
 });
 
 export const imgThumbnail = style({
+  padding: "0.25rem",
   backgroundColor: "fff",
   border: "1px solid dee2e6",
   borderRadius: "0.25rem",
-  height: "auto",
   maxWidth: "100%",
-  padding: "0.25rem",
+  height: "auto",
 });
 
 export const initialism = style({
@@ -1056,34 +1063,34 @@ export const isValid = style({
 });
 
 export const jumbotronFluid = style({
-  borderRadius: "0",
-  paddingLeft: "0",
   paddingRight: "0",
+  paddingLeft: "0",
+  borderRadius: "0",
 });
 
 export const justifyContentAround = style({
-  justifyContent: "space-around",
   msFlexPack: "distribute",
+  justifyContent: "space-around",
 });
 
 export const justifyContentBetween = style({
-  justifyContent: "space-between",
   msFlexPack: "justify",
+  justifyContent: "space-between",
 });
 
 export const justifyContentCenter = style({
-  justifyContent: "center",
   msFlexPack: "center",
+  justifyContent: "center",
 });
 
 export const justifyContentEnd = style({
-  justifyContent: "flex-end",
   msFlexPack: "end",
+  justifyContent: "flex-end",
 });
 
 export const justifyContentStart = style({
-  justifyContent: "flex-start",
   msFlexPack: "start",
+  justifyContent: "flex-start",
 });
 
 export const lead = style({
@@ -1092,35 +1099,35 @@ export const lead = style({
 });
 
 export const listGroupItemAction = style({
+  width: "100%",
   color: "495057",
   textAlign: "inherit",
-  width: "100%",
   ":active": {
-    backgroundColor: "e9ecef",
     color: "212529",
+    backgroundColor: "e9ecef",
   },
   ":focus": {
-    backgroundColor: "f8f9fa",
+    zIndex: "1",
     color: "495057",
     textDecoration: "none",
-    zIndex: "1",
+    backgroundColor: "f8f9fa",
   },
   ":hover": {
-    backgroundColor: "f8f9fa",
+    zIndex: "1",
     color: "495057",
     textDecoration: "none",
-    zIndex: "1",
+    backgroundColor: "f8f9fa",
   },
 });
 
 export const listInline = style({
-  listStyle: "none",
   paddingLeft: "0",
+  listStyle: "none",
 });
 
 export const listUnstyled = style({
-  listStyle: "none",
   paddingLeft: "0",
+  listStyle: "none",
 });
 
 export const m0 = style({
@@ -1172,8 +1179,8 @@ export const mN5 = style({
 });
 
 export const mark = style({
-  backgroundColor: "fcf8e3",
   padding: "0.2em",
+  backgroundColor: "fcf8e3",
 });
 
 export const mb0 = style({
@@ -1225,14 +1232,15 @@ export const mbN5 = style({
 });
 
 export const media = style({
-  alignItems: "flex-start",
+  display: "-ms-flexbox",
   display: "flex",
   msFlexAlign: "start",
+  alignItems: "flex-start",
 });
 
 export const mediaBody = style({
-  flex: "1",
   msFlex: "1",
+  flex: "1",
 });
 
 export const mh100 = style({
@@ -1300,19 +1308,19 @@ export const modalOpen = style({
 });
 
 export const modalScrollbarMeasure = style({
-  height: "50px",
-  overflow: "scroll",
   position: "absolute",
   top: "-9999px",
   width: "50px",
+  height: "50px",
+  overflow: "scroll",
 });
 
 export const modalStatic = style({
 });
 
 export const modalTitle = style({
-  lineHeight: "1.5",
   marginBottom: "0",
+  lineHeight: "1.5",
 });
 
 export const mr0 = style({
@@ -1416,132 +1424,133 @@ export const mw100 = style({
 });
 
 export const mx0 = style({
-  marginLeft: "0",
   marginRight: "0",
+  marginLeft: "0",
 });
 
 export const mx1 = style({
-  marginLeft: "0.25rem",
   marginRight: "0.25rem",
+  marginLeft: "0.25rem",
 });
 
 export const mx2 = style({
-  marginLeft: "0.5rem",
   marginRight: "0.5rem",
+  marginLeft: "0.5rem",
 });
 
 export const mx3 = style({
-  marginLeft: "1rem",
   marginRight: "1rem",
+  marginLeft: "1rem",
 });
 
 export const mx4 = style({
-  marginLeft: "1.5rem",
   marginRight: "1.5rem",
+  marginLeft: "1.5rem",
 });
 
 export const mx5 = style({
-  marginLeft: "3rem",
   marginRight: "3rem",
+  marginLeft: "3rem",
 });
 
 export const mxAuto = style({
-  marginLeft: "auto",
   marginRight: "auto",
+  marginLeft: "auto",
 });
 
 export const mxN1 = style({
-  marginLeft: "-0.25rem",
   marginRight: "-0.25rem",
+  marginLeft: "-0.25rem",
 });
 
 export const mxN2 = style({
-  marginLeft: "-0.5rem",
   marginRight: "-0.5rem",
+  marginLeft: "-0.5rem",
 });
 
 export const mxN3 = style({
-  marginLeft: "-1rem",
   marginRight: "-1rem",
+  marginLeft: "-1rem",
 });
 
 export const mxN4 = style({
-  marginLeft: "-1.5rem",
   marginRight: "-1.5rem",
+  marginLeft: "-1.5rem",
 });
 
 export const mxN5 = style({
-  marginLeft: "-3rem",
   marginRight: "-3rem",
+  marginLeft: "-3rem",
 });
 
 export const my0 = style({
-  marginBottom: "0",
   marginTop: "0",
+  marginBottom: "0",
 });
 
 export const my1 = style({
-  marginBottom: "0.25rem",
   marginTop: "0.25rem",
+  marginBottom: "0.25rem",
 });
 
 export const my2 = style({
-  marginBottom: "0.5rem",
   marginTop: "0.5rem",
+  marginBottom: "0.5rem",
 });
 
 export const my3 = style({
-  marginBottom: "1rem",
   marginTop: "1rem",
+  marginBottom: "1rem",
 });
 
 export const my4 = style({
-  marginBottom: "1.5rem",
   marginTop: "1.5rem",
+  marginBottom: "1.5rem",
 });
 
 export const my5 = style({
-  marginBottom: "3rem",
   marginTop: "3rem",
+  marginBottom: "3rem",
 });
 
 export const myAuto = style({
-  marginBottom: "auto",
   marginTop: "auto",
+  marginBottom: "auto",
 });
 
 export const myN1 = style({
-  marginBottom: "-0.25rem",
   marginTop: "-0.25rem",
+  marginBottom: "-0.25rem",
 });
 
 export const myN2 = style({
-  marginBottom: "-0.5rem",
   marginTop: "-0.5rem",
+  marginBottom: "-0.5rem",
 });
 
 export const myN3 = style({
-  marginBottom: "-1rem",
   marginTop: "-1rem",
+  marginBottom: "-1rem",
 });
 
 export const myN4 = style({
-  marginBottom: "-1.5rem",
   marginTop: "-1.5rem",
+  marginBottom: "-1.5rem",
 });
 
 export const myN5 = style({
-  marginBottom: "-3rem",
   marginTop: "-3rem",
+  marginBottom: "-3rem",
 });
 
 export const nav = style({
+  display: "-ms-flexbox",
   display: "flex",
-  flexWrap: "wrap",
-  listStyle: "none",
-  marginBottom: "0",
   msFlexWrap: "wrap",
+  flexWrap: "wrap",
   paddingLeft: "0",
+  marginBottom: "0",
+  listStyle: "none",
 });
 
 export const navFill = style({
@@ -1554,10 +1563,10 @@ export const navPills = style({
 });
 
 export const navbarExpand = style({
-  flexFlow: "row nowrap",
-  justifyContent: "flex-start",
   msFlexFlow: "row nowrap",
+  flexFlow: "row nowrap",
   msFlexPack: "start",
+  justifyContent: "flex-start",
 });
 
 export const offset1 = style({
@@ -1715,10 +1724,11 @@ export const pageItem = style({
 });
 
 export const pagination = style({
-  borderRadius: "0.25rem",
+  display: "-ms-flexbox",
   display: "flex",
-  listStyle: "none",
   paddingLeft: "0",
+  listStyle: "none",
+  borderRadius: "0.25rem",
 });
 
 export const paginationLg = style({
@@ -1779,18 +1789,18 @@ export const pointerEvent = style({
 });
 
 export const popoverBody = style({
-  color: "212529",
   padding: "0.5rem 0.75rem",
+  color: "212529",
 });
 
 export const popoverHeader = style({
+  padding: "0.5rem 0.75rem",
+  marginBottom: "0",
+  fontSize: "1rem",
   backgroundColor: "f7f7f7",
   borderBottom: "1px solid ebebeb",
   borderTopLeftRadius: "calc(0.3rem-1px)",
   borderTopRightRadius: "calc(0.3rem-1px)",
-  fontSize: "1rem",
-  marginBottom: "0",
-  padding: "0.5rem 0.75rem",
   ":empty": {
     display: "none",
   },
@@ -1813,6 +1823,7 @@ export const positionStatic = style({
 });
 
 export const positionSticky = style({
+  position: "-webkit-sticky",
   position: "sticky",
 });
 
@@ -1846,13 +1857,14 @@ export const preScrollable = style({
 });
 
 export const progress = style({
+  display: "-ms-flexbox",
+  display: "flex",
+  height: "1rem",
+  overflow: "hidden",
+  lineHeight: "0",
+  fontSize: "0.75rem",
   backgroundColor: "e9ecef",
   borderRadius: "0.25rem",
-  display: "flex",
-  fontSize: "0.75rem",
-  height: "1rem",
-  lineHeight: "0",
-  overflow: "hidden",
 });
 
 export const progressBarStriped = style({
@@ -1885,63 +1897,63 @@ export const pt5 = style({
 });
 
 export const px0 = style({
-  paddingLeft: "0",
   paddingRight: "0",
+  paddingLeft: "0",
 });
 
 export const px1 = style({
-  paddingLeft: "0.25rem",
   paddingRight: "0.25rem",
+  paddingLeft: "0.25rem",
 });
 
 export const px2 = style({
-  paddingLeft: "0.5rem",
   paddingRight: "0.5rem",
+  paddingLeft: "0.5rem",
 });
 
 export const px3 = style({
-  paddingLeft: "1rem",
   paddingRight: "1rem",
+  paddingLeft: "1rem",
 });
 
 export const px4 = style({
-  paddingLeft: "1.5rem",
   paddingRight: "1.5rem",
+  paddingLeft: "1.5rem",
 });
 
 export const px5 = style({
-  paddingLeft: "3rem",
   paddingRight: "3rem",
+  paddingLeft: "3rem",
 });
 
 export const py0 = style({
-  paddingBottom: "0",
   paddingTop: "0",
+  paddingBottom: "0",
 });
 
 export const py1 = style({
-  paddingBottom: "0.25rem",
   paddingTop: "0.25rem",
+  paddingBottom: "0.25rem",
 });
 
 export const py2 = style({
-  paddingBottom: "0.5rem",
   paddingTop: "0.5rem",
+  paddingBottom: "0.5rem",
 });
 
 export const py3 = style({
-  paddingBottom: "1rem",
   paddingTop: "1rem",
+  paddingBottom: "1rem",
 });
 
 export const py4 = style({
-  paddingBottom: "1.5rem",
   paddingTop: "1.5rem",
+  paddingBottom: "1.5rem",
 });
 
 export const py5 = style({
-  paddingBottom: "3rem",
   paddingTop: "3rem",
+  paddingBottom: "3rem",
 });
 
 export const rounded = style({
@@ -1953,8 +1965,8 @@ export const rounded0 = style({
 });
 
 export const roundedBottom = style({
-  borderBottomLeftRadius: "0.25rem",
   borderBottomRightRadius: "0.25rem",
+  borderBottomLeftRadius: "0.25rem",
 });
 
 export const roundedCircle = style({
@@ -1962,8 +1974,8 @@ export const roundedCircle = style({
 });
 
 export const roundedLeft = style({
-  borderBottomLeftRadius: "0.25rem",
   borderTopLeftRadius: "0.25rem",
+  borderBottomLeftRadius: "0.25rem",
 });
 
 export const roundedLg = style({
@@ -1975,8 +1987,8 @@ export const roundedPill = style({
 });
 
 export const roundedRight = style({
-  borderBottomRightRadius: "0.25rem",
   borderTopRightRadius: "0.25rem",
+  borderBottomRightRadius: "0.25rem",
 });
 
 export const roundedSm = style({
@@ -1989,11 +2001,12 @@ export const roundedTop = style({
 });
 
 export const row = style({
+  display: "-ms-flexbox",
   display: "flex",
-  flexWrap: "wrap",
-  marginLeft: "-15px",
-  marginRight: "-15px",
   msFlexWrap: "wrap",
+  flexWrap: "wrap",
+  marginRight: "-15px",
+  marginLeft: "-15px",
 });
 
 export const shadow = style({
@@ -2021,58 +2034,58 @@ export const small = style({
 });
 
 export const spinnerBorderSm = style({
-  borderWidth: "0.2em",
-  height: "1rem",
   width: "1rem",
+  height: "1rem",
+  borderWidth: "0.2em",
 });
 
 export const spinnerGrowSm = style({
-  height: "1rem",
   width: "1rem",
+  height: "1rem",
 });
 
 export const srOnly = style({
-  border: "0",
-  clip: "rect(0,0,0,0)",
+  position: "absolute",
+  width: "1px",
   height: "1px",
+  padding: "0",
   margin: "-1px",
   overflow: "hidden",
-  padding: "0",
-  position: "absolute",
+  clip: "rect(0,0,0,0)",
   whiteSpace: "nowrap",
-  width: "1px",
+  border: "0",
 });
 
 export const srOnlyFocusable = style({
   ":active": {
-    clip: "auto",
+    position: "static",
+    width: "auto",
     height: "auto",
     overflow: "visible",
-    position: "static",
+    clip: "auto",
     whiteSpace: "normal",
-    width: "auto",
   },
   ":focus": {
-    clip: "auto",
+    position: "static",
+    width: "auto",
     height: "auto",
     overflow: "visible",
-    position: "static",
+    clip: "auto",
     whiteSpace: "normal",
-    width: "auto",
   },
 });
 
 export const stretchedLink = style({
   "::after": {
-    backgroundColor: "rgba(0,0,0,0)",
-    bottom: "0",
-    content: "",
-    left: "0",
-    pointerEvents: "auto",
     position: "absolute",
-    right: "0",
     top: "0",
+    right: "0",
+    bottom: "0",
+    left: "0",
     zIndex: "1",
+    pointerEvents: "auto",
+    content: "",
+    backgroundColor: "rgba(0,0,0,0)",
   },
 });
 
@@ -2080,10 +2093,10 @@ export const tabContent = style({
 });
 
 export const tableResponsive = style({
-  WebkitOverflowScrolling: "touch",
   display: "block",
-  overflowX: "auto",
   width: "100%",
+  overflowX: "auto",
+  WebkitOverflowScrolling: "touch",
 });
 
 export const textBlack50 = style({
@@ -2120,11 +2133,11 @@ export const textDecorationNone = style({
 });
 
 export const textHide = style({
+  font: "0 / 0 a",
+  color: "transparent",
+  textShadow: "none",
   backgroundColor: "transparent",
   border: "0",
-  color: "transparent",
-  font: "0 / 0 a",
-  textShadow: "none",
 });
 
 export const textInfo = style({
@@ -2213,43 +2226,44 @@ export const toastBody = style({
 });
 
 export const toastHeader = style({
+  display: "-ms-flexbox",
+  display: "flex",
+  msFlexAlign: "center",
   alignItems: "center",
-  backgroundClip: "padding-box",
+  padding: "0.25rem 0.75rem",
+  color: "6c757d",
   backgroundColor: "rgba(255,255,255,0.85)",
+  backgroundClip: "padding-box",
   borderBottom: "1px solid rgba(0,0,0,0.05)",
   borderTopLeftRadius: "calc(0.25rem-1px)",
   borderTopRightRadius: "calc(0.25rem-1px)",
-  color: "6c757d",
-  display: "flex",
-  msFlexAlign: "center",
-  padding: "0.25rem 0.75rem",
 });
 
 export const tooltipInner = style({
-  backgroundColor: "000",
-  borderRadius: "0.25rem",
-  color: "fff",
   maxWidth: "200px",
   padding: "0.25rem 0.5rem",
+  color: "fff",
   textAlign: "center",
+  backgroundColor: "000",
+  borderRadius: "0.25rem",
 });
 
 export const userSelectAll = style({
-  MozUserSelect: "all",
   WebkitUserSelect: "all",
+  MozUserSelect: "all",
   userSelect: "all",
 });
 
 export const userSelectAuto = style({
-  MozUserSelect: "auto",
   WebkitUserSelect: "auto",
+  MozUserSelect: "auto",
   msUserSelect: "auto",
   userSelect: "auto",
 });
 
 export const userSelectNone = style({
-  MozUserSelect: "none",
   WebkitUserSelect: "none",
+  MozUserSelect: "none",
   msUserSelect: "none",
   userSelect: "none",
 });
@@ -2292,8 +2306,8 @@ export const wasValidated = style({
       borderColor: "dc3545",
     },
     [` ${customControlInput}:invalid:checked ~ ${customControlLabel}::before`]: {
-      backgroundColor: "e4606d",
       borderColor: "e4606d",
+      backgroundColor: "e4606d",
     },
     [` ${customControlInput}:invalid:focus ~ ${customControlLabel}::before`]: {
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
@@ -2305,8 +2319,8 @@ export const wasValidated = style({
       borderColor: "28a745",
     },
     [` ${customControlInput}:valid:checked ~ ${customControlLabel}::before`]: {
-      backgroundColor: "34ce57",
       borderColor: "34ce57",
+      backgroundColor: "34ce57",
     },
     [` ${customControlInput}:valid:focus ~ ${customControlLabel}::before`]: {
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
@@ -2315,93 +2329,94 @@ export const wasValidated = style({
       borderColor: "28a745",
     },
     [` ${customSelect}:invalid`]: {
-      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
       borderColor: "dc3545",
       paddingRight: "calc(0.75em+2.3125rem)",
+      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
     },
     [` ${customSelect}:invalid:focus`]: {
       borderColor: "dc3545",
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
     },
     [` ${customSelect}:valid`]: {
-      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
       borderColor: "28a745",
       paddingRight: "calc(0.75em+2.3125rem)",
+      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
     },
     [` ${customSelect}:valid:focus`]: {
       borderColor: "28a745",
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
     },
     [` ${formControl}:invalid`]: {
-      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
-      backgroundPosition: "right calc(0.375em+0.1875rem) center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
       borderColor: "dc3545",
       paddingRight: "calc(1.5em+0.75rem)",
+      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "right calc(0.375em+0.1875rem) center",
+      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
     },
     [` ${formControl}:invalid:focus`]: {
       borderColor: "dc3545",
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
     },
     [` ${formControl}:valid`]: {
-      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
-      backgroundPosition: "right calc(0.375em+0.1875rem) center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
       borderColor: "28a745",
       paddingRight: "calc(1.5em+0.75rem)",
+      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "right calc(0.375em+0.1875rem) center",
+      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
     },
     [` ${formControl}:valid:focus`]: {
       borderColor: "28a745",
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
     },
     [` select${formControl}:invalid`]: {
-      backgroundPosition: "right 1.5rem center",
       paddingRight: "3rem",
+      backgroundPosition: "right 1.5rem center",
     },
     [` select${formControl}:valid`]: {
-      backgroundPosition: "right 1.5rem center",
       paddingRight: "3rem",
+      backgroundPosition: "right 1.5rem center",
     },
     [` textarea${formControl}:invalid`]: {
-      backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
       paddingRight: "calc(1.5em+0.75rem)",
+      backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
     },
     [` textarea${formControl}:valid`]: {
-      backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
       paddingRight: "calc(1.5em+0.75rem)",
+      backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
     },
   },
 });
 
 export const tooltip = style({
+  position: "absolute",
+  zIndex: "1070",
   display: "block",
+  margin: "0",
   fontFamily: "-apple-system , BlinkMacSystemFont , Segoe UI , Roboto , Helvetica Neue , Arial , Noto Sans , Liberation Sans , sans-serif , Apple Color Emoji , Segoe UI Emoji , Segoe UI Symbol , Noto Color Emoji",
-  fontSize: "0.875rem",
   fontStyle: "normal",
   fontWeight: "400",
-  letterSpacing: "normal",
-  lineBreak: "auto",
   lineHeight: "1.5",
-  margin: "0",
-  opacity: "0",
-  position: "absolute",
+  textAlign: "left",
   textAlign: "start",
   textDecoration: "none",
   textShadow: "none",
   textTransform: "none",
-  whiteSpace: "normal",
+  letterSpacing: "normal",
   wordBreak: "normal",
   wordSpacing: "normal",
+  whiteSpace: "normal",
+  lineBreak: "auto",
+  fontSize: "0.875rem",
   wordWrap: "break-word",
-  zIndex: "1070",
+  opacity: "0",
   "selectors": {
     [` ${arrow}::before`]: {
+      position: "absolute",
+      content: "",
       borderColor: "transparent",
       borderStyle: "solid",
-      content: "",
-      position: "absolute",
     },
     [`${show}`]: {
       opacity: "0.9",
@@ -2495,10 +2510,10 @@ export const tableSecondary = style({
 export const tableResponsiveXl = style({
   "@media": {
     "(max-width: 1199.98px)": {
-      WebkitOverflowScrolling: "touch",
       display: "block",
-      overflowX: "auto",
       width: "100%",
+      overflowX: "auto",
+      WebkitOverflowScrolling: "touch",
     },
   },
 });
@@ -2506,10 +2521,10 @@ export const tableResponsiveXl = style({
 export const tableResponsiveSm = style({
   "@media": {
     "(max-width: 575.98px)": {
-      WebkitOverflowScrolling: "touch",
       display: "block",
-      overflowX: "auto",
       width: "100%",
+      overflowX: "auto",
+      WebkitOverflowScrolling: "touch",
     },
   },
 });
@@ -2517,10 +2532,10 @@ export const tableResponsiveSm = style({
 export const tableResponsiveMd = style({
   "@media": {
     "(max-width: 767.98px)": {
-      WebkitOverflowScrolling: "touch",
       display: "block",
-      overflowX: "auto",
       width: "100%",
+      overflowX: "auto",
+      WebkitOverflowScrolling: "touch",
     },
   },
 });
@@ -2528,10 +2543,10 @@ export const tableResponsiveMd = style({
 export const tableResponsiveLg = style({
   "@media": {
     "(max-width: 991.98px)": {
-      WebkitOverflowScrolling: "touch",
       display: "block",
-      overflowX: "auto",
       width: "100%",
+      overflowX: "auto",
+      WebkitOverflowScrolling: "touch",
     },
   },
 });
@@ -2692,8 +2707,8 @@ export const tableHover = style({
       backgroundColor: "ffe8a1",
     },
     "& tbody tr:hover": {
-      backgroundColor: "rgba(0,0,0,0.075)",
       color: "212529",
+      backgroundColor: "rgba(0,0,0,0.075)",
     },
   },
 });
@@ -2758,64 +2773,65 @@ export const show = style({
 });
 
 export const popover = style({
-  backgroundClip: "padding-box",
-  backgroundColor: "fff",
-  border: "1px solid rgba(0,0,0,0.2)",
-  borderRadius: "0.3rem",
+  position: "absolute",
+  top: "0",
+  left: "0",
+  zIndex: "1060",
   display: "block",
+  maxWidth: "276px",
   fontFamily: "-apple-system , BlinkMacSystemFont , Segoe UI , Roboto , Helvetica Neue , Arial , Noto Sans , Liberation Sans , sans-serif , Apple Color Emoji , Segoe UI Emoji , Segoe UI Symbol , Noto Color Emoji",
-  fontSize: "0.875rem",
   fontStyle: "normal",
   fontWeight: "400",
-  left: "0",
-  letterSpacing: "normal",
-  lineBreak: "auto",
   lineHeight: "1.5",
-  maxWidth: "276px",
-  position: "absolute",
+  textAlign: "left",
   textAlign: "start",
   textDecoration: "none",
   textShadow: "none",
   textTransform: "none",
-  top: "0",
-  whiteSpace: "normal",
+  letterSpacing: "normal",
   wordBreak: "normal",
   wordSpacing: "normal",
+  whiteSpace: "normal",
+  lineBreak: "auto",
+  fontSize: "0.875rem",
   wordWrap: "break-word",
-  zIndex: "1060",
+  backgroundColor: "fff",
+  backgroundClip: "padding-box",
+  border: "1px solid rgba(0,0,0,0.2)",
+  borderRadius: "0.3rem",
   "selectors": {
     [` ${arrow}::after`]: {
+      position: "absolute",
+      display: "block",
+      content: "",
       borderColor: "transparent",
       borderStyle: "solid",
-      content: "",
-      display: "block",
-      position: "absolute",
     },
     [` ${arrow}::before`]: {
+      position: "absolute",
+      display: "block",
+      content: "",
       borderColor: "transparent",
       borderStyle: "solid",
-      content: "",
-      display: "block",
-      position: "absolute",
     },
   },
 });
 
 export const noGutters = style({
-  marginLeft: "0",
   marginRight: "0",
+  marginLeft: "0",
   "selectors": {
     "& > [class*='col-']": {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
 
 export const navbarText = style({
   display: "inline-block",
-  paddingBottom: "0.5rem",
   paddingTop: "0.5rem",
+  paddingBottom: "0.5rem",
   "selectors": {
     [`${navbarDark} &`]: {
       color: "rgba(255,255,255,0.5)",
@@ -2827,44 +2843,45 @@ export const navbarText = style({
 });
 
 export const navbarNav = style({
+  display: "-ms-flexbox",
   display: "flex",
-  flexDirection: "column",
-  listStyle: "none",
-  marginBottom: "0",
   msFlexDirection: "column",
+  flexDirection: "column",
   paddingLeft: "0",
+  marginBottom: "0",
+  listStyle: "none",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
         [`${navbarExpandXl} &`]: {
-          flexDirection: "row",
           msFlexDirection: "row",
+          flexDirection: "row",
         },
       },
       "selectors": {
         [`${navbarExpandSm} &`]: {
-          flexDirection: "row",
           msFlexDirection: "row",
+          flexDirection: "row",
         },
       },
       "selectors": {
         [`${navbarExpandMd} &`]: {
-          flexDirection: "row",
           msFlexDirection: "row",
+          flexDirection: "row",
         },
       },
       "selectors": {
         [`${navbarExpandLg} &`]: {
-          flexDirection: "row",
           msFlexDirection: "row",
+          flexDirection: "row",
         },
       },
     },
   },
   "selectors": {
     [`${navbarExpand} &`]: {
-      flexDirection: "row",
       msFlexDirection: "row",
+      flexDirection: "row",
     },
   },
 });
@@ -2898,10 +2915,10 @@ export const navbarLight = style({
 export const navbarExpandXl = style({
   "@media": {
     "(max-width: 1199.98px)": {
-      flexFlow: "row nowrap",
-      justifyContent: "flex-start",
       msFlexFlow: "row nowrap",
+      flexFlow: "row nowrap",
       msFlexPack: "start",
+      justifyContent: "flex-start",
     },
   },
 });
@@ -2909,10 +2926,10 @@ export const navbarExpandXl = style({
 export const navbarExpandSm = style({
   "@media": {
     "(max-width: 575.98px)": {
-      flexFlow: "row nowrap",
-      justifyContent: "flex-start",
       msFlexFlow: "row nowrap",
+      flexFlow: "row nowrap",
       msFlexPack: "start",
+      justifyContent: "flex-start",
     },
   },
 });
@@ -2920,10 +2937,10 @@ export const navbarExpandSm = style({
 export const navbarExpandMd = style({
   "@media": {
     "(max-width: 767.98px)": {
-      flexFlow: "row nowrap",
-      justifyContent: "flex-start",
       msFlexFlow: "row nowrap",
+      flexFlow: "row nowrap",
       msFlexPack: "start",
+      justifyContent: "flex-start",
     },
   },
 });
@@ -2931,10 +2948,10 @@ export const navbarExpandMd = style({
 export const navbarExpandLg = style({
   "@media": {
     "(max-width: 991.98px)": {
-      flexFlow: "row nowrap",
-      justifyContent: "flex-start",
       msFlexFlow: "row nowrap",
+      flexFlow: "row nowrap",
       msFlexPack: "start",
+      justifyContent: "flex-start",
     },
   },
 });
@@ -2966,15 +2983,16 @@ export const navbarDark = style({
 });
 
 export const navbar = style({
-  alignItems: "center",
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "space-between",
-  msFlexAlign: "center",
-  msFlexPack: "justify",
-  msFlexWrap: "wrap",
-  padding: "0.5rem 1rem",
   position: "relative",
+  display: "-ms-flexbox",
+  display: "flex",
+  msFlexWrap: "wrap",
+  flexWrap: "wrap",
+  msFlexAlign: "center",
+  alignItems: "center",
+  msFlexPack: "justify",
+  justifyContent: "space-between",
+  padding: "0.5rem 1rem",
   "@media": {
     "print": {
       display: "none",
@@ -3007,26 +3025,26 @@ export const navLink = style({
     "(min-width: 576px)": {
       "selectors": {
         [`${navbarExpandXl} ${navbarNav} &`]: {
-          paddingLeft: "0.5rem",
           paddingRight: "0.5rem",
+          paddingLeft: "0.5rem",
         },
       },
       "selectors": {
         [`${navbarExpandSm} ${navbarNav} &`]: {
-          paddingLeft: "0.5rem",
           paddingRight: "0.5rem",
+          paddingLeft: "0.5rem",
         },
       },
       "selectors": {
         [`${navbarExpandMd} ${navbarNav} &`]: {
-          paddingLeft: "0.5rem",
           paddingRight: "0.5rem",
+          paddingLeft: "0.5rem",
         },
       },
       "selectors": {
         [`${navbarExpandLg} ${navbarNav} &`]: {
-          paddingLeft: "0.5rem",
           paddingRight: "0.5rem",
+          paddingLeft: "0.5rem",
         },
       },
     },
@@ -3034,38 +3052,38 @@ export const navLink = style({
   "selectors": {
     [`${disabled}`]: {
       color: "6c757d",
-      cursor: "default",
       pointerEvents: "none",
+      cursor: "default",
     },
     [`${navFill} > &`]: {
-      flex: "1 1 auto",
       msFlex: "1 1 auto",
+      flex: "1 1 auto",
       textAlign: "center",
     },
     [`${navJustified} > &`]: {
-      flexBasis: "0",
-      flexGrow: "1",
-      msFlexPositive: "1",
       msFlexPreferredSize: "0",
+      flexBasis: "0",
+      msFlexPositive: "1",
+      flexGrow: "1",
       textAlign: "center",
     },
     [`${navPills} ${show} > &`]: {
-      backgroundColor: "007bff",
       color: "fff",
+      backgroundColor: "007bff",
     },
     [`${navPills} &`]: {
       borderRadius: "0.25rem",
     },
     [`${navTabs} ${navItem}${show} &`]: {
+      color: "495057",
       backgroundColor: "fff",
       borderColor: "dee2e6 dee2e6 fff",
-      color: "495057",
     },
     [`${navTabs} &`]: {
+      marginBottom: "-1px",
       border: "1px solid transparent",
       borderTopLeftRadius: "0.25rem",
       borderTopRightRadius: "0.25rem",
-      marginBottom: "-1px",
     },
     [`${navbarDark} ${navbarNav} ${active} > &`]: {
       color: "fff",
@@ -3077,8 +3095,8 @@ export const navLink = style({
       color: "rgba(255,255,255,0.5)",
     },
     [`${navbarExpand} ${navbarNav} &`]: {
-      paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
+      paddingLeft: "0.5rem",
     },
     [`${navbarLight} ${navbarNav} ${active} > &`]: {
       color: "rgba(0,0,0,0.9)",
@@ -3090,31 +3108,33 @@ export const navLink = style({
       color: "rgba(0,0,0,0.5)",
     },
     [`${navbarNav} &`]: {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
 
 export const modalHeader = style({
+  display: "-ms-flexbox",
+  display: "flex",
+  msFlexAlign: "start",
   alignItems: "flex-start",
+  msFlexPack: "justify",
+  justifyContent: "space-between",
+  padding: "1rem 1rem",
   borderBottom: "1px solid dee2e6",
   borderTopLeftRadius: "calc(0.3rem-1px)",
   borderTopRightRadius: "calc(0.3rem-1px)",
-  display: "flex",
-  justifyContent: "space-between",
-  msFlexAlign: "start",
-  msFlexPack: "justify",
-  padding: "1rem 1rem",
   "selectors": {
     [`${modalDialogScrollable} &`]: {
-      flexShrink: "0",
       msFlexNegative: "0",
+      flexShrink: "0",
     },
   },
 });
 
 export const modalDialogScrollable = style({
+  display: "-ms-flexbox",
   display: "flex",
   maxHeight: "calc(100%-1rem)",
   "@media": {
@@ -3125,13 +3145,21 @@ export const modalDialogScrollable = style({
 });
 
 export const modalDialogCentered = style({
-  alignItems: "center",
+  display: "-ms-flexbox",
   display: "flex",
-  minHeight: "calc(100%-1rem)",
   msFlexAlign: "center",
+  alignItems: "center",
+  minHeight: "calc(100%-1rem)",
   "::before": {
-    content: "",
     display: "block",
+    height: "calc(100vh-1rem)",
+    height: "-webkit-min-content",
+    height: "-moz-min-content",
+    height: "min-content",
+    content: "",
+    height: "calc(100vh-3.5rem)",
+    height: "-webkit-min-content",
+    height: "-moz-min-content",
     height: "min-content",
   },
   "@media": {
@@ -3141,11 +3169,11 @@ export const modalDialogCentered = style({
   },
   "selectors": {
     [`${modalDialogScrollable}`]: {
-      flexDirection: "column",
-      height: "100%",
-      justifyContent: "center",
       msFlexDirection: "column",
+      flexDirection: "column",
       msFlexPack: "center",
+      justifyContent: "center",
+      height: "100%",
     },
     [`${modalDialogScrollable}::before`]: {
       content: "none",
@@ -3154,70 +3182,70 @@ export const modalDialogCentered = style({
 });
 
 export const listGroupItem = style({
-  backgroundColor: "fff",
-  border: "1px solid rgba(0,0,0,0.125)",
+  position: "relative",
   display: "block",
   padding: "0.75rem 1.25rem",
-  position: "relative",
+  backgroundColor: "fff",
+  border: "1px solid rgba(0,0,0,0.125)",
   ":disabled": {
-    backgroundColor: "fff",
     color: "6c757d",
     pointerEvents: "none",
+    backgroundColor: "fff",
   },
   ":first-child": {
     borderTopLeftRadius: "inherit",
     borderTopRightRadius: "inherit",
   },
   ":last-child": {
-    borderBottomLeftRadius: "inherit",
     borderBottomRightRadius: "inherit",
+    borderBottomLeftRadius: "inherit",
   },
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
         [`${listGroupHorizontalXl} > ${listGroupItem} + &`]: {
-          borderLeftWidth: "0",
           borderTopWidth: "1px",
+          borderLeftWidth: "0",
         },
       },
       "selectors": {
         [`${listGroupHorizontalSm} > ${listGroupItem} + &`]: {
-          borderLeftWidth: "0",
           borderTopWidth: "1px",
+          borderLeftWidth: "0",
         },
       },
       "selectors": {
         [`${listGroupHorizontalMd} > ${listGroupItem} + &`]: {
-          borderLeftWidth: "0",
           borderTopWidth: "1px",
+          borderLeftWidth: "0",
         },
       },
       "selectors": {
         [`${listGroupHorizontalLg} > ${listGroupItem} + &`]: {
-          borderLeftWidth: "0",
           borderTopWidth: "1px",
+          borderLeftWidth: "0",
         },
       },
     },
   },
   "selectors": {
     [`${active}`]: {
+      zIndex: "2",
+      color: "fff",
       backgroundColor: "007bff",
       borderColor: "007bff",
-      color: "fff",
-      zIndex: "2",
     },
     [`${disabled}`]: {
-      backgroundColor: "fff",
       color: "6c757d",
       pointerEvents: "none",
+      backgroundColor: "fff",
     },
     [`${listGroupFlush} > &`]: {
       borderWidth: "0 0 1px",
     },
     [`${listGroupHorizontal} > ${listGroupItem} + &`]: {
-      borderLeftWidth: "0",
       borderTopWidth: "1px",
+      borderLeftWidth: "0",
     },
     [`${listGroupItem} + &`]: {
       borderTopWidth: "0",
@@ -3228,16 +3256,16 @@ export const listGroupItem = style({
 export const listGroupHorizontalXl = style({
   "@media": {
     "(min-width: 1200px)": {
-      flexDirection: "row",
       msFlexDirection: "row",
+      flexDirection: "row",
       "selectors": {
         [` > ${listGroupItem}:first-child`]: {
           borderBottomLeftRadius: "0.25rem",
           borderTopRightRadius: "0",
         },
         [` > ${listGroupItem}:last-child`]: {
-          borderBottomLeftRadius: "0",
           borderTopRightRadius: "0.25rem",
+          borderBottomLeftRadius: "0",
         },
       },
     },
@@ -3247,16 +3275,16 @@ export const listGroupHorizontalXl = style({
 export const listGroupHorizontalSm = style({
   "@media": {
     "(min-width: 576px)": {
-      flexDirection: "row",
       msFlexDirection: "row",
+      flexDirection: "row",
       "selectors": {
         [` > ${listGroupItem}:first-child`]: {
           borderBottomLeftRadius: "0.25rem",
           borderTopRightRadius: "0",
         },
         [` > ${listGroupItem}:last-child`]: {
-          borderBottomLeftRadius: "0",
           borderTopRightRadius: "0.25rem",
+          borderBottomLeftRadius: "0",
         },
       },
     },
@@ -3266,16 +3294,16 @@ export const listGroupHorizontalSm = style({
 export const listGroupHorizontalMd = style({
   "@media": {
     "(min-width: 768px)": {
-      flexDirection: "row",
       msFlexDirection: "row",
+      flexDirection: "row",
       "selectors": {
         [` > ${listGroupItem}:first-child`]: {
           borderBottomLeftRadius: "0.25rem",
           borderTopRightRadius: "0",
         },
         [` > ${listGroupItem}:last-child`]: {
-          borderBottomLeftRadius: "0",
           borderTopRightRadius: "0.25rem",
+          borderBottomLeftRadius: "0",
         },
       },
     },
@@ -3285,16 +3313,16 @@ export const listGroupHorizontalMd = style({
 export const listGroupHorizontalLg = style({
   "@media": {
     "(min-width: 992px)": {
-      flexDirection: "row",
       msFlexDirection: "row",
+      flexDirection: "row",
       "selectors": {
         [` > ${listGroupItem}:first-child`]: {
           borderBottomLeftRadius: "0.25rem",
           borderTopRightRadius: "0",
         },
         [` > ${listGroupItem}:last-child`]: {
-          borderBottomLeftRadius: "0",
           borderTopRightRadius: "0.25rem",
+          borderBottomLeftRadius: "0",
         },
       },
     },
@@ -3302,53 +3330,55 @@ export const listGroupHorizontalLg = style({
 });
 
 export const listGroupHorizontal = style({
-  flexDirection: "row",
   msFlexDirection: "row",
+  flexDirection: "row",
   "selectors": {
     [` > ${listGroupItem}:first-child`]: {
       borderBottomLeftRadius: "0.25rem",
       borderTopRightRadius: "0",
     },
     [` > ${listGroupItem}:last-child`]: {
-      borderBottomLeftRadius: "0",
       borderTopRightRadius: "0.25rem",
+      borderBottomLeftRadius: "0",
     },
   },
 });
 
 export const listGroup = style({
-  borderRadius: "0.25rem",
+  display: "-ms-flexbox",
   display: "flex",
-  flexDirection: "column",
-  marginBottom: "0",
   msFlexDirection: "column",
+  flexDirection: "column",
   paddingLeft: "0",
+  marginBottom: "0",
+  borderRadius: "0.25rem",
   "selectors": {
     [`${card} > ${cardHeader} + &`]: {
       borderTop: "0",
     },
     [`${card} > &`]: {
-      borderBottom: "inherit",
       borderTop: "inherit",
+      borderBottom: "inherit",
     },
   },
 });
 
 export const inputGroupText = style({
-  alignItems: "center",
-  backgroundColor: "e9ecef",
-  border: "1px solid ced4da",
-  borderRadius: "0.25rem",
-  color: "495057",
+  display: "-ms-flexbox",
   display: "flex",
+  msFlexAlign: "center",
+  alignItems: "center",
+  padding: "0.375rem 0.75rem",
+  marginBottom: "0",
   fontSize: "1rem",
   fontWeight: "400",
   lineHeight: "1.5",
-  marginBottom: "0",
-  msFlexAlign: "center",
-  padding: "0.375rem 0.75rem",
+  color: "495057",
   textAlign: "center",
   whiteSpace: "nowrap",
+  backgroundColor: "e9ecef",
+  border: "1px solid ced4da",
+  borderRadius: "0.25rem",
   "selectors": {
     "& input[type='checkbox']": {
       marginTop: "0",
@@ -3363,16 +3393,16 @@ export const inputGroupText = style({
       marginLeft: "-1px",
     },
     [`${inputGroupLg} > ${inputGroupAppend} > &`]: {
-      borderRadius: "0.3rem",
+      padding: "0.5rem 1rem",
       fontSize: "1.25rem",
       lineHeight: "1.5",
-      padding: "0.5rem 1rem",
+      borderRadius: "0.3rem",
     },
     [`${inputGroupLg} > ${inputGroupPrepend} > &`]: {
-      borderRadius: "0.3rem",
+      padding: "0.5rem 1rem",
       fontSize: "1.25rem",
       lineHeight: "1.5",
-      padding: "0.5rem 1rem",
+      borderRadius: "0.3rem",
     },
     [`${inputGroupPrepend} ${btn} + &`]: {
       marginLeft: "-1px",
@@ -3381,36 +3411,36 @@ export const inputGroupText = style({
       marginLeft: "-1px",
     },
     [`${inputGroupSm} > ${inputGroupAppend} > &`]: {
-      borderRadius: "0.2rem",
+      padding: "0.25rem 0.5rem",
       fontSize: "0.875rem",
       lineHeight: "1.5",
-      padding: "0.25rem 0.5rem",
+      borderRadius: "0.2rem",
     },
     [`${inputGroupSm} > ${inputGroupPrepend} > &`]: {
-      borderRadius: "0.2rem",
+      padding: "0.25rem 0.5rem",
       fontSize: "0.875rem",
       lineHeight: "1.5",
-      padding: "0.25rem 0.5rem",
+      borderRadius: "0.2rem",
     },
     [`${inputGroup} > ${inputGroupAppend} > &`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${inputGroup} > ${inputGroupPrepend} > &`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${inputGroup} > ${inputGroupPrepend}:not(:first-child) > &`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${inputGroup}${hasValidation} > ${inputGroupAppend}:nth-last-child(+3) > &`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${inputGroup}:not > ${inputGroupAppend}:not(:last-child) > &`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
   },
 });
@@ -3424,6 +3454,7 @@ export const inputGroupSm = style({
 });
 
 export const inputGroupPrepend = style({
+  display: "-ms-flexbox",
   display: "flex",
   marginRight: "-1px",
   "selectors": {
@@ -3442,6 +3473,7 @@ export const inputGroupLg = style({
 });
 
 export const inputGroupAppend = style({
+  display: "-ms-flexbox",
   display: "flex",
   marginLeft: "-1px",
   "selectors": {
@@ -3452,12 +3484,13 @@ export const inputGroupAppend = style({
 });
 
 export const inputGroup = style({
-  alignItems: "stretch",
+  position: "relative",
+  display: "-ms-flexbox",
   display: "flex",
+  msFlexWrap: "wrap",
   flexWrap: "wrap",
   msFlexAlign: "stretch",
-  msFlexWrap: "wrap",
-  position: "relative",
+  alignItems: "stretch",
   width: "100%",
   "@media": {
     "(min-width: 576px)": {
@@ -3473,99 +3506,102 @@ export const inputGroup = style({
       zIndex: "4",
     },
     [` > ${customFile}:not(:last-child) ${customFileLabel}::after`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [` > ${customSelect}:focus`]: {
       zIndex: "3",
     },
     [` > ${customSelect}:not(:first-child)`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [` > ${formControl}:focus`]: {
       zIndex: "3",
     },
     [` > ${formControl}:not(:first-child)`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [` > ${inputGroupAppend}:last-child > ${btn}:not(:last-child):not`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [` > ${inputGroupAppend}:last-child > ${inputGroupText}:not(:last-child)`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [` > ${inputGroupPrepend}:first-child > ${btn}:not(:first-child)`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [` > ${inputGroupPrepend}:first-child > ${inputGroupText}:not(:first-child)`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${btnToolbar} &`]: {
       width: "auto",
     },
     [`${hasValidation} > ${customFile}:nth-last-child(+3) ${customFileLabel}::after`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${hasValidation} > ${customSelect}:nth-last-child(+3)`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${hasValidation} > ${formControl}:nth-last-child(+3)`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`:not > ${customFile}:not(:last-child) ${customFileLabel}::after`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`:not > ${customSelect}:not(:last-child)`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`:not > ${formControl}:not(:last-child)`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
   },
 });
 
 export const formRow = style({
+  display: "-ms-flexbox",
   display: "flex",
-  flexWrap: "wrap",
-  marginLeft: "-5px",
-  marginRight: "-5px",
   msFlexWrap: "wrap",
+  flexWrap: "wrap",
+  marginRight: "-5px",
+  marginLeft: "-5px",
   "selectors": {
     "& > [class*='col-']": {
-      paddingLeft: "5px",
       paddingRight: "5px",
+      paddingLeft: "5px",
     },
   },
 });
 
 export const formInline = style({
-  alignItems: "center",
+  display: "-ms-flexbox",
   display: "flex",
+  msFlexFlow: "row wrap",
   flexFlow: "row wrap",
   msFlexAlign: "center",
-  msFlexFlow: "row wrap",
+  alignItems: "center",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
         "& label": {
-          alignItems: "center",
+          display: "-ms-flexbox",
           display: "flex",
+          msFlexAlign: "center",
+          alignItems: "center",
+          msFlexPack: "center",
           justifyContent: "center",
           marginBottom: "0",
-          msFlexAlign: "center",
-          msFlexPack: "center",
         },
       },
     },
@@ -3573,16 +3609,16 @@ export const formInline = style({
 });
 
 export const formControlPlaintext = style({
+  display: "block",
+  width: "100%",
+  padding: "0.375rem 0",
+  marginBottom: "0",
+  fontSize: "1rem",
+  lineHeight: "1.5",
+  color: "212529",
   backgroundColor: "transparent",
   border: "solid transparent",
   borderWidth: "1px 0",
-  color: "212529",
-  display: "block",
-  fontSize: "1rem",
-  lineHeight: "1.5",
-  marginBottom: "0",
-  padding: "0.375rem 0",
-  width: "100%",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
@@ -3594,38 +3630,38 @@ export const formControlPlaintext = style({
   },
   "selectors": {
     [`${formControlLg}`]: {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
     [`${formControlSm}`]: {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
     [`${inputGroup} > &`]: {
-      flex: "1 1 auto",
-      marginBottom: "0",
-      minWidth: "0",
-      msFlex: "1 1 auto",
       position: "relative",
+      msFlex: "1 1 auto",
+      flex: "1 1 auto",
       width: "1%",
+      minWidth: "0",
+      marginBottom: "0",
     },
   },
 });
 
 export const formControl = style({
-  backgroundClip: "padding-box",
-  backgroundColor: "fff",
-  border: "1px solid ced4da",
-  borderRadius: "0.25rem",
-  color: "495057",
   display: "block",
+  width: "100%",
+  height: "calc(1.5em+0.75rem+2px)",
+  padding: "0.375rem 0.75rem",
   fontSize: "1rem",
   fontWeight: "400",
-  height: "calc(1.5em+0.75rem+2px)",
   lineHeight: "1.5",
-  padding: "0.375rem 0.75rem",
+  color: "495057",
+  backgroundColor: "fff",
+  backgroundClip: "padding-box",
+  border: "1px solid ced4da",
+  borderRadius: "0.25rem",
   transition: "border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  width: "100%",
   ":-ms-input-placeholder": {
     color: "6c757d",
     opacity: "1",
@@ -3647,11 +3683,11 @@ export const formControl = style({
     opacity: "1",
   },
   ":focus": {
+    color: "495057",
     backgroundColor: "fff",
     borderColor: "80bdff",
-    boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
-    color: "495057",
     outline: "0",
+    boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
   },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
@@ -3659,24 +3695,24 @@ export const formControl = style({
       "selectors": {
         [`${formInline} &`]: {
           display: "inline-block",
-          verticalAlign: "middle",
           width: "auto",
+          verticalAlign: "middle",
         },
       },
     },
   },
   "selectors": {
     [`${inputGroupLg} > &`]: {
-      borderRadius: "0.3rem",
+      padding: "0.5rem 1rem",
       fontSize: "1.25rem",
       lineHeight: "1.5",
-      padding: "0.5rem 1rem",
+      borderRadius: "0.3rem",
     },
     [`${inputGroupSm} > &`]: {
-      borderRadius: "0.2rem",
+      padding: "0.25rem 0.5rem",
       fontSize: "0.875rem",
       lineHeight: "1.5",
-      padding: "0.25rem 0.5rem",
+      borderRadius: "0.2rem",
     },
     [`${inputGroup} > ${customFile} + &`]: {
       marginLeft: "-1px",
@@ -3691,32 +3727,32 @@ export const formControl = style({
       marginLeft: "-1px",
     },
     [`${inputGroup} > &`]: {
-      flex: "1 1 auto",
-      marginBottom: "0",
-      minWidth: "0",
-      msFlex: "1 1 auto",
       position: "relative",
+      msFlex: "1 1 auto",
+      flex: "1 1 auto",
       width: "1%",
+      minWidth: "0",
+      marginBottom: "0",
     },
     [`${isInvalid}`]: {
-      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
-      backgroundPosition: "right calc(0.375em+0.1875rem) center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
       borderColor: "dc3545",
       paddingRight: "calc(1.5em+0.75rem)",
+      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "right calc(0.375em+0.1875rem) center",
+      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
     },
     [`${isInvalid}:focus`]: {
       borderColor: "dc3545",
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
     },
     [`${isValid}`]: {
-      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
-      backgroundPosition: "right calc(0.375em+0.1875rem) center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
       borderColor: "28a745",
       paddingRight: "calc(1.5em+0.75rem)",
+      backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "right calc(0.375em+0.1875rem) center",
+      backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
     },
     [`${isValid}:focus`]: {
       borderColor: "28a745",
@@ -3744,14 +3780,14 @@ export const dropup = style({
       marginLeft: "0",
     },
     [` ${dropdownToggle}::after`]: {
-      borderBottom: "0.3em solid",
-      borderLeft: "0.3em solid transparent",
-      borderRight: "0.3em solid transparent",
-      borderTop: "0",
-      content: "",
       display: "inline-block",
       marginLeft: "0.255em",
       verticalAlign: "0.255em",
+      content: "",
+      borderTop: "0",
+      borderRight: "0.3em solid transparent",
+      borderBottom: "0.3em solid",
+      borderLeft: "0.3em solid transparent",
     },
     [` ${dropdownToggle}:empty::after`]: {
       marginLeft: "0",
@@ -3766,13 +3802,14 @@ export const dropright = style({
       marginLeft: "0",
     },
     [` ${dropdownToggle}::after`]: {
-      borderBottom: "0.3em solid transparent",
-      borderLeft: "0.3em solid",
-      borderRight: "0",
-      borderTop: "0.3em solid transparent",
-      content: "",
       display: "inline-block",
       marginLeft: "0.255em",
+      verticalAlign: "0.255em",
+      content: "",
+      borderTop: "0.3em solid transparent",
+      borderRight: "0",
+      borderBottom: "0.3em solid transparent",
+      borderLeft: "0.3em solid",
       verticalAlign: "0",
     },
     [` ${dropdownToggle}:empty::after`]: {
@@ -3788,18 +3825,20 @@ export const dropleft = style({
       marginRight: "0",
     },
     [` ${dropdownToggle}::after`]: {
-      content: "",
-      display: "none",
+      display: "inline-block",
       marginLeft: "0.255em",
       verticalAlign: "0.255em",
+      content: "",
+      display: "none",
     },
     [` ${dropdownToggle}::before`]: {
-      borderBottom: "0.3em solid transparent",
-      borderRight: "0.3em solid",
-      borderTop: "0.3em solid transparent",
-      content: "",
       display: "inline-block",
       marginRight: "0.255em",
+      verticalAlign: "0.255em",
+      content: "",
+      borderTop: "0.3em solid transparent",
+      borderRight: "0.3em solid",
+      borderBottom: "0.3em solid transparent",
       verticalAlign: "0",
     },
     [` ${dropdownToggle}:empty::after`]: {
@@ -3811,9 +3850,9 @@ export const dropleft = style({
 export const disabled = style({
   "selectors": {
     [`${navTabs} ${navLink}&`]: {
+      color: "6c757d",
       backgroundColor: "transparent",
       borderColor: "transparent",
-      color: "6c757d",
     },
     [`${navbarDark} ${navbarNav} ${navLink}&`]: {
       color: "rgba(255,255,255,0.25)",
@@ -3825,30 +3864,30 @@ export const disabled = style({
 });
 
 export const customSelect = style({
-  MozAppearance: "none",
-  WebkitAppearance: "none",
-  appearance: "none",
+  display: "inline-block",
+  width: "100%",
+  height: "calc(1.5em+0.75rem+2px)",
+  padding: "0.375rem 1.75rem 0.375rem 0.75rem",
+  fontSize: "1rem",
+  fontWeight: "400",
+  lineHeight: "1.5",
+  color: "495057",
+  verticalAlign: "middle",
   background: "fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat",
   border: "1px solid ced4da",
   borderRadius: "0.25rem",
-  color: "495057",
-  display: "inline-block",
-  fontSize: "1rem",
-  fontWeight: "400",
-  height: "calc(1.5em+0.75rem+2px)",
-  lineHeight: "1.5",
-  padding: "0.375rem 1.75rem 0.375rem 0.75rem",
+  WebkitAppearance: "none",
+  MozAppearance: "none",
+  appearance: "none",
   transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  verticalAlign: "middle",
-  width: "100%",
   ":disabled": {
-    backgroundColor: "e9ecef",
     color: "6c757d",
+    backgroundColor: "e9ecef",
   },
   ":focus": {
     borderColor: "80bdff",
-    boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
     outline: "0",
+    boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
   },
   "@media": {
     "(min-width: 576px)": {
@@ -3862,19 +3901,19 @@ export const customSelect = style({
   },
   "selectors": {
     [`${inputGroupLg} > &`]: {
-      borderRadius: "0.3rem",
-      fontSize: "1.25rem",
       height: "calc(1.5em+1rem+2px)",
-      lineHeight: "1.5",
       padding: "0.5rem 1rem",
+      fontSize: "1.25rem",
+      lineHeight: "1.5",
+      borderRadius: "0.3rem",
       paddingRight: "1.75rem",
     },
     [`${inputGroupSm} > &`]: {
-      borderRadius: "0.2rem",
-      fontSize: "0.875rem",
       height: "calc(1.5em+0.5rem+2px)",
-      lineHeight: "1.5",
       padding: "0.25rem 0.5rem",
+      fontSize: "0.875rem",
+      lineHeight: "1.5",
+      borderRadius: "0.2rem",
       paddingRight: "1.75rem",
     },
     [`${inputGroup} > ${customFile} + &`]: {
@@ -3890,26 +3929,26 @@ export const customSelect = style({
       marginLeft: "-1px",
     },
     [`${inputGroup} > &`]: {
-      flex: "1 1 auto",
-      marginBottom: "0",
-      minWidth: "0",
-      msFlex: "1 1 auto",
       position: "relative",
+      msFlex: "1 1 auto",
+      flex: "1 1 auto",
       width: "1%",
+      minWidth: "0",
+      marginBottom: "0",
     },
     [`${isInvalid}`]: {
-      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
       borderColor: "dc3545",
       paddingRight: "calc(0.75em+2.3125rem)",
+      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
     },
     [`${isInvalid}:focus`]: {
       borderColor: "dc3545",
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
     },
     [`${isValid}`]: {
-      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
       borderColor: "28a745",
       paddingRight: "calc(0.75em+2.3125rem)",
+      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
     },
     [`${isValid}:focus`]: {
       borderColor: "28a745",
@@ -3923,53 +3962,53 @@ export const customSelect = style({
       display: "none",
     },
     "&:focus::-ms-value": {
-      backgroundColor: "fff",
       color: "495057",
+      backgroundColor: "fff",
     },
     "&[multiple]": {
-      backgroundImage: "none",
       height: "auto",
       paddingRight: "0.75rem",
+      backgroundImage: "none",
     },
     "&[size]:not([size='1'])": {
-      backgroundImage: "none",
       height: "auto",
       paddingRight: "0.75rem",
+      backgroundImage: "none",
     },
   },
 });
 
 export const customFileLabel = style({
+  position: "absolute",
+  top: "0",
+  right: "0",
+  left: "0",
+  zIndex: "1",
+  height: "calc(1.5em+0.75rem+2px)",
+  padding: "0.375rem 0.75rem",
+  overflow: "hidden",
+  fontWeight: "400",
+  lineHeight: "1.5",
+  color: "495057",
   backgroundColor: "fff",
   border: "1px solid ced4da",
   borderRadius: "0.25rem",
-  color: "495057",
-  fontWeight: "400",
-  height: "calc(1.5em+0.75rem+2px)",
-  left: "0",
-  lineHeight: "1.5",
-  overflow: "hidden",
-  padding: "0.375rem 0.75rem",
-  position: "absolute",
-  right: "0",
-  top: "0",
   transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  zIndex: "1",
   "::after": {
+    position: "absolute",
+    top: "0",
+    right: "0",
+    bottom: "0",
+    zIndex: "3",
+    display: "block",
+    height: "calc(1.5em+0.75rem)",
+    padding: "0.375rem 0.75rem",
+    lineHeight: "1.5",
+    color: "495057",
+    content: "Browse",
     backgroundColor: "e9ecef",
     borderLeft: "inherit",
     borderRadius: "0 0.25rem 0.25rem 0",
-    bottom: "0",
-    color: "495057",
-    content: "Browse",
-    display: "block",
-    height: "calc(1.5em+0.75rem)",
-    lineHeight: "1.5",
-    padding: "0.375rem 0.75rem",
-    position: "absolute",
-    right: "0",
-    top: "0",
-    zIndex: "3",
   },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
@@ -4005,20 +4044,20 @@ export const customFileLabel = style({
       zIndex: "3",
     },
     [`${inputGroup} > ${customFile}:not(:first-child) &`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${inputGroup} > ${customFile}:not(:last-child) &`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${inputGroup}${hasValidation} > ${customFile}:nth-last-child(+3) &`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${inputGroup}:not > ${customFile}:not(:last-child) &`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${wasValidated} ${customFileInput}:invalid ~ &`]: {
       borderColor: "dc3545",
@@ -4038,31 +4077,32 @@ export const customFileLabel = style({
 });
 
 export const customControlLabel = style({
-  marginBottom: "0",
   position: "relative",
+  marginBottom: "0",
   verticalAlign: "top",
   "::after": {
-    background: "50% / 50% 50% no-repeat",
-    content: "",
-    display: "block",
-    height: "1rem",
-    left: "-1.5rem",
     position: "absolute",
     top: "0.25rem",
+    left: "-1.5rem",
+    display: "block",
     width: "1rem",
+    height: "1rem",
+    content: "",
+    background: "50% / 50% 50% no-repeat",
   },
   "::before": {
-    backgroundColor: "fff",
-    border: "adb5bd solid 1px",
-    content: "",
-    display: "block",
-    height: "1rem",
-    left: "-1.5rem",
-    pointerEvents: "none",
     position: "absolute",
     top: "0.25rem",
-    transition: "none",
+    left: "-1.5rem",
+    display: "block",
     width: "1rem",
+    height: "1rem",
+    pointerEvents: "none",
+    content: "",
+    backgroundColor: "fff",
+    border: "adb5bd solid 1px",
+    transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+    transition: "none",
   },
   "@media": {
     "(min-width: 576px)": {
@@ -4096,19 +4136,19 @@ export const customControlLabel = style({
 });
 
 export const customControlInput = style({
-  height: "1.25rem",
-  left: "0",
-  opacity: "0",
   position: "absolute",
-  width: "1rem",
+  left: "0",
   zIndex: "-1",
+  width: "1rem",
+  height: "1.25rem",
+  opacity: "0",
   "selectors": {
     [`${isInvalid} ~ ${customControlLabel}::before`]: {
       borderColor: "dc3545",
     },
     [`${isInvalid}:checked ~ ${customControlLabel}::before`]: {
-      backgroundColor: "e4606d",
       borderColor: "e4606d",
+      backgroundColor: "e4606d",
     },
     [`${isInvalid}:focus ~ ${customControlLabel}::before`]: {
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
@@ -4120,8 +4160,8 @@ export const customControlInput = style({
       borderColor: "28a745",
     },
     [`${isValid}:checked ~ ${customControlLabel}::before`]: {
-      backgroundColor: "34ce57",
       borderColor: "34ce57",
+      backgroundColor: "34ce57",
     },
     [`${isValid}:focus ~ ${customControlLabel}::before`]: {
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
@@ -4130,9 +4170,9 @@ export const customControlInput = style({
       borderColor: "28a745",
     },
     [`:checked ~ ${customControlLabel}::before`]: {
-      backgroundColor: "007bff",
-      borderColor: "007bff",
       color: "fff",
+      borderColor: "007bff",
+      backgroundColor: "007bff",
     },
     [`:disabled ~ ${customControlLabel}::before`]: {
       backgroundColor: "e9ecef",
@@ -4144,9 +4184,9 @@ export const customControlInput = style({
       borderColor: "80bdff",
     },
     [`:not(:disabled):active ~ ${customControlLabel}::before`]: {
+      color: "fff",
       backgroundColor: "b3d7ff",
       borderColor: "b3d7ff",
-      color: "fff",
     },
     [`[disabled] ~ ${customControlLabel}::before`]: {
       backgroundColor: "e9ecef",
@@ -4166,13 +4206,13 @@ export const carouselItemRight = style({
   },
   "selectors": {
     [`${carouselFade} ${active}&`]: {
+      zIndex: "0",
       opacity: "0",
       transition: "opacity 0s 0.6s",
-      zIndex: "0",
     },
     [`${carouselFade} ${carouselItemPrev}&`]: {
-      opacity: "1",
       zIndex: "1",
+      opacity: "1",
     },
   },
 });
@@ -4199,26 +4239,28 @@ export const carouselItemLeft = style({
   },
   "selectors": {
     [`${carouselFade} ${active}&`]: {
+      zIndex: "0",
       opacity: "0",
       transition: "opacity 0s 0.6s",
-      zIndex: "0",
     },
     [`${carouselFade} ${carouselItemNext}&`]: {
-      opacity: "1",
       zIndex: "1",
+      opacity: "1",
     },
   },
 });
 
 export const carouselItem = style({
-  WebkitBackfaceVisibility: "hidden",
-  backfaceVisibility: "hidden",
+  position: "relative",
   display: "none",
   float: "left",
-  marginRight: "-100%",
-  position: "relative",
-  transition: "transform 0.6s ease-in-out , -webkit-transform 0.6s ease-in-out",
   width: "100%",
+  marginRight: "-100%",
+  WebkitBackfaceVisibility: "hidden",
+  backfaceVisibility: "hidden",
+  transition: "-webkit-transform 0.6s ease-in-out",
+  transition: "transform 0.6s ease-in-out",
+  transition: "transform 0.6s ease-in-out , -webkit-transform 0.6s ease-in-out",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
@@ -4229,27 +4271,28 @@ export const carouselItem = style({
       display: "block",
     },
     [`${carouselFade} &`]: {
-      WebkitTransform: "none",
       opacity: "0",
-      transform: "none",
       transitionProperty: "opacity",
+      WebkitTransform: "none",
+      transform: "none",
     },
   },
 });
 
 export const carouselIndicators = style({
-  bottom: "0",
-  display: "flex",
-  justifyContent: "center",
-  left: "0",
-  listStyle: "none",
-  marginLeft: "15%",
-  marginRight: "15%",
-  msFlexPack: "center",
-  paddingLeft: "0",
   position: "absolute",
   right: "0",
+  bottom: "0",
+  left: "0",
   zIndex: "15",
+  display: "-ms-flexbox",
+  display: "flex",
+  msFlexPack: "center",
+  justifyContent: "center",
+  paddingLeft: "0",
+  marginRight: "15%",
+  marginLeft: "15%",
+  listStyle: "none",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       "selectors": {
@@ -4261,21 +4304,21 @@ export const carouselIndicators = style({
   },
   "selectors": {
     "& li": {
-      backgroundClip: "padding-box",
-      backgroundColor: "fff",
-      borderBottom: "10px solid transparent",
-      borderTop: "10px solid transparent",
       boxSizing: "content-box",
-      cursor: "pointer",
-      flex: "0 1 auto",
-      height: "3px",
-      marginLeft: "3px",
-      marginRight: "3px",
       msFlex: "0 1 auto",
-      opacity: "0.5",
-      textIndent: "-999px",
-      transition: "opacity 0.6s ease",
+      flex: "0 1 auto",
       width: "30px",
+      height: "3px",
+      marginRight: "3px",
+      marginLeft: "3px",
+      textIndent: "-999px",
+      cursor: "pointer",
+      backgroundColor: "fff",
+      backgroundClip: "padding-box",
+      borderTop: "10px solid transparent",
+      borderBottom: "10px solid transparent",
+      opacity: "0.5",
+      transition: "opacity 0.6s ease",
     },
   },
 });
@@ -4286,17 +4329,18 @@ export const carouselFade = style({
 export const cardGroup = style({
   "@media": {
     "(min-width: 576px)": {
+      display: "-ms-flexbox",
       display: "flex",
-      flexFlow: "row wrap",
       msFlexFlow: "row wrap",
+      flexFlow: "row wrap",
       "selectors": {
         [` > ${card}:not(:first-child)`]: {
-          borderBottomLeftRadius: "0",
           borderTopLeftRadius: "0",
+          borderBottomLeftRadius: "0",
         },
         [` > ${card}:not(:last-child)`]: {
-          borderBottomRightRadius: "0",
           borderTopRightRadius: "0",
+          borderBottomRightRadius: "0",
         },
       },
     },
@@ -4306,11 +4350,12 @@ export const cardGroup = style({
 export const cardDeck = style({
   "@media": {
     "(min-width: 576px)": {
+      display: "-ms-flexbox",
       display: "flex",
-      flexFlow: "row wrap",
-      marginLeft: "-15px",
-      marginRight: "-15px",
       msFlexFlow: "row wrap",
+      flexFlow: "row wrap",
+      marginRight: "-15px",
+      marginLeft: "-15px",
     },
   },
 });
@@ -4318,11 +4363,11 @@ export const cardDeck = style({
 export const cardColumns = style({
   "@media": {
     "(min-width: 576px)": {
-      MozColumnCount: "3",
-      MozColumnGap: "1.25rem",
       WebkitColumnCount: "3",
-      WebkitColumnGap: "1.25rem",
+      MozColumnCount: "3",
       columnCount: "3",
+      WebkitColumnGap: "1.25rem",
+      MozColumnGap: "1.25rem",
       columnGap: "1.25rem",
       orphans: "1",
       widows: "1",
@@ -4331,16 +4376,17 @@ export const cardColumns = style({
 });
 
 export const card = style({
-  backgroundClip: "border-box",
-  backgroundColor: "fff",
-  border: "1px solid rgba(0,0,0,0.125)",
-  borderRadius: "0.25rem",
+  position: "relative",
+  display: "-ms-flexbox",
   display: "flex",
+  msFlexDirection: "column",
   flexDirection: "column",
   minWidth: "0",
-  msFlexDirection: "column",
-  position: "relative",
   wordWrap: "break-word",
+  backgroundColor: "fff",
+  backgroundClip: "border-box",
+  border: "1px solid rgba(0,0,0,0.125)",
+  borderRadius: "0.25rem",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
@@ -4349,38 +4395,38 @@ export const card = style({
           width: "100%",
         },
         [`${cardDeck} &`]: {
+          msFlex: "1 0 0%",
           flex: "1 0 0%",
+          marginRight: "15px",
           marginBottom: "0",
           marginLeft: "15px",
-          marginRight: "15px",
-          msFlex: "1 0 0%",
         },
         [`${cardGroup} > ${card} + &`]: {
-          borderLeft: "0",
           marginLeft: "0",
+          borderLeft: "0",
         },
         [`${cardGroup} > &`]: {
+          msFlex: "1 0 0%",
           flex: "1 0 0%",
           marginBottom: "0",
-          msFlex: "1 0 0%",
         },
       },
     },
   },
   "selectors": {
     [` > ${listGroup}:first-child`]: {
+      borderTopWidth: "0",
       borderTopLeftRadius: "calc(0.25rem-1px)",
       borderTopRightRadius: "calc(0.25rem-1px)",
-      borderTopWidth: "0",
     },
     [` > ${listGroup}:last-child`]: {
-      borderBottomLeftRadius: "calc(0.25rem-1px)",
-      borderBottomRightRadius: "calc(0.25rem-1px)",
       borderBottomWidth: "0",
+      borderBottomRightRadius: "calc(0.25rem-1px)",
+      borderBottomLeftRadius: "calc(0.25rem-1px)",
     },
     "& > hr": {
-      marginLeft: "0",
       marginRight: "0",
+      marginLeft: "0",
     },
     [`${accordion} > &`]: {
       overflow: "hidden",
@@ -4398,15 +4444,16 @@ export const card = style({
 });
 
 export const btnGroupVertical = style({
-  alignItems: "flex-start",
-  display: "inline-flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  msFlexAlign: "start",
-  msFlexDirection: "column",
-  msFlexPack: "center",
   position: "relative",
+  display: "-ms-inline-flexbox",
+  display: "inline-flex",
   verticalAlign: "middle",
+  msFlexDirection: "column",
+  flexDirection: "column",
+  msFlexAlign: "start",
+  alignItems: "flex-start",
+  msFlexPack: "center",
+  justifyContent: "center",
   "selectors": {
     [` > ${btnGroup}:not(:first-child)`]: {
       marginTop: "-1px",
@@ -4421,13 +4468,13 @@ export const btnGroupVertical = style({
       zIndex: "1",
     },
     [` > ${btn}:not(:first-child)`]: {
+      marginTop: "-1px",
       borderTopLeftRadius: "0",
       borderTopRightRadius: "0",
-      marginTop: "-1px",
     },
     [` > ${btn}:not(:last-child):not`]: {
-      borderBottomLeftRadius: "0",
       borderBottomRightRadius: "0",
+      borderBottomLeftRadius: "0",
     },
   },
 });
@@ -4435,31 +4482,32 @@ export const btnGroupVertical = style({
 export const btnGroupToggle = style({
   "selectors": {
     [` > ${btnGroup} > ${btn} input[type='checkbox']`]: {
+      position: "absolute",
       clip: "rect(0,0,0,0)",
       pointerEvents: "none",
-      position: "absolute",
     },
     [` > ${btnGroup} > ${btn} input[type='radio']`]: {
+      position: "absolute",
       clip: "rect(0,0,0,0)",
       pointerEvents: "none",
-      position: "absolute",
     },
     [` > ${btn} input[type='checkbox']`]: {
+      position: "absolute",
       clip: "rect(0,0,0,0)",
       pointerEvents: "none",
-      position: "absolute",
     },
     [` > ${btn} input[type='radio']`]: {
+      position: "absolute",
       clip: "rect(0,0,0,0)",
       pointerEvents: "none",
-      position: "absolute",
     },
   },
 });
 
 export const btnGroup = style({
-  display: "inline-flex",
   position: "relative",
+  display: "-ms-inline-flexbox",
+  display: "inline-flex",
   verticalAlign: "middle",
   "selectors": {
     [` > ${btnGroup}:not(:first-child)`]: {
@@ -4475,13 +4523,13 @@ export const btnGroup = style({
       zIndex: "1",
     },
     [` > ${btn}:not(:first-child)`]: {
-      borderBottomLeftRadius: "0",
-      borderTopLeftRadius: "0",
       marginLeft: "-1px",
+      borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [` > ${btn}:not(:last-child):not`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${btnGroupVertical} > &`]: {
       width: "100%",
@@ -4490,28 +4538,28 @@ export const btnGroup = style({
 });
 
 export const btn = style({
-  MozUserSelect: "none",
+  display: "inline-block",
+  fontWeight: "400",
+  color: "212529",
+  textAlign: "center",
+  verticalAlign: "middle",
   WebkitUserSelect: "none",
+  MozUserSelect: "none",
+  msUserSelect: "none",
+  userSelect: "none",
   backgroundColor: "transparent",
   border: "1px solid transparent",
-  borderRadius: "0.25rem",
-  color: "212529",
-  display: "inline-block",
-  fontSize: "1rem",
-  fontWeight: "400",
-  lineHeight: "1.5",
-  msUserSelect: "none",
   padding: "0.375rem 0.75rem",
-  textAlign: "center",
+  fontSize: "1rem",
+  lineHeight: "1.5",
+  borderRadius: "0.25rem",
   transition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  userSelect: "none",
-  verticalAlign: "middle",
   ":disabled": {
     opacity: "0.65",
   },
   ":focus": {
-    boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
     outline: "0",
+    boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
   },
   ":hover": {
     color: "212529",
@@ -4524,16 +4572,16 @@ export const btn = style({
   },
   "selectors": {
     [`${btnGroupLg} > &`]: {
-      borderRadius: "0.3rem",
+      padding: "0.5rem 1rem",
       fontSize: "1.25rem",
       lineHeight: "1.5",
-      padding: "0.5rem 1rem",
+      borderRadius: "0.3rem",
     },
     [`${btnGroupSm} > &`]: {
-      borderRadius: "0.2rem",
+      padding: "0.25rem 0.5rem",
       fontSize: "0.875rem",
       lineHeight: "1.5",
-      padding: "0.25rem 0.5rem",
+      borderRadius: "0.2rem",
     },
     [`${btnGroupToggle} > ${btnGroup} > &`]: {
       marginBottom: "0",
@@ -4546,34 +4594,34 @@ export const btn = style({
       borderTopRightRadius: "0",
     },
     [`${btnGroupVertical} > ${btnGroup}:not(:last-child) > &`]: {
-      borderBottomLeftRadius: "0",
       borderBottomRightRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${btnGroupVertical} > &`]: {
-      flex: "1 1 auto",
-      msFlex: "1 1 auto",
       position: "relative",
+      msFlex: "1 1 auto",
+      flex: "1 1 auto",
       width: "100%",
     },
     [`${btnGroup} > ${btnGroup}:not(:first-child) > &`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${btnGroup} > ${btnGroup}:not(:last-child) > &`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${btnGroup} > &`]: {
-      flex: "1 1 auto",
-      msFlex: "1 1 auto",
       position: "relative",
+      msFlex: "1 1 auto",
+      flex: "1 1 auto",
     },
     [`${disabled}`]: {
       opacity: "0.65",
     },
     [`${focus}`]: {
-      boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
       outline: "0",
+      boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
     },
     [`${inputGroupAppend} ${btn} + &`]: {
       marginLeft: "-1px",
@@ -4586,16 +4634,16 @@ export const btn = style({
       zIndex: "2",
     },
     [`${inputGroupLg} > ${inputGroupAppend} > &`]: {
-      borderRadius: "0.3rem",
+      padding: "0.5rem 1rem",
       fontSize: "1.25rem",
       lineHeight: "1.5",
-      padding: "0.5rem 1rem",
+      borderRadius: "0.3rem",
     },
     [`${inputGroupLg} > ${inputGroupPrepend} > &`]: {
-      borderRadius: "0.3rem",
+      padding: "0.5rem 1rem",
       fontSize: "1.25rem",
       lineHeight: "1.5",
-      padding: "0.5rem 1rem",
+      borderRadius: "0.3rem",
     },
     [`${inputGroupPrepend} ${btn} + &`]: {
       marginLeft: "-1px",
@@ -4608,36 +4656,36 @@ export const btn = style({
       zIndex: "2",
     },
     [`${inputGroupSm} > ${inputGroupAppend} > &`]: {
-      borderRadius: "0.2rem",
+      padding: "0.25rem 0.5rem",
       fontSize: "0.875rem",
       lineHeight: "1.5",
-      padding: "0.25rem 0.5rem",
+      borderRadius: "0.2rem",
     },
     [`${inputGroupSm} > ${inputGroupPrepend} > &`]: {
-      borderRadius: "0.2rem",
+      padding: "0.25rem 0.5rem",
       fontSize: "0.875rem",
       lineHeight: "1.5",
-      padding: "0.25rem 0.5rem",
+      borderRadius: "0.2rem",
     },
     [`${inputGroup} > ${inputGroupAppend} > &`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${inputGroup} > ${inputGroupPrepend} > &`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${inputGroup} > ${inputGroupPrepend}:not(:first-child) > &`]: {
-      borderBottomLeftRadius: "0",
       borderTopLeftRadius: "0",
+      borderBottomLeftRadius: "0",
     },
     [`${inputGroup}${hasValidation} > ${inputGroupAppend}:nth-last-child(+3) > &`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     [`${inputGroup}:not > ${inputGroupAppend}:not(:last-child) > &`]: {
-      borderBottomRightRadius: "0",
       borderTopRightRadius: "0",
+      borderBottomRightRadius: "0",
     },
     "&:not(:disabled):not": {
       cursor: "pointer",
@@ -4652,9 +4700,9 @@ export const bsTooltipTop = style({
   padding: "0.4rem 0",
   "selectors": {
     [` ${arrow}::before`]: {
-      borderTopColor: "000",
-      borderWidth: "0.4rem 0.4rem 0",
       top: "0",
+      borderWidth: "0.4rem 0.4rem 0",
+      borderTopColor: "000",
     },
   },
 });
@@ -4663,9 +4711,9 @@ export const bsTooltipRight = style({
   padding: "0 0.4rem",
   "selectors": {
     [` ${arrow}::before`]: {
-      borderRightColor: "000",
-      borderWidth: "0.4rem 0.4rem 0.4rem 0",
       right: "0",
+      borderWidth: "0.4rem 0.4rem 0.4rem 0",
+      borderRightColor: "000",
     },
   },
 });
@@ -4674,9 +4722,9 @@ export const bsTooltipLeft = style({
   padding: "0 0.4rem",
   "selectors": {
     [` ${arrow}::before`]: {
-      borderLeftColor: "000",
-      borderWidth: "0.4rem 0 0.4rem 0.4rem",
       left: "0",
+      borderWidth: "0.4rem 0 0.4rem 0.4rem",
+      borderLeftColor: "000",
     },
   },
 });
@@ -4685,9 +4733,9 @@ export const bsTooltipBottom = style({
   padding: "0.4rem 0",
   "selectors": {
     [` ${arrow}::before`]: {
-      borderBottomColor: "000",
-      borderWidth: "0 0.4rem 0.4rem",
       bottom: "0",
+      borderWidth: "0 0.4rem 0.4rem",
+      borderBottomColor: "000",
     },
   },
 });
@@ -4698,33 +4746,33 @@ export const bsTooltipAuto = style({
       padding: "0.4rem 0",
     },
     [`[x-placement^='bottom'] ${arrow}::before`]: {
-      borderBottomColor: "000",
-      borderWidth: "0 0.4rem 0.4rem",
       bottom: "0",
+      borderWidth: "0 0.4rem 0.4rem",
+      borderBottomColor: "000",
     },
     "&[x-placement^='left']": {
       padding: "0 0.4rem",
     },
     [`[x-placement^='left'] ${arrow}::before`]: {
-      borderLeftColor: "000",
-      borderWidth: "0.4rem 0 0.4rem 0.4rem",
       left: "0",
+      borderWidth: "0.4rem 0 0.4rem 0.4rem",
+      borderLeftColor: "000",
     },
     "&[x-placement^='right']": {
       padding: "0 0.4rem",
     },
     [`[x-placement^='right'] ${arrow}::before`]: {
-      borderRightColor: "000",
-      borderWidth: "0.4rem 0.4rem 0.4rem 0",
       right: "0",
+      borderWidth: "0.4rem 0.4rem 0.4rem 0",
+      borderRightColor: "000",
     },
     "&[x-placement^='top']": {
       padding: "0.4rem 0",
     },
     [`[x-placement^='top'] ${arrow}::before`]: {
-      borderTopColor: "000",
-      borderWidth: "0.4rem 0.4rem 0",
       top: "0",
+      borderWidth: "0.4rem 0.4rem 0",
+      borderTopColor: "000",
     },
   },
 });
@@ -4733,14 +4781,14 @@ export const bsPopoverTop = style({
   marginBottom: "0.5rem",
   "selectors": {
     [` > ${arrow}::after`]: {
-      borderTopColor: "fff",
-      borderWidth: "0.5rem 0.5rem 0",
       bottom: "1px",
+      borderWidth: "0.5rem 0.5rem 0",
+      borderTopColor: "fff",
     },
     [` > ${arrow}::before`]: {
-      borderTopColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0.5rem 0.5rem 0",
       bottom: "0",
+      borderWidth: "0.5rem 0.5rem 0",
+      borderTopColor: "rgba(0,0,0,0.25)",
     },
   },
 });
@@ -4749,14 +4797,14 @@ export const bsPopoverRight = style({
   marginLeft: "0.5rem",
   "selectors": {
     [` > ${arrow}::after`]: {
-      borderRightColor: "fff",
-      borderWidth: "0.5rem 0.5rem 0.5rem 0",
       left: "1px",
+      borderWidth: "0.5rem 0.5rem 0.5rem 0",
+      borderRightColor: "fff",
     },
     [` > ${arrow}::before`]: {
-      borderRightColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0.5rem 0.5rem 0.5rem 0",
       left: "0",
+      borderWidth: "0.5rem 0.5rem 0.5rem 0",
+      borderRightColor: "rgba(0,0,0,0.25)",
     },
   },
 });
@@ -4765,14 +4813,14 @@ export const bsPopoverLeft = style({
   marginRight: "0.5rem",
   "selectors": {
     [` > ${arrow}::after`]: {
-      borderLeftColor: "fff",
-      borderWidth: "0.5rem 0 0.5rem 0.5rem",
       right: "1px",
+      borderWidth: "0.5rem 0 0.5rem 0.5rem",
+      borderLeftColor: "fff",
     },
     [` > ${arrow}::before`]: {
-      borderLeftColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0.5rem 0 0.5rem 0.5rem",
       right: "0",
+      borderWidth: "0.5rem 0 0.5rem 0.5rem",
+      borderLeftColor: "rgba(0,0,0,0.25)",
     },
   },
 });
@@ -4781,24 +4829,24 @@ export const bsPopoverBottom = style({
   marginTop: "0.5rem",
   "selectors": {
     [` ${popoverHeader}::before`]: {
-      borderBottom: "1px solid f7f7f7",
-      content: "",
-      display: "block",
-      left: "50%",
-      marginLeft: "-0.5rem",
       position: "absolute",
       top: "0",
+      left: "50%",
+      display: "block",
       width: "1rem",
+      marginLeft: "-0.5rem",
+      content: "",
+      borderBottom: "1px solid f7f7f7",
     },
     [` > ${arrow}::after`]: {
-      borderBottomColor: "fff",
-      borderWidth: "0 0.5rem 0.5rem 0.5rem",
       top: "1px",
+      borderWidth: "0 0.5rem 0.5rem 0.5rem",
+      borderBottomColor: "fff",
     },
     [` > ${arrow}::before`]: {
-      borderBottomColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0 0.5rem 0.5rem 0.5rem",
       top: "0",
+      borderWidth: "0 0.5rem 0.5rem 0.5rem",
+      borderBottomColor: "rgba(0,0,0,0.25)",
     },
   },
 });
@@ -4809,71 +4857,71 @@ export const bsPopoverAuto = style({
       marginTop: "0.5rem",
     },
     [`[x-placement^='bottom'] ${popoverHeader}::before`]: {
-      borderBottom: "1px solid f7f7f7",
-      content: "",
-      display: "block",
-      left: "50%",
-      marginLeft: "-0.5rem",
       position: "absolute",
       top: "0",
+      left: "50%",
+      display: "block",
       width: "1rem",
+      marginLeft: "-0.5rem",
+      content: "",
+      borderBottom: "1px solid f7f7f7",
     },
     [`[x-placement^='bottom'] > ${arrow}::after`]: {
-      borderBottomColor: "fff",
-      borderWidth: "0 0.5rem 0.5rem 0.5rem",
       top: "1px",
+      borderWidth: "0 0.5rem 0.5rem 0.5rem",
+      borderBottomColor: "fff",
     },
     [`[x-placement^='bottom'] > ${arrow}::before`]: {
-      borderBottomColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0 0.5rem 0.5rem 0.5rem",
       top: "0",
+      borderWidth: "0 0.5rem 0.5rem 0.5rem",
+      borderBottomColor: "rgba(0,0,0,0.25)",
     },
     "&[x-placement^='left']": {
       marginRight: "0.5rem",
     },
     [`[x-placement^='left'] > ${arrow}::after`]: {
-      borderLeftColor: "fff",
-      borderWidth: "0.5rem 0 0.5rem 0.5rem",
       right: "1px",
+      borderWidth: "0.5rem 0 0.5rem 0.5rem",
+      borderLeftColor: "fff",
     },
     [`[x-placement^='left'] > ${arrow}::before`]: {
-      borderLeftColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0.5rem 0 0.5rem 0.5rem",
       right: "0",
+      borderWidth: "0.5rem 0 0.5rem 0.5rem",
+      borderLeftColor: "rgba(0,0,0,0.25)",
     },
     "&[x-placement^='right']": {
       marginLeft: "0.5rem",
     },
     [`[x-placement^='right'] > ${arrow}::after`]: {
-      borderRightColor: "fff",
-      borderWidth: "0.5rem 0.5rem 0.5rem 0",
       left: "1px",
+      borderWidth: "0.5rem 0.5rem 0.5rem 0",
+      borderRightColor: "fff",
     },
     [`[x-placement^='right'] > ${arrow}::before`]: {
-      borderRightColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0.5rem 0.5rem 0.5rem 0",
       left: "0",
+      borderWidth: "0.5rem 0.5rem 0.5rem 0",
+      borderRightColor: "rgba(0,0,0,0.25)",
     },
     "&[x-placement^='top']": {
       marginBottom: "0.5rem",
     },
     [`[x-placement^='top'] > ${arrow}::after`]: {
-      borderTopColor: "fff",
-      borderWidth: "0.5rem 0.5rem 0",
       bottom: "1px",
+      borderWidth: "0.5rem 0.5rem 0",
+      borderTopColor: "fff",
     },
     [`[x-placement^='top'] > ${arrow}::before`]: {
-      borderTopColor: "rgba(0,0,0,0.25)",
-      borderWidth: "0.5rem 0.5rem 0",
       bottom: "0",
+      borderWidth: "0.5rem 0.5rem 0",
+      borderTopColor: "rgba(0,0,0,0.25)",
     },
   },
 });
 
 export const alertWarning = style({
+  color: "856404",
   backgroundColor: "fff3cd",
   borderColor: "ffeeba",
-  color: "856404",
   "selectors": {
     "& hr": {
       borderTopColor: "ffe8a1",
@@ -4882,9 +4930,9 @@ export const alertWarning = style({
 });
 
 export const alertSuccess = style({
+  color: "155724",
   backgroundColor: "d4edda",
   borderColor: "c3e6cb",
-  color: "155724",
   "selectors": {
     "& hr": {
       borderTopColor: "b1dfbb",
@@ -4893,9 +4941,9 @@ export const alertSuccess = style({
 });
 
 export const alertSecondary = style({
+  color: "383d41",
   backgroundColor: "e2e3e5",
   borderColor: "d6d8db",
-  color: "383d41",
   "selectors": {
     "& hr": {
       borderTopColor: "c8cbcf",
@@ -4904,9 +4952,9 @@ export const alertSecondary = style({
 });
 
 export const alertPrimary = style({
+  color: "004085",
   backgroundColor: "cce5ff",
   borderColor: "b8daff",
-  color: "004085",
   "selectors": {
     "& hr": {
       borderTopColor: "9fcdff",
@@ -4923,8 +4971,8 @@ export const accordion = style({
     },
     [` > ${card}:not(:last-of-type)`]: {
       borderBottom: "0",
-      borderBottomLeftRadius: "0",
       borderBottomRightRadius: "0",
+      borderBottomLeftRadius: "0",
     },
   },
 });
@@ -4934,8 +4982,8 @@ export const active = style({
     "(min-width: 576px)": {
       "selectors": {
         [`${listGroupHorizontalXl} > ${listGroupItem} + ${listGroupItem}&`]: {
-          borderLeftWidth: "1px",
           marginLeft: "-1px",
+          borderLeftWidth: "1px",
         },
         [`${listGroupHorizontalXl} > ${listGroupItem}&`]: {
           marginTop: "0",
@@ -4943,8 +4991,8 @@ export const active = style({
       },
       "selectors": {
         [`${listGroupHorizontalSm} > ${listGroupItem} + ${listGroupItem}&`]: {
-          borderLeftWidth: "1px",
           marginLeft: "-1px",
+          borderLeftWidth: "1px",
         },
         [`${listGroupHorizontalSm} > ${listGroupItem}&`]: {
           marginTop: "0",
@@ -4952,8 +5000,8 @@ export const active = style({
       },
       "selectors": {
         [`${listGroupHorizontalMd} > ${listGroupItem} + ${listGroupItem}&`]: {
-          borderLeftWidth: "1px",
           marginLeft: "-1px",
+          borderLeftWidth: "1px",
         },
         [`${listGroupHorizontalMd} > ${listGroupItem}&`]: {
           marginTop: "0",
@@ -4961,8 +5009,8 @@ export const active = style({
       },
       "selectors": {
         [`${listGroupHorizontalLg} > ${listGroupItem} + ${listGroupItem}&`]: {
-          borderLeftWidth: "1px",
           marginLeft: "-1px",
+          borderLeftWidth: "1px",
         },
         [`${listGroupHorizontalLg} > ${listGroupItem}&`]: {
           marginTop: "0",
@@ -4978,8 +5026,8 @@ export const active = style({
       zIndex: "1",
     },
     [`${carouselFade} ${carouselItem}&`]: {
-      opacity: "1",
       zIndex: "1",
+      opacity: "1",
     },
     [`${carouselIndicators} &`]: {
       opacity: "1",
@@ -4993,24 +5041,24 @@ export const active = style({
       transform: "translateX(100%)",
     },
     [`${listGroupHorizontal} > ${listGroupItem} + ${listGroupItem}&`]: {
-      borderLeftWidth: "1px",
       marginLeft: "-1px",
+      borderLeftWidth: "1px",
     },
     [`${listGroupHorizontal} > ${listGroupItem}&`]: {
       marginTop: "0",
     },
     [`${listGroupItem} + ${listGroupItem}&`]: {
-      borderTopWidth: "1px",
       marginTop: "-1px",
+      borderTopWidth: "1px",
     },
     [`${navPills} ${navLink}&`]: {
-      backgroundColor: "007bff",
       color: "fff",
+      backgroundColor: "007bff",
     },
     [`${navTabs} ${navLink}&`]: {
+      color: "495057",
       backgroundColor: "fff",
       borderColor: "dee2e6 dee2e6 fff",
-      color: "495057",
     },
     [`${navbarDark} ${navbarNav} ${navLink}&`]: {
       color: "fff",
@@ -5025,9 +5073,9 @@ export const active = style({
 });
 
 export const alertDanger = style({
+  color: "721c24",
   backgroundColor: "f8d7da",
   borderColor: "f5c6cb",
-  color: "721c24",
   "selectors": {
     "& hr": {
       borderTopColor: "f1b0b7",
@@ -5036,9 +5084,9 @@ export const alertDanger = style({
 });
 
 export const alertDark = style({
+  color: "1b1e21",
   backgroundColor: "d6d8d9",
   borderColor: "c6c8ca",
-  color: "1b1e21",
   "selectors": {
     "& hr": {
       borderTopColor: "b9bbbe",
@@ -5047,9 +5095,9 @@ export const alertDark = style({
 });
 
 export const alertInfo = style({
+  color: "0c5460",
   backgroundColor: "d1ecf1",
   borderColor: "bee5eb",
-  color: "0c5460",
   "selectors": {
     "& hr": {
       borderTopColor: "abdde5",
@@ -5058,9 +5106,9 @@ export const alertInfo = style({
 });
 
 export const alertLight = style({
+  color: "818182",
   backgroundColor: "fefefe",
   borderColor: "fdfdfe",
-  color: "818182",
   "selectors": {
     "& hr": {
       borderTopColor: "ececf6",
@@ -5101,8 +5149,8 @@ export const alertLink = style({
 export const alignContentLgAround = style({
   "@media": {
     "(min-width: 992px)": {
-      alignContent: "space-around",
       msFlexLinePack: "distribute",
+      alignContent: "space-around",
     },
   },
 });
@@ -5110,8 +5158,8 @@ export const alignContentLgAround = style({
 export const alignContentLgBetween = style({
   "@media": {
     "(min-width: 992px)": {
-      alignContent: "space-between",
       msFlexLinePack: "justify",
+      alignContent: "space-between",
     },
   },
 });
@@ -5119,8 +5167,8 @@ export const alignContentLgBetween = style({
 export const alignContentLgCenter = style({
   "@media": {
     "(min-width: 992px)": {
-      alignContent: "center",
       msFlexLinePack: "center",
+      alignContent: "center",
     },
   },
 });
@@ -5128,8 +5176,8 @@ export const alignContentLgCenter = style({
 export const alignContentLgEnd = style({
   "@media": {
     "(min-width: 992px)": {
-      alignContent: "flex-end",
       msFlexLinePack: "end",
+      alignContent: "flex-end",
     },
   },
 });
@@ -5137,8 +5185,8 @@ export const alignContentLgEnd = style({
 export const alignContentLgStart = style({
   "@media": {
     "(min-width: 992px)": {
-      alignContent: "flex-start",
       msFlexLinePack: "start",
+      alignContent: "flex-start",
     },
   },
 });
@@ -5146,8 +5194,8 @@ export const alignContentLgStart = style({
 export const alignContentLgStretch = style({
   "@media": {
     "(min-width: 992px)": {
-      alignContent: "stretch",
       msFlexLinePack: "stretch",
+      alignContent: "stretch",
     },
   },
 });
@@ -5155,8 +5203,8 @@ export const alignContentLgStretch = style({
 export const alignContentMdAround = style({
   "@media": {
     "(min-width: 768px)": {
-      alignContent: "space-around",
       msFlexLinePack: "distribute",
+      alignContent: "space-around",
     },
   },
 });
@@ -5164,8 +5212,8 @@ export const alignContentMdAround = style({
 export const alignContentMdBetween = style({
   "@media": {
     "(min-width: 768px)": {
-      alignContent: "space-between",
       msFlexLinePack: "justify",
+      alignContent: "space-between",
     },
   },
 });
@@ -5173,8 +5221,8 @@ export const alignContentMdBetween = style({
 export const alignContentMdCenter = style({
   "@media": {
     "(min-width: 768px)": {
-      alignContent: "center",
       msFlexLinePack: "center",
+      alignContent: "center",
     },
   },
 });
@@ -5182,8 +5230,8 @@ export const alignContentMdCenter = style({
 export const alignContentMdEnd = style({
   "@media": {
     "(min-width: 768px)": {
-      alignContent: "flex-end",
       msFlexLinePack: "end",
+      alignContent: "flex-end",
     },
   },
 });
@@ -5191,8 +5239,8 @@ export const alignContentMdEnd = style({
 export const alignContentMdStart = style({
   "@media": {
     "(min-width: 768px)": {
-      alignContent: "flex-start",
       msFlexLinePack: "start",
+      alignContent: "flex-start",
     },
   },
 });
@@ -5200,8 +5248,8 @@ export const alignContentMdStart = style({
 export const alignContentMdStretch = style({
   "@media": {
     "(min-width: 768px)": {
-      alignContent: "stretch",
       msFlexLinePack: "stretch",
+      alignContent: "stretch",
     },
   },
 });
@@ -5209,8 +5257,8 @@ export const alignContentMdStretch = style({
 export const alignContentSmAround = style({
   "@media": {
     "(min-width: 576px)": {
-      alignContent: "space-around",
       msFlexLinePack: "distribute",
+      alignContent: "space-around",
     },
   },
 });
@@ -5218,8 +5266,8 @@ export const alignContentSmAround = style({
 export const alignContentSmBetween = style({
   "@media": {
     "(min-width: 576px)": {
-      alignContent: "space-between",
       msFlexLinePack: "justify",
+      alignContent: "space-between",
     },
   },
 });
@@ -5227,8 +5275,8 @@ export const alignContentSmBetween = style({
 export const alignContentSmCenter = style({
   "@media": {
     "(min-width: 576px)": {
-      alignContent: "center",
       msFlexLinePack: "center",
+      alignContent: "center",
     },
   },
 });
@@ -5236,8 +5284,8 @@ export const alignContentSmCenter = style({
 export const alignContentSmEnd = style({
   "@media": {
     "(min-width: 576px)": {
-      alignContent: "flex-end",
       msFlexLinePack: "end",
+      alignContent: "flex-end",
     },
   },
 });
@@ -5245,8 +5293,8 @@ export const alignContentSmEnd = style({
 export const alignContentSmStart = style({
   "@media": {
     "(min-width: 576px)": {
-      alignContent: "flex-start",
       msFlexLinePack: "start",
+      alignContent: "flex-start",
     },
   },
 });
@@ -5254,8 +5302,8 @@ export const alignContentSmStart = style({
 export const alignContentSmStretch = style({
   "@media": {
     "(min-width: 576px)": {
-      alignContent: "stretch",
       msFlexLinePack: "stretch",
+      alignContent: "stretch",
     },
   },
 });
@@ -5263,8 +5311,8 @@ export const alignContentSmStretch = style({
 export const alignContentXlAround = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignContent: "space-around",
       msFlexLinePack: "distribute",
+      alignContent: "space-around",
     },
   },
 });
@@ -5272,8 +5320,8 @@ export const alignContentXlAround = style({
 export const alignContentXlBetween = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignContent: "space-between",
       msFlexLinePack: "justify",
+      alignContent: "space-between",
     },
   },
 });
@@ -5281,8 +5329,8 @@ export const alignContentXlBetween = style({
 export const alignContentXlCenter = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignContent: "center",
       msFlexLinePack: "center",
+      alignContent: "center",
     },
   },
 });
@@ -5290,8 +5338,8 @@ export const alignContentXlCenter = style({
 export const alignContentXlEnd = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignContent: "flex-end",
       msFlexLinePack: "end",
+      alignContent: "flex-end",
     },
   },
 });
@@ -5299,8 +5347,8 @@ export const alignContentXlEnd = style({
 export const alignContentXlStart = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignContent: "flex-start",
       msFlexLinePack: "start",
+      alignContent: "flex-start",
     },
   },
 });
@@ -5308,8 +5356,8 @@ export const alignContentXlStart = style({
 export const alignContentXlStretch = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignContent: "stretch",
       msFlexLinePack: "stretch",
+      alignContent: "stretch",
     },
   },
 });
@@ -5317,8 +5365,8 @@ export const alignContentXlStretch = style({
 export const alignItemsLgBaseline = style({
   "@media": {
     "(min-width: 992px)": {
-      alignItems: "baseline",
       msFlexAlign: "baseline",
+      alignItems: "baseline",
     },
   },
 });
@@ -5326,8 +5374,8 @@ export const alignItemsLgBaseline = style({
 export const alignItemsLgCenter = style({
   "@media": {
     "(min-width: 992px)": {
-      alignItems: "center",
       msFlexAlign: "center",
+      alignItems: "center",
     },
   },
 });
@@ -5335,8 +5383,8 @@ export const alignItemsLgCenter = style({
 export const alignItemsLgEnd = style({
   "@media": {
     "(min-width: 992px)": {
-      alignItems: "flex-end",
       msFlexAlign: "end",
+      alignItems: "flex-end",
     },
   },
 });
@@ -5344,8 +5392,8 @@ export const alignItemsLgEnd = style({
 export const alignItemsLgStart = style({
   "@media": {
     "(min-width: 992px)": {
-      alignItems: "flex-start",
       msFlexAlign: "start",
+      alignItems: "flex-start",
     },
   },
 });
@@ -5353,8 +5401,8 @@ export const alignItemsLgStart = style({
 export const alignItemsLgStretch = style({
   "@media": {
     "(min-width: 992px)": {
-      alignItems: "stretch",
       msFlexAlign: "stretch",
+      alignItems: "stretch",
     },
   },
 });
@@ -5362,8 +5410,8 @@ export const alignItemsLgStretch = style({
 export const alignItemsMdBaseline = style({
   "@media": {
     "(min-width: 768px)": {
-      alignItems: "baseline",
       msFlexAlign: "baseline",
+      alignItems: "baseline",
     },
   },
 });
@@ -5371,8 +5419,8 @@ export const alignItemsMdBaseline = style({
 export const alignItemsMdCenter = style({
   "@media": {
     "(min-width: 768px)": {
-      alignItems: "center",
       msFlexAlign: "center",
+      alignItems: "center",
     },
   },
 });
@@ -5380,8 +5428,8 @@ export const alignItemsMdCenter = style({
 export const alignItemsMdEnd = style({
   "@media": {
     "(min-width: 768px)": {
-      alignItems: "flex-end",
       msFlexAlign: "end",
+      alignItems: "flex-end",
     },
   },
 });
@@ -5389,8 +5437,8 @@ export const alignItemsMdEnd = style({
 export const alignItemsMdStart = style({
   "@media": {
     "(min-width: 768px)": {
-      alignItems: "flex-start",
       msFlexAlign: "start",
+      alignItems: "flex-start",
     },
   },
 });
@@ -5398,8 +5446,8 @@ export const alignItemsMdStart = style({
 export const alignItemsMdStretch = style({
   "@media": {
     "(min-width: 768px)": {
-      alignItems: "stretch",
       msFlexAlign: "stretch",
+      alignItems: "stretch",
     },
   },
 });
@@ -5407,8 +5455,8 @@ export const alignItemsMdStretch = style({
 export const alignItemsSmBaseline = style({
   "@media": {
     "(min-width: 576px)": {
-      alignItems: "baseline",
       msFlexAlign: "baseline",
+      alignItems: "baseline",
     },
   },
 });
@@ -5416,8 +5464,8 @@ export const alignItemsSmBaseline = style({
 export const alignItemsSmCenter = style({
   "@media": {
     "(min-width: 576px)": {
-      alignItems: "center",
       msFlexAlign: "center",
+      alignItems: "center",
     },
   },
 });
@@ -5425,8 +5473,8 @@ export const alignItemsSmCenter = style({
 export const alignItemsSmEnd = style({
   "@media": {
     "(min-width: 576px)": {
-      alignItems: "flex-end",
       msFlexAlign: "end",
+      alignItems: "flex-end",
     },
   },
 });
@@ -5434,8 +5482,8 @@ export const alignItemsSmEnd = style({
 export const alignItemsSmStart = style({
   "@media": {
     "(min-width: 576px)": {
-      alignItems: "flex-start",
       msFlexAlign: "start",
+      alignItems: "flex-start",
     },
   },
 });
@@ -5443,8 +5491,8 @@ export const alignItemsSmStart = style({
 export const alignItemsSmStretch = style({
   "@media": {
     "(min-width: 576px)": {
-      alignItems: "stretch",
       msFlexAlign: "stretch",
+      alignItems: "stretch",
     },
   },
 });
@@ -5452,8 +5500,8 @@ export const alignItemsSmStretch = style({
 export const alignItemsXlBaseline = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignItems: "baseline",
       msFlexAlign: "baseline",
+      alignItems: "baseline",
     },
   },
 });
@@ -5461,8 +5509,8 @@ export const alignItemsXlBaseline = style({
 export const alignItemsXlCenter = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignItems: "center",
       msFlexAlign: "center",
+      alignItems: "center",
     },
   },
 });
@@ -5470,8 +5518,8 @@ export const alignItemsXlCenter = style({
 export const alignItemsXlEnd = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignItems: "flex-end",
       msFlexAlign: "end",
+      alignItems: "flex-end",
     },
   },
 });
@@ -5479,8 +5527,8 @@ export const alignItemsXlEnd = style({
 export const alignItemsXlStart = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignItems: "flex-start",
       msFlexAlign: "start",
+      alignItems: "flex-start",
     },
   },
 });
@@ -5488,8 +5536,8 @@ export const alignItemsXlStart = style({
 export const alignItemsXlStretch = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignItems: "stretch",
       msFlexAlign: "stretch",
+      alignItems: "stretch",
     },
   },
 });
@@ -5497,8 +5545,8 @@ export const alignItemsXlStretch = style({
 export const alignSelfLgAuto = style({
   "@media": {
     "(min-width: 992px)": {
-      alignSelf: "auto",
       msFlexItemAlign: "auto",
+      alignSelf: "auto",
     },
   },
 });
@@ -5506,8 +5554,8 @@ export const alignSelfLgAuto = style({
 export const alignSelfLgBaseline = style({
   "@media": {
     "(min-width: 992px)": {
-      alignSelf: "baseline",
       msFlexItemAlign: "baseline",
+      alignSelf: "baseline",
     },
   },
 });
@@ -5515,8 +5563,8 @@ export const alignSelfLgBaseline = style({
 export const alignSelfLgCenter = style({
   "@media": {
     "(min-width: 992px)": {
-      alignSelf: "center",
       msFlexItemAlign: "center",
+      alignSelf: "center",
     },
   },
 });
@@ -5524,8 +5572,8 @@ export const alignSelfLgCenter = style({
 export const alignSelfLgEnd = style({
   "@media": {
     "(min-width: 992px)": {
-      alignSelf: "flex-end",
       msFlexItemAlign: "end",
+      alignSelf: "flex-end",
     },
   },
 });
@@ -5533,8 +5581,8 @@ export const alignSelfLgEnd = style({
 export const alignSelfLgStart = style({
   "@media": {
     "(min-width: 992px)": {
-      alignSelf: "flex-start",
       msFlexItemAlign: "start",
+      alignSelf: "flex-start",
     },
   },
 });
@@ -5542,8 +5590,8 @@ export const alignSelfLgStart = style({
 export const alignSelfLgStretch = style({
   "@media": {
     "(min-width: 992px)": {
-      alignSelf: "stretch",
       msFlexItemAlign: "stretch",
+      alignSelf: "stretch",
     },
   },
 });
@@ -5551,8 +5599,8 @@ export const alignSelfLgStretch = style({
 export const alignSelfMdAuto = style({
   "@media": {
     "(min-width: 768px)": {
-      alignSelf: "auto",
       msFlexItemAlign: "auto",
+      alignSelf: "auto",
     },
   },
 });
@@ -5560,8 +5608,8 @@ export const alignSelfMdAuto = style({
 export const alignSelfMdBaseline = style({
   "@media": {
     "(min-width: 768px)": {
-      alignSelf: "baseline",
       msFlexItemAlign: "baseline",
+      alignSelf: "baseline",
     },
   },
 });
@@ -5569,8 +5617,8 @@ export const alignSelfMdBaseline = style({
 export const alignSelfMdCenter = style({
   "@media": {
     "(min-width: 768px)": {
-      alignSelf: "center",
       msFlexItemAlign: "center",
+      alignSelf: "center",
     },
   },
 });
@@ -5578,8 +5626,8 @@ export const alignSelfMdCenter = style({
 export const alignSelfMdEnd = style({
   "@media": {
     "(min-width: 768px)": {
-      alignSelf: "flex-end",
       msFlexItemAlign: "end",
+      alignSelf: "flex-end",
     },
   },
 });
@@ -5587,8 +5635,8 @@ export const alignSelfMdEnd = style({
 export const alignSelfMdStart = style({
   "@media": {
     "(min-width: 768px)": {
-      alignSelf: "flex-start",
       msFlexItemAlign: "start",
+      alignSelf: "flex-start",
     },
   },
 });
@@ -5596,8 +5644,8 @@ export const alignSelfMdStart = style({
 export const alignSelfMdStretch = style({
   "@media": {
     "(min-width: 768px)": {
-      alignSelf: "stretch",
       msFlexItemAlign: "stretch",
+      alignSelf: "stretch",
     },
   },
 });
@@ -5605,8 +5653,8 @@ export const alignSelfMdStretch = style({
 export const alignSelfSmAuto = style({
   "@media": {
     "(min-width: 576px)": {
-      alignSelf: "auto",
       msFlexItemAlign: "auto",
+      alignSelf: "auto",
     },
   },
 });
@@ -5614,8 +5662,8 @@ export const alignSelfSmAuto = style({
 export const alignSelfSmBaseline = style({
   "@media": {
     "(min-width: 576px)": {
-      alignSelf: "baseline",
       msFlexItemAlign: "baseline",
+      alignSelf: "baseline",
     },
   },
 });
@@ -5623,8 +5671,8 @@ export const alignSelfSmBaseline = style({
 export const alignSelfSmCenter = style({
   "@media": {
     "(min-width: 576px)": {
-      alignSelf: "center",
       msFlexItemAlign: "center",
+      alignSelf: "center",
     },
   },
 });
@@ -5632,8 +5680,8 @@ export const alignSelfSmCenter = style({
 export const alignSelfSmEnd = style({
   "@media": {
     "(min-width: 576px)": {
-      alignSelf: "flex-end",
       msFlexItemAlign: "end",
+      alignSelf: "flex-end",
     },
   },
 });
@@ -5641,8 +5689,8 @@ export const alignSelfSmEnd = style({
 export const alignSelfSmStart = style({
   "@media": {
     "(min-width: 576px)": {
-      alignSelf: "flex-start",
       msFlexItemAlign: "start",
+      alignSelf: "flex-start",
     },
   },
 });
@@ -5650,8 +5698,8 @@ export const alignSelfSmStart = style({
 export const alignSelfSmStretch = style({
   "@media": {
     "(min-width: 576px)": {
-      alignSelf: "stretch",
       msFlexItemAlign: "stretch",
+      alignSelf: "stretch",
     },
   },
 });
@@ -5659,8 +5707,8 @@ export const alignSelfSmStretch = style({
 export const alignSelfXlAuto = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignSelf: "auto",
       msFlexItemAlign: "auto",
+      alignSelf: "auto",
     },
   },
 });
@@ -5668,8 +5716,8 @@ export const alignSelfXlAuto = style({
 export const alignSelfXlBaseline = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignSelf: "baseline",
       msFlexItemAlign: "baseline",
+      alignSelf: "baseline",
     },
   },
 });
@@ -5677,8 +5725,8 @@ export const alignSelfXlBaseline = style({
 export const alignSelfXlCenter = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignSelf: "center",
       msFlexItemAlign: "center",
+      alignSelf: "center",
     },
   },
 });
@@ -5686,8 +5734,8 @@ export const alignSelfXlCenter = style({
 export const alignSelfXlEnd = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignSelf: "flex-end",
       msFlexItemAlign: "end",
+      alignSelf: "flex-end",
     },
   },
 });
@@ -5695,8 +5743,8 @@ export const alignSelfXlEnd = style({
 export const alignSelfXlStart = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignSelf: "flex-start",
       msFlexItemAlign: "start",
+      alignSelf: "flex-start",
     },
   },
 });
@@ -5704,8 +5752,8 @@ export const alignSelfXlStart = style({
 export const alignSelfXlStretch = style({
   "@media": {
     "(min-width: 1200px)": {
-      alignSelf: "stretch",
       msFlexItemAlign: "stretch",
+      alignSelf: "stretch",
     },
   },
 });
@@ -5716,16 +5764,16 @@ export const arrow = style({
       top: "calc(-0.5rem-1px)",
     },
     [`${bsPopoverAuto}[x-placement^='left'] > &`]: {
-      height: "1rem",
-      margin: "0.3rem 0",
       right: "calc(-0.5rem-1px)",
       width: "0.5rem",
+      height: "1rem",
+      margin: "0.3rem 0",
     },
     [`${bsPopoverAuto}[x-placement^='right'] > &`]: {
-      height: "1rem",
       left: "calc(-0.5rem-1px)",
-      margin: "0.3rem 0",
       width: "0.5rem",
+      height: "1rem",
+      margin: "0.3rem 0",
     },
     [`${bsPopoverAuto}[x-placement^='top'] > &`]: {
       bottom: "calc(-0.5rem-1px)",
@@ -5734,16 +5782,16 @@ export const arrow = style({
       top: "calc(-0.5rem-1px)",
     },
     [`${bsPopoverLeft} > &`]: {
-      height: "1rem",
-      margin: "0.3rem 0",
       right: "calc(-0.5rem-1px)",
       width: "0.5rem",
+      height: "1rem",
+      margin: "0.3rem 0",
     },
     [`${bsPopoverRight} > &`]: {
-      height: "1rem",
       left: "calc(-0.5rem-1px)",
-      margin: "0.3rem 0",
       width: "0.5rem",
+      height: "1rem",
+      margin: "0.3rem 0",
     },
     [`${bsPopoverTop} > &`]: {
       bottom: "calc(-0.5rem-1px)",
@@ -5752,14 +5800,14 @@ export const arrow = style({
       top: "0",
     },
     [`${bsTooltipAuto}[x-placement^='left'] &`]: {
-      height: "0.8rem",
       right: "0",
       width: "0.4rem",
+      height: "0.8rem",
     },
     [`${bsTooltipAuto}[x-placement^='right'] &`]: {
-      height: "0.8rem",
       left: "0",
       width: "0.4rem",
+      height: "0.8rem",
     },
     [`${bsTooltipAuto}[x-placement^='top'] &`]: {
       bottom: "0",
@@ -5768,52 +5816,52 @@ export const arrow = style({
       top: "0",
     },
     [`${bsTooltipLeft} &`]: {
-      height: "0.8rem",
       right: "0",
       width: "0.4rem",
+      height: "0.8rem",
     },
     [`${bsTooltipRight} &`]: {
-      height: "0.8rem",
       left: "0",
       width: "0.4rem",
+      height: "0.8rem",
     },
     [`${bsTooltipTop} &`]: {
       bottom: "0",
     },
     [`${popover} &`]: {
+      position: "absolute",
       display: "block",
+      width: "1rem",
       height: "0.5rem",
       margin: "0 0.3rem",
-      position: "absolute",
-      width: "1rem",
     },
     [`${tooltip} &`]: {
-      display: "block",
-      height: "0.4rem",
       position: "absolute",
+      display: "block",
       width: "0.8rem",
+      height: "0.4rem",
     },
   },
 });
 
 export const badge = style({
-  borderRadius: "0.25rem",
   display: "inline-block",
+  padding: "0.25em 0.4em",
   fontSize: "75%",
   fontWeight: "700",
   lineHeight: "1",
-  padding: "0.25em 0.4em",
   textAlign: "center",
-  transition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
-  verticalAlign: "baseline",
   whiteSpace: "nowrap",
+  verticalAlign: "baseline",
+  borderRadius: "0.25rem",
+  transition: "color 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
   ":empty": {
     display: "none",
   },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
-      border: "1px solid 000",
       transition: "none",
+      border: "1px solid 000",
     },
   },
   "selectors": {
@@ -5827,12 +5875,13 @@ export const badge = style({
 export const breadcrumbItem = style({
   "selectors": {
     [` + ${breadcrumbItem}::before`]: {
-      color: "6c757d",
-      content: "/",
       float: "left",
       paddingRight: "0.5rem",
+      color: "6c757d",
+      content: "/",
     },
     [` + ${breadcrumbItem}:hover::before`]: {
+      textDecoration: "underline",
       textDecoration: "none",
     },
     [`${active}`]: {
@@ -5855,49 +5904,49 @@ export const btnBlock = style({
 });
 
 export const btnDanger = style({
+  color: "fff",
   backgroundColor: "dc3545",
   borderColor: "dc3545",
-  color: "fff",
   ":disabled": {
+    color: "fff",
     backgroundColor: "dc3545",
     borderColor: "dc3545",
-    color: "fff",
   },
   ":focus": {
+    color: "fff",
     backgroundColor: "c82333",
     borderColor: "bd2130",
     boxShadow: "0 0 0 0.2rem rgba(225,83,97,0.5)",
-    color: "fff",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "c82333",
     borderColor: "bd2130",
-    color: "fff",
   },
   "selectors": {
     [`${disabled}`]: {
+      color: "fff",
       backgroundColor: "dc3545",
       borderColor: "dc3545",
-      color: "fff",
     },
     [`${focus}`]: {
+      color: "fff",
       backgroundColor: "c82333",
       borderColor: "bd2130",
       boxShadow: "0 0 0 0.2rem rgba(225,83,97,0.5)",
-      color: "fff",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "fff",
       backgroundColor: "bd2130",
       borderColor: "b21f2d",
-      color: "fff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(225,83,97,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "fff",
       backgroundColor: "bd2130",
       borderColor: "b21f2d",
-      color: "fff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(225,83,97,0.5)",
@@ -5906,49 +5955,49 @@ export const btnDanger = style({
 });
 
 export const btnDark = style({
+  color: "fff",
   backgroundColor: "343a40",
   borderColor: "343a40",
-  color: "fff",
   ":disabled": {
+    color: "fff",
     backgroundColor: "343a40",
     borderColor: "343a40",
-    color: "fff",
   },
   ":focus": {
+    color: "fff",
     backgroundColor: "23272b",
     borderColor: "1d2124",
     boxShadow: "0 0 0 0.2rem rgba(82,88,93,0.5)",
-    color: "fff",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "23272b",
     borderColor: "1d2124",
-    color: "fff",
   },
   "selectors": {
     [`${disabled}`]: {
+      color: "fff",
       backgroundColor: "343a40",
       borderColor: "343a40",
-      color: "fff",
     },
     [`${focus}`]: {
+      color: "fff",
       backgroundColor: "23272b",
       borderColor: "1d2124",
       boxShadow: "0 0 0 0.2rem rgba(82,88,93,0.5)",
-      color: "fff",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "fff",
       backgroundColor: "1d2124",
       borderColor: "171a1d",
-      color: "fff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(82,88,93,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "fff",
       backgroundColor: "1d2124",
       borderColor: "171a1d",
-      color: "fff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(82,88,93,0.5)",
@@ -5957,49 +6006,49 @@ export const btnDark = style({
 });
 
 export const btnInfo = style({
+  color: "fff",
   backgroundColor: "17a2b8",
   borderColor: "17a2b8",
-  color: "fff",
   ":disabled": {
+    color: "fff",
     backgroundColor: "17a2b8",
     borderColor: "17a2b8",
-    color: "fff",
   },
   ":focus": {
+    color: "fff",
     backgroundColor: "138496",
     borderColor: "117a8b",
     boxShadow: "0 0 0 0.2rem rgba(58,176,195,0.5)",
-    color: "fff",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "138496",
     borderColor: "117a8b",
-    color: "fff",
   },
   "selectors": {
     [`${disabled}`]: {
+      color: "fff",
       backgroundColor: "17a2b8",
       borderColor: "17a2b8",
-      color: "fff",
     },
     [`${focus}`]: {
+      color: "fff",
       backgroundColor: "138496",
       borderColor: "117a8b",
       boxShadow: "0 0 0 0.2rem rgba(58,176,195,0.5)",
-      color: "fff",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "fff",
       backgroundColor: "117a8b",
       borderColor: "10707f",
-      color: "fff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(58,176,195,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "fff",
       backgroundColor: "117a8b",
       borderColor: "10707f",
-      color: "fff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(58,176,195,0.5)",
@@ -6008,49 +6057,49 @@ export const btnInfo = style({
 });
 
 export const btnLight = style({
+  color: "212529",
   backgroundColor: "f8f9fa",
   borderColor: "f8f9fa",
-  color: "212529",
   ":disabled": {
+    color: "212529",
     backgroundColor: "f8f9fa",
     borderColor: "f8f9fa",
-    color: "212529",
   },
   ":focus": {
+    color: "212529",
     backgroundColor: "e2e6ea",
     borderColor: "dae0e5",
     boxShadow: "0 0 0 0.2rem rgba(216,217,219,0.5)",
-    color: "212529",
   },
   ":hover": {
+    color: "212529",
     backgroundColor: "e2e6ea",
     borderColor: "dae0e5",
-    color: "212529",
   },
   "selectors": {
     [`${disabled}`]: {
+      color: "212529",
       backgroundColor: "f8f9fa",
       borderColor: "f8f9fa",
-      color: "212529",
     },
     [`${focus}`]: {
+      color: "212529",
       backgroundColor: "e2e6ea",
       borderColor: "dae0e5",
       boxShadow: "0 0 0 0.2rem rgba(216,217,219,0.5)",
-      color: "212529",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "212529",
       backgroundColor: "dae0e5",
       borderColor: "d3d9df",
-      color: "212529",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(216,217,219,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "212529",
       backgroundColor: "dae0e5",
       borderColor: "d3d9df",
-      color: "212529",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(216,217,219,0.5)",
@@ -6059,8 +6108,8 @@ export const btnLight = style({
 });
 
 export const btnLink = style({
-  color: "007bff",
   fontWeight: "400",
+  color: "007bff",
   textDecoration: "none",
   ":disabled": {
     color: "6c757d",
@@ -6085,40 +6134,40 @@ export const btnLink = style({
 });
 
 export const btnOutlineDanger = style({
-  borderColor: "dc3545",
   color: "dc3545",
+  borderColor: "dc3545",
   ":disabled": {
-    backgroundColor: "transparent",
     color: "dc3545",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "dc3545",
     borderColor: "dc3545",
-    color: "fff",
   },
   "selectors": {
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "dc3545",
+      backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "fff",
       backgroundColor: "dc3545",
       borderColor: "dc3545",
-      color: "fff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "fff",
       backgroundColor: "dc3545",
       borderColor: "dc3545",
-      color: "fff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
@@ -6127,40 +6176,40 @@ export const btnOutlineDanger = style({
 });
 
 export const btnOutlineDark = style({
-  borderColor: "343a40",
   color: "343a40",
+  borderColor: "343a40",
   ":disabled": {
-    backgroundColor: "transparent",
     color: "343a40",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "343a40",
     borderColor: "343a40",
-    color: "fff",
   },
   "selectors": {
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "343a40",
+      backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "fff",
       backgroundColor: "343a40",
       borderColor: "343a40",
-      color: "fff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "fff",
       backgroundColor: "343a40",
       borderColor: "343a40",
-      color: "fff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
@@ -6169,40 +6218,40 @@ export const btnOutlineDark = style({
 });
 
 export const btnOutlineInfo = style({
-  borderColor: "17a2b8",
   color: "17a2b8",
+  borderColor: "17a2b8",
   ":disabled": {
-    backgroundColor: "transparent",
     color: "17a2b8",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "17a2b8",
     borderColor: "17a2b8",
-    color: "fff",
   },
   "selectors": {
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "17a2b8",
+      backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "fff",
       backgroundColor: "17a2b8",
       borderColor: "17a2b8",
-      color: "fff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "fff",
       backgroundColor: "17a2b8",
       borderColor: "17a2b8",
-      color: "fff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
@@ -6211,40 +6260,40 @@ export const btnOutlineInfo = style({
 });
 
 export const btnOutlineLight = style({
-  borderColor: "f8f9fa",
   color: "f8f9fa",
+  borderColor: "f8f9fa",
   ":disabled": {
-    backgroundColor: "transparent",
     color: "f8f9fa",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
   },
   ":hover": {
+    color: "212529",
     backgroundColor: "f8f9fa",
     borderColor: "f8f9fa",
-    color: "212529",
   },
   "selectors": {
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "f8f9fa",
+      backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "212529",
       backgroundColor: "f8f9fa",
       borderColor: "f8f9fa",
-      color: "212529",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "212529",
       backgroundColor: "f8f9fa",
       borderColor: "f8f9fa",
-      color: "212529",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
@@ -6253,40 +6302,40 @@ export const btnOutlineLight = style({
 });
 
 export const btnOutlinePrimary = style({
-  borderColor: "007bff",
   color: "007bff",
+  borderColor: "007bff",
   ":disabled": {
-    backgroundColor: "transparent",
     color: "007bff",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "007bff",
     borderColor: "007bff",
-    color: "fff",
   },
   "selectors": {
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "007bff",
+      backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "fff",
       backgroundColor: "007bff",
       borderColor: "007bff",
-      color: "fff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "fff",
       backgroundColor: "007bff",
       borderColor: "007bff",
-      color: "fff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
@@ -6295,40 +6344,40 @@ export const btnOutlinePrimary = style({
 });
 
 export const btnOutlineSecondary = style({
-  borderColor: "6c757d",
   color: "6c757d",
+  borderColor: "6c757d",
   ":disabled": {
-    backgroundColor: "transparent",
     color: "6c757d",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "6c757d",
     borderColor: "6c757d",
-    color: "fff",
   },
   "selectors": {
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "6c757d",
+      backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "fff",
       backgroundColor: "6c757d",
       borderColor: "6c757d",
-      color: "fff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "fff",
       backgroundColor: "6c757d",
       borderColor: "6c757d",
-      color: "fff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
@@ -6337,40 +6386,40 @@ export const btnOutlineSecondary = style({
 });
 
 export const btnOutlineSuccess = style({
-  borderColor: "28a745",
   color: "28a745",
+  borderColor: "28a745",
   ":disabled": {
-    backgroundColor: "transparent",
     color: "28a745",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "28a745",
     borderColor: "28a745",
-    color: "fff",
   },
   "selectors": {
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "28a745",
+      backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "fff",
       backgroundColor: "28a745",
       borderColor: "28a745",
-      color: "fff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "fff",
       backgroundColor: "28a745",
       borderColor: "28a745",
-      color: "fff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
@@ -6379,40 +6428,40 @@ export const btnOutlineSuccess = style({
 });
 
 export const btnOutlineWarning = style({
-  borderColor: "ffc107",
   color: "ffc107",
+  borderColor: "ffc107",
   ":disabled": {
-    backgroundColor: "transparent",
     color: "ffc107",
+    backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
   },
   ":hover": {
+    color: "212529",
     backgroundColor: "ffc107",
     borderColor: "ffc107",
-    color: "212529",
   },
   "selectors": {
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "ffc107",
+      backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "212529",
       backgroundColor: "ffc107",
       borderColor: "ffc107",
-      color: "212529",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "212529",
       backgroundColor: "ffc107",
       borderColor: "ffc107",
-      color: "212529",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
@@ -6421,49 +6470,49 @@ export const btnOutlineWarning = style({
 });
 
 export const btnPrimary = style({
+  color: "fff",
   backgroundColor: "007bff",
   borderColor: "007bff",
-  color: "fff",
   ":disabled": {
+    color: "fff",
     backgroundColor: "007bff",
     borderColor: "007bff",
-    color: "fff",
   },
   ":focus": {
+    color: "fff",
     backgroundColor: "0069d9",
     borderColor: "0062cc",
     boxShadow: "0 0 0 0.2rem rgba(38,143,255,0.5)",
-    color: "fff",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "0069d9",
     borderColor: "0062cc",
-    color: "fff",
   },
   "selectors": {
     [`${disabled}`]: {
+      color: "fff",
       backgroundColor: "007bff",
       borderColor: "007bff",
-      color: "fff",
     },
     [`${focus}`]: {
+      color: "fff",
       backgroundColor: "0069d9",
       borderColor: "0062cc",
       boxShadow: "0 0 0 0.2rem rgba(38,143,255,0.5)",
-      color: "fff",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "fff",
       backgroundColor: "0062cc",
       borderColor: "005cbf",
-      color: "fff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(38,143,255,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "fff",
       backgroundColor: "0062cc",
       borderColor: "005cbf",
-      color: "fff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(38,143,255,0.5)",
@@ -6472,49 +6521,49 @@ export const btnPrimary = style({
 });
 
 export const btnSecondary = style({
+  color: "fff",
   backgroundColor: "6c757d",
   borderColor: "6c757d",
-  color: "fff",
   ":disabled": {
+    color: "fff",
     backgroundColor: "6c757d",
     borderColor: "6c757d",
-    color: "fff",
   },
   ":focus": {
+    color: "fff",
     backgroundColor: "5a6268",
     borderColor: "545b62",
     boxShadow: "0 0 0 0.2rem rgba(130,138,145,0.5)",
-    color: "fff",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "5a6268",
     borderColor: "545b62",
-    color: "fff",
   },
   "selectors": {
     [`${disabled}`]: {
+      color: "fff",
       backgroundColor: "6c757d",
       borderColor: "6c757d",
-      color: "fff",
     },
     [`${focus}`]: {
+      color: "fff",
       backgroundColor: "5a6268",
       borderColor: "545b62",
       boxShadow: "0 0 0 0.2rem rgba(130,138,145,0.5)",
-      color: "fff",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "fff",
       backgroundColor: "545b62",
       borderColor: "4e555b",
-      color: "fff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(130,138,145,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "fff",
       backgroundColor: "545b62",
       borderColor: "4e555b",
-      color: "fff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(130,138,145,0.5)",
@@ -6523,49 +6572,49 @@ export const btnSecondary = style({
 });
 
 export const btnSuccess = style({
+  color: "fff",
   backgroundColor: "28a745",
   borderColor: "28a745",
-  color: "fff",
   ":disabled": {
+    color: "fff",
     backgroundColor: "28a745",
     borderColor: "28a745",
-    color: "fff",
   },
   ":focus": {
+    color: "fff",
     backgroundColor: "218838",
     borderColor: "1e7e34",
     boxShadow: "0 0 0 0.2rem rgba(72,180,97,0.5)",
-    color: "fff",
   },
   ":hover": {
+    color: "fff",
     backgroundColor: "218838",
     borderColor: "1e7e34",
-    color: "fff",
   },
   "selectors": {
     [`${disabled}`]: {
+      color: "fff",
       backgroundColor: "28a745",
       borderColor: "28a745",
-      color: "fff",
     },
     [`${focus}`]: {
+      color: "fff",
       backgroundColor: "218838",
       borderColor: "1e7e34",
       boxShadow: "0 0 0 0.2rem rgba(72,180,97,0.5)",
-      color: "fff",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "fff",
       backgroundColor: "1e7e34",
       borderColor: "1c7430",
-      color: "fff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(72,180,97,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "fff",
       backgroundColor: "1e7e34",
       borderColor: "1c7430",
-      color: "fff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(72,180,97,0.5)",
@@ -6574,49 +6623,49 @@ export const btnSuccess = style({
 });
 
 export const btnWarning = style({
+  color: "212529",
   backgroundColor: "ffc107",
   borderColor: "ffc107",
-  color: "212529",
   ":disabled": {
+    color: "212529",
     backgroundColor: "ffc107",
     borderColor: "ffc107",
-    color: "212529",
   },
   ":focus": {
+    color: "212529",
     backgroundColor: "e0a800",
     borderColor: "d39e00",
     boxShadow: "0 0 0 0.2rem rgba(222,170,12,0.5)",
-    color: "212529",
   },
   ":hover": {
+    color: "212529",
     backgroundColor: "e0a800",
     borderColor: "d39e00",
-    color: "212529",
   },
   "selectors": {
     [`${disabled}`]: {
+      color: "212529",
       backgroundColor: "ffc107",
       borderColor: "ffc107",
-      color: "212529",
     },
     [`${focus}`]: {
+      color: "212529",
       backgroundColor: "e0a800",
       borderColor: "d39e00",
       boxShadow: "0 0 0 0.2rem rgba(222,170,12,0.5)",
-      color: "212529",
     },
     [`:not(:disabled):not${active}`]: {
+      color: "212529",
       backgroundColor: "d39e00",
       borderColor: "c69500",
-      color: "212529",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(222,170,12,0.5)",
     },
     "&:not(:disabled):not:active": {
+      color: "212529",
       backgroundColor: "d39e00",
       borderColor: "c69500",
-      color: "212529",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(222,170,12,0.5)",
@@ -6625,9 +6674,9 @@ export const btnWarning = style({
 });
 
 export const cardFooter = style({
+  padding: "0.75rem 1.25rem",
   backgroundColor: "rgba(0,0,0,0.03)",
   borderTop: "1px solid rgba(0,0,0,0.125)",
-  padding: "0.75rem 1.25rem",
   ":last-child": {
     borderRadius: "0 0 calc(0.25rem-1px) calc(0.25rem-1px)",
   },
@@ -6651,10 +6700,10 @@ export const cardFooter = style({
 });
 
 export const cardHeader = style({
+  padding: "0.75rem 1.25rem",
+  marginBottom: "0",
   backgroundColor: "rgba(0,0,0,0.03)",
   borderBottom: "1px solid rgba(0,0,0,0.125)",
-  marginBottom: "0",
-  padding: "0.75rem 1.25rem",
   ":first-child": {
     borderRadius: "calc(0.25rem-1px) calc(0.25rem-1px) 0 0",
   },
@@ -6679,11 +6728,11 @@ export const cardHeader = style({
 });
 
 export const cardImgBottom = style({
-  borderBottomLeftRadius: "calc(0.25rem-1px)",
-  borderBottomRightRadius: "calc(0.25rem-1px)",
-  flexShrink: "0",
   msFlexNegative: "0",
+  flexShrink: "0",
   width: "100%",
+  borderBottomRightRadius: "calc(0.25rem-1px)",
+  borderBottomLeftRadius: "calc(0.25rem-1px)",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
@@ -6699,11 +6748,11 @@ export const cardImgBottom = style({
 });
 
 export const cardImgTop = style({
+  msFlexNegative: "0",
+  flexShrink: "0",
+  width: "100%",
   borderTopLeftRadius: "calc(0.25rem-1px)",
   borderTopRightRadius: "calc(0.25rem-1px)",
-  flexShrink: "0",
-  msFlexNegative: "0",
-  width: "100%",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
@@ -6740,35 +6789,36 @@ export const carousel = style({
 });
 
 export const carouselControlNext = style({
+  position: "absolute",
+  top: "0",
+  bottom: "0",
+  zIndex: "1",
+  display: "-ms-flexbox",
+  display: "flex",
+  msFlexAlign: "center",
   alignItems: "center",
+  msFlexPack: "center",
+  justifyContent: "center",
+  width: "15%",
+  padding: "0",
+  color: "fff",
+  textAlign: "center",
   background: "none",
   border: "0",
-  bottom: "0",
-  color: "fff",
-  display: "flex",
-  justifyContent: "center",
-  msFlexAlign: "center",
-  msFlexPack: "center",
   opacity: "0.5",
-  padding: "0",
-  position: "absolute",
-  right: "0",
-  textAlign: "center",
-  top: "0",
   transition: "opacity 0.15s ease",
-  width: "15%",
-  zIndex: "1",
+  right: "0",
   ":focus": {
     color: "fff",
-    opacity: "0.9",
-    outline: "0",
     textDecoration: "none",
+    outline: "0",
+    opacity: "0.9",
   },
   ":hover": {
     color: "fff",
-    opacity: "0.9",
-    outline: "0",
     textDecoration: "none",
+    outline: "0",
+    opacity: "0.9",
   },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
@@ -6778,35 +6828,36 @@ export const carouselControlNext = style({
 });
 
 export const carouselControlPrev = style({
+  position: "absolute",
+  top: "0",
+  bottom: "0",
+  zIndex: "1",
+  display: "-ms-flexbox",
+  display: "flex",
+  msFlexAlign: "center",
   alignItems: "center",
+  msFlexPack: "center",
+  justifyContent: "center",
+  width: "15%",
+  padding: "0",
+  color: "fff",
+  textAlign: "center",
   background: "none",
   border: "0",
-  bottom: "0",
-  color: "fff",
-  display: "flex",
-  justifyContent: "center",
-  left: "0",
-  msFlexAlign: "center",
-  msFlexPack: "center",
   opacity: "0.5",
-  padding: "0",
-  position: "absolute",
-  textAlign: "center",
-  top: "0",
   transition: "opacity 0.15s ease",
-  width: "15%",
-  zIndex: "1",
+  left: "0",
   ":focus": {
     color: "fff",
-    opacity: "0.9",
-    outline: "0",
     textDecoration: "none",
+    outline: "0",
+    opacity: "0.9",
   },
   ":hover": {
     color: "fff",
-    opacity: "0.9",
-    outline: "0",
     textDecoration: "none",
+    outline: "0",
+    opacity: "0.9",
   },
   "@media": {
     "(prefers-reduced-motion: reduce)": {
@@ -6826,29 +6877,29 @@ export const carouselItemPrev = style({
 });
 
 export const close = style({
-  color: "000",
   float: "right",
   fontSize: "1.5rem",
   fontWeight: "700",
   lineHeight: "1",
-  opacity: "0.5",
+  color: "000",
   textShadow: "0 1px 0 fff",
+  opacity: "0.5",
   ":hover": {
     color: "000",
     textDecoration: "none",
   },
   "selectors": {
     [`${alertDismissible} &`]: {
-      color: "inherit",
-      padding: "0.75rem 1.25rem",
       position: "absolute",
-      right: "0",
       top: "0",
+      right: "0",
       zIndex: "2",
+      padding: "0.75rem 1.25rem",
+      color: "inherit",
     },
     [`${modalHeader} &`]: {
-      margin: "-1rem -1rem -1rem auto",
       padding: "1rem 1rem",
+      margin: "-1rem -1rem -1rem auto",
     },
     "&:not(:disabled):not:focus": {
       opacity: "0.75",
@@ -6860,819 +6911,819 @@ export const close = style({
 });
 
 export const col = style({
-  flexBasis: "0",
-  flexGrow: "1",
-  maxWidth: "100%",
-  msFlexPositive: "1",
-  msFlexPreferredSize: "0",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  msFlexPreferredSize: "0",
+  flexBasis: "0",
+  msFlexPositive: "1",
+  flexGrow: "1",
+  maxWidth: "100%",
   "selectors": {
     [`${formRow} > &`]: {
-      paddingLeft: "5px",
       paddingRight: "5px",
+      paddingLeft: "5px",
     },
     [`${noGutters} > &`]: {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
 
 export const colLg = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlexPreferredSize: "0",
       flexBasis: "0",
+      msFlexPositive: "1",
       flexGrow: "1",
       maxWidth: "100%",
-      msFlexPositive: "1",
-      msFlexPreferredSize: "0",
     },
   },
 });
 
 export const colLg1 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlex: "0 0 8.333333%",
       flex: "0 0 8.333333%",
       maxWidth: "8.333333%",
-      msFlex: "0 0 8.333333%",
     },
   },
 });
 
 export const colLg10 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlex: "0 0 83.333333%",
       flex: "0 0 83.333333%",
       maxWidth: "83.333333%",
-      msFlex: "0 0 83.333333%",
     },
   },
 });
 
 export const colLg11 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlex: "0 0 91.666667%",
       flex: "0 0 91.666667%",
       maxWidth: "91.666667%",
-      msFlex: "0 0 91.666667%",
     },
   },
 });
 
 export const colLg12 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
-      msFlex: "0 0 100%",
     },
   },
 });
 
 export const colLg2 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
-      msFlex: "0 0 16.666667%",
     },
   },
 });
 
 export const colLg3 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
-      msFlex: "0 0 25%",
     },
   },
 });
 
 export const colLg4 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
-      msFlex: "0 0 33.333333%",
     },
   },
 });
 
 export const colLg5 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlex: "0 0 41.666667%",
       flex: "0 0 41.666667%",
       maxWidth: "41.666667%",
-      msFlex: "0 0 41.666667%",
     },
   },
 });
 
 export const colLg6 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
-      msFlex: "0 0 50%",
     },
   },
 });
 
 export const colLg7 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlex: "0 0 58.333333%",
       flex: "0 0 58.333333%",
       maxWidth: "58.333333%",
-      msFlex: "0 0 58.333333%",
     },
   },
 });
 
 export const colLg8 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlex: "0 0 66.666667%",
       flex: "0 0 66.666667%",
       maxWidth: "66.666667%",
-      msFlex: "0 0 66.666667%",
     },
   },
 });
 
 export const colLg9 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
+      msFlex: "0 0 75%",
       flex: "0 0 75%",
       maxWidth: "75%",
-      msFlex: "0 0 75%",
     },
   },
 });
 
 export const colLgAuto = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 992px)": {
-      flex: "0 0 auto",
-      maxWidth: "100%",
       msFlex: "0 0 auto",
+      flex: "0 0 auto",
       width: "auto",
+      maxWidth: "100%",
     },
   },
 });
 
 export const colMd = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlexPreferredSize: "0",
       flexBasis: "0",
+      msFlexPositive: "1",
       flexGrow: "1",
       maxWidth: "100%",
-      msFlexPositive: "1",
-      msFlexPreferredSize: "0",
     },
   },
 });
 
 export const colMd1 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlex: "0 0 8.333333%",
       flex: "0 0 8.333333%",
       maxWidth: "8.333333%",
-      msFlex: "0 0 8.333333%",
     },
   },
 });
 
 export const colMd10 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlex: "0 0 83.333333%",
       flex: "0 0 83.333333%",
       maxWidth: "83.333333%",
-      msFlex: "0 0 83.333333%",
     },
   },
 });
 
 export const colMd11 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlex: "0 0 91.666667%",
       flex: "0 0 91.666667%",
       maxWidth: "91.666667%",
-      msFlex: "0 0 91.666667%",
     },
   },
 });
 
 export const colMd12 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
-      msFlex: "0 0 100%",
     },
   },
 });
 
 export const colMd2 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
-      msFlex: "0 0 16.666667%",
     },
   },
 });
 
 export const colMd3 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
-      msFlex: "0 0 25%",
     },
   },
 });
 
 export const colMd4 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
-      msFlex: "0 0 33.333333%",
     },
   },
 });
 
 export const colMd5 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlex: "0 0 41.666667%",
       flex: "0 0 41.666667%",
       maxWidth: "41.666667%",
-      msFlex: "0 0 41.666667%",
     },
   },
 });
 
 export const colMd6 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
-      msFlex: "0 0 50%",
     },
   },
 });
 
 export const colMd7 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlex: "0 0 58.333333%",
       flex: "0 0 58.333333%",
       maxWidth: "58.333333%",
-      msFlex: "0 0 58.333333%",
     },
   },
 });
 
 export const colMd8 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlex: "0 0 66.666667%",
       flex: "0 0 66.666667%",
       maxWidth: "66.666667%",
-      msFlex: "0 0 66.666667%",
     },
   },
 });
 
 export const colMd9 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
+      msFlex: "0 0 75%",
       flex: "0 0 75%",
       maxWidth: "75%",
-      msFlex: "0 0 75%",
     },
   },
 });
 
 export const colMdAuto = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 768px)": {
-      flex: "0 0 auto",
-      maxWidth: "100%",
       msFlex: "0 0 auto",
+      flex: "0 0 auto",
       width: "auto",
+      maxWidth: "100%",
     },
   },
 });
 
 export const colSm = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlexPreferredSize: "0",
       flexBasis: "0",
+      msFlexPositive: "1",
       flexGrow: "1",
       maxWidth: "100%",
-      msFlexPositive: "1",
-      msFlexPreferredSize: "0",
     },
   },
 });
 
 export const colSm1 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlex: "0 0 8.333333%",
       flex: "0 0 8.333333%",
       maxWidth: "8.333333%",
-      msFlex: "0 0 8.333333%",
     },
   },
 });
 
 export const colSm10 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlex: "0 0 83.333333%",
       flex: "0 0 83.333333%",
       maxWidth: "83.333333%",
-      msFlex: "0 0 83.333333%",
     },
   },
 });
 
 export const colSm11 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlex: "0 0 91.666667%",
       flex: "0 0 91.666667%",
       maxWidth: "91.666667%",
-      msFlex: "0 0 91.666667%",
     },
   },
 });
 
 export const colSm12 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
-      msFlex: "0 0 100%",
     },
   },
 });
 
 export const colSm2 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
-      msFlex: "0 0 16.666667%",
     },
   },
 });
 
 export const colSm3 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
-      msFlex: "0 0 25%",
     },
   },
 });
 
 export const colSm4 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
-      msFlex: "0 0 33.333333%",
     },
   },
 });
 
 export const colSm5 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlex: "0 0 41.666667%",
       flex: "0 0 41.666667%",
       maxWidth: "41.666667%",
-      msFlex: "0 0 41.666667%",
     },
   },
 });
 
 export const colSm6 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
-      msFlex: "0 0 50%",
     },
   },
 });
 
 export const colSm7 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlex: "0 0 58.333333%",
       flex: "0 0 58.333333%",
       maxWidth: "58.333333%",
-      msFlex: "0 0 58.333333%",
     },
   },
 });
 
 export const colSm8 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlex: "0 0 66.666667%",
       flex: "0 0 66.666667%",
       maxWidth: "66.666667%",
-      msFlex: "0 0 66.666667%",
     },
   },
 });
 
 export const colSm9 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
+      msFlex: "0 0 75%",
       flex: "0 0 75%",
       maxWidth: "75%",
-      msFlex: "0 0 75%",
     },
   },
 });
 
 export const colSmAuto = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 576px)": {
-      flex: "0 0 auto",
-      maxWidth: "100%",
       msFlex: "0 0 auto",
+      flex: "0 0 auto",
       width: "auto",
+      maxWidth: "100%",
     },
   },
 });
 
 export const colXl = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlexPreferredSize: "0",
       flexBasis: "0",
+      msFlexPositive: "1",
       flexGrow: "1",
       maxWidth: "100%",
-      msFlexPositive: "1",
-      msFlexPreferredSize: "0",
     },
   },
 });
 
 export const colXl1 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlex: "0 0 8.333333%",
       flex: "0 0 8.333333%",
       maxWidth: "8.333333%",
-      msFlex: "0 0 8.333333%",
     },
   },
 });
 
 export const colXl10 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlex: "0 0 83.333333%",
       flex: "0 0 83.333333%",
       maxWidth: "83.333333%",
-      msFlex: "0 0 83.333333%",
     },
   },
 });
 
 export const colXl11 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlex: "0 0 91.666667%",
       flex: "0 0 91.666667%",
       maxWidth: "91.666667%",
-      msFlex: "0 0 91.666667%",
     },
   },
 });
 
 export const colXl12 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
-      msFlex: "0 0 100%",
     },
   },
 });
 
 export const colXl2 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
-      msFlex: "0 0 16.666667%",
     },
   },
 });
 
 export const colXl3 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
-      msFlex: "0 0 25%",
     },
   },
 });
 
 export const colXl4 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
-      msFlex: "0 0 33.333333%",
     },
   },
 });
 
 export const colXl5 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlex: "0 0 41.666667%",
       flex: "0 0 41.666667%",
       maxWidth: "41.666667%",
-      msFlex: "0 0 41.666667%",
     },
   },
 });
 
 export const colXl6 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
-      msFlex: "0 0 50%",
     },
   },
 });
 
 export const colXl7 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlex: "0 0 58.333333%",
       flex: "0 0 58.333333%",
       maxWidth: "58.333333%",
-      msFlex: "0 0 58.333333%",
     },
   },
 });
 
 export const colXl8 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlex: "0 0 66.666667%",
       flex: "0 0 66.666667%",
       maxWidth: "66.666667%",
-      msFlex: "0 0 66.666667%",
     },
   },
 });
 
 export const colXl9 = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
+      msFlex: "0 0 75%",
       flex: "0 0 75%",
       maxWidth: "75%",
-      msFlex: "0 0 75%",
     },
   },
 });
 
 export const colXlAuto = style({
-  paddingLeft: "15px",
-  paddingRight: "15px",
   position: "relative",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
   "@media": {
     "(min-width: 1200px)": {
-      flex: "0 0 auto",
-      maxWidth: "100%",
       msFlex: "0 0 auto",
+      flex: "0 0 auto",
       width: "auto",
+      maxWidth: "100%",
     },
   },
 });
@@ -7686,9 +7737,9 @@ export const collapse = style({
 });
 
 export const collapsing = style({
+  position: "relative",
   height: "0",
   overflow: "hidden",
-  position: "relative",
   transition: "height 0.35s ease",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
@@ -7698,469 +7749,484 @@ export const collapsing = style({
 });
 
 export const container = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  marginRight: "auto",
+  marginLeft: "auto",
   "@media": {
     "(min-width: 576px)": {
+      maxWidth: "540px",
+      maxWidth: "720px",
+      maxWidth: "960px",
       maxWidth: "1140px",
       minWidth: "992px",
       "selectors": {
         [`${navbarExpandXl} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandSm} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandMd} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandLg} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandXl} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandSm} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandMd} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandLg} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
     },
   },
   "selectors": {
     [`${navbarExpand} > &`]: {
-      flexWrap: "nowrap",
-      msFlexWrap: "nowrap",
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
+      msFlexWrap: "nowrap",
+      flexWrap: "nowrap",
     },
     [`${navbar} &`]: {
-      alignItems: "center",
+      display: "-ms-flexbox",
       display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "space-between",
-      msFlexAlign: "center",
-      msFlexPack: "justify",
       msFlexWrap: "wrap",
+      flexWrap: "wrap",
+      msFlexAlign: "center",
+      alignItems: "center",
+      msFlexPack: "justify",
+      justifyContent: "space-between",
     },
   },
 });
 
 export const containerFluid = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  marginRight: "auto",
+  marginLeft: "auto",
   "@media": {
     "(max-width: 575.98px)": {
       "selectors": {
         [`${navbarExpandXl} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandSm} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandMd} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandLg} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandXl} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandSm} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandMd} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandLg} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
     },
   },
   "selectors": {
     [`${navbarExpand} > &`]: {
-      flexWrap: "nowrap",
-      msFlexWrap: "nowrap",
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
+      msFlexWrap: "nowrap",
+      flexWrap: "nowrap",
     },
     [`${navbar} &`]: {
-      alignItems: "center",
+      display: "-ms-flexbox",
       display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "space-between",
-      msFlexAlign: "center",
-      msFlexPack: "justify",
       msFlexWrap: "wrap",
+      flexWrap: "wrap",
+      msFlexAlign: "center",
+      alignItems: "center",
+      msFlexPack: "justify",
+      justifyContent: "space-between",
     },
   },
 });
 
 export const containerLg = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  marginRight: "auto",
+  marginLeft: "auto",
   "@media": {
     "(min-width: 992px)": {
+      maxWidth: "960px",
       maxWidth: "1140px",
       "selectors": {
         [`${navbarExpandXl} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandSm} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandMd} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandLg} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandXl} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandSm} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandMd} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandLg} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
     },
   },
   "selectors": {
     [`${navbarExpand} > &`]: {
-      flexWrap: "nowrap",
-      msFlexWrap: "nowrap",
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
+      msFlexWrap: "nowrap",
+      flexWrap: "nowrap",
     },
     [`${navbar} &`]: {
-      alignItems: "center",
+      display: "-ms-flexbox",
       display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "space-between",
-      msFlexAlign: "center",
-      msFlexPack: "justify",
       msFlexWrap: "wrap",
+      flexWrap: "wrap",
+      msFlexAlign: "center",
+      alignItems: "center",
+      msFlexPack: "justify",
+      justifyContent: "space-between",
     },
   },
 });
 
 export const containerMd = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  marginRight: "auto",
+  marginLeft: "auto",
   "@media": {
     "(min-width: 768px)": {
+      maxWidth: "720px",
+      maxWidth: "960px",
       maxWidth: "1140px",
       "selectors": {
         [`${navbarExpandXl} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandSm} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandMd} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandLg} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandXl} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandSm} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandMd} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandLg} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
     },
   },
   "selectors": {
     [`${navbarExpand} > &`]: {
-      flexWrap: "nowrap",
-      msFlexWrap: "nowrap",
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
+      msFlexWrap: "nowrap",
+      flexWrap: "nowrap",
     },
     [`${navbar} &`]: {
-      alignItems: "center",
+      display: "-ms-flexbox",
       display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "space-between",
-      msFlexAlign: "center",
-      msFlexPack: "justify",
       msFlexWrap: "wrap",
+      flexWrap: "wrap",
+      msFlexAlign: "center",
+      alignItems: "center",
+      msFlexPack: "justify",
+      justifyContent: "space-between",
     },
   },
 });
 
 export const containerSm = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  marginRight: "auto",
+  marginLeft: "auto",
   "@media": {
     "(min-width: 576px)": {
+      maxWidth: "540px",
+      maxWidth: "720px",
+      maxWidth: "960px",
       maxWidth: "1140px",
       "selectors": {
         [`${navbarExpandXl} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandSm} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandMd} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandLg} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandXl} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandSm} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandMd} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandLg} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
     },
   },
   "selectors": {
     [`${navbarExpand} > &`]: {
-      flexWrap: "nowrap",
-      msFlexWrap: "nowrap",
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
+      msFlexWrap: "nowrap",
+      flexWrap: "nowrap",
     },
     [`${navbar} &`]: {
-      alignItems: "center",
+      display: "-ms-flexbox",
       display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "space-between",
-      msFlexAlign: "center",
-      msFlexPack: "justify",
       msFlexWrap: "wrap",
+      flexWrap: "wrap",
+      msFlexAlign: "center",
+      alignItems: "center",
+      msFlexPack: "justify",
+      justifyContent: "space-between",
     },
   },
 });
 
 export const containerXl = style({
-  marginLeft: "auto",
-  marginRight: "auto",
-  paddingLeft: "15px",
-  paddingRight: "15px",
   width: "100%",
+  paddingRight: "15px",
+  paddingLeft: "15px",
+  marginRight: "auto",
+  marginLeft: "auto",
   "@media": {
     "(min-width: 1200px)": {
       maxWidth: "1140px",
       "selectors": {
         [`${navbarExpandXl} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandSm} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandMd} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandLg} > &`]: {
-          paddingLeft: "0",
           paddingRight: "0",
+          paddingLeft: "0",
         },
       },
       "selectors": {
         [`${navbarExpandXl} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandSm} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandMd} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
       "selectors": {
         [`${navbarExpandLg} > &`]: {
-          flexWrap: "nowrap",
           msFlexWrap: "nowrap",
+          flexWrap: "nowrap",
         },
       },
     },
   },
   "selectors": {
     [`${navbarExpand} > &`]: {
-      flexWrap: "nowrap",
-      msFlexWrap: "nowrap",
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
+      msFlexWrap: "nowrap",
+      flexWrap: "nowrap",
     },
     [`${navbar} &`]: {
-      alignItems: "center",
+      display: "-ms-flexbox",
       display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "space-between",
-      msFlexAlign: "center",
-      msFlexPack: "justify",
       msFlexWrap: "wrap",
+      flexWrap: "wrap",
+      msFlexAlign: "center",
+      alignItems: "center",
+      msFlexPack: "justify",
+      justifyContent: "space-between",
     },
   },
 });
@@ -8180,8 +8246,8 @@ export const customCheckbox = style({
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e)",
     },
     [` ${customControlInput}:indeterminate ~ ${customControlLabel}::before`]: {
-      backgroundColor: "007bff",
       borderColor: "007bff",
+      backgroundColor: "007bff",
     },
     [` ${customControlLabel}::before`]: {
       borderRadius: "0.25rem",
@@ -8190,21 +8256,21 @@ export const customCheckbox = style({
 });
 
 export const customControl = style({
-  WebkitPrintColorAdjust: "exact",
-  colorAdjust: "exact",
+  position: "relative",
+  zIndex: "1",
   display: "block",
   minHeight: "1.5rem",
   paddingLeft: "1.5rem",
-  position: "relative",
-  zIndex: "1",
+  WebkitPrintColorAdjust: "exact",
+  colorAdjust: "exact",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
         [`${formInline} &`]: {
-          alignItems: "center",
-          justifyContent: "center",
           msFlexAlign: "center",
+          alignItems: "center",
           msFlexPack: "center",
+          justifyContent: "center",
         },
       },
     },
@@ -8212,11 +8278,11 @@ export const customControl = style({
 });
 
 export const customFile = style({
+  position: "relative",
   display: "inline-block",
+  width: "100%",
   height: "calc(1.5em+0.75rem+2px)",
   marginBottom: "0",
-  position: "relative",
-  width: "100%",
   "selectors": {
     [`${inputGroup} > ${customFile} + &`]: {
       marginLeft: "-1px",
@@ -8231,27 +8297,28 @@ export const customFile = style({
       marginLeft: "-1px",
     },
     [`${inputGroup} > &`]: {
-      alignItems: "center",
-      display: "flex",
-      flex: "1 1 auto",
-      marginBottom: "0",
-      minWidth: "0",
-      msFlex: "1 1 auto",
-      msFlexAlign: "center",
       position: "relative",
+      msFlex: "1 1 auto",
+      flex: "1 1 auto",
       width: "1%",
+      minWidth: "0",
+      marginBottom: "0",
+      display: "-ms-flexbox",
+      display: "flex",
+      msFlexAlign: "center",
+      alignItems: "center",
     },
   },
 });
 
 export const customFileInput = style({
+  position: "relative",
+  zIndex: "2",
+  width: "100%",
   height: "calc(1.5em+0.75rem+2px)",
   margin: "0",
-  opacity: "0",
   overflow: "hidden",
-  position: "relative",
-  width: "100%",
-  zIndex: "2",
+  opacity: "0",
   "selectors": {
     [` ~ ${customFileLabel}[data-browse]::after`]: {
       content: "attr(data-browse)",
@@ -8277,84 +8344,90 @@ export const customRadio = style({
 });
 
 export const customRange = style({
-  MozAppearance: "none",
-  WebkitAppearance: "none",
-  appearance: "none",
-  backgroundColor: "transparent",
+  width: "100%",
   height: "1.4rem",
   padding: "0",
-  width: "100%",
+  backgroundColor: "transparent",
+  WebkitAppearance: "none",
+  MozAppearance: "none",
+  appearance: "none",
   "::-moz-range-thumb": {
-    MozAppearance: "none",
-    MozTransition: "none",
-    appearance: "none",
+    width: "1rem",
+    height: "1rem",
     backgroundColor: "007bff",
     border: "0",
     borderRadius: "1rem",
-    height: "1rem",
+    MozTransition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+    transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+    MozAppearance: "none",
+    appearance: "none",
+    MozTransition: "none",
     transition: "none",
-    width: "1rem",
   },
   "::-moz-range-track": {
+    width: "100%",
+    height: "0.5rem",
+    color: "transparent",
+    cursor: "pointer",
     backgroundColor: "dee2e6",
     borderColor: "transparent",
     borderRadius: "1rem",
-    color: "transparent",
-    cursor: "pointer",
-    height: "0.5rem",
-    width: "100%",
   },
   "::-ms-fill-lower": {
     backgroundColor: "dee2e6",
     borderRadius: "1rem",
   },
   "::-ms-fill-upper": {
+    marginRight: "15px",
     backgroundColor: "dee2e6",
     borderRadius: "1rem",
-    marginRight: "15px",
   },
   "::-ms-thumb": {
-    appearance: "none",
+    width: "1rem",
+    height: "1rem",
+    marginTop: "0",
+    marginRight: "0.2rem",
+    marginLeft: "0.2rem",
     backgroundColor: "007bff",
     border: "0",
     borderRadius: "1rem",
-    height: "1rem",
-    marginLeft: "0.2rem",
-    marginRight: "0.2rem",
-    marginTop: "0",
+    msTransition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+    transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+    appearance: "none",
     msTransition: "none",
     transition: "none",
-    width: "1rem",
   },
   "::-ms-track": {
+    width: "100%",
+    height: "0.5rem",
+    color: "transparent",
+    cursor: "pointer",
     backgroundColor: "transparent",
     borderColor: "transparent",
     borderWidth: "0.5rem",
-    color: "transparent",
-    cursor: "pointer",
-    height: "0.5rem",
-    width: "100%",
   },
   "::-webkit-slider-runnable-track": {
+    width: "100%",
+    height: "0.5rem",
+    color: "transparent",
+    cursor: "pointer",
     backgroundColor: "dee2e6",
     borderColor: "transparent",
     borderRadius: "1rem",
-    color: "transparent",
-    cursor: "pointer",
-    height: "0.5rem",
-    width: "100%",
   },
   "::-webkit-slider-thumb": {
-    WebkitAppearance: "none",
-    WebkitTransition: "none",
-    appearance: "none",
+    width: "1rem",
+    height: "1rem",
+    marginTop: "-0.25rem",
     backgroundColor: "007bff",
     border: "0",
     borderRadius: "1rem",
-    height: "1rem",
-    marginTop: "-0.25rem",
+    WebkitTransition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+    transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
+    WebkitAppearance: "none",
+    appearance: "none",
+    WebkitTransition: "none",
     transition: "none",
-    width: "1rem",
   },
   ":focus": {
     outline: "0",
@@ -8412,27 +8485,29 @@ export const customSwitch = style({
   },
   "selectors": {
     [` ${customControlInput}:checked ~ ${customControlLabel}::after`]: {
-      WebkitTransform: "translateX(0.75rem)",
       backgroundColor: "fff",
+      WebkitTransform: "translateX(0.75rem)",
       transform: "translateX(0.75rem)",
     },
     [` ${customControlInput}:disabled:checked ~ ${customControlLabel}::before`]: {
       backgroundColor: "rgba(0,123,255,0.5)",
     },
     [` ${customControlLabel}::after`]: {
+      top: "calc(0.25rem+2px)",
+      left: "calc(-2.25rem+2px)",
+      width: "calc(1rem-4px)",
+      height: "calc(1rem-4px)",
       backgroundColor: "adb5bd",
       borderRadius: "0.5rem",
-      height: "calc(1rem-4px)",
-      left: "calc(-2.25rem+2px)",
-      top: "calc(0.25rem+2px)",
+      transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out , -webkit-transform 0.15s ease-in-out",
+      transition: "transform 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
       transition: "transform 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out , -webkit-transform 0.15s ease-in-out",
-      width: "calc(1rem-4px)",
     },
     [` ${customControlLabel}::before`]: {
-      borderRadius: "0.5rem",
       left: "-2.25rem",
-      pointerEvents: "all",
       width: "1.75rem",
+      pointerEvents: "all",
+      borderRadius: "0.5rem",
     },
   },
 });
@@ -8448,6 +8523,7 @@ export const dLgBlock = style({
 export const dLgFlex = style({
   "@media": {
     "(min-width: 992px)": {
+      display: "-ms-flexbox",
       display: "flex",
     },
   },
@@ -8472,6 +8548,7 @@ export const dLgInlineBlock = style({
 export const dLgInlineFlex = style({
   "@media": {
     "(min-width: 992px)": {
+      display: "-ms-inline-flexbox",
       display: "inline-flex",
     },
   },
@@ -8520,6 +8597,7 @@ export const dMdBlock = style({
 export const dMdFlex = style({
   "@media": {
     "(min-width: 768px)": {
+      display: "-ms-flexbox",
       display: "flex",
     },
   },
@@ -8544,6 +8622,7 @@ export const dMdInlineBlock = style({
 export const dMdInlineFlex = style({
   "@media": {
     "(min-width: 768px)": {
+      display: "-ms-inline-flexbox",
       display: "inline-flex",
     },
   },
@@ -8592,6 +8671,7 @@ export const dPrintBlock = style({
 export const dPrintFlex = style({
   "@media": {
     "print": {
+      display: "-ms-flexbox",
       display: "flex",
     },
   },
@@ -8616,6 +8696,7 @@ export const dPrintInlineBlock = style({
 export const dPrintInlineFlex = style({
   "@media": {
     "print": {
+      display: "-ms-inline-flexbox",
       display: "inline-flex",
     },
   },
@@ -8664,6 +8745,7 @@ export const dSmBlock = style({
 export const dSmFlex = style({
   "@media": {
     "(min-width: 576px)": {
+      display: "-ms-flexbox",
       display: "flex",
     },
   },
@@ -8688,6 +8770,7 @@ export const dSmInlineBlock = style({
 export const dSmInlineFlex = style({
   "@media": {
     "(min-width: 576px)": {
+      display: "-ms-inline-flexbox",
       display: "inline-flex",
     },
   },
@@ -8736,6 +8819,7 @@ export const dXlBlock = style({
 export const dXlFlex = style({
   "@media": {
     "(min-width: 1200px)": {
+      display: "-ms-flexbox",
       display: "flex",
     },
   },
@@ -8760,6 +8844,7 @@ export const dXlInlineBlock = style({
 export const dXlInlineFlex = style({
   "@media": {
     "(min-width: 1200px)": {
+      display: "-ms-inline-flexbox",
       display: "inline-flex",
     },
   },
@@ -8798,68 +8883,68 @@ export const dXlTableRow = style({
 });
 
 export const dropdownItem = style({
-  backgroundColor: "transparent",
-  border: "0",
-  clear: "both",
-  color: "212529",
   display: "block",
-  fontWeight: "400",
+  width: "100%",
   padding: "0.25rem 1.5rem",
+  clear: "both",
+  fontWeight: "400",
+  color: "212529",
   textAlign: "inherit",
   whiteSpace: "nowrap",
-  width: "100%",
+  backgroundColor: "transparent",
+  border: "0",
   ":active": {
-    backgroundColor: "007bff",
     color: "fff",
     textDecoration: "none",
+    backgroundColor: "007bff",
   },
   ":disabled": {
-    backgroundColor: "transparent",
     color: "adb5bd",
     pointerEvents: "none",
+    backgroundColor: "transparent",
   },
   ":focus": {
-    backgroundColor: "e9ecef",
     color: "16181b",
     textDecoration: "none",
+    backgroundColor: "e9ecef",
   },
   ":hover": {
-    backgroundColor: "e9ecef",
     color: "16181b",
     textDecoration: "none",
+    backgroundColor: "e9ecef",
   },
   "selectors": {
     [`${active}`]: {
-      backgroundColor: "007bff",
       color: "fff",
       textDecoration: "none",
+      backgroundColor: "007bff",
     },
     [`${disabled}`]: {
-      backgroundColor: "transparent",
       color: "adb5bd",
       pointerEvents: "none",
+      backgroundColor: "transparent",
     },
   },
 });
 
 export const dropdownMenu = style({
-  backgroundClip: "padding-box",
-  backgroundColor: "fff",
-  border: "1px solid rgba(0,0,0,0.15)",
-  borderRadius: "0.25rem",
-  color: "212529",
+  position: "absolute",
+  top: "100%",
+  left: "0",
+  zIndex: "1000",
   display: "none",
   float: "left",
-  fontSize: "1rem",
-  left: "0",
-  listStyle: "none",
-  margin: "0.125rem 0 0",
   minWidth: "10rem",
   padding: "0.5rem 0",
-  position: "absolute",
+  margin: "0.125rem 0 0",
+  fontSize: "1rem",
+  color: "212529",
   textAlign: "left",
-  top: "100%",
-  zIndex: "1000",
+  listStyle: "none",
+  backgroundColor: "fff",
+  backgroundClip: "padding-box",
+  border: "1px solid rgba(0,0,0,0.15)",
+  borderRadius: "0.25rem",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
@@ -8886,55 +8971,55 @@ export const dropdownMenu = style({
   },
   "selectors": {
     [`${dropleft} &`]: {
-      left: "auto",
-      marginRight: "0.125rem",
-      marginTop: "0",
-      right: "100%",
       top: "0",
+      right: "100%",
+      left: "auto",
+      marginTop: "0",
+      marginRight: "0.125rem",
     },
     [`${dropright} &`]: {
-      left: "100%",
-      marginLeft: "0.125rem",
-      marginTop: "0",
-      right: "auto",
       top: "0",
+      right: "auto",
+      left: "100%",
+      marginTop: "0",
+      marginLeft: "0.125rem",
     },
     [`${dropup} &`]: {
-      bottom: "100%",
-      marginBottom: "0.125rem",
-      marginTop: "0",
       top: "auto",
+      bottom: "100%",
+      marginTop: "0",
+      marginBottom: "0.125rem",
     },
     [`${navTabs} &`]: {
+      marginTop: "-1px",
       borderTopLeftRadius: "0",
       borderTopRightRadius: "0",
-      marginTop: "-1px",
     },
     [`${navbarExpand} ${navbarNav} &`]: {
       position: "absolute",
     },
     [`${navbarNav} &`]: {
-      float: "none",
       position: "static",
+      float: "none",
     },
     [`${show}`]: {
       display: "block",
     },
     "&[x-placement^='bottom']": {
-      bottom: "auto",
       right: "auto",
+      bottom: "auto",
     },
     "&[x-placement^='left']": {
-      bottom: "auto",
       right: "auto",
+      bottom: "auto",
     },
     "&[x-placement^='right']": {
-      bottom: "auto",
       right: "auto",
+      bottom: "auto",
     },
     "&[x-placement^='top']": {
-      bottom: "auto",
       right: "auto",
+      bottom: "auto",
     },
   },
 });
@@ -8942,8 +9027,8 @@ export const dropdownMenu = style({
 export const dropdownMenuLgLeft = style({
   "@media": {
     "(min-width: 992px)": {
-      left: "0",
       right: "auto",
+      left: "0",
     },
   },
 });
@@ -8951,8 +9036,8 @@ export const dropdownMenuLgLeft = style({
 export const dropdownMenuLgRight = style({
   "@media": {
     "(min-width: 992px)": {
-      left: "auto",
       right: "0",
+      left: "auto",
     },
   },
 });
@@ -8960,8 +9045,8 @@ export const dropdownMenuLgRight = style({
 export const dropdownMenuMdLeft = style({
   "@media": {
     "(min-width: 768px)": {
-      left: "0",
       right: "auto",
+      left: "0",
     },
   },
 });
@@ -8969,8 +9054,8 @@ export const dropdownMenuMdLeft = style({
 export const dropdownMenuMdRight = style({
   "@media": {
     "(min-width: 768px)": {
-      left: "auto",
       right: "0",
+      left: "auto",
     },
   },
 });
@@ -8978,8 +9063,8 @@ export const dropdownMenuMdRight = style({
 export const dropdownMenuSmLeft = style({
   "@media": {
     "(min-width: 576px)": {
-      left: "0",
       right: "auto",
+      left: "0",
     },
   },
 });
@@ -8987,8 +9072,8 @@ export const dropdownMenuSmLeft = style({
 export const dropdownMenuSmRight = style({
   "@media": {
     "(min-width: 576px)": {
-      left: "auto",
       right: "0",
+      left: "auto",
     },
   },
 });
@@ -8996,8 +9081,8 @@ export const dropdownMenuSmRight = style({
 export const dropdownMenuXlLeft = style({
   "@media": {
     "(min-width: 1200px)": {
-      left: "0",
       right: "auto",
+      left: "0",
     },
   },
 });
@@ -9005,8 +9090,8 @@ export const dropdownMenuXlLeft = style({
 export const dropdownMenuXlRight = style({
   "@media": {
     "(min-width: 1200px)": {
-      left: "auto",
       right: "0",
+      left: "auto",
     },
   },
 });
@@ -9014,95 +9099,95 @@ export const dropdownMenuXlRight = style({
 export const dropdownToggle = style({
   whiteSpace: "nowrap",
   "::after": {
-    borderBottom: "0",
-    borderLeft: "0.3em solid transparent",
-    borderRight: "0.3em solid transparent",
-    borderTop: "0.3em solid",
-    content: "",
     display: "inline-block",
     marginLeft: "0.255em",
     verticalAlign: "0.255em",
+    content: "",
+    borderTop: "0.3em solid",
+    borderRight: "0.3em solid transparent",
+    borderBottom: "0",
+    borderLeft: "0.3em solid transparent",
   },
   "selectors": {
     [`${show} > ${btnDanger}&`]: {
+      color: "fff",
       backgroundColor: "bd2130",
       borderColor: "b21f2d",
-      color: "fff",
     },
     [`${show} > ${btnDark}&`]: {
+      color: "fff",
       backgroundColor: "1d2124",
       borderColor: "171a1d",
-      color: "fff",
     },
     [`${show} > ${btnInfo}&`]: {
+      color: "fff",
       backgroundColor: "117a8b",
       borderColor: "10707f",
-      color: "fff",
     },
     [`${show} > ${btnLight}&`]: {
+      color: "212529",
       backgroundColor: "dae0e5",
       borderColor: "d3d9df",
-      color: "212529",
     },
     [`${show} > ${btnOutlineDanger}&`]: {
+      color: "fff",
       backgroundColor: "dc3545",
       borderColor: "dc3545",
-      color: "fff",
     },
     [`${show} > ${btnOutlineDark}&`]: {
+      color: "fff",
       backgroundColor: "343a40",
       borderColor: "343a40",
-      color: "fff",
     },
     [`${show} > ${btnOutlineInfo}&`]: {
+      color: "fff",
       backgroundColor: "17a2b8",
       borderColor: "17a2b8",
-      color: "fff",
     },
     [`${show} > ${btnOutlineLight}&`]: {
+      color: "212529",
       backgroundColor: "f8f9fa",
       borderColor: "f8f9fa",
-      color: "212529",
     },
     [`${show} > ${btnOutlinePrimary}&`]: {
+      color: "fff",
       backgroundColor: "007bff",
       borderColor: "007bff",
-      color: "fff",
     },
     [`${show} > ${btnOutlineSecondary}&`]: {
+      color: "fff",
       backgroundColor: "6c757d",
       borderColor: "6c757d",
-      color: "fff",
     },
     [`${show} > ${btnOutlineSuccess}&`]: {
+      color: "fff",
       backgroundColor: "28a745",
       borderColor: "28a745",
-      color: "fff",
     },
     [`${show} > ${btnOutlineWarning}&`]: {
+      color: "212529",
       backgroundColor: "ffc107",
       borderColor: "ffc107",
-      color: "212529",
     },
     [`${show} > ${btnPrimary}&`]: {
+      color: "fff",
       backgroundColor: "0062cc",
       borderColor: "005cbf",
-      color: "fff",
     },
     [`${show} > ${btnSecondary}&`]: {
+      color: "fff",
       backgroundColor: "545b62",
       borderColor: "4e555b",
-      color: "fff",
     },
     [`${show} > ${btnSuccess}&`]: {
+      color: "fff",
       backgroundColor: "1e7e34",
       borderColor: "1c7430",
-      color: "fff",
     },
     [`${show} > ${btnWarning}&`]: {
+      color: "212529",
       backgroundColor: "d39e00",
       borderColor: "c69500",
-      color: "212529",
     },
     "&:empty::after": {
       marginLeft: "0",
@@ -9111,77 +9196,77 @@ export const dropdownToggle = style({
 });
 
 export const dropdownToggleSplit = style({
-  paddingLeft: "0.5625rem",
   paddingRight: "0.5625rem",
+  paddingLeft: "0.5625rem",
   "::after": {
     marginLeft: "0",
   },
   "selectors": {
     [`${btnGroupLg} > ${btn} + &`]: {
-      paddingLeft: "0.75rem",
       paddingRight: "0.75rem",
+      paddingLeft: "0.75rem",
     },
     [`${btnGroupSm} > ${btn} + &`]: {
-      paddingLeft: "0.375rem",
       paddingRight: "0.375rem",
+      paddingLeft: "0.375rem",
     },
     [`${btnLg} + &`]: {
-      paddingLeft: "0.75rem",
       paddingRight: "0.75rem",
+      paddingLeft: "0.75rem",
     },
     [`${btnSm} + &`]: {
-      paddingLeft: "0.375rem",
       paddingRight: "0.375rem",
+      paddingLeft: "0.375rem",
     },
   },
 });
 
 export const embedResponsive = style({
-  display: "block",
-  overflow: "hidden",
-  padding: "0",
   position: "relative",
+  display: "block",
   width: "100%",
+  padding: "0",
+  overflow: "hidden",
   "::before": {
-    content: "",
     display: "block",
+    content: "",
   },
   "selectors": {
     "& embed": {
-      border: "0",
-      bottom: "0",
-      height: "100%",
-      left: "0",
       position: "absolute",
       top: "0",
+      bottom: "0",
+      left: "0",
       width: "100%",
+      height: "100%",
+      border: "0",
     },
     "& iframe": {
-      border: "0",
-      bottom: "0",
-      height: "100%",
-      left: "0",
       position: "absolute",
       top: "0",
+      bottom: "0",
+      left: "0",
       width: "100%",
+      height: "100%",
+      border: "0",
     },
     "& object": {
-      border: "0",
-      bottom: "0",
-      height: "100%",
-      left: "0",
       position: "absolute",
       top: "0",
+      bottom: "0",
+      left: "0",
       width: "100%",
+      height: "100%",
+      border: "0",
     },
     "& video": {
-      border: "0",
-      bottom: "0",
-      height: "100%",
-      left: "0",
       position: "absolute",
       top: "0",
+      bottom: "0",
+      left: "0",
       width: "100%",
+      height: "100%",
+      border: "0",
     },
   },
 });
@@ -9189,13 +9274,13 @@ export const embedResponsive = style({
 export const embedResponsiveItem = style({
   "selectors": {
     [`${embedResponsive} &`]: {
-      border: "0",
-      bottom: "0",
-      height: "100%",
-      left: "0",
       position: "absolute",
       top: "0",
+      bottom: "0",
+      left: "0",
       width: "100%",
+      height: "100%",
+      border: "0",
     },
   },
 });
@@ -9217,8 +9302,8 @@ export const fade = style({
 export const flexLgColumn = style({
   "@media": {
     "(min-width: 992px)": {
-      flexDirection: "column",
       msFlexDirection: "column",
+      flexDirection: "column",
     },
   },
 });
@@ -9226,8 +9311,8 @@ export const flexLgColumn = style({
 export const flexLgColumnReverse = style({
   "@media": {
     "(min-width: 992px)": {
-      flexDirection: "column-reverse",
       msFlexDirection: "column-reverse",
+      flexDirection: "column-reverse",
     },
   },
 });
@@ -9235,8 +9320,8 @@ export const flexLgColumnReverse = style({
 export const flexLgFill = style({
   "@media": {
     "(min-width: 992px)": {
-      flex: "1 1 auto",
       msFlex: "1 1 auto",
+      flex: "1 1 auto",
     },
   },
 });
@@ -9244,8 +9329,8 @@ export const flexLgFill = style({
 export const flexLgGrow0 = style({
   "@media": {
     "(min-width: 992px)": {
-      flexGrow: "0",
       msFlexPositive: "0",
+      flexGrow: "0",
     },
   },
 });
@@ -9253,8 +9338,8 @@ export const flexLgGrow0 = style({
 export const flexLgGrow1 = style({
   "@media": {
     "(min-width: 992px)": {
-      flexGrow: "1",
       msFlexPositive: "1",
+      flexGrow: "1",
     },
   },
 });
@@ -9262,8 +9347,8 @@ export const flexLgGrow1 = style({
 export const flexLgNowrap = style({
   "@media": {
     "(min-width: 992px)": {
-      flexWrap: "nowrap",
       msFlexWrap: "nowrap",
+      flexWrap: "nowrap",
     },
   },
 });
@@ -9271,8 +9356,8 @@ export const flexLgNowrap = style({
 export const flexLgRow = style({
   "@media": {
     "(min-width: 992px)": {
-      flexDirection: "row",
       msFlexDirection: "row",
+      flexDirection: "row",
     },
   },
 });
@@ -9280,8 +9365,8 @@ export const flexLgRow = style({
 export const flexLgRowReverse = style({
   "@media": {
     "(min-width: 992px)": {
-      flexDirection: "row-reverse",
       msFlexDirection: "row-reverse",
+      flexDirection: "row-reverse",
     },
   },
 });
@@ -9289,8 +9374,8 @@ export const flexLgRowReverse = style({
 export const flexLgShrink0 = style({
   "@media": {
     "(min-width: 992px)": {
-      flexShrink: "0",
       msFlexNegative: "0",
+      flexShrink: "0",
     },
   },
 });
@@ -9298,8 +9383,8 @@ export const flexLgShrink0 = style({
 export const flexLgShrink1 = style({
   "@media": {
     "(min-width: 992px)": {
-      flexShrink: "1",
       msFlexNegative: "1",
+      flexShrink: "1",
     },
   },
 });
@@ -9307,8 +9392,8 @@ export const flexLgShrink1 = style({
 export const flexLgWrap = style({
   "@media": {
     "(min-width: 992px)": {
-      flexWrap: "wrap",
       msFlexWrap: "wrap",
+      flexWrap: "wrap",
     },
   },
 });
@@ -9316,8 +9401,8 @@ export const flexLgWrap = style({
 export const flexLgWrapReverse = style({
   "@media": {
     "(min-width: 992px)": {
-      flexWrap: "wrap-reverse",
       msFlexWrap: "wrap-reverse",
+      flexWrap: "wrap-reverse",
     },
   },
 });
@@ -9325,8 +9410,8 @@ export const flexLgWrapReverse = style({
 export const flexMdColumn = style({
   "@media": {
     "(min-width: 768px)": {
-      flexDirection: "column",
       msFlexDirection: "column",
+      flexDirection: "column",
     },
   },
 });
@@ -9334,8 +9419,8 @@ export const flexMdColumn = style({
 export const flexMdColumnReverse = style({
   "@media": {
     "(min-width: 768px)": {
-      flexDirection: "column-reverse",
       msFlexDirection: "column-reverse",
+      flexDirection: "column-reverse",
     },
   },
 });
@@ -9343,8 +9428,8 @@ export const flexMdColumnReverse = style({
 export const flexMdFill = style({
   "@media": {
     "(min-width: 768px)": {
-      flex: "1 1 auto",
       msFlex: "1 1 auto",
+      flex: "1 1 auto",
     },
   },
 });
@@ -9352,8 +9437,8 @@ export const flexMdFill = style({
 export const flexMdGrow0 = style({
   "@media": {
     "(min-width: 768px)": {
-      flexGrow: "0",
       msFlexPositive: "0",
+      flexGrow: "0",
     },
   },
 });
@@ -9361,8 +9446,8 @@ export const flexMdGrow0 = style({
 export const flexMdGrow1 = style({
   "@media": {
     "(min-width: 768px)": {
-      flexGrow: "1",
       msFlexPositive: "1",
+      flexGrow: "1",
     },
   },
 });
@@ -9370,8 +9455,8 @@ export const flexMdGrow1 = style({
 export const flexMdNowrap = style({
   "@media": {
     "(min-width: 768px)": {
-      flexWrap: "nowrap",
       msFlexWrap: "nowrap",
+      flexWrap: "nowrap",
     },
   },
 });
@@ -9379,8 +9464,8 @@ export const flexMdNowrap = style({
 export const flexMdRow = style({
   "@media": {
     "(min-width: 768px)": {
-      flexDirection: "row",
       msFlexDirection: "row",
+      flexDirection: "row",
     },
   },
 });
@@ -9388,8 +9473,8 @@ export const flexMdRow = style({
 export const flexMdRowReverse = style({
   "@media": {
     "(min-width: 768px)": {
-      flexDirection: "row-reverse",
       msFlexDirection: "row-reverse",
+      flexDirection: "row-reverse",
     },
   },
 });
@@ -9397,8 +9482,8 @@ export const flexMdRowReverse = style({
 export const flexMdShrink0 = style({
   "@media": {
     "(min-width: 768px)": {
-      flexShrink: "0",
       msFlexNegative: "0",
+      flexShrink: "0",
     },
   },
 });
@@ -9406,8 +9491,8 @@ export const flexMdShrink0 = style({
 export const flexMdShrink1 = style({
   "@media": {
     "(min-width: 768px)": {
-      flexShrink: "1",
       msFlexNegative: "1",
+      flexShrink: "1",
     },
   },
 });
@@ -9415,8 +9500,8 @@ export const flexMdShrink1 = style({
 export const flexMdWrap = style({
   "@media": {
     "(min-width: 768px)": {
-      flexWrap: "wrap",
       msFlexWrap: "wrap",
+      flexWrap: "wrap",
     },
   },
 });
@@ -9424,8 +9509,8 @@ export const flexMdWrap = style({
 export const flexMdWrapReverse = style({
   "@media": {
     "(min-width: 768px)": {
-      flexWrap: "wrap-reverse",
       msFlexWrap: "wrap-reverse",
+      flexWrap: "wrap-reverse",
     },
   },
 });
@@ -9433,8 +9518,8 @@ export const flexMdWrapReverse = style({
 export const flexSmColumn = style({
   "@media": {
     "(min-width: 576px)": {
-      flexDirection: "column",
       msFlexDirection: "column",
+      flexDirection: "column",
     },
   },
 });
@@ -9442,8 +9527,8 @@ export const flexSmColumn = style({
 export const flexSmColumnReverse = style({
   "@media": {
     "(min-width: 576px)": {
-      flexDirection: "column-reverse",
       msFlexDirection: "column-reverse",
+      flexDirection: "column-reverse",
     },
   },
 });
@@ -9451,8 +9536,8 @@ export const flexSmColumnReverse = style({
 export const flexSmFill = style({
   "@media": {
     "(min-width: 576px)": {
-      flex: "1 1 auto",
       msFlex: "1 1 auto",
+      flex: "1 1 auto",
     },
   },
 });
@@ -9460,8 +9545,8 @@ export const flexSmFill = style({
 export const flexSmGrow0 = style({
   "@media": {
     "(min-width: 576px)": {
-      flexGrow: "0",
       msFlexPositive: "0",
+      flexGrow: "0",
     },
   },
 });
@@ -9469,8 +9554,8 @@ export const flexSmGrow0 = style({
 export const flexSmGrow1 = style({
   "@media": {
     "(min-width: 576px)": {
-      flexGrow: "1",
       msFlexPositive: "1",
+      flexGrow: "1",
     },
   },
 });
@@ -9478,8 +9563,8 @@ export const flexSmGrow1 = style({
 export const flexSmNowrap = style({
   "@media": {
     "(min-width: 576px)": {
-      flexWrap: "nowrap",
       msFlexWrap: "nowrap",
+      flexWrap: "nowrap",
     },
   },
 });
@@ -9487,8 +9572,8 @@ export const flexSmNowrap = style({
 export const flexSmRow = style({
   "@media": {
     "(min-width: 576px)": {
-      flexDirection: "row",
       msFlexDirection: "row",
+      flexDirection: "row",
     },
   },
 });
@@ -9496,8 +9581,8 @@ export const flexSmRow = style({
 export const flexSmRowReverse = style({
   "@media": {
     "(min-width: 576px)": {
-      flexDirection: "row-reverse",
       msFlexDirection: "row-reverse",
+      flexDirection: "row-reverse",
     },
   },
 });
@@ -9505,8 +9590,8 @@ export const flexSmRowReverse = style({
 export const flexSmShrink0 = style({
   "@media": {
     "(min-width: 576px)": {
-      flexShrink: "0",
       msFlexNegative: "0",
+      flexShrink: "0",
     },
   },
 });
@@ -9514,8 +9599,8 @@ export const flexSmShrink0 = style({
 export const flexSmShrink1 = style({
   "@media": {
     "(min-width: 576px)": {
-      flexShrink: "1",
       msFlexNegative: "1",
+      flexShrink: "1",
     },
   },
 });
@@ -9523,8 +9608,8 @@ export const flexSmShrink1 = style({
 export const flexSmWrap = style({
   "@media": {
     "(min-width: 576px)": {
-      flexWrap: "wrap",
       msFlexWrap: "wrap",
+      flexWrap: "wrap",
     },
   },
 });
@@ -9532,8 +9617,8 @@ export const flexSmWrap = style({
 export const flexSmWrapReverse = style({
   "@media": {
     "(min-width: 576px)": {
-      flexWrap: "wrap-reverse",
       msFlexWrap: "wrap-reverse",
+      flexWrap: "wrap-reverse",
     },
   },
 });
@@ -9541,8 +9626,8 @@ export const flexSmWrapReverse = style({
 export const flexXlColumn = style({
   "@media": {
     "(min-width: 1200px)": {
-      flexDirection: "column",
       msFlexDirection: "column",
+      flexDirection: "column",
     },
   },
 });
@@ -9550,8 +9635,8 @@ export const flexXlColumn = style({
 export const flexXlColumnReverse = style({
   "@media": {
     "(min-width: 1200px)": {
-      flexDirection: "column-reverse",
       msFlexDirection: "column-reverse",
+      flexDirection: "column-reverse",
     },
   },
 });
@@ -9559,8 +9644,8 @@ export const flexXlColumnReverse = style({
 export const flexXlFill = style({
   "@media": {
     "(min-width: 1200px)": {
-      flex: "1 1 auto",
       msFlex: "1 1 auto",
+      flex: "1 1 auto",
     },
   },
 });
@@ -9568,8 +9653,8 @@ export const flexXlFill = style({
 export const flexXlGrow0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      flexGrow: "0",
       msFlexPositive: "0",
+      flexGrow: "0",
     },
   },
 });
@@ -9577,8 +9662,8 @@ export const flexXlGrow0 = style({
 export const flexXlGrow1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      flexGrow: "1",
       msFlexPositive: "1",
+      flexGrow: "1",
     },
   },
 });
@@ -9586,8 +9671,8 @@ export const flexXlGrow1 = style({
 export const flexXlNowrap = style({
   "@media": {
     "(min-width: 1200px)": {
-      flexWrap: "nowrap",
       msFlexWrap: "nowrap",
+      flexWrap: "nowrap",
     },
   },
 });
@@ -9595,8 +9680,8 @@ export const flexXlNowrap = style({
 export const flexXlRow = style({
   "@media": {
     "(min-width: 1200px)": {
-      flexDirection: "row",
       msFlexDirection: "row",
+      flexDirection: "row",
     },
   },
 });
@@ -9604,8 +9689,8 @@ export const flexXlRow = style({
 export const flexXlRowReverse = style({
   "@media": {
     "(min-width: 1200px)": {
-      flexDirection: "row-reverse",
       msFlexDirection: "row-reverse",
+      flexDirection: "row-reverse",
     },
   },
 });
@@ -9613,8 +9698,8 @@ export const flexXlRowReverse = style({
 export const flexXlShrink0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      flexShrink: "0",
       msFlexNegative: "0",
+      flexShrink: "0",
     },
   },
 });
@@ -9622,8 +9707,8 @@ export const flexXlShrink0 = style({
 export const flexXlShrink1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      flexShrink: "1",
       msFlexNegative: "1",
+      flexShrink: "1",
     },
   },
 });
@@ -9631,8 +9716,8 @@ export const flexXlShrink1 = style({
 export const flexXlWrap = style({
   "@media": {
     "(min-width: 1200px)": {
-      flexWrap: "wrap",
       msFlexWrap: "wrap",
+      flexWrap: "wrap",
     },
   },
 });
@@ -9640,8 +9725,8 @@ export const flexXlWrap = style({
 export const flexXlWrapReverse = style({
   "@media": {
     "(min-width: 1200px)": {
-      flexWrap: "wrap-reverse",
       msFlexWrap: "wrap-reverse",
+      flexWrap: "wrap-reverse",
     },
   },
 });
@@ -9743,20 +9828,21 @@ export const floatXlRight = style({
 });
 
 export const formCheck = style({
+  position: "relative",
   display: "block",
   paddingLeft: "1.25rem",
-  position: "relative",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
         [`${formInline} &`]: {
-          alignItems: "center",
+          display: "-ms-flexbox",
           display: "flex",
-          justifyContent: "center",
           msFlexAlign: "center",
+          alignItems: "center",
           msFlexPack: "center",
-          paddingLeft: "0",
+          justifyContent: "center",
           width: "auto",
+          paddingLeft: "0",
         },
       },
     },
@@ -9769,29 +9855,29 @@ export const formCheck = style({
 });
 
 export const formCheckInput = style({
-  marginLeft: "-1.25rem",
-  marginTop: "0.3rem",
   position: "absolute",
+  marginTop: "0.3rem",
+  marginLeft: "-1.25rem",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
         [`${formInline} &`]: {
-          flexShrink: "0",
-          marginLeft: "0",
-          marginRight: "0.25rem",
-          marginTop: "0",
-          msFlexNegative: "0",
           position: "relative",
+          msFlexNegative: "0",
+          flexShrink: "0",
+          marginTop: "0",
+          marginRight: "0.25rem",
+          marginLeft: "0",
         },
       },
     },
   },
   "selectors": {
     [`${formCheckInline} &`]: {
-      marginLeft: "0",
-      marginRight: "0.3125rem",
-      marginTop: "0",
       position: "static",
+      marginTop: "0",
+      marginRight: "0.3125rem",
+      marginLeft: "0",
     },
   },
 });
@@ -9826,14 +9912,15 @@ export const formGroup = style({
     "(min-width: 576px)": {
       "selectors": {
         [`${formInline} &`]: {
-          alignItems: "center",
+          display: "-ms-flexbox",
           display: "flex",
-          flex: "0 0 auto",
-          flexFlow: "row wrap",
-          marginBottom: "0",
           msFlex: "0 0 auto",
-          msFlexAlign: "center",
+          flex: "0 0 auto",
           msFlexFlow: "row wrap",
+          flexFlow: "row wrap",
+          msFlexAlign: "center",
+          alignItems: "center",
+          marginBottom: "0",
         },
       },
     },
@@ -9841,11 +9928,11 @@ export const formGroup = style({
 });
 
 export const invalidFeedback = style({
-  color: "dc3545",
   display: "none",
-  fontSize: "80%",
-  marginTop: "0.25rem",
   width: "100%",
+  marginTop: "0.25rem",
+  fontSize: "80%",
+  color: "dc3545",
   "selectors": {
     [`${formCheckInput}${isInvalid} ~ &`]: {
       display: "block",
@@ -9863,19 +9950,19 @@ export const invalidFeedback = style({
 });
 
 export const invalidTooltip = style({
-  backgroundColor: "rgba(220,53,69,0.9)",
-  borderRadius: "0.25rem",
-  color: "fff",
-  display: "none",
-  fontSize: "0.875rem",
-  left: "0",
-  lineHeight: "1.5",
-  marginTop: "0.1rem",
-  maxWidth: "100%",
-  padding: "0.25rem 0.5rem",
   position: "absolute",
   top: "100%",
+  left: "0",
   zIndex: "5",
+  display: "none",
+  maxWidth: "100%",
+  padding: "0.25rem 0.5rem",
+  marginTop: "0.1rem",
+  fontSize: "0.875rem",
+  lineHeight: "1.5",
+  color: "fff",
+  backgroundColor: "rgba(220,53,69,0.9)",
+  borderRadius: "0.25rem",
   "selectors": {
     [`${formCheckInput}${isInvalid} ~ &`]: {
       display: "block",
@@ -9899,10 +9986,10 @@ export const invalidTooltip = style({
 });
 
 export const jumbotron = style({
+  padding: "2rem 1rem",
+  marginBottom: "2rem",
   backgroundColor: "e9ecef",
   borderRadius: "0.3rem",
-  marginBottom: "2rem",
-  padding: "2rem 1rem",
   "@media": {
     "(min-width: 576px)": {
       padding: "4rem 2rem",
@@ -9913,8 +10000,8 @@ export const jumbotron = style({
 export const justifyContentLgAround = style({
   "@media": {
     "(min-width: 992px)": {
-      justifyContent: "space-around",
       msFlexPack: "distribute",
+      justifyContent: "space-around",
     },
   },
 });
@@ -9922,8 +10009,8 @@ export const justifyContentLgAround = style({
 export const justifyContentLgBetween = style({
   "@media": {
     "(min-width: 992px)": {
-      justifyContent: "space-between",
       msFlexPack: "justify",
+      justifyContent: "space-between",
     },
   },
 });
@@ -9931,8 +10018,8 @@ export const justifyContentLgBetween = style({
 export const justifyContentLgCenter = style({
   "@media": {
     "(min-width: 992px)": {
-      justifyContent: "center",
       msFlexPack: "center",
+      justifyContent: "center",
     },
   },
 });
@@ -9940,8 +10027,8 @@ export const justifyContentLgCenter = style({
 export const justifyContentLgEnd = style({
   "@media": {
     "(min-width: 992px)": {
-      justifyContent: "flex-end",
       msFlexPack: "end",
+      justifyContent: "flex-end",
     },
   },
 });
@@ -9949,8 +10036,8 @@ export const justifyContentLgEnd = style({
 export const justifyContentLgStart = style({
   "@media": {
     "(min-width: 992px)": {
-      justifyContent: "flex-start",
       msFlexPack: "start",
+      justifyContent: "flex-start",
     },
   },
 });
@@ -9958,8 +10045,8 @@ export const justifyContentLgStart = style({
 export const justifyContentMdAround = style({
   "@media": {
     "(min-width: 768px)": {
-      justifyContent: "space-around",
       msFlexPack: "distribute",
+      justifyContent: "space-around",
     },
   },
 });
@@ -9967,8 +10054,8 @@ export const justifyContentMdAround = style({
 export const justifyContentMdBetween = style({
   "@media": {
     "(min-width: 768px)": {
-      justifyContent: "space-between",
       msFlexPack: "justify",
+      justifyContent: "space-between",
     },
   },
 });
@@ -9976,8 +10063,8 @@ export const justifyContentMdBetween = style({
 export const justifyContentMdCenter = style({
   "@media": {
     "(min-width: 768px)": {
-      justifyContent: "center",
       msFlexPack: "center",
+      justifyContent: "center",
     },
   },
 });
@@ -9985,8 +10072,8 @@ export const justifyContentMdCenter = style({
 export const justifyContentMdEnd = style({
   "@media": {
     "(min-width: 768px)": {
-      justifyContent: "flex-end",
       msFlexPack: "end",
+      justifyContent: "flex-end",
     },
   },
 });
@@ -9994,8 +10081,8 @@ export const justifyContentMdEnd = style({
 export const justifyContentMdStart = style({
   "@media": {
     "(min-width: 768px)": {
-      justifyContent: "flex-start",
       msFlexPack: "start",
+      justifyContent: "flex-start",
     },
   },
 });
@@ -10003,8 +10090,8 @@ export const justifyContentMdStart = style({
 export const justifyContentSmAround = style({
   "@media": {
     "(min-width: 576px)": {
-      justifyContent: "space-around",
       msFlexPack: "distribute",
+      justifyContent: "space-around",
     },
   },
 });
@@ -10012,8 +10099,8 @@ export const justifyContentSmAround = style({
 export const justifyContentSmBetween = style({
   "@media": {
     "(min-width: 576px)": {
-      justifyContent: "space-between",
       msFlexPack: "justify",
+      justifyContent: "space-between",
     },
   },
 });
@@ -10021,8 +10108,8 @@ export const justifyContentSmBetween = style({
 export const justifyContentSmCenter = style({
   "@media": {
     "(min-width: 576px)": {
-      justifyContent: "center",
       msFlexPack: "center",
+      justifyContent: "center",
     },
   },
 });
@@ -10030,8 +10117,8 @@ export const justifyContentSmCenter = style({
 export const justifyContentSmEnd = style({
   "@media": {
     "(min-width: 576px)": {
-      justifyContent: "flex-end",
       msFlexPack: "end",
+      justifyContent: "flex-end",
     },
   },
 });
@@ -10039,8 +10126,8 @@ export const justifyContentSmEnd = style({
 export const justifyContentSmStart = style({
   "@media": {
     "(min-width: 576px)": {
-      justifyContent: "flex-start",
       msFlexPack: "start",
+      justifyContent: "flex-start",
     },
   },
 });
@@ -10048,8 +10135,8 @@ export const justifyContentSmStart = style({
 export const justifyContentXlAround = style({
   "@media": {
     "(min-width: 1200px)": {
-      justifyContent: "space-around",
       msFlexPack: "distribute",
+      justifyContent: "space-around",
     },
   },
 });
@@ -10057,8 +10144,8 @@ export const justifyContentXlAround = style({
 export const justifyContentXlBetween = style({
   "@media": {
     "(min-width: 1200px)": {
-      justifyContent: "space-between",
       msFlexPack: "justify",
+      justifyContent: "space-between",
     },
   },
 });
@@ -10066,8 +10153,8 @@ export const justifyContentXlBetween = style({
 export const justifyContentXlCenter = style({
   "@media": {
     "(min-width: 1200px)": {
-      justifyContent: "center",
       msFlexPack: "center",
+      justifyContent: "center",
     },
   },
 });
@@ -10075,8 +10162,8 @@ export const justifyContentXlCenter = style({
 export const justifyContentXlEnd = style({
   "@media": {
     "(min-width: 1200px)": {
-      justifyContent: "flex-end",
       msFlexPack: "end",
+      justifyContent: "flex-end",
     },
   },
 });
@@ -10084,8 +10171,8 @@ export const justifyContentXlEnd = style({
 export const justifyContentXlStart = style({
   "@media": {
     "(min-width: 1200px)": {
-      justifyContent: "flex-start",
       msFlexPack: "start",
+      justifyContent: "flex-start",
     },
   },
 });
@@ -10100,161 +10187,161 @@ export const listGroupFlush = style({
 });
 
 export const listGroupItemDanger = style({
-  backgroundColor: "f5c6cb",
   color: "721c24",
+  backgroundColor: "f5c6cb",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "721c24",
       borderColor: "721c24",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "f1b0b7",
       color: "721c24",
+      backgroundColor: "f1b0b7",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "f1b0b7",
       color: "721c24",
+      backgroundColor: "f1b0b7",
     },
   },
 });
 
 export const listGroupItemDark = style({
-  backgroundColor: "c6c8ca",
   color: "1b1e21",
+  backgroundColor: "c6c8ca",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "1b1e21",
       borderColor: "1b1e21",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "b9bbbe",
       color: "1b1e21",
+      backgroundColor: "b9bbbe",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "b9bbbe",
       color: "1b1e21",
+      backgroundColor: "b9bbbe",
     },
   },
 });
 
 export const listGroupItemInfo = style({
-  backgroundColor: "bee5eb",
   color: "0c5460",
+  backgroundColor: "bee5eb",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "0c5460",
       borderColor: "0c5460",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "abdde5",
       color: "0c5460",
+      backgroundColor: "abdde5",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "abdde5",
       color: "0c5460",
+      backgroundColor: "abdde5",
     },
   },
 });
 
 export const listGroupItemLight = style({
-  backgroundColor: "fdfdfe",
   color: "818182",
+  backgroundColor: "fdfdfe",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "818182",
       borderColor: "818182",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "ececf6",
       color: "818182",
+      backgroundColor: "ececf6",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "ececf6",
       color: "818182",
+      backgroundColor: "ececf6",
     },
   },
 });
 
 export const listGroupItemPrimary = style({
-  backgroundColor: "b8daff",
   color: "004085",
+  backgroundColor: "b8daff",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "004085",
       borderColor: "004085",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "9fcdff",
       color: "004085",
+      backgroundColor: "9fcdff",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "9fcdff",
       color: "004085",
+      backgroundColor: "9fcdff",
     },
   },
 });
 
 export const listGroupItemSecondary = style({
-  backgroundColor: "d6d8db",
   color: "383d41",
+  backgroundColor: "d6d8db",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "383d41",
       borderColor: "383d41",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "c8cbcf",
       color: "383d41",
+      backgroundColor: "c8cbcf",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "c8cbcf",
       color: "383d41",
+      backgroundColor: "c8cbcf",
     },
   },
 });
 
 export const listGroupItemSuccess = style({
-  backgroundColor: "c3e6cb",
   color: "155724",
+  backgroundColor: "c3e6cb",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "155724",
       borderColor: "155724",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "b1dfbb",
       color: "155724",
+      backgroundColor: "b1dfbb",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "b1dfbb",
       color: "155724",
+      backgroundColor: "b1dfbb",
     },
   },
 });
 
 export const listGroupItemWarning = style({
-  backgroundColor: "ffeeba",
   color: "856404",
+  backgroundColor: "ffeeba",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
+      color: "fff",
       backgroundColor: "856404",
       borderColor: "856404",
-      color: "fff",
     },
     [`${listGroupItemAction}:focus`]: {
-      backgroundColor: "ffe8a1",
       color: "856404",
+      backgroundColor: "ffe8a1",
     },
     [`${listGroupItemAction}:hover`]: {
-      backgroundColor: "ffe8a1",
       color: "856404",
+      backgroundColor: "ffe8a1",
     },
   },
 });
@@ -11421,15 +11508,15 @@ export const mlXlN5 = style({
 });
 
 export const modal = style({
-  display: "none",
-  height: "100%",
-  left: "0",
-  outline: "0",
-  overflow: "hidden",
   position: "fixed",
   top: "0",
-  width: "100%",
+  left: "0",
   zIndex: "1050",
+  display: "none",
+  width: "100%",
+  height: "100%",
+  overflow: "hidden",
+  outline: "0",
   "selectors": {
     [`${modalOpen} &`]: {
       overflowX: "hidden",
@@ -11439,13 +11526,13 @@ export const modal = style({
 });
 
 export const modalBackdrop = style({
-  backgroundColor: "000",
-  height: "100vh",
-  left: "0",
   position: "fixed",
   top: "0",
-  width: "100vw",
+  left: "0",
   zIndex: "1040",
+  width: "100vw",
+  height: "100vh",
+  backgroundColor: "000",
   "selectors": {
     [`${fade}`]: {
       opacity: "0",
@@ -11457,10 +11544,10 @@ export const modalBackdrop = style({
 });
 
 export const modalBody = style({
-  flex: "1 1 auto",
-  msFlex: "1 1 auto",
-  padding: "1rem",
   position: "relative",
+  msFlex: "1 1 auto",
+  flex: "1 1 auto",
+  padding: "1rem",
   "selectors": {
     [`${modalDialogScrollable} &`]: {
       overflowY: "auto",
@@ -11469,17 +11556,18 @@ export const modalBody = style({
 });
 
 export const modalContent = style({
-  backgroundClip: "padding-box",
+  position: "relative",
+  display: "-ms-flexbox",
+  display: "flex",
+  msFlexDirection: "column",
+  flexDirection: "column",
+  width: "100%",
+  pointerEvents: "auto",
   backgroundColor: "fff",
+  backgroundClip: "padding-box",
   border: "1px solid rgba(0,0,0,0.2)",
   borderRadius: "0.3rem",
-  display: "flex",
-  flexDirection: "column",
-  msFlexDirection: "column",
   outline: "0",
-  pointerEvents: "auto",
-  position: "relative",
-  width: "100%",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
@@ -11501,14 +11589,14 @@ export const modalContent = style({
 });
 
 export const modalDialog = style({
-  margin: "0.5rem",
-  pointerEvents: "none",
   position: "relative",
   width: "auto",
+  margin: "0.5rem",
+  pointerEvents: "none",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
-      margin: "1.75rem auto",
       maxWidth: "500px",
+      margin: "1.75rem auto",
       "selectors": {
         [`${modal}${fade} &`]: {
           transition: "none",
@@ -11518,9 +11606,11 @@ export const modalDialog = style({
   },
   "selectors": {
     [`${modal}${fade} &`]: {
+      transition: "-webkit-transform 0.3s ease-out",
+      transition: "transform 0.3s ease-out",
+      transition: "transform 0.3s ease-out , -webkit-transform 0.3s ease-out",
       WebkitTransform: "translate(0,-50px)",
       transform: "translate(0,-50px)",
-      transition: "transform 0.3s ease-out , -webkit-transform 0.3s ease-out",
     },
     [`${modal}${modalStatic} &`]: {
       WebkitTransform: "scale(1.02)",
@@ -11534,24 +11624,25 @@ export const modalDialog = style({
 });
 
 export const modalFooter = style({
-  alignItems: "center",
-  borderBottomLeftRadius: "calc(0.3rem-1px)",
-  borderBottomRightRadius: "calc(0.3rem-1px)",
-  borderTop: "1px solid dee2e6",
+  display: "-ms-flexbox",
   display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "flex-end",
-  msFlexAlign: "center",
-  msFlexPack: "end",
   msFlexWrap: "wrap",
+  flexWrap: "wrap",
+  msFlexAlign: "center",
+  alignItems: "center",
+  msFlexPack: "end",
+  justifyContent: "flex-end",
   padding: "0.75rem",
+  borderTop: "1px solid dee2e6",
+  borderBottomRightRadius: "calc(0.3rem-1px)",
+  borderBottomLeftRadius: "calc(0.3rem-1px)",
   "selectors": {
     "& > *": {
       margin: "0.25rem",
     },
     [`${modalDialogScrollable} &`]: {
-      flexShrink: "0",
       msFlexNegative: "0",
+      flexShrink: "0",
     },
   },
 });
@@ -11575,6 +11666,7 @@ export const modalSm = style({
 export const modalXl = style({
   "@media": {
     "(min-width: 992px)": {
+      maxWidth: "800px",
       maxWidth: "1140px",
     },
   },
@@ -12351,8 +12443,8 @@ export const mtXlN5 = style({
 export const mxLg0 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "0",
       marginRight: "0",
+      marginLeft: "0",
     },
   },
 });
@@ -12360,8 +12452,8 @@ export const mxLg0 = style({
 export const mxLg1 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "0.25rem",
       marginRight: "0.25rem",
+      marginLeft: "0.25rem",
     },
   },
 });
@@ -12369,8 +12461,8 @@ export const mxLg1 = style({
 export const mxLg2 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "0.5rem",
       marginRight: "0.5rem",
+      marginLeft: "0.5rem",
     },
   },
 });
@@ -12378,8 +12470,8 @@ export const mxLg2 = style({
 export const mxLg3 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "1rem",
       marginRight: "1rem",
+      marginLeft: "1rem",
     },
   },
 });
@@ -12387,8 +12479,8 @@ export const mxLg3 = style({
 export const mxLg4 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "1.5rem",
       marginRight: "1.5rem",
+      marginLeft: "1.5rem",
     },
   },
 });
@@ -12396,8 +12488,8 @@ export const mxLg4 = style({
 export const mxLg5 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "3rem",
       marginRight: "3rem",
+      marginLeft: "3rem",
     },
   },
 });
@@ -12405,8 +12497,8 @@ export const mxLg5 = style({
 export const mxLgAuto = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "auto",
       marginRight: "auto",
+      marginLeft: "auto",
     },
   },
 });
@@ -12414,8 +12506,8 @@ export const mxLgAuto = style({
 export const mxLgN1 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "-0.25rem",
       marginRight: "-0.25rem",
+      marginLeft: "-0.25rem",
     },
   },
 });
@@ -12423,8 +12515,8 @@ export const mxLgN1 = style({
 export const mxLgN2 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "-0.5rem",
       marginRight: "-0.5rem",
+      marginLeft: "-0.5rem",
     },
   },
 });
@@ -12432,8 +12524,8 @@ export const mxLgN2 = style({
 export const mxLgN3 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "-1rem",
       marginRight: "-1rem",
+      marginLeft: "-1rem",
     },
   },
 });
@@ -12441,8 +12533,8 @@ export const mxLgN3 = style({
 export const mxLgN4 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "-1.5rem",
       marginRight: "-1.5rem",
+      marginLeft: "-1.5rem",
     },
   },
 });
@@ -12450,8 +12542,8 @@ export const mxLgN4 = style({
 export const mxLgN5 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginLeft: "-3rem",
       marginRight: "-3rem",
+      marginLeft: "-3rem",
     },
   },
 });
@@ -12459,8 +12551,8 @@ export const mxLgN5 = style({
 export const mxMd0 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "0",
       marginRight: "0",
+      marginLeft: "0",
     },
   },
 });
@@ -12468,8 +12560,8 @@ export const mxMd0 = style({
 export const mxMd1 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "0.25rem",
       marginRight: "0.25rem",
+      marginLeft: "0.25rem",
     },
   },
 });
@@ -12477,8 +12569,8 @@ export const mxMd1 = style({
 export const mxMd2 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "0.5rem",
       marginRight: "0.5rem",
+      marginLeft: "0.5rem",
     },
   },
 });
@@ -12486,8 +12578,8 @@ export const mxMd2 = style({
 export const mxMd3 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "1rem",
       marginRight: "1rem",
+      marginLeft: "1rem",
     },
   },
 });
@@ -12495,8 +12587,8 @@ export const mxMd3 = style({
 export const mxMd4 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "1.5rem",
       marginRight: "1.5rem",
+      marginLeft: "1.5rem",
     },
   },
 });
@@ -12504,8 +12596,8 @@ export const mxMd4 = style({
 export const mxMd5 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "3rem",
       marginRight: "3rem",
+      marginLeft: "3rem",
     },
   },
 });
@@ -12513,8 +12605,8 @@ export const mxMd5 = style({
 export const mxMdAuto = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "auto",
       marginRight: "auto",
+      marginLeft: "auto",
     },
   },
 });
@@ -12522,8 +12614,8 @@ export const mxMdAuto = style({
 export const mxMdN1 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "-0.25rem",
       marginRight: "-0.25rem",
+      marginLeft: "-0.25rem",
     },
   },
 });
@@ -12531,8 +12623,8 @@ export const mxMdN1 = style({
 export const mxMdN2 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "-0.5rem",
       marginRight: "-0.5rem",
+      marginLeft: "-0.5rem",
     },
   },
 });
@@ -12540,8 +12632,8 @@ export const mxMdN2 = style({
 export const mxMdN3 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "-1rem",
       marginRight: "-1rem",
+      marginLeft: "-1rem",
     },
   },
 });
@@ -12549,8 +12641,8 @@ export const mxMdN3 = style({
 export const mxMdN4 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "-1.5rem",
       marginRight: "-1.5rem",
+      marginLeft: "-1.5rem",
     },
   },
 });
@@ -12558,8 +12650,8 @@ export const mxMdN4 = style({
 export const mxMdN5 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginLeft: "-3rem",
       marginRight: "-3rem",
+      marginLeft: "-3rem",
     },
   },
 });
@@ -12567,8 +12659,8 @@ export const mxMdN5 = style({
 export const mxSm0 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "0",
       marginRight: "0",
+      marginLeft: "0",
     },
   },
 });
@@ -12576,8 +12668,8 @@ export const mxSm0 = style({
 export const mxSm1 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "0.25rem",
       marginRight: "0.25rem",
+      marginLeft: "0.25rem",
     },
   },
 });
@@ -12585,8 +12677,8 @@ export const mxSm1 = style({
 export const mxSm2 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "0.5rem",
       marginRight: "0.5rem",
+      marginLeft: "0.5rem",
     },
   },
 });
@@ -12594,8 +12686,8 @@ export const mxSm2 = style({
 export const mxSm3 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "1rem",
       marginRight: "1rem",
+      marginLeft: "1rem",
     },
   },
 });
@@ -12603,8 +12695,8 @@ export const mxSm3 = style({
 export const mxSm4 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "1.5rem",
       marginRight: "1.5rem",
+      marginLeft: "1.5rem",
     },
   },
 });
@@ -12612,8 +12704,8 @@ export const mxSm4 = style({
 export const mxSm5 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "3rem",
       marginRight: "3rem",
+      marginLeft: "3rem",
     },
   },
 });
@@ -12621,8 +12713,8 @@ export const mxSm5 = style({
 export const mxSmAuto = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "auto",
       marginRight: "auto",
+      marginLeft: "auto",
     },
   },
 });
@@ -12630,8 +12722,8 @@ export const mxSmAuto = style({
 export const mxSmN1 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "-0.25rem",
       marginRight: "-0.25rem",
+      marginLeft: "-0.25rem",
     },
   },
 });
@@ -12639,8 +12731,8 @@ export const mxSmN1 = style({
 export const mxSmN2 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "-0.5rem",
       marginRight: "-0.5rem",
+      marginLeft: "-0.5rem",
     },
   },
 });
@@ -12648,8 +12740,8 @@ export const mxSmN2 = style({
 export const mxSmN3 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "-1rem",
       marginRight: "-1rem",
+      marginLeft: "-1rem",
     },
   },
 });
@@ -12657,8 +12749,8 @@ export const mxSmN3 = style({
 export const mxSmN4 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "-1.5rem",
       marginRight: "-1.5rem",
+      marginLeft: "-1.5rem",
     },
   },
 });
@@ -12666,8 +12758,8 @@ export const mxSmN4 = style({
 export const mxSmN5 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginLeft: "-3rem",
       marginRight: "-3rem",
+      marginLeft: "-3rem",
     },
   },
 });
@@ -12675,8 +12767,8 @@ export const mxSmN5 = style({
 export const mxXl0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "0",
       marginRight: "0",
+      marginLeft: "0",
     },
   },
 });
@@ -12684,8 +12776,8 @@ export const mxXl0 = style({
 export const mxXl1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "0.25rem",
       marginRight: "0.25rem",
+      marginLeft: "0.25rem",
     },
   },
 });
@@ -12693,8 +12785,8 @@ export const mxXl1 = style({
 export const mxXl2 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "0.5rem",
       marginRight: "0.5rem",
+      marginLeft: "0.5rem",
     },
   },
 });
@@ -12702,8 +12794,8 @@ export const mxXl2 = style({
 export const mxXl3 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "1rem",
       marginRight: "1rem",
+      marginLeft: "1rem",
     },
   },
 });
@@ -12711,8 +12803,8 @@ export const mxXl3 = style({
 export const mxXl4 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "1.5rem",
       marginRight: "1.5rem",
+      marginLeft: "1.5rem",
     },
   },
 });
@@ -12720,8 +12812,8 @@ export const mxXl4 = style({
 export const mxXl5 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "3rem",
       marginRight: "3rem",
+      marginLeft: "3rem",
     },
   },
 });
@@ -12729,8 +12821,8 @@ export const mxXl5 = style({
 export const mxXlAuto = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "auto",
       marginRight: "auto",
+      marginLeft: "auto",
     },
   },
 });
@@ -12738,8 +12830,8 @@ export const mxXlAuto = style({
 export const mxXlN1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "-0.25rem",
       marginRight: "-0.25rem",
+      marginLeft: "-0.25rem",
     },
   },
 });
@@ -12747,8 +12839,8 @@ export const mxXlN1 = style({
 export const mxXlN2 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "-0.5rem",
       marginRight: "-0.5rem",
+      marginLeft: "-0.5rem",
     },
   },
 });
@@ -12756,8 +12848,8 @@ export const mxXlN2 = style({
 export const mxXlN3 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "-1rem",
       marginRight: "-1rem",
+      marginLeft: "-1rem",
     },
   },
 });
@@ -12765,8 +12857,8 @@ export const mxXlN3 = style({
 export const mxXlN4 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "-1.5rem",
       marginRight: "-1.5rem",
+      marginLeft: "-1.5rem",
     },
   },
 });
@@ -12774,8 +12866,8 @@ export const mxXlN4 = style({
 export const mxXlN5 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginLeft: "-3rem",
       marginRight: "-3rem",
+      marginLeft: "-3rem",
     },
   },
 });
@@ -12783,8 +12875,8 @@ export const mxXlN5 = style({
 export const myLg0 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "0",
       marginTop: "0",
+      marginBottom: "0",
     },
   },
 });
@@ -12792,8 +12884,8 @@ export const myLg0 = style({
 export const myLg1 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "0.25rem",
       marginTop: "0.25rem",
+      marginBottom: "0.25rem",
     },
   },
 });
@@ -12801,8 +12893,8 @@ export const myLg1 = style({
 export const myLg2 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "0.5rem",
       marginTop: "0.5rem",
+      marginBottom: "0.5rem",
     },
   },
 });
@@ -12810,8 +12902,8 @@ export const myLg2 = style({
 export const myLg3 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "1rem",
       marginTop: "1rem",
+      marginBottom: "1rem",
     },
   },
 });
@@ -12819,8 +12911,8 @@ export const myLg3 = style({
 export const myLg4 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "1.5rem",
       marginTop: "1.5rem",
+      marginBottom: "1.5rem",
     },
   },
 });
@@ -12828,8 +12920,8 @@ export const myLg4 = style({
 export const myLg5 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "3rem",
       marginTop: "3rem",
+      marginBottom: "3rem",
     },
   },
 });
@@ -12837,8 +12929,8 @@ export const myLg5 = style({
 export const myLgAuto = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "auto",
       marginTop: "auto",
+      marginBottom: "auto",
     },
   },
 });
@@ -12846,8 +12938,8 @@ export const myLgAuto = style({
 export const myLgN1 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "-0.25rem",
       marginTop: "-0.25rem",
+      marginBottom: "-0.25rem",
     },
   },
 });
@@ -12855,8 +12947,8 @@ export const myLgN1 = style({
 export const myLgN2 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "-0.5rem",
       marginTop: "-0.5rem",
+      marginBottom: "-0.5rem",
     },
   },
 });
@@ -12864,8 +12956,8 @@ export const myLgN2 = style({
 export const myLgN3 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "-1rem",
       marginTop: "-1rem",
+      marginBottom: "-1rem",
     },
   },
 });
@@ -12873,8 +12965,8 @@ export const myLgN3 = style({
 export const myLgN4 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "-1.5rem",
       marginTop: "-1.5rem",
+      marginBottom: "-1.5rem",
     },
   },
 });
@@ -12882,8 +12974,8 @@ export const myLgN4 = style({
 export const myLgN5 = style({
   "@media": {
     "(min-width: 992px)": {
-      marginBottom: "-3rem",
       marginTop: "-3rem",
+      marginBottom: "-3rem",
     },
   },
 });
@@ -12891,8 +12983,8 @@ export const myLgN5 = style({
 export const myMd0 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "0",
       marginTop: "0",
+      marginBottom: "0",
     },
   },
 });
@@ -12900,8 +12992,8 @@ export const myMd0 = style({
 export const myMd1 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "0.25rem",
       marginTop: "0.25rem",
+      marginBottom: "0.25rem",
     },
   },
 });
@@ -12909,8 +13001,8 @@ export const myMd1 = style({
 export const myMd2 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "0.5rem",
       marginTop: "0.5rem",
+      marginBottom: "0.5rem",
     },
   },
 });
@@ -12918,8 +13010,8 @@ export const myMd2 = style({
 export const myMd3 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "1rem",
       marginTop: "1rem",
+      marginBottom: "1rem",
     },
   },
 });
@@ -12927,8 +13019,8 @@ export const myMd3 = style({
 export const myMd4 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "1.5rem",
       marginTop: "1.5rem",
+      marginBottom: "1.5rem",
     },
   },
 });
@@ -12936,8 +13028,8 @@ export const myMd4 = style({
 export const myMd5 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "3rem",
       marginTop: "3rem",
+      marginBottom: "3rem",
     },
   },
 });
@@ -12945,8 +13037,8 @@ export const myMd5 = style({
 export const myMdAuto = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "auto",
       marginTop: "auto",
+      marginBottom: "auto",
     },
   },
 });
@@ -12954,8 +13046,8 @@ export const myMdAuto = style({
 export const myMdN1 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "-0.25rem",
       marginTop: "-0.25rem",
+      marginBottom: "-0.25rem",
     },
   },
 });
@@ -12963,8 +13055,8 @@ export const myMdN1 = style({
 export const myMdN2 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "-0.5rem",
       marginTop: "-0.5rem",
+      marginBottom: "-0.5rem",
     },
   },
 });
@@ -12972,8 +13064,8 @@ export const myMdN2 = style({
 export const myMdN3 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "-1rem",
       marginTop: "-1rem",
+      marginBottom: "-1rem",
     },
   },
 });
@@ -12981,8 +13073,8 @@ export const myMdN3 = style({
 export const myMdN4 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "-1.5rem",
       marginTop: "-1.5rem",
+      marginBottom: "-1.5rem",
     },
   },
 });
@@ -12990,8 +13082,8 @@ export const myMdN4 = style({
 export const myMdN5 = style({
   "@media": {
     "(min-width: 768px)": {
-      marginBottom: "-3rem",
       marginTop: "-3rem",
+      marginBottom: "-3rem",
     },
   },
 });
@@ -12999,8 +13091,8 @@ export const myMdN5 = style({
 export const mySm0 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "0",
       marginTop: "0",
+      marginBottom: "0",
     },
   },
 });
@@ -13008,8 +13100,8 @@ export const mySm0 = style({
 export const mySm1 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "0.25rem",
       marginTop: "0.25rem",
+      marginBottom: "0.25rem",
     },
   },
 });
@@ -13017,8 +13109,8 @@ export const mySm1 = style({
 export const mySm2 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "0.5rem",
       marginTop: "0.5rem",
+      marginBottom: "0.5rem",
     },
   },
 });
@@ -13026,8 +13118,8 @@ export const mySm2 = style({
 export const mySm3 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "1rem",
       marginTop: "1rem",
+      marginBottom: "1rem",
     },
   },
 });
@@ -13035,8 +13127,8 @@ export const mySm3 = style({
 export const mySm4 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "1.5rem",
       marginTop: "1.5rem",
+      marginBottom: "1.5rem",
     },
   },
 });
@@ -13044,8 +13136,8 @@ export const mySm4 = style({
 export const mySm5 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "3rem",
       marginTop: "3rem",
+      marginBottom: "3rem",
     },
   },
 });
@@ -13053,8 +13145,8 @@ export const mySm5 = style({
 export const mySmAuto = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "auto",
       marginTop: "auto",
+      marginBottom: "auto",
     },
   },
 });
@@ -13062,8 +13154,8 @@ export const mySmAuto = style({
 export const mySmN1 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "-0.25rem",
       marginTop: "-0.25rem",
+      marginBottom: "-0.25rem",
     },
   },
 });
@@ -13071,8 +13163,8 @@ export const mySmN1 = style({
 export const mySmN2 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "-0.5rem",
       marginTop: "-0.5rem",
+      marginBottom: "-0.5rem",
     },
   },
 });
@@ -13080,8 +13172,8 @@ export const mySmN2 = style({
 export const mySmN3 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "-1rem",
       marginTop: "-1rem",
+      marginBottom: "-1rem",
     },
   },
 });
@@ -13089,8 +13181,8 @@ export const mySmN3 = style({
 export const mySmN4 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "-1.5rem",
       marginTop: "-1.5rem",
+      marginBottom: "-1.5rem",
     },
   },
 });
@@ -13098,8 +13190,8 @@ export const mySmN4 = style({
 export const mySmN5 = style({
   "@media": {
     "(min-width: 576px)": {
-      marginBottom: "-3rem",
       marginTop: "-3rem",
+      marginBottom: "-3rem",
     },
   },
 });
@@ -13107,8 +13199,8 @@ export const mySmN5 = style({
 export const myXl0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "0",
       marginTop: "0",
+      marginBottom: "0",
     },
   },
 });
@@ -13116,8 +13208,8 @@ export const myXl0 = style({
 export const myXl1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "0.25rem",
       marginTop: "0.25rem",
+      marginBottom: "0.25rem",
     },
   },
 });
@@ -13125,8 +13217,8 @@ export const myXl1 = style({
 export const myXl2 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "0.5rem",
       marginTop: "0.5rem",
+      marginBottom: "0.5rem",
     },
   },
 });
@@ -13134,8 +13226,8 @@ export const myXl2 = style({
 export const myXl3 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "1rem",
       marginTop: "1rem",
+      marginBottom: "1rem",
     },
   },
 });
@@ -13143,8 +13235,8 @@ export const myXl3 = style({
 export const myXl4 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "1.5rem",
       marginTop: "1.5rem",
+      marginBottom: "1.5rem",
     },
   },
 });
@@ -13152,8 +13244,8 @@ export const myXl4 = style({
 export const myXl5 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "3rem",
       marginTop: "3rem",
+      marginBottom: "3rem",
     },
   },
 });
@@ -13161,8 +13253,8 @@ export const myXl5 = style({
 export const myXlAuto = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "auto",
       marginTop: "auto",
+      marginBottom: "auto",
     },
   },
 });
@@ -13170,8 +13262,8 @@ export const myXlAuto = style({
 export const myXlN1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "-0.25rem",
       marginTop: "-0.25rem",
+      marginBottom: "-0.25rem",
     },
   },
 });
@@ -13179,8 +13271,8 @@ export const myXlN1 = style({
 export const myXlN2 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "-0.5rem",
       marginTop: "-0.5rem",
+      marginBottom: "-0.5rem",
     },
   },
 });
@@ -13188,8 +13280,8 @@ export const myXlN2 = style({
 export const myXlN3 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "-1rem",
       marginTop: "-1rem",
+      marginBottom: "-1rem",
     },
   },
 });
@@ -13197,8 +13289,8 @@ export const myXlN3 = style({
 export const myXlN4 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "-1.5rem",
       marginTop: "-1.5rem",
+      marginBottom: "-1.5rem",
     },
   },
 });
@@ -13206,8 +13298,8 @@ export const myXlN4 = style({
 export const myXlN5 = style({
   "@media": {
     "(min-width: 1200px)": {
-      marginBottom: "-3rem",
       marginTop: "-3rem",
+      marginBottom: "-3rem",
     },
   },
 });
@@ -13215,15 +13307,15 @@ export const myXlN5 = style({
 export const navItem = style({
   "selectors": {
     [`${navFill} &`]: {
-      flex: "1 1 auto",
       msFlex: "1 1 auto",
+      flex: "1 1 auto",
       textAlign: "center",
     },
     [`${navJustified} &`]: {
-      flexBasis: "0",
-      flexGrow: "1",
-      msFlexPositive: "1",
       msFlexPreferredSize: "0",
+      flexBasis: "0",
+      msFlexPositive: "1",
+      flexGrow: "1",
       textAlign: "center",
     },
   },
@@ -13231,11 +13323,11 @@ export const navItem = style({
 
 export const navbarBrand = style({
   display: "inline-block",
+  paddingTop: "0.3125rem",
+  paddingBottom: "0.3125rem",
+  marginRight: "1rem",
   fontSize: "1.25rem",
   lineHeight: "inherit",
-  marginRight: "1rem",
-  paddingBottom: "0.3125rem",
-  paddingTop: "0.3125rem",
   whiteSpace: "nowrap",
   ":focus": {
     textDecoration: "none",
@@ -13254,49 +13346,54 @@ export const navbarBrand = style({
 });
 
 export const navbarCollapse = style({
-  alignItems: "center",
+  msFlexPreferredSize: "100%",
   flexBasis: "100%",
+  msFlexPositive: "1",
   flexGrow: "1",
   msFlexAlign: "center",
-  msFlexPositive: "1",
-  msFlexPreferredSize: "100%",
+  alignItems: "center",
   "@media": {
     "(min-width: 576px)": {
       "selectors": {
         [`${navbarExpandXl} &`]: {
+          display: "-ms-flexbox",
           display: "flex",
-          flexBasis: "auto",
           msFlexPreferredSize: "auto",
+          flexBasis: "auto",
         },
       },
       "selectors": {
         [`${navbarExpandSm} &`]: {
+          display: "-ms-flexbox",
           display: "flex",
-          flexBasis: "auto",
           msFlexPreferredSize: "auto",
+          flexBasis: "auto",
         },
       },
       "selectors": {
         [`${navbarExpandMd} &`]: {
+          display: "-ms-flexbox",
           display: "flex",
-          flexBasis: "auto",
           msFlexPreferredSize: "auto",
+          flexBasis: "auto",
         },
       },
       "selectors": {
         [`${navbarExpandLg} &`]: {
+          display: "-ms-flexbox",
           display: "flex",
-          flexBasis: "auto",
           msFlexPreferredSize: "auto",
+          flexBasis: "auto",
         },
       },
     },
   },
   "selectors": {
     [`${navbarExpand} &`]: {
+      display: "-ms-flexbox",
       display: "flex",
-      flexBasis: "auto",
       msFlexPreferredSize: "auto",
+      flexBasis: "auto",
     },
   },
 });
@@ -13336,12 +13433,12 @@ export const navbarNavScroll = style({
 });
 
 export const navbarToggler = style({
+  padding: "0.25rem 0.75rem",
+  fontSize: "1.25rem",
+  lineHeight: "1",
   backgroundColor: "transparent",
   border: "1px solid transparent",
   borderRadius: "0.25rem",
-  fontSize: "1.25rem",
-  lineHeight: "1",
-  padding: "0.25rem 0.75rem",
   ":focus": {
     textDecoration: "none",
   },
@@ -13374,26 +13471,26 @@ export const navbarToggler = style({
   },
   "selectors": {
     [`${navbarDark} &`]: {
-      borderColor: "rgba(255,255,255,0.1)",
       color: "rgba(255,255,255,0.5)",
+      borderColor: "rgba(255,255,255,0.1)",
     },
     [`${navbarExpand} &`]: {
       display: "none",
     },
     [`${navbarLight} &`]: {
-      borderColor: "rgba(0,0,0,0.1)",
       color: "rgba(0,0,0,0.5)",
+      borderColor: "rgba(0,0,0,0.1)",
     },
   },
 });
 
 export const navbarTogglerIcon = style({
-  background: "50% / 100% 100% no-repeat",
-  content: "",
   display: "inline-block",
+  width: "1.5em",
   height: "1.5em",
   verticalAlign: "middle",
-  width: "1.5em",
+  content: "",
+  background: "50% / 100% 100% no-repeat",
   "selectors": {
     [`${navbarDark} &`]: {
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e)",
@@ -14521,74 +14618,74 @@ export const pXl5 = style({
 });
 
 export const pageLink = style({
+  position: "relative",
+  display: "block",
+  padding: "0.5rem 0.75rem",
+  marginLeft: "-1px",
+  lineHeight: "1.25",
+  color: "007bff",
   backgroundColor: "fff",
   border: "1px solid dee2e6",
-  color: "007bff",
-  display: "block",
-  lineHeight: "1.25",
-  marginLeft: "-1px",
-  padding: "0.5rem 0.75rem",
-  position: "relative",
   ":focus": {
-    boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
-    outline: "0",
     zIndex: "3",
+    outline: "0",
+    boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
   },
   ":hover": {
-    backgroundColor: "e9ecef",
-    borderColor: "dee2e6",
+    zIndex: "2",
     color: "0056b3",
     textDecoration: "none",
-    zIndex: "2",
+    backgroundColor: "e9ecef",
+    borderColor: "dee2e6",
   },
   "selectors": {
     [`${pageItem}${active} &`]: {
+      zIndex: "3",
+      color: "fff",
       backgroundColor: "007bff",
       borderColor: "007bff",
-      color: "fff",
-      zIndex: "3",
     },
     [`${pageItem}${disabled} &`]: {
+      color: "6c757d",
+      pointerEvents: "none",
+      cursor: "auto",
       backgroundColor: "fff",
       borderColor: "dee2e6",
-      color: "6c757d",
-      cursor: "auto",
-      pointerEvents: "none",
     },
     [`${pageItem}:first-child &`]: {
-      borderBottomLeftRadius: "0.25rem",
-      borderTopLeftRadius: "0.25rem",
       marginLeft: "0",
+      borderTopLeftRadius: "0.25rem",
+      borderBottomLeftRadius: "0.25rem",
     },
     [`${pageItem}:last-child &`]: {
-      borderBottomRightRadius: "0.25rem",
       borderTopRightRadius: "0.25rem",
+      borderBottomRightRadius: "0.25rem",
     },
     [`${paginationLg} ${pageItem}:first-child &`]: {
-      borderBottomLeftRadius: "0.3rem",
       borderTopLeftRadius: "0.3rem",
+      borderBottomLeftRadius: "0.3rem",
     },
     [`${paginationLg} ${pageItem}:last-child &`]: {
-      borderBottomRightRadius: "0.3rem",
       borderTopRightRadius: "0.3rem",
+      borderBottomRightRadius: "0.3rem",
     },
     [`${paginationLg} &`]: {
+      padding: "0.75rem 1.5rem",
       fontSize: "1.25rem",
       lineHeight: "1.5",
-      padding: "0.75rem 1.5rem",
     },
     [`${paginationSm} ${pageItem}:first-child &`]: {
-      borderBottomLeftRadius: "0.2rem",
       borderTopLeftRadius: "0.2rem",
+      borderBottomLeftRadius: "0.2rem",
     },
     [`${paginationSm} ${pageItem}:last-child &`]: {
-      borderBottomRightRadius: "0.2rem",
       borderTopRightRadius: "0.2rem",
+      borderBottomRightRadius: "0.2rem",
     },
     [`${paginationSm} &`]: {
+      padding: "0.25rem 0.5rem",
       fontSize: "0.875rem",
       lineHeight: "1.5",
-      padding: "0.25rem 0.5rem",
     },
   },
 });
@@ -15170,17 +15267,18 @@ export const prXl5 = style({
 });
 
 export const progressBar = style({
-  backgroundColor: "007bff",
-  color: "fff",
+  display: "-ms-flexbox",
   display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
   msFlexDirection: "column",
+  flexDirection: "column",
   msFlexPack: "center",
+  justifyContent: "center",
   overflow: "hidden",
+  color: "fff",
   textAlign: "center",
-  transition: "width 0.6s ease",
   whiteSpace: "nowrap",
+  backgroundColor: "007bff",
+  transition: "width 0.6s ease",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
@@ -15394,8 +15492,8 @@ export const ptXl5 = style({
 export const pxLg0 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
@@ -15403,8 +15501,8 @@ export const pxLg0 = style({
 export const pxLg1 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingLeft: "0.25rem",
       paddingRight: "0.25rem",
+      paddingLeft: "0.25rem",
     },
   },
 });
@@ -15412,8 +15510,8 @@ export const pxLg1 = style({
 export const pxLg2 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
+      paddingLeft: "0.5rem",
     },
   },
 });
@@ -15421,8 +15519,8 @@ export const pxLg2 = style({
 export const pxLg3 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingLeft: "1rem",
       paddingRight: "1rem",
+      paddingLeft: "1rem",
     },
   },
 });
@@ -15430,8 +15528,8 @@ export const pxLg3 = style({
 export const pxLg4 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingLeft: "1.5rem",
       paddingRight: "1.5rem",
+      paddingLeft: "1.5rem",
     },
   },
 });
@@ -15439,8 +15537,8 @@ export const pxLg4 = style({
 export const pxLg5 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingLeft: "3rem",
       paddingRight: "3rem",
+      paddingLeft: "3rem",
     },
   },
 });
@@ -15448,8 +15546,8 @@ export const pxLg5 = style({
 export const pxMd0 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
@@ -15457,8 +15555,8 @@ export const pxMd0 = style({
 export const pxMd1 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingLeft: "0.25rem",
       paddingRight: "0.25rem",
+      paddingLeft: "0.25rem",
     },
   },
 });
@@ -15466,8 +15564,8 @@ export const pxMd1 = style({
 export const pxMd2 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
+      paddingLeft: "0.5rem",
     },
   },
 });
@@ -15475,8 +15573,8 @@ export const pxMd2 = style({
 export const pxMd3 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingLeft: "1rem",
       paddingRight: "1rem",
+      paddingLeft: "1rem",
     },
   },
 });
@@ -15484,8 +15582,8 @@ export const pxMd3 = style({
 export const pxMd4 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingLeft: "1.5rem",
       paddingRight: "1.5rem",
+      paddingLeft: "1.5rem",
     },
   },
 });
@@ -15493,8 +15591,8 @@ export const pxMd4 = style({
 export const pxMd5 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingLeft: "3rem",
       paddingRight: "3rem",
+      paddingLeft: "3rem",
     },
   },
 });
@@ -15502,8 +15600,8 @@ export const pxMd5 = style({
 export const pxSm0 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
@@ -15511,8 +15609,8 @@ export const pxSm0 = style({
 export const pxSm1 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingLeft: "0.25rem",
       paddingRight: "0.25rem",
+      paddingLeft: "0.25rem",
     },
   },
 });
@@ -15520,8 +15618,8 @@ export const pxSm1 = style({
 export const pxSm2 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
+      paddingLeft: "0.5rem",
     },
   },
 });
@@ -15529,8 +15627,8 @@ export const pxSm2 = style({
 export const pxSm3 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingLeft: "1rem",
       paddingRight: "1rem",
+      paddingLeft: "1rem",
     },
   },
 });
@@ -15538,8 +15636,8 @@ export const pxSm3 = style({
 export const pxSm4 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingLeft: "1.5rem",
       paddingRight: "1.5rem",
+      paddingLeft: "1.5rem",
     },
   },
 });
@@ -15547,8 +15645,8 @@ export const pxSm4 = style({
 export const pxSm5 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingLeft: "3rem",
       paddingRight: "3rem",
+      paddingLeft: "3rem",
     },
   },
 });
@@ -15556,8 +15654,8 @@ export const pxSm5 = style({
 export const pxXl0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingLeft: "0",
       paddingRight: "0",
+      paddingLeft: "0",
     },
   },
 });
@@ -15565,8 +15663,8 @@ export const pxXl0 = style({
 export const pxXl1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingLeft: "0.25rem",
       paddingRight: "0.25rem",
+      paddingLeft: "0.25rem",
     },
   },
 });
@@ -15574,8 +15672,8 @@ export const pxXl1 = style({
 export const pxXl2 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingLeft: "0.5rem",
       paddingRight: "0.5rem",
+      paddingLeft: "0.5rem",
     },
   },
 });
@@ -15583,8 +15681,8 @@ export const pxXl2 = style({
 export const pxXl3 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingLeft: "1rem",
       paddingRight: "1rem",
+      paddingLeft: "1rem",
     },
   },
 });
@@ -15592,8 +15690,8 @@ export const pxXl3 = style({
 export const pxXl4 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingLeft: "1.5rem",
       paddingRight: "1.5rem",
+      paddingLeft: "1.5rem",
     },
   },
 });
@@ -15601,8 +15699,8 @@ export const pxXl4 = style({
 export const pxXl5 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingLeft: "3rem",
       paddingRight: "3rem",
+      paddingLeft: "3rem",
     },
   },
 });
@@ -15610,8 +15708,8 @@ export const pxXl5 = style({
 export const pyLg0 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingBottom: "0",
       paddingTop: "0",
+      paddingBottom: "0",
     },
   },
 });
@@ -15619,8 +15717,8 @@ export const pyLg0 = style({
 export const pyLg1 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingBottom: "0.25rem",
       paddingTop: "0.25rem",
+      paddingBottom: "0.25rem",
     },
   },
 });
@@ -15628,8 +15726,8 @@ export const pyLg1 = style({
 export const pyLg2 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingBottom: "0.5rem",
       paddingTop: "0.5rem",
+      paddingBottom: "0.5rem",
     },
   },
 });
@@ -15637,8 +15735,8 @@ export const pyLg2 = style({
 export const pyLg3 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingBottom: "1rem",
       paddingTop: "1rem",
+      paddingBottom: "1rem",
     },
   },
 });
@@ -15646,8 +15744,8 @@ export const pyLg3 = style({
 export const pyLg4 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingBottom: "1.5rem",
       paddingTop: "1.5rem",
+      paddingBottom: "1.5rem",
     },
   },
 });
@@ -15655,8 +15753,8 @@ export const pyLg4 = style({
 export const pyLg5 = style({
   "@media": {
     "(min-width: 992px)": {
-      paddingBottom: "3rem",
       paddingTop: "3rem",
+      paddingBottom: "3rem",
     },
   },
 });
@@ -15664,8 +15762,8 @@ export const pyLg5 = style({
 export const pyMd0 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingBottom: "0",
       paddingTop: "0",
+      paddingBottom: "0",
     },
   },
 });
@@ -15673,8 +15771,8 @@ export const pyMd0 = style({
 export const pyMd1 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingBottom: "0.25rem",
       paddingTop: "0.25rem",
+      paddingBottom: "0.25rem",
     },
   },
 });
@@ -15682,8 +15780,8 @@ export const pyMd1 = style({
 export const pyMd2 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingBottom: "0.5rem",
       paddingTop: "0.5rem",
+      paddingBottom: "0.5rem",
     },
   },
 });
@@ -15691,8 +15789,8 @@ export const pyMd2 = style({
 export const pyMd3 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingBottom: "1rem",
       paddingTop: "1rem",
+      paddingBottom: "1rem",
     },
   },
 });
@@ -15700,8 +15798,8 @@ export const pyMd3 = style({
 export const pyMd4 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingBottom: "1.5rem",
       paddingTop: "1.5rem",
+      paddingBottom: "1.5rem",
     },
   },
 });
@@ -15709,8 +15807,8 @@ export const pyMd4 = style({
 export const pyMd5 = style({
   "@media": {
     "(min-width: 768px)": {
-      paddingBottom: "3rem",
       paddingTop: "3rem",
+      paddingBottom: "3rem",
     },
   },
 });
@@ -15718,8 +15816,8 @@ export const pyMd5 = style({
 export const pySm0 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingBottom: "0",
       paddingTop: "0",
+      paddingBottom: "0",
     },
   },
 });
@@ -15727,8 +15825,8 @@ export const pySm0 = style({
 export const pySm1 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingBottom: "0.25rem",
       paddingTop: "0.25rem",
+      paddingBottom: "0.25rem",
     },
   },
 });
@@ -15736,8 +15834,8 @@ export const pySm1 = style({
 export const pySm2 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingBottom: "0.5rem",
       paddingTop: "0.5rem",
+      paddingBottom: "0.5rem",
     },
   },
 });
@@ -15745,8 +15843,8 @@ export const pySm2 = style({
 export const pySm3 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingBottom: "1rem",
       paddingTop: "1rem",
+      paddingBottom: "1rem",
     },
   },
 });
@@ -15754,8 +15852,8 @@ export const pySm3 = style({
 export const pySm4 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingBottom: "1.5rem",
       paddingTop: "1.5rem",
+      paddingBottom: "1.5rem",
     },
   },
 });
@@ -15763,8 +15861,8 @@ export const pySm4 = style({
 export const pySm5 = style({
   "@media": {
     "(min-width: 576px)": {
-      paddingBottom: "3rem",
       paddingTop: "3rem",
+      paddingBottom: "3rem",
     },
   },
 });
@@ -15772,8 +15870,8 @@ export const pySm5 = style({
 export const pyXl0 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingBottom: "0",
       paddingTop: "0",
+      paddingBottom: "0",
     },
   },
 });
@@ -15781,8 +15879,8 @@ export const pyXl0 = style({
 export const pyXl1 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingBottom: "0.25rem",
       paddingTop: "0.25rem",
+      paddingBottom: "0.25rem",
     },
   },
 });
@@ -15790,8 +15888,8 @@ export const pyXl1 = style({
 export const pyXl2 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingBottom: "0.5rem",
       paddingTop: "0.5rem",
+      paddingBottom: "0.5rem",
     },
   },
 });
@@ -15799,8 +15897,8 @@ export const pyXl2 = style({
 export const pyXl3 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingBottom: "1rem",
       paddingTop: "1rem",
+      paddingBottom: "1rem",
     },
   },
 });
@@ -15808,8 +15906,8 @@ export const pyXl3 = style({
 export const pyXl4 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingBottom: "1.5rem",
       paddingTop: "1.5rem",
+      paddingBottom: "1.5rem",
     },
   },
 });
@@ -15817,8 +15915,8 @@ export const pyXl4 = style({
 export const pyXl5 = style({
   "@media": {
     "(min-width: 1200px)": {
-      paddingBottom: "3rem",
       paddingTop: "3rem",
+      paddingBottom: "3rem",
     },
   },
 });
@@ -15826,9 +15924,9 @@ export const pyXl5 = style({
 export const rowCols1 = style({
   "selectors": {
     "& > *": {
+      msFlex: "0 0 100%",
       flex: "0 0 100%",
       maxWidth: "100%",
-      msFlex: "0 0 100%",
     },
   },
 });
@@ -15836,9 +15934,9 @@ export const rowCols1 = style({
 export const rowCols2 = style({
   "selectors": {
     "& > *": {
+      msFlex: "0 0 50%",
       flex: "0 0 50%",
       maxWidth: "50%",
-      msFlex: "0 0 50%",
     },
   },
 });
@@ -15846,9 +15944,9 @@ export const rowCols2 = style({
 export const rowCols3 = style({
   "selectors": {
     "& > *": {
+      msFlex: "0 0 33.333333%",
       flex: "0 0 33.333333%",
       maxWidth: "33.333333%",
-      msFlex: "0 0 33.333333%",
     },
   },
 });
@@ -15856,9 +15954,9 @@ export const rowCols3 = style({
 export const rowCols4 = style({
   "selectors": {
     "& > *": {
+      msFlex: "0 0 25%",
       flex: "0 0 25%",
       maxWidth: "25%",
-      msFlex: "0 0 25%",
     },
   },
 });
@@ -15866,9 +15964,9 @@ export const rowCols4 = style({
 export const rowCols5 = style({
   "selectors": {
     "& > *": {
+      msFlex: "0 0 20%",
       flex: "0 0 20%",
       maxWidth: "20%",
-      msFlex: "0 0 20%",
     },
   },
 });
@@ -15876,9 +15974,9 @@ export const rowCols5 = style({
 export const rowCols6 = style({
   "selectors": {
     "& > *": {
+      msFlex: "0 0 16.666667%",
       flex: "0 0 16.666667%",
       maxWidth: "16.666667%",
-      msFlex: "0 0 16.666667%",
     },
   },
 });
@@ -15888,9 +15986,9 @@ export const rowColsLg1 = style({
     "(min-width: 992px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 100%",
           flex: "0 0 100%",
           maxWidth: "100%",
-          msFlex: "0 0 100%",
         },
       },
     },
@@ -15902,9 +16000,9 @@ export const rowColsLg2 = style({
     "(min-width: 992px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 50%",
           flex: "0 0 50%",
           maxWidth: "50%",
-          msFlex: "0 0 50%",
         },
       },
     },
@@ -15916,9 +16014,9 @@ export const rowColsLg3 = style({
     "(min-width: 992px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 33.333333%",
           flex: "0 0 33.333333%",
           maxWidth: "33.333333%",
-          msFlex: "0 0 33.333333%",
         },
       },
     },
@@ -15930,9 +16028,9 @@ export const rowColsLg4 = style({
     "(min-width: 992px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 25%",
           flex: "0 0 25%",
           maxWidth: "25%",
-          msFlex: "0 0 25%",
         },
       },
     },
@@ -15944,9 +16042,9 @@ export const rowColsLg5 = style({
     "(min-width: 992px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 20%",
           flex: "0 0 20%",
           maxWidth: "20%",
-          msFlex: "0 0 20%",
         },
       },
     },
@@ -15958,9 +16056,9 @@ export const rowColsLg6 = style({
     "(min-width: 992px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 16.666667%",
           flex: "0 0 16.666667%",
           maxWidth: "16.666667%",
-          msFlex: "0 0 16.666667%",
         },
       },
     },
@@ -15972,9 +16070,9 @@ export const rowColsMd1 = style({
     "(min-width: 768px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 100%",
           flex: "0 0 100%",
           maxWidth: "100%",
-          msFlex: "0 0 100%",
         },
       },
     },
@@ -15986,9 +16084,9 @@ export const rowColsMd2 = style({
     "(min-width: 768px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 50%",
           flex: "0 0 50%",
           maxWidth: "50%",
-          msFlex: "0 0 50%",
         },
       },
     },
@@ -16000,9 +16098,9 @@ export const rowColsMd3 = style({
     "(min-width: 768px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 33.333333%",
           flex: "0 0 33.333333%",
           maxWidth: "33.333333%",
-          msFlex: "0 0 33.333333%",
         },
       },
     },
@@ -16014,9 +16112,9 @@ export const rowColsMd4 = style({
     "(min-width: 768px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 25%",
           flex: "0 0 25%",
           maxWidth: "25%",
-          msFlex: "0 0 25%",
         },
       },
     },
@@ -16028,9 +16126,9 @@ export const rowColsMd5 = style({
     "(min-width: 768px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 20%",
           flex: "0 0 20%",
           maxWidth: "20%",
-          msFlex: "0 0 20%",
         },
       },
     },
@@ -16042,9 +16140,9 @@ export const rowColsMd6 = style({
     "(min-width: 768px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 16.666667%",
           flex: "0 0 16.666667%",
           maxWidth: "16.666667%",
-          msFlex: "0 0 16.666667%",
         },
       },
     },
@@ -16056,9 +16154,9 @@ export const rowColsSm1 = style({
     "(min-width: 576px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 100%",
           flex: "0 0 100%",
           maxWidth: "100%",
-          msFlex: "0 0 100%",
         },
       },
     },
@@ -16070,9 +16168,9 @@ export const rowColsSm2 = style({
     "(min-width: 576px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 50%",
           flex: "0 0 50%",
           maxWidth: "50%",
-          msFlex: "0 0 50%",
         },
       },
     },
@@ -16084,9 +16182,9 @@ export const rowColsSm3 = style({
     "(min-width: 576px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 33.333333%",
           flex: "0 0 33.333333%",
           maxWidth: "33.333333%",
-          msFlex: "0 0 33.333333%",
         },
       },
     },
@@ -16098,9 +16196,9 @@ export const rowColsSm4 = style({
     "(min-width: 576px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 25%",
           flex: "0 0 25%",
           maxWidth: "25%",
-          msFlex: "0 0 25%",
         },
       },
     },
@@ -16112,9 +16210,9 @@ export const rowColsSm5 = style({
     "(min-width: 576px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 20%",
           flex: "0 0 20%",
           maxWidth: "20%",
-          msFlex: "0 0 20%",
         },
       },
     },
@@ -16126,9 +16224,9 @@ export const rowColsSm6 = style({
     "(min-width: 576px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 16.666667%",
           flex: "0 0 16.666667%",
           maxWidth: "16.666667%",
-          msFlex: "0 0 16.666667%",
         },
       },
     },
@@ -16140,9 +16238,9 @@ export const rowColsXl1 = style({
     "(min-width: 1200px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 100%",
           flex: "0 0 100%",
           maxWidth: "100%",
-          msFlex: "0 0 100%",
         },
       },
     },
@@ -16154,9 +16252,9 @@ export const rowColsXl2 = style({
     "(min-width: 1200px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 50%",
           flex: "0 0 50%",
           maxWidth: "50%",
-          msFlex: "0 0 50%",
         },
       },
     },
@@ -16168,9 +16266,9 @@ export const rowColsXl3 = style({
     "(min-width: 1200px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 33.333333%",
           flex: "0 0 33.333333%",
           maxWidth: "33.333333%",
-          msFlex: "0 0 33.333333%",
         },
       },
     },
@@ -16182,9 +16280,9 @@ export const rowColsXl4 = style({
     "(min-width: 1200px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 25%",
           flex: "0 0 25%",
           maxWidth: "25%",
-          msFlex: "0 0 25%",
         },
       },
     },
@@ -16196,9 +16294,9 @@ export const rowColsXl5 = style({
     "(min-width: 1200px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 20%",
           flex: "0 0 20%",
           maxWidth: "20%",
-          msFlex: "0 0 20%",
         },
       },
     },
@@ -16210,9 +16308,9 @@ export const rowColsXl6 = style({
     "(min-width: 1200px)": {
       "selectors": {
         "& > *": {
+          msFlex: "0 0 16.666667%",
           flex: "0 0 16.666667%",
           maxWidth: "16.666667%",
-          msFlex: "0 0 16.666667%",
         },
       },
     },
@@ -16220,15 +16318,15 @@ export const rowColsXl6 = style({
 });
 
 export const spinnerBorder = style({
-  WebkitAnimation: "0.75s linear infinite spinner-border",
-  animation: "0.75s linear infinite spinner-border",
-  border: "0.25em solid currentColor",
-  borderRadius: "50%",
-  borderRightColor: "transparent",
   display: "inline-block",
+  width: "2rem",
   height: "2rem",
   verticalAlign: "-0.125em",
-  width: "2rem",
+  border: "0.25em solid currentColor",
+  borderRightColor: "transparent",
+  borderRadius: "50%",
+  WebkitAnimation: "0.75s linear infinite spinner-border",
+  animation: "0.75s linear infinite spinner-border",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       WebkitAnimationDuration: "1.5s",
@@ -16238,15 +16336,15 @@ export const spinnerBorder = style({
 });
 
 export const spinnerGrow = style({
-  WebkitAnimation: "0.75s linear infinite spinner-grow",
-  animation: "0.75s linear infinite spinner-grow",
+  display: "inline-block",
+  width: "2rem",
+  height: "2rem",
+  verticalAlign: "-0.125em",
   backgroundColor: "currentColor",
   borderRadius: "50%",
-  display: "inline-block",
-  height: "2rem",
   opacity: "0",
-  verticalAlign: "-0.125em",
-  width: "2rem",
+  WebkitAnimation: "0.75s linear infinite spinner-grow",
+  animation: "0.75s linear infinite spinner-grow",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       WebkitAnimationDuration: "1.5s",
@@ -16258,6 +16356,7 @@ export const spinnerGrow = style({
 export const stickyTop = style({
   "@supports": {
     "(position:-webkit-sticky) or (position:sticky)": {
+      position: "-webkit-sticky",
       position: "sticky",
       top: "0",
       zIndex: "1020",
@@ -16274,16 +16373,16 @@ export const tabPane = style({
 });
 
 export const table = style({
-  color: "212529",
-  marginBottom: "1rem",
   width: "100%",
+  marginBottom: "1rem",
+  color: "212529",
   "@media": {
     "print": {
       borderCollapse: "collapse",
       "selectors": {
         [` ${theadDark} th`]: {
-          borderColor: "dee2e6",
           color: "inherit",
+          borderColor: "dee2e6",
         },
         "& td": {
           backgroundColor: "fff",
@@ -16296,31 +16395,31 @@ export const table = style({
   },
   "selectors": {
     [` ${theadDark} th`]: {
+      color: "fff",
       backgroundColor: "343a40",
       borderColor: "454d55",
-      color: "fff",
     },
     [` ${theadLight} th`]: {
+      color: "495057",
       backgroundColor: "e9ecef",
       borderColor: "dee2e6",
-      color: "495057",
     },
     "& tbody + tbody": {
       borderTop: "2px solid dee2e6",
     },
     "& td": {
-      borderTop: "1px solid dee2e6",
       padding: "0.75rem",
       verticalAlign: "top",
+      borderTop: "1px solid dee2e6",
     },
     "& th": {
-      borderTop: "1px solid dee2e6",
       padding: "0.75rem",
       verticalAlign: "top",
+      borderTop: "1px solid dee2e6",
     },
     "& thead th": {
-      borderBottom: "2px solid dee2e6",
       verticalAlign: "bottom",
+      borderBottom: "2px solid dee2e6",
     },
   },
 });
@@ -16432,8 +16531,9 @@ export const tableDanger = style({
 });
 
 export const tableDark = style({
-  backgroundColor: "343a40",
+  backgroundColor: "c6c8ca",
   color: "fff",
+  backgroundColor: "343a40",
   "@media": {
     "print": {
       color: "inherit",
@@ -16464,20 +16564,23 @@ export const tableDark = style({
       borderColor: "95999c",
     },
     "& td": {
+      borderColor: "95999c",
       borderColor: "454d55",
     },
     "& th": {
+      borderColor: "95999c",
       borderColor: "454d55",
     },
     "& thead th": {
+      borderColor: "95999c",
       borderColor: "454d55",
     },
     [`${tableBordered}`]: {
       border: "0",
     },
     [`${tableHover} tbody tr:hover`]: {
-      backgroundColor: "rgba(255,255,255,0.075)",
       color: "fff",
+      backgroundColor: "rgba(255,255,255,0.075)",
     },
     [`${tableStriped} tbody tr:nth-of-type(odd)`]: {
       backgroundColor: "rgba(255,255,255,0.05)",
@@ -16593,16 +16696,16 @@ export const textXlRight = style({
 });
 
 export const toast = style({
-  backgroundClip: "padding-box",
-  backgroundColor: "rgba(255,255,255,0.85)",
-  border: "1px solid rgba(0,0,0,0.1)",
-  borderRadius: "0.25rem",
-  boxShadow: "0 0.25rem 0.75rem rgba(0,0,0,0.1)",
-  flexBasis: "350px",
-  fontSize: "0.875rem",
-  maxWidth: "350px",
   msFlexPreferredSize: "350px",
+  flexBasis: "350px",
+  maxWidth: "350px",
+  fontSize: "0.875rem",
+  backgroundColor: "rgba(255,255,255,0.85)",
+  backgroundClip: "padding-box",
+  border: "1px solid rgba(0,0,0,0.1)",
+  boxShadow: "0 0.25rem 0.75rem rgba(0,0,0,0.1)",
   opacity: "0",
+  borderRadius: "0.25rem",
   "selectors": {
     [`${hide}`]: {
       display: "none",
@@ -16621,11 +16724,11 @@ export const toast = style({
 });
 
 export const validFeedback = style({
-  color: "28a745",
   display: "none",
-  fontSize: "80%",
-  marginTop: "0.25rem",
   width: "100%",
+  marginTop: "0.25rem",
+  fontSize: "80%",
+  color: "28a745",
   "selectors": {
     [`${formCheckInput}${isValid} ~ &`]: {
       display: "block",
@@ -16643,19 +16746,19 @@ export const validFeedback = style({
 });
 
 export const validTooltip = style({
-  backgroundColor: "rgba(40,167,69,0.9)",
-  borderRadius: "0.25rem",
-  color: "fff",
-  display: "none",
-  fontSize: "0.875rem",
-  left: "0",
-  lineHeight: "1.5",
-  marginTop: "0.1rem",
-  maxWidth: "100%",
-  padding: "0.25rem 0.5rem",
   position: "absolute",
   top: "100%",
+  left: "0",
   zIndex: "5",
+  display: "none",
+  maxWidth: "100%",
+  padding: "0.25rem 0.5rem",
+  marginTop: "0.1rem",
+  fontSize: "0.875rem",
+  lineHeight: "1.5",
+  color: "fff",
+  backgroundColor: "rgba(40,167,69,0.9)",
+  borderRadius: "0.25rem",
   "selectors": {
     [`${formCheckInput}${isValid} ~ &`]: {
       display: "block",
@@ -16682,8 +16785,8 @@ globalStyle("*", {
   boxSizing: "border-box",
   "@media": {
     "print": {
-      boxShadow: "none",
       textShadow: "none",
+      boxShadow: "none",
     },
   },
 });
@@ -16692,8 +16795,8 @@ globalStyle("*::after", {
   boxSizing: "border-box",
   "@media": {
     "print": {
-      boxShadow: "none",
       textShadow: "none",
+      boxShadow: "none",
     },
   },
 });
@@ -16702,47 +16805,47 @@ globalStyle("*::before", {
   boxSizing: "border-box",
   "@media": {
     "print": {
-      boxShadow: "none",
       textShadow: "none",
+      boxShadow: "none",
     },
   },
 });
 
 globalStyle("::-webkit-file-upload-button", {
-  WebkitAppearance: "button",
   font: "inherit",
+  WebkitAppearance: "button",
 });
 
 globalStyle(":root", {
   "vars": {
     "--blue": "#007bff",
-    "--breakpoint-lg": "992px",
-    "--breakpoint-md": "768px",
-    "--breakpoint-sm": "576px",
-    "--breakpoint-xl": "1200px",
-    "--breakpoint-xs": "0",
+    "--indigo": "#6610f2",
+    "--purple": "#6f42c1",
+    "--pink": "#e83e8c",
+    "--red": "#dc3545",
+    "--orange": "#fd7e14",
+    "--yellow": "#ffc107",
+    "--green": "#28a745",
+    "--teal": "#20c997",
     "--cyan": "#17a2b8",
-    "--danger": "#dc3545",
-    "--dark": "#343a40",
-    "--font-family-monospace": "SFMono-Regular ,   Menlo ,   Monaco ,   Consolas ,   Liberation Mono ,   Courier New ,   monospace",
-    "--font-family-sans-serif": "-apple-system ,   BlinkMacSystemFont ,   Segoe UI ,   Roboto ,   Helvetica Neue ,   Arial ,   Noto Sans ,   Liberation Sans ,   sans-serif ,   Apple Color Emoji ,   Segoe UI Emoji ,   Segoe UI Symbol ,   Noto Color Emoji",
+    "--white": "#fff",
     "--gray": "#6c757d",
     "--gray-dark": "#343a40",
-    "--green": "#28a745",
-    "--indigo": "#6610f2",
-    "--info": "#17a2b8",
-    "--light": "#f8f9fa",
-    "--orange": "#fd7e14",
-    "--pink": "#e83e8c",
     "--primary": "#007bff",
-    "--purple": "#6f42c1",
-    "--red": "#dc3545",
     "--secondary": "#6c757d",
     "--success": "#28a745",
-    "--teal": "#20c997",
+    "--info": "#17a2b8",
     "--warning": "#ffc107",
-    "--white": "#fff",
-    "--yellow": "#ffc107",
+    "--danger": "#dc3545",
+    "--light": "#f8f9fa",
+    "--dark": "#343a40",
+    "--breakpoint-xs": "0",
+    "--breakpoint-sm": "576px",
+    "--breakpoint-md": "768px",
+    "--breakpoint-lg": "992px",
+    "--breakpoint-xl": "1200px",
+    "--font-family-sans-serif": "-apple-system ,   BlinkMacSystemFont ,   Segoe UI ,   Roboto ,   Helvetica Neue ,   Arial ,   Noto Sans ,   Liberation Sans ,   sans-serif ,   Apple Color Emoji ,   Segoe UI Emoji ,   Segoe UI Symbol ,   Noto Color Emoji",
+    "--font-family-monospace": "SFMono-Regular ,   Menlo ,   Monaco ,   Consolas ,   Liberation Mono ,   Courier New ,   monospace",
   },
 });
 
@@ -16763,8 +16866,8 @@ globalStyle("[type='button']", {
 });
 
 globalStyle("[type='button']::-moz-focus-inner", {
-  borderStyle: "none",
   padding: "0",
+  borderStyle: "none",
 });
 
 globalStyle("[type='button']:not(:disabled)", {
@@ -16784,8 +16887,8 @@ globalStyle("[type='reset']", {
 });
 
 globalStyle("[type='reset']::-moz-focus-inner", {
-  borderStyle: "none",
   padding: "0",
+  borderStyle: "none",
 });
 
 globalStyle("[type='reset']:not(:disabled)", {
@@ -16793,8 +16896,8 @@ globalStyle("[type='reset']:not(:disabled)", {
 });
 
 globalStyle("[type='search']", {
-  WebkitAppearance: "none",
   outlineOffset: "-2px",
+  WebkitAppearance: "none",
 });
 
 globalStyle("[type='search']::-webkit-search-decoration", {
@@ -16806,8 +16909,8 @@ globalStyle("[type='submit']", {
 });
 
 globalStyle("[type='submit']::-moz-focus-inner", {
-  borderStyle: "none",
   padding: "0",
+  borderStyle: "none",
 });
 
 globalStyle("[type='submit']:not(:disabled)", {
@@ -16815,9 +16918,9 @@ globalStyle("[type='submit']:not(:disabled)", {
 });
 
 globalStyle("a", {
-  backgroundColor: "transparent",
   color: "007bff",
   textDecoration: "none",
+  backgroundColor: "transparent",
 });
 
 globalStyle("a > code", {
@@ -16825,139 +16928,139 @@ globalStyle("a > code", {
 });
 
 globalStyle(`a${badgeDanger}${focus}`, {
-  boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
 });
 
 globalStyle(`a${badgeDanger}:focus`, {
-  backgroundColor: "bd2130",
-  boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
   color: "fff",
+  backgroundColor: "bd2130",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
 });
 
 globalStyle(`a${badgeDanger}:hover`, {
-  backgroundColor: "bd2130",
   color: "fff",
+  backgroundColor: "bd2130",
 });
 
 globalStyle(`a${badgeDark}${focus}`, {
-  boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
 });
 
 globalStyle(`a${badgeDark}:focus`, {
-  backgroundColor: "1d2124",
-  boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
   color: "fff",
+  backgroundColor: "1d2124",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
 });
 
 globalStyle(`a${badgeDark}:hover`, {
-  backgroundColor: "1d2124",
   color: "fff",
+  backgroundColor: "1d2124",
 });
 
 globalStyle(`a${badgeInfo}${focus}`, {
-  boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
 });
 
 globalStyle(`a${badgeInfo}:focus`, {
-  backgroundColor: "117a8b",
-  boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
   color: "fff",
+  backgroundColor: "117a8b",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
 });
 
 globalStyle(`a${badgeInfo}:hover`, {
-  backgroundColor: "117a8b",
   color: "fff",
+  backgroundColor: "117a8b",
 });
 
 globalStyle(`a${badgeLight}${focus}`, {
-  boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
 });
 
 globalStyle(`a${badgeLight}:focus`, {
-  backgroundColor: "dae0e5",
-  boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
   color: "212529",
+  backgroundColor: "dae0e5",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
 });
 
 globalStyle(`a${badgeLight}:hover`, {
-  backgroundColor: "dae0e5",
   color: "212529",
+  backgroundColor: "dae0e5",
 });
 
 globalStyle(`a${badgePrimary}${focus}`, {
-  boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
 });
 
 globalStyle(`a${badgePrimary}:focus`, {
-  backgroundColor: "0062cc",
-  boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
   color: "fff",
+  backgroundColor: "0062cc",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
 });
 
 globalStyle(`a${badgePrimary}:hover`, {
-  backgroundColor: "0062cc",
   color: "fff",
+  backgroundColor: "0062cc",
 });
 
 globalStyle(`a${badgeSecondary}${focus}`, {
-  boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
 });
 
 globalStyle(`a${badgeSecondary}:focus`, {
-  backgroundColor: "545b62",
-  boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
   color: "fff",
+  backgroundColor: "545b62",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
 });
 
 globalStyle(`a${badgeSecondary}:hover`, {
-  backgroundColor: "545b62",
   color: "fff",
+  backgroundColor: "545b62",
 });
 
 globalStyle(`a${badgeSuccess}${focus}`, {
-  boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
 });
 
 globalStyle(`a${badgeSuccess}:focus`, {
-  backgroundColor: "1e7e34",
-  boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
   color: "fff",
+  backgroundColor: "1e7e34",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
 });
 
 globalStyle(`a${badgeSuccess}:hover`, {
-  backgroundColor: "1e7e34",
   color: "fff",
+  backgroundColor: "1e7e34",
 });
 
 globalStyle(`a${badgeWarning}${focus}`, {
-  boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
 });
 
 globalStyle(`a${badgeWarning}:focus`, {
-  backgroundColor: "d39e00",
-  boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
   color: "212529",
+  backgroundColor: "d39e00",
   outline: "0",
+  boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
 });
 
 globalStyle(`a${badgeWarning}:hover`, {
-  backgroundColor: "d39e00",
   color: "212529",
+  backgroundColor: "d39e00",
 });
 
 globalStyle(`a${badge}:focus`, {
@@ -17128,20 +17231,22 @@ globalStyle("a:not([href]):not([class]):hover", {
 });
 
 globalStyle("abbr[data-original-title]", {
+  textDecoration: "underline",
   WebkitTextDecoration: "underline dotted",
-  WebkitTextDecorationSkipInk: "none",
-  borderBottom: "0",
-  cursor: "help",
   textDecoration: "underline dotted",
+  cursor: "help",
+  borderBottom: "0",
+  WebkitTextDecorationSkipInk: "none",
   textDecorationSkipInk: "none",
 });
 
 globalStyle("abbr[title]", {
+  textDecoration: "underline",
   WebkitTextDecoration: "underline dotted",
-  WebkitTextDecorationSkipInk: "none",
-  borderBottom: "0",
-  cursor: "help",
   textDecoration: "underline dotted",
+  cursor: "help",
+  borderBottom: "0",
+  WebkitTextDecorationSkipInk: "none",
   textDecorationSkipInk: "none",
 });
 
@@ -17154,9 +17259,9 @@ globalStyle("abbr[title]::after", {
 });
 
 globalStyle("address", {
+  marginBottom: "1rem",
   fontStyle: "normal",
   lineHeight: "inherit",
-  marginBottom: "1rem",
 });
 
 globalStyle("article", {
@@ -17182,14 +17287,14 @@ globalStyle("blockquote", {
 });
 
 globalStyle("body", {
-  backgroundColor: "fff",
-  color: "212529",
+  margin: "0",
   fontFamily: "-apple-system , BlinkMacSystemFont , Segoe UI , Roboto , Helvetica Neue , Arial , Noto Sans , Liberation Sans , sans-serif , Apple Color Emoji , Segoe UI Emoji , Segoe UI Symbol , Noto Color Emoji",
   fontSize: "1rem",
   fontWeight: "400",
   lineHeight: "1.5",
-  margin: "0",
+  color: "212529",
   textAlign: "left",
+  backgroundColor: "fff",
   "@media": {
     "print": {
       minWidth: "992px",
@@ -17198,14 +17303,14 @@ globalStyle("body", {
 });
 
 globalStyle("button", {
-  WebkitAppearance: "button",
   borderRadius: "0",
+  margin: "0",
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
-  margin: "0",
   overflow: "visible",
   textTransform: "none",
+  WebkitAppearance: "button",
 });
 
 globalStyle(`button${bgDanger}:focus`, {
@@ -17273,14 +17378,14 @@ globalStyle(`button${bgWarning}:hover`, {
 });
 
 globalStyle(`button${close}`, {
+  padding: "0",
   backgroundColor: "transparent",
   border: "0",
-  padding: "0",
 });
 
 globalStyle("button::-moz-focus-inner", {
-  borderStyle: "none",
   padding: "0",
+  borderStyle: "none",
 });
 
 globalStyle("button:focus:not(:focus-visible)", {
@@ -17292,17 +17397,18 @@ globalStyle("button:not(:disabled)", {
 });
 
 globalStyle("caption", {
-  captionSide: "bottom",
-  color: "6c757d",
-  paddingBottom: "0.75rem",
   paddingTop: "0.75rem",
+  paddingBottom: "0.75rem",
+  color: "6c757d",
   textAlign: "left",
+  captionSide: "bottom",
 });
 
 globalStyle("code", {
-  color: "e83e8c",
   fontFamily: "SFMono-Regular , Menlo , Monaco , Consolas , Liberation Mono , Courier New , monospace",
+  fontSize: "1em",
   fontSize: "87.5%",
+  color: "e83e8c",
   wordWrap: "break-word",
 });
 
@@ -17312,8 +17418,8 @@ globalStyle("dd", {
 });
 
 globalStyle("dl", {
-  marginBottom: "1rem",
   marginTop: "0",
+  marginBottom: "1rem",
 });
 
 globalStyle("dt", {
@@ -17321,10 +17427,10 @@ globalStyle("dt", {
 });
 
 globalStyle("fieldset", {
-  border: "0",
-  margin: "0",
   minWidth: "0",
   padding: "0",
+  margin: "0",
+  border: "0",
 });
 
 globalStyle("figcaption", {
@@ -17341,65 +17447,71 @@ globalStyle("footer", {
 });
 
 globalStyle("h1", {
-  fontSize: "2.5rem",
+  marginTop: "0",
+  marginBottom: "0.5rem",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "2.5rem",
 });
 
 globalStyle("h2", {
-  fontSize: "2rem",
+  marginTop: "0",
+  marginBottom: "0.5rem",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "2rem",
   "@media": {
     "print": {
       orphans: "3",
-      pageBreakAfter: "avoid",
       widows: "3",
+      pageBreakAfter: "avoid",
     },
   },
 });
 
 globalStyle("h3", {
-  fontSize: "1.75rem",
+  marginTop: "0",
+  marginBottom: "0.5rem",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "1.75rem",
   "@media": {
     "print": {
       orphans: "3",
-      pageBreakAfter: "avoid",
       widows: "3",
+      pageBreakAfter: "avoid",
     },
   },
 });
 
 globalStyle("h4", {
-  fontSize: "1.5rem",
+  marginTop: "0",
+  marginBottom: "0.5rem",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "1.5rem",
 });
 
 globalStyle("h5", {
-  fontSize: "1.25rem",
+  marginTop: "0",
+  marginBottom: "0.5rem",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "1.25rem",
 });
 
 globalStyle("h6", {
-  fontSize: "1rem",
+  marginTop: "0",
+  marginBottom: "0.5rem",
+  marginBottom: "0.5rem",
   fontWeight: "500",
   lineHeight: "1.2",
-  marginBottom: "0.5rem",
-  marginTop: "0",
+  fontSize: "1rem",
 });
 
 globalStyle("header", {
@@ -17411,25 +17523,25 @@ globalStyle("hgroup", {
 });
 
 globalStyle("hr", {
-  border: "0",
-  borderTop: "1px solid rgba(0,0,0,0.1)",
   boxSizing: "content-box",
   height: "0",
-  marginBottom: "1rem",
-  marginTop: "1rem",
   overflow: "visible",
+  marginTop: "1rem",
+  marginBottom: "1rem",
+  border: "0",
+  borderTop: "1px solid rgba(0,0,0,0.1)",
 });
 
 globalStyle("html", {
-  WebkitTapHighlightColor: "rgba(0,0,0,0)",
-  WebkitTextSizeAdjust: "100%",
   fontFamily: "sans-serif",
   lineHeight: "1.15",
+  WebkitTextSizeAdjust: "100%",
+  WebkitTapHighlightColor: "rgba(0,0,0,0)",
 });
 
 globalStyle("img", {
-  borderStyle: "none",
   verticalAlign: "middle",
+  borderStyle: "none",
   "@media": {
     "print": {
       pageBreakInside: "avoid",
@@ -17438,10 +17550,10 @@ globalStyle("img", {
 });
 
 globalStyle("input", {
+  margin: "0",
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
-  margin: "0",
   overflow: "visible",
 });
 
@@ -17455,20 +17567,20 @@ globalStyle("input[type='checkbox']", {
 });
 
 globalStyle(`input[type='date']${formControl}`, {
-  MozAppearance: "none",
   WebkitAppearance: "none",
+  MozAppearance: "none",
   appearance: "none",
 });
 
 globalStyle(`input[type='datetime-local']${formControl}`, {
-  MozAppearance: "none",
   WebkitAppearance: "none",
+  MozAppearance: "none",
   appearance: "none",
 });
 
 globalStyle(`input[type='month']${formControl}`, {
-  MozAppearance: "none",
   WebkitAppearance: "none",
+  MozAppearance: "none",
   appearance: "none",
 });
 
@@ -17486,24 +17598,25 @@ globalStyle(`input[type='submit']${btnBlock}`, {
 });
 
 globalStyle(`input[type='time']${formControl}`, {
-  MozAppearance: "none",
   WebkitAppearance: "none",
+  MozAppearance: "none",
   appearance: "none",
 });
 
 globalStyle("kbd", {
+  fontFamily: "SFMono-Regular , Menlo , Monaco , Consolas , Liberation Mono , Courier New , monospace",
+  fontSize: "1em",
+  padding: "0.2rem 0.4rem",
+  fontSize: "87.5%",
+  color: "fff",
   backgroundColor: "212529",
   borderRadius: "0.2rem",
-  color: "fff",
-  fontFamily: "SFMono-Regular , Menlo , Monaco , Consolas , Liberation Mono , Courier New , monospace",
-  fontSize: "87.5%",
-  padding: "0.2rem 0.4rem",
 });
 
 globalStyle("kbd kbd", {
+  padding: "0",
   fontSize: "100%",
   fontWeight: "700",
-  padding: "0",
 });
 
 globalStyle("label", {
@@ -17512,15 +17625,15 @@ globalStyle("label", {
 });
 
 globalStyle("legend", {
-  color: "inherit",
   display: "block",
-  fontSize: "1.5rem",
-  lineHeight: "inherit",
-  marginBottom: "0.5rem",
+  width: "100%",
   maxWidth: "100%",
   padding: "0",
+  marginBottom: "0.5rem",
+  fontSize: "1.5rem",
+  lineHeight: "inherit",
+  color: "inherit",
   whiteSpace: "normal",
-  width: "100%",
 });
 
 globalStyle("main", {
@@ -17528,8 +17641,8 @@ globalStyle("main", {
 });
 
 globalStyle("mark", {
-  backgroundColor: "fcf8e3",
   padding: "0.2em",
+  backgroundColor: "fcf8e3",
 });
 
 globalStyle("nav", {
@@ -17537,8 +17650,8 @@ globalStyle("nav", {
 });
 
 globalStyle("ol", {
-  marginBottom: "1rem",
   marginTop: "0",
+  marginBottom: "1rem",
 });
 
 globalStyle("ol ol", {
@@ -17550,10 +17663,10 @@ globalStyle("ol ul", {
 });
 
 globalStyle("optgroup", {
+  margin: "0",
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
-  margin: "0",
 });
 
 globalStyle("output", {
@@ -17561,8 +17674,8 @@ globalStyle("output", {
 });
 
 globalStyle("p", {
-  marginBottom: "1rem",
   marginTop: "0",
+  marginBottom: "1rem",
   "@media": {
     "print": {
       orphans: "3",
@@ -17572,26 +17685,27 @@ globalStyle("p", {
 });
 
 globalStyle("pre", {
-  color: "212529",
-  display: "block",
   fontFamily: "SFMono-Regular , Menlo , Monaco , Consolas , Liberation Mono , Courier New , monospace",
-  fontSize: "87.5%",
-  marginBottom: "1rem",
+  fontSize: "1em",
   marginTop: "0",
-  msOverflowStyle: "scrollbar",
+  marginBottom: "1rem",
   overflow: "auto",
+  msOverflowStyle: "scrollbar",
+  display: "block",
+  fontSize: "87.5%",
+  color: "212529",
   "@media": {
     "print": {
+      whiteSpace: "pre-wrap",
       border: "1px solid adb5bd",
       pageBreakInside: "avoid",
-      whiteSpace: "pre-wrap",
     },
   },
 });
 
 globalStyle("pre code", {
-  color: "inherit",
   fontSize: "inherit",
+  color: "inherit",
   wordBreak: "normal",
 });
 
@@ -17609,22 +17723,22 @@ globalStyle("section", {
 });
 
 globalStyle("select", {
+  margin: "0",
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
-  margin: "0",
   textTransform: "none",
   wordWrap: "normal",
 });
 
 globalStyle(`select${formControl}${isInvalid}`, {
-  backgroundPosition: "right 1.5rem center",
   paddingRight: "3rem",
+  backgroundPosition: "right 1.5rem center",
 });
 
 globalStyle(`select${formControl}${isValid}`, {
-  backgroundPosition: "right 1.5rem center",
   paddingRight: "3rem",
+  backgroundPosition: "right 1.5rem center",
 });
 
 globalStyle(`select${formControl}:-moz-focusring`, {
@@ -17633,8 +17747,8 @@ globalStyle(`select${formControl}:-moz-focusring`, {
 });
 
 globalStyle(`select${formControl}:focus::-ms-value`, {
-  backgroundColor: "fff",
   color: "495057",
+  backgroundColor: "fff",
 });
 
 globalStyle(`select${formControl}[multiple]`, {
@@ -17647,6 +17761,7 @@ globalStyle(`select${formControl}[size]`, {
 
 globalStyle("small", {
   fontSize: "80%",
+  fontSize: "80%",
   fontWeight: "400",
 });
 
@@ -17655,24 +17770,24 @@ globalStyle("strong", {
 });
 
 globalStyle("sub", {
-  bottom: "-0.25em",
+  position: "relative",
   fontSize: "75%",
   lineHeight: "0",
-  position: "relative",
   verticalAlign: "baseline",
+  bottom: "-0.25em",
 });
 
 globalStyle("summary", {
-  cursor: "pointer",
   display: "list-item",
+  cursor: "pointer",
 });
 
 globalStyle("sup", {
+  position: "relative",
   fontSize: "75%",
   lineHeight: "0",
-  position: "relative",
-  top: "-0.5em",
   verticalAlign: "baseline",
+  top: "-0.5em",
 });
 
 globalStyle("svg", {
@@ -17689,10 +17804,10 @@ globalStyle("template", {
 });
 
 globalStyle("textarea", {
+  margin: "0",
   fontFamily: "inherit",
   fontSize: "inherit",
   lineHeight: "inherit",
-  margin: "0",
   overflow: "auto",
   resize: "vertical",
 });
@@ -17702,16 +17817,17 @@ globalStyle(`textarea${formControl}`, {
 });
 
 globalStyle(`textarea${formControl}${isInvalid}`, {
-  backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
   paddingRight: "calc(1.5em+0.75rem)",
+  backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
 });
 
 globalStyle(`textarea${formControl}${isValid}`, {
-  backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
   paddingRight: "calc(1.5em+0.75rem)",
+  backgroundPosition: "top calc(0.375em+0.1875rem) right calc(0.375em+0.1875rem)",
 });
 
 globalStyle("th", {
+  textAlign: "inherit",
   textAlign: "-webkit-match-parent",
 });
 
@@ -17724,8 +17840,8 @@ globalStyle("tr", {
 });
 
 globalStyle("ul", {
-  marginBottom: "1rem",
   marginTop: "0",
+  marginBottom: "1rem",
 });
 
 globalStyle("ul ol", {

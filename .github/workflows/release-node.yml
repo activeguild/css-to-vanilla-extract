@@ -19,16 +19,8 @@ jobs:
         uses: google/wireit@setup-github-actions-caching/v1
       - name: install dependencies
         run: npm ci
-      - name: check target list
-        run: rustup target list
-      - name: add target list
+      - name: add target
         run: rustup target add wasm32-wasi
-      - name: check version and add tag
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          REPO: ${{github.repository}}
-          COMMIT: ${{github.sha}}
-        run: ./packages/node/release/release.sh
       - name: release
         run: npm run publish:node
         env:

@@ -1,6 +1,6 @@
 {
   "name": "playground",
-  "version": "0.0.38-alpha",
+  "version": "0.0.39-alpha",
   "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file. for playground.",
   "main": "index.js",
   "scripts": {
@@ -25,20 +25,20 @@
   "dependencies": {
     "@monaco-editor/react": "^4.4.5",
     "modern-css-reset": "^1.4.0",
-    "monaco-editor": "^0.33.0",
+    "monaco-editor": "^0.34.0",
     "prismjs": "^1.28.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/prismjs": "^1.26.0",
-    "@types/react": "^18.0.15",
+    "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.0.0",
+    "@vitejs/plugin-react": "^2.0.1",
     "rollup-plugin-visualizer": "^5.7.1",
     "terser": "^5.14.2",
     "typescript": "^4.7.4",
-    "vite": "^3.0.4",
+    "vite": "^3.0.7",
     "vite-plugin-sass-dts": "^1.1.40",
     "vite-plugin-wasm": "^2.1.0"
   }

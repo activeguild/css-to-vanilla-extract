@@ -12,7 +12,7 @@ use crate::{
 use convert_case::{Case, Casing};
 use swc_css_ast::{ClassSelector, ComplexSelectorChildren};
 
-type KeyValuePair = BTreeMap<String, String>;
+type KeyValuePair = Vec<KeyValue>;
 type KeyValuePairInPseudo = BTreeMap<String, KeyValuePair>;
 type KeyValuePairInSelectors = BTreeMap<String, KeyValuePair>;
 
@@ -25,6 +25,12 @@ pub struct Rule {
     pub key_value_pair_in_selectors: KeyValuePairInSelectors,
     pub is_global_style: bool,
     pub is_simple_pseudo: bool,
+}
+
+#[derive(Debug, Default, Clone)]
+pub struct KeyValue {
+    pub key: String,
+    pub value: String,
 }
 
 #[derive(Debug, Default)]
@@ -87,7 +93,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                             let pseudo_map = _global_rule_map
                                 .key_value_pair_in_pseudo
                                 .entry(pseudo.0)
-                                .or_insert_with(BTreeMap::new);
+                                .or_insert_with(|| vec![]);
                             pseudo_map.extend(pseudo.1);
                         }
 
@@ -95,7 +101,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                             let selector_map = _global_rule_map
                                 .key_value_pair_in_selectors
                                 .entry(selector.0)
-                                .or_insert_with(BTreeMap::new);
+                                .or_insert_with(|| vec![]);
                             selector_map.extend(selector.1);
                         }
                     } else {
@@ -112,7 +118,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                             let pseudo_map = _rule_map
                                 .key_value_pair_in_pseudo
                                 .entry(pseudo.0.to_string())
-                                .or_insert_with(BTreeMap::new);
+                                .or_insert_with(|| vec![]);
                             pseudo_map.extend(pseudo.1);
                         }
 
@@ -120,7 +126,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                             let selector_map = _rule_map
                                 .key_value_pair_in_selectors
                                 .entry(selector.0)
-                                .or_insert_with(BTreeMap::new);
+                                .or_insert_with(|| vec![]);
                             selector_map.extend(selector.1);
                         }
                     }
@@ -207,7 +213,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                                 let pseudo_map = _global_rule_map
                                                     .key_value_pair_in_pseudo
                                                     .entry(pseudo.0)
-                                                    .or_insert_with(BTreeMap::new);
+                                                    .or_insert_with(|| vec![]);
                                                 pseudo_map.extend(pseudo.1);
                                             }
 
@@ -219,7 +225,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                             for selector in component.key_value_pair_in_selectors {
                                                 let selector_map = selectors_map
                                                     .entry(selector.0)
-                                                    .or_insert_with(BTreeMap::new);
+                                                    .or_insert_with(|| vec![]);
                                                 selector_map.extend(selector.1);
                                             }
                                         } else {
@@ -237,7 +243,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                                 let pseudo_map = _rule_map
                                                     .key_value_pair_in_pseudo
                                                     .entry(pseudo.0)
-                                                    .or_insert_with(BTreeMap::new);
+                                                    .or_insert_with(|| vec![]);
                                                 pseudo_map.extend(pseudo.1);
                                             }
 
@@ -249,7 +255,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                             for selector in component.key_value_pair_in_selectors {
                                                 let selector_map = selectors_map
                                                     .entry(selector.0)
-                                                    .or_insert_with(BTreeMap::new);
+                                                    .or_insert_with(|| vec![]);
                                                 selector_map.extend(selector.1);
                                             }
                                         }
@@ -277,7 +283,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                         let pseudo_map = _global_rule_map
                                             .key_value_pair_in_pseudo
                                             .entry(pseudo.0)
-                                            .or_insert_with(BTreeMap::new);
+                                            .or_insert_with(|| vec![]);
                                         pseudo_map.extend(pseudo.1);
                                     }
 
@@ -289,7 +295,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                     for selector in component.key_value_pair_in_selectors {
                                         let selector_map = selectors_map
                                             .entry(selector.0)
-                                            .or_insert_with(BTreeMap::new);
+                                            .or_insert_with(|| vec![]);
                                         selector_map.extend(selector.1);
                                     }
                                 } else {
@@ -307,7 +313,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                         let pseudo_map = _rule_map
                                             .key_value_pair_in_pseudo
                                             .entry(pseudo.0)
-                                            .or_insert_with(BTreeMap::new);
+                                            .or_insert_with(|| vec![]);
                                         pseudo_map.extend(pseudo.1);
                                     }
 
@@ -319,7 +325,7 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                     for selector in component.key_value_pair_in_selectors {
                                         let selector_map = selectors_map
                                             .entry(selector.0)
-                                            .or_insert_with(BTreeMap::new);
+                                            .or_insert_with(|| vec![]);
                                         selector_map.extend(selector.1);
                                     }
                                 }
@@ -342,14 +348,17 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                     if let Some(block) = &at_rule.block {
                                         for block_value in &block.value {
                                             let components = get_component_value(block_value);
-                                            for (key, value) in
+                                            for key_value in
                                                 components[0].key_value_pair.clone().into_iter()
                                             {
-                                                if key == "fontFamily" {
-                                                    font_face_key.push_str(&value);
+                                                if key_value.key == "fontFamily" {
+                                                    font_face_key.push_str(&key_value.value);
                                                 } else {
-                                                    block_values
-                                                        .push_str(&wrap_property(key, value, None));
+                                                    block_values.push_str(&wrap_property(
+                                                        key_value.key,
+                                                        key_value.value,
+                                                        None,
+                                                    ));
                                                 }
                                             }
                                         }
@@ -410,14 +419,18 @@ fn finish_to_vanilla_extract(
             || !value.selectors_in_media.is_empty()
             || !value.selectors_in_supports.is_empty();
 
-        for (key, value) in value.key_value_pair.into_iter() {
-            properties.push_str(&wrap_property(key, value, Some(2)));
+        for key_value in value.key_value_pair.into_iter() {
+            properties.push_str(&wrap_property(key_value.key, key_value.value, Some(2)));
         }
 
         if !value.key_value_pair_in_vars.is_empty() {
             let mut var_rule = String::new();
-            for (key, value) in value.key_value_pair_in_vars.into_iter() {
-                var_rule.push_str(&wrap_property(format!("\"{}\"", key), value, Some(4)));
+            for key_value in value.key_value_pair_in_vars.into_iter() {
+                var_rule.push_str(&wrap_property(
+                    format!("\"{}\"", key_value.key),
+                    key_value.value,
+                    Some(4),
+                ));
             }
             properties.push_str(&wrap_properties_with_colon(
                 "vars".to_string(),
@@ -430,8 +443,8 @@ fn finish_to_vanilla_extract(
             let mut pseudo_rule = String::new();
             for (key, value) in value.key_value_pair_in_pseudo.into_iter() {
                 let mut properties = String::new();
-                for (key, value) in value.into_iter() {
-                    properties.push_str(&wrap_property(key, value, Some(4)));
+                for key_value in value.into_iter() {
+                    properties.push_str(&wrap_property(key_value.key, key_value.value, Some(4)));
                 }
                 pseudo_rule.push_str(&wrap_properties_with_colon(key, properties, Some(2)));
             }
@@ -441,16 +454,20 @@ fn finish_to_vanilla_extract(
         if !value.media.is_empty() || !value.selectors_in_media.is_empty() {
             let mut rule = String::new();
 
-            for (key, value) in value.key_value_pair_in_media.into_iter() {
-                rule.push_str(&wrap_property(key, value, Some(6)));
+            for key_value in value.key_value_pair_in_media.into_iter() {
+                rule.push_str(&wrap_property(key_value.key, key_value.value, Some(6)));
             }
 
             for (_key, selectors_value) in value.selectors_in_media.into_iter() {
                 let mut selectors_rule = String::new();
                 for (key, value) in selectors_value.into_iter() {
                     let mut properties = String::new();
-                    for (key, value) in value.into_iter() {
-                        properties.push_str(&wrap_property(key, value, Some(10)));
+                    for key_value in value.into_iter() {
+                        properties.push_str(&wrap_property(
+                            key_value.key,
+                            key_value.value,
+                            Some(10),
+                        ));
                     }
 
                     if key.contains("${") {
@@ -485,16 +502,20 @@ fn finish_to_vanilla_extract(
         }
         if !value.supports.is_empty() || !value.selectors_in_supports.is_empty() {
             let mut rule = String::new();
-            for (key, value) in value.key_value_pair_in_supports.into_iter() {
-                rule.push_str(&wrap_property(key, value, Some(6)));
+            for key_value in value.key_value_pair_in_supports.into_iter() {
+                rule.push_str(&wrap_property(key_value.key, key_value.value, Some(6)));
             }
 
             for (_key, selectors_value) in value.selectors_in_supports.into_iter() {
                 let mut selectors_rule = String::new();
                 for (key, value) in selectors_value.into_iter() {
                     let mut properties = String::new();
-                    for (key, value) in value.into_iter() {
-                        properties.push_str(&wrap_property(key, value, Some(10)));
+                    for key_value in value.into_iter() {
+                        properties.push_str(&wrap_property(
+                            key_value.key,
+                            key_value.value,
+                            Some(10),
+                        ));
                     }
 
                     if key.contains("${") {
@@ -533,8 +554,8 @@ fn finish_to_vanilla_extract(
 
             for (key, value) in value.key_value_pair_in_selectors.into_iter() {
                 let mut properties = String::new();
-                for (key, value) in value.into_iter() {
-                    properties.push_str(&wrap_property(key, value, Some(6)));
+                for key_value in value.into_iter() {
+                    properties.push_str(&wrap_property(key_value.key, key_value.value, Some(6)));
                 }
                 if key.contains("${") {
                     selectors.push_str(&wrap_properties_with_colon(
@@ -1344,9 +1365,15 @@ pub fn get_declaration(declaration: &swc_css_ast::Declaration) -> (KeyValuePair,
     }
 
     if !dashed_ident.is_empty() {
-        key_value_pair_in_vars.insert(dashed_ident, declaration_value);
+        key_value_pair_in_vars.push(KeyValue {
+            key: dashed_ident,
+            value: declaration_value,
+        })
     } else {
-        key_value_pair.insert(declaration_name, declaration_value);
+        key_value_pair.push(KeyValue {
+            key: declaration_name,
+            value: declaration_value,
+        });
     }
 
     (key_value_pair, key_value_pair_in_vars)
@@ -1470,7 +1497,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      color: \"red\",\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      fontSize: \"5rem\",\n      color: \"red\",\n    },\n  },\n});\n\n",
             result
         )
     }
@@ -1492,7 +1519,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, style } from \"@vanilla-extract/css\"\n\nexport const display2 = style({\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      color: \"red\",\n      fontSize: \"5rem\",\n    },\n  },\n});\n\nglobalStyle(\"input\", {\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            "import { globalStyle, style } from \"@vanilla-extract/css\"\n\nexport const display2 = style({\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      fontSize: \"5rem\",\n      color: \"red\",\n    },\n  },\n});\n\nglobalStyle(\"input\", {\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
             result
         )
     }
@@ -1525,7 +1552,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { globalStyle, style } from \"@vanilla-extract/css\"\n\nexport const display2 = style({\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      color: \"red\",\n      fontSize: \"5rem\",\n    },\n  },\n});\n\nglobalStyle(\"input\", {\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            "import { globalStyle, style } from \"@vanilla-extract/css\"\n\nexport const display2 = style({\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      fontSize: \"5rem\",\n      color: \"red\",\n    },\n  },\n});\n\nglobalStyle(\"input\", {\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
             result
         )
     }
@@ -1583,7 +1610,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor: \"blue\",\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      color: \"red\",\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor: \"blue\",\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      fontSize: \"5rem\",\n      color: \"red\",\n    },\n  },\n});\n\n",
             result
         )
     }
@@ -1595,7 +1622,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor: \"blue\",\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      color: \"red\",\n      fontSize: \"5rem\",\n    },\n  },\n});\n\n",
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const display1 = style({\n  backgroundColor: \"blue\",\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      fontSize: \"5rem\",\n      color: \"red\",\n    },\n  },\n});\n\n",
             result
         )
     }
