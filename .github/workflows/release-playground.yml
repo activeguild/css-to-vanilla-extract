@@ -28,7 +28,7 @@ jobs:
       - name: build - playground
         run: npm run build:playground
       - name: publish - playground
-        run: npx netlify-cli deploy --dir=packages/playground/dis --build --prod
+        run: npx netlify-cli deploy --dir=packages/playground/dist --build --prod
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
