@@ -1427,12 +1427,12 @@ mod tests {
 
     #[test]
     fn ast_to_vanilla_extract_01() {
-        let parsed_css = parse_css(".foo,.b-a-r:hover {position: absolute;}").unwrap();
+        let parsed_css = parse_css(".foo,.b-a-r:hover {position: absolute;color: #fff;}").unwrap();
 
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { style } from \"@vanilla-extract/css\"\n\nexport const bAR = style({\n  \":hover\": {\n    position: \"absolute\",\n  },\n});\n\nexport const foo = style({\n  position: \"absolute\",\n});\n\n",
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const bAR = style({\n  \":hover\": {\n    position: \"absolute\",\n    color: \"#fff\",\n  },\n});\n\nexport const foo = style({\n  position: \"absolute\",\n  color: \"#fff\",\n});\n\n",
             result
         )
     }
