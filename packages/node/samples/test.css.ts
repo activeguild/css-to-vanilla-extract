@@ -33,7 +33,7 @@ export const accordionButton = style({
     "(min-width: 1200px)": {
       "selectors": {
         "&:not": {
-          color: "0c63e4",
+          color: "#0c63e4",
         },
         "&:not::after": {
           transform: "rotate(-180deg)",

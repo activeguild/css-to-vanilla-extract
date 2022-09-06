@@ -182,23 +182,23 @@ export const alignTop = style({
 });
 
 export const badgeDanger = style({
-  color: "fff",
-  backgroundColor: "dc3545",
+  color: "#fff",
+  backgroundColor: "#dc3545",
 });
 
 export const badgeDark = style({
-  color: "fff",
-  backgroundColor: "343a40",
+  color: "#fff",
+  backgroundColor: "#343a40",
 });
 
 export const badgeInfo = style({
-  color: "fff",
-  backgroundColor: "17a2b8",
+  color: "#fff",
+  backgroundColor: "#17a2b8",
 });
 
 export const badgeLight = style({
-  color: "212529",
-  backgroundColor: "f8f9fa",
+  color: "#212529",
+  backgroundColor: "#f8f9fa",
 });
 
 export const badgePill = style({
@@ -208,51 +208,51 @@ export const badgePill = style({
 });
 
 export const badgePrimary = style({
-  color: "fff",
-  backgroundColor: "007bff",
+  color: "#fff",
+  backgroundColor: "#007bff",
 });
 
 export const badgeSecondary = style({
-  color: "fff",
-  backgroundColor: "6c757d",
+  color: "#fff",
+  backgroundColor: "#6c757d",
 });
 
 export const badgeSuccess = style({
-  color: "fff",
-  backgroundColor: "28a745",
+  color: "#fff",
+  backgroundColor: "#28a745",
 });
 
 export const badgeWarning = style({
-  color: "212529",
-  backgroundColor: "ffc107",
+  color: "#212529",
+  backgroundColor: "#ffc107",
 });
 
 export const bgDanger = style({
-  backgroundColor: "dc3545",
+  backgroundColor: "#dc3545",
 });
 
 export const bgDark = style({
-  backgroundColor: "343a40",
+  backgroundColor: "#343a40",
 });
 
 export const bgInfo = style({
-  backgroundColor: "17a2b8",
+  backgroundColor: "#17a2b8",
 });
 
 export const bgLight = style({
-  backgroundColor: "f8f9fa",
+  backgroundColor: "#f8f9fa",
 });
 
 export const bgPrimary = style({
-  backgroundColor: "007bff",
+  backgroundColor: "#007bff",
 });
 
 export const bgSecondary = style({
-  backgroundColor: "6c757d",
+  backgroundColor: "#6c757d",
 });
 
 export const bgSuccess = style({
-  backgroundColor: "28a745",
+  backgroundColor: "#28a745",
 });
 
 export const bgTransparent = style({
@@ -260,11 +260,11 @@ export const bgTransparent = style({
 });
 
 export const bgWarning = style({
-  backgroundColor: "ffc107",
+  backgroundColor: "#ffc107",
 });
 
 export const bgWhite = style({
-  backgroundColor: "fff",
+  backgroundColor: "#fff",
 });
 
 export const blockquote = style({
@@ -275,14 +275,14 @@ export const blockquote = style({
 export const blockquoteFooter = style({
   display: "block",
   fontSize: "80%",
-  color: "6c757d",
+  color: "#6c757d",
   "::before": {
     content: "— ",
   },
 });
 
 export const border = style({
-  border: "1px solid dee2e6",
+  border: "1px solid #dee2e6",
 });
 
 export const border0 = style({
@@ -290,7 +290,7 @@ export const border0 = style({
 });
 
 export const borderBottom = style({
-  borderBottom: "1px solid dee2e6",
+  borderBottom: "1px solid #dee2e6",
 });
 
 export const borderBottom0 = style({
@@ -298,19 +298,19 @@ export const borderBottom0 = style({
 });
 
 export const borderDanger = style({
-  borderColor: "dc3545",
+  borderColor: "#dc3545",
 });
 
 export const borderDark = style({
-  borderColor: "343a40",
+  borderColor: "#343a40",
 });
 
 export const borderInfo = style({
-  borderColor: "17a2b8",
+  borderColor: "#17a2b8",
 });
 
 export const borderLeft = style({
-  borderLeft: "1px solid dee2e6",
+  borderLeft: "1px solid #dee2e6",
 });
 
 export const borderLeft0 = style({
@@ -318,15 +318,15 @@ export const borderLeft0 = style({
 });
 
 export const borderLight = style({
-  borderColor: "f8f9fa",
+  borderColor: "#f8f9fa",
 });
 
 export const borderPrimary = style({
-  borderColor: "007bff",
+  borderColor: "#007bff",
 });
 
 export const borderRight = style({
-  borderRight: "1px solid dee2e6",
+  borderRight: "1px solid #dee2e6",
 });
 
 export const borderRight0 = style({
@@ -334,15 +334,15 @@ export const borderRight0 = style({
 });
 
 export const borderSecondary = style({
-  borderColor: "6c757d",
+  borderColor: "#6c757d",
 });
 
 export const borderSuccess = style({
-  borderColor: "28a745",
+  borderColor: "#28a745",
 });
 
 export const borderTop = style({
-  borderTop: "1px solid dee2e6",
+  borderTop: "1px solid #dee2e6",
 });
 
 export const borderTop0 = style({
@@ -350,11 +350,11 @@ export const borderTop0 = style({
 });
 
 export const borderWarning = style({
-  borderColor: "ffc107",
+  borderColor: "#ffc107",
 });
 
 export const borderWhite = style({
-  borderColor: "fff",
+  borderColor: "#fff",
 });
 
 export const breadcrumb = style({
@@ -365,7 +365,7 @@ export const breadcrumb = style({
   padding: "0.75rem 1rem",
   marginBottom: "1rem",
   listStyle: "none",
-  backgroundColor: "e9ecef",
+  backgroundColor: "#e9ecef",
   borderRadius: "0.25rem",
 });
 
@@ -460,7 +460,7 @@ export const carouselCaption = style({
   zIndex: "10",
   paddingTop: "20px",
   paddingBottom: "20px",
-  color: "fff",
+  color: "#fff",
   textAlign: "center",
 });
 
@@ -744,7 +744,7 @@ export const dropdownDivider = style({
   height: "0",
   margin: "0.5rem 0",
   overflow: "hidden",
-  borderTop: "1px solid e9ecef",
+  borderTop: "1px solid #e9ecef",
 });
 
 export const dropdownHeader = style({
@@ -752,14 +752,14 @@ export const dropdownHeader = style({
   padding: "0.5rem 1.5rem",
   marginBottom: "0",
   fontSize: "0.875rem",
-  color: "6c757d",
+  color: "#6c757d",
   whiteSpace: "nowrap",
 });
 
 export const dropdownItemText = style({
   display: "block",
   padding: "0.25rem 1.5rem",
-  color: "212529",
+  color: "#212529",
 });
 
 export const dropdownMenuLeft = style({
@@ -802,7 +802,7 @@ export const figure = style({
 
 export const figureCaption = style({
   fontSize: "90%",
-  color: "6c757d",
+  color: "#6c757d",
 });
 
 export const figureImg = style({
@@ -1040,8 +1040,8 @@ export const imgFluid = style({
 
 export const imgThumbnail = style({
   padding: "0.25rem",
-  backgroundColor: "fff",
-  border: "1px solid dee2e6",
+  backgroundColor: "#fff",
+  border: "1px solid #dee2e6",
   borderRadius: "0.25rem",
   maxWidth: "100%",
   height: "auto",
@@ -1100,23 +1100,23 @@ export const lead = style({
 
 export const listGroupItemAction = style({
   width: "100%",
-  color: "495057",
+  color: "#495057",
   textAlign: "inherit",
   ":active": {
-    color: "212529",
-    backgroundColor: "e9ecef",
+    color: "#212529",
+    backgroundColor: "#e9ecef",
   },
   ":focus": {
     zIndex: "1",
-    color: "495057",
+    color: "#495057",
     textDecoration: "none",
-    backgroundColor: "f8f9fa",
+    backgroundColor: "#f8f9fa",
   },
   ":hover": {
     zIndex: "1",
-    color: "495057",
+    color: "#495057",
     textDecoration: "none",
-    backgroundColor: "f8f9fa",
+    backgroundColor: "#f8f9fa",
   },
 });
 
@@ -1180,7 +1180,7 @@ export const mN5 = style({
 
 export const mark = style({
   padding: "0.2em",
-  backgroundColor: "fcf8e3",
+  backgroundColor: "#fcf8e3",
 });
 
 export const mb0 = style({
@@ -1790,15 +1790,15 @@ export const pointerEvent = style({
 
 export const popoverBody = style({
   padding: "0.5rem 0.75rem",
-  color: "212529",
+  color: "#212529",
 });
 
 export const popoverHeader = style({
   padding: "0.5rem 0.75rem",
   marginBottom: "0",
   fontSize: "1rem",
-  backgroundColor: "f7f7f7",
-  borderBottom: "1px solid ebebeb",
+  backgroundColor: "#f7f7f7",
+  borderBottom: "1px solid #ebebeb",
   borderTopLeftRadius: "calc(0.3rem-1px)",
   borderTopRightRadius: "calc(0.3rem-1px)",
   ":empty": {
@@ -1863,7 +1863,7 @@ export const progress = style({
   overflow: "hidden",
   lineHeight: "0",
   fontSize: "0.75rem",
-  backgroundColor: "e9ecef",
+  backgroundColor: "#e9ecef",
   borderRadius: "0.25rem",
 });
 
@@ -2104,7 +2104,7 @@ export const textBlack50 = style({
 });
 
 export const textBody = style({
-  color: "212529",
+  color: "#212529",
 });
 
 export const textBreak = style({
@@ -2121,11 +2121,11 @@ export const textCenter = style({
 });
 
 export const textDanger = style({
-  color: "dc3545",
+  color: "#dc3545",
 });
 
 export const textDark = style({
-  color: "343a40",
+  color: "#343a40",
 });
 
 export const textDecorationNone = style({
@@ -2141,7 +2141,7 @@ export const textHide = style({
 });
 
 export const textInfo = style({
-  color: "17a2b8",
+  color: "#17a2b8",
 });
 
 export const textJustify = style({
@@ -2153,7 +2153,7 @@ export const textLeft = style({
 });
 
 export const textLight = style({
-  color: "f8f9fa",
+  color: "#f8f9fa",
 });
 
 export const textLowercase = style({
@@ -2165,7 +2165,7 @@ export const textMonospace = style({
 });
 
 export const textMuted = style({
-  color: "6c757d",
+  color: "#6c757d",
 });
 
 export const textNowrap = style({
@@ -2173,7 +2173,7 @@ export const textNowrap = style({
 });
 
 export const textPrimary = style({
-  color: "007bff",
+  color: "#007bff",
 });
 
 export const textReset = style({
@@ -2185,11 +2185,11 @@ export const textRight = style({
 });
 
 export const textSecondary = style({
-  color: "6c757d",
+  color: "#6c757d",
 });
 
 export const textSuccess = style({
-  color: "28a745",
+  color: "#28a745",
 });
 
 export const textTruncate = style({
@@ -2203,11 +2203,11 @@ export const textUppercase = style({
 });
 
 export const textWarning = style({
-  color: "ffc107",
+  color: "#ffc107",
 });
 
 export const textWhite = style({
-  color: "fff",
+  color: "#fff",
 });
 
 export const textWhite50 = style({
@@ -2231,7 +2231,7 @@ export const toastHeader = style({
   msFlexAlign: "center",
   alignItems: "center",
   padding: "0.25rem 0.75rem",
-  color: "6c757d",
+  color: "#6c757d",
   backgroundColor: "rgba(255,255,255,0.85)",
   backgroundClip: "padding-box",
   borderBottom: "1px solid rgba(0,0,0,0.05)",
@@ -2242,9 +2242,9 @@ export const toastHeader = style({
 export const tooltipInner = style({
   maxWidth: "200px",
   padding: "0.25rem 0.5rem",
-  color: "fff",
+  color: "#fff",
   textAlign: "center",
-  backgroundColor: "000",
+  backgroundColor: "#000",
   borderRadius: "0.25rem",
 });
 
@@ -2303,51 +2303,51 @@ export const wAuto = style({
 export const wasValidated = style({
   "selectors": {
     [` ${customControlInput}:invalid ~ ${customControlLabel}::before`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
     },
     [` ${customControlInput}:invalid:checked ~ ${customControlLabel}::before`]: {
-      borderColor: "e4606d",
-      backgroundColor: "e4606d",
+      borderColor: "#e4606d",
+      backgroundColor: "#e4606d",
     },
     [` ${customControlInput}:invalid:focus ~ ${customControlLabel}::before`]: {
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
     },
     [` ${customControlInput}:invalid:focus:not(:checked) ~ ${customControlLabel}::before`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
     },
     [` ${customControlInput}:valid ~ ${customControlLabel}::before`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
     },
     [` ${customControlInput}:valid:checked ~ ${customControlLabel}::before`]: {
-      borderColor: "34ce57",
-      backgroundColor: "34ce57",
+      borderColor: "#34ce57",
+      backgroundColor: "#34ce57",
     },
     [` ${customControlInput}:valid:focus ~ ${customControlLabel}::before`]: {
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
     },
     [` ${customControlInput}:valid:focus:not(:checked) ~ ${customControlLabel}::before`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
     },
     [` ${customSelect}:invalid`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
       paddingRight: "calc(0.75em+2.3125rem)",
-      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
+      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , #fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
     },
     [` ${customSelect}:invalid:focus`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
     },
     [` ${customSelect}:valid`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
       paddingRight: "calc(0.75em+2.3125rem)",
-      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
+      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , #fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
     },
     [` ${customSelect}:valid:focus`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
     },
     [` ${formControl}:invalid`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
       paddingRight: "calc(1.5em+0.75rem)",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
       backgroundRepeat: "no-repeat",
@@ -2355,11 +2355,11 @@ export const wasValidated = style({
       backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
     },
     [` ${formControl}:invalid:focus`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
     },
     [` ${formControl}:valid`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
       paddingRight: "calc(1.5em+0.75rem)",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
       backgroundRepeat: "no-repeat",
@@ -2367,7 +2367,7 @@ export const wasValidated = style({
       backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
     },
     [` ${formControl}:valid:focus`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
     },
     [` select${formControl}:invalid`]: {
@@ -2428,49 +2428,49 @@ export const theadDark = style({
 });
 
 export const tableWarning = style({
-  backgroundColor: "ffeeba",
+  backgroundColor: "#ffeeba",
   "selectors": {
     "& > td": {
-      backgroundColor: "ffeeba",
+      backgroundColor: "#ffeeba",
     },
     "& > th": {
-      backgroundColor: "ffeeba",
+      backgroundColor: "#ffeeba",
     },
     "& tbody + tbody": {
-      borderColor: "ffdf7e",
+      borderColor: "#ffdf7e",
     },
     "& td": {
-      borderColor: "ffdf7e",
+      borderColor: "#ffdf7e",
     },
     "& th": {
-      borderColor: "ffdf7e",
+      borderColor: "#ffdf7e",
     },
     "& thead th": {
-      borderColor: "ffdf7e",
+      borderColor: "#ffdf7e",
     },
   },
 });
 
 export const tableSuccess = style({
-  backgroundColor: "c3e6cb",
+  backgroundColor: "#c3e6cb",
   "selectors": {
     "& > td": {
-      backgroundColor: "c3e6cb",
+      backgroundColor: "#c3e6cb",
     },
     "& > th": {
-      backgroundColor: "c3e6cb",
+      backgroundColor: "#c3e6cb",
     },
     "& tbody + tbody": {
-      borderColor: "8fd19e",
+      borderColor: "#8fd19e",
     },
     "& td": {
-      borderColor: "8fd19e",
+      borderColor: "#8fd19e",
     },
     "& th": {
-      borderColor: "8fd19e",
+      borderColor: "#8fd19e",
     },
     "& thead th": {
-      borderColor: "8fd19e",
+      borderColor: "#8fd19e",
     },
   },
 });
@@ -2484,25 +2484,25 @@ export const tableStriped = style({
 });
 
 export const tableSecondary = style({
-  backgroundColor: "d6d8db",
+  backgroundColor: "#d6d8db",
   "selectors": {
     "& > td": {
-      backgroundColor: "d6d8db",
+      backgroundColor: "#d6d8db",
     },
     "& > th": {
-      backgroundColor: "d6d8db",
+      backgroundColor: "#d6d8db",
     },
     "& tbody + tbody": {
-      borderColor: "b3b7bb",
+      borderColor: "#b3b7bb",
     },
     "& td": {
-      borderColor: "b3b7bb",
+      borderColor: "#b3b7bb",
     },
     "& th": {
-      borderColor: "b3b7bb",
+      borderColor: "#b3b7bb",
     },
     "& thead th": {
-      borderColor: "b3b7bb",
+      borderColor: "#b3b7bb",
     },
   },
 });
@@ -2552,73 +2552,73 @@ export const tableResponsiveLg = style({
 });
 
 export const tablePrimary = style({
-  backgroundColor: "b8daff",
+  backgroundColor: "#b8daff",
   "selectors": {
     "& > td": {
-      backgroundColor: "b8daff",
+      backgroundColor: "#b8daff",
     },
     "& > th": {
-      backgroundColor: "b8daff",
+      backgroundColor: "#b8daff",
     },
     "& tbody + tbody": {
-      borderColor: "7abaff",
+      borderColor: "#7abaff",
     },
     "& td": {
-      borderColor: "7abaff",
+      borderColor: "#7abaff",
     },
     "& th": {
-      borderColor: "7abaff",
+      borderColor: "#7abaff",
     },
     "& thead th": {
-      borderColor: "7abaff",
+      borderColor: "#7abaff",
     },
   },
 });
 
 export const tableLight = style({
-  backgroundColor: "fdfdfe",
+  backgroundColor: "#fdfdfe",
   "selectors": {
     "& > td": {
-      backgroundColor: "fdfdfe",
+      backgroundColor: "#fdfdfe",
     },
     "& > th": {
-      backgroundColor: "fdfdfe",
+      backgroundColor: "#fdfdfe",
     },
     "& tbody + tbody": {
-      borderColor: "fbfcfc",
+      borderColor: "#fbfcfc",
     },
     "& td": {
-      borderColor: "fbfcfc",
+      borderColor: "#fbfcfc",
     },
     "& th": {
-      borderColor: "fbfcfc",
+      borderColor: "#fbfcfc",
     },
     "& thead th": {
-      borderColor: "fbfcfc",
+      borderColor: "#fbfcfc",
     },
   },
 });
 
 export const tableInfo = style({
-  backgroundColor: "bee5eb",
+  backgroundColor: "#bee5eb",
   "selectors": {
     "& > td": {
-      backgroundColor: "bee5eb",
+      backgroundColor: "#bee5eb",
     },
     "& > th": {
-      backgroundColor: "bee5eb",
+      backgroundColor: "#bee5eb",
     },
     "& tbody + tbody": {
-      borderColor: "86cfda",
+      borderColor: "#86cfda",
     },
     "& td": {
-      borderColor: "86cfda",
+      borderColor: "#86cfda",
     },
     "& th": {
-      borderColor: "86cfda",
+      borderColor: "#86cfda",
     },
     "& thead th": {
-      borderColor: "86cfda",
+      borderColor: "#86cfda",
     },
   },
 });
@@ -2635,79 +2635,79 @@ export const tableHover = style({
       backgroundColor: "rgba(0,0,0,0.075)",
     },
     [` ${tableDanger}:hover`]: {
-      backgroundColor: "f1b0b7",
+      backgroundColor: "#f1b0b7",
     },
     [` ${tableDanger}:hover > td`]: {
-      backgroundColor: "f1b0b7",
+      backgroundColor: "#f1b0b7",
     },
     [` ${tableDanger}:hover > th`]: {
-      backgroundColor: "f1b0b7",
+      backgroundColor: "#f1b0b7",
     },
     [` ${tableDark}:hover`]: {
-      backgroundColor: "b9bbbe",
+      backgroundColor: "#b9bbbe",
     },
     [` ${tableDark}:hover > td`]: {
-      backgroundColor: "b9bbbe",
+      backgroundColor: "#b9bbbe",
     },
     [` ${tableDark}:hover > th`]: {
-      backgroundColor: "b9bbbe",
+      backgroundColor: "#b9bbbe",
     },
     [` ${tableInfo}:hover`]: {
-      backgroundColor: "abdde5",
+      backgroundColor: "#abdde5",
     },
     [` ${tableInfo}:hover > td`]: {
-      backgroundColor: "abdde5",
+      backgroundColor: "#abdde5",
     },
     [` ${tableInfo}:hover > th`]: {
-      backgroundColor: "abdde5",
+      backgroundColor: "#abdde5",
     },
     [` ${tableLight}:hover`]: {
-      backgroundColor: "ececf6",
+      backgroundColor: "#ececf6",
     },
     [` ${tableLight}:hover > td`]: {
-      backgroundColor: "ececf6",
+      backgroundColor: "#ececf6",
     },
     [` ${tableLight}:hover > th`]: {
-      backgroundColor: "ececf6",
+      backgroundColor: "#ececf6",
     },
     [` ${tablePrimary}:hover`]: {
-      backgroundColor: "9fcdff",
+      backgroundColor: "#9fcdff",
     },
     [` ${tablePrimary}:hover > td`]: {
-      backgroundColor: "9fcdff",
+      backgroundColor: "#9fcdff",
     },
     [` ${tablePrimary}:hover > th`]: {
-      backgroundColor: "9fcdff",
+      backgroundColor: "#9fcdff",
     },
     [` ${tableSecondary}:hover`]: {
-      backgroundColor: "c8cbcf",
+      backgroundColor: "#c8cbcf",
     },
     [` ${tableSecondary}:hover > td`]: {
-      backgroundColor: "c8cbcf",
+      backgroundColor: "#c8cbcf",
     },
     [` ${tableSecondary}:hover > th`]: {
-      backgroundColor: "c8cbcf",
+      backgroundColor: "#c8cbcf",
     },
     [` ${tableSuccess}:hover`]: {
-      backgroundColor: "b1dfbb",
+      backgroundColor: "#b1dfbb",
     },
     [` ${tableSuccess}:hover > td`]: {
-      backgroundColor: "b1dfbb",
+      backgroundColor: "#b1dfbb",
     },
     [` ${tableSuccess}:hover > th`]: {
-      backgroundColor: "b1dfbb",
+      backgroundColor: "#b1dfbb",
     },
     [` ${tableWarning}:hover`]: {
-      backgroundColor: "ffe8a1",
+      backgroundColor: "#ffe8a1",
     },
     [` ${tableWarning}:hover > td`]: {
-      backgroundColor: "ffe8a1",
+      backgroundColor: "#ffe8a1",
     },
     [` ${tableWarning}:hover > th`]: {
-      backgroundColor: "ffe8a1",
+      backgroundColor: "#ffe8a1",
     },
     "& tbody tr:hover": {
-      color: "212529",
+      color: "#212529",
       backgroundColor: "rgba(0,0,0,0.075)",
     },
   },
@@ -2764,7 +2764,7 @@ export const show = style({
       boxShadow: "0 0 0 0.2rem rgba(222,170,12,0.5)",
     },
     [`${navbarDark} ${navbarNav} ${navLink}&`]: {
-      color: "fff",
+      color: "#fff",
     },
     [`${navbarLight} ${navbarNav} ${navLink}&`]: {
       color: "rgba(0,0,0,0.9)",
@@ -2795,7 +2795,7 @@ export const popover = style({
   lineBreak: "auto",
   fontSize: "0.875rem",
   wordWrap: "break-word",
-  backgroundColor: "fff",
+  backgroundColor: "#fff",
   backgroundClip: "padding-box",
   border: "1px solid rgba(0,0,0,0.2)",
   borderRadius: "0.3rem",
@@ -2959,10 +2959,10 @@ export const navbarExpandLg = style({
 export const navbarDark = style({
   "selectors": {
     [` ${navbarBrand}:focus`]: {
-      color: "fff",
+      color: "#fff",
     },
     [` ${navbarBrand}:hover`]: {
-      color: "fff",
+      color: "#fff",
     },
     [` ${navbarNav} ${navLink}:focus`]: {
       color: "rgba(255,255,255,0.75)",
@@ -2971,13 +2971,13 @@ export const navbarDark = style({
       color: "rgba(255,255,255,0.75)",
     },
     [` ${navbarText} a`]: {
-      color: "fff",
+      color: "#fff",
     },
     [` ${navbarText} a:focus`]: {
-      color: "fff",
+      color: "#fff",
     },
     [` ${navbarText} a:hover`]: {
-      color: "fff",
+      color: "#fff",
     },
   },
 });
@@ -3001,13 +3001,13 @@ export const navbar = style({
 });
 
 export const navTabs = style({
-  borderBottom: "1px solid dee2e6",
+  borderBottom: "1px solid #dee2e6",
   "selectors": {
     [` ${navLink}:focus`]: {
-      borderColor: "e9ecef e9ecef dee2e6",
+      borderColor: "#e9ecef #e9ecef #dee2e6",
     },
     [` ${navLink}:hover`]: {
-      borderColor: "e9ecef e9ecef dee2e6",
+      borderColor: "#e9ecef #e9ecef #dee2e6",
     },
   },
 });
@@ -3051,7 +3051,7 @@ export const navLink = style({
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "6c757d",
+      color: "#6c757d",
       pointerEvents: "none",
       cursor: "default",
     },
@@ -3068,16 +3068,16 @@ export const navLink = style({
       textAlign: "center",
     },
     [`${navPills} ${show} > &`]: {
-      color: "fff",
-      backgroundColor: "007bff",
+      color: "#fff",
+      backgroundColor: "#007bff",
     },
     [`${navPills} &`]: {
       borderRadius: "0.25rem",
     },
     [`${navTabs} ${navItem}${show} &`]: {
-      color: "495057",
-      backgroundColor: "fff",
-      borderColor: "dee2e6 dee2e6 fff",
+      color: "#495057",
+      backgroundColor: "#fff",
+      borderColor: "#dee2e6 #dee2e6 #fff",
     },
     [`${navTabs} &`]: {
       marginBottom: "-1px",
@@ -3086,10 +3086,10 @@ export const navLink = style({
       borderTopRightRadius: "0.25rem",
     },
     [`${navbarDark} ${navbarNav} ${active} > &`]: {
-      color: "fff",
+      color: "#fff",
     },
     [`${navbarDark} ${navbarNav} ${show} > &`]: {
-      color: "fff",
+      color: "#fff",
     },
     [`${navbarDark} ${navbarNav} &`]: {
       color: "rgba(255,255,255,0.5)",
@@ -3122,7 +3122,7 @@ export const modalHeader = style({
   msFlexPack: "justify",
   justifyContent: "space-between",
   padding: "1rem 1rem",
-  borderBottom: "1px solid dee2e6",
+  borderBottom: "1px solid #dee2e6",
   borderTopLeftRadius: "calc(0.3rem-1px)",
   borderTopRightRadius: "calc(0.3rem-1px)",
   "selectors": {
@@ -3185,12 +3185,12 @@ export const listGroupItem = style({
   position: "relative",
   display: "block",
   padding: "0.75rem 1.25rem",
-  backgroundColor: "fff",
+  backgroundColor: "#fff",
   border: "1px solid rgba(0,0,0,0.125)",
   ":disabled": {
-    color: "6c757d",
+    color: "#6c757d",
     pointerEvents: "none",
-    backgroundColor: "fff",
+    backgroundColor: "#fff",
   },
   ":first-child": {
     borderTopLeftRadius: "inherit",
@@ -3231,14 +3231,14 @@ export const listGroupItem = style({
   "selectors": {
     [`${active}`]: {
       zIndex: "2",
-      color: "fff",
-      backgroundColor: "007bff",
-      borderColor: "007bff",
+      color: "#fff",
+      backgroundColor: "#007bff",
+      borderColor: "#007bff",
     },
     [`${disabled}`]: {
-      color: "6c757d",
+      color: "#6c757d",
       pointerEvents: "none",
-      backgroundColor: "fff",
+      backgroundColor: "#fff",
     },
     [`${listGroupFlush} > &`]: {
       borderWidth: "0 0 1px",
@@ -3373,11 +3373,11 @@ export const inputGroupText = style({
   fontSize: "1rem",
   fontWeight: "400",
   lineHeight: "1.5",
-  color: "495057",
+  color: "#495057",
   textAlign: "center",
   whiteSpace: "nowrap",
-  backgroundColor: "e9ecef",
-  border: "1px solid ced4da",
+  backgroundColor: "#e9ecef",
+  border: "1px solid #ced4da",
   borderRadius: "0.25rem",
   "selectors": {
     "& input[type='checkbox']": {
@@ -3615,7 +3615,7 @@ export const formControlPlaintext = style({
   marginBottom: "0",
   fontSize: "1rem",
   lineHeight: "1.5",
-  color: "212529",
+  color: "#212529",
   backgroundColor: "transparent",
   border: "solid transparent",
   borderWidth: "1px 0",
@@ -3656,36 +3656,36 @@ export const formControl = style({
   fontSize: "1rem",
   fontWeight: "400",
   lineHeight: "1.5",
-  color: "495057",
-  backgroundColor: "fff",
+  color: "#495057",
+  backgroundColor: "#fff",
   backgroundClip: "padding-box",
-  border: "1px solid ced4da",
+  border: "1px solid #ced4da",
   borderRadius: "0.25rem",
   transition: "border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
   ":-ms-input-placeholder": {
-    color: "6c757d",
+    color: "#6c757d",
     opacity: "1",
   },
   "::-moz-placeholder": {
-    color: "6c757d",
+    color: "#6c757d",
     opacity: "1",
   },
   "::-webkit-input-placeholder": {
-    color: "6c757d",
+    color: "#6c757d",
     opacity: "1",
   },
   "::placeholder": {
-    color: "6c757d",
+    color: "#6c757d",
     opacity: "1",
   },
   ":disabled": {
-    backgroundColor: "e9ecef",
+    backgroundColor: "#e9ecef",
     opacity: "1",
   },
   ":focus": {
-    color: "495057",
-    backgroundColor: "fff",
-    borderColor: "80bdff",
+    color: "#495057",
+    backgroundColor: "#fff",
+    borderColor: "#80bdff",
     outline: "0",
     boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
   },
@@ -3735,7 +3735,7 @@ export const formControl = style({
       marginBottom: "0",
     },
     [`${isInvalid}`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
       paddingRight: "calc(1.5em+0.75rem)",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e)",
       backgroundRepeat: "no-repeat",
@@ -3743,11 +3743,11 @@ export const formControl = style({
       backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
     },
     [`${isInvalid}:focus`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
     },
     [`${isValid}`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
       paddingRight: "calc(1.5em+0.75rem)",
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e)",
       backgroundRepeat: "no-repeat",
@@ -3755,7 +3755,7 @@ export const formControl = style({
       backgroundSize: "calc(0.75em+0.375rem) calc(0.75em+0.375rem)",
     },
     [`${isValid}:focus`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
     },
     "&::-ms-expand": {
@@ -3763,11 +3763,11 @@ export const formControl = style({
       border: "0",
     },
     "&::-ms-input-placeholder": {
-      color: "6c757d",
+      color: "#6c757d",
       opacity: "1",
     },
     "&[readonly]": {
-      backgroundColor: "e9ecef",
+      backgroundColor: "#e9ecef",
       opacity: "1",
     },
   },
@@ -3850,7 +3850,7 @@ export const dropleft = style({
 export const disabled = style({
   "selectors": {
     [`${navTabs} ${navLink}&`]: {
-      color: "6c757d",
+      color: "#6c757d",
       backgroundColor: "transparent",
       borderColor: "transparent",
     },
@@ -3871,21 +3871,21 @@ export const customSelect = style({
   fontSize: "1rem",
   fontWeight: "400",
   lineHeight: "1.5",
-  color: "495057",
+  color: "#495057",
   verticalAlign: "middle",
-  background: "fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat",
-  border: "1px solid ced4da",
+  background: "#fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat",
+  border: "1px solid #ced4da",
   borderRadius: "0.25rem",
   WebkitAppearance: "none",
   MozAppearance: "none",
   appearance: "none",
   transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
   ":disabled": {
-    color: "6c757d",
-    backgroundColor: "e9ecef",
+    color: "#6c757d",
+    backgroundColor: "#e9ecef",
   },
   ":focus": {
-    borderColor: "80bdff",
+    borderColor: "#80bdff",
     outline: "0",
     boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
   },
@@ -3937,33 +3937,33 @@ export const customSelect = style({
       marginBottom: "0",
     },
     [`${isInvalid}`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
       paddingRight: "calc(0.75em+2.3125rem)",
-      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
+      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , #fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
     },
     [`${isInvalid}:focus`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
     },
     [`${isValid}`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
       paddingRight: "calc(0.75em+2.3125rem)",
-      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
+      background: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center / 8px 10px no-repeat , #fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e) center right 1.75rem / calc(0.75em+0.375rem) calc(0.75em+0.375rem) no-repeat",
     },
     [`${isValid}:focus`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
     },
     "&:-moz-focusring": {
       color: "transparent",
-      textShadow: "0 0 0 495057",
+      textShadow: "0 0 0 #495057",
     },
     "&::-ms-expand": {
       display: "none",
     },
     "&:focus::-ms-value": {
-      color: "495057",
-      backgroundColor: "fff",
+      color: "#495057",
+      backgroundColor: "#fff",
     },
     "&[multiple]": {
       height: "auto",
@@ -3989,9 +3989,9 @@ export const customFileLabel = style({
   overflow: "hidden",
   fontWeight: "400",
   lineHeight: "1.5",
-  color: "495057",
-  backgroundColor: "fff",
-  border: "1px solid ced4da",
+  color: "#495057",
+  backgroundColor: "#fff",
+  border: "1px solid #ced4da",
   borderRadius: "0.25rem",
   transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
   "::after": {
@@ -4004,9 +4004,9 @@ export const customFileLabel = style({
     height: "calc(1.5em+0.75rem)",
     padding: "0.375rem 0.75rem",
     lineHeight: "1.5",
-    color: "495057",
+    color: "#495057",
     content: "Browse",
-    backgroundColor: "e9ecef",
+    backgroundColor: "#e9ecef",
     borderLeft: "inherit",
     borderRadius: "0 0.25rem 0.25rem 0",
   },
@@ -4017,28 +4017,28 @@ export const customFileLabel = style({
   },
   "selectors": {
     [`${customFileInput}${isInvalid} ~ &`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
     },
     [`${customFileInput}${isInvalid}:focus ~ &`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
     },
     [`${customFileInput}${isValid} ~ &`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
     },
     [`${customFileInput}${isValid}:focus ~ &`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
     },
     [`${customFileInput}:disabled ~ &`]: {
-      backgroundColor: "e9ecef",
+      backgroundColor: "#e9ecef",
     },
     [`${customFileInput}:focus ~ &`]: {
-      borderColor: "80bdff",
+      borderColor: "#80bdff",
       boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
     },
     [`${customFileInput}[disabled] ~ &`]: {
-      backgroundColor: "e9ecef",
+      backgroundColor: "#e9ecef",
     },
     [`${inputGroup} > ${customFile} ${customFileInput}:focus ~ &`]: {
       zIndex: "3",
@@ -4060,17 +4060,17 @@ export const customFileLabel = style({
       borderBottomRightRadius: "0",
     },
     [`${wasValidated} ${customFileInput}:invalid ~ &`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
     },
     [`${wasValidated} ${customFileInput}:invalid:focus ~ &`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
     },
     [`${wasValidated} ${customFileInput}:valid ~ &`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
     },
     [`${wasValidated} ${customFileInput}:valid:focus ~ &`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
     },
   },
@@ -4099,8 +4099,8 @@ export const customControlLabel = style({
     height: "1rem",
     pointerEvents: "none",
     content: "",
-    backgroundColor: "fff",
-    border: "adb5bd solid 1px",
+    backgroundColor: "#fff",
+    border: "#adb5bd solid 1px",
     transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
     transition: "none",
   },
@@ -4115,22 +4115,22 @@ export const customControlLabel = style({
   },
   "selectors": {
     [`${customControlInput}${isInvalid} ~ &`]: {
-      color: "dc3545",
+      color: "#dc3545",
     },
     [`${customControlInput}${isValid} ~ &`]: {
-      color: "28a745",
+      color: "#28a745",
     },
     [`${customControlInput}:disabled ~ &`]: {
-      color: "6c757d",
+      color: "#6c757d",
     },
     [`${customControlInput}[disabled] ~ &`]: {
-      color: "6c757d",
+      color: "#6c757d",
     },
     [`${wasValidated} ${customControlInput}:invalid ~ &`]: {
-      color: "dc3545",
+      color: "#dc3545",
     },
     [`${wasValidated} ${customControlInput}:valid ~ &`]: {
-      color: "28a745",
+      color: "#28a745",
     },
   },
 });
@@ -4144,52 +4144,52 @@ export const customControlInput = style({
   opacity: "0",
   "selectors": {
     [`${isInvalid} ~ ${customControlLabel}::before`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
     },
     [`${isInvalid}:checked ~ ${customControlLabel}::before`]: {
-      borderColor: "e4606d",
-      backgroundColor: "e4606d",
+      borderColor: "#e4606d",
+      backgroundColor: "#e4606d",
     },
     [`${isInvalid}:focus ~ ${customControlLabel}::before`]: {
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.25)",
     },
     [`${isInvalid}:focus:not(:checked) ~ ${customControlLabel}::before`]: {
-      borderColor: "dc3545",
+      borderColor: "#dc3545",
     },
     [`${isValid} ~ ${customControlLabel}::before`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
     },
     [`${isValid}:checked ~ ${customControlLabel}::before`]: {
-      borderColor: "34ce57",
-      backgroundColor: "34ce57",
+      borderColor: "#34ce57",
+      backgroundColor: "#34ce57",
     },
     [`${isValid}:focus ~ ${customControlLabel}::before`]: {
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.25)",
     },
     [`${isValid}:focus:not(:checked) ~ ${customControlLabel}::before`]: {
-      borderColor: "28a745",
+      borderColor: "#28a745",
     },
     [`:checked ~ ${customControlLabel}::before`]: {
-      color: "fff",
-      borderColor: "007bff",
-      backgroundColor: "007bff",
+      color: "#fff",
+      borderColor: "#007bff",
+      backgroundColor: "#007bff",
     },
     [`:disabled ~ ${customControlLabel}::before`]: {
-      backgroundColor: "e9ecef",
+      backgroundColor: "#e9ecef",
     },
     [`:focus ~ ${customControlLabel}::before`]: {
       boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
     },
     [`:focus:not(:checked) ~ ${customControlLabel}::before`]: {
-      borderColor: "80bdff",
+      borderColor: "#80bdff",
     },
     [`:not(:disabled):active ~ ${customControlLabel}::before`]: {
-      color: "fff",
-      backgroundColor: "b3d7ff",
-      borderColor: "b3d7ff",
+      color: "#fff",
+      backgroundColor: "#b3d7ff",
+      borderColor: "#b3d7ff",
     },
     [`[disabled] ~ ${customControlLabel}::before`]: {
-      backgroundColor: "e9ecef",
+      backgroundColor: "#e9ecef",
     },
   },
 });
@@ -4313,7 +4313,7 @@ export const carouselIndicators = style({
       marginLeft: "3px",
       textIndent: "-999px",
       cursor: "pointer",
-      backgroundColor: "fff",
+      backgroundColor: "#fff",
       backgroundClip: "padding-box",
       borderTop: "10px solid transparent",
       borderBottom: "10px solid transparent",
@@ -4383,7 +4383,7 @@ export const card = style({
   flexDirection: "column",
   minWidth: "0",
   wordWrap: "break-word",
-  backgroundColor: "fff",
+  backgroundColor: "#fff",
   backgroundClip: "border-box",
   border: "1px solid rgba(0,0,0,0.125)",
   borderRadius: "0.25rem",
@@ -4540,7 +4540,7 @@ export const btnGroup = style({
 export const btn = style({
   display: "inline-block",
   fontWeight: "400",
-  color: "212529",
+  color: "#212529",
   textAlign: "center",
   verticalAlign: "middle",
   WebkitUserSelect: "none",
@@ -4562,7 +4562,7 @@ export const btn = style({
     boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.25)",
   },
   ":hover": {
-    color: "212529",
+    color: "#212529",
     textDecoration: "none",
   },
   "@media": {
@@ -4702,7 +4702,7 @@ export const bsTooltipTop = style({
     [` ${arrow}::before`]: {
       top: "0",
       borderWidth: "0.4rem 0.4rem 0",
-      borderTopColor: "000",
+      borderTopColor: "#000",
     },
   },
 });
@@ -4713,7 +4713,7 @@ export const bsTooltipRight = style({
     [` ${arrow}::before`]: {
       right: "0",
       borderWidth: "0.4rem 0.4rem 0.4rem 0",
-      borderRightColor: "000",
+      borderRightColor: "#000",
     },
   },
 });
@@ -4724,7 +4724,7 @@ export const bsTooltipLeft = style({
     [` ${arrow}::before`]: {
       left: "0",
       borderWidth: "0.4rem 0 0.4rem 0.4rem",
-      borderLeftColor: "000",
+      borderLeftColor: "#000",
     },
   },
 });
@@ -4735,7 +4735,7 @@ export const bsTooltipBottom = style({
     [` ${arrow}::before`]: {
       bottom: "0",
       borderWidth: "0 0.4rem 0.4rem",
-      borderBottomColor: "000",
+      borderBottomColor: "#000",
     },
   },
 });
@@ -4748,7 +4748,7 @@ export const bsTooltipAuto = style({
     [`[x-placement^='bottom'] ${arrow}::before`]: {
       bottom: "0",
       borderWidth: "0 0.4rem 0.4rem",
-      borderBottomColor: "000",
+      borderBottomColor: "#000",
     },
     "&[x-placement^='left']": {
       padding: "0 0.4rem",
@@ -4756,7 +4756,7 @@ export const bsTooltipAuto = style({
     [`[x-placement^='left'] ${arrow}::before`]: {
       left: "0",
       borderWidth: "0.4rem 0 0.4rem 0.4rem",
-      borderLeftColor: "000",
+      borderLeftColor: "#000",
     },
     "&[x-placement^='right']": {
       padding: "0 0.4rem",
@@ -4764,7 +4764,7 @@ export const bsTooltipAuto = style({
     [`[x-placement^='right'] ${arrow}::before`]: {
       right: "0",
       borderWidth: "0.4rem 0.4rem 0.4rem 0",
-      borderRightColor: "000",
+      borderRightColor: "#000",
     },
     "&[x-placement^='top']": {
       padding: "0.4rem 0",
@@ -4772,7 +4772,7 @@ export const bsTooltipAuto = style({
     [`[x-placement^='top'] ${arrow}::before`]: {
       top: "0",
       borderWidth: "0.4rem 0.4rem 0",
-      borderTopColor: "000",
+      borderTopColor: "#000",
     },
   },
 });
@@ -4783,7 +4783,7 @@ export const bsPopoverTop = style({
     [` > ${arrow}::after`]: {
       bottom: "1px",
       borderWidth: "0.5rem 0.5rem 0",
-      borderTopColor: "fff",
+      borderTopColor: "#fff",
     },
     [` > ${arrow}::before`]: {
       bottom: "0",
@@ -4799,7 +4799,7 @@ export const bsPopoverRight = style({
     [` > ${arrow}::after`]: {
       left: "1px",
       borderWidth: "0.5rem 0.5rem 0.5rem 0",
-      borderRightColor: "fff",
+      borderRightColor: "#fff",
     },
     [` > ${arrow}::before`]: {
       left: "0",
@@ -4815,7 +4815,7 @@ export const bsPopoverLeft = style({
     [` > ${arrow}::after`]: {
       right: "1px",
       borderWidth: "0.5rem 0 0.5rem 0.5rem",
-      borderLeftColor: "fff",
+      borderLeftColor: "#fff",
     },
     [` > ${arrow}::before`]: {
       right: "0",
@@ -4836,12 +4836,12 @@ export const bsPopoverBottom = style({
       width: "1rem",
       marginLeft: "-0.5rem",
       content: "",
-      borderBottom: "1px solid f7f7f7",
+      borderBottom: "1px solid #f7f7f7",
     },
     [` > ${arrow}::after`]: {
       top: "1px",
       borderWidth: "0 0.5rem 0.5rem 0.5rem",
-      borderBottomColor: "fff",
+      borderBottomColor: "#fff",
     },
     [` > ${arrow}::before`]: {
       top: "0",
@@ -4864,12 +4864,12 @@ export const bsPopoverAuto = style({
       width: "1rem",
       marginLeft: "-0.5rem",
       content: "",
-      borderBottom: "1px solid f7f7f7",
+      borderBottom: "1px solid #f7f7f7",
     },
     [`[x-placement^='bottom'] > ${arrow}::after`]: {
       top: "1px",
       borderWidth: "0 0.5rem 0.5rem 0.5rem",
-      borderBottomColor: "fff",
+      borderBottomColor: "#fff",
     },
     [`[x-placement^='bottom'] > ${arrow}::before`]: {
       top: "0",
@@ -4882,7 +4882,7 @@ export const bsPopoverAuto = style({
     [`[x-placement^='left'] > ${arrow}::after`]: {
       right: "1px",
       borderWidth: "0.5rem 0 0.5rem 0.5rem",
-      borderLeftColor: "fff",
+      borderLeftColor: "#fff",
     },
     [`[x-placement^='left'] > ${arrow}::before`]: {
       right: "0",
@@ -4895,7 +4895,7 @@ export const bsPopoverAuto = style({
     [`[x-placement^='right'] > ${arrow}::after`]: {
       left: "1px",
       borderWidth: "0.5rem 0.5rem 0.5rem 0",
-      borderRightColor: "fff",
+      borderRightColor: "#fff",
     },
     [`[x-placement^='right'] > ${arrow}::before`]: {
       left: "0",
@@ -4908,7 +4908,7 @@ export const bsPopoverAuto = style({
     [`[x-placement^='top'] > ${arrow}::after`]: {
       bottom: "1px",
       borderWidth: "0.5rem 0.5rem 0",
-      borderTopColor: "fff",
+      borderTopColor: "#fff",
     },
     [`[x-placement^='top'] > ${arrow}::before`]: {
       bottom: "0",
@@ -4919,45 +4919,45 @@ export const bsPopoverAuto = style({
 });
 
 export const alertWarning = style({
-  color: "856404",
-  backgroundColor: "fff3cd",
-  borderColor: "ffeeba",
+  color: "#856404",
+  backgroundColor: "#fff3cd",
+  borderColor: "#ffeeba",
   "selectors": {
     "& hr": {
-      borderTopColor: "ffe8a1",
+      borderTopColor: "#ffe8a1",
     },
   },
 });
 
 export const alertSuccess = style({
-  color: "155724",
-  backgroundColor: "d4edda",
-  borderColor: "c3e6cb",
+  color: "#155724",
+  backgroundColor: "#d4edda",
+  borderColor: "#c3e6cb",
   "selectors": {
     "& hr": {
-      borderTopColor: "b1dfbb",
+      borderTopColor: "#b1dfbb",
     },
   },
 });
 
 export const alertSecondary = style({
-  color: "383d41",
-  backgroundColor: "e2e3e5",
-  borderColor: "d6d8db",
+  color: "#383d41",
+  backgroundColor: "#e2e3e5",
+  borderColor: "#d6d8db",
   "selectors": {
     "& hr": {
-      borderTopColor: "c8cbcf",
+      borderTopColor: "#c8cbcf",
     },
   },
 });
 
 export const alertPrimary = style({
-  color: "004085",
-  backgroundColor: "cce5ff",
-  borderColor: "b8daff",
+  color: "#004085",
+  backgroundColor: "#cce5ff",
+  borderColor: "#b8daff",
   "selectors": {
     "& hr": {
-      borderTopColor: "9fcdff",
+      borderTopColor: "#9fcdff",
     },
   },
 });
@@ -5052,16 +5052,16 @@ export const active = style({
       borderTopWidth: "1px",
     },
     [`${navPills} ${navLink}&`]: {
-      color: "fff",
-      backgroundColor: "007bff",
+      color: "#fff",
+      backgroundColor: "#007bff",
     },
     [`${navTabs} ${navLink}&`]: {
-      color: "495057",
-      backgroundColor: "fff",
-      borderColor: "dee2e6 dee2e6 fff",
+      color: "#495057",
+      backgroundColor: "#fff",
+      borderColor: "#dee2e6 #dee2e6 #fff",
     },
     [`${navbarDark} ${navbarNav} ${navLink}&`]: {
-      color: "fff",
+      color: "#fff",
     },
     [`${navbarLight} ${navbarNav} ${navLink}&`]: {
       color: "rgba(0,0,0,0.9)",
@@ -5073,45 +5073,45 @@ export const active = style({
 });
 
 export const alertDanger = style({
-  color: "721c24",
-  backgroundColor: "f8d7da",
-  borderColor: "f5c6cb",
+  color: "#721c24",
+  backgroundColor: "#f8d7da",
+  borderColor: "#f5c6cb",
   "selectors": {
     "& hr": {
-      borderTopColor: "f1b0b7",
+      borderTopColor: "#f1b0b7",
     },
   },
 });
 
 export const alertDark = style({
-  color: "1b1e21",
-  backgroundColor: "d6d8d9",
-  borderColor: "c6c8ca",
+  color: "#1b1e21",
+  backgroundColor: "#d6d8d9",
+  borderColor: "#c6c8ca",
   "selectors": {
     "& hr": {
-      borderTopColor: "b9bbbe",
+      borderTopColor: "#b9bbbe",
     },
   },
 });
 
 export const alertInfo = style({
-  color: "0c5460",
-  backgroundColor: "d1ecf1",
-  borderColor: "bee5eb",
+  color: "#0c5460",
+  backgroundColor: "#d1ecf1",
+  borderColor: "#bee5eb",
   "selectors": {
     "& hr": {
-      borderTopColor: "abdde5",
+      borderTopColor: "#abdde5",
     },
   },
 });
 
 export const alertLight = style({
-  color: "818182",
-  backgroundColor: "fefefe",
-  borderColor: "fdfdfe",
+  color: "#818182",
+  backgroundColor: "#fefefe",
+  borderColor: "#fdfdfe",
   "selectors": {
     "& hr": {
-      borderTopColor: "ececf6",
+      borderTopColor: "#ececf6",
     },
   },
 });
@@ -5120,28 +5120,28 @@ export const alertLink = style({
   fontWeight: "700",
   "selectors": {
     [`${alertDanger} &`]: {
-      color: "491217",
+      color: "#491217",
     },
     [`${alertDark} &`]: {
-      color: "040505",
+      color: "#040505",
     },
     [`${alertInfo} &`]: {
-      color: "062c33",
+      color: "#062c33",
     },
     [`${alertLight} &`]: {
-      color: "686868",
+      color: "#686868",
     },
     [`${alertPrimary} &`]: {
-      color: "002752",
+      color: "#002752",
     },
     [`${alertSecondary} &`]: {
-      color: "202326",
+      color: "#202326",
     },
     [`${alertSuccess} &`]: {
-      color: "0b2e13",
+      color: "#0b2e13",
     },
     [`${alertWarning} &`]: {
-      color: "533f03",
+      color: "#533f03",
     },
   },
 });
@@ -5861,7 +5861,7 @@ export const badge = style({
   "@media": {
     "(prefers-reduced-motion: reduce)": {
       transition: "none",
-      border: "1px solid 000",
+      border: "1px solid #000",
     },
   },
   "selectors": {
@@ -5877,7 +5877,7 @@ export const breadcrumbItem = style({
     [` + ${breadcrumbItem}::before`]: {
       float: "left",
       paddingRight: "0.5rem",
-      color: "6c757d",
+      color: "#6c757d",
       content: "/",
     },
     [` + ${breadcrumbItem}:hover::before`]: {
@@ -5885,7 +5885,7 @@ export const breadcrumbItem = style({
       textDecoration: "none",
     },
     [`${active}`]: {
-      color: "6c757d",
+      color: "#6c757d",
     },
     [`${breadcrumbItem} + &`]: {
       paddingLeft: "0.5rem",
@@ -5904,49 +5904,49 @@ export const btnBlock = style({
 });
 
 export const btnDanger = style({
-  color: "fff",
-  backgroundColor: "dc3545",
-  borderColor: "dc3545",
+  color: "#fff",
+  backgroundColor: "#dc3545",
+  borderColor: "#dc3545",
   ":disabled": {
-    color: "fff",
-    backgroundColor: "dc3545",
-    borderColor: "dc3545",
+    color: "#fff",
+    backgroundColor: "#dc3545",
+    borderColor: "#dc3545",
   },
   ":focus": {
-    color: "fff",
-    backgroundColor: "c82333",
-    borderColor: "bd2130",
+    color: "#fff",
+    backgroundColor: "#c82333",
+    borderColor: "#bd2130",
     boxShadow: "0 0 0 0.2rem rgba(225,83,97,0.5)",
   },
   ":hover": {
-    color: "fff",
-    backgroundColor: "c82333",
-    borderColor: "bd2130",
+    color: "#fff",
+    backgroundColor: "#c82333",
+    borderColor: "#bd2130",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "fff",
-      backgroundColor: "dc3545",
-      borderColor: "dc3545",
+      color: "#fff",
+      backgroundColor: "#dc3545",
+      borderColor: "#dc3545",
     },
     [`${focus}`]: {
-      color: "fff",
-      backgroundColor: "c82333",
-      borderColor: "bd2130",
+      color: "#fff",
+      backgroundColor: "#c82333",
+      borderColor: "#bd2130",
       boxShadow: "0 0 0 0.2rem rgba(225,83,97,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "fff",
-      backgroundColor: "bd2130",
-      borderColor: "b21f2d",
+      color: "#fff",
+      backgroundColor: "#bd2130",
+      borderColor: "#b21f2d",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(225,83,97,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "fff",
-      backgroundColor: "bd2130",
-      borderColor: "b21f2d",
+      color: "#fff",
+      backgroundColor: "#bd2130",
+      borderColor: "#b21f2d",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(225,83,97,0.5)",
@@ -5955,49 +5955,49 @@ export const btnDanger = style({
 });
 
 export const btnDark = style({
-  color: "fff",
-  backgroundColor: "343a40",
-  borderColor: "343a40",
+  color: "#fff",
+  backgroundColor: "#343a40",
+  borderColor: "#343a40",
   ":disabled": {
-    color: "fff",
-    backgroundColor: "343a40",
-    borderColor: "343a40",
+    color: "#fff",
+    backgroundColor: "#343a40",
+    borderColor: "#343a40",
   },
   ":focus": {
-    color: "fff",
-    backgroundColor: "23272b",
-    borderColor: "1d2124",
+    color: "#fff",
+    backgroundColor: "#23272b",
+    borderColor: "#1d2124",
     boxShadow: "0 0 0 0.2rem rgba(82,88,93,0.5)",
   },
   ":hover": {
-    color: "fff",
-    backgroundColor: "23272b",
-    borderColor: "1d2124",
+    color: "#fff",
+    backgroundColor: "#23272b",
+    borderColor: "#1d2124",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "fff",
-      backgroundColor: "343a40",
-      borderColor: "343a40",
+      color: "#fff",
+      backgroundColor: "#343a40",
+      borderColor: "#343a40",
     },
     [`${focus}`]: {
-      color: "fff",
-      backgroundColor: "23272b",
-      borderColor: "1d2124",
+      color: "#fff",
+      backgroundColor: "#23272b",
+      borderColor: "#1d2124",
       boxShadow: "0 0 0 0.2rem rgba(82,88,93,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "fff",
-      backgroundColor: "1d2124",
-      borderColor: "171a1d",
+      color: "#fff",
+      backgroundColor: "#1d2124",
+      borderColor: "#171a1d",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(82,88,93,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "fff",
-      backgroundColor: "1d2124",
-      borderColor: "171a1d",
+      color: "#fff",
+      backgroundColor: "#1d2124",
+      borderColor: "#171a1d",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(82,88,93,0.5)",
@@ -6006,49 +6006,49 @@ export const btnDark = style({
 });
 
 export const btnInfo = style({
-  color: "fff",
-  backgroundColor: "17a2b8",
-  borderColor: "17a2b8",
+  color: "#fff",
+  backgroundColor: "#17a2b8",
+  borderColor: "#17a2b8",
   ":disabled": {
-    color: "fff",
-    backgroundColor: "17a2b8",
-    borderColor: "17a2b8",
+    color: "#fff",
+    backgroundColor: "#17a2b8",
+    borderColor: "#17a2b8",
   },
   ":focus": {
-    color: "fff",
-    backgroundColor: "138496",
-    borderColor: "117a8b",
+    color: "#fff",
+    backgroundColor: "#138496",
+    borderColor: "#117a8b",
     boxShadow: "0 0 0 0.2rem rgba(58,176,195,0.5)",
   },
   ":hover": {
-    color: "fff",
-    backgroundColor: "138496",
-    borderColor: "117a8b",
+    color: "#fff",
+    backgroundColor: "#138496",
+    borderColor: "#117a8b",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "fff",
-      backgroundColor: "17a2b8",
-      borderColor: "17a2b8",
+      color: "#fff",
+      backgroundColor: "#17a2b8",
+      borderColor: "#17a2b8",
     },
     [`${focus}`]: {
-      color: "fff",
-      backgroundColor: "138496",
-      borderColor: "117a8b",
+      color: "#fff",
+      backgroundColor: "#138496",
+      borderColor: "#117a8b",
       boxShadow: "0 0 0 0.2rem rgba(58,176,195,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "fff",
-      backgroundColor: "117a8b",
-      borderColor: "10707f",
+      color: "#fff",
+      backgroundColor: "#117a8b",
+      borderColor: "#10707f",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(58,176,195,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "fff",
-      backgroundColor: "117a8b",
-      borderColor: "10707f",
+      color: "#fff",
+      backgroundColor: "#117a8b",
+      borderColor: "#10707f",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(58,176,195,0.5)",
@@ -6057,49 +6057,49 @@ export const btnInfo = style({
 });
 
 export const btnLight = style({
-  color: "212529",
-  backgroundColor: "f8f9fa",
-  borderColor: "f8f9fa",
+  color: "#212529",
+  backgroundColor: "#f8f9fa",
+  borderColor: "#f8f9fa",
   ":disabled": {
-    color: "212529",
-    backgroundColor: "f8f9fa",
-    borderColor: "f8f9fa",
+    color: "#212529",
+    backgroundColor: "#f8f9fa",
+    borderColor: "#f8f9fa",
   },
   ":focus": {
-    color: "212529",
-    backgroundColor: "e2e6ea",
-    borderColor: "dae0e5",
+    color: "#212529",
+    backgroundColor: "#e2e6ea",
+    borderColor: "#dae0e5",
     boxShadow: "0 0 0 0.2rem rgba(216,217,219,0.5)",
   },
   ":hover": {
-    color: "212529",
-    backgroundColor: "e2e6ea",
-    borderColor: "dae0e5",
+    color: "#212529",
+    backgroundColor: "#e2e6ea",
+    borderColor: "#dae0e5",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "212529",
-      backgroundColor: "f8f9fa",
-      borderColor: "f8f9fa",
+      color: "#212529",
+      backgroundColor: "#f8f9fa",
+      borderColor: "#f8f9fa",
     },
     [`${focus}`]: {
-      color: "212529",
-      backgroundColor: "e2e6ea",
-      borderColor: "dae0e5",
+      color: "#212529",
+      backgroundColor: "#e2e6ea",
+      borderColor: "#dae0e5",
       boxShadow: "0 0 0 0.2rem rgba(216,217,219,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "212529",
-      backgroundColor: "dae0e5",
-      borderColor: "d3d9df",
+      color: "#212529",
+      backgroundColor: "#dae0e5",
+      borderColor: "#d3d9df",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(216,217,219,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "212529",
-      backgroundColor: "dae0e5",
-      borderColor: "d3d9df",
+      color: "#212529",
+      backgroundColor: "#dae0e5",
+      borderColor: "#d3d9df",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(216,217,219,0.5)",
@@ -6109,22 +6109,22 @@ export const btnLight = style({
 
 export const btnLink = style({
   fontWeight: "400",
-  color: "007bff",
+  color: "#007bff",
   textDecoration: "none",
   ":disabled": {
-    color: "6c757d",
+    color: "#6c757d",
     pointerEvents: "none",
   },
   ":focus": {
     textDecoration: "underline",
   },
   ":hover": {
-    color: "0056b3",
+    color: "#0056b3",
     textDecoration: "underline",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "6c757d",
+      color: "#6c757d",
       pointerEvents: "none",
     },
     [`${focus}`]: {
@@ -6134,40 +6134,40 @@ export const btnLink = style({
 });
 
 export const btnOutlineDanger = style({
-  color: "dc3545",
-  borderColor: "dc3545",
+  color: "#dc3545",
+  borderColor: "#dc3545",
   ":disabled": {
-    color: "dc3545",
+    color: "#dc3545",
     backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
   },
   ":hover": {
-    color: "fff",
-    backgroundColor: "dc3545",
-    borderColor: "dc3545",
+    color: "#fff",
+    backgroundColor: "#dc3545",
+    borderColor: "#dc3545",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "dc3545",
+      color: "#dc3545",
       backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "fff",
-      backgroundColor: "dc3545",
-      borderColor: "dc3545",
+      color: "#fff",
+      backgroundColor: "#dc3545",
+      borderColor: "#dc3545",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "fff",
-      backgroundColor: "dc3545",
-      borderColor: "dc3545",
+      color: "#fff",
+      backgroundColor: "#dc3545",
+      borderColor: "#dc3545",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
@@ -6176,40 +6176,40 @@ export const btnOutlineDanger = style({
 });
 
 export const btnOutlineDark = style({
-  color: "343a40",
-  borderColor: "343a40",
+  color: "#343a40",
+  borderColor: "#343a40",
   ":disabled": {
-    color: "343a40",
+    color: "#343a40",
     backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
   },
   ":hover": {
-    color: "fff",
-    backgroundColor: "343a40",
-    borderColor: "343a40",
+    color: "#fff",
+    backgroundColor: "#343a40",
+    borderColor: "#343a40",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "343a40",
+      color: "#343a40",
       backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "fff",
-      backgroundColor: "343a40",
-      borderColor: "343a40",
+      color: "#fff",
+      backgroundColor: "#343a40",
+      borderColor: "#343a40",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "fff",
-      backgroundColor: "343a40",
-      borderColor: "343a40",
+      color: "#fff",
+      backgroundColor: "#343a40",
+      borderColor: "#343a40",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
@@ -6218,40 +6218,40 @@ export const btnOutlineDark = style({
 });
 
 export const btnOutlineInfo = style({
-  color: "17a2b8",
-  borderColor: "17a2b8",
+  color: "#17a2b8",
+  borderColor: "#17a2b8",
   ":disabled": {
-    color: "17a2b8",
+    color: "#17a2b8",
     backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
   },
   ":hover": {
-    color: "fff",
-    backgroundColor: "17a2b8",
-    borderColor: "17a2b8",
+    color: "#fff",
+    backgroundColor: "#17a2b8",
+    borderColor: "#17a2b8",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "17a2b8",
+      color: "#17a2b8",
       backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "fff",
-      backgroundColor: "17a2b8",
-      borderColor: "17a2b8",
+      color: "#fff",
+      backgroundColor: "#17a2b8",
+      borderColor: "#17a2b8",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "fff",
-      backgroundColor: "17a2b8",
-      borderColor: "17a2b8",
+      color: "#fff",
+      backgroundColor: "#17a2b8",
+      borderColor: "#17a2b8",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
@@ -6260,40 +6260,40 @@ export const btnOutlineInfo = style({
 });
 
 export const btnOutlineLight = style({
-  color: "f8f9fa",
-  borderColor: "f8f9fa",
+  color: "#f8f9fa",
+  borderColor: "#f8f9fa",
   ":disabled": {
-    color: "f8f9fa",
+    color: "#f8f9fa",
     backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
   },
   ":hover": {
-    color: "212529",
-    backgroundColor: "f8f9fa",
-    borderColor: "f8f9fa",
+    color: "#212529",
+    backgroundColor: "#f8f9fa",
+    borderColor: "#f8f9fa",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "f8f9fa",
+      color: "#f8f9fa",
       backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "212529",
-      backgroundColor: "f8f9fa",
-      borderColor: "f8f9fa",
+      color: "#212529",
+      backgroundColor: "#f8f9fa",
+      borderColor: "#f8f9fa",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "212529",
-      backgroundColor: "f8f9fa",
-      borderColor: "f8f9fa",
+      color: "#212529",
+      backgroundColor: "#f8f9fa",
+      borderColor: "#f8f9fa",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
@@ -6302,40 +6302,40 @@ export const btnOutlineLight = style({
 });
 
 export const btnOutlinePrimary = style({
-  color: "007bff",
-  borderColor: "007bff",
+  color: "#007bff",
+  borderColor: "#007bff",
   ":disabled": {
-    color: "007bff",
+    color: "#007bff",
     backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
   },
   ":hover": {
-    color: "fff",
-    backgroundColor: "007bff",
-    borderColor: "007bff",
+    color: "#fff",
+    backgroundColor: "#007bff",
+    borderColor: "#007bff",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "007bff",
+      color: "#007bff",
       backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "fff",
-      backgroundColor: "007bff",
-      borderColor: "007bff",
+      color: "#fff",
+      backgroundColor: "#007bff",
+      borderColor: "#007bff",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "fff",
-      backgroundColor: "007bff",
-      borderColor: "007bff",
+      color: "#fff",
+      backgroundColor: "#007bff",
+      borderColor: "#007bff",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
@@ -6344,40 +6344,40 @@ export const btnOutlinePrimary = style({
 });
 
 export const btnOutlineSecondary = style({
-  color: "6c757d",
-  borderColor: "6c757d",
+  color: "#6c757d",
+  borderColor: "#6c757d",
   ":disabled": {
-    color: "6c757d",
+    color: "#6c757d",
     backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
   },
   ":hover": {
-    color: "fff",
-    backgroundColor: "6c757d",
-    borderColor: "6c757d",
+    color: "#fff",
+    backgroundColor: "#6c757d",
+    borderColor: "#6c757d",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "6c757d",
+      color: "#6c757d",
       backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "fff",
-      backgroundColor: "6c757d",
-      borderColor: "6c757d",
+      color: "#fff",
+      backgroundColor: "#6c757d",
+      borderColor: "#6c757d",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "fff",
-      backgroundColor: "6c757d",
-      borderColor: "6c757d",
+      color: "#fff",
+      backgroundColor: "#6c757d",
+      borderColor: "#6c757d",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
@@ -6386,40 +6386,40 @@ export const btnOutlineSecondary = style({
 });
 
 export const btnOutlineSuccess = style({
-  color: "28a745",
-  borderColor: "28a745",
+  color: "#28a745",
+  borderColor: "#28a745",
   ":disabled": {
-    color: "28a745",
+    color: "#28a745",
     backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
   },
   ":hover": {
-    color: "fff",
-    backgroundColor: "28a745",
-    borderColor: "28a745",
+    color: "#fff",
+    backgroundColor: "#28a745",
+    borderColor: "#28a745",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "28a745",
+      color: "#28a745",
       backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "fff",
-      backgroundColor: "28a745",
-      borderColor: "28a745",
+      color: "#fff",
+      backgroundColor: "#28a745",
+      borderColor: "#28a745",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "fff",
-      backgroundColor: "28a745",
-      borderColor: "28a745",
+      color: "#fff",
+      backgroundColor: "#28a745",
+      borderColor: "#28a745",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
@@ -6428,40 +6428,40 @@ export const btnOutlineSuccess = style({
 });
 
 export const btnOutlineWarning = style({
-  color: "ffc107",
-  borderColor: "ffc107",
+  color: "#ffc107",
+  borderColor: "#ffc107",
   ":disabled": {
-    color: "ffc107",
+    color: "#ffc107",
     backgroundColor: "transparent",
   },
   ":focus": {
     boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
   },
   ":hover": {
-    color: "212529",
-    backgroundColor: "ffc107",
-    borderColor: "ffc107",
+    color: "#212529",
+    backgroundColor: "#ffc107",
+    borderColor: "#ffc107",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "ffc107",
+      color: "#ffc107",
       backgroundColor: "transparent",
     },
     [`${focus}`]: {
       boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "212529",
-      backgroundColor: "ffc107",
-      borderColor: "ffc107",
+      color: "#212529",
+      backgroundColor: "#ffc107",
+      borderColor: "#ffc107",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "212529",
-      backgroundColor: "ffc107",
-      borderColor: "ffc107",
+      color: "#212529",
+      backgroundColor: "#ffc107",
+      borderColor: "#ffc107",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
@@ -6470,49 +6470,49 @@ export const btnOutlineWarning = style({
 });
 
 export const btnPrimary = style({
-  color: "fff",
-  backgroundColor: "007bff",
-  borderColor: "007bff",
+  color: "#fff",
+  backgroundColor: "#007bff",
+  borderColor: "#007bff",
   ":disabled": {
-    color: "fff",
-    backgroundColor: "007bff",
-    borderColor: "007bff",
+    color: "#fff",
+    backgroundColor: "#007bff",
+    borderColor: "#007bff",
   },
   ":focus": {
-    color: "fff",
-    backgroundColor: "0069d9",
-    borderColor: "0062cc",
+    color: "#fff",
+    backgroundColor: "#0069d9",
+    borderColor: "#0062cc",
     boxShadow: "0 0 0 0.2rem rgba(38,143,255,0.5)",
   },
   ":hover": {
-    color: "fff",
-    backgroundColor: "0069d9",
-    borderColor: "0062cc",
+    color: "#fff",
+    backgroundColor: "#0069d9",
+    borderColor: "#0062cc",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "fff",
-      backgroundColor: "007bff",
-      borderColor: "007bff",
+      color: "#fff",
+      backgroundColor: "#007bff",
+      borderColor: "#007bff",
     },
     [`${focus}`]: {
-      color: "fff",
-      backgroundColor: "0069d9",
-      borderColor: "0062cc",
+      color: "#fff",
+      backgroundColor: "#0069d9",
+      borderColor: "#0062cc",
       boxShadow: "0 0 0 0.2rem rgba(38,143,255,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "fff",
-      backgroundColor: "0062cc",
-      borderColor: "005cbf",
+      color: "#fff",
+      backgroundColor: "#0062cc",
+      borderColor: "#005cbf",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(38,143,255,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "fff",
-      backgroundColor: "0062cc",
-      borderColor: "005cbf",
+      color: "#fff",
+      backgroundColor: "#0062cc",
+      borderColor: "#005cbf",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(38,143,255,0.5)",
@@ -6521,49 +6521,49 @@ export const btnPrimary = style({
 });
 
 export const btnSecondary = style({
-  color: "fff",
-  backgroundColor: "6c757d",
-  borderColor: "6c757d",
+  color: "#fff",
+  backgroundColor: "#6c757d",
+  borderColor: "#6c757d",
   ":disabled": {
-    color: "fff",
-    backgroundColor: "6c757d",
-    borderColor: "6c757d",
+    color: "#fff",
+    backgroundColor: "#6c757d",
+    borderColor: "#6c757d",
   },
   ":focus": {
-    color: "fff",
-    backgroundColor: "5a6268",
-    borderColor: "545b62",
+    color: "#fff",
+    backgroundColor: "#5a6268",
+    borderColor: "#545b62",
     boxShadow: "0 0 0 0.2rem rgba(130,138,145,0.5)",
   },
   ":hover": {
-    color: "fff",
-    backgroundColor: "5a6268",
-    borderColor: "545b62",
+    color: "#fff",
+    backgroundColor: "#5a6268",
+    borderColor: "#545b62",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "fff",
-      backgroundColor: "6c757d",
-      borderColor: "6c757d",
+      color: "#fff",
+      backgroundColor: "#6c757d",
+      borderColor: "#6c757d",
     },
     [`${focus}`]: {
-      color: "fff",
-      backgroundColor: "5a6268",
-      borderColor: "545b62",
+      color: "#fff",
+      backgroundColor: "#5a6268",
+      borderColor: "#545b62",
       boxShadow: "0 0 0 0.2rem rgba(130,138,145,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "fff",
-      backgroundColor: "545b62",
-      borderColor: "4e555b",
+      color: "#fff",
+      backgroundColor: "#545b62",
+      borderColor: "#4e555b",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(130,138,145,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "fff",
-      backgroundColor: "545b62",
-      borderColor: "4e555b",
+      color: "#fff",
+      backgroundColor: "#545b62",
+      borderColor: "#4e555b",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(130,138,145,0.5)",
@@ -6572,49 +6572,49 @@ export const btnSecondary = style({
 });
 
 export const btnSuccess = style({
-  color: "fff",
-  backgroundColor: "28a745",
-  borderColor: "28a745",
+  color: "#fff",
+  backgroundColor: "#28a745",
+  borderColor: "#28a745",
   ":disabled": {
-    color: "fff",
-    backgroundColor: "28a745",
-    borderColor: "28a745",
+    color: "#fff",
+    backgroundColor: "#28a745",
+    borderColor: "#28a745",
   },
   ":focus": {
-    color: "fff",
-    backgroundColor: "218838",
-    borderColor: "1e7e34",
+    color: "#fff",
+    backgroundColor: "#218838",
+    borderColor: "#1e7e34",
     boxShadow: "0 0 0 0.2rem rgba(72,180,97,0.5)",
   },
   ":hover": {
-    color: "fff",
-    backgroundColor: "218838",
-    borderColor: "1e7e34",
+    color: "#fff",
+    backgroundColor: "#218838",
+    borderColor: "#1e7e34",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "fff",
-      backgroundColor: "28a745",
-      borderColor: "28a745",
+      color: "#fff",
+      backgroundColor: "#28a745",
+      borderColor: "#28a745",
     },
     [`${focus}`]: {
-      color: "fff",
-      backgroundColor: "218838",
-      borderColor: "1e7e34",
+      color: "#fff",
+      backgroundColor: "#218838",
+      borderColor: "#1e7e34",
       boxShadow: "0 0 0 0.2rem rgba(72,180,97,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "fff",
-      backgroundColor: "1e7e34",
-      borderColor: "1c7430",
+      color: "#fff",
+      backgroundColor: "#1e7e34",
+      borderColor: "#1c7430",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(72,180,97,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "fff",
-      backgroundColor: "1e7e34",
-      borderColor: "1c7430",
+      color: "#fff",
+      backgroundColor: "#1e7e34",
+      borderColor: "#1c7430",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(72,180,97,0.5)",
@@ -6623,49 +6623,49 @@ export const btnSuccess = style({
 });
 
 export const btnWarning = style({
-  color: "212529",
-  backgroundColor: "ffc107",
-  borderColor: "ffc107",
+  color: "#212529",
+  backgroundColor: "#ffc107",
+  borderColor: "#ffc107",
   ":disabled": {
-    color: "212529",
-    backgroundColor: "ffc107",
-    borderColor: "ffc107",
+    color: "#212529",
+    backgroundColor: "#ffc107",
+    borderColor: "#ffc107",
   },
   ":focus": {
-    color: "212529",
-    backgroundColor: "e0a800",
-    borderColor: "d39e00",
+    color: "#212529",
+    backgroundColor: "#e0a800",
+    borderColor: "#d39e00",
     boxShadow: "0 0 0 0.2rem rgba(222,170,12,0.5)",
   },
   ":hover": {
-    color: "212529",
-    backgroundColor: "e0a800",
-    borderColor: "d39e00",
+    color: "#212529",
+    backgroundColor: "#e0a800",
+    borderColor: "#d39e00",
   },
   "selectors": {
     [`${disabled}`]: {
-      color: "212529",
-      backgroundColor: "ffc107",
-      borderColor: "ffc107",
+      color: "#212529",
+      backgroundColor: "#ffc107",
+      borderColor: "#ffc107",
     },
     [`${focus}`]: {
-      color: "212529",
-      backgroundColor: "e0a800",
-      borderColor: "d39e00",
+      color: "#212529",
+      backgroundColor: "#e0a800",
+      borderColor: "#d39e00",
       boxShadow: "0 0 0 0.2rem rgba(222,170,12,0.5)",
     },
     [`:not(:disabled):not${active}`]: {
-      color: "212529",
-      backgroundColor: "d39e00",
-      borderColor: "c69500",
+      color: "#212529",
+      backgroundColor: "#d39e00",
+      borderColor: "#c69500",
     },
     [`:not(:disabled):not${active}:focus`]: {
       boxShadow: "0 0 0 0.2rem rgba(222,170,12,0.5)",
     },
     "&:not(:disabled):not:active": {
-      color: "212529",
-      backgroundColor: "d39e00",
-      borderColor: "c69500",
+      color: "#212529",
+      backgroundColor: "#d39e00",
+      borderColor: "#c69500",
     },
     "&:not(:disabled):not:active:focus": {
       boxShadow: "0 0 0 0.2rem rgba(222,170,12,0.5)",
@@ -6801,7 +6801,7 @@ export const carouselControlNext = style({
   justifyContent: "center",
   width: "15%",
   padding: "0",
-  color: "fff",
+  color: "#fff",
   textAlign: "center",
   background: "none",
   border: "0",
@@ -6809,13 +6809,13 @@ export const carouselControlNext = style({
   transition: "opacity 0.15s ease",
   right: "0",
   ":focus": {
-    color: "fff",
+    color: "#fff",
     textDecoration: "none",
     outline: "0",
     opacity: "0.9",
   },
   ":hover": {
-    color: "fff",
+    color: "#fff",
     textDecoration: "none",
     outline: "0",
     opacity: "0.9",
@@ -6840,7 +6840,7 @@ export const carouselControlPrev = style({
   justifyContent: "center",
   width: "15%",
   padding: "0",
-  color: "fff",
+  color: "#fff",
   textAlign: "center",
   background: "none",
   border: "0",
@@ -6848,13 +6848,13 @@ export const carouselControlPrev = style({
   transition: "opacity 0.15s ease",
   left: "0",
   ":focus": {
-    color: "fff",
+    color: "#fff",
     textDecoration: "none",
     outline: "0",
     opacity: "0.9",
   },
   ":hover": {
-    color: "fff",
+    color: "#fff",
     textDecoration: "none",
     outline: "0",
     opacity: "0.9",
@@ -6881,11 +6881,11 @@ export const close = style({
   fontSize: "1.5rem",
   fontWeight: "700",
   lineHeight: "1",
-  color: "000",
-  textShadow: "0 1px 0 fff",
+  color: "#000",
+  textShadow: "0 1px 0 #fff",
   opacity: "0.5",
   ":hover": {
-    color: "000",
+    color: "#000",
     textDecoration: "none",
   },
   "selectors": {
@@ -8246,8 +8246,8 @@ export const customCheckbox = style({
       backgroundImage: "url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e)",
     },
     [` ${customControlInput}:indeterminate ~ ${customControlLabel}::before`]: {
-      borderColor: "007bff",
-      backgroundColor: "007bff",
+      borderColor: "#007bff",
+      backgroundColor: "#007bff",
     },
     [` ${customControlLabel}::before`]: {
       borderRadius: "0.25rem",
@@ -8354,7 +8354,7 @@ export const customRange = style({
   "::-moz-range-thumb": {
     width: "1rem",
     height: "1rem",
-    backgroundColor: "007bff",
+    backgroundColor: "#007bff",
     border: "0",
     borderRadius: "1rem",
     MozTransition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
@@ -8369,17 +8369,17 @@ export const customRange = style({
     height: "0.5rem",
     color: "transparent",
     cursor: "pointer",
-    backgroundColor: "dee2e6",
+    backgroundColor: "#dee2e6",
     borderColor: "transparent",
     borderRadius: "1rem",
   },
   "::-ms-fill-lower": {
-    backgroundColor: "dee2e6",
+    backgroundColor: "#dee2e6",
     borderRadius: "1rem",
   },
   "::-ms-fill-upper": {
     marginRight: "15px",
-    backgroundColor: "dee2e6",
+    backgroundColor: "#dee2e6",
     borderRadius: "1rem",
   },
   "::-ms-thumb": {
@@ -8388,7 +8388,7 @@ export const customRange = style({
     marginTop: "0",
     marginRight: "0.2rem",
     marginLeft: "0.2rem",
-    backgroundColor: "007bff",
+    backgroundColor: "#007bff",
     border: "0",
     borderRadius: "1rem",
     msTransition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
@@ -8411,7 +8411,7 @@ export const customRange = style({
     height: "0.5rem",
     color: "transparent",
     cursor: "pointer",
-    backgroundColor: "dee2e6",
+    backgroundColor: "#dee2e6",
     borderColor: "transparent",
     borderRadius: "1rem",
   },
@@ -8419,7 +8419,7 @@ export const customRange = style({
     width: "1rem",
     height: "1rem",
     marginTop: "-0.25rem",
-    backgroundColor: "007bff",
+    backgroundColor: "#007bff",
     border: "0",
     borderRadius: "1rem",
     WebkitTransition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
@@ -8437,37 +8437,37 @@ export const customRange = style({
       border: "0",
     },
     "&::-moz-range-thumb:active": {
-      backgroundColor: "b3d7ff",
+      backgroundColor: "#b3d7ff",
     },
     "&::-ms-thumb:active": {
-      backgroundColor: "b3d7ff",
+      backgroundColor: "#b3d7ff",
     },
     "&::-webkit-slider-thumb:active": {
-      backgroundColor: "b3d7ff",
+      backgroundColor: "#b3d7ff",
     },
     "&:disabled::-moz-range-thumb": {
-      backgroundColor: "adb5bd",
+      backgroundColor: "#adb5bd",
     },
     "&:disabled::-moz-range-track": {
       cursor: "default",
     },
     "&:disabled::-ms-thumb": {
-      backgroundColor: "adb5bd",
+      backgroundColor: "#adb5bd",
     },
     "&:disabled::-webkit-slider-runnable-track": {
       cursor: "default",
     },
     "&:disabled::-webkit-slider-thumb": {
-      backgroundColor: "adb5bd",
+      backgroundColor: "#adb5bd",
     },
     "&:focus::-moz-range-thumb": {
-      boxShadow: "0 0 0 1px fff , 0 0 0 0.2rem rgba(0,123,255,0.25)",
+      boxShadow: "0 0 0 1px #fff , 0 0 0 0.2rem rgba(0,123,255,0.25)",
     },
     "&:focus::-ms-thumb": {
-      boxShadow: "0 0 0 1px fff , 0 0 0 0.2rem rgba(0,123,255,0.25)",
+      boxShadow: "0 0 0 1px #fff , 0 0 0 0.2rem rgba(0,123,255,0.25)",
     },
     "&:focus::-webkit-slider-thumb": {
-      boxShadow: "0 0 0 1px fff , 0 0 0 0.2rem rgba(0,123,255,0.25)",
+      boxShadow: "0 0 0 1px #fff , 0 0 0 0.2rem rgba(0,123,255,0.25)",
     },
   },
 });
@@ -8485,7 +8485,7 @@ export const customSwitch = style({
   },
   "selectors": {
     [` ${customControlInput}:checked ~ ${customControlLabel}::after`]: {
-      backgroundColor: "fff",
+      backgroundColor: "#fff",
       WebkitTransform: "translateX(0.75rem)",
       transform: "translateX(0.75rem)",
     },
@@ -8497,7 +8497,7 @@ export const customSwitch = style({
       left: "calc(-2.25rem+2px)",
       width: "calc(1rem-4px)",
       height: "calc(1rem-4px)",
-      backgroundColor: "adb5bd",
+      backgroundColor: "#adb5bd",
       borderRadius: "0.5rem",
       transition: "background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out , -webkit-transform 0.15s ease-in-out",
       transition: "transform 0.15s ease-in-out , background-color 0.15s ease-in-out , border-color 0.15s ease-in-out , box-shadow 0.15s ease-in-out",
@@ -8888,39 +8888,39 @@ export const dropdownItem = style({
   padding: "0.25rem 1.5rem",
   clear: "both",
   fontWeight: "400",
-  color: "212529",
+  color: "#212529",
   textAlign: "inherit",
   whiteSpace: "nowrap",
   backgroundColor: "transparent",
   border: "0",
   ":active": {
-    color: "fff",
+    color: "#fff",
     textDecoration: "none",
-    backgroundColor: "007bff",
+    backgroundColor: "#007bff",
   },
   ":disabled": {
-    color: "adb5bd",
+    color: "#adb5bd",
     pointerEvents: "none",
     backgroundColor: "transparent",
   },
   ":focus": {
-    color: "16181b",
+    color: "#16181b",
     textDecoration: "none",
-    backgroundColor: "e9ecef",
+    backgroundColor: "#e9ecef",
   },
   ":hover": {
-    color: "16181b",
+    color: "#16181b",
     textDecoration: "none",
-    backgroundColor: "e9ecef",
+    backgroundColor: "#e9ecef",
   },
   "selectors": {
     [`${active}`]: {
-      color: "fff",
+      color: "#fff",
       textDecoration: "none",
-      backgroundColor: "007bff",
+      backgroundColor: "#007bff",
     },
     [`${disabled}`]: {
-      color: "adb5bd",
+      color: "#adb5bd",
       pointerEvents: "none",
       backgroundColor: "transparent",
     },
@@ -8938,10 +8938,10 @@ export const dropdownMenu = style({
   padding: "0.5rem 0",
   margin: "0.125rem 0 0",
   fontSize: "1rem",
-  color: "212529",
+  color: "#212529",
   textAlign: "left",
   listStyle: "none",
-  backgroundColor: "fff",
+  backgroundColor: "#fff",
   backgroundClip: "padding-box",
   border: "1px solid rgba(0,0,0,0.15)",
   borderRadius: "0.25rem",
@@ -9110,84 +9110,84 @@ export const dropdownToggle = style({
   },
   "selectors": {
     [`${show} > ${btnDanger}&`]: {
-      color: "fff",
-      backgroundColor: "bd2130",
-      borderColor: "b21f2d",
+      color: "#fff",
+      backgroundColor: "#bd2130",
+      borderColor: "#b21f2d",
     },
     [`${show} > ${btnDark}&`]: {
-      color: "fff",
-      backgroundColor: "1d2124",
-      borderColor: "171a1d",
+      color: "#fff",
+      backgroundColor: "#1d2124",
+      borderColor: "#171a1d",
     },
     [`${show} > ${btnInfo}&`]: {
-      color: "fff",
-      backgroundColor: "117a8b",
-      borderColor: "10707f",
+      color: "#fff",
+      backgroundColor: "#117a8b",
+      borderColor: "#10707f",
     },
     [`${show} > ${btnLight}&`]: {
-      color: "212529",
-      backgroundColor: "dae0e5",
-      borderColor: "d3d9df",
+      color: "#212529",
+      backgroundColor: "#dae0e5",
+      borderColor: "#d3d9df",
     },
     [`${show} > ${btnOutlineDanger}&`]: {
-      color: "fff",
-      backgroundColor: "dc3545",
-      borderColor: "dc3545",
+      color: "#fff",
+      backgroundColor: "#dc3545",
+      borderColor: "#dc3545",
     },
     [`${show} > ${btnOutlineDark}&`]: {
-      color: "fff",
-      backgroundColor: "343a40",
-      borderColor: "343a40",
+      color: "#fff",
+      backgroundColor: "#343a40",
+      borderColor: "#343a40",
     },
     [`${show} > ${btnOutlineInfo}&`]: {
-      color: "fff",
-      backgroundColor: "17a2b8",
-      borderColor: "17a2b8",
+      color: "#fff",
+      backgroundColor: "#17a2b8",
+      borderColor: "#17a2b8",
     },
     [`${show} > ${btnOutlineLight}&`]: {
-      color: "212529",
-      backgroundColor: "f8f9fa",
-      borderColor: "f8f9fa",
+      color: "#212529",
+      backgroundColor: "#f8f9fa",
+      borderColor: "#f8f9fa",
     },
     [`${show} > ${btnOutlinePrimary}&`]: {
-      color: "fff",
-      backgroundColor: "007bff",
-      borderColor: "007bff",
+      color: "#fff",
+      backgroundColor: "#007bff",
+      borderColor: "#007bff",
     },
     [`${show} > ${btnOutlineSecondary}&`]: {
-      color: "fff",
-      backgroundColor: "6c757d",
-      borderColor: "6c757d",
+      color: "#fff",
+      backgroundColor: "#6c757d",
+      borderColor: "#6c757d",
     },
     [`${show} > ${btnOutlineSuccess}&`]: {
-      color: "fff",
-      backgroundColor: "28a745",
-      borderColor: "28a745",
+      color: "#fff",
+      backgroundColor: "#28a745",
+      borderColor: "#28a745",
     },
     [`${show} > ${btnOutlineWarning}&`]: {
-      color: "212529",
-      backgroundColor: "ffc107",
-      borderColor: "ffc107",
+      color: "#212529",
+      backgroundColor: "#ffc107",
+      borderColor: "#ffc107",
     },
     [`${show} > ${btnPrimary}&`]: {
-      color: "fff",
-      backgroundColor: "0062cc",
-      borderColor: "005cbf",
+      color: "#fff",
+      backgroundColor: "#0062cc",
+      borderColor: "#005cbf",
     },
     [`${show} > ${btnSecondary}&`]: {
-      color: "fff",
-      backgroundColor: "545b62",
-      borderColor: "4e555b",
+      color: "#fff",
+      backgroundColor: "#545b62",
+      borderColor: "#4e555b",
     },
     [`${show} > ${btnSuccess}&`]: {
-      color: "fff",
-      backgroundColor: "1e7e34",
-      borderColor: "1c7430",
+      color: "#fff",
+      backgroundColor: "#1e7e34",
+      borderColor: "#1c7430",
     },
     [`${show} > ${btnWarning}&`]: {
-      color: "212529",
-      backgroundColor: "d39e00",
-      borderColor: "c69500",
+      color: "#212529",
+      backgroundColor: "#d39e00",
+      borderColor: "#c69500",
     },
     "&:empty::after": {
       marginLeft: "0",
@@ -9886,22 +9886,22 @@ export const formCheckLabel = style({
   marginBottom: "0",
   "selectors": {
     [`${formCheckInput}${isInvalid} ~ &`]: {
-      color: "dc3545",
+      color: "#dc3545",
     },
     [`${formCheckInput}${isValid} ~ &`]: {
-      color: "28a745",
+      color: "#28a745",
     },
     [`${formCheckInput}:disabled ~ &`]: {
-      color: "6c757d",
+      color: "#6c757d",
     },
     [`${formCheckInput}[disabled] ~ &`]: {
-      color: "6c757d",
+      color: "#6c757d",
     },
     [`${wasValidated} ${formCheckInput}:invalid ~ &`]: {
-      color: "dc3545",
+      color: "#dc3545",
     },
     [`${wasValidated} ${formCheckInput}:valid ~ &`]: {
-      color: "28a745",
+      color: "#28a745",
     },
   },
 });
@@ -9932,7 +9932,7 @@ export const invalidFeedback = style({
   width: "100%",
   marginTop: "0.25rem",
   fontSize: "80%",
-  color: "dc3545",
+  color: "#dc3545",
   "selectors": {
     [`${formCheckInput}${isInvalid} ~ &`]: {
       display: "block",
@@ -9960,7 +9960,7 @@ export const invalidTooltip = style({
   marginTop: "0.1rem",
   fontSize: "0.875rem",
   lineHeight: "1.5",
-  color: "fff",
+  color: "#fff",
   backgroundColor: "rgba(220,53,69,0.9)",
   borderRadius: "0.25rem",
   "selectors": {
@@ -9988,7 +9988,7 @@ export const invalidTooltip = style({
 export const jumbotron = style({
   padding: "2rem 1rem",
   marginBottom: "2rem",
-  backgroundColor: "e9ecef",
+  backgroundColor: "#e9ecef",
   borderRadius: "0.3rem",
   "@media": {
     "(min-width: 576px)": {
@@ -10187,161 +10187,161 @@ export const listGroupFlush = style({
 });
 
 export const listGroupItemDanger = style({
-  color: "721c24",
-  backgroundColor: "f5c6cb",
+  color: "#721c24",
+  backgroundColor: "#f5c6cb",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
-      color: "fff",
-      backgroundColor: "721c24",
-      borderColor: "721c24",
+      color: "#fff",
+      backgroundColor: "#721c24",
+      borderColor: "#721c24",
     },
     [`${listGroupItemAction}:focus`]: {
-      color: "721c24",
-      backgroundColor: "f1b0b7",
+      color: "#721c24",
+      backgroundColor: "#f1b0b7",
     },
     [`${listGroupItemAction}:hover`]: {
-      color: "721c24",
-      backgroundColor: "f1b0b7",
+      color: "#721c24",
+      backgroundColor: "#f1b0b7",
     },
   },
 });
 
 export const listGroupItemDark = style({
-  color: "1b1e21",
-  backgroundColor: "c6c8ca",
+  color: "#1b1e21",
+  backgroundColor: "#c6c8ca",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
-      color: "fff",
-      backgroundColor: "1b1e21",
-      borderColor: "1b1e21",
+      color: "#fff",
+      backgroundColor: "#1b1e21",
+      borderColor: "#1b1e21",
     },
     [`${listGroupItemAction}:focus`]: {
-      color: "1b1e21",
-      backgroundColor: "b9bbbe",
+      color: "#1b1e21",
+      backgroundColor: "#b9bbbe",
     },
     [`${listGroupItemAction}:hover`]: {
-      color: "1b1e21",
-      backgroundColor: "b9bbbe",
+      color: "#1b1e21",
+      backgroundColor: "#b9bbbe",
     },
   },
 });
 
 export const listGroupItemInfo = style({
-  color: "0c5460",
-  backgroundColor: "bee5eb",
+  color: "#0c5460",
+  backgroundColor: "#bee5eb",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
-      color: "fff",
-      backgroundColor: "0c5460",
-      borderColor: "0c5460",
+      color: "#fff",
+      backgroundColor: "#0c5460",
+      borderColor: "#0c5460",
     },
     [`${listGroupItemAction}:focus`]: {
-      color: "0c5460",
-      backgroundColor: "abdde5",
+      color: "#0c5460",
+      backgroundColor: "#abdde5",
     },
     [`${listGroupItemAction}:hover`]: {
-      color: "0c5460",
-      backgroundColor: "abdde5",
+      color: "#0c5460",
+      backgroundColor: "#abdde5",
     },
   },
 });
 
 export const listGroupItemLight = style({
-  color: "818182",
-  backgroundColor: "fdfdfe",
+  color: "#818182",
+  backgroundColor: "#fdfdfe",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
-      color: "fff",
-      backgroundColor: "818182",
-      borderColor: "818182",
+      color: "#fff",
+      backgroundColor: "#818182",
+      borderColor: "#818182",
     },
     [`${listGroupItemAction}:focus`]: {
-      color: "818182",
-      backgroundColor: "ececf6",
+      color: "#818182",
+      backgroundColor: "#ececf6",
     },
     [`${listGroupItemAction}:hover`]: {
-      color: "818182",
-      backgroundColor: "ececf6",
+      color: "#818182",
+      backgroundColor: "#ececf6",
     },
   },
 });
 
 export const listGroupItemPrimary = style({
-  color: "004085",
-  backgroundColor: "b8daff",
+  color: "#004085",
+  backgroundColor: "#b8daff",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
-      color: "fff",
-      backgroundColor: "004085",
-      borderColor: "004085",
+      color: "#fff",
+      backgroundColor: "#004085",
+      borderColor: "#004085",
     },
     [`${listGroupItemAction}:focus`]: {
-      color: "004085",
-      backgroundColor: "9fcdff",
+      color: "#004085",
+      backgroundColor: "#9fcdff",
     },
     [`${listGroupItemAction}:hover`]: {
-      color: "004085",
-      backgroundColor: "9fcdff",
+      color: "#004085",
+      backgroundColor: "#9fcdff",
     },
   },
 });
 
 export const listGroupItemSecondary = style({
-  color: "383d41",
-  backgroundColor: "d6d8db",
+  color: "#383d41",
+  backgroundColor: "#d6d8db",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
-      color: "fff",
-      backgroundColor: "383d41",
-      borderColor: "383d41",
+      color: "#fff",
+      backgroundColor: "#383d41",
+      borderColor: "#383d41",
     },
     [`${listGroupItemAction}:focus`]: {
-      color: "383d41",
-      backgroundColor: "c8cbcf",
+      color: "#383d41",
+      backgroundColor: "#c8cbcf",
     },
     [`${listGroupItemAction}:hover`]: {
-      color: "383d41",
-      backgroundColor: "c8cbcf",
+      color: "#383d41",
+      backgroundColor: "#c8cbcf",
     },
   },
 });
 
 export const listGroupItemSuccess = style({
-  color: "155724",
-  backgroundColor: "c3e6cb",
+  color: "#155724",
+  backgroundColor: "#c3e6cb",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
-      color: "fff",
-      backgroundColor: "155724",
-      borderColor: "155724",
+      color: "#fff",
+      backgroundColor: "#155724",
+      borderColor: "#155724",
     },
     [`${listGroupItemAction}:focus`]: {
-      color: "155724",
-      backgroundColor: "b1dfbb",
+      color: "#155724",
+      backgroundColor: "#b1dfbb",
     },
     [`${listGroupItemAction}:hover`]: {
-      color: "155724",
-      backgroundColor: "b1dfbb",
+      color: "#155724",
+      backgroundColor: "#b1dfbb",
     },
   },
 });
 
 export const listGroupItemWarning = style({
-  color: "856404",
-  backgroundColor: "ffeeba",
+  color: "#856404",
+  backgroundColor: "#ffeeba",
   "selectors": {
     [`${listGroupItemAction}${active}`]: {
-      color: "fff",
-      backgroundColor: "856404",
-      borderColor: "856404",
+      color: "#fff",
+      backgroundColor: "#856404",
+      borderColor: "#856404",
     },
     [`${listGroupItemAction}:focus`]: {
-      color: "856404",
-      backgroundColor: "ffe8a1",
+      color: "#856404",
+      backgroundColor: "#ffe8a1",
     },
     [`${listGroupItemAction}:hover`]: {
-      color: "856404",
-      backgroundColor: "ffe8a1",
+      color: "#856404",
+      backgroundColor: "#ffe8a1",
     },
   },
 });
@@ -11532,7 +11532,7 @@ export const modalBackdrop = style({
   zIndex: "1040",
   width: "100vw",
   height: "100vh",
-  backgroundColor: "000",
+  backgroundColor: "#000",
   "selectors": {
     [`${fade}`]: {
       opacity: "0",
@@ -11563,7 +11563,7 @@ export const modalContent = style({
   flexDirection: "column",
   width: "100%",
   pointerEvents: "auto",
-  backgroundColor: "fff",
+  backgroundColor: "#fff",
   backgroundClip: "padding-box",
   border: "1px solid rgba(0,0,0,0.2)",
   borderRadius: "0.3rem",
@@ -11633,7 +11633,7 @@ export const modalFooter = style({
   msFlexPack: "end",
   justifyContent: "flex-end",
   padding: "0.75rem",
-  borderTop: "1px solid dee2e6",
+  borderTop: "1px solid #dee2e6",
   borderBottomRightRadius: "calc(0.3rem-1px)",
   borderBottomLeftRadius: "calc(0.3rem-1px)",
   "selectors": {
@@ -13337,7 +13337,7 @@ export const navbarBrand = style({
   },
   "selectors": {
     [`${navbarDark} &`]: {
-      color: "fff",
+      color: "#fff",
     },
     [`${navbarLight} &`]: {
       color: "rgba(0,0,0,0.9)",
@@ -14623,9 +14623,9 @@ export const pageLink = style({
   padding: "0.5rem 0.75rem",
   marginLeft: "-1px",
   lineHeight: "1.25",
-  color: "007bff",
-  backgroundColor: "fff",
-  border: "1px solid dee2e6",
+  color: "#007bff",
+  backgroundColor: "#fff",
+  border: "1px solid #dee2e6",
   ":focus": {
     zIndex: "3",
     outline: "0",
@@ -14633,24 +14633,24 @@ export const pageLink = style({
   },
   ":hover": {
     zIndex: "2",
-    color: "0056b3",
+    color: "#0056b3",
     textDecoration: "none",
-    backgroundColor: "e9ecef",
-    borderColor: "dee2e6",
+    backgroundColor: "#e9ecef",
+    borderColor: "#dee2e6",
   },
   "selectors": {
     [`${pageItem}${active} &`]: {
       zIndex: "3",
-      color: "fff",
-      backgroundColor: "007bff",
-      borderColor: "007bff",
+      color: "#fff",
+      backgroundColor: "#007bff",
+      borderColor: "#007bff",
     },
     [`${pageItem}${disabled} &`]: {
-      color: "6c757d",
+      color: "#6c757d",
       pointerEvents: "none",
       cursor: "auto",
-      backgroundColor: "fff",
-      borderColor: "dee2e6",
+      backgroundColor: "#fff",
+      borderColor: "#dee2e6",
     },
     [`${pageItem}:first-child &`]: {
       marginLeft: "0",
@@ -15274,10 +15274,10 @@ export const progressBar = style({
   msFlexPack: "center",
   justifyContent: "center",
   overflow: "hidden",
-  color: "fff",
+  color: "#fff",
   textAlign: "center",
   whiteSpace: "nowrap",
-  backgroundColor: "007bff",
+  backgroundColor: "#007bff",
   transition: "width 0.6s ease",
   "@media": {
     "(prefers-reduced-motion: reduce)": {
@@ -16375,51 +16375,51 @@ export const tabPane = style({
 export const table = style({
   width: "100%",
   marginBottom: "1rem",
-  color: "212529",
+  color: "#212529",
   "@media": {
     "print": {
       borderCollapse: "collapse",
       "selectors": {
         [` ${theadDark} th`]: {
           color: "inherit",
-          borderColor: "dee2e6",
+          borderColor: "#dee2e6",
         },
         "& td": {
-          backgroundColor: "fff",
+          backgroundColor: "#fff",
         },
         "& th": {
-          backgroundColor: "fff",
+          backgroundColor: "#fff",
         },
       },
     },
   },
   "selectors": {
     [` ${theadDark} th`]: {
-      color: "fff",
-      backgroundColor: "343a40",
-      borderColor: "454d55",
+      color: "#fff",
+      backgroundColor: "#343a40",
+      borderColor: "#454d55",
     },
     [` ${theadLight} th`]: {
-      color: "495057",
-      backgroundColor: "e9ecef",
-      borderColor: "dee2e6",
+      color: "#495057",
+      backgroundColor: "#e9ecef",
+      borderColor: "#dee2e6",
     },
     "& tbody + tbody": {
-      borderTop: "2px solid dee2e6",
+      borderTop: "2px solid #dee2e6",
     },
     "& td": {
       padding: "0.75rem",
       verticalAlign: "top",
-      borderTop: "1px solid dee2e6",
+      borderTop: "1px solid #dee2e6",
     },
     "& th": {
       padding: "0.75rem",
       verticalAlign: "top",
-      borderTop: "1px solid dee2e6",
+      borderTop: "1px solid #dee2e6",
     },
     "& thead th": {
       verticalAlign: "bottom",
-      borderBottom: "2px solid dee2e6",
+      borderBottom: "2px solid #dee2e6",
     },
   },
 });
@@ -16437,7 +16437,7 @@ export const tableActive = style({
 });
 
 export const tableBordered = style({
-  border: "1px solid dee2e6",
+  border: "1px solid #dee2e6",
   "@media": {
     "(max-width: 575.98px)": {
       "selectors": {
@@ -16462,20 +16462,20 @@ export const tableBordered = style({
       },
       "selectors": {
         "& td": {
-          border: "1px solid dee2e6",
+          border: "1px solid #dee2e6",
         },
         "& th": {
-          border: "1px solid dee2e6",
+          border: "1px solid #dee2e6",
         },
       },
     },
   },
   "selectors": {
     "& td": {
-      border: "1px solid dee2e6",
+      border: "1px solid #dee2e6",
     },
     "& th": {
-      border: "1px solid dee2e6",
+      border: "1px solid #dee2e6",
     },
     "& thead td": {
       borderBottomWidth: "2px",
@@ -16507,79 +16507,79 @@ export const tableBorderless = style({
 });
 
 export const tableDanger = style({
-  backgroundColor: "f5c6cb",
+  backgroundColor: "#f5c6cb",
   "selectors": {
     "& > td": {
-      backgroundColor: "f5c6cb",
+      backgroundColor: "#f5c6cb",
     },
     "& > th": {
-      backgroundColor: "f5c6cb",
+      backgroundColor: "#f5c6cb",
     },
     "& tbody + tbody": {
-      borderColor: "ed969e",
+      borderColor: "#ed969e",
     },
     "& td": {
-      borderColor: "ed969e",
+      borderColor: "#ed969e",
     },
     "& th": {
-      borderColor: "ed969e",
+      borderColor: "#ed969e",
     },
     "& thead th": {
-      borderColor: "ed969e",
+      borderColor: "#ed969e",
     },
   },
 });
 
 export const tableDark = style({
-  backgroundColor: "c6c8ca",
-  color: "fff",
-  backgroundColor: "343a40",
+  backgroundColor: "#c6c8ca",
+  color: "#fff",
+  backgroundColor: "#343a40",
   "@media": {
     "print": {
       color: "inherit",
       "selectors": {
         "& tbody + tbody": {
-          borderColor: "dee2e6",
+          borderColor: "#dee2e6",
         },
         "& td": {
-          borderColor: "dee2e6",
+          borderColor: "#dee2e6",
         },
         "& th": {
-          borderColor: "dee2e6",
+          borderColor: "#dee2e6",
         },
         "& thead th": {
-          borderColor: "dee2e6",
+          borderColor: "#dee2e6",
         },
       },
     },
   },
   "selectors": {
     "& > td": {
-      backgroundColor: "c6c8ca",
+      backgroundColor: "#c6c8ca",
     },
     "& > th": {
-      backgroundColor: "c6c8ca",
+      backgroundColor: "#c6c8ca",
     },
     "& tbody + tbody": {
-      borderColor: "95999c",
+      borderColor: "#95999c",
     },
     "& td": {
-      borderColor: "95999c",
-      borderColor: "454d55",
+      borderColor: "#95999c",
+      borderColor: "#454d55",
     },
     "& th": {
-      borderColor: "95999c",
-      borderColor: "454d55",
+      borderColor: "#95999c",
+      borderColor: "#454d55",
     },
     "& thead th": {
-      borderColor: "95999c",
-      borderColor: "454d55",
+      borderColor: "#95999c",
+      borderColor: "#454d55",
     },
     [`${tableBordered}`]: {
       border: "0",
     },
     [`${tableHover} tbody tr:hover`]: {
-      color: "fff",
+      color: "#fff",
       backgroundColor: "rgba(255,255,255,0.075)",
     },
     [`${tableStriped} tbody tr:nth-of-type(odd)`]: {
@@ -16728,7 +16728,7 @@ export const validFeedback = style({
   width: "100%",
   marginTop: "0.25rem",
   fontSize: "80%",
-  color: "28a745",
+  color: "#28a745",
   "selectors": {
     [`${formCheckInput}${isValid} ~ &`]: {
       display: "block",
@@ -16756,7 +16756,7 @@ export const validTooltip = style({
   marginTop: "0.1rem",
   fontSize: "0.875rem",
   lineHeight: "1.5",
-  color: "fff",
+  color: "#fff",
   backgroundColor: "rgba(40,167,69,0.9)",
   borderRadius: "0.25rem",
   "selectors": {
@@ -16918,7 +16918,7 @@ globalStyle("[type='submit']:not(:disabled)", {
 });
 
 globalStyle("a", {
-  color: "007bff",
+  color: "#007bff",
   textDecoration: "none",
   backgroundColor: "transparent",
 });
@@ -16933,15 +16933,15 @@ globalStyle(`a${badgeDanger}${focus}`, {
 });
 
 globalStyle(`a${badgeDanger}:focus`, {
-  color: "fff",
-  backgroundColor: "bd2130",
+  color: "#fff",
+  backgroundColor: "#bd2130",
   outline: "0",
   boxShadow: "0 0 0 0.2rem rgba(220,53,69,0.5)",
 });
 
 globalStyle(`a${badgeDanger}:hover`, {
-  color: "fff",
-  backgroundColor: "bd2130",
+  color: "#fff",
+  backgroundColor: "#bd2130",
 });
 
 globalStyle(`a${badgeDark}${focus}`, {
@@ -16950,15 +16950,15 @@ globalStyle(`a${badgeDark}${focus}`, {
 });
 
 globalStyle(`a${badgeDark}:focus`, {
-  color: "fff",
-  backgroundColor: "1d2124",
+  color: "#fff",
+  backgroundColor: "#1d2124",
   outline: "0",
   boxShadow: "0 0 0 0.2rem rgba(52,58,64,0.5)",
 });
 
 globalStyle(`a${badgeDark}:hover`, {
-  color: "fff",
-  backgroundColor: "1d2124",
+  color: "#fff",
+  backgroundColor: "#1d2124",
 });
 
 globalStyle(`a${badgeInfo}${focus}`, {
@@ -16967,15 +16967,15 @@ globalStyle(`a${badgeInfo}${focus}`, {
 });
 
 globalStyle(`a${badgeInfo}:focus`, {
-  color: "fff",
-  backgroundColor: "117a8b",
+  color: "#fff",
+  backgroundColor: "#117a8b",
   outline: "0",
   boxShadow: "0 0 0 0.2rem rgba(23,162,184,0.5)",
 });
 
 globalStyle(`a${badgeInfo}:hover`, {
-  color: "fff",
-  backgroundColor: "117a8b",
+  color: "#fff",
+  backgroundColor: "#117a8b",
 });
 
 globalStyle(`a${badgeLight}${focus}`, {
@@ -16984,15 +16984,15 @@ globalStyle(`a${badgeLight}${focus}`, {
 });
 
 globalStyle(`a${badgeLight}:focus`, {
-  color: "212529",
-  backgroundColor: "dae0e5",
+  color: "#212529",
+  backgroundColor: "#dae0e5",
   outline: "0",
   boxShadow: "0 0 0 0.2rem rgba(248,249,250,0.5)",
 });
 
 globalStyle(`a${badgeLight}:hover`, {
-  color: "212529",
-  backgroundColor: "dae0e5",
+  color: "#212529",
+  backgroundColor: "#dae0e5",
 });
 
 globalStyle(`a${badgePrimary}${focus}`, {
@@ -17001,15 +17001,15 @@ globalStyle(`a${badgePrimary}${focus}`, {
 });
 
 globalStyle(`a${badgePrimary}:focus`, {
-  color: "fff",
-  backgroundColor: "0062cc",
+  color: "#fff",
+  backgroundColor: "#0062cc",
   outline: "0",
   boxShadow: "0 0 0 0.2rem rgba(0,123,255,0.5)",
 });
 
 globalStyle(`a${badgePrimary}:hover`, {
-  color: "fff",
-  backgroundColor: "0062cc",
+  color: "#fff",
+  backgroundColor: "#0062cc",
 });
 
 globalStyle(`a${badgeSecondary}${focus}`, {
@@ -17018,15 +17018,15 @@ globalStyle(`a${badgeSecondary}${focus}`, {
 });
 
 globalStyle(`a${badgeSecondary}:focus`, {
-  color: "fff",
-  backgroundColor: "545b62",
+  color: "#fff",
+  backgroundColor: "#545b62",
   outline: "0",
   boxShadow: "0 0 0 0.2rem rgba(108,117,125,0.5)",
 });
 
 globalStyle(`a${badgeSecondary}:hover`, {
-  color: "fff",
-  backgroundColor: "545b62",
+  color: "#fff",
+  backgroundColor: "#545b62",
 });
 
 globalStyle(`a${badgeSuccess}${focus}`, {
@@ -17035,15 +17035,15 @@ globalStyle(`a${badgeSuccess}${focus}`, {
 });
 
 globalStyle(`a${badgeSuccess}:focus`, {
-  color: "fff",
-  backgroundColor: "1e7e34",
+  color: "#fff",
+  backgroundColor: "#1e7e34",
   outline: "0",
   boxShadow: "0 0 0 0.2rem rgba(40,167,69,0.5)",
 });
 
 globalStyle(`a${badgeSuccess}:hover`, {
-  color: "fff",
-  backgroundColor: "1e7e34",
+  color: "#fff",
+  backgroundColor: "#1e7e34",
 });
 
 globalStyle(`a${badgeWarning}${focus}`, {
@@ -17052,15 +17052,15 @@ globalStyle(`a${badgeWarning}${focus}`, {
 });
 
 globalStyle(`a${badgeWarning}:focus`, {
-  color: "212529",
-  backgroundColor: "d39e00",
+  color: "#212529",
+  backgroundColor: "#d39e00",
   outline: "0",
   boxShadow: "0 0 0 0.2rem rgba(255,193,7,0.5)",
 });
 
 globalStyle(`a${badgeWarning}:hover`, {
-  color: "212529",
-  backgroundColor: "d39e00",
+  color: "#212529",
+  backgroundColor: "#d39e00",
 });
 
 globalStyle(`a${badge}:focus`, {
@@ -17072,67 +17072,67 @@ globalStyle(`a${badge}:hover`, {
 });
 
 globalStyle(`a${bgDanger}:focus`, {
-  backgroundColor: "bd2130",
+  backgroundColor: "#bd2130",
 });
 
 globalStyle(`a${bgDanger}:hover`, {
-  backgroundColor: "bd2130",
+  backgroundColor: "#bd2130",
 });
 
 globalStyle(`a${bgDark}:focus`, {
-  backgroundColor: "1d2124",
+  backgroundColor: "#1d2124",
 });
 
 globalStyle(`a${bgDark}:hover`, {
-  backgroundColor: "1d2124",
+  backgroundColor: "#1d2124",
 });
 
 globalStyle(`a${bgInfo}:focus`, {
-  backgroundColor: "117a8b",
+  backgroundColor: "#117a8b",
 });
 
 globalStyle(`a${bgInfo}:hover`, {
-  backgroundColor: "117a8b",
+  backgroundColor: "#117a8b",
 });
 
 globalStyle(`a${bgLight}:focus`, {
-  backgroundColor: "dae0e5",
+  backgroundColor: "#dae0e5",
 });
 
 globalStyle(`a${bgLight}:hover`, {
-  backgroundColor: "dae0e5",
+  backgroundColor: "#dae0e5",
 });
 
 globalStyle(`a${bgPrimary}:focus`, {
-  backgroundColor: "0062cc",
+  backgroundColor: "#0062cc",
 });
 
 globalStyle(`a${bgPrimary}:hover`, {
-  backgroundColor: "0062cc",
+  backgroundColor: "#0062cc",
 });
 
 globalStyle(`a${bgSecondary}:focus`, {
-  backgroundColor: "545b62",
+  backgroundColor: "#545b62",
 });
 
 globalStyle(`a${bgSecondary}:hover`, {
-  backgroundColor: "545b62",
+  backgroundColor: "#545b62",
 });
 
 globalStyle(`a${bgSuccess}:focus`, {
-  backgroundColor: "1e7e34",
+  backgroundColor: "#1e7e34",
 });
 
 globalStyle(`a${bgSuccess}:hover`, {
-  backgroundColor: "1e7e34",
+  backgroundColor: "#1e7e34",
 });
 
 globalStyle(`a${bgWarning}:focus`, {
-  backgroundColor: "d39e00",
+  backgroundColor: "#d39e00",
 });
 
 globalStyle(`a${bgWarning}:hover`, {
-  backgroundColor: "d39e00",
+  backgroundColor: "#d39e00",
 });
 
 globalStyle(`a${btn}${disabled}`, {
@@ -17144,71 +17144,71 @@ globalStyle(`a${close}${disabled}`, {
 });
 
 globalStyle(`a${textDanger}:focus`, {
-  color: "a71d2a",
+  color: "#a71d2a",
 });
 
 globalStyle(`a${textDanger}:hover`, {
-  color: "a71d2a",
+  color: "#a71d2a",
 });
 
 globalStyle(`a${textDark}:focus`, {
-  color: "121416",
+  color: "#121416",
 });
 
 globalStyle(`a${textDark}:hover`, {
-  color: "121416",
+  color: "#121416",
 });
 
 globalStyle(`a${textInfo}:focus`, {
-  color: "0f6674",
+  color: "#0f6674",
 });
 
 globalStyle(`a${textInfo}:hover`, {
-  color: "0f6674",
+  color: "#0f6674",
 });
 
 globalStyle(`a${textLight}:focus`, {
-  color: "cbd3da",
+  color: "#cbd3da",
 });
 
 globalStyle(`a${textLight}:hover`, {
-  color: "cbd3da",
+  color: "#cbd3da",
 });
 
 globalStyle(`a${textPrimary}:focus`, {
-  color: "0056b3",
+  color: "#0056b3",
 });
 
 globalStyle(`a${textPrimary}:hover`, {
-  color: "0056b3",
+  color: "#0056b3",
 });
 
 globalStyle(`a${textSecondary}:focus`, {
-  color: "494f54",
+  color: "#494f54",
 });
 
 globalStyle(`a${textSecondary}:hover`, {
-  color: "494f54",
+  color: "#494f54",
 });
 
 globalStyle(`a${textSuccess}:focus`, {
-  color: "19692c",
+  color: "#19692c",
 });
 
 globalStyle(`a${textSuccess}:hover`, {
-  color: "19692c",
+  color: "#19692c",
 });
 
 globalStyle(`a${textWarning}:focus`, {
-  color: "ba8b00",
+  color: "#ba8b00",
 });
 
 globalStyle(`a${textWarning}:hover`, {
-  color: "ba8b00",
+  color: "#ba8b00",
 });
 
 globalStyle("a:hover", {
-  color: "0056b3",
+  color: "#0056b3",
   textDecoration: "underline",
 });
 
@@ -17280,7 +17280,7 @@ globalStyle("blockquote", {
   margin: "0 0 1rem",
   "@media": {
     "print": {
-      border: "1px solid adb5bd",
+      border: "1px solid #adb5bd",
       pageBreakInside: "avoid",
     },
   },
@@ -17292,9 +17292,9 @@ globalStyle("body", {
   fontSize: "1rem",
   fontWeight: "400",
   lineHeight: "1.5",
-  color: "212529",
+  color: "#212529",
   textAlign: "left",
-  backgroundColor: "fff",
+  backgroundColor: "#fff",
   "@media": {
     "print": {
       minWidth: "992px",
@@ -17314,67 +17314,67 @@ globalStyle("button", {
 });
 
 globalStyle(`button${bgDanger}:focus`, {
-  backgroundColor: "bd2130",
+  backgroundColor: "#bd2130",
 });
 
 globalStyle(`button${bgDanger}:hover`, {
-  backgroundColor: "bd2130",
+  backgroundColor: "#bd2130",
 });
 
 globalStyle(`button${bgDark}:focus`, {
-  backgroundColor: "1d2124",
+  backgroundColor: "#1d2124",
 });
 
 globalStyle(`button${bgDark}:hover`, {
-  backgroundColor: "1d2124",
+  backgroundColor: "#1d2124",
 });
 
 globalStyle(`button${bgInfo}:focus`, {
-  backgroundColor: "117a8b",
+  backgroundColor: "#117a8b",
 });
 
 globalStyle(`button${bgInfo}:hover`, {
-  backgroundColor: "117a8b",
+  backgroundColor: "#117a8b",
 });
 
 globalStyle(`button${bgLight}:focus`, {
-  backgroundColor: "dae0e5",
+  backgroundColor: "#dae0e5",
 });
 
 globalStyle(`button${bgLight}:hover`, {
-  backgroundColor: "dae0e5",
+  backgroundColor: "#dae0e5",
 });
 
 globalStyle(`button${bgPrimary}:focus`, {
-  backgroundColor: "0062cc",
+  backgroundColor: "#0062cc",
 });
 
 globalStyle(`button${bgPrimary}:hover`, {
-  backgroundColor: "0062cc",
+  backgroundColor: "#0062cc",
 });
 
 globalStyle(`button${bgSecondary}:focus`, {
-  backgroundColor: "545b62",
+  backgroundColor: "#545b62",
 });
 
 globalStyle(`button${bgSecondary}:hover`, {
-  backgroundColor: "545b62",
+  backgroundColor: "#545b62",
 });
 
 globalStyle(`button${bgSuccess}:focus`, {
-  backgroundColor: "1e7e34",
+  backgroundColor: "#1e7e34",
 });
 
 globalStyle(`button${bgSuccess}:hover`, {
-  backgroundColor: "1e7e34",
+  backgroundColor: "#1e7e34",
 });
 
 globalStyle(`button${bgWarning}:focus`, {
-  backgroundColor: "d39e00",
+  backgroundColor: "#d39e00",
 });
 
 globalStyle(`button${bgWarning}:hover`, {
-  backgroundColor: "d39e00",
+  backgroundColor: "#d39e00",
 });
 
 globalStyle(`button${close}`, {
@@ -17399,7 +17399,7 @@ globalStyle("button:not(:disabled)", {
 globalStyle("caption", {
   paddingTop: "0.75rem",
   paddingBottom: "0.75rem",
-  color: "6c757d",
+  color: "#6c757d",
   textAlign: "left",
   captionSide: "bottom",
 });
@@ -17408,7 +17408,7 @@ globalStyle("code", {
   fontFamily: "SFMono-Regular , Menlo , Monaco , Consolas , Liberation Mono , Courier New , monospace",
   fontSize: "1em",
   fontSize: "87.5%",
-  color: "e83e8c",
+  color: "#e83e8c",
   wordWrap: "break-word",
 });
 
@@ -17608,8 +17608,8 @@ globalStyle("kbd", {
   fontSize: "1em",
   padding: "0.2rem 0.4rem",
   fontSize: "87.5%",
-  color: "fff",
-  backgroundColor: "212529",
+  color: "#fff",
+  backgroundColor: "#212529",
   borderRadius: "0.2rem",
 });
 
@@ -17642,7 +17642,7 @@ globalStyle("main", {
 
 globalStyle("mark", {
   padding: "0.2em",
-  backgroundColor: "fcf8e3",
+  backgroundColor: "#fcf8e3",
 });
 
 globalStyle("nav", {
@@ -17693,11 +17693,11 @@ globalStyle("pre", {
   msOverflowStyle: "scrollbar",
   display: "block",
   fontSize: "87.5%",
-  color: "212529",
+  color: "#212529",
   "@media": {
     "print": {
       whiteSpace: "pre-wrap",
-      border: "1px solid adb5bd",
+      border: "1px solid #adb5bd",
       pageBreakInside: "avoid",
     },
   },
@@ -17743,12 +17743,12 @@ globalStyle(`select${formControl}${isValid}`, {
 
 globalStyle(`select${formControl}:-moz-focusring`, {
   color: "transparent",
-  textShadow: "0 0 0 495057",
+  textShadow: "0 0 0 #495057",
 });
 
 globalStyle(`select${formControl}:focus::-ms-value`, {
-  color: "495057",
-  backgroundColor: "fff",
+  color: "#495057",
+  backgroundColor: "#fff",
 });
 
 globalStyle(`select${formControl}[multiple]`, {
