@@ -1174,7 +1174,10 @@ pub fn get_component_value(component_value: &swc_css_ast::ComponentValue) -> Vec
         swc_css_ast::ComponentValue::Color(color) => match color {
             swc_css_ast::Color::AbsoluteColorBase(color) => match color {
                 swc_css_ast::AbsoluteColorBase::HexColor(hex_color) => match &hex_color.raw {
-                    Some(value) => ve.push_str(value),
+                    Some(value) => {
+                        ve.push_str(&String::from("#"));
+                        ve.push_str(value);
+                    }
                     None => ve.push_str(""),
                 },
                 swc_css_ast::AbsoluteColorBase::NamedColorOrTransparent(_) => todo!(),
