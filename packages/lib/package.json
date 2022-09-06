@@ -1,6 +1,6 @@
 {
   "name": "css-to-vanilla-extract-lib",
-  "version": "0.0.43-alpha",
+  "version": "0.0.44-alpha",
   "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file.",
   "scripts": {
     "build": "cargo build",
