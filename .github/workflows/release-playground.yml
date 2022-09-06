@@ -19,8 +19,8 @@ jobs:
         uses: google/wireit@setup-github-actions-caching/v1
       - name: install dependencies
         run: npm ci
-      - name: install netlify
-        run: npm i -D netlify
+      - name: install netlify-cli
+        run: npm i -D netlify-cli
       - name: add target
         run: rustup target add wasm32-wasi
       - name: install wasm-pack
@@ -28,7 +28,7 @@ jobs:
       - name: build - playground
         run: npm run build:playground
       - name: publish - playground
-        run: npx netlify deploy --dir=packages/playground/dis --build --prod
+        run: npx netlify-cli deploy --dir=packages/playground/dis --build --prod
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
