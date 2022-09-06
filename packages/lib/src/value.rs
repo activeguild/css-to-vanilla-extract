@@ -1661,7 +1661,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n  \"selectors\": {\n    \"&:not\": {\n      color: \"0c63e4\",\n    },\n    \"&:not::after\": {\n      transform: \"rotate(-180deg)\",\n    },\n  },\n});\n\n",
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n  \"selectors\": {\n    \"&:not\": {\n      color: \"#0c63e4\",\n    },\n    \"&:not::after\": {\n      transform: \"rotate(-180deg)\",\n    },\n  },\n});\n\n",
             result
         )
     }
@@ -1673,7 +1673,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      \"selectors\": {\n        \"&:not\": {\n          color: \"0c63e4\",\n        },\n        \"&:not::after\": {\n          transform: \"rotate(-180deg)\",\n        },\n      },\n    },\n  },\n});\n\n",
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n  \"@supports\": {\n    \"(position:-webkit-sticky) or (position:sticky)\": {\n      \"selectors\": {\n        \"&:not\": {\n          color: \"#0c63e4\",\n        },\n        \"&:not::after\": {\n          transform: \"rotate(-180deg)\",\n        },\n      },\n    },\n  },\n});\n\n",
             result
         )
     }
@@ -1685,7 +1685,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      \"selectors\": {\n        \"&:not\": {\n          color: \"0c63e4\",\n        },\n        \"&:not::after\": {\n          transform: \"rotate(-180deg)\",\n        },\n      },\n    },\n  },\n});\n\n",
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const accordionButton = style({\n  \"@media\": {\n    \"(min-width: 1200px)\": {\n      \"selectors\": {\n        \"&:not\": {\n          color: \"#0c63e4\",\n        },\n        \"&:not::after\": {\n          transform: \"rotate(-180deg)\",\n        },\n      },\n    },\n  },\n});\n\n",
             result
         )
     }
@@ -1722,7 +1722,7 @@ mod tests {
         let result = ast_to_vanilla_extract(parsed_css);
 
         assert_eq!(
-            "import { style } from \"@vanilla-extract/css\"\n\nexport const form = style({\n  \"selectors\": {\n    \"&:active::-moz-range-thumb\": {\n      backgroundColor: \"b6d4fe\",\n    },\n  },\n});\n\n",
+            "import { style } from \"@vanilla-extract/css\"\n\nexport const form = style({\n  \"selectors\": {\n    \"&:active::-moz-range-thumb\": {\n      backgroundColor: \"#b6d4fe\",\n    },\n  },\n});\n\n",
             result
         )
     }
