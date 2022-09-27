@@ -1,6 +1,6 @@
 {
   "name": "playground",
-  "version": "0.0.44-alpha",
+  "version": "0.0.45-alphaa",
   "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file. for playground.",
   "main": "index.js",
   "scripts": {
