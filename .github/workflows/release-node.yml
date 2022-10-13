@@ -6,7 +6,7 @@ on:
 jobs:
   release:
     name: release-node
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v2
