@@ -1,6 +1,6 @@
 [package]
 name = "css_to_vanilla_extract"
-version = "0.0.45-alphaa"
+version = "0.0.46-alphaa"
 authors = ["j1ngzoue <workdrive0306@gmail.com>"]
 edition = "2021"
 
