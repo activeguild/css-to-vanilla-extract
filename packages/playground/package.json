@@ -25,21 +25,21 @@
   "dependencies": {
     "@monaco-editor/react": "^4.4.6",
     "modern-css-reset": "^1.4.0",
-    "monaco-editor": "^0.34.0",
+    "monaco-editor": "^0.34.1",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/prismjs": "^1.26.0",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
-    "rollup-plugin-visualizer": "^5.8.2",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "rollup-plugin-visualizer": "^5.8.3",
     "terser": "^5.15.1",
     "typescript": "^4.8.4",
-    "vite": "^3.1.7",
+    "vite": "^3.2.3",
     "vite-plugin-sass-dts": "^1.1.44",
-    "vite-plugin-wasm": "^3.0.0"
+    "vite-plugin-wasm": "^3.1.0"
   }
 }
