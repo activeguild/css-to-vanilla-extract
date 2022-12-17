@@ -8,7 +8,7 @@ declare const classNames: {
   readonly light: "light";
   readonly toggleCircle: "toggleCircle";
 };
-export default classNames;
+export = classNames;
 export type ClassNames =
   | "toggle"
   | "toggleInput"

@@ -10,7 +10,7 @@ declare const classNames: {
   readonly light: "light";
   readonly dark: "dark";
 };
-export default classNames;
+export = classNames;
 export type ClassNames =
   | "header"
   | "headerInnder"
