@@ -1,6 +1,6 @@
 {
   "name": "css-to-vanilla-extract",
-  "version": "0.0.46-alphaa",
+  "version": "0.0.46-alpha",
   "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file. for node.",
   "main": "index.js",
   "bin": {
@@ -37,15 +37,15 @@
   },
   "homepage": "https://github.com/activeguild/css-to-vanilla-extract#readme",
   "dependencies": {
-    "@vanilla-extract/css": "^1.9.1",
-    "commander": "^9.4.1",
+    "@vanilla-extract/css": "^1.9.2",
+    "commander": "^9.5.0",
     "picocolors": "^1.0.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.9",
+    "@types/node": "^18.11.18",
     "@vanilla-extract/esbuild-plugin": "^2.2.0",
     "cargo-cp-artifact": "^0.1.7",
-    "esbuild": "^0.15.13",
-    "esbuild-register": "^3.4.1"
+    "esbuild": "^0.16.15",
+    "esbuild-register": "^3.4.2"
   }
 }

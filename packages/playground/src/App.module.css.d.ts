@@ -11,14 +11,3 @@ declare const classNames: {
   readonly dark: "dark";
 };
 export = classNames;
-export type ClassNames =
-  | "header"
-  | "headerInnder"
-  | "headerDesc"
-  | "headerIcon"
-  | "headerDarkMode"
-  | "container"
-  | "containerItem"
-  | "error"
-  | "light"
-  | "dark";

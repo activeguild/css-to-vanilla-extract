@@ -1,6 +1,6 @@
 {
   "name": "css-to-vanilla-extract-workspace",
-  "version": "0.0.46-alphaa",
+  "version": "0.0.46-alpha",
   "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file.",
   "scripts": {
     "build:wasm": "wireit",
@@ -69,10 +69,10 @@
   "homepage": "https://github.com/activeguild/css-to-vanilla-extract#readme",
   "private": true,
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "eslint": "^8.27.0",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1",
-    "wireit": "^0.7.2"
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "prettier": "^2.8.2",
+    "wireit": "^0.9.3"
   }
 }
