@@ -24,6 +24,15 @@ export const btn = style({
   width: "100%",
 });
 
+export const container = style({
+  display: "grid",
+  gridAutoColumns: "1fr",
+  gridTemplateColumns: "1fr 1fr 0.2fr 1.8fr",
+  gridTemplateRows: "1fr 1fr 1fr 1fr 1fr",
+  gap: "0px 0px",
+  gridTemplateAreas: `"lorem ipsum dolor sit" "lorem ipsum dolor sit" "lorem ipsum dolor sit" "lorem ipsum dolor sit" "lorem ipsum dolor sit"`,
+});
+
 export const foo = style({
   position: "absolute",
 });

@@ -48,7 +48,11 @@ pub fn wrap_fontface(rule: String) -> String {
 }
 
 pub fn wrap_property(key: String, rule: String, spacer: Option<i8>) -> String {
-    format!("{}{}: \"{}\",\n", generate_spaces(spacer), key, rule)
+    if key == "gridTemplateAreas" {
+        format!("{}{}: `{}`,\n", generate_spaces(spacer), key, rule)
+    } else {
+        format!("{}{}: \"{}\",\n", generate_spaces(spacer), key, rule)
+    }
 }
 
 fn wrap_properties(
