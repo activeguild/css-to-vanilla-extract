@@ -1,6 +1,6 @@
 [package]
 name = "wasm-css-to-vanilla-extract"
-version = "0.0.46-alphaa"
+version = "0.0.47-alphaa"
 authors = ["j1ngzoue <workdrive0306@gmail.com>"]
 edition = "2021"
 
@@ -12,7 +12,7 @@ default = ["console_error_panic_hook"]
 
 [dependencies]
 wasm-bindgen = "0.2.82"
-css_to_vanilla_extract = { version = "0.0.46-alphaa", path = "../lib" }
+css_to_vanilla_extract = { version = "0.0.47-alphaa", path = "../lib" }
 getrandom = { version = "0.2.7", features = ["js"] }
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
