@@ -1,6 +1,6 @@
 {
   "name": "css-to-vanilla-extract-wasm",
-  "version": "0.0.47-alphaa",
+  "version": "0.0.48-alphaa",
   "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file. for wasm.",
   "scripts": {
     "build": "wasm-pack build --target web --out-dir ./dist"

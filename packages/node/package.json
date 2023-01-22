@@ -1,6 +1,6 @@
 {
   "name": "css-to-vanilla-extract",
-  "version": "0.0.47-alpha",
+  "version": "0.0.48-alpha",
   "description": "Generate vanilla-extract typescript file from the CSS (SCSS/SASS) file. for node.",
   "main": "index.js",
   "bin": {
