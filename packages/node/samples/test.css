@@ -106,3 +106,17 @@ input > .btn > .icon {
 .btn {
   width: 100%;
 }
+
+.container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 0.2fr 1.8fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "lorem ipsum dolor sit"
+    "lorem ipsum dolor sit"
+    "lorem ipsum dolor sit"
+    "lorem ipsum dolor sit"
+    "lorem ipsum dolor sit";
+}

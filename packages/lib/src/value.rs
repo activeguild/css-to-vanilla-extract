@@ -1359,10 +1359,18 @@ pub fn get_declaration(declaration: &swc_css_ast::Declaration) -> (KeyValuePairs
     for declaration_component_value in &declaration.value {
         let component_value = &get_component_value(declaration_component_value)[0].ve;
 
-        if declaration_value.is_empty() {
-            declaration_value.push_str(component_value)
+        if declaration_name == "grid-template-areas" {
+            if declaration_value.is_empty() {
+                declaration_value.push_str(&format!("{:?}", component_value))
+            } else {
+                declaration_value.push_str(&format!(" {:?}", component_value));
+            }
         } else {
-            declaration_value.push_str(&format!(" {}", component_value));
+            if declaration_value.is_empty() {
+                declaration_value.push_str(component_value)
+            } else {
+                declaration_value.push_str(&format!(" {}", component_value));
+            }
         }
     }
 
