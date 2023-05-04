@@ -37,15 +37,15 @@
   },
   "homepage": "https://github.com/activeguild/css-to-vanilla-extract#readme",
   "dependencies": {
-    "@vanilla-extract/css": "^1.10.0",
-    "commander": "^10.0.0",
+    "@vanilla-extract/css": "^1.11.0",
+    "commander": "^10.0.1",
     "picocolors": "^1.0.0"
   },
   "devDependencies": {
-    "@types/node": "^18.15.1",
+    "@types/node": "^18.16.3",
     "@vanilla-extract/esbuild-plugin": "^2.2.2",
     "cargo-cp-artifact": "^0.1.8",
-    "esbuild": "^0.17.11",
+    "esbuild": "^0.17.18",
     "esbuild-register": "^3.4.2"
   }
 }

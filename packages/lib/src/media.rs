@@ -15,9 +15,10 @@ pub fn get_all_media_conditions(conditions: &[swc_css_ast::MediaConditionAllType
                 get_media_in_parens(media_in_parens)
             }
         };
+        println!("condison_as_str:{:?}", condison_as_str);
         ve.push_str(&condison_as_str);
     }
-
+    println!("ve:{:?}", ve);
     ve
 }
 

@@ -194,7 +194,8 @@ pub fn ast_to_vanilla_extract(parsed_css: swc_css_ast::Stylesheet) -> String {
                                 }
                                 media_condition.push_str(&condition);
                             }
-
+                            println!("media_condition:{:?}", media_condition);
+                            println!("at_rule.block:{:?}", at_rule.block);
                             if let Some(block) = &at_rule.block {
                                 for component_value in &block.value {
                                     let components = get_component_value(component_value);

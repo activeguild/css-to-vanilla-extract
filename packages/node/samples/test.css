@@ -1,122 +1,15 @@
-.foo,
-.bar {
-  position: absolute;
-}
-*,
-*::before,
-*::after,
-.bar:hover {
-  box-sizing: border-box;
-}
-[type^="button" s] {
-  cursor: pointer;
-}
-@media (min-width: 1200px) {
-  input {
-    font-size: 5rem;
-  }
-}
-@media (min-width: 1200px) {
-  .display-1 {
-    font-size: 5rem;
-    color: red;
-  }
-}
-.display-2 {
-  background-color: blue;
-}
-@media (min-width: 1200px) {
-  input {
-    font-size: 5rem;
-  }
-  .display-2 {
-    font-size: 5rem;
-    color: red;
-  }
-}
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .display-3 {
-    font-size: 5rem;
-  }
-}
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  input {
-    font-size: 5rem;
-  }
-}
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  input {
-    font-size: 5rem;
-  }
-  .display-4 {
-    font-size: 5rem;
-    color: red;
-  }
-}
-
-:hover {
-  color: red;
-}
-
-.toast:not(:last-child) {
-  margin-bottom: 0.75rem;
-}
-
-.display-5 {
-  background-color: blue;
-}
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .display-5 {
-    font-size: 5rem;
-    color: red;
-  }
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-}
-
-@keyframes slidein {
-  from {
-    transform: translateX(0%);
-  }
-
-  to {
-    transform: translateX(100%);
-  }
-}
-
-@media (min-width: 1200px) {
-  .accordion-button:not(.collapsed) {
-    color: #0c63e4;
-  }
-  .accordion-button:not(.collapsed)::after {
-    transform: rotate(-180deg);
-  }
-}
-
-.input:invalid:focus {
-  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
-}
-
-input > .btn > .icon {
-  position: absolute;
-}
-.btn {
-  width: 100%;
-}
-
 .container {
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 1fr 1fr 0.2fr 1.8fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "lorem ipsum dolor sit"
-    "lorem ipsum dolor sit"
-    "lorem ipsum dolor sit"
-    "lorem ipsum dolor sit"
-    "lorem ipsum dolor sit";
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
 }
